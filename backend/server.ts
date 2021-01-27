@@ -14,7 +14,10 @@ class Server {
     this.restServer = express();
 
     this.restServer.use((req, res, next) => {
-      if (req.path.match(/(\/[a-z]{2}(-[A-Z]{2})?)/)) {
+      if (
+        req.path.match(/(\/[a-z]{2}(-[A-Z]{2})?)/) ||
+        req.path.startsWith("/static")
+      ) {
         next()
       } else {
         const language = req.headers["accept-language"] || req.headers["language"];
@@ -33,7 +36,7 @@ class Server {
       const returnValue = callback(req, res);
 
       if (typeof (returnValue) == "object" && returnValue.name) {
-        const viewLoc = resolve(process.cwd(), "frontend", "views", `${returnValue.name}.pug`);
+        const viewLoc = resolve(process.cwd(), "frontend", "pages", `${returnValue.name}.pug`);
 
         if (existsSync(viewLoc)) {
           if (this.languageExists(req.params.lang)) res.end(pugTransformer(viewLoc, returnValue.data || {}, req.params.lang))
