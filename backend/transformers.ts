@@ -13,7 +13,7 @@ export const pugTransformer = (name: string, data: object, language: string) => 
     const key = v.replace(/\%\{/, "").replace(/\}/, "");
 
     if (locale[key.toLowerCase()]) {
-      return locale[key.toLowerCase()]
+      return `${locale[key.toLowerCase()]}<!-- l10n: ${key.toLowerCase()} -->`
     } else return v;
   })
 
