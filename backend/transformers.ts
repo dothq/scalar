@@ -19,8 +19,6 @@ export const pugTransformer = (name: string, data: object, language: string) => 
     if (existsSync(loc)) {
       const data = readFileSync(loc, "utf-8");
 
-      console.log(fileExt)
-
       if(fileExt == "scss") {
         return `style.\n     ${sass.renderSync({ data }).css.toString().replace(/\n/g, "").replace(/ /g, "")}`
       } else return data;
