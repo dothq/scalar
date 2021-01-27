@@ -6,6 +6,10 @@ import { pugTransformer } from './transformers';
 class Server {
   public restServer: any;
 
+  private languageExists(code: string): boolean {
+    return existsSync(resolve(process.cwd(), "l10n", code));
+  }
+
   constructor(port: number) {
     this.restServer = express();
 
@@ -13,7 +17,9 @@ class Server {
       if (req.path.match(/(\/[a-z]{2}(-[A-Z]{2})?)/)) {
         next()
       } else {
-        res.redirect(301, `/${req.headers["accept-language"] || req.headers["language"] || "en-GB"}${req.path}`)
+        const language = req.headers["accept-language"] || req.headers["language"];
+
+        res.redirect(301, `/${this.languageExists(language) ? language : "en-GB"}${req.path == "/" ? "" : req.path}`)
       }
     })
 
@@ -30,7 +36,8 @@ class Server {
         const viewLoc = resolve(process.cwd(), "frontend", "views", `${returnValue.name}.pug`);
 
         if (existsSync(viewLoc)) {
-          res.end(pugTransformer(viewLoc, returnValue.data || {}, req.params.lang))
+          if (this.languageExists(req.params.lang)) res.end(pugTransformer(viewLoc, returnValue.data || {}, req.params.lang))
+          else res.redirect(301, `/en-GB${route || "/"}`)
         } else {
           res.status(404).end("Not found.");
         }

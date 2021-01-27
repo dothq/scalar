@@ -7,15 +7,16 @@ export const pugTransformer = (name: string, data: object, language: string) => 
     readFileSync(resolve(process.cwd(), "l10n-dist", `${language}.json`), "utf-8")
   );
 
-  let rendered = pug.renderFile(name, { ...data });
+  let pugCode = readFileSync(resolve(process.cwd(), "frontend", "views", name), "utf-8");
 
-  rendered = rendered.replace(/%{([A-Za-z0-9-]+)}/gm, (v) => {
+  pugCode = pugCode.replace(/%{([A-Za-z0-9-]+)}/gm, (v) => {
     const key = v.replace(/\%\{/, "").replace(/\}/, "");
 
     if (locale[key.toLowerCase()]) {
-      return `${locale[key.toLowerCase()]}<!-- l10n: ${key.toLowerCase()} -->`
-    } else return v;
-  })
+      return locale[key.toLowerCase()];
+    }
+    else return v;
+  });
 
-  return rendered;
+  return pug.render(pugCode, { ...data });
 }
