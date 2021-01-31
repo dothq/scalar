@@ -2,10 +2,10 @@ import React from "react"
 
 import { Button } from '../Button';
 
-export const Header = () => {
+export const Footer = () => {
     return (
-        <nav>
-            <div className={"nav-container"}>
+        <footer>
+            <div className={"footer-container"}>
                 <div className={"nav-left"}>
                     <a href={"/"}>
                         <i className={"dot-icon"} />
@@ -36,6 +36,6 @@ export const Header = () => {
                     </Button>
                 </div>
             </div>
-        </nav>
+        </footer>
     )
 }

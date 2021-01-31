@@ -6,7 +6,9 @@ class Home extends React.Component {
   render() {
     return (
       <Layout>
-        lol
+        <div>
+          <h1>Take back your privacy.</h1>
+        </div>
       </Layout>
     );
   }
