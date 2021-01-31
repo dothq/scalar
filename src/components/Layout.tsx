@@ -10,8 +10,8 @@ export const Layout = ({ children, center, fullHeight }: { children: any; center
         <>
             <section className={"hero"}>
                 <Header />
-                <div className={`hero-container ${fullHeight && `hero-vh`}`}>
-                    <div className={`hero-content ${center && `hero-center`}`}>
+                <div className={`hero-container ${fullHeight ? `hero-vh` : ``}`}>
+                    <div className={`hero-content ${center ? `hero-center` : ``}`}>
                         {children}
                     </div>
                     <Footer />

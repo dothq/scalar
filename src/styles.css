@@ -104,6 +104,7 @@ html, body {
     max-width: 1300px;
     margin: 0 auto;
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 nav {
@@ -274,6 +275,14 @@ p {
     height: 16px;
 }
 
+.menu-icon {
+    background-image: url(assets/menu.svg);
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    margin-right: 0 !important;
+}
+
 .hero-vh {
     height: calc(100vh - 64px);
     display: flex;
@@ -282,7 +291,7 @@ p {
 }
 
 footer {
-    height: 250px;
+    min-height: 250px;
     background-color: var(--nav-background-color);
     border-top: 1px solid var(--border);
 }
@@ -295,4 +304,94 @@ footer {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+}
+
+nav.mobile-nav {
+    display: none;
+}
+
+@media only screen and (max-width: 1750px) {
+    nav, footer, .hero-content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    nav {
+        display: none;
+    }
+
+    nav.mobile-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav.mobile-nav > .nav-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mobile-nav > .nav-container > .nav-left,
+.mobile-nav > .nav-container > .nav-right {
+    width: 100vw;
+}
+
+.mobile-nav > .nav-container > .nav-right {
+    justify-content: flex-end;
+}
+
+.mobile-nav {
+    padding: 0 1.5rem;
+}
+
+.mobile-nav-items {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.mobile-nav-items > li {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0px 4px;
+}
+
+.mobile-nav-items > li:hover {
+    color: var(--nav-hover);
+    cursor: pointer;
+}
+
+.mobile-nav-items > li:hover > a::after {
+    background-color: var(--nav-hover);
+}
+
+.mobile-nav-items > li > a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.mobile-nav-items > li > button {
+    user-select: none;
+}
+
+.mobile-nav-items > li > a::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    mask-image: url(assets/back.svg);
+    transform: scaleX(-1);
+    background-color: var(--color);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    margin-right: calc(1.5rem + 15px);
 }
