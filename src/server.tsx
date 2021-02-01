@@ -1,9 +1,12 @@
 import express from 'express';
 import React from 'react';
+import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 
 import App from './components/App';
+
+import signup from './routes/signup';
 
 let assets: any;
 
@@ -14,10 +17,14 @@ syncLoadAssets();
 
 const server = express()
 
+server.use(bodyParser.json());
+
 server.disable('x-powered-by')
 server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 
-server.get('/*', (req: express.Request, res: express.Response) => {
+server.use((req: express.Request, res: express.Response, next) => {
+	if(req.path.startsWith("/api")) return next();
+
 	const context = {};
 
 	const markup = renderToString(
@@ -47,5 +54,7 @@ server.get('/*', (req: express.Request, res: express.Response) => {
 		</html>`
 	);
 });
+
+server.use("/api", signup);
 
 export default server;

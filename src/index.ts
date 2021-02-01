@@ -23,5 +23,6 @@ const port = process.env.PORT || 3000;
 export default express()
     .use((req, res) => (app as any).handle(req, res))
     .listen(port, () => {
-        console.log(`🚀  Started at http://localhost:${port}`);
+        console.log(`🚀  Started frontend at http://localhost:${port}`);
+        console.log(`🔥  Started backend at http://localhost:${port}/api`);
     });
