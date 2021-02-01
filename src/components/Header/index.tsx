@@ -44,7 +44,7 @@ export const Header = () => {
             <nav className={"mobile-nav"}>
                 <div className={"nav-container"}>
                     <div className={"nav-left"}>
-                        <a href={"/"}>
+                        <a href={""}>
                             <i className={"dot-icon"} />
                         </a>
                     </div>
@@ -59,16 +59,16 @@ export const Header = () => {
                 <div className={"nav-container"} style={{ display: footerItemsVisible ? "" : "none" }}>
                     <ul className={"mobile-nav-items"}>
                         <li>
-                            <a href={"/products"}>Products</a>
+                            <a href={"products"}>Products</a>
                         </li>
                         <li>
-                            <a href={"/company"}>Company</a>
+                            <a href={"company"}>Company</a>
                         </li>
                         <li>
-                            <a href={"/community"}>Community</a>
+                            <a href={"community"}>Community</a>
                         </li>
                         <li>
-                            <a href={"/about"}>About</a>
+                            <a href={"about"}>About</a>
                         </li>
                     </ul>
                 </div>
