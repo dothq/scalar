@@ -21,7 +21,7 @@ router.post("/id/accounts/signup", async (req, res) => {
 
     if(!await isValidArgon(password)) return res.json({ ok: false, error: "INVALID_ARGON_HASH" })
 
-    await prisma.user.create({
+    await prisma.users.create({
         data: {
             email,
             password,
