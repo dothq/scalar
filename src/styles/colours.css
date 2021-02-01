@@ -1,0 +1,69 @@
+:root {
+    --red: #FF4141;
+    --orange: #FF7A00;
+    --yellow: #FFD600;
+    --green: #2CC74E;
+    --azure: #256EF5;
+    --blue: #3250ED;
+    --purple: #A451FC;
+    --pink: #BD00FF;
+    --black: #030303;
+    --gray-1: #141414;
+    --gray-2: #1d1d1d;
+    --gray-3: #343434;
+    --gray-4: #737373;
+    --gray-5: #B6B6B6;
+    --gray-6: #EAEAEA;
+    --gray-7: #FBFBFB;
+    --white: #FFFFFF;
+
+    --theme-change-transition: background-color 0s ease, border-color 0s ease;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color: var(--black);
+        --background-color: var(--white);
+        --background-color-secondary: var(--gray-7);
+        --border: var(--gray-6);
+
+        --btn-primary: var(--azure);
+        --btn-secondary: var(--gray-7);
+
+        --btn-primary-icon: invert(1);
+        --btn-secondary-icon: invert(0);
+
+        --btn-primary-color: var(--white);
+        --btn-secondary-color: var(--black);
+
+        --btn-primary-hover: var(--blue);
+        --btn-secondary-hover: var(--gray-6);
+
+        --nav-background-color: var(--white);
+        --nav-hover: var(--azure);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color: var(--white);
+        --background-color: var(--black);
+        --background-color-secondary: var(--gray-2);
+        --border: var(--gray-3);
+
+        --btn-primary: var(--azure);
+        --btn-secondary: var(--gray-1);
+
+        --btn-primary-icon: invert(1);
+        --btn-secondary-icon: invert(1);
+
+        --btn-primary-color: var(--white);
+        --btn-secondary-color: var(--white);
+
+        --btn-primary-hover: var(--blue);
+        --btn-secondary-hover: var(--gray-3);
+
+        --nav-background-color: var(--gray-1);
+        --nav-hover: var(--gray-5);
+    }
+}
