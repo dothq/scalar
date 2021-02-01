@@ -8,6 +8,9 @@ class Home extends React.Component {
       <Layout>
         <div>
           <h1>Take back your privacy.</h1>
+          <p>
+          Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.
+          </p>
         </div>
       </Layout>
     );
