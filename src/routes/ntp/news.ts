@@ -10,10 +10,6 @@ const cache: any = {
 
 };
 
-router.get("/api/ntp/news-image-proxy/:url", (req, res) => {
-    
-})
-
 router.get("/api/ntp/news/:country", async (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
 
