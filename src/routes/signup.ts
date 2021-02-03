@@ -14,8 +14,7 @@ router.post("/api/id/accounts/signup", async (req, res) => {
             password,
             name
         },
-    })
-  
+    })  
     res.json({ ok: true })
 })
 

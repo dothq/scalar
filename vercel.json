@@ -1,0 +1,33 @@
+
+{
+    "version": 2,
+    "builds": [{
+        "src": "build/server.js",
+        "use": "@now/node"
+      },
+      {
+        "src": "build/public/**/*",
+        "use": "@now/static"
+      }
+    ],
+    "routes": [{
+        "src": "/static/(.*)",
+        "dest": "build/public/static/$1"
+      },
+      {
+        "src": "/favicon.png",
+        "dest": "build/public/favicon.png"
+      },
+      {
+        "src": "/robots.txt",
+        "dest": "build/public/robots.txt"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "build/server.js"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+}

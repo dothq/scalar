@@ -6,7 +6,8 @@
     "start:tsc": "tsc -b -w --preserveWatchOutput",
     "start": "yarn start:tsc & razzle start",
     "build": "tsc -b && razzle build",
-    "start:prod": "NODE_ENV=production node build/server.js"
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "deploy": "yarn build && vercel --prod"
   },
   "dependencies": {
     "@prisma/client": "^2.15.0",
@@ -16,6 +17,7 @@
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "razzle-plugin-typescript": "^3.3.11",
     "react": "^17.0.1",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@prisma/cli": "^2.15.0",
     "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.9",
     "@types/express": "^4.17.11",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",

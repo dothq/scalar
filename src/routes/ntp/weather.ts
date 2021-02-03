@@ -4,7 +4,7 @@ import axios from "axios";
 
 const router = express.Router();
 
-let cache: any = {
+const cache: any = {
 
 };
 
