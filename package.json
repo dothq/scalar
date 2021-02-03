@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:tsc": "tsc -b -w --preserveWatchOutput",
-    "start": "concurrently 'yarn start:tsc' 'razzle start'",
+    "start": "concurrently \"yarn start:tsc\" \"razzle start\"",
     "build": "tsc -b && razzle build",
     "start:prod": "NODE_ENV=production node build/server.js",
     "deploy": "yarn build && vercel --prod"
