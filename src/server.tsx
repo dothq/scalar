@@ -33,7 +33,7 @@ server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 server.use((req: express.Request, res: express.Response, next) => {
 	if(!req.path.startsWith("/api")) return next();
 
-	if(req.headers.origin && whitelist.includes(req.headers.origin)) {
+	if(!req.headers.origin || whitelist.includes(req.headers.origin)) {
 		next();
 	} else res.json({ ok: false, code: "ORIGIN_BLOCKED_BY_CORS" })
 })
