@@ -12,6 +12,8 @@
     "@prisma/client": "^2.15.0",
     "@types/styled-components": "^5.1.7",
     "argon2": "^0.27.1",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@prisma/cli": "^2.15.0",
+    "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.11",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",

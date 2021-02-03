@@ -7,6 +7,7 @@ import { StaticRouter } from 'react-router-dom';
 import App from './components/App';
 
 import signup from './routes/signup';
+import weather from './routes/ntp/weather';
 
 let assets: any;
 
@@ -55,6 +56,7 @@ server.use((req: express.Request, res: express.Response, next) => {
 	);
 });
 
-server.use("/api", signup);
+server.use(signup);
+server.use(weather);
 
 export default server;
