@@ -9,6 +9,8 @@ const cache: any = {
 };
 
 router.get("/api/ntp/weather/:country/:city", async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+
     const key = `${req.params.city},${req.params.country}`.toLowerCase();
 
     if(cache[key] && Date.now() < cache[key].exp) {

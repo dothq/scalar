@@ -10,6 +10,7 @@ import App from './components/App';
 
 import signup from './routes/signup';
 import weather from './routes/ntp/weather';
+import news from './routes/ntp/news';
 
 let assets: any;
 
@@ -37,7 +38,7 @@ server.use((req: express.Request, res: express.Response, next) => {
 	if(!req.path.startsWith("/api")) return next();
 
 	if(!req.headers.origin || whitelist.includes(req.headers.origin)) {
-		res.header("Access-Contol-Allow-Origin", req.headers.origin)
+		res.header("Access-Control-Allow-Origin", req.headers.origin)
 		next();
 	} else res.json({ ok: false, code: "ORIGIN_BLOCKED_BY_CORS" })
 })
@@ -77,5 +78,6 @@ server.use((req: express.Request, res: express.Response, next) => {
 
 server.use(signup);
 server.use(weather);
+server.use(news);
 
 export default server;
