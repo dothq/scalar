@@ -1,0 +1,94 @@
+.layout p {
+  color: var(--color-secondary);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: var(--golden-ratio-fr) 1fr;
+  }
+}
+
+.grid button {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin: 0 auto;
+
+  max-width: 624px;
+  text-align: center;
+
+  margin-bottom: 64px;
+  margin-top: 64px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 54px;
+}
+
+.features p {
+  margin-top: 6px;
+}
+
+.features img {
+  margin-bottom: 20px;
+}
+
+.grid > div:first-of-type {
+  margin-top: 6rem;
+  line-height: 1.75rem;
+  padding-right: 4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid > div:first-of-type {
+    margin-top: 2.5rem;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .grid > div:first-of-type > h1 {
+    line-height: 2.5rem;
+  }
+
+  .grid > .landing-showoff {
+    display: none;
+  }
+}
+
+.grid-btns {
+  margin-top: 48px;
+}
+
+.landing-showoff {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: 0.15s opacity ease-in-out 0.2s;
+}
+
+.landing-showoff .ls-ready {
+  opacity: 1;
+}
+
+#browser-ui {
+  position: absolute;
+  z-index: 50;
+  user-select: none;
+  user-drag: none;
+  border-radius: 6px;
+}
+
+#browser-wallpaper {
+  object-fit: cover;
+  object-position: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 51.56%, rgba(0, 0, 0, 0.65) 100%);
+  border-radius: 9px 9px 6px 6px;
+  box-shadow: 0 6.4px 14.4px 0 rgba(0,0,0,.132),0 1.2px 3.6px 0 rgba(0,0,0,.108);
+  user-select: none;
+  user-drag: none;
+}

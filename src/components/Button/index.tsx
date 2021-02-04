@@ -12,14 +12,14 @@ export const Button = ({
 }: {
   onClick?: any
   style?: any
-  type: 'primary' | 'secondary'
+  type?: 'primary' | 'secondary' | 'text'
   children: any
   href: string
   iconLeft?: string
   iconRight?: string
 }) => {
   return (
-    <button onClick={onClick} className={`btn btn-${type}`} style={style}>
+    <button onClick={onClick} className={`btn ${type ? `btn-${type}` : ''}`} style={style}>
       <a href={href}>
         {iconLeft && (
           <i

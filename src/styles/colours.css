@@ -3,6 +3,7 @@
   --orange: #ff7a00;
   --yellow: #ffd600;
   --green: #2cc74e;
+  --neon: #00ffb7;
   --azure: #256ef5;
   --blue: #3250ed;
   --purple: #a451fc;
@@ -31,7 +32,7 @@
     --border: var(--gray-6);
 
     --btn-primary: var(--azure);
-    --btn-secondary: var(--gray-7);
+    --btn-secondary: rgba(0, 0, 0, 0.05);
 
     --btn-primary-icon: invert(1);
     --btn-secondary-icon: invert(0);
@@ -40,10 +41,12 @@
     --btn-secondary-color: var(--black);
 
     --btn-primary-hover: var(--blue);
-    --btn-secondary-hover: var(--gray-6);
+    --btn-secondary-hover: rgba(0, 0, 0, 0.075);
 
     --nav-background-color: var(--white);
     --nav-hover: var(--azure);
+
+    --text-primary: var(--azure);
   }
 }
 
@@ -56,7 +59,7 @@
     --border: var(--gray-3);
 
     --btn-primary: var(--azure);
-    --btn-secondary: var(--gray-1);
+    --btn-secondary: rgba(255, 255, 255, 0.05);
 
     --btn-primary-icon: invert(1);
     --btn-secondary-icon: invert(1);
@@ -65,9 +68,11 @@
     --btn-secondary-color: var(--white);
 
     --btn-primary-hover: var(--blue);
-    --btn-secondary-hover: var(--gray-3);
+    --btn-secondary-hover: rgba(255, 255, 255, 0.075);
 
     --nav-background-color: var(--gray-1);
     --nav-hover: var(--gray-5);
+
+    --text-primary: var(--neon);
   }
 }

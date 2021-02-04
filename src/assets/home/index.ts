@@ -1,8 +1,11 @@
-import Lock from './lock.svg'
-import Mail from './mail.svg'
-import Migrate from './migrate.svg'
-import OpenSource from './opensource.svg'
-import Shield from './shield.svg'
-import Sparkles from './sparkles.svg'
+export default {
+    lock: require("./lock.svg"),
+    mail: require("./mail.svg"),
+    migrate: require("./migrate.svg"),
+    opensource: require("./opensource.svg"),
+    shield: require("./shield.svg"),
+    sparkles: require("./sparkles.svg"),
 
-export { Lock, Mail, Migrate, OpenSource, Shield, Sparkles }
+    browser: require("./browser.png"),
+    browserLight: require("./browser-light.png")
+}

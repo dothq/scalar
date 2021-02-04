@@ -1,12 +1,27 @@
+import axios from 'axios';
 import React from 'react'
+
+import Markdown from 'markdown-to-jsx';
 
 import { Button } from '../Button'
 
 export const Header = () => {
-  const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
+  const [motd, setMotd] = React.useState("");
+  const [footerItemsVisible, setFooterItemsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    axios.get("https://raw.githubusercontent.com/dothq/motd/main/motd.md")
+      .then(res => setMotd(res.data))
+  }, [motd])
 
   return (
     <>
+      <nav className={"motd"}>
+        <div className={'nav-container'}>
+          <Markdown options={{ forceInline: true }}>{motd}</Markdown>
+        </div>
+      </nav>
+
       <nav>
         <div className={'nav-container'}>
           <div className={'nav-left'}>
@@ -52,7 +67,7 @@ export const Header = () => {
           <div className={'nav-right'}>
             <Button
               onClick={() => setFooterItemsVisible(!footerItemsVisible)}
-              style={{ padding: '14px' }}
+              style={{ "--padding": '14px' }}
               type={'secondary'}
               href={'#'}
               iconLeft={'menu'}

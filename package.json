@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@prisma/client": "^2.15.0",
+    "@types/markdown-to-jsx": "^6.11.3",
     "@types/styled-components": "^5.1.7",
     "argon2": "^0.27.1",
     "axios": "^0.21.1",
@@ -20,6 +21,7 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "markdown-to-jsx": "^7.1.1",
     "razzle-plugin-typescript": "^3.3.11",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

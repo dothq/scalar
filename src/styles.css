@@ -48,6 +48,29 @@ nav {
   z-index: 1;
 }
 
+.motd {
+  box-shadow: 0px 1px 0px 0px var(--border) !important;
+  z-index: 2;
+}
+
+.motd > .nav-container {
+  padding: 11.5px 0;
+  justify-content: center;
+  font-size: 14px;
+  height: unset !important;
+  text-align: center;
+  min-height: 17px;
+}
+
+.motd > .nav-container > span > a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.motd > .nav-container > span > a:hover {
+  opacity: 0.6;
+}
+
 .nav-container {
   max-width: 1300px;
   height: 64px;
@@ -111,7 +134,6 @@ nav {
 
 .btn {
   appearance: none;
-  padding: 10px 20px;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -119,6 +141,7 @@ nav {
   font-size: 14px;
   font-family: inherit;
   cursor: pointer;
+  padding: 0;
 }
 
 .btn > a {
@@ -126,10 +149,7 @@ nav {
   color: inherit;
   display: flex;
   align-items: center;
-}
-
-.btn:hover {
-  opacity: 0.9;
+  padding: var(--padding, 10px 20px);
 }
 
 .btn-primary {
@@ -148,6 +168,15 @@ nav {
 
 .btn-secondary:hover {
   background-color: var(--btn-secondary-hover);
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--btn-primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
 }
 
 .hero-center {
@@ -259,6 +288,10 @@ nav.mobile-nav {
 @media only screen and (max-width: 900px) {
   nav {
     display: none;
+  }
+
+  nav.motd {
+    display: flex;
   }
 
   nav.mobile-nav {
