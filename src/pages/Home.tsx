@@ -19,6 +19,13 @@ class Home extends React.Component {
         <div className={style.layout}>
           <div className={style.grid}>
             <div>
+              <img
+                src="/assets/landing-showcase.png"
+                alt="Dot Browser design"
+              />
+            </div>
+
+            <div>
               <h1>Take back your privacy.</h1>
               <p>
                 Dot Browser is a privacy-conscious web browser with smarts
@@ -34,6 +41,7 @@ class Home extends React.Component {
                 >
                   Learn more
                 </Button>
+
                 <Button
                   onClick={() => {}}
                   type="primary"
@@ -42,13 +50,6 @@ class Home extends React.Component {
                   Download now
                 </Button>
               </div>
-            </div>
-
-            <div>
-              <img
-                src="/assets/landing-showcase.png"
-                alt="Dot Browser design"
-              />
             </div>
           </div>
 

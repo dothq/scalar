@@ -18,9 +18,16 @@
   color: var(--color-secondary);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr var(--golden-ratio-fr);
+@media (min-width: 900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: var(--golden-ratio-fr) 1fr;
+    direction: rtl;
+  }
+
+  .grid > * {
+    direction: ltr;
+  }
 }
 
 .grid div {
@@ -30,6 +37,10 @@
 .grid img {
   width: 100%;
   margin: 0;
+}
+
+.grid button {
+  margin-right: 16px;
 }
 
 .section {
