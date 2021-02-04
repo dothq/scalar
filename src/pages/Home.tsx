@@ -10,6 +10,7 @@ import {
   Shield,
   Sparkles,
 } from '../assets/home'
+import { Button } from '../components/Button'
 
 class Home extends React.Component {
   render() {
@@ -25,7 +26,22 @@ class Home extends React.Component {
                 online.
               </p>
 
-              <div>{/* Buttons go here */}</div>
+              <div>
+                <Button
+                  onClick={() => {}}
+                  type="secondary"
+                  href="/products/browser"
+                >
+                  Learn more
+                </Button>
+                <Button
+                  onClick={() => {}}
+                  type="primary"
+                  href="https://github.com/dothq/browser-pr-builds/releases"
+                >
+                  Download now
+                </Button>
+              </div>
             </div>
 
             <div>
