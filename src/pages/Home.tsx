@@ -35,7 +35,7 @@ class Home extends React.Component {
 
               <div>
                 <Button
-                  onClick={() => {}}
+                  onClick={() => console.log('Button')}
                   type="secondary"
                   href="/products/browser"
                 >
@@ -43,7 +43,7 @@ class Home extends React.Component {
                 </Button>
 
                 <Button
-                  onClick={() => {}}
+                  onClick={() => console.log('Button')}
                   type="primary"
                   href="https://github.com/dothq/browser-pr-builds/releases"
                 >
