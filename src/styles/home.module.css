@@ -1,0 +1,67 @@
+.layout h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.layout h2 {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.layout h3 {
+  font-weight: 500;
+  font-size: 1.3em;
+  margin-bottom: 6px;
+}
+
+.layout p {
+  color: var(--color-secondary);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: var(--golden-ratio-fr) 1fr;
+    direction: rtl;
+  }
+
+  .grid > * {
+    direction: ltr;
+  }
+}
+
+.grid div {
+  margin: auto;
+}
+
+.grid img {
+  width: 100%;
+  margin: 0;
+}
+
+.grid button {
+  margin-right: 16px;
+}
+
+.section {
+  margin: 0 auto;
+
+  max-width: 624px;
+  text-align: center;
+
+  margin-bottom: 64px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 54px;
+}
+
+.features p {
+  margin-top: 6px;
+}
+
+.features img {
+  margin-bottom: 20px;
+}

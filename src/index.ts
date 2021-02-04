@@ -1,28 +1,27 @@
-import express from 'express';
-import Server from './server';
+import express from 'express'
+import Server from './server'
 
-let app = Server;
+let app = Server
 
-if ("hot" in module) {
-    (module as any).hot.accept('./server', () => {
-        console.log('🔁  HMR Reloading `./server`...');
+if ('hot' in module) {
+  ;(module as any).hot.accept('./server', () => {
+    console.log('🔁  HMR Reloading `./server`...')
 
-        try {
-            app = require('./server').default;
-        } catch (error) {
-            console.error(error);
-        }
+    try {
+      app = require('./server').default
+    } catch (error) {
+      console.error(error)
+    }
+  })
 
-    });
-
-    console.info('✅  Server-side HMR Enabled!');
+  console.info('✅  Server-side HMR Enabled!')
 }
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
 export default express()
-    .use((req, res) => (app as any).handle(req, res))
-    .listen(port, () => {
-        console.log(`🚀  Started frontend at http://localhost:${port}`);
-        console.log(`🔥  Started backend at http://localhost:${port}/api`);
-    });
+  .use((req, res) => (app as any).handle(req, res))
+  .listen(port, () => {
+    console.log(`🚀  Started frontend at http://localhost:${port}`)
+    console.log(`🔥  Started backend at http://localhost:${port}/api`)
+  })
