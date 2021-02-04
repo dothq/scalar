@@ -1,3 +1,3 @@
 module.exports = {
-    plugins: ['typescript'],
-};
+  plugins: ['typescript'],
+}

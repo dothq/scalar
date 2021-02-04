@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import { Layout } from "../components/Layout";
+import { Layout } from '../components/Layout'
 
 class Home extends React.Component {
   render() {
@@ -68,8 +68,8 @@ class Home extends React.Component {
           </div>
         </div>
       </Layout>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home

@@ -7,7 +7,8 @@
     "start": "concurrently \"yarn start:tsc\" \"razzle start\"",
     "build": "tsc -b && razzle build",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "deploy": "yarn build && vercel --prod"
+    "deploy": "yarn build && vercel --prod",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@prisma/client": "^2.15.0",
@@ -37,6 +38,8 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "concurrently": "^5.3.0",
-    "razzle": "^3.3.11"
+    "prettier": "2.2.1",
+    "razzle": "^3.3.11",
+    "tslint-config-prettier": "^1.18.0"
   }
 }
