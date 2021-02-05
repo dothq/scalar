@@ -5,29 +5,30 @@ import { Layout } from '../components/Layout'
 import assets from '../assets/home'
 import { Button } from '../components/Button'
 
-import '../styles/home.css';
+import '../styles/home.css'
 
 const Home = () => {
-  const [buiImage, setBuiImage] = React.useState("");
-  const [buiReady, setBuiReady] = React.useState(false);
+  const [buiImage, setBuiImage] = React.useState('')
+  const [buiReady, setBuiReady] = React.useState(false)
 
   React.useEffect(() => {
-    if(window.matchMedia("(prefers-color-scheme: dark)").matches) setBuiImage(assets.browserLight);
-    else setBuiImage(assets.browser);
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+      setBuiImage(assets.browserLight)
+    else setBuiImage(assets.browser)
 
-    let i: any = new Image();
-    i.src = buiImage;
+    let i: any = new Image()
+    i.src = buiImage
 
-    i.addEventListener("load", () => {
+    i.addEventListener('load', () => {
       setBuiReady(true)
-      i = null;
+      i = null
     })
   }, [buiImage])
 
   return (
     <Layout>
       <div>
-        <div className={"grid"}>
+        <div className={'grid'}>
           <div>
             <h1>Take back your privacy.</h1>
             <p>
@@ -36,7 +37,7 @@ const Home = () => {
               online.
             </p>
 
-            <div className={"grid-btns"}>
+            <div className={'grid-btns'}>
               <Button
                 onClick={() => console.log('Button')}
                 type="secondary"
@@ -55,14 +56,21 @@ const Home = () => {
             </div>
           </div>
 
-          <div className={'landing-showoff'} style={{ opacity: buiReady ? 1 : 0 }}>
+          <div
+            className={'landing-showoff'}
+            style={{ opacity: buiReady ? 1 : 0 }}
+          >
             <img src={buiImage} id="browser-ui" width="800" height="492" />
-            <img id="browser-wallpaper" src="https://source.unsplash.com/collection/67042424" width="800" height="492" />
+            <img
+              id="browser-wallpaper"
+              src="https://source.unsplash.com/collection/67042424/800x492"
+              width="800"
+              height="492"
+            />
           </div>
-
         </div>
 
-        <div className={"section"}>
+        <div className={'section'}>
           <h2>
             We built a privacy browser in a world where your personal data is
             sold to the highest bidder.
@@ -73,7 +81,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className={"features"}>
+        <div className={'features'}>
           <div>
             <img src={assets.lock} alt="" />
             <h3>Respects your privacy</h3>
@@ -113,8 +121,8 @@ const Home = () => {
             <img src={assets.migrate} alt="" />
             <h3>Migrate from Chrome or Edge</h3>
             <p>
-              Dot can migrate all your data from your previous browser in just
-              a few clicks.
+              Dot can migrate all your data from your previous browser in just a
+              few clicks.
             </p>
           </div>
 
