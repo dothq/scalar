@@ -20,4 +20,5 @@ jobs:
 
       - name: Deploy
         run: |
-          yarn deploy
+          yarn build
+          vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
