@@ -12,14 +12,14 @@ jobs:
       CI: false 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install Vercel
-        run: |
-          yarn
-          sudo npm i vercel -g
-
-      - name: Deploy
-        run: |
-          yarn build
-          vercel switch dothq --token ${{ secrets.VERCEL_TOKEN }}
-          vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm --name new-dothq-co
+        
+      - name: Build
+        run: yarn build
+        
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.ROBOT_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }} 
