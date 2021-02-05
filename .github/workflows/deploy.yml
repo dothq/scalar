@@ -1,0 +1,20 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Vercel
+        run: |
+          npm i vercel -g
+
+      - name: Deploy
+        run: |
+          yarn deploy
