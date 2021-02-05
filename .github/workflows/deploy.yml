@@ -13,7 +13,8 @@ jobs:
 
       - name: Install Vercel
         run: |
-          npm i vercel -g
+          yarn
+          sudo npm i vercel -g
 
       - name: Deploy
         run: |
