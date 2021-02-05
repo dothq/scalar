@@ -24,6 +24,18 @@
   margin-top: 64px;
 }
 
+@media (max-width: 650px) {
+  .features {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .features {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -86,9 +98,15 @@
 #browser-wallpaper {
   object-fit: cover;
   object-position: center;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 51.56%, rgba(0, 0, 0, 0.65) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0) 51.56%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
   border-radius: 9px 9px 6px 6px;
-  box-shadow: 0 6.4px 14.4px 0 rgba(0,0,0,.132),0 1.2px 3.6px 0 rgba(0,0,0,.108);
+  box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
+    0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
   user-select: none;
   user-drag: none;
 }
