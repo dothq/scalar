@@ -21,4 +21,4 @@ jobs:
       - name: Deploy
         run: |
           yarn build
-          vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+          CI=true vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
