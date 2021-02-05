@@ -29,18 +29,18 @@ export const Header = () => {
               <i className={'dot-icon'} />
             </a>
             <ul className={'nav-items'}>
-              <li>
-                <a href={'/products'}>Products</a>
-              </li>
-              <li>
-                <a href={'/company'}>Company</a>
-              </li>
-              <li>
-                <a href={'/community'}>Community</a>
-              </li>
-              <li>
-                <a href={'/about'}>About</a>
-              </li>
+              <a href={'/products'}>
+                Products
+              </a>
+              <a href={'/company'}>
+                Company
+              </a>
+              <a href={'/community'}>
+                Community
+              </a>
+              <a href={'/about'}>
+                About
+              </a>
             </ul>
           </div>
 
