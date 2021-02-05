@@ -21,4 +21,5 @@ jobs:
       - name: Deploy
         run: |
           yarn build
-          vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm
+          vercel switch dothq --token ${{ secrets.VERCEL_TOKEN }}
+          vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm --name new-dothq-co
