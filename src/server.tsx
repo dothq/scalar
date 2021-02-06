@@ -72,7 +72,7 @@ server.use((req: express.Request, res: express.Response, next) => {
         <link rel="shortcut icon" href="/favicon.png" />
       </head>
       <body>
-        <h1>Dot HQ</h1>
+        <marquee direction="right" width="200"><h1>Dot HQ</h1></marquee>
         <hr />
         <br />
         <i>Bravo.</i> You're probably the only person on earth that is still using Internet Explorer.
@@ -102,7 +102,8 @@ server.use((req: express.Request, res: express.Response, next) => {
         <br />
         <footer>
           <b>Last updated:</b> 1st April 1999 17:32
-          <br /><br />
+          <br />
+          <hr />
           © Dot HQ
         </footer>
       </body>
