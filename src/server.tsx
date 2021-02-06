@@ -62,7 +62,7 @@ server.use((req: express.Request, res: express.Response, next) => {
 			<meta charSet='utf-8' />
 			<title>Dot HQ</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="shortcut icon" href="favicon.png" />
+			<link rel="shortcut icon" href="/favicon.png" />
 			${
         assets.client.css
           ? `<link rel="stylesheet" href="${assets.client.css}">`
