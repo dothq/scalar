@@ -101,7 +101,7 @@ server.use((req: express.Request, res: express.Response, next) => {
         </ul>
         <br />
         <footer>
-          © ${new Date().getFullYear()} Dot HQ
+          <b>Last updated:</b> 1st April 1999 17:32
         </footer>
       </body>
     `)
