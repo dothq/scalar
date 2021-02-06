@@ -27,8 +27,10 @@
   :root {
     --color: var(--black);
     --color-secondary: var(--gray-2);
+    --color-disabled: var(--gray-3);
     --background-color: var(--white);
     --background-color-secondary: var(--gray-7);
+    --background-overlay-color: #00000014;
     --border: var(--gray-6);
 
     --btn-primary: var(--azure);
@@ -54,8 +56,10 @@
   :root {
     --color: var(--white);
     --color-secondary: var(--gray-6);
+    --color-disabled: var(--gray-5);
     --background-color: var(--black);
     --background-color-secondary: var(--gray-2);
+    --background-overlay: #ffffff14;
     --border: var(--gray-3);
 
     --btn-primary: var(--azure);

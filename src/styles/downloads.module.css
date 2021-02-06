@@ -1,0 +1,43 @@
+.option {
+  background: var(--background-overlay);
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: auto min(100%, 200px);
+}
+
+@media (max-width: 450px) {
+  .option {
+    display: block;
+  }
+}
+
+.option :first-child {
+  width: 100%;
+}
+
+.option :last-child {
+  display: grid;
+  gap: 0.5rem;
+  width: auto;
+}
+
+.option :last-child button {
+  width: 100%;
+}
+
+.disabled {
+  background-color: var(--background-overlay);
+  color: var(--color-disabled);
+  cursor: default !important;
+}
+
+.disabled:hover {
+  background-color: var(--background-overlay);
+}
+
+.disabled * {
+  cursor: default;
+}

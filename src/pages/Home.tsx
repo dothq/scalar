@@ -49,7 +49,7 @@ const Home = () => {
               <Button
                 onClick={() => console.log('Button')}
                 type="primary"
-                href="https://github.com/dothq/browser-pr-builds/releases"
+                href="/products/browser/download"
               >
                 Download Dot Browser
               </Button>

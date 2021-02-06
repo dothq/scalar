@@ -9,6 +9,7 @@ export const Button = ({
   href,
   iconLeft,
   iconRight,
+  className,
 }: {
   onClick?: any
   style?: any
@@ -17,9 +18,14 @@ export const Button = ({
   href: string
   iconLeft?: string
   iconRight?: string
+  className?: string
 }) => {
   return (
-    <button onClick={onClick} className={`btn ${type ? `btn-${type}` : ''}`} style={style}>
+    <button
+      onClick={onClick}
+      className={`btn ${type ? `btn-${type}` : ''} ${className}`}
+      style={style}
+    >
       <a href={href}>
         {iconLeft && (
           <i
