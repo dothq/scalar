@@ -15,11 +15,16 @@ const Browser = () => {
   React.useEffect(() => {
     if(typeof(window) === "undefined") return;
 
-    const { platform } = window.navigator;
+    const { platform, userAgent } = window.navigator;
 
     if(platform.toLowerCase() === "win32") setOS("Windows");
     else if(platform.toLowerCase() === "macintel") setOS("macOS");
     else if(platform.toLowerCase().includes("linux")) setOS("Linux");
+    else if(
+      platform.toLowerCase().includes("mobile") ||
+      userAgent.toLowerCase().includes("android") ||
+      userAgent.toLowerCase().includes("iphone")
+    ) setOS("Mobile");
     else setAdvancedVisible(true);
   }, [os])
 
@@ -35,8 +40,9 @@ const Browser = () => {
           <Button
             onClick={() => window.location.href = `/products/browser/thanks`}
             type="primary"
+            disabled={os === "Mobile"}
           >
-            Download Dot for {os}
+            {os === "Mobile" ? `Mobile Coming Soon` : `Download Dot for ${os}`}
           </Button>
 
           <Button

@@ -180,6 +180,12 @@ nav {
   background-color: var(--btn-primary-hover);
 }
 
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .hero-center {
   display: flex;
   justify-content: center;

@@ -10,6 +10,7 @@ export const Button = ({
   iconLeft,
   iconRight,
   className,
+  disabled
 }: {
   onClick?: any
   style?: any
@@ -19,11 +20,12 @@ export const Button = ({
   iconLeft?: string
   iconRight?: string
   className?: string
+  disabled?: boolean
 }) => {
   return (
     <button
       onClick={onClick}
-      className={`btn ${type ? `btn-${type}` : ''} ${className}`}
+      className={`btn ${type ? `btn-${type}` : ''} ${className ? className : ``} ${disabled ? `btn-disabled` : ``}`}
       style={style}
     >
       <a href={href}>
