@@ -15,7 +15,7 @@ export const Button = ({
   style?: any
   type?: 'primary' | 'secondary' | 'text'
   children: any
-  href: string
+  href?: string
   iconLeft?: string
   iconRight?: string
   className?: string

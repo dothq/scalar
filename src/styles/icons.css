@@ -1,0 +1,44 @@
+.hmm-icon {
+    background-image: url(../assets/hmm.svg);
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+}
+  
+.cryhmm-icon {
+    background-image: url(../assets/cryhmm.svg);
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+}
+
+.back-icon {
+    background-image: url(../assets/back.svg);
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+}
+
+.menu-icon {
+    background-image: url(../assets/menu.svg);
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    margin-right: 0 !important;
+}
+
+.dot-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: var(--color);
+    display: block;
+}
+
+.dot-browser-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    box-shadow: inset 0px 0px 0px 6px var(--color);
+    display: block;
+}

@@ -31,7 +31,7 @@
 .disabled {
   background-color: var(--background-overlay);
   color: var(--color-disabled);
-  cursor: default !important;
+  cursor: not-allowed !important;
 }
 
 .disabled:hover {

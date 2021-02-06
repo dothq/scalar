@@ -1,4 +1,5 @@
 @import 'styles/colours.css';
+@import 'styles/icons.css';
 
 @font-face {
   font-family: 'Inter';
@@ -96,14 +97,6 @@ nav {
   gap: 16px;
 }
 
-.dot-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 100px;
-  background-color: var(--color);
-  display: block;
-}
-
 .nav-items {
   list-style: none;
   display: flex;
@@ -151,6 +144,8 @@ nav {
   display: flex;
   align-items: center;
   padding: var(--padding, 10px 20px);
+  width: inherit;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -173,7 +168,12 @@ nav {
 
 .btn-text {
   background-color: transparent;
-  color: var(--btn-primary-color);
+  color: var(--text-primary);
+}
+
+.btn-text:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .btn-primary:hover {
@@ -186,6 +186,12 @@ nav {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+}
+
+.hero-center-horiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1,
@@ -222,37 +228,8 @@ p {
   opacity: 0.8;
 }
 
-.hmm-icon {
-  background-image: url(assets/hmm.svg);
-  background-size: cover;
-  width: 64px;
-  height: 64px;
-}
-
-.cryhmm-icon {
-  background-image: url(assets/cryhmm.svg);
-  background-size: cover;
-  width: 64px;
-  height: 64px;
-}
-
-.back-icon {
-  background-image: url(assets/back.svg);
-  background-size: cover;
-  width: 16px;
-  height: 16px;
-}
-
-.menu-icon {
-  background-image: url(assets/menu.svg);
-  background-size: cover;
-  width: 16px;
-  height: 16px;
-  margin-right: 0 !important;
-}
-
 .hero-vh {
-  height: calc(100vh - 64px);
+  height: calc(100vh - 64px - 40px);
   display: flex;
   flex-direction: column;
   width: 100%;

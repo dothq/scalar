@@ -12,6 +12,9 @@ export const Header = () => {
   React.useEffect(() => {
     axios.get("https://raw.githubusercontent.com/dothq/motd/main/motd.md")
       .then(res => setMotd(res.data))
+      .catch(err => {
+        console.log(err);
+      })
   }, [motd])
 
   return (

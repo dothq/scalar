@@ -11,6 +11,7 @@ import App from './components/App'
 import signup from './routes/signup'
 import weather from './routes/ntp/weather'
 import news from './routes/ntp/news'
+import download from './routes/download'
 
 let assets: any
 
@@ -31,10 +32,15 @@ server.use(bodyParser.json())
 
 server.use((req: express.Request, res: express.Response, next) => {
   res.header('X-Powered-By', 'me lon')
+  res.header('Server', 'me lon')
   next()
 })
 server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 server.use((req: express.Request, res: express.Response, next) => {
+  if(process.env.NODE_ENV === "development") {
+    res.header('Access-Control-Allow-Origin', "*");
+    return next();
+  }
   if (!req.path.startsWith('/api')) return next()
 
   if (!req.headers.origin || whitelist.includes(req.headers.origin)) {
@@ -84,5 +90,6 @@ server.use((req: express.Request, res: express.Response, next) => {
 server.use(signup)
 server.use(weather)
 server.use(news)
+server.use(download)
 
 export default server
