@@ -16,10 +16,15 @@ const BrowserThanks = () => {
         window.addEventListener("DOMContentLoaded", () => {
             let os = "linux";
 
-            const { platform } = window.navigator;
+            const { platform, userAgent } = window.navigator;
         
             if(platform.toLowerCase() === "win32") os = "windows";
             else if(platform.toLowerCase() === "macintel") os = "macos";
+            else if(
+                platform.toLowerCase().includes("mobile") ||
+                userAgent.toLowerCase().includes("android") ||
+                userAgent.toLowerCase().includes("iphone")
+            ) return;
 
             axios.get(`/api/downloads?product=browser&os=${os}&noRedir=true`, { maxRedirects: 1 })
                 .then(_ => {
