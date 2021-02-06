@@ -19,23 +19,13 @@ const cache: any = {}
 router.get('/api/ntp/news/:country', async (req, res) => {
   res.header('Access-Control-Allow-Origin', '*')
 
-  if (!req.query.categories)
-    return res.json({ ok: false, code: 'MISSING_CATEGORIES_QUERY' })
-
-  const c = (req.query.categories as any).split(',')
-
-  const myCategories: any = []
-
-  c.forEach((category: any) => {
-    if (categories.includes(category)) {
-      myCategories.push(category)
-    }
-  })
-
   const key = req.params.country.toLowerCase()
 
   if (cache[key] && Date.now() < cache[key].exp) {
-    res.json(cache[key])
+    res.json({
+      exp: cache[key].exp,
+      articles: cache[key].articles.slice(0, req.query.limit)
+    })
   } else {
     const apiKey = (process.env.NEWS_API_KEY as string).split(',')[
       Math.floor(
@@ -45,9 +35,7 @@ router.get('/api/ntp/news/:country', async (req, res) => {
 
     axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=${key}&category=${myCategories.join(
-          ','
-        )}&apiKey=${apiKey}`
+        `https://newsapi.org/v2/top-headlines?country=${key}&apiKey=${apiKey}`
       )
       .then((_) => {
         const articles: any = []
@@ -69,7 +57,10 @@ router.get('/api/ntp/news/:country', async (req, res) => {
           exp: Date.now() + 1800000,
           articles,
         }
-        res.json(cache[key])
+        res.json({
+          exp: cache[key].exp,
+          articles: cache[key].articles.slice(0, req.query.limit)
+        })
       })
   }
 })
