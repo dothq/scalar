@@ -60,6 +60,53 @@ server.use((req: express.Request, res: express.Response, next) => {
     </StaticRouter>
   )
 
+  if(req.headers['user-agent']?.includes("Trident/")) {
+    return res.send(`
+      <!doctype html>
+      <html lang="">
+      <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet='utf-8' />
+        <title>Dot HQ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/favicon.png" />
+      </head>
+      <body>
+        <h1>Dot HQ</h1>
+        <hr />
+        <br />
+        <i>Bravo.</i> You're probably the only person on earth that is still using Internet Explorer.
+        <br />
+        Unfortunately, our super-duper modern website does not support this relic.
+        <br /><br />
+        If you're using Internet Explorer to download Dot Browser, we're making it easy for you to download with zero pain.
+        <br /><br />
+        <a href="/api/downloads?product=browser&os=windows&language=${req.headers['accept-language']?.split(",")[0].replace(/-/g, "_")}">Download Dot Browser for Windows</a>
+        <br /><br />
+        You could even browse our real site from <a href="https://web.archive.org/web/https://dothq.co/">The Wayback Machine</a>.
+        <br /><br />
+        <hr />
+        <br />
+        Some useful links:
+        <ul>
+          <li>
+            <a href="https://twitter.com/DotBrowser">Twitter</a>
+          </li>
+          <li>
+            <a href="https://discord.gg/wAh7thM">Discord</a>
+          </li>
+          <li>
+            <a href="https://github.com/dothq">GitHub</a>
+          </li>
+        </ul>
+        <br />
+        <footer>
+          © ${new Date().getFullYear()} Dot HQ
+        </footer>
+      </body>
+    `)
+  }
+
   res.send(
     `<!doctype html>
 		<html lang="">
@@ -68,7 +115,7 @@ server.use((req: express.Request, res: express.Response, next) => {
 			<meta charSet='utf-8' />
 			<title>Dot HQ</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="shortcut icon" href="/favicon.png" />
+      <link rel="shortcut icon" href="/favicon.png" />
 			${
         assets.client.css
           ? `<link rel="stylesheet" href="${assets.client.css}">`
