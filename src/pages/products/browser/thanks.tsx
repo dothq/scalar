@@ -23,15 +23,8 @@ const BrowserThanks = () => {
 
             axios.get(`/api/downloads?product=browser&os=${os}&noRedir=true`, { maxRedirects: 1 })
                 .then(_ => {
-                    const a = document.createElement("a");
-                    a.href = _.data;
-                    a.download = true.toString();
-                    a.style.display = "none";
-
-                    document.body.appendChild(a);
-
                     setTimeout(() => {
-                        a.click();
+                        window.location.href = _.data;
                     }, 1000);
                 }).catch(err => {
                     console.log(err);
