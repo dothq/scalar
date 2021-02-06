@@ -102,6 +102,8 @@ server.use((req: express.Request, res: express.Response, next) => {
         <br />
         <footer>
           <b>Last updated:</b> 1st April 1999 17:32
+          <br /><br />
+          © Dot HQ
         </footer>
       </body>
     `)
