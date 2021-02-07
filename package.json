@@ -2,6 +2,11 @@
   "name": "my-razzle-app",
   "version": "1.0.0",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format:check"
+    }
+  },
   "scripts": {
     "start:tsc": "tsc -b -w --preserveWatchOutput",
     "start": "concurrently \"yarn start:tsc\" \"razzle start\"",
@@ -42,6 +47,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "concurrently": "^5.3.0",
+    "husky": "^4.3.8",
     "prettier": "2.2.1",
     "razzle": "^3.3.11",
     "tslint-config-prettier": "^1.18.0"
