@@ -21,7 +21,11 @@ export const Layout = ({
       <section className={'hero'}>
         <Header />
         <div className={`hero-container ${fullHeight ? `hero-vh` : ``}`}>
-          <div className={`hero-content ${centerHoriz ? `hero-center-horiz` : center ? `hero-center` : ``}`}>
+          <div
+            className={`hero-content ${
+              centerHoriz ? `hero-center-horiz` : center ? `hero-center` : ``
+            }`}
+          >
             {children}
           </div>
           <Footer />

@@ -24,7 +24,7 @@ router.get('/api/ntp/news/:country', async (req, res) => {
   if (cache[key] && Date.now() < cache[key].exp) {
     res.json({
       exp: cache[key].exp,
-      articles: cache[key].articles.slice(0, req.query.limit)
+      articles: cache[key].articles.slice(0, req.query.limit),
     })
   } else {
     const apiKey = (process.env.NEWS_API_KEY as string).split(',')[
@@ -59,7 +59,7 @@ router.get('/api/ntp/news/:country', async (req, res) => {
         }
         res.json({
           exp: cache[key].exp,
-          articles: cache[key].articles.slice(0, req.query.limit)
+          articles: cache[key].articles.slice(0, req.query.limit),
         })
       })
   }

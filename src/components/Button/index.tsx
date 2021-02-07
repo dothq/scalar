@@ -10,7 +10,7 @@ export const Button = ({
   iconLeft,
   iconRight,
   className,
-  disabled
+  disabled,
 }: {
   onClick?: any
   style?: any
@@ -25,7 +25,9 @@ export const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`btn ${type ? `btn-${type}` : ''} ${className ? className : ``} ${disabled ? `btn-disabled` : ``}`}
+      className={`btn ${type ? `btn-${type}` : ''} ${
+        className ? className : ``
+      } ${disabled ? `btn-disabled` : ``}`}
       style={style}
     >
       <a href={href}>

@@ -54,7 +54,7 @@ const Home = () => {
           </p>
         </div>
 
-        <FeatureGrid id={"#features"} />
+        <FeatureGrid id={'#features'} />
       </div>
     </Layout>
   )

@@ -37,9 +37,9 @@ server.use((req: express.Request, res: express.Response, next) => {
 })
 server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 server.use((req: express.Request, res: express.Response, next) => {
-  if(process.env.NODE_ENV === "development") {
-    res.header('Access-Control-Allow-Origin', "*");
-    return next();
+  if (process.env.NODE_ENV === 'development') {
+    res.header('Access-Control-Allow-Origin', '*')
+    return next()
   }
   if (!req.path.startsWith('/api')) return next()
 
@@ -60,7 +60,7 @@ server.use((req: express.Request, res: express.Response, next) => {
     </StaticRouter>
   )
 
-  if(req.headers['user-agent']?.includes("Trident/")) {
+  if (req.headers['user-agent']?.includes('Trident/')) {
     return res.send(`
       <!doctype html>
       <html lang="">
@@ -81,7 +81,11 @@ server.use((req: express.Request, res: express.Response, next) => {
         <br /><br />
         If you're using Internet Explorer to download Dot Browser, we're making it easy for you to download with zero pain.
         <br /><br />
-        <a href="/api/downloads?product=browser&os=windows&language=${req.headers['accept-language']?.split(",")[0].replace(/-/g, "_")}">Download Dot Browser for Windows</a>
+        <a href="/api/downloads?product=browser&os=windows&language=${req.headers[
+          'accept-language'
+        ]
+          ?.split(',')[0]
+          .replace(/-/g, '_')}">Download Dot Browser for Windows</a>
         <br /><br />
         You could even browse our real site from <a href="https://web.archive.org/web/https://dothq.co/">The Wayback Machine</a>.
         <br /><br />

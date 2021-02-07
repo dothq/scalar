@@ -1,25 +1,26 @@
-import axios from 'axios';
+import axios from 'axios'
 import React from 'react'
 
-import Markdown from 'markdown-to-jsx';
+import Markdown from 'markdown-to-jsx'
 
 import { Button } from '../Button'
 
 export const Header = () => {
-  const [motd, setMotd] = React.useState("");
-  const [footerItemsVisible, setFooterItemsVisible] = React.useState(false);
+  const [motd, setMotd] = React.useState('')
+  const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
 
   React.useEffect(() => {
-    axios.get("https://raw.githubusercontent.com/dothq/motd/main/motd.md")
-      .then(res => setMotd(res.data))
-      .catch(err => {
-        console.log(err);
+    axios
+      .get('https://raw.githubusercontent.com/dothq/motd/main/motd.md')
+      .then((res) => setMotd(res.data))
+      .catch((err) => {
+        console.log(err)
       })
   }, [motd])
 
   return (
     <>
-      <nav className={"motd"}>
+      <nav className={'motd'}>
         <div className={'nav-container'}>
           <Markdown options={{ forceInline: true }}>{motd}</Markdown>
         </div>
@@ -32,18 +33,10 @@ export const Header = () => {
               <i className={'dot-icon'} />
             </a>
             <ul className={'nav-items'}>
-              <a href={'/products'}>
-                Products
-              </a>
-              <a href={'/company'}>
-                Company
-              </a>
-              <a href={'/community'}>
-                Community
-              </a>
-              <a href={'/about'}>
-                About
-              </a>
+              <a href={'/products'}>Products</a>
+              <a href={'/company'}>Company</a>
+              <a href={'/community'}>Community</a>
+              <a href={'/about'}>About</a>
             </ul>
           </div>
 
@@ -70,7 +63,7 @@ export const Header = () => {
           <div className={'nav-right'}>
             <Button
               onClick={() => setFooterItemsVisible(!footerItemsVisible)}
-              style={{ "--padding": '14px' }}
+              style={{ '--padding': '14px' }}
               type={'secondary'}
               href={'#'}
               iconLeft={'menu'}

@@ -11,18 +11,10 @@ export const Footer = () => {
             <i className={'dot-icon'} />
           </a>
           <ul className={'nav-items'}>
-            <a href={'/products'}>
-              Products
-            </a>
-            <a href={'/company'}>
-              Company
-            </a>
-            <a href={'/community'}>
-              Community
-            </a>
-            <a href={'/about'}>
-              About
-            </a>
+            <a href={'/products'}>Products</a>
+            <a href={'/company'}>Company</a>
+            <a href={'/community'}>Community</a>
+            <a href={'/about'}>About</a>
           </ul>
         </div>
 

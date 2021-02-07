@@ -2,27 +2,27 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
-  
+
 jobs:
   build:
     runs-on: ubuntu-20.04
     env:
-      CI: false 
+      CI: false
     steps:
       - uses: actions/checkout@v2
-        
+
       - name: Install dependencies
         run: yarn
-        
+
       - name: Build
         run: yarn build
-        
+
       - uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.ROBOT_TOKEN }}
           vercel-args: '--prod'
           vercel-org-id: ${{ secrets.ORG_ID }}
-          vercel-project-id: ${{ secrets.PROJECT_ID }} 
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
