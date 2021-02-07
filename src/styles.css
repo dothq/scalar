@@ -358,3 +358,36 @@ nav.mobile-nav {
   right: 0;
   margin-right: calc(1.5rem + 15px);
 }
+
+/* Helper classes */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gap {
+  margin-bottom: 1rem;
+}
+
+/* Input elements */
+input[type='name'],
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  background-color: var(--btn-secondary);
+  color: var(--btn-secondary-color);
+  padding: var(--padding, 10px 20px);
+  border-radius: 8px;
+  border: var(--border) 2px solid;
+}
+
+input[type='name']:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus {
+  border-radius: 8px;
+  border: var(--color) 2px solid;
+  outline: none;
+}
