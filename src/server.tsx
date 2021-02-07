@@ -60,7 +60,10 @@ server.use((req: express.Request, res: express.Response, next) => {
     </StaticRouter>
   )
 
-  if (req.headers['user-agent']?.includes('Trident/')) {
+  if (
+    req.headers['user-agent']?.includes('Trident/') ||
+    req.headers['user-agent']?.includes('konqueror/')
+  ) {
     return res.send(`
       <!doctype html>
       <html lang="">
@@ -75,7 +78,7 @@ server.use((req: express.Request, res: express.Response, next) => {
         <marquee direction="right" width="200"><h1>Dot HQ</h1></marquee>
         <hr />
         <br />
-        <i>Bravo.</i> You're probably the only person on earth that is still using Internet Explorer.
+        <i>Bravo.</i> You're probably the only person on earth that is still using Internet Explorer (or konqueror with a khtml backend).
         <br />
         Unfortunately, our super-duper modern website does not support this relic.
         <br /><br />
@@ -86,6 +89,12 @@ server.use((req: express.Request, res: express.Response, next) => {
         ]
           ?.split(',')[0]
           .replace(/-/g, '_')}">Download Dot Browser for Windows</a>
+
+          <a href="/api/downloads?product=browser&os=linux&language=${req.headers[
+            'accept-language'
+          ]
+            ?.split(',')[0]
+            .replace(/-/g, '_')}">Download Dot Browser for Linux</a>
         <br /><br />
         You could even browse our real site from <a href="https://web.archive.org/web/https://dothq.co/">The Wayback Machine</a>.
         <br /><br />
