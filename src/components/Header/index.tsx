@@ -41,11 +41,11 @@ export const Header = () => {
           </div>
 
           <div className={'nav-right'}>
-            <Button type={'secondary'} href={'/register'}>
+            <Button type={'secondary'} href={'/id/signup'}>
               Register
             </Button>
 
-            <Button type={'primary'} href={'/register'}>
+            <Button type={'primary'} href={'/id/login'}>
               Sign in
             </Button>
           </div>
