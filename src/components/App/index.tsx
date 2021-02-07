@@ -1,6 +1,7 @@
 import React from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Home from '../../pages/Home'
+import About from '../../pages/About'
 
 // Products
 import Browser from '../../pages/products/browser'
@@ -16,13 +17,13 @@ import NotFound from '../../pages/404'
 const App = () => (
   <Switch>
     <Route exact path="/" component={Home} />
+    <Route exact path="/about" component={About} />
 
     {/* Products */}
     <Route exact path="/products/browser" component={Browser} />
     <Route exact path="/products/browser/thanks" component={BrowserThanks} />
 
     {/* DotID stuff */}
-    <Redirect from="/register" to="/id/signup" />
     <Route exact path="/id/signup" component={Signup} />
     <Route exact path="/id/login" component={Login} />
 
