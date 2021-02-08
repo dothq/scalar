@@ -92,9 +92,11 @@ server.use((req: express.Request, res: express.Response, next) => {
         <br /><br />
         <a href="/api/downloads?product=browser&os=windows&language=${req.headers[
           'accept-language'
+        ] ? req.headers[
+          'accept-language'
         ]
           ?.split(',')[0]
-          .replace(/-/g, '_')}">Download Dot Browser for Windows</a>
+          .replace(/-/g, '_') : "en-US"}">Download Dot Browser for Windows</a>
         <br /><br />
         You could even browse our real site from <a href="https://web.archive.org/web/https://dothq.co/">The Wayback Machine</a>.
         <br /><br />
