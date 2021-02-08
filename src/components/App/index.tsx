@@ -6,6 +6,7 @@ import About from '../../pages/About'
 // Products
 import Browser from '../../pages/products/browser'
 import BrowserThanks from '../../pages/products/browser/thanks'
+import Compass from '../../pages/products/compass'
 
 // DotID stuff
 import Signup from '../../pages/id/Signup'
@@ -22,6 +23,7 @@ const App = () => (
     {/* Products */}
     <Route exact path="/products/browser" component={Browser} />
     <Route exact path="/products/browser/thanks" component={BrowserThanks} />
+    <Route exact path="/products/compass" component={Compass} />
 
     {/* DotID stuff */}
     <Route exact path="/id/signup" component={Signup} />
