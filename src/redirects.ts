@@ -1,3 +1,3 @@
-const redirects = [{ to: '' }]
+const redirects = [{ from: '/join', to: 'https://invite.gg/dot' }]
 
 export default redirects
