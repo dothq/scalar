@@ -10,21 +10,21 @@ import { Layout } from '../../../components/Layout'
 import '../../../styles/products/index.css'
 
 const BrowserThanks = () => {
+  const [os, setOS] = React.useState("linux");
+
   React.useEffect(() => {
     if (typeof window === 'undefined') return
 
     window.addEventListener('DOMContentLoaded', () => {
-      let os = 'linux'
-
       const parameters = new URLSearchParams(window.location.search)
 
       if (parameters.has('os')) {
-        os = parameters.get('os') || 'linux'
+        setOS(parameters.get('os') || 'linux')
       } else {
         const { platform, userAgent } = window.navigator
 
-        if (platform.toLowerCase() === 'win32') os = 'windows'
-        else if (platform.toLowerCase() === 'macintel') os = 'macos'
+        if (platform.toLowerCase() === 'win32') setOS('windows')
+        else if (platform.toLowerCase() === 'macintel') setOS('macos')
         else if (
           platform.toLowerCase().includes('mobile') ||
           userAgent.toLowerCase().includes('android') ||
@@ -33,18 +33,7 @@ const BrowserThanks = () => {
           return
       }
 
-      axios
-        .get(`/api/downloads?product=browser&os=${os}&noRedir=true`, {
-          maxRedirects: 1,
-        })
-        .then((_) => {
-          setTimeout(() => {
-            window.location.href = _.data
-          }, 1000)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      window.location.replace(`/api/downloads?product=browser&os=${os}`);
     })
   }, [])
 
@@ -57,7 +46,7 @@ const BrowserThanks = () => {
         <br />
         Didn't work?
         <Button
-          onClick={() => window.location.reload()}
+          href={`/api/downloads?product=browser&os=${os}`}
           type={'text'}
           style={{
             '--padding': '0px 4px',
