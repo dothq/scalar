@@ -22,7 +22,9 @@ const Compass = () => (
     <span className="gap"></span>
 
     <div>
-      <Button type="primary">Try it</Button>
+      <Button type="primary" href="http://ntp.dothq.co/">
+        Try it
+      </Button>
     </div>
 
     <span style={{ marginTop: '30vh' }}></span>
