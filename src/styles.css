@@ -367,8 +367,19 @@ nav.mobile-nav {
   transform: translate(-50%, -50%);
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .gap {
   margin-bottom: 1rem;
+}
+
+.vgap {
+  margin-left: 1rem;
 }
 
 /* Input elements */

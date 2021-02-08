@@ -7,6 +7,7 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 
 import App from './components/App'
+import redirects from './redirects'
 
 import signup from './routes/signup'
 import weather from './routes/ntp/weather'
@@ -48,6 +49,12 @@ server.use((req: express.Request, res: express.Response, next) => {
     next()
   } else res.json({ ok: false, code: 'ORIGIN_BLOCKED_BY_CORS' })
 })
+
+// Implements redirects in a nice file format
+// If you want to add a redirect, check hte redirects.ts file
+redirects.forEach((redirect) =>
+  server.get(redirect.from, (_, res) => res.redirect(redirect.to))
+)
 
 server.use((req: express.Request, res: express.Response, next) => {
   if (req.path.startsWith('/api')) return next()
