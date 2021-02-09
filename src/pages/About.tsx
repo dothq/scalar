@@ -36,8 +36,7 @@ const About = () => {
 
         <div className="flex-center" style={{ minHeight: '20vh' }}>
           <p>
-            We have lots of new ideas that we want to try out, from a operating
-            system, to a sync system and new tab page.
+            We have lots of new ideas that we want to try out, from a os, to a sync system and new tab page.
           </p>
         </div>
 
@@ -46,11 +45,11 @@ const About = () => {
 
           <div>
             <Button type="primary" href="/products/browser">
-              Download dot browser
+              Download Dot Browser
             </Button>
             <span className="vgap"></span>
             <Button type="secondary" href="/join">
-              Join us on discord
+              Join us on Discord
             </Button>
           </div>
         </div>
