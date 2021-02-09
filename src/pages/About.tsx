@@ -36,7 +36,8 @@ const About = () => {
 
         <div className="flex-center" style={{ minHeight: '20vh' }}>
           <p>
-            We have lots of new ideas that we want to try out, from a os, to a sync system and new tab page.
+            We have lots of new ideas that we want to try out, from a os, to a
+            sync system and new tab page.
           </p>
         </div>
 

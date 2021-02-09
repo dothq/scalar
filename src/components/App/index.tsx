@@ -8,6 +8,10 @@ import Browser from '../../pages/products/browser'
 import BrowserThanks from '../../pages/products/browser/thanks'
 import Compass from '../../pages/products/compass'
 
+// Help
+import Help from '../../pages/help'
+import HelpPage from '../../pages/help/page'
+
 // DotID stuff
 import Signup from '../../pages/id/Signup'
 import Login from '../../pages/id/Login'
@@ -28,6 +32,10 @@ const App = () => (
     {/* DotID stuff */}
     <Route exact path="/id/signup" component={Signup} />
     <Route exact path="/id/login" component={Login} />
+
+    {/* Help */}
+    <Route exact path="/help" component={Help} />
+    <Route path="/help/:product/:key/:page" component={HelpPage} />
 
     {/* 404 page */}
     <Route component={NotFound} />

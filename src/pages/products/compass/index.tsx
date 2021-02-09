@@ -36,7 +36,7 @@ const Compass = () => (
       }}
     >
       <iframe
-        src="https://ntp.dothq.co/"
+        src={'https://ntp.dothq.co/'}
         style={{
           border: 'none',
           width: '100%',

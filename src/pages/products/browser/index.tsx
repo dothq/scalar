@@ -1,4 +1,3 @@
-import { useUserAgent } from '@oieduardorabelo/use-user-agent'
 import React from 'react'
 import { BUI } from '../../../components/BUI'
 import { Button } from '../../../components/Button'
