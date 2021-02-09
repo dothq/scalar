@@ -10,7 +10,7 @@ import { Layout } from '../../../components/Layout'
 import '../../../styles/products/index.css'
 
 const BrowserThanks = () => {
-  const [os, setOS] = React.useState("linux");
+  const [os, setOS] = React.useState('linux')
 
   React.useEffect(() => {
     if (typeof window === 'undefined') return
@@ -18,14 +18,20 @@ const BrowserThanks = () => {
     window.addEventListener('DOMContentLoaded', () => {
       const parameters = new URLSearchParams(window.location.search)
 
+      // We are assigning the current os to a local variable as running setOS
+      // doesn't affect the os variable during the lifecycle of this function
+      let fnos = 'linux'
+
       if (parameters.has('os')) {
-        setOS(parameters.get('os') || 'linux')
+        fnos = parameters.get('os') || 'linux'
       } else {
         const { platform, userAgent } = window.navigator
 
-        if (platform.toLowerCase() === 'win32') setOS('windows')
-        else if (platform.toLowerCase() === 'macintel') setOS('macos')
-        else if (
+        if (platform.toLowerCase() === 'win32') {
+          fnos = 'windows'
+        } else if (platform.toLowerCase() === 'macintel') {
+          fnos = 'macos'
+        } else if (
           platform.toLowerCase().includes('mobile') ||
           userAgent.toLowerCase().includes('android') ||
           userAgent.toLowerCase().includes('iphone')
@@ -33,7 +39,9 @@ const BrowserThanks = () => {
           return
       }
 
-      window.location.replace(`/api/downloads?product=browser&os=${os}`);
+      setOS(fnos)
+
+      window.location.replace(`/api/downloads?product=browser&os=${fnos}`)
     })
   }, [])
 
