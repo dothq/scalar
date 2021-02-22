@@ -6,7 +6,7 @@ import routes from '../../routes'
 const App = () => (
   <Switch>
     {routes.map(route => (
-      <Route key={route.path} path={route.path} exact={route.exact || false} component={route.component}></Route>
+      <Route key={Math.random()} path={route.path} exact={route.exact || false} component={route.component}></Route>
     ))}
   </Switch>
 )

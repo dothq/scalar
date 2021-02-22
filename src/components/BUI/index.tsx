@@ -25,7 +25,7 @@ export const BUI = () => {
       <img src={buiImage} id="browser-ui" width="800" height="492" />
       <img
         id="browser-wallpaper"
-        src="https://source.unsplash.com/collection/67042424/800x492"
+        src="https://source.unsplash.com/collection/67042424/600x292"
         width="800"
         height="492"
       />

@@ -6,6 +6,6 @@ export default {
   shield: require('./shield.svg'),
   sparkles: require('./sparkles.svg'),
 
-  browser: require('./browser.png'),
-  browserLight: require('./browser-light.png'),
+  browser: require('./browser.webp'),
+  browserLight: require('./browser-light.webp'),
 }
