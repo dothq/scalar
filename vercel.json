@@ -24,6 +24,10 @@
       "dest": "build/public/robots.txt"
     },
     {
+      "src": "/sitemap.xml",
+      "dest": "build/public/sitemap.xml"
+    },
+    {
       "src": "/(.*)",
       "dest": "build/server.js"
     }

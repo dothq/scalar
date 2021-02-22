@@ -56,7 +56,7 @@ redirects.forEach((redirect) =>
   server.get(redirect.from, (_, res) => res.redirect(redirect.to))
 )
 
-server.use((req: express.Request, res: express.Response, next) => {
+server.use(async (req: express.Request, res: express.Response, next) => {
   if (req.path.startsWith('/api')) return next()
 
   const context = {}
