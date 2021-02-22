@@ -51,7 +51,7 @@ server.use((req: express.Request, res: express.Response, next) => {
 })
 
 // Implements redirects in a nice file format
-// If you want to add a redirect, check hte redirects.ts file
+// If you want to add a redirect, check the redirects.ts file
 redirects.forEach((redirect) =>
   server.get(redirect.from, (_, res) => res.redirect(redirect.to))
 )
@@ -130,6 +130,7 @@ server.use((req: express.Request, res: express.Response, next) => {
 			<title>Dot HQ</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" href="/favicon.png" />
+      <link rel="prerender" href="/" />
 			${
         assets.client.css
           ? `<link rel="stylesheet" href="${assets.client.css}">`

@@ -19,12 +19,47 @@
   height: 16px;
 }
 
+.forward-icon {
+  background-image: url(../assets/back.svg);
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  transform: scale(-1);
+}
+
 .menu-icon {
   background-image: url(../assets/menu.svg);
   background-size: cover;
   width: 16px;
   height: 16px;
   margin-right: 0 !important;
+}
+
+.twitter-icon {
+  background-image: url(../assets/footer/twitter.svg);
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  filter: var(--btn-secondary-icon);
+}
+
+.discord-icon {
+  background-image: url(../assets/footer/discord.svg);
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  filter: var(--btn-secondary-icon);
+}
+
+.youtube-icon {
+  background-image: url(../assets/footer/youtube.svg);
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  filter: var(--btn-secondary-icon);
 }
 
 .dot-icon {

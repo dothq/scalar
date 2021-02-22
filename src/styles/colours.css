@@ -30,6 +30,7 @@
     --color-disabled: var(--gray-3);
     --background-color: var(--white);
     --background-color-secondary: var(--gray-7);
+    --background-dots: rgba(128, 128, 128, 0.5);
     --background-overlay-color: #00000014;
     --border: var(--gray-6);
 
@@ -50,6 +51,10 @@
 
     --text-primary: var(--azure);
   }
+
+  ::selection {
+    background-color: rgb(0, 255, 173) !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,8 +62,9 @@
     --color: var(--white);
     --color-secondary: var(--gray-6);
     --color-disabled: var(--gray-5);
-    --background-color: var(--black);
+    --background-color: var(--gray-1);
     --background-color-secondary: var(--gray-2);
+    --background-dots: rgba(128, 128, 128, 0.5);
     --background-overlay: #ffffff14;
     --border: var(--gray-3);
 
@@ -78,5 +84,9 @@
     --nav-hover: var(--gray-5);
 
     --text-primary: var(--neon);
+  }
+
+  ::selection {
+    background-color: rgb(255, 0, 234) !important;
   }
 }

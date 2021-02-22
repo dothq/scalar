@@ -7,29 +7,17 @@ import '../styles.css'
 
 export const Layout = ({
   children,
-  center,
-  centerHoriz,
-  fullHeight,
+  primary
 }: {
-  children: any
-  center?: boolean
-  centerHoriz?: boolean
-  fullHeight?: boolean
+  children?: any
+  primary?: boolean
 }) => {
   return (
     <>
       <section className={'hero'}>
-        <Header />
-        <div className={`hero-container ${fullHeight ? `hero-vh` : ``}`}>
-          <div
-            className={`hero-content ${
-              centerHoriz ? `hero-center-horiz` : center ? `hero-center` : ``
-            }`}
-          >
-            {children}
-          </div>
-          <Footer />
-        </div>
+        <Header primary={primary} />
+        {children}
+        <Footer />
       </section>
     </>
   )

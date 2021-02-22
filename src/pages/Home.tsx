@@ -7,11 +7,12 @@ import { BUI } from '../components/BUI'
 import { FeatureGrid } from '../components/FeatureGrid'
 
 import '../styles/home.css'
+import { Content } from '../components/Content'
 
 const Home = () => {
   return (
-    <Layout>
-      <div>
+    <Layout primary>
+      <Content primary>
         <div className={'grid'}>
           <div>
             <h1>Take back your privacy.</h1>
@@ -42,20 +43,21 @@ const Home = () => {
 
           <BUI />
         </div>
-
+      </Content>
+      <Content>
         <div className={'section'}>
           <h2>
             We built a privacy browser in a world where your personal data is
             sold to the highest bidder.
           </h2>
-          <p>
+          <p style={{ marginTop: "1rem" }}>
             Your data is constantly being sold through large advertisement
-            networks tracking what sites you like to visit online.
+            networks that track what sites you like to visit online.
           </p>
         </div>
 
         <FeatureGrid id={'features'} />
-      </div>
+      </Content>
     </Layout>
   )
 }

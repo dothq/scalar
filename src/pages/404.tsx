@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../components/Button'
+import { Content } from '../components/Content'
 import { Layout } from '../components/Layout'
 
 class NotFound extends React.Component {
@@ -11,16 +12,18 @@ class NotFound extends React.Component {
     if (random < 0.08) this.iconName = 'cryhmm'
 
     return (
-      <Layout center fullHeight>
-        <i className={`${this.iconName}-icon`}></i>
-        <h1 style={{ marginTop: '24px' }}>404</h1>
-        <p style={{ marginTop: '8px', marginBottom: '32px' }}>
-          We couldn't find that page.
-        </p>
+      <Layout>
+        <Content center fullHeight>
+          <i className={`${this.iconName}-icon`}></i>
+          <h1 style={{ marginTop: '24px' }}>404</h1>
+          <p style={{ marginTop: '8px', marginBottom: '32px' }}>
+            We couldn't find that page.
+          </p>
 
-        <Button type={'primary'} href={'/'} iconLeft={'back'}>
-          Go home
-        </Button>
+          <Button type={'primary'} href={'/'} iconLeft={'back'}>
+            Go home
+          </Button>
+        </Content>
       </Layout>
     )
   }

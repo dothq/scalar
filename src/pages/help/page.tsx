@@ -1,6 +1,7 @@
 import Markdown from 'markdown-to-jsx'
 import React, { Component, useState } from 'react'
 import { RouteComponentProps, useParams, withRouter } from 'react-router-dom'
+import { Content } from '../../components/Content'
 import { Layout } from '../../components/Layout'
 
 interface Params {
@@ -49,7 +50,9 @@ class Page extends Component<Props> {
     const { markdown } = this.state
     return (
       <Layout>
-        {typeof markdown !== 'undefined' && <Markdown>{markdown}</Markdown>}
+        <Content>
+          {typeof markdown !== 'undefined' && <Markdown>{markdown || ""}</Markdown>}
+        </Content>
       </Layout>
     )
   }

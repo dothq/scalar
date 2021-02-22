@@ -5,7 +5,11 @@ import Markdown from 'markdown-to-jsx'
 
 import { Button } from '../Button'
 
-export const Header = () => {
+export const Header = ({
+  primary
+}: {
+  primary?: boolean
+}) => {
   const [motd, setMotd] = React.useState('')
   const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
 
@@ -26,8 +30,8 @@ export const Header = () => {
         </div>
       </nav>
 
-      <nav>
-        <div className={'nav-container'}>
+      <nav className={primary ? `nav-nb` : ``}>
+        <div className={`nav-container`}>
           <div className={'nav-left'}>
             <a href={'/'}>
               <i className={'dot-icon'} />
@@ -89,6 +93,16 @@ export const Header = () => {
             </li>
             <li>
               <a href={'about'}>About</a>
+            </li>
+            <li className={"mobile-nav-btn"}>
+              <Button type={'secondary'} href={'/id/signup'}>
+                Register
+              </Button>
+            </li>
+            <li className={"mobile-nav-btn"}>
+              <Button type={'primary'} href={'/id/login'}>
+                Sign in
+              </Button>
             </li>
           </ul>
         </div>
