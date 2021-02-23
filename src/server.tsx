@@ -68,7 +68,9 @@ server.use(async (req: express.Request, res: express.Response, next) => {
       <App />
     </StaticRouter>
   )
+  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
 
+  // TODO update meta image
   if (req.headers['user-agent']?.includes('Trident/')) {
     return res.send(`
       <!doctype html>
@@ -77,6 +79,21 @@ server.use(async (req: express.Request, res: express.Response, next) => {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet='utf-8' />
         <title>Dot HQ</title>
+        <meta name="author" content="Dot HQ">
+			  <meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
+			
+			  <meta property="og:title" content="Dot HQ">
+			  <meta property="og:type" content="website">
+			  <meta property="og:image" content="https://new.dothq.co/favicon.png">
+			  <meta property="og:url" content="${fullUrl}">
+			
+			  <meta name="twitter:card" content="summary">
+			  <meta name="twitter:site" content="@DotBrowser">
+			  <meta name="twitter:creator" content="@DotBrowser">
+			  <meta name="twitter:title" content="Dot HQ">
+			  <meta name="twitter:description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
+			  <meta name="twitter:image" content="https://new.dothq.co/favicon.png">
+			  <meta name="twitter:url" content="${fullUrl}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/favicon.png" />
       </head>
@@ -131,6 +148,21 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 			<meta charSet='utf-8' />
 			<title>Dot HQ</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="author" content="Dot HQ">
+			<meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
+			
+			<meta property="og:title" content="Dot HQ">
+			<meta property="og:type" content="website">
+			<meta property="og:image" content="https://new.dothq.co/favicon.png">
+			<meta property="og:url" content="${fullUrl}">
+			
+			<meta name="twitter:card" content="summary">
+			<meta name="twitter:site" content="@DotBrowser">
+			<meta name="twitter:creator" content="@DotBrowser">
+			<meta name="twitter:title" content="Dot HQ">
+			<meta name="twitter:description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
+			<meta name="twitter:image" content="https://new.dothq.co/favicon.png">
+			<meta name="twitter:url" content="${fullUrl}">
       <link rel="shortcut icon" href="/favicon.png" />
       <link rel="prerender" href="/" />
 			${
