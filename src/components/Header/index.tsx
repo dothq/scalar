@@ -6,9 +6,11 @@ import Markdown from 'markdown-to-jsx'
 import { Button } from '../Button'
 
 export const Header = ({
-  primary
+  primary,
+  hasSexyGradient
 }: {
   primary?: boolean
+  hasSexyGradient?: boolean
 }) => {
   const [motd, setMotd] = React.useState('')
   const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
@@ -24,13 +26,13 @@ export const Header = ({
 
   return (
     <>
-      <nav className={'motd'}>
+      <nav className={`motd ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
         <div className={'nav-container'}>
           <Markdown options={{ forceInline: true }}>{motd}</Markdown>
         </div>
       </nav>
 
-      <nav className={primary ? `nav-nb` : ``}>
+      <nav className={`${primary ? `nav-nb` : ``} ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
         <div className={`nav-container`}>
           <div className={'nav-left'}>
             <a href={'/'}>
@@ -56,7 +58,7 @@ export const Header = ({
         </div>
       </nav>
 
-      <nav className={'mobile-nav'}>
+      <nav className={`mobile-nav ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
         <div className={'nav-container'}>
           <div className={'nav-left'}>
             <a href={''}>

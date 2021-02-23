@@ -19,6 +19,20 @@
   height: 16px;
 }
 
+.home-icon {
+  background-image: url(../assets/home.svg);
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+}
+
+.globe-icon {
+  background-image: url(../assets/globe.svg);
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+}
+
 .forward-icon {
   background-image: url(../assets/back.svg);
   background-size: cover;
@@ -76,4 +90,25 @@
   border-radius: 100px;
   box-shadow: inset 0px 0px 0px 6px var(--color);
   display: block;
+}
+
+.windows-icon {
+  background-image: url(../assets/os/windows.svg);
+  background-size: cover !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.macos-icon {
+  background-image: url(../assets/os/macos.svg);
+  background-size: cover !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.linux-icon {
+  background-image: url(../assets/os/linux.svg);
+  background-size: cover !important;
+  width: 16px !important;
+  height: 16px !important;
 }

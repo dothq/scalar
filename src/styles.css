@@ -416,3 +416,17 @@ input[type='email']:focus {
   background-size: 40px 40px, 40px 40px;
   background-position: 0 0, 20px 20px;
 }
+
+.hero-has-sexy-gradient {
+  background-image: var(--background-sexy);
+}
+
+.hero-has-sexy-gradient > .hero-container {
+  background-color: transparent !important;
+}
+
+.nav-has-sexy-gradient {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}

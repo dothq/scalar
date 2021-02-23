@@ -7,15 +7,17 @@ import '../styles.css'
 
 export const Layout = ({
   children,
-  primary
+  primary,
+  hasSexyGradient
 }: {
   children?: any
   primary?: boolean
+  hasSexyGradient?: boolean
 }) => {
   return (
     <>
-      <section className={'hero'}>
-        <Header primary={primary} />
+      <section className={`hero ${hasSexyGradient ? `hero-has-sexy-gradient` : ``}`}>
+        <Header primary={primary} hasSexyGradient={hasSexyGradient} />
         {children}
         <Footer />
       </section>

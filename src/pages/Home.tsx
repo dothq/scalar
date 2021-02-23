@@ -10,6 +10,18 @@ import '../styles/home.css'
 import { Content } from '../components/Content'
 
 const Home = () => {
+  const [os, setOS] = React.useState("");
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const { platform } = window.navigator
+
+    if (platform.toLowerCase() === 'win32') setOS('windows')
+    else if (platform.toLowerCase() === 'macintel') setOS('macos')
+    else if (platform.toLowerCase().includes('linux')) setOS('linux')
+  })
+
   return (
     <Layout primary>
       <Content primary>
@@ -35,6 +47,7 @@ const Home = () => {
                 onClick={() => console.log('Button')}
                 type="primary"
                 href="/products/browser"
+                iconLeft={os.length ? os : ""}
               >
                 Download Dot Browser
               </Button>
