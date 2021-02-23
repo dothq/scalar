@@ -7,7 +7,9 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 
 import App from './components/App'
+
 import redirects from './redirects'
+import ssrData from './ssr-data'
 
 import signup from './routes/signup'
 import weather from './routes/ntp/weather'
@@ -143,7 +145,8 @@ server.use(async (req: express.Request, res: express.Response, next) => {
       }
 		</head>
 		<body>
-			<div id="app">${markup}</div>
+      <div id="app">${markup}</div>
+      <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(ssrData[req.path] || {})}</script>
 		</body>
 		</html>`
   )

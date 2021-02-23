@@ -1,5 +1,8 @@
 import Home from './pages/Home'
+
+// About
 import About from './pages/about'
+import AboutPrivacy from './pages/about/privacy'
 
 // Products
 import Browser from './pages/products/browser'
@@ -19,8 +22,10 @@ import NotFound from './pages/404'
 
 const routes = [
     { path: "/", component: Home, exact: true },
+
     { path: "/about", component: About, exact: true },
-  
+    { path: "/about/privacy", component: AboutPrivacy, exact: true },
+
     { path: "/products/browser", component: Browser, exact: true },
     { path: "/products/browser/thanks", component: BrowserThanks, exact: true },
     { path: "/products/compass", component: Compass, exact: true },

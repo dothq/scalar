@@ -6,6 +6,8 @@ import { FeatureGrid } from '../../../components/FeatureGrid'
 import { Layout } from '../../../components/Layout'
 import { Content } from '../../../components/Content'
 
+import assets from '../../../assets'
+
 import '../../../styles/products/index.css'
 
 const Browser = () => {
@@ -30,10 +32,10 @@ const Browser = () => {
   }, [os])
 
   return (
-    <Layout>
+    <Layout hasSexyGradient>
       <Content centerHoriz>
-        <i className={'dot-browser-icon'} style={{ marginBottom: '18px' }} />
-        <h1>Dot Browser</h1>
+        <img src={assets.browserWordmark} style={{ filter: "var(--btn-secondary-icon)" }}></img>
+        <h1 style={{ maxWidth: '600px', textAlign: "center", marginTop: "22px" }}>Get the browser that fights for your privacy.</h1>
         <p style={{ maxWidth: '516px', textAlign: 'center' }}>
           Get the browser that respects your privacy, blocks trackers and is easy
           to use by default.
@@ -51,8 +53,9 @@ const Browser = () => {
             onClick={() => (window.location.href = `/products/browser/thanks`)}
             type="primary"
             disabled={os === 'Mobile'}
+            iconLeft={os.toLowerCase()}
           >
-            {os === 'Mobile' ? `Mobile Coming Soon` : `Download Dot for ${os}`}
+            {os === 'Mobile' ? `Mobile Coming Soon` : `Download for ${os}`}
           </Button>
         </div>
 
@@ -70,7 +73,7 @@ const Browser = () => {
                 Download Dot for Windows
               </Button>
               <Button href="/products/browser/thanks?os=macos" type="secondary">
-                Download Dot for MacOS
+                Download Dot for macOS
               </Button>
               <Button href="/products/browser/thanks?os=linux" type="secondary">
                 Download Dot for Linux
