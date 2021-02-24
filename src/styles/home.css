@@ -115,3 +115,13 @@
   user-select: none;
   user-drag: none;
 }
+
+a {
+  text-decoration: none;
+  color: var(--azure);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--blue);
+}

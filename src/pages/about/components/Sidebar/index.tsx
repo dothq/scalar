@@ -11,7 +11,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
                 <h5>ABOUT US</h5>
             </li>
             <li>
-                <Button href="/about" type={selected === "home" ? "secondary" : "text"} iconLeft={"home"} style={{ 
+                <Button href="/about" type={selected === "home" ? "secondary" : "text"} iconLeft={"home"} style={{
                     color: selected === "home" ? "var(--nav-hover)" : "inherit"
                 }}>
                     Home
@@ -21,22 +21,23 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
                 <h5>PRIVACY</h5>
             </li>
             <li>
-                <Button href="/about/privacy" type={selected === "privacy-db" ? "secondary" : "text"} iconLeft={"dot"} style={{ 
-                    color: selected === "privacy-db" ? "var(--nav-hover)" : "inherit"
+                <Button href="/about/privacy" type={selected === "privacy-db" ? "secondary" : "text"} iconLeft={"dot"} style={{
+                    color: "inherit"
+
                 }}>
                     Dot Browser
                 </Button>
             </li>
             <li>
-                <Button href="/about/privacy/website" type={selected === "privacy-site" ? "secondary" : "text"} iconLeft={"globe"} style={{ 
-                    color: selected === "privacy-site" ? "var(--nav-hover)" : "inherit"
+                <Button href="/about/privacy/website" type={selected === "privacy-site" ? "secondary" : "text"} iconLeft={"globe"} style={{
+                    color: "inherit"
                 }}>
                     Website
                 </Button>
             </li>
             <li>
-                <Button href="/about/privacy/id" type={selected === "privacy-id" ? "secondary" : "text"} iconLeft={" "} style={{ 
-                    color: selected === "privacy-id" ? "var(--nav-hover)" : "inherit"
+                <Button href="/about/privacy/id" type={selected === "privacy-id" ? "secondary" : "text"} iconLeft={" "} style={{
+                    color: "inherit"
                 }}>
                     Dot ID
                 </Button>
