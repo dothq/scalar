@@ -39,6 +39,9 @@
   .features {
     grid-template-columns: 1fr !important;
   }
+  .landing-showoff {
+    display: none;
+  }
 }
 
 .features {
@@ -81,11 +84,19 @@
   margin-top: 48px;
 }
 
-.landing-showoff {
-  display: flex;
-  justify-content: flex-end;
-  opacity: 0;
-  transition: 0.15s opacity ease-in-out 0.2s;
+@media only screen and (min-width: 800px) {
+  .landing-showoff {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: 0.15s opacity ease-in-out 0.2s;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .landing-showoff {
+    display: none;
+  }
 }
 
 .landing-showoff .ls-ready {
