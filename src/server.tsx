@@ -68,7 +68,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
       <App />
     </StaticRouter>
   )
-  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  const fullUrl = "https://" + req.get('host') + req.originalUrl;
 
   // TODO update meta image
   if (req.headers['user-agent']?.includes('Trident/')) {
@@ -150,7 +150,8 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<meta name="author" content="Dot HQ">
 			<meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
-			
+			<meta name="theme-color" content="#FFFFFE">
+
 			<meta property="og:title" content="Dot HQ">
 			<meta property="og:type" content="website">
 			<meta property="og:image" content="https://new.dothq.co/favicon.png">
