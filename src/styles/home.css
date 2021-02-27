@@ -82,6 +82,7 @@
 
 .grid-btns {
   margin-top: 48px;
+  display: flex;
 }
 
 @media only screen and (min-width: 800px) {
