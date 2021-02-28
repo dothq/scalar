@@ -3,7 +3,9 @@ import Crawler from 'crawler';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
  
-spawn("yarn", ["run", "start:prod"], { stdio: "pipe" })
+const port = Math.floor(1000 + Math.random() * 9000);
+
+spawn(`node`, ["build/server.js"], { stdio: "pipe", env: { PORT: `${port}` } })
 
 const links = new Set();
 
@@ -33,7 +35,7 @@ const c = new Crawler({
 });
 
 setTimeout(() => {
-    c.queue('http://localhost:3000');
+    c.queue(`http://localhost:${port}?t=${Date.now()}`);
 }, 1500);
 
 c.on("drain", () => {
