@@ -26,7 +26,7 @@ router.get('/api/downloads', async (req, res) => {
     architecture === 64 ? '_64' : ''
   }.${fileType}`
 
-  const downloadURI = [baseURI, 'artifacts', os, artifactName]
+  const downloadURI = [baseURI, 'artifacts', 'browser', os, artifactName]
 
   if (req.query.noRedir) res.send(downloadURI.join('/'))
   else res.redirect(301, downloadURI.join('/'))
