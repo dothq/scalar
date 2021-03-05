@@ -22,11 +22,15 @@ router.get('/api/downloads', async (req, res) => {
   const baseURI = 'https://cdn.dothq.co'
 
   const fileType = os === 'windows' ? 'exe' : os === 'macos' ? 'dmg' : 'tar.bz2'
-  const artifactName = `dot-${version}.${language}.${os}-x86${
+  let artifactName = `dot-${version}.${language}.${os}-x86${
     architecture === 64 ? '_64' : ''
   }.${fileType}`
 
-  const downloadURI = [baseURI, 'artifacts', os, artifactName]
+  if (os === 'windows') {
+    artifactName = `dot-${version}.${language}.win64.installer.${fileType}`
+  }
+
+  const downloadURI = [baseURI, 'artifacts', 'browser', os, artifactName]
 
   if (req.query.noRedir) res.send(downloadURI.join('/'))
   else res.redirect(301, downloadURI.join('/'))
