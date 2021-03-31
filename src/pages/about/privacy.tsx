@@ -3,7 +3,6 @@ import React from 'react'
 import { Layout } from '../../components/Layout'
 
 import '../../styles/home.css'
-import '../../styles/about.css'
 import { Content } from '../../components/Content'
 import { AboutSidebar } from './components/Sidebar'
 
