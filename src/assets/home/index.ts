@@ -9,7 +9,7 @@ export default {
   browser: require('./browser.webp'),
   browserLight: require('./browser-light.webp'),
 
-  rickrolled: require("./rickrolled.gif"),
+  rickrolled: require('./rickrolled.gif'),
   browserApr: require('./browser-apr.webp'),
   browserLightApr: require('./browser-light-apr.webp'),
 }

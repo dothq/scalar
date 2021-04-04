@@ -34,11 +34,18 @@ const Browser = () => {
   return (
     <Layout hasSexyGradient>
       <Content centerHoriz>
-        <img src={assets.browserWordmark} style={{ filter: "var(--btn-secondary-icon)" }}></img>
-        <h1 style={{ maxWidth: '600px', textAlign: "center", marginTop: "22px" }}>Get the browser that fights for your privacy.</h1>
+        <img
+          src={assets.browserWordmark}
+          style={{ filter: 'var(--btn-secondary-icon)' }}
+        ></img>
+        <h1
+          style={{ maxWidth: '600px', textAlign: 'center', marginTop: '22px' }}
+        >
+          Get the browser that fights for your privacy.
+        </h1>
         <p style={{ maxWidth: '516px', textAlign: 'center' }}>
-          Get the browser that respects your privacy, blocks trackers and is easy
-          to use by default.
+          Get the browser that respects your privacy, blocks trackers and is
+          easy to use by default.
         </p>
 
         <div
@@ -69,7 +76,10 @@ const Browser = () => {
         >
           {advancedVisible && (
             <>
-              <Button href="/products/browser/thanks?os=windows" type="secondary">
+              <Button
+                href="/products/browser/thanks?os=windows"
+                type="secondary"
+              >
                 Download Dot for Windows
               </Button>
               <Button href="/products/browser/thanks?os=macos" type="secondary">

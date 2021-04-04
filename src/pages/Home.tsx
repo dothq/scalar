@@ -10,7 +10,7 @@ import '../styles/home.css'
 import { Content } from '../components/Content'
 
 const Home = () => {
-  const [os, setOS] = React.useState("");
+  const [os, setOS] = React.useState('')
 
   React.useEffect(() => {
     if (typeof window === 'undefined') return
@@ -47,7 +47,7 @@ const Home = () => {
                 onClick={() => console.log('Button')}
                 type="primary"
                 href="/products/browser"
-                iconLeft={os.length ? os : ""}
+                iconLeft={os.length ? os : ''}
               >
                 Download Dot Browser
               </Button>
@@ -63,7 +63,7 @@ const Home = () => {
             We built a privacy browser in a world where your personal data is
             sold to the highest bidder.
           </h2>
-          <p style={{ marginTop: "1rem" }}>
+          <p style={{ marginTop: '1rem' }}>
             Your data is constantly being sold through large advertisement
             networks that track what sites you like to visit online.
           </p>
