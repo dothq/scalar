@@ -4,11 +4,7 @@ import axios from 'axios'
 const router = express.Router()
 
 router.get('/api/downloads', async (req, res) => {
-  const product = req.query.product
   const os = req.query.os
-  const channel = req.query.channel || 'stable'
-  const architecture = req.query.arch || 64
-  const language = req.query.language || 'en-US'
   let version = req.query.version || 'latest'
 
   if (version === 'latest') {
@@ -19,21 +15,17 @@ router.get('/api/downloads', async (req, res) => {
     version = data.versions['firefox-display']
   }
 
-  const baseURI = 'https://cdn.dothq.co'
+  const fileName = 
+    os === 'windows' 
+      ? `Install.Dot.Browser.${version}.exe` 
+      : os === 'macos' 
+        ? `Dot.Browser.${version}.dmg`
+        : `dot-${version}.tar.bz2`
 
-  const fileType = os === 'windows' ? 'exe' : os === 'macos' ? 'dmg' : 'tar.bz2'
-  let artifactName = `dot-${version}.${language}.${os}-x86${
-    architecture === 64 ? '_64' : ''
-  }.${fileType}`
+  const downloadURI = `https://github.com/dothq/browser-desktop/releases/latest/download/${fileName}`
 
-  if (os === 'windows') {
-    artifactName = `dot-${version}.${language}.win64.installer.${fileType}`
-  }
-
-  const downloadURI = [baseURI, 'artifacts', 'browser', os, artifactName]
-
-  if (req.query.noRedir) res.send(downloadURI.join('/'))
-  else res.redirect(301, downloadURI.join('/'))
+  if (req.query.noRedir) res.send(downloadURI)
+  else res.redirect(301, downloadURI)
 })
 
 export default router

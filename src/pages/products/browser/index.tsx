@@ -32,7 +32,7 @@ const Browser = () => {
   }, [os])
 
   return (
-    <Layout hasSexyGradient>
+    <Layout>
       <Content centerHoriz>
         <img src={assets.browserWordmark} style={{ filter: "var(--btn-secondary-icon)" }}></img>
         <h1 style={{ maxWidth: '600px', textAlign: "center", marginTop: "22px" }}>Get the browser that fights for your privacy.</h1>

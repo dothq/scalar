@@ -16,7 +16,7 @@ const BrowserThanks = () => {
   React.useEffect(() => {
     if (typeof window === 'undefined') return
 
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', async () => {
       const parameters = new URLSearchParams(window.location.search)
 
       // We are assigning the current os to a local variable as running setOS
@@ -42,7 +42,20 @@ const BrowserThanks = () => {
 
       setOS(fnos)
 
-      window.location.replace(`/api/downloads?product=browser&os=${fnos}`)
+      const { data } = await axios.get(
+        'https://raw.githubusercontent.com/dothq/browser-ff/main/package.json'
+      )
+
+      const fileName = 
+      fnos === 'windows' 
+          ? `Install.Dot.Browser.${data.versions['firefox-display']}.exe` 
+          : fnos === 'macos' 
+            ? `Dot.Browser.${data.versions['firefox-display']}.dmg`
+            : `dot-${data.versions['firefox-display']}.tar.bz2`
+  
+      const downloadURI = `https://github.com/dothq/browser-desktop/releases/latest/download/${fileName}`
+
+      window.location.replace(downloadURI)
     })
   }, [])
 
