@@ -4,6 +4,7 @@ import React from 'react'
 import Markdown from 'markdown-to-jsx'
 
 import { Button } from '../Button'
+import { menus } from '../../menus'
 
 export const Header = ({
   primary,
@@ -14,6 +15,8 @@ export const Header = ({
 }) => {
   const [motd, setMotd] = React.useState('')
   const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
+  const [detachOpen, setDetachOpen] = React.useState(false);
+  const [fauxHovered, setFauxHovered] = React.useState(0);
 
   React.useEffect(() => {
     axios
@@ -23,6 +26,15 @@ export const Header = ({
         console.log(err)
       })
   }, [motd])
+
+  const onNavItemHover = (i: number) => {
+    setDetachOpen(true)
+    setFauxHovered(i);
+  }
+
+  const onNavHoverExit = () => {
+    setDetachOpen(false)
+  }
 
   return (
     <>
@@ -38,11 +50,16 @@ export const Header = ({
             <a href={'/'}>
               <i className={'dot-icon'} />
             </a>
-            <ul className={'nav-items'}>
-              <a href={'/products'}>Products</a>
-              <a href={'/company'}>Company</a>
-              <a href={'/community'}>Community</a>
-              <a href={'/about'}>About</a>
+            <ul className={'nav-items'} onMouseLeave={() => onNavHoverExit()}>
+              {menus.map((menu, key) => (
+                <a 
+                  className={(fauxHovered == key && detachOpen) ? `nav-item-faux-hovered` : ``} 
+                  onMouseOver={() => onNavItemHover(key)}
+                  key={key}
+                >
+                  {menu.name}
+                </a>
+              ))}
             </ul>
           </div>
 
@@ -56,6 +73,12 @@ export const Header = ({
             </Button>
           </div>
         </div>
+
+        <nav className={`nav-desktop-detachable ${detachOpen ? `is-open` : ``}`} onMouseOver={() => setDetachOpen(true)} onMouseLeave={() => onNavHoverExit()}>
+          {menus.map((menu, key) => (
+            <menu.component key={key} highlighted={fauxHovered} id={menu.name} visible={(detachOpen ? fauxHovered == key : false)} />
+          ))}
+        </nav>
       </nav>
 
       <nav className={`mobile-nav ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
@@ -109,6 +132,8 @@ export const Header = ({
           </ul>
         </div>
       </nav>
+
+      <div className={`nav-desktop-detachable-coverup ${detachOpen ? `is-open` : ``}`} onMouseEnter={() => onNavHoverExit()} style={({ "--detached-height": "350px" } as any)}></div>
     </>
   )
 }

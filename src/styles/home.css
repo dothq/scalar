@@ -78,6 +78,10 @@
   .grid > .landing-showoff {
     display: none;
   }
+
+  .grid-btns {
+    justify-content: center;
+  }
 }
 
 .grid-btns {
