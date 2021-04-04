@@ -1,5 +1,8 @@
 import Home from './pages/Home'
 
+// Community
+import { Community } from './pages/community'
+
 // About
 import About from './pages/about'
 import AboutPrivacy from './pages/about/privacy/index'
@@ -25,6 +28,8 @@ import NotFound from './pages/404'
 
 const routes = [
   { path: '/', component: Home, exact: true },
+
+  { path: '/community', component: Community, exact: true },
 
   { path: '/about', component: About, exact: true },
   { path: '/about/privacy', component: AboutPrivacy, exact: true },

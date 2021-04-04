@@ -14,6 +14,12 @@
   margin-bottom: 16px;
 }
 
+.separator {
+  padding-bottom: 16px;
+  display: block;
+  width: 4px;
+}
+
 .section {
   margin: 0 auto;
 
