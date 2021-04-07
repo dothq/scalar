@@ -70,7 +70,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
       <App />
     </StaticRouter>
   )
-  const fullUrl = "https://" + req.get('host') + req.originalUrl;
+  const fullUrl = 'https://' + req.get('host') + req.originalUrl
 
   const meta = `
   <meta name="author" content="Dot HQ">
@@ -172,7 +172,9 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 		</head>
 		<body>
       <div id="app">${markup}</div>
-      <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(ssrData[req.path] || {})}</script>
+      <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(
+        ssrData[req.path] || {}
+      )}</script>
 		</body>
 		</html>`
   )

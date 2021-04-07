@@ -7,7 +7,7 @@ import { Button } from '../Button'
 
 export const Header = ({
   primary,
-  hasSexyGradient
+  hasSexyGradient,
 }: {
   primary?: boolean
   hasSexyGradient?: boolean
@@ -32,7 +32,11 @@ export const Header = ({
         </div>
       </nav>
 
-      <nav className={`${primary ? `nav-nb` : ``} ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
+      <nav
+        className={`${primary ? `nav-nb` : ``} ${
+          hasSexyGradient ? `nav-has-sexy-gradient` : ``
+        }`}
+      >
         <div className={`nav-container`}>
           <div className={'nav-left'}>
             <a href={'/'}>
@@ -58,7 +62,11 @@ export const Header = ({
         </div>
       </nav>
 
-      <nav className={`mobile-nav ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
+      <nav
+        className={`mobile-nav ${
+          hasSexyGradient ? `nav-has-sexy-gradient` : ``
+        }`}
+      >
         <div className={'nav-container'}>
           <div className={'nav-left'}>
             <a href={''}>
@@ -96,12 +104,12 @@ export const Header = ({
             <li>
               <a href={'about'}>About</a>
             </li>
-            <li className={"mobile-nav-btn"}>
+            <li className={'mobile-nav-btn'}>
               <Button type={'secondary'} href={'/id/signup'}>
                 Register
               </Button>
             </li>
-            <li className={"mobile-nav-btn"}>
+            <li className={'mobile-nav-btn'}>
               <Button type={'primary'} href={'/id/login'}>
                 Sign in
               </Button>

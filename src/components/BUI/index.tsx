@@ -7,7 +7,7 @@ export const BUI = () => {
   const [buiReady, setBuiReady] = React.useState(false)
 
   React.useEffect(() => {
-    const isAprilFools = new Date().toString().includes("Apr 01 2021");
+    const isAprilFools = new Date().toString().includes('Apr 01 2021')
 
     if (window.matchMedia('(prefers-color-scheme: dark)').matches)
       setBuiImage(isAprilFools ? assets.browserLightApr : assets.browserLight)
@@ -27,7 +27,11 @@ export const BUI = () => {
       <img src={buiImage} id="browser-ui" width="800" height="492" />
       <img
         id="browser-wallpaper"
-        src={(new Date().toString().includes("Apr 01 2021")) ? assets.rickrolled : `https://source.unsplash.com/collection/67042424/600x292`}
+        src={
+          new Date().toString().includes('Apr 01 2021')
+            ? assets.rickrolled
+            : `https://source.unsplash.com/collection/67042424/600x292`
+        }
         width="800"
         height="492"
       />
