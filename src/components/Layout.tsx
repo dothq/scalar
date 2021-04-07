@@ -8,7 +8,7 @@ import '../styles.css'
 export const Layout = ({
   children,
   primary,
-  hasSexyGradient
+  hasSexyGradient,
 }: {
   children?: any
   primary?: boolean
@@ -16,7 +16,9 @@ export const Layout = ({
 }) => {
   return (
     <>
-      <section className={`hero ${hasSexyGradient ? `hero-has-sexy-gradient` : ``}`}>
+      <section
+        className={`hero ${hasSexyGradient ? `hero-has-sexy-gradient` : ``}`}
+      >
         <Header primary={primary} hasSexyGradient={hasSexyGradient} />
         {children}
         <Footer />

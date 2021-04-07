@@ -16,6 +16,8 @@ import weather from './routes/ntp/weather'
 import news from './routes/ntp/news'
 import download from './routes/download'
 
+import images from './assets'
+
 let assets: any
 
 const whitelist = [
@@ -68,7 +70,28 @@ server.use(async (req: express.Request, res: express.Response, next) => {
       <App />
     </StaticRouter>
   )
-  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  const fullUrl = 'https://' + req.get('host') + req.originalUrl
+
+  const meta = `
+  <meta name="author" content="Dot HQ">
+  <meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
+  <meta name="theme-color" content="#FFFFFE">
+  <meta property="og:site_name" content="Dot HQ">
+  <meta property="og:title" content="Get the browser that fights for your privacy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="${images.metaThumb}">
+  <meta property="og:url" content="${fullUrl}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@DotBrowser">
+  <meta name="twitter:creator" content="@DotBrowser">
+  <meta name="twitter:title" content="Get the browser that fights for your privacy.">
+  <meta name="twitter:description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
+  <meta name="twitter:image" content="${images.metaThumb}">
+  <meta name="twitter:url" content="${fullUrl}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  `
 
   // TODO update meta image
   if (req.headers['user-agent']?.includes('Trident/')) {
@@ -79,22 +102,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet='utf-8' />
         <title>Dot HQ</title>
-        <meta name="author" content="Dot HQ">
-			  <meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
-			  <meta name="theme-color" content="#FFFFFE">
-			  <meta property="og:title" content="Dot HQ">
-			  <meta property="og:type" content="website">
-			  <meta property="og:image" content="https://new.dothq.co/favicon.png">
-			  <meta property="og:url" content="${fullUrl}">
-			
-			  <meta name="twitter:card" content="summary">
-			  <meta name="twitter:site" content="@DotBrowser">
-			  <meta name="twitter:creator" content="@DotBrowser">
-			  <meta name="twitter:title" content="Dot HQ">
-			  <meta name="twitter:description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
-			  <meta name="twitter:image" content="https://new.dothq.co/favicon.png">
-			  <meta name="twitter:url" content="${fullUrl}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        ${meta}
         <link rel="shortcut icon" href="/favicon.png" />
       </head>
       <body>
@@ -148,21 +156,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 			<meta charSet='utf-8' />
 			<title>Dot HQ</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta name="author" content="Dot HQ">
-			<meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
-			
-			<meta property="og:title" content="Dot HQ">
-			<meta property="og:type" content="website">
-			<meta property="og:image" content="https://new.dothq.co/favicon.png">
-			<meta property="og:url" content="${fullUrl}">
-			
-			<meta name="twitter:card" content="summary">
-			<meta name="twitter:site" content="@DotBrowser">
-			<meta name="twitter:creator" content="@DotBrowser">
-			<meta name="twitter:title" content="Dot HQ">
-			<meta name="twitter:description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
-			<meta name="twitter:image" content="https://new.dothq.co/favicon.png">
-			<meta name="twitter:url" content="${fullUrl}">
+			${meta}
       <link rel="shortcut icon" href="/favicon.png" />
       <link rel="prerender" href="/" />
 			${
@@ -178,7 +172,9 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 		</head>
 		<body>
       <div id="app">${markup}</div>
-      <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(ssrData[req.path] || {})}</script>
+      <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(
+        ssrData[req.path] || {}
+      )}</script>
 		</body>
 		</html>`
   )

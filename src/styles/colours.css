@@ -30,7 +30,12 @@
     --color-disabled: var(--gray-3);
     --background-color: var(--white);
     --background-color-secondary: var(--gray-7);
-    --background-sexy: linear-gradient(to top, var(--background-color-secondary) 50%, #ffffff61 100%), linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    --background-sexy: linear-gradient(
+        to top,
+        var(--background-color-secondary) 50%,
+        #ffffff61 100%
+      ),
+      linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
     --background-dots: rgba(128, 128, 128, 0.5);
     --background-overlay-color: #00000014;
     --border: var(--gray-6);
@@ -65,7 +70,12 @@
     --color-disabled: var(--gray-5);
     --background-color: var(--gray-1);
     --background-color-secondary: var(--gray-2);
-    --background-sexy: linear-gradient(to top, var(--background-color-secondary) 50%, #0006 100%), linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    --background-sexy: linear-gradient(
+        0deg,
+        var(--background-color-secondary) 45%,
+        hsla(0, 0%, 100%, 0)
+      ),
+      radial-gradient(circle at 100% 0%, var(--purple) 10%, var(--red) 55%);
     --background-dots: rgba(128, 128, 128, 0.5);
     --background-overlay: #ffffff14;
     --border: var(--gray-3);

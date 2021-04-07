@@ -51,7 +51,9 @@ class Page extends Component<Props> {
     return (
       <Layout>
         <Content>
-          {typeof markdown !== 'undefined' && <Markdown>{markdown || ""}</Markdown>}
+          {typeof markdown !== 'undefined' && (
+            <Markdown>{markdown || ''}</Markdown>
+          )}
         </Content>
       </Layout>
     )

@@ -39,6 +39,9 @@
   .features {
     grid-template-columns: 1fr !important;
   }
+  .landing-showoff {
+    display: none;
+  }
 }
 
 .features {
@@ -79,13 +82,22 @@
 
 .grid-btns {
   margin-top: 48px;
+  display: flex;
 }
 
-.landing-showoff {
-  display: flex;
-  justify-content: flex-end;
-  opacity: 0;
-  transition: 0.15s opacity ease-in-out 0.2s;
+@media only screen and (min-width: 800px) {
+  .landing-showoff {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: 0.15s opacity ease-in-out 0.2s;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .landing-showoff {
+    display: none;
+  }
 }
 
 .landing-showoff .ls-ready {
@@ -114,14 +126,4 @@
     0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
   user-select: none;
   user-drag: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--azure);
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: var(--blue);
 }

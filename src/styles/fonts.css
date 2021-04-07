@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(../assets/fonts/Inter.var.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Eudoxus Sans';
+  src: url(../assets/fonts/EudoxusSans-Bold.woff2) format('woff2'),
+    url(../assets/fonts/EudoxusSans-Bold.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Eudoxus Sans';
+  src: url(../assets/fonts/EudoxusSans-Regular.woff2) format('woff2'),
+    url(../assets/fonts/EudoxusSans-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Eudoxus Sans';
+  src: url(../assets/fonts/EudoxusSans-Light.woff2) format('woff2'),
+    url(../assets/fonts/EudoxusSans-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Eudoxus Sans';
+  src: url(../assets/fonts/EudoxusSans-ExtraBold.woff2) format('woff2'),
+    url(../assets/fonts/EudoxusSans-ExtraBold.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Eudoxus Sans';
+  src: url(../assets/fonts/EudoxusSans-ExtraLight.woff2) format('woff2'),
+    url(../assets/fonts/EudoxusSans-ExtraLight.woff) format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Eudoxus Sans';
+  src: url(../assets/fonts/EudoxusSans-Medium.woff2) format('woff2'),
+    url(../assets/fonts/EudoxusSans-Medium.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
