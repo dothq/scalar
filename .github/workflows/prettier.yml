@@ -10,22 +10,22 @@ jobs:
     steps:
       - name: Checkout repository
         run: |
-          git clone https://${{ secrets.ROBOT_TOKEN }}@github.com/dothq/browser-desktop.git -b ${GITHUB_REF#refs/heads/}
-          cd browser-desktop
+          git clone https://${{ secrets.ROBOT_TOKEN }}@github.com/dothq/new.dothq.co.git -b ${GITHUB_REF#refs/heads/}
+          cd new.dothq.co
           git status
       - name: Setup Git
         run: |
           git config --global user.name "dothq-robot"
           git config --global user.email "72629236+dothq-robot@users.noreply.github.com"
       - name: Install dependencies
-        run: cd browser-desktop && yarn
+        run: cd new.dothq.co && yarn
 
       - name: Format
-        run: cd browser-desktop && git pull && yarn prettier
+        run: cd new.dothq.co && git pull && yarn prettier
 
       - name: Push to GitHub
         run: |
-          cd browser-desktop
+          cd new.dothq.co
           git status
           git add .
           git commit -m "🎨 Enforce code style"
