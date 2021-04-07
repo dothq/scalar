@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { Layout } from '../../components/Layout'
+import { Layout } from '../../../components/Layout'
 
-import '../../styles/home.css'
-import { Content } from '../../components/Content'
-import { AboutSidebar } from './components/Sidebar'
+import '../../../styles/home.css'
+import { Content } from '../../../components/Content'
+import { AboutSidebar } from '../components/Sidebar'
 
-import PrivacyPolicy from '../../markdown/PRIVACY_POLICY.md'
+import PrivacyPolicy from '../../../markdown/PRIVACY_POLICY.md'
 
-const AboutPrivacy = () => {
+const AboutPrivacyWebsite = () => {
   return (
     <Layout>
       <Content bgStyle={'dot'} centerHoriz primary>
@@ -19,7 +19,7 @@ const AboutPrivacy = () => {
         <div
           style={{ display: 'flex', flexDirection: 'row', alignItems: 'start' }}
         >
-          <AboutSidebar selected={'privacy-db'} />
+          <AboutSidebar selected={'privacy-site'} />
           <div style={{ paddingLeft: '2.5%' }}>
             <PrivacyPolicy />
           </div>
@@ -29,4 +29,4 @@ const AboutPrivacy = () => {
   )
 }
 
-export default AboutPrivacy
+export default AboutPrivacyWebsite

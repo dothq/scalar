@@ -2,7 +2,12 @@ import Home from './pages/Home'
 
 // About
 import About from './pages/about'
-import AboutPrivacy from './pages/about/privacy'
+import AboutPrivacy from './pages/about/privacy/index'
+import AboutPrivacyWebsite from './pages/about/privacy/website'
+import AboutPrivacyID from './pages/about/privacy/id'
+import AboutTerms from './pages/about/terms'
+import AboutCookies from './pages/about/cookies'
+import AboutGDPR from './pages/about/gdpr'
 
 // Products
 import Browser from './pages/products/browser'
@@ -25,6 +30,11 @@ const routes = [
 
   { path: '/about', component: About, exact: true },
   { path: '/about/privacy', component: AboutPrivacy, exact: true },
+  { path: '/about/privacy/website', component: AboutPrivacyWebsite, exact: true },
+  { path: '/about/privacy/id', component: AboutPrivacyID, exact: true },
+  { path: '/about/terms', component: AboutTerms, exact: true },
+  { path: '/about/cookies', component: AboutCookies, exact: true },
+  { path: '/about/gdpr', component: AboutGDPR, exact: true },
 
   { path: '/products/browser', component: Browser, exact: true },
   { path: '/products/browser/thanks', component: BrowserThanks, exact: true },

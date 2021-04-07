@@ -61,6 +61,45 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
           Dot ID
         </Button>
       </li>
+      <li>
+        <h5>LEGAL NOTICES</h5>
+      </li>
+      <li>
+        <Button
+          href="/about/terms"
+          type={selected === 'terms' ? 'secondary' : 'text'}
+          iconLeft={'dot'}
+          style={{
+            color: 'inherit',
+          }}
+        >
+          Terms of Service
+        </Button>
+      </li>
+      <li>
+        <Button
+          href="/about/cookies"
+          type={selected === 'cookies' ? 'secondary' : 'text'}
+          iconLeft={'dot'}
+          style={{
+            color: 'inherit',
+          }}
+        >
+          Cookies
+        </Button>
+      </li>
+      <li>
+        <Button
+          href="/about/gdpr"
+          type={selected === 'gdpr' ? 'secondary' : 'text'}
+          iconLeft={'dot'}
+          style={{
+            color: 'inherit',
+          }}
+        >
+          GDPR
+        </Button>
+      </li>
     </ul>
   </aside>
 )

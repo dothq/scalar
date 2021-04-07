@@ -10,12 +10,12 @@ import '../../styles/home.css'
 import { Content } from '../../components/Content'
 import { AboutSidebar } from './components/Sidebar'
 
-const AboutHome = () => {
+const AboutCookies = () => {
   return (
     <Layout>
       <Content bgStyle={'dot'} centerHoriz primary>
-        <h5>OUR MISSION</h5>
-        <h1>We want to stop companies from taking advantage of your data.</h1>
+        <h5>WHO ARE WE?</h5>
+        <h1>We are Dot HQ.</h1>
       </Content>
       <Content centerHoriz>
         <div
@@ -26,7 +26,7 @@ const AboutHome = () => {
             width: '100%',
           }}
         >
-          <AboutSidebar selected={'home'} />
+          <AboutSidebar selected={'cookies'} />
           <div style={{ width: '100%' }}>This Page Under Construction!</div>
         </div>
       </Content>
@@ -34,4 +34,4 @@ const AboutHome = () => {
   )
 }
 
-export default AboutHome
+export default AboutCookies
