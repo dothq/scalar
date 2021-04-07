@@ -21,7 +21,7 @@ jobs:
         run: cd new.dothq.co && yarn
 
       - name: Format
-        run: cd new.dothq.co && git pull && yarn prettier
+        run: cd new.dothq.co && git pull && yarn format
 
       - name: Push to GitHub
         run: |
