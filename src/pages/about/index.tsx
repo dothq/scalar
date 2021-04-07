@@ -27,7 +27,7 @@ const AboutHome = () => {
           }}
         >
           <AboutSidebar selected={'home'} />
-          <div style={{ width: '100%' }}>This Page Under Construction!</div>
+          <div style={{ width: '100%' }}>This page is under construction!</div>
         </div>
       </Content>
     </Layout>
