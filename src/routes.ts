@@ -30,7 +30,11 @@ const routes = [
 
   { path: '/about', component: About, exact: true },
   { path: '/about/privacy', component: AboutPrivacy, exact: true },
-  { path: '/about/privacy/website', component: AboutPrivacyWebsite, exact: true },
+  {
+    path: '/about/privacy/website',
+    component: AboutPrivacyWebsite,
+    exact: true,
+  },
   { path: '/about/privacy/id', component: AboutPrivacyID, exact: true },
   { path: '/about/terms', component: AboutTerms, exact: true },
   { path: '/about/cookies', component: AboutCookies, exact: true },
