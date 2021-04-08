@@ -33,14 +33,26 @@ export const Button = ({
       <a href={href}>
         {iconLeft && (
           <i
-            style={{ marginRight: '12px', filter: `var(--btn-${type}-icon)`, width: "14px", height: "14px", backgroundSize: "14px" }}
+            style={{
+              marginRight: '12px',
+              filter: `var(--btn-${type}-icon)`,
+              width: '14px',
+              height: '14px',
+              backgroundSize: '14px',
+            }}
             className={`${iconLeft}-icon`}
           ></i>
         )}
         {children}
         {iconRight && (
           <i
-            style={{ marginLeft: '12px', filter: `var(--btn-${type}-icon)`, width: "14px", height: "14px", backgroundSize: "14px" }}
+            style={{
+              marginLeft: '12px',
+              filter: `var(--btn-${type}-icon)`,
+              width: '14px',
+              height: '14px',
+              backgroundSize: '14px',
+            }}
             className={`${iconRight}-icon`}
           ></i>
         )}

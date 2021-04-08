@@ -46,13 +46,13 @@ const BrowserThanks = () => {
         'https://raw.githubusercontent.com/dothq/browser-ff/main/package.json'
       )
 
-      const fileName = 
-      fnos === 'windows' 
-          ? `Install.Dot.Browser.${data.versions['firefox-display']}.exe` 
-          : fnos === 'macos' 
-            ? `Dot.Browser.${data.versions['firefox-display']}.dmg`
-            : `dot-${data.versions['firefox-display']}.tar.bz2`
-  
+      const fileName =
+        fnos === 'windows'
+          ? `Install.Dot.Browser.${data.versions['firefox-display']}.exe`
+          : fnos === 'macos'
+          ? `Dot.Browser.${data.versions['firefox-display']}.dmg`
+          : `dot-${data.versions['firefox-display']}.tar.bz2`
+
       const downloadURI = `https://github.com/dothq/browser-desktop/releases/latest/download/${fileName}`
 
       window.location.replace(downloadURI)

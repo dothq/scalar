@@ -15,12 +15,12 @@ router.get('/api/downloads', async (req, res) => {
     version = data.versions['firefox-display']
   }
 
-  const fileName = 
-    os === 'windows' 
-      ? `Install.Dot.Browser.${version}.exe` 
-      : os === 'macos' 
-        ? `Dot.Browser.${version}.dmg`
-        : `dot-${version}.tar.bz2`
+  const fileName =
+    os === 'windows'
+      ? `Install.Dot.Browser.${version}.exe`
+      : os === 'macos'
+      ? `Dot.Browser.${version}.dmg`
+      : `dot-${version}.tar.bz2`
 
   const downloadURI = `https://github.com/dothq/browser-desktop/releases/latest/download/${fileName}`
 

@@ -11,10 +11,10 @@ module.exports = {
         forkTsChecker: {
           eslint: {
             files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
-          }
+          },
         },
       },
     },
-    "mdx"
-  ]
+    'mdx',
+  ],
 }
