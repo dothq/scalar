@@ -13,10 +13,6 @@ import Compass from './pages/products/compass'
 import Help from './pages/help'
 import HelpPage from './pages/help/page'
 
-// DotID stuff
-import Signup from './pages/id/Signup'
-import Login from './pages/id/Login'
-
 // 404 pages
 import NotFound from './pages/404'
 
@@ -29,9 +25,6 @@ const routes = [
     { path: "/products/browser", component: Browser, exact: true },
     { path: "/products/browser/thanks", component: BrowserThanks, exact: true },
     { path: "/products/compass", component: Compass, exact: true },
-  
-    { path: "/id/signup", component: Signup, exact: true },
-    { path: "/id/login", component: Login, exact: true },
   
     { path: "/help", component: Help, exact: true },
     { path: "/help/:product/:key/:page", component: HelpPage },
