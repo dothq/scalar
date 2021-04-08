@@ -1,4 +1,5 @@
 import React from "react";
+import assets from "../../../../assets";
 
 import { Button } from '../../../../components/Button'
 
@@ -11,7 +12,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
                 <h5>ABOUT US</h5>
             </li>
             <li>
-                <Button href="/about" type={selected === "home" ? "secondary" : "text"} iconLeft={"home"} style={{
+                <Button href="/about" type={selected === "home" ? "secondary" : "text"} iconLeft={assets.home} style={{
                     color: selected === "home" ? "var(--nav-hover)" : "inherit"
                 }}>
                     Home
@@ -21,7 +22,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
                 <h5>PRIVACY</h5>
             </li>
             <li>
-                <Button href="/about/privacy" type={selected === "privacy-db" ? "secondary" : "text"} iconLeft={"dot"} style={{
+                <Button href="/about/privacy" type={selected === "privacy-db" ? "secondary" : "text"} iconLeft={assets.browserWordmark} style={{
                     color: "inherit"
 
                 }}>
@@ -29,7 +30,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
                 </Button>
             </li>
             <li>
-                <Button href="/about/privacy/website" type={selected === "privacy-site" ? "secondary" : "text"} iconLeft={"globe"} style={{
+                <Button href="/about/privacy/website" type={selected === "privacy-site" ? "secondary" : "text"} iconLeft={assets.globe} style={{
                     color: "inherit"
                 }}>
                     Website

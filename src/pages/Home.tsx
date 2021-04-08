@@ -8,6 +8,7 @@ import { FeatureGrid } from '../components/FeatureGrid'
 
 import '../styles/home.css'
 import { Content } from '../components/Content'
+import { osIcons } from '../assets/os'
 
 const Home = () => {
   const [os, setOS] = React.useState("");
@@ -27,7 +28,7 @@ const Home = () => {
       <Content primary>
         <div className={'grid'}>
           <div>
-            <h1>Take back your privacy.</h1>
+            <h1 className={"landing-super-title"}>Take back your privacy.</h1>
             <p>
               Dot Browser is a privacy-conscious web browser with smarts
               built-in for protection against trackers and advertisements
@@ -37,19 +38,21 @@ const Home = () => {
             <div className={'grid-btns'}>
               <Button
                 onClick={() => console.log('Button')}
-                type="secondary"
-                href="#features"
+                type="primary"
+                href="https://github.com/dothq/browser-desktop/releases/latest"
+                iconLeft={(osIcons as any)[os.toLowerCase()]}
+                rsp={12}
+                iconSize={16}
               >
-                Learn more
+                Download Dot Browser
               </Button>
 
               <Button
                 onClick={() => console.log('Button')}
-                type="primary"
-                href="/products/browser"
-                iconLeft={os.length ? os : ""}
+                type="secondary"
+                href="#features"
               >
-                Download Dot Browser
+                Learn more
               </Button>
             </div>
           </div>

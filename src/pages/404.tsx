@@ -1,4 +1,5 @@
 import React from 'react'
+import assets from '../assets'
 import { Button } from '../components/Button'
 import { Content } from '../components/Content'
 import { Layout } from '../components/Layout'
@@ -20,7 +21,7 @@ class NotFound extends React.Component {
             We couldn't find that page.
           </p>
 
-          <Button type={'primary'} href={'/'} iconLeft={'back'}>
+          <Button type={'primary'} href={'/'} iconLeft={assets.back} rsp={12}>
             Go home
           </Button>
         </Content>

@@ -7,6 +7,8 @@ export default {
   sparkles: require('./sparkles.svg'),
 
   browser: require('./browser.webp'),
+  browserGlass: require('./browser-glass.jpg'),
+  browserGlassDark: require('./browser-glass-dark.jpg'),
   browserLight: require('./browser-light.webp'),
 
   rickrolled: require("./rickrolled.gif"),

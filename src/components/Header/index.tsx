@@ -5,6 +5,7 @@ import Markdown from 'markdown-to-jsx'
 
 import { Button } from '../Button'
 import { menus } from '../../menus'
+import assets from '../../assets'
 
 export const Header = ({
   primary,
@@ -50,10 +51,13 @@ export const Header = ({
             <a href={'/'}>
               <i className={'dot-icon'} />
             </a>
+          </div>
+
+          <div className={'nav-center'}>
             <ul className={'nav-items'} onMouseLeave={() => onNavHoverExit()}>
               {menus.map((menu, key) => (
                 <a 
-                  className={(fauxHovered == key && detachOpen) ? `nav-item-faux-hovered` : ``} 
+                  className={(fauxHovered === key && detachOpen) ? `nav-item-faux-hovered` : ``} 
                   onMouseOver={() => onNavItemHover(key)}
                   key={key}
                 >
@@ -64,19 +68,15 @@ export const Header = ({
           </div>
 
           <div className={'nav-right'}>
-            <Button type={'secondary'} href={'/id/signup'}>
-              Register
-            </Button>
-
-            <Button type={'primary'} href={'/id/login'}>
-              Sign in
+            <Button type={'secondary'} href={"#"} lsp={12} iconRight={assets.forward}>
+              Join Dot One
             </Button>
           </div>
         </div>
 
         <nav className={`nav-desktop-detachable ${detachOpen ? `is-open` : ``}`} onMouseOver={() => setDetachOpen(true)} onMouseLeave={() => onNavHoverExit()}>
           {menus.map((menu, key) => (
-            <menu.component key={key} highlighted={fauxHovered} id={menu.name} visible={(detachOpen ? fauxHovered == key : false)} />
+            <menu.component key={key} highlighted={fauxHovered} id={menu.name} visible={(detachOpen ? fauxHovered === key : false)} />
           ))}
         </nav>
       </nav>

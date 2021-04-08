@@ -48,10 +48,11 @@ nav {
   background-color: var(--nav-background-color);
   box-shadow: 0px 1px 0px 0px var(--border);
   z-index: 1;
+  backdrop-filter: blur(12px);
 }
 
 .motd {
-  box-shadow: 0px 1px 0px 0px var(--border) !important;
+  border-bottom: 1px solid var(--border);
   z-index: 2;
 }
 
@@ -84,14 +85,16 @@ nav {
 }
 
 .nav-left,
-.nav-right {
+.nav-right,
+.nav-center {
   display: flex;
   height: 64px;
   align-items: center;
+  flex: 1;
 }
 
 .nav-right {
-  gap: 16px;
+  justify-content: flex-end;
 }
 
 .nav-items {
@@ -100,8 +103,10 @@ nav {
   gap: 12px;
   font-weight: 600;
   font-size: 15px;
-  color: var(--color);
-
+  color: var(--color-disabled);
+  padding: 0;
+  height: 64px;
+  margin: 0;
   user-select: none;
 }
 
@@ -113,11 +118,12 @@ nav {
   text-decoration: none;
   color: inherit;
   border-bottom: 4px solid transparent;
-  transition: 0.1s ease border-bottom;
+  transition: 0.1s ease border-bottom, 0.2s color;
 }
 
 .nav-items > a:hover {
   border-bottom-color: var(--color);
+  color: var(--color);
   cursor: pointer;
 }
 
@@ -135,34 +141,40 @@ nav {
   font-family: inherit;
   cursor: pointer;
   padding: 0;
-}
-
-.btn > a {
+  height: 46px;
   text-decoration: none;
   color: inherit;
   display: flex;
   align-items: center;
-  padding: var(--padding, 10px 20px);
+  padding: var(--padding, 0px 30px);
   width: inherit;
   justify-content: center;
+  user-select: none;
 }
 
 .btn-primary {
   background-color: var(--btn-primary);
   color: var(--btn-primary-color);
+  border: 1px solid var(--btn-primary);
+  transition: 0.2s background-color, 0.2s color;
 }
 
 .btn-primary:hover {
   background-color: var(--btn-primary-hover);
+  color: var(--btn-primary-text-hover);
 }
 
 .btn-secondary {
   background-color: var(--btn-secondary);
-  color: var(--btn-secondary-color);
+  color: var(--color-disabled);
+  border: 1px solid var(--border);
+  transition: 0.2s border, 0.2s color;
 }
 
 .btn-secondary:hover {
-  background-color: var(--btn-secondary-hover);
+  background-color: var(--btn-secondary);
+  color: var(--color);
+  border: 1px solid var(--color);
 }
 
 .btn-text {
