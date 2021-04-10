@@ -7,7 +7,7 @@ export const About = ({ id, visible, highlighted }: { id: string; visible: boole
     React.useEffect(() => setReady(true), [ready]);
 
     return (
-        <StyledMenu id={id} visible={highlighted == 3 && visible}>
+        <StyledMenu id={id} visible={highlighted === 3 && visible}>
             <MenuContent>
                 bingus about
             </MenuContent>

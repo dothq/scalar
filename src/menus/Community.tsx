@@ -7,7 +7,7 @@ export const Community = ({ id, visible, highlighted }: { id: string; visible: b
     React.useEffect(() => setReady(true), [ready]);
 
     return (
-        <StyledMenu id={id} visible={highlighted == 2 && visible}>
+        <StyledMenu id={id} visible={highlighted === 2 && visible}>
             <MenuContent>
                 bingus community
             </MenuContent>

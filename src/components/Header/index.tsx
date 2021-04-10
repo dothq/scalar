@@ -69,7 +69,7 @@ export const Header = ({
 
           <div className={'nav-right'}>
             <Button type={'secondary'} href={"#"} lsp={12} iconRight={assets.forward}>
-              Join Dot One
+              Join Dot ID
             </Button>
           </div>
         </div>

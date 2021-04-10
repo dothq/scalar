@@ -7,7 +7,7 @@ export const Company = ({ id, visible, highlighted }: { id: string; visible: boo
     React.useEffect(() => setReady(true), [ready]);
 
     return (
-        <StyledMenu id={id} visible={highlighted == 1 && visible}>
+        <StyledMenu id={id} visible={highlighted === 1 && visible}>
             <MenuContent>
                 bingus company
             </MenuContent>

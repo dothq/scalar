@@ -7,7 +7,7 @@ export const Products = ({ id, visible, highlighted }: { id: string; visible: bo
     React.useEffect(() => setReady(true), [ready]);
 
     return (
-        <StyledMenu id={id} visible={highlighted == 0 && visible}>
+        <StyledMenu id={id} visible={highlighted === 0 && visible}>
             <MenuContent>
                 <div className={"menu-grid"}>
                     <MenuItem>
