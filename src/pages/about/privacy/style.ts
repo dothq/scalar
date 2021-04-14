@@ -24,12 +24,23 @@ export const PrivacyStyle = createGlobalStyle`
   opacity: 0.5;
 }
 
+@media (prefers-color-scheme: dark) {
+    .hero-content blockquote {
+        background-color: #00ffb71c;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .hero-content blockquote {
+        background-color: #256ef52b;
+    }
+}
+
 .hero-content blockquote {
   border: 1px solid var(--text-primary);
   padding: 10px 28px;
   line-height: 2rem;
   border-radius: 6px;
-  background-color: #256ef52b;
   color: var(--text-primary);
   font-weight: 500;
   margin: 0;
