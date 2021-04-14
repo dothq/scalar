@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const PrivacyStyle = createGlobalStyle`
 .hero-content {
@@ -43,4 +43,4 @@ export const PrivacyStyle = createGlobalStyle`
   margin-right: 24rem;
 }
 
-`;
+`
