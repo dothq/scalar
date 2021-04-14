@@ -1,9 +1,11 @@
 .hero-content {
-    min-height: calc(100vh - 289px);
+  min-height: calc(100vh - 289px);
 }
 
-.hero-content > #privacy > h1, h2, h3 {
-    margin: 1rem 0;
+.hero-content > #privacy > h1,
+h2,
+h3 {
+  margin: 1rem 0;
 }
 
 .hero-content > #privacy > * {
