@@ -52,20 +52,31 @@
 
 .footer-container {
   display: flex;
-  padding: 58px 0px;
+  padding: 10px 0px;
   margin: 0px auto;
   max-width: 1300px;
 }
 
 .logo-text {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   display: flex;
   align-items: center;
   color: var(--color-disabled);
   margin-top: 24px;
-  width: 150px;
+  justify-content: space-between;
+}
+
+.logo-text > div > a {
+  color: var(--color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text > div > a:hover {
+  opacity: 0.5;
 }
 
 .footer-list {
@@ -109,17 +120,15 @@
 
 .footer-socials {
   display: flex;
-  margin-top: 58px;
 }
 
 .footer-socials > a {
   width: 24px;
   height: 24px;
   margin-right: 28px;
-  transition: opacity 0.3s ease 0s;
 }
 
 .footer-socials > a:hover {
-  opacity: 0.7;
+  opacity: 0.5;
   cursor: pointer;
 }

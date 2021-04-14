@@ -58,6 +58,15 @@
   filter: var(--btn-secondary-icon);
 }
 
+.github-icon {
+  background-image: url(../assets/footer/github.svg);
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  filter: var(--btn-secondary-icon);
+}
+
 .discord-icon {
   background-image: url(../assets/footer/discord.svg);
   background-size: cover;

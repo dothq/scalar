@@ -84,7 +84,7 @@
 
 @media only screen and (max-width: 900px) {
   .grid > div:first-of-type {
-    margin-top: 2.5rem;
+    margin-top: 6.5rem;
     text-align: center;
     padding: 0 1.5rem;
   }
