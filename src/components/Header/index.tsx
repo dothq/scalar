@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from 'react-tooltip'
 
 import Markdown from 'markdown-to-jsx'
 
@@ -16,7 +16,9 @@ export const Header = ({
   primary?: boolean
   hasSexyGradient?: boolean
 }) => {
-  const [motd, setMotd] = React.useState('💡 Dot Browser is still in alpha. Bugs may arise.')
+  const [motd, setMotd] = React.useState(
+    '💡 Dot Browser is still in alpha. Bugs may arise.'
+  )
   const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
   const [detachOpen, setDetachOpen] = React.useState(false)
   const [fauxHovered, setFauxHovered] = React.useState(0)
@@ -84,13 +86,20 @@ export const Header = ({
               href={'#'}
               lsp={12}
               iconRight={assets.forward}
-              data-tip='Dot ID is a work in progress.' 
-              data-for='did'
+              data-tip="Dot ID is a work in progress."
+              data-for="did"
             >
               Join Dot ID
             </Button>
             <div>
-            <ReactTooltip place={"bottom"} effect={"solid"} offset={{ top: 45 }} id='did'>{}</ReactTooltip>
+              <ReactTooltip
+                place={'bottom'}
+                effect={'solid'}
+                offset={{ top: 45 }}
+                id="did"
+              >
+                {}
+              </ReactTooltip>
             </div>
           </div>
         </div>
