@@ -14,7 +14,7 @@ export const Button = ({
   disabled,
   lsp,
   rsp,
-  iconSize
+  iconSize,
 }: {
   onClick?: any
   style?: any
@@ -38,9 +38,23 @@ export const Button = ({
       } ${disabled ? `btn-disabled` : ``}`}
       style={style}
     >
-      {iconLeft && ( <Icon lsp={lsp || 0} rsp={rsp} i={iconLeft} size={iconSize || 14}></Icon> )}
+      {iconLeft && (
+        <Icon
+          lsp={lsp || 0}
+          rsp={rsp}
+          i={iconLeft}
+          size={iconSize || 14}
+        ></Icon>
+      )}
       {children}
-      {iconRight && ( <Icon lsp={lsp || 0} rsp={rsp} i={iconRight} size={iconSize || 14}></Icon> )}
+      {iconRight && (
+        <Icon
+          lsp={lsp || 0}
+          rsp={rsp}
+          i={iconRight}
+          size={iconSize || 14}
+        ></Icon>
+      )}
     </a>
   )
 }

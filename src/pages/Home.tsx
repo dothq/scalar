@@ -28,7 +28,7 @@ const Home = () => {
       <Content primary>
         <div className={'grid'}>
           <div>
-            <h1 className={"landing-super-title"}>Take back your privacy.</h1>
+            <h1 className={'landing-super-title'}>Take back your privacy.</h1>
             <p>
               Dot Browser is a privacy-conscious web browser with smarts
               built-in for protection against trackers and advertisements

@@ -40,8 +40,15 @@
     --background-overlay-color: #00000014;
     --border: var(--gray-6);
 
-    --landing-text-background: linear-gradient(90deg, hsla(0, 100%, 71%, 1) 0%, rgb(255, 116, 51) 30%, rgb(255, 219, 13) 56%, rgb(87, 235, 74) 100%);
-    --shadow: 0 6.4px 14.4px 0 rgba(0,0,0,.132),0 1.2px 3.6px 0 rgba(0,0,0,.108);
+    --landing-text-background: linear-gradient(
+      90deg,
+      hsla(0, 100%, 71%, 1) 0%,
+      rgb(255, 116, 51) 30%,
+      rgb(255, 219, 13) 56%,
+      rgb(87, 235, 74) 100%
+    );
+    --shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
+      0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
 
     --btn-primary: var(--black);
     --btn-secondary: var(--white);
@@ -83,8 +90,15 @@
     --background-overlay: #ffffff14;
     --border: var(--gray-3);
 
-    --landing-text-background: linear-gradient(90deg, hsla(0, 100%, 76%, 1) 0%, hsla(21, 97%, 74%, 1) 30%, hsla(60, 100%, 75%, 1) 56%, hsla(115, 100%, 80%, 1) 100%);
-    --shadow: 0 6.4px 14.4px 0 rgba(255, 242, 242, 0.13),0 1.2px 3.6px 0 rgba(255, 255, 255, 0.11);
+    --landing-text-background: linear-gradient(
+      90deg,
+      hsla(0, 100%, 76%, 1) 0%,
+      hsla(21, 97%, 74%, 1) 30%,
+      hsla(60, 100%, 75%, 1) 56%,
+      hsla(115, 100%, 80%, 1) 100%
+    );
+    --shadow: 0 6.4px 14.4px 0 rgba(255, 242, 242, 0.13),
+      0 1.2px 3.6px 0 rgba(255, 255, 255, 0.11);
 
     --btn-primary: var(--white);
     --btn-secondary: var(--gray-2);
