@@ -511,7 +511,8 @@ input[type='email']:focus {
   background-color: #03030347;
   opacity: 0;
   pointer-events: none;
-  transition: 0.1s transform ease, 0.2s opacity ease, 0.8s backdrop-filter ease 0.3s;
+  transition: 0.1s transform ease, 0.2s opacity ease,
+    0.8s backdrop-filter ease 0.3s;
   transform-origin: top center;
   transform: scaleY(1);
 }
@@ -521,7 +522,8 @@ input[type='email']:focus {
   pointer-events: all;
   transform: scaleY(1);
   backdrop-filter: blur(4px);
-  transition: 0.25s transform ease, 0.2s opacity linear 0.08s, 0.8s backdrop-filter 0.15s;
+  transition: 0.25s transform ease, 0.2s opacity linear 0.08s,
+    0.8s backdrop-filter 0.15s;
 }
 
 .landing-showoff {
@@ -541,5 +543,5 @@ input[type='email']:focus {
 .menu-grid {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }

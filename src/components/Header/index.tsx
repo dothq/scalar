@@ -16,8 +16,8 @@ export const Header = ({
 }) => {
   const [motd, setMotd] = React.useState('')
   const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
-  const [detachOpen, setDetachOpen] = React.useState(false);
-  const [fauxHovered, setFauxHovered] = React.useState(0);
+  const [detachOpen, setDetachOpen] = React.useState(false)
+  const [fauxHovered, setFauxHovered] = React.useState(0)
 
   React.useEffect(() => {
     axios
@@ -30,7 +30,7 @@ export const Header = ({
 
   const onNavItemHover = (i: number) => {
     setDetachOpen(true)
-    setFauxHovered(i);
+    setFauxHovered(i)
   }
 
   const onNavHoverExit = () => {
@@ -60,8 +60,12 @@ export const Header = ({
           <div className={'nav-center'}>
             <ul className={'nav-items'} onMouseLeave={() => onNavHoverExit()}>
               {menus.map((menu, key) => (
-                <a 
-                  className={(fauxHovered === key && detachOpen) ? `nav-item-faux-hovered` : ``} 
+                <a
+                  className={
+                    fauxHovered === key && detachOpen
+                      ? `nav-item-faux-hovered`
+                      : ``
+                  }
                   onMouseOver={() => onNavItemHover(key)}
                   key={key}
                 >
@@ -72,15 +76,29 @@ export const Header = ({
           </div>
 
           <div className={'nav-right'}>
-            <Button type={'secondary'} href={"#"} lsp={12} iconRight={assets.forward}>
+            <Button
+              type={'secondary'}
+              href={'#'}
+              lsp={12}
+              iconRight={assets.forward}
+            >
               Join Dot ID
             </Button>
           </div>
         </div>
 
-        <nav className={`nav-desktop-detachable ${detachOpen ? `is-open` : ``}`} onMouseOver={() => setDetachOpen(true)} onMouseLeave={() => onNavHoverExit()}>
+        <nav
+          className={`nav-desktop-detachable ${detachOpen ? `is-open` : ``}`}
+          onMouseOver={() => setDetachOpen(true)}
+          onMouseLeave={() => onNavHoverExit()}
+        >
           {menus.map((menu, key) => (
-            <menu.component key={key} highlighted={fauxHovered} id={menu.name} visible={(detachOpen ? fauxHovered === key : false)} />
+            <menu.component
+              key={key}
+              highlighted={fauxHovered}
+              id={menu.name}
+              visible={detachOpen ? fauxHovered === key : false}
+            />
           ))}
         </nav>
       </nav>
@@ -141,7 +159,13 @@ export const Header = ({
         </div>
       </nav>
 
-      <div className={`nav-desktop-detachable-coverup ${detachOpen ? `is-open` : ``}`} onMouseEnter={() => onNavHoverExit()} style={({ "--detached-height": "350px" } as any)}></div>
+      <div
+        className={`nav-desktop-detachable-coverup ${
+          detachOpen ? `is-open` : ``
+        }`}
+        onMouseEnter={() => onNavHoverExit()}
+        style={{ '--detached-height': '350px' } as any}
+      ></div>
     </>
   )
 }
