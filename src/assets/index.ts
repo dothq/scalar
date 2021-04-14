@@ -1,5 +1,5 @@
 export default {
-    browserWordmark: require("./browser-wordmark.svg"),
+    browserWordmark: require('./browser-wordmark.svg'),
 
     metaThumb: require("./metathumb.png"),
 
@@ -11,4 +11,3 @@ export default {
     home: require("./home.svg"),
     menu: require("./menu.svg")
 }
-  
