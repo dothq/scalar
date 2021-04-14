@@ -53,10 +53,11 @@ nav {
   background-color: var(--nav-background-color);
   box-shadow: 0px 1px 0px 0px var(--border);
   z-index: 1;
+  backdrop-filter: blur(12px);
 }
 
 .motd {
-  box-shadow: 0px 1px 0px 0px var(--border) !important;
+  border-bottom: 1px solid var(--border);
   z-index: 2;
 }
 
@@ -89,24 +90,28 @@ nav {
 }
 
 .nav-left,
-.nav-right {
+.nav-right,
+.nav-center {
   display: flex;
   height: 64px;
   align-items: center;
+  flex: 1;
 }
 
 .nav-right {
-  gap: 16px;
+  justify-content: flex-end;
 }
 
 .nav-items {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 12px;
   font-weight: 600;
   font-size: 15px;
-  color: var(--color);
-
+  color: var(--color-disabled);
+  padding: 0;
+  height: 64px;
+  margin: 0;
   user-select: none;
 }
 
@@ -114,13 +119,16 @@ nav {
   height: 64px;
   display: flex;
   align-items: center;
-  padding: 0px 4px;
+  padding: 0px 14px;
   text-decoration: none;
   color: inherit;
+  border-bottom: 4px solid transparent;
+  transition: 0.1s ease border-bottom, 0.2s color;
 }
 
 .nav-items > a:hover {
-  color: var(--nav-hover);
+  border-bottom-color: var(--color);
+  color: var(--color);
   cursor: pointer;
 }
 
@@ -138,34 +146,40 @@ nav {
   font-family: inherit;
   cursor: pointer;
   padding: 0;
-}
-
-.btn > a {
+  height: 46px;
   text-decoration: none;
   color: inherit;
   display: flex;
   align-items: center;
-  padding: var(--padding, 10px 20px);
+  padding: var(--padding, 0px 30px);
   width: inherit;
   justify-content: center;
+  user-select: none;
 }
 
 .btn-primary {
   background-color: var(--btn-primary);
   color: var(--btn-primary-color);
+  border: 1px solid var(--btn-primary);
+  transition: 0.2s background-color, 0.2s color;
 }
 
 .btn-primary:hover {
   background-color: var(--btn-primary-hover);
+  color: var(--btn-primary-text-hover);
 }
 
 .btn-secondary {
   background-color: var(--btn-secondary);
-  color: var(--btn-secondary-color);
+  color: var(--color-disabled);
+  border: 1px solid var(--border);
+  transition: 0.2s border, 0.2s color;
 }
 
 .btn-secondary:hover {
-  background-color: var(--btn-secondary-hover);
+  background-color: var(--btn-secondary);
+  color: var(--color);
+  border: 1px solid var(--color);
 }
 
 .btn-text {
@@ -431,4 +445,100 @@ input[type='email']:focus {
   background-color: transparent !important;
   box-shadow: none !important;
   border: none !important;
+}
+.nav-desktop-detachable {
+  max-height: var(--detached-height);
+  width: 100%;
+  background-color: var(--background-color);
+  position: absolute;
+  left: 0px;
+  height: 100vh;
+  top: 64px;
+  z-index: 11;
+  box-shadow: none;
+  padding: 0 !important;
+  --detached-height: 350px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s transform ease, 0.1s opacity linear 0.1s;
+  transform-origin: top center;
+  transform: scaleY(0);
+  overflow: hidden;
+}
+
+.nav-desktop-detachable > menu {
+  display: none;
+}
+
+.nav-desktop-detachable.is-open > menu {
+  display: flex;
+}
+
+.nav-desktop-detachable.is-open {
+  opacity: 1;
+  pointer-events: all;
+  transform: scaleY(1);
+  transition: 0.3s transform ease, 0s opacity linear 0.1s;
+}
+
+/* .nav-desktop-detachable > menu {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.1s, opacity 0.1s;
+  transition-delay: 0s;
+}
+
+.nav-desktop-detachable.is-open > menu {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition-delay: 0.2s;
+} */
+
+.nav-desktop-detachable-coverup {
+  backdrop-filter: blur(0px);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: -4;
+  opacity: 1;
+  top: 100px;
+  display: inline-flex;
+  margin: 0;
+  z-index: 1;
+  background-color: #03030347;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s transform ease, 0.2s opacity ease, 0.8s backdrop-filter ease 0.3s;
+  transform-origin: top center;
+  transform: scaleY(1);
+}
+
+.nav-desktop-detachable-coverup.is-open {
+  opacity: 1;
+  pointer-events: all;
+  transform: scaleY(1);
+  backdrop-filter: blur(4px);
+  transition: 0.25s transform ease, 0.2s opacity linear 0.08s, 0.8s backdrop-filter 0.15s;
+}
+
+.landing-showoff {
+  z-index: 0;
+}
+
+.nav-nb {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+}
+
+.nav-item-faux-hovered {
+  border-bottom: 2px solid var(--color) !important;
+}
+
+.menu-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3,1fr);
 }

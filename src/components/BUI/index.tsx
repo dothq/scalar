@@ -7,11 +7,9 @@ export const BUI = () => {
   const [buiReady, setBuiReady] = React.useState(false)
 
   React.useEffect(() => {
-    const isAprilFools = new Date().toString().includes('Apr 01 2021')
-
     if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      setBuiImage(isAprilFools ? assets.browserLightApr : assets.browserLight)
-    else setBuiImage(isAprilFools ? assets.browserApr : assets.browser)
+      setBuiImage(assets.browserGlassDark)
+    else setBuiImage(assets.browserGlass)
 
     let i: any = new Image()
     i.src = buiImage
@@ -25,16 +23,6 @@ export const BUI = () => {
   return (
     <div className={'landing-showoff'} style={{ opacity: buiReady ? 1 : 0 }}>
       <img src={buiImage} id="browser-ui" width="800" height="492" />
-      <img
-        id="browser-wallpaper"
-        src={
-          new Date().toString().includes('Apr 01 2021')
-            ? assets.rickrolled
-            : `https://source.unsplash.com/collection/67042424/600x292`
-        }
-        width="800"
-        height="492"
-      />
     </div>
   )
 }

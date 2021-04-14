@@ -112,3 +112,38 @@
   width: 16px !important;
   height: 16px !important;
 }
+.product-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.browser-desktop-pi {
+  background-image: url(../assets/product-icons/browser-desktop.svg);
+  background-size: cover !important;
+}
+
+.browser-mobile-pi {
+  background-image: url(../assets/product-icons/browser-mobile.svg);
+  background-size: cover !important;
+}
+
+.dot-id-pi {
+  background-image: url(../assets/product-icons/dot-id.svg);
+  background-size: cover !important;
+}
+
+.dot-one-pi {
+  background-image: url(../assets/product-icons/dot-one.svg);
+  background-size: cover !important;
+}
+
+.dot-shield-pi {
+  background-image: url(../assets/product-icons/dot-shield.svg);
+  background-size: cover !important;
+}
+
+.compass-pi {
+  background-image: url(../assets/product-icons/compass.svg);
+  background-size: cover !important;
+}

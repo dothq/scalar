@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from '../Icon'
 
 /* tslint:disable */
 export const Button = ({
@@ -11,6 +12,9 @@ export const Button = ({
   iconRight,
   className,
   disabled,
+  lsp,
+  rsp,
+  iconSize
 }: {
   onClick?: any
   style?: any
@@ -21,42 +25,22 @@ export const Button = ({
   iconRight?: string
   className?: string
   disabled?: boolean
+  lsp?: number
+  rsp?: number
+  iconSize?: number
 }) => {
   return (
-    <button
+    <a
       onClick={onClick}
+      href={href}
       className={`btn ${type ? `btn-${type}` : ''} ${
         className ? className : ``
       } ${disabled ? `btn-disabled` : ``}`}
       style={style}
     >
-      <a href={href}>
-        {iconLeft && (
-          <i
-            style={{
-              marginRight: '12px',
-              filter: `var(--btn-${type}-icon)`,
-              width: '14px',
-              height: '14px',
-              backgroundSize: '14px',
-            }}
-            className={`${iconLeft}-icon`}
-          ></i>
-        )}
-        {children}
-        {iconRight && (
-          <i
-            style={{
-              marginLeft: '12px',
-              filter: `var(--btn-${type}-icon)`,
-              width: '14px',
-              height: '14px',
-              backgroundSize: '14px',
-            }}
-            className={`${iconRight}-icon`}
-          ></i>
-        )}
-      </a>
-    </button>
+      {iconLeft && ( <Icon lsp={lsp || 0} rsp={rsp} i={iconLeft} size={iconSize || 14}></Icon> )}
+      {children}
+      {iconRight && ( <Icon lsp={lsp || 0} rsp={rsp} i={iconRight} size={iconSize || 14}></Icon> )}
+    </a>
   )
 }

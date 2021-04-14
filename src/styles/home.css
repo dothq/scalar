@@ -4,8 +4,8 @@
 
 @media (min-width: 900px) {
   .grid {
-    display: grid;
-    grid-template-columns: var(--golden-ratio-fr) 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -59,9 +59,27 @@
 }
 
 .grid > div:first-of-type {
-  margin-top: 6rem;
+  margin-top: 8rem;
   line-height: 1.75rem;
-  padding-right: 4rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid > div:first-of-type > h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 6rem;
+  user-select: none;
+}
+
+.grid > div:first-of-type > p {
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 700px;
+  color: var(--color-disabled);
 }
 
 @media only screen and (max-width: 900px) {
@@ -71,12 +89,12 @@
     padding: 0 1.5rem;
   }
 
-  .grid > div:first-of-type > h1 {
-    line-height: 2.5rem;
-  }
-
   .grid > .landing-showoff {
     display: none;
+  }
+
+  .grid-btns {
+    justify-content: center;
   }
 }
 
@@ -85,12 +103,18 @@
   display: flex;
 }
 
+.grid-btns > a:first-of-type {
+  margin-right: 22px;
+}
+
 @media only screen and (min-width: 800px) {
   .landing-showoff {
     display: flex;
-    justify-content: flex-end;
     opacity: 0;
     transition: 0.15s opacity ease-in-out 0.2s;
+    width: 100%;
+    justify-content: center;
+    margin: 4rem 0;
   }
 }
 
@@ -109,7 +133,10 @@
   z-index: 50;
   user-select: none;
   user-drag: none;
-  border-radius: 6px;
+  border-radius: 10px;
+  width: 1000px;
+  height: inherit;
+  box-shadow: var(--shadow);
 }
 
 #browser-wallpaper {
@@ -126,4 +153,26 @@
     0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
   user-select: none;
   user-drag: none;
+  width: 1000px;
+  height: 612px;
 }
+
+.landing-super-title {
+  background-image: var(--landing-text-background);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-color-scheme: light) {
+  .landing-super-title {
+    color: #00000030;
+  }
+}
+
+.hero-primary {
+  height: 100vh;
+  margin-top: calc(-102px);
+  max-height: 1200px;
+}
+
