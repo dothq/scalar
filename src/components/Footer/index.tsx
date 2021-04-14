@@ -21,8 +21,7 @@ export const Footer = () => {
         <div className={'footer-info'} style={{ flex: 1, width: '100%' }}>
           <p className={'logo-text'}>
             © {new Date().getFullYear()} Dot HQ. All rights reserved.
-
-            <div style={{ display: "flex" }}>
+            <div style={{ display: 'flex' }}>
               <div className={'footer-socials'}>
                 <a href={'https://twitter.com/DotBrowser'} target={'_blank'}>
                   <i className={'twitter-icon'}></i>
@@ -34,9 +33,13 @@ export const Footer = () => {
                   <i className={'discord-icon'}></i>
                 </a>
               </div>
-          
-              <a style={{ marginLeft: "0.5rem" }} href={'/legal/terms'}>Terms</a>
-              <a style={{ marginLeft: "1.5rem" }} href={'/legal/privacy'}>Privacy</a>
+
+              <a style={{ marginLeft: '0.5rem' }} href={'/legal/terms'}>
+                Terms
+              </a>
+              <a style={{ marginLeft: '1.5rem' }} href={'/legal/privacy'}>
+                Privacy
+              </a>
             </div>
           </p>
         </div>
