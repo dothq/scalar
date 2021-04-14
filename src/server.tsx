@@ -72,6 +72,10 @@ server.use(async (req: express.Request, res: express.Response, next) => {
   )
   const fullUrl = 'https://' + req.get('host') + req.originalUrl
 
+  if(req.get('host') == "new.dothq.co") {
+    res.redirect(fullUrl.replace(/new.dothq.co/, "www.dothq.co"))
+  }
+
   const meta = `
   <meta name="author" content="Dot HQ">
   <meta name="description" content="Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.">
