@@ -103,6 +103,11 @@ nav {
   justify-content: flex-end;
 }
 
+.nav-center {
+  /* @todo add actual nav items */
+  display: none;
+}
+
 .nav-items {
   list-style: none;
   display: flex;
