@@ -39,12 +39,12 @@ const Home = () => {
               <Button
                 onClick={() => console.log('Button')}
                 type="primary"
-                href="https://github.com/dothq/browser-desktop/releases/latest"
+                href="https://github.com/dothq/browser-desktop/releases"
                 iconLeft={(osIcons as any)[os.toLowerCase()]}
                 rsp={12}
                 iconSize={16}
               >
-                Download Dot Browser
+                Download Dot Browser (Alpha)
               </Button>
 
               <Button

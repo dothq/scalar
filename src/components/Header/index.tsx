@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React from 'react'
 
+import ReactTooltip from 'react-tooltip';
+
 import Markdown from 'markdown-to-jsx'
 
 import { Button } from '../Button'
@@ -14,18 +16,19 @@ export const Header = ({
   primary?: boolean
   hasSexyGradient?: boolean
 }) => {
-  const [motd, setMotd] = React.useState('')
+  const [motd, setMotd] = React.useState('💡 Dot Browser is still in alpha. Bugs may arise.')
   const [footerItemsVisible, setFooterItemsVisible] = React.useState(false)
   const [detachOpen, setDetachOpen] = React.useState(false)
   const [fauxHovered, setFauxHovered] = React.useState(0)
 
   React.useEffect(() => {
-    axios
-      .get('https://raw.githubusercontent.com/dothq/motd/main/motd.md')
-      .then((res) => setMotd(res.data))
-      .catch((err) => {
-        console.log(err)
-      })
+    // axios
+    //   .get('https://raw.githubusercontent.com/dothq/motd/main/motd.md')
+    //   .then((res) => setMotd(res.data))
+    //   .catch((err) => {
+    //     console.log(err)
+    //   })
+    // @todo reenable motd
   }, [motd])
 
   const onNavItemHover = (i: number) => {
@@ -81,13 +84,18 @@ export const Header = ({
               href={'#'}
               lsp={12}
               iconRight={assets.forward}
+              data-tip='Dot ID is a work in progress.' 
+              data-for='did'
             >
               Join Dot ID
             </Button>
+            <div>
+            <ReactTooltip place={"bottom"} effect={"solid"} offset={{ top: 45 }} id='did'>{}</ReactTooltip>
+            </div>
           </div>
         </div>
 
-        <nav
+        {/* <nav
           className={`nav-desktop-detachable ${detachOpen ? `is-open` : ``}`}
           onMouseOver={() => setDetachOpen(true)}
           onMouseLeave={() => onNavHoverExit()}
@@ -100,7 +108,7 @@ export const Header = ({
               visible={detachOpen ? fauxHovered === key : false}
             />
           ))}
-        </nav>
+        </nav> */}
       </nav>
 
       <nav
@@ -159,13 +167,13 @@ export const Header = ({
         </div>
       </nav>
 
-      <div
+      {/* <div
         className={`nav-desktop-detachable-coverup ${
           detachOpen ? `is-open` : ``
         }`}
         onMouseEnter={() => onNavHoverExit()}
         style={{ '--detached-height': '350px' } as any}
-      ></div>
+      ></div> */}
     </>
   )
 }

@@ -2,20 +2,7 @@ import React from 'react'
 import { Icon } from '../Icon'
 
 /* tslint:disable */
-export const Button = ({
-  onClick,
-  style,
-  type,
-  children,
-  href,
-  iconLeft,
-  iconRight,
-  className,
-  disabled,
-  lsp,
-  rsp,
-  iconSize,
-}: {
+export const Button = (props: {
   onClick?: any
   style?: any
   type?: 'primary' | 'secondary' | 'text'
@@ -29,6 +16,8 @@ export const Button = ({
   rsp?: number
   iconSize?: number
 }) => {
+  const { onClick, href, type, className, disabled, style, iconLeft, iconRight, lsp, rsp, iconSize, children } = props;
+
   return (
     <a
       onClick={onClick}
@@ -37,6 +26,7 @@ export const Button = ({
         className ? className : ``
       } ${disabled ? `btn-disabled` : ``}`}
       style={style}
+      {...props}
     >
       {iconLeft && (
         <Icon

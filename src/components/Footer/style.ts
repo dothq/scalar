@@ -21,7 +21,6 @@ export const ListTitle = styled.div`
 `
 
 export const ListItem = styled.div`
-  font-family: Inter, system-ui;
   font-size: 16px;
   display: flex;
   font-weight: 500;
@@ -120,7 +119,6 @@ export const SignupInput = styled.input`
   background-color: transparent;
   border: none;
   outline: none;
-  font-family: Inter, system-ui;
   font-weight: 600;
   font-size: 15px;
 

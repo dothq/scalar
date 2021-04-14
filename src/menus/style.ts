@@ -57,7 +57,6 @@ export const MenuItem = styled.button`
 
   & > div > h1 {
     font-size: 18px;
-    font-family: Inter;
     line-height: 30px;
   }
 

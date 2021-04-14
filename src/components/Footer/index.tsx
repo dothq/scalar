@@ -29,15 +29,15 @@ export const Footer = () => {
                 <a href={'https://github.com/dothq'} target={'_blank'}>
                   <i className={'github-icon'}></i>
                 </a>
-                <a href={'https://dothq.co/join'} target={'_blank'}>
+                <a href={'https://dothq.link/dsc'} target={'_blank'}>
                   <i className={'discord-icon'}></i>
                 </a>
               </div>
 
-              <a style={{ marginLeft: '0.5rem' }} href={'/legal/terms'}>
+              <a style={{ marginLeft: '0.5rem' }} href={'/about/terms'}>
                 Terms
               </a>
-              <a style={{ marginLeft: '1.5rem' }} href={'/legal/privacy'}>
+              <a style={{ marginLeft: '1.5rem' }} href={'/about/privacy'}>
                 Privacy
               </a>
             </div>

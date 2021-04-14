@@ -36,12 +36,12 @@ const routes = [
   { path: '/about/cookies', component: AboutCookies, exact: true },
   { path: '/about/gdpr', component: AboutGDPR, exact: true },
 
-  { path: '/products/browser', component: Browser, exact: true },
-  { path: '/products/browser/thanks', component: BrowserThanks, exact: true },
-  { path: '/products/compass', component: Compass, exact: true },
+  // { path: '/products/browser', component: Browser, exact: true },
+  // { path: '/products/browser/thanks', component: BrowserThanks, exact: true },
+  // { path: '/products/compass', component: Compass, exact: true },
 
-  { path: '/help', component: Help, exact: true },
-  { path: '/help/:product/:key/:page', component: HelpPage },
+  // { path: '/help', component: Help, exact: true },
+  // { path: '/help/:product/:key/:page', component: HelpPage },
 
   { component: NotFound },
 ]

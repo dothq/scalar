@@ -17,12 +17,12 @@
   transition: 0.3s box-shadow ease-in-out, 0.3s border ease-in-out;
 }
 
-.feature-card:hover {
+/* .feature-card:hover {
   box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22),
     0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
   border: 1px solid var(--border);
   cursor: default;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   .feature-sparkles {

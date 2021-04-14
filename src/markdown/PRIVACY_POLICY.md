@@ -133,7 +133,7 @@ If you are a California resident and would like to request any of this data, ple
 
 We will always revise this policy to stay in line with all new laws.
 
-You can view the changes of this policy by [clicking here](https://github.com/dothq/legal/commits/master/PRIVACY_POLICY.md).
+You can view the changes of this policy by [clicking here](https://github.com/dothq/about/commits/master/PRIVACY_POLICY.md).
 
 <a name="how-can-you-contact-us-about-this-policy"></a>
 
@@ -145,4 +145,4 @@ If you have questions or comments about this policy, you may email us at [privac
 
 ### 11. How can you review, update, or delete the data we collect from you?
 
-Based on the laws of some countries, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please visit [dothq.co/legal/gdpr](https://dothq.co/legal/gdpr). We will respond to your request within 30 days.
+Based on the laws of some countries, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please visit [dothq.co/about/gdpr](https://dothq.co/about/gdpr). We will respond to your request within 30 days.
