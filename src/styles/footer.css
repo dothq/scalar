@@ -35,6 +35,14 @@
     display: flex;
     flex-direction: column;
   }
+
+  .footer-info > .logo-text {
+    flex-direction: column;
+  }
+
+  .footer-info > .logo-text > div {
+    margin-top: 1.5rem;
+  }
 }
 
 .footer > .footer-container > div > a > .dot-icon {
