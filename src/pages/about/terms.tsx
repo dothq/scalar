@@ -10,24 +10,16 @@ import '../../styles/home.css'
 import { Content } from '../../components/Content'
 import { AboutSidebar } from './components/Sidebar'
 
+import TOS from '../../markdown/TERMS_OF_SERVICE.md'
+
+import '../about/privacy/privacy.css'
+
 const AboutTerms = () => {
   return (
     <Layout>
-      <Content bgStyle={'dot'} centerHoriz primary>
-        <h5>WHO ARE WE?</h5>
-        <h1>We are Dot HQ.</h1>
-      </Content>
       <Content centerHoriz>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'start',
-            width: '100%',
-          }}
-        >
-          <AboutSidebar selected={'terms'} />
-          <div style={{ width: '100%' }}>This page is under construction!</div>
+        <div id="privacy">
+          <TOS />
         </div>
       </Content>
     </Layout>
