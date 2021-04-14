@@ -44,24 +44,9 @@ export const Footer = () => {
         </div>
         <ul className={'footer-list'}>
           <li className={'footer-list-group'}>
-            <h1>Products</h1>
-            <a href={'/products/browser'}>Dot Browser</a>
-            <a href={'/products/mobile'}>Dot Browser for Mobile</a>
-            <a href={'/id'}>Dot ID</a>
-          </li>
-          <li className={'footer-list-group'}>
-            <h1>Company</h1>
-            <a href={'/about'}>About Dot HQ</a>
-            <a href={'/branding'}>Branding</a>
-            <a href={'/kit'}>Press Kit</a>
-            <a href={'https://github.com/dothq'}>Open Source</a>
-            <a href={'/acknowledgements'}>Credits</a>
-          </li>
-          <li className={'footer-list-group'}>
             <h1>Resources</h1>
-            <a href={'/support'}>Support</a>
-            <a href={'/contact'}>Contact</a>
             <a href={'https://status.dothq.co'}>Status</a>
+            <a href={'https://github.com/dothq'}>Open Source</a>
             <a href={'/blog'}>Blog</a>
           </li>
           <li className={'footer-list-group'} style={{ marginRight: 0 }}>
