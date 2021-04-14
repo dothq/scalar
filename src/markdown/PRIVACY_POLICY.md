@@ -65,6 +65,8 @@ We do not use tracking technologies on our Site or Dot Services.
 
 When you visit our Site, a service called Cloudflare (which we utilise to stop DDoS attacks and dangerous actions against our Site, will place a cookie to determine your trust-factor on the Cloudflare network. Cloudflare powers millions of sites and you can [learn more about their trust-factor cookie here](https://support.cloudflare.com/hc/en-us/articles/200170156-What-does-the-Cloudflare-cfduid-cookie-do-).
 
+**Update (9th December 2020)**: Cloudflare is deprecating the trust-factor cookie. See: [blog.cloudflare.com/deprecating-cfduid-cookie](https://blog.cloudflare.com/deprecating-cfduid-cookie/)
+
 <a name="how-long-do-we-keep-your-information"></a>
 
 ### 5. How long do we keep your information?
