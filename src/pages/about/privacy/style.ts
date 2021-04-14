@@ -5,7 +5,7 @@ export const PrivacyStyle = createGlobalStyle`
     min-height: calc(100vh - 289px);
 }
 
-.hero-content > #privacy > h1, h2, h3 {
+.hero-content > #privacy h1, h2, h3 {
     margin: 1rem 0;
 }
 
@@ -13,18 +13,18 @@ export const PrivacyStyle = createGlobalStyle`
   line-height: 2rem;
 }
 
-.hero-content > #privacy > a {
+.hero-content > #privacy a {
   outline: none;
   color: var(--text-primary);
   text-decoration: none;
   line-height: 2rem;
 }
 
-.hero-content > #privacy > a:hover {
+.hero-content > #privacy a:hover {
   opacity: 0.5;
 }
 
-.hero-content > blockquote {
+.hero-content blockquote {
   border: 1px solid var(--text-primary);
   padding: 10px 28px;
   line-height: 2rem;
