@@ -12,11 +12,12 @@ import { AboutSidebar } from './components/Sidebar'
 
 import TOS from '../../markdown/TERMS_OF_SERVICE.md'
 
-import '../about/privacy/privacy.css'
+import { PrivacyStyle } from "../about/privacy/style"
 
 const AboutTerms = () => {
   return (
     <Layout>
+      <PrivacyStyle />
       <Content centerHoriz>
         <div id="privacy">
           <TOS />

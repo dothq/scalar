@@ -8,11 +8,12 @@ import { AboutSidebar } from '../components/Sidebar'
 
 import PrivacyPolicy from '../../../markdown/PRIVACY_POLICY.md'
 
-import './privacy.css'
+import { PrivacyStyle } from "./style"
 
 const AboutPrivacy = () => {
   return (
     <Layout>
+      <PrivacyStyle />
       <Content centerHoriz>
         <div id="privacy">
           <blockquote>
