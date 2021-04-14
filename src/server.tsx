@@ -72,7 +72,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
   )
   const fullUrl = 'https://' + req.get('host') + req.originalUrl
 
-  if(req.get('host') == "new.dothq.co") {
+  if(req.get('host') === "new.dothq.co") {
     res.redirect(fullUrl.replace(/new.dothq.co/, "www.dothq.co"))
   }
 
