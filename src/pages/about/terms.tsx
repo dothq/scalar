@@ -12,7 +12,7 @@ import { AboutSidebar } from './components/Sidebar'
 
 import TOS from '../../markdown/TERMS_OF_SERVICE.md'
 
-import { PrivacyStyle } from "../about/privacy/style"
+import { PrivacyStyle } from '../about/privacy/style'
 
 const AboutTerms = () => {
   return (

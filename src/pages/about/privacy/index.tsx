@@ -8,7 +8,7 @@ import { AboutSidebar } from '../components/Sidebar'
 
 import PrivacyPolicy from '../../../markdown/PRIVACY_POLICY.md'
 
-import { PrivacyStyle } from "./style"
+import { PrivacyStyle } from './style'
 
 const AboutPrivacy = () => {
   return (
