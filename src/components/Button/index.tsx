@@ -16,7 +16,20 @@ export const Button = (props: {
   rsp?: number
   iconSize?: number
 }) => {
-  const { onClick, href, type, className, disabled, style, iconLeft, iconRight, lsp, rsp, iconSize, children } = props;
+  const {
+    onClick,
+    href,
+    type,
+    className,
+    disabled,
+    style,
+    iconLeft,
+    iconRight,
+    lsp,
+    rsp,
+    iconSize,
+    children,
+  } = props
 
   return (
     <a

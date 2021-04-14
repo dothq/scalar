@@ -16,7 +16,8 @@ const AboutPrivacy = () => {
       <Content centerHoriz>
         <div id="privacy">
           <blockquote>
-            Some information in our privacy policy is out of date, we are working on rewriting this.
+            Some information in our privacy policy is out of date, we are
+            working on rewriting this.
           </blockquote>
           <PrivacyPolicy />
         </div>
