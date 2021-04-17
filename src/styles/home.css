@@ -102,6 +102,12 @@
   }
 }
 
+@media only screen and (max-width: 1800px) {
+  .landing-showoff {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
   .landing-showoff {
     transform: translateY(-14vmin);
