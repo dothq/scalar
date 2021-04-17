@@ -6,11 +6,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   color: var(--color);
   background-color: var(--background-color-secondary);
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -20,6 +21,11 @@ h4,
 h5,
 h6 {
   font-family: 'Eudoxus Sans';
+  letter-spacing: -0.022em;
+}
+
+P {
+  letter-spacing: -0.017em;
 }
 
 * {
@@ -34,7 +40,7 @@ a {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  background-color: var(--background-color);
 }
 
 .hero-container {
@@ -80,6 +86,12 @@ nav {
   opacity: 0.6;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .nav-container {
   max-width: 1300px;
   height: 64px;
@@ -88,6 +100,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  padding: 18px 0;
 }
 
 .nav-left,
@@ -142,6 +155,13 @@ nav {
   user-select: none;
 }
 
+.nav-seamless {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
 .btn {
   appearance: none;
   border-radius: 8px;
@@ -176,16 +196,14 @@ nav {
 }
 
 .btn-secondary {
-  background-color: var(--btn-secondary);
-  color: var(--color-disabled);
-  border: 1px solid var(--border);
-  transition: 0.2s border, 0.2s color;
+  background-color: transparent;
+  color: var(--btn-primary);
+  opacity: 0.5;
+  transition: 0.2s opacity;
 }
 
 .btn-secondary:hover {
-  background-color: var(--btn-secondary);
-  color: var(--color);
-  border: 1px solid var(--color);
+  opacity: 1;
 }
 
 .btn-text {
@@ -265,7 +283,6 @@ p {
 
 .hero-primary {
   background-color: var(--background-color);
-  border-bottom: 1px solid var(--border);
 }
 
 .nav-nb {
@@ -445,6 +462,17 @@ input[type='email']:focus {
 
 .hero-has-sexy-gradient > .hero-container {
   background-color: transparent !important;
+}
+
+.hero-bg-wow {
+  background: var(--gray-6) url(./assets/home/landing-background-vibrant-v3.jpg) top no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.hero-bg-black {
+  background-color: black !important;
+  color: var(--white) !important;
 }
 
 .nav-has-sexy-gradient {

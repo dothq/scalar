@@ -1,0 +1,48 @@
+:root {
+    --color: var(--black);
+    --color-secondary: var(--gray-2);
+    --color-disabled: var(--gray-4);
+    --background-color: var(--white);
+    --background-color-secondary: var(--gray-7);
+    --background-sexy: linear-gradient(
+        to top,
+        var(--background-color-secondary) 50%,
+        #ffffff61 100%
+      ),
+      linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    --background-dots: rgba(128, 128, 128, 0.5);
+    --background-overlay-color: #00000014;
+    --border: var(--gray-6);
+
+    --landing-text-background: linear-gradient(
+      90deg,
+      hsla(0, 100%, 71%, 1) 0%,
+      rgb(255, 116, 51) 30%,
+      rgb(255, 219, 13) 56%,
+      rgb(87, 235, 74) 100%
+    );
+    --shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
+      0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+
+    --btn-primary: var(--black);
+    --btn-secondary: var(--white);
+
+    --btn-primary-icon: invert(1);
+    --btn-secondary-icon: invert(0);
+
+    --btn-primary-color: var(--white);
+    --btn-secondary-color: var(--black);
+
+    --btn-primary-hover: transparent;
+    --btn-secondary-hover: transparent;
+
+    --nav-background-color: #ffffffb0;
+    --nav-hover: var(--azure);
+
+    --text-primary: var(--azure);
+}
+
+::selection {
+    background-color: var(--azure) !important;
+    color: var(--white) !important;
+}

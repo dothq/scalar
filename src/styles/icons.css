@@ -50,39 +50,39 @@
 }
 
 .twitter-icon {
-  background-image: url(../assets/footer/twitter.svg);
-  background-size: cover;
+  mask-image: url(../assets/footer/twitter.svg);
+  mask-size: cover;
   width: 24px;
   height: 24px;
   display: flex;
-  filter: var(--btn-secondary-icon);
+  background-color: currentColor;
 }
 
 .github-icon {
-  background-image: url(../assets/footer/github.svg);
-  background-size: cover;
+  mask-image: url(../assets/footer/github.svg);
+  mask-size: cover;
   width: 24px;
   height: 24px;
   display: flex;
-  filter: var(--btn-secondary-icon);
+  background-color: currentColor;
 }
 
 .discord-icon {
-  background-image: url(../assets/footer/discord.svg);
-  background-size: cover;
+  mask-image: url(../assets/footer/discord.svg);
+  mask-size: cover;
   width: 24px;
   height: 24px;
   display: flex;
-  filter: var(--btn-secondary-icon);
+  background-color: currentColor;
 }
 
 .youtube-icon {
-  background-image: url(../assets/footer/youtube.svg);
-  background-size: cover;
+  mask-image: url(../assets/footer/youtube.svg);
+  mask-size: cover;
   width: 24px;
   height: 24px;
   display: flex;
-  filter: var(--btn-secondary-icon);
+  background-color: currentColor;
 }
 
 .dot-icon {

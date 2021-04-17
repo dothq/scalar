@@ -12,9 +12,11 @@ import assets from '../../assets'
 export const Header = ({
   primary,
   hasSexyGradient,
+  seamless
 }: {
   primary?: boolean
   hasSexyGradient?: boolean
+  seamless?: boolean
 }) => {
   const [motd, setMotd] = React.useState(
     '💡 Dot Browser is still in alpha. Bugs may arise.'
@@ -44,16 +46,10 @@ export const Header = ({
 
   return (
     <>
-      <nav className={`motd ${hasSexyGradient ? `nav-has-sexy-gradient` : ``}`}>
-        <div className={'nav-container'}>
-          <Markdown options={{ forceInline: true }}>{motd}</Markdown>
-        </div>
-      </nav>
-
       <nav
         className={`${primary ? `nav-nb` : ``} ${
           hasSexyGradient ? `nav-has-sexy-gradient` : ``
-        }`}
+        } ${seamless ? `nav-seamless` : ``}`}
       >
         <div className={`nav-container`}>
           <div className={'nav-left'}>
@@ -81,26 +77,26 @@ export const Header = ({
           </div>
 
           <div className={'nav-right'}>
+            <div className={'footer-socials footer-socials-header-override'}>
+              <a href={'https://twitter.com/DotBrowser'} target={'_blank'}>
+                <i className={'twitter-icon'}></i>
+              </a>
+              <a href={'https://github.com/dothq'} target={'_blank'}>
+                <i className={'github-icon'}></i>
+              </a>
+              <a href={'https://dothq.link/dsc'} target={'_blank'}>
+                <i className={'discord-icon'}></i>
+              </a>
+            </div>
+
             <Button
-              type={'secondary'}
-              href={'#'}
+              type={'primary'}
+              href={'https://github.com/dothq/browser-desktop/releases'}
               lsp={12}
               iconRight={assets.forward}
-              data-tip="Dot ID is a work in progress."
-              data-for="did"
             >
-              Join Dot ID
+              Download
             </Button>
-            <div>
-              <ReactTooltip
-                place={'bottom'}
-                effect={'solid'}
-                offset={{ top: 45 }}
-                id="did"
-              >
-                {}
-              </ReactTooltip>
-            </div>
           </div>
         </div>
 

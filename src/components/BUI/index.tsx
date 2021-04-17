@@ -3,14 +3,10 @@ import React from 'react'
 import assets from '../../assets/home'
 
 export const BUI = () => {
-  const [buiImage, setBuiImage] = React.useState('')
+  const [buiImage, setBuiImage] = React.useState(assets.browserGlass)
   const [buiReady, setBuiReady] = React.useState(false)
 
   React.useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      setBuiImage(assets.browserGlassDark)
-    else setBuiImage(assets.browserGlass)
-
     let i: any = new Image()
     i.src = buiImage
 

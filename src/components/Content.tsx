@@ -7,13 +7,15 @@ export const Content = ({
   fullHeight,
   primary,
   bgStyle,
+  style
 }: {
   children: any
   center?: boolean
   centerHoriz?: boolean
   fullHeight?: boolean
   primary?: boolean
-  bgStyle?: 'dot' | 'colour'
+  bgStyle?: string,
+  style?: any
 }) => {
   return (
     <div
@@ -25,6 +27,7 @@ export const Content = ({
         className={`hero-content ${
           centerHoriz ? `hero-center-horiz` : center ? `hero-center` : ``
         }`}
+        style={style}
       >
         {children}
       </div>

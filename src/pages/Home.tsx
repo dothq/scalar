@@ -9,6 +9,7 @@ import { FeatureGrid } from '../components/FeatureGrid'
 import '../styles/home.css'
 import { Content } from '../components/Content'
 import { osIcons } from '../assets/os'
+import { Header } from '../components/Header'
 
 const Home = () => {
   const [os, setOS] = React.useState('')
@@ -24,11 +25,16 @@ const Home = () => {
   })
 
   return (
-    <Layout primary>
-      <Content primary>
+    <Layout primary noHeader>
+      <Header seamless />
+
+      <Content primary bgStyle={"wow"}>
+
         <div className={'grid'}>
           <div>
-            <h1 className={'landing-super-title'}>Take back your privacy.</h1>
+            <h1 className={'landing-super-title'}>
+              The browser with privacy at its heart.
+            </h1>
             <p>
               Dot Browser is a privacy-conscious web browser with smarts
               built-in for protection against trackers and advertisements
@@ -56,12 +62,11 @@ const Home = () => {
               </Button>
             </div>
           </div>
-
-          <BUI />
         </div>
       </Content>
-      <Content>
-        <div className={'section'}>
+      <BUI />
+      <Content style={{ marginTop: "-18vmin", padding: "6rem 0" }}>
+        <div className={'section privacy-section'}>
           <h2>
             We built a privacy browser in a world where your personal data is
             sold to the highest bidder.
@@ -71,7 +76,8 @@ const Home = () => {
             networks that track what sites you like to visit online.
           </p>
         </div>
-
+      </Content>
+      <Content>
         <FeatureGrid id={'features'} />
       </Content>
     </Layout>

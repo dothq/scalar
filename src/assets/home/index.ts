@@ -11,6 +11,8 @@ export default {
   browserGlassDark: require('./browser-glass-dark.jpg'),
   browserLight: require('./browser-light.webp'),
 
+  wowBackground: require("./landing-background.jpg"),
+
   rickrolled: require('./rickrolled.gif'),
   browserApr: require('./browser-apr.webp'),
   browserLightApr: require('./browser-light-apr.webp'),
