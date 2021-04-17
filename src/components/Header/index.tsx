@@ -12,7 +12,7 @@ import assets from '../../assets'
 export const Header = ({
   primary,
   hasSexyGradient,
-  seamless
+  seamless,
 }: {
   primary?: boolean
   hasSexyGradient?: boolean

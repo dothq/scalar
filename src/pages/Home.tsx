@@ -28,8 +28,7 @@ const Home = () => {
     <Layout primary noHeader>
       <Header seamless />
 
-      <Content primary bgStyle={"wow"}>
-
+      <Content primary bgStyle={'wow'}>
         <div className={'grid'}>
           <div>
             <h1 className={'landing-super-title'}>
@@ -65,7 +64,7 @@ const Home = () => {
         </div>
       </Content>
       <BUI />
-      <Content style={{ marginTop: "-18vmin", padding: "6rem 0" }}>
+      <Content style={{ marginTop: '-18vmin', padding: '6rem 0' }}>
         <div className={'section privacy-section'}>
           <h2>
             We built a privacy browser in a world where your personal data is

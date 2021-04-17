@@ -154,7 +154,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 
   res.send(
     `<!doctype html>
-		<html lang="${req.headers['accept-language'] || "en-GB"}">
+		<html lang="${req.headers['accept-language'] || 'en-GB'}">
 		<head>
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<meta charSet='utf-8' />
@@ -174,7 +174,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
           : `<script src="${assets.client.js}" defer crossorigin></script>`
       }
 		</head>
-		<body class="${req.path === "/" ? "dothq-is-home" : ""}">
+		<body class="${req.path === '/' ? 'dothq-is-home' : ''}">
       <div id="app">${markup}</div>
       <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(
         ssrData[req.path] || {}
