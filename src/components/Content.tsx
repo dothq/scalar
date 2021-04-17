@@ -7,14 +7,14 @@ export const Content = ({
   fullHeight,
   primary,
   bgStyle,
-  style
+  style,
 }: {
   children: any
   center?: boolean
   centerHoriz?: boolean
   fullHeight?: boolean
   primary?: boolean
-  bgStyle?: string,
+  bgStyle?: string
   style?: any
 }) => {
   return (
