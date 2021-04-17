@@ -5,7 +5,7 @@ const redirects = [
   { from: '/legal/terms', to: '/about/terms' },
   { from: '/legal/cookies', to: '/about/cookies' },
   { from: '/legal/gdpr', to: '/about/gdpr' },
-  { from: '/blog', to: 'https://medium.com/dot-blog' },
+  { from: '/browser/desktop', to: '/' },
 ]
 
 export default redirects
