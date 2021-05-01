@@ -32,7 +32,7 @@ const Home = () => {
         <div className={'grid'}>
           <div>
             <h1 className={'landing-super-title'}>
-              The browser with privacy at its heart.
+              The browser with privacy at heart.
             </h1>
             <p>
               Dot Browser is a privacy-conscious web browser with smarts
