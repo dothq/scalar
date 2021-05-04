@@ -51,7 +51,7 @@ c.on('drain', () => {
 
     sitemap.push(
       `   <url>
-        <loc>https://new.dothq.co${link}</loc>
+        <loc>https://www.dothq.co${link}</loc>
         <lastmod>${d.getFullYear()}-${(d.getMonth() + 1)
         .toString()
         .padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}</lastmod>
