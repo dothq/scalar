@@ -6,3 +6,9 @@ Disallow: /
 
 User-agent: CIA
 Disallow: /
+
+User-agent: NSA
+Disallow: /
+
+User-agent: FBI
+Disallow: /
