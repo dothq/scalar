@@ -76,6 +76,15 @@
   background-color: currentColor;
 }
 
+.matrix-icon {
+  mask-image: url(../assets/footer/matrix.svg);
+  mask-size: cover;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-color: currentColor;
+}
+
 .youtube-icon {
   mask-image: url(../assets/footer/youtube.svg);
   mask-size: cover;

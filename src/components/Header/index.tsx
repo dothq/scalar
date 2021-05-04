@@ -87,6 +87,9 @@ export const Header = ({
               <a href={'https://dothq.link/dsc'} target={'_blank'}>
                 <i className={'discord-icon'}></i>
               </a>
+              <a href={'https://dothq.link/matrix'} target={'_blank'}>
+                <i className={'matrix-icon'}></i>
+              </a>
             </div>
 
             <Button
