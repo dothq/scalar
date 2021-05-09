@@ -60,7 +60,8 @@ export const FeatureGrid = ({ id }: { id?: string }) => {
         <img src={assets.shield} alt="" />
         <h3>Block nasty ads and trackers</h3>
         <p>
-          Dot Browser has Dot Shield, which protects you from nasty ads and trackers.
+          Dot Browser has Dot Shield, which protects you from nasty ads and
+          trackers.
         </p>
         {/* <Button
           style={{ marginTop: '18px' }}
