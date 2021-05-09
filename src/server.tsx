@@ -127,6 +127,9 @@ server.use(async (req: express.Request, res: express.Response, next) => {
         <br /><br />
         You could even browse our real site from <a href="https://web.archive.org/web/https://dothq.co/">The Wayback Machine</a>.
         <br /><br />
+	<br /><br />
+	Also Bingus memes loads quicker with Dot browser than Internet Explorer 
+	<br /><br />
         <hr />
         <br />
         Some useful links:
