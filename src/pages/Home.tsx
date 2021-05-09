@@ -67,8 +67,7 @@ const Home = () => {
       <Content style={{ marginTop: '-18vmin', padding: '6rem 0' }}>
         <div className={'section privacy-section'}>
           <h2>
-            We built a privacy browser in a world where your personal data is
-            sold to the highest bidder.
+            Privacy is a right, not a privilege.
           </h2>
           <p style={{ marginTop: '1rem' }}>
             Your data is constantly being sold through large advertisement
