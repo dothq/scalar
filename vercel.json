@@ -28,6 +28,14 @@
       "dest": "build/public/sitemap.xml"
     },
     {
+      "src": "/sw.js",
+      "dest": "build/public/sw.js"
+    },
+    {
+      "src": "/register-sw.js",
+      "dest": "build/public/register-sw.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "build/server.js"
     }

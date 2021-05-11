@@ -163,7 +163,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 			${meta}
       <link rel="shortcut icon" href="/favicon.png" />
       <link rel="prerender" href="/" />
-      <script src="sw.js"></script>
+      <script src="register-sw.js"></script>
 			${
         assets.client.css
           ? `<link rel="stylesheet" href="${assets.client.css}">`
