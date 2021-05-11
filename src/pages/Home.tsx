@@ -66,9 +66,7 @@ const Home = () => {
       <BUI />
       <Content style={{ marginTop: '-18vmin', padding: '6rem 0' }}>
         <div className={'section privacy-section'}>
-          <h2>
-            Privacy is a right, not a privilege.
-          </h2>
+          <h2>Privacy is a right, not a privilege.</h2>
           <p style={{ marginTop: '1rem' }}>
             Your data is constantly being sold through large advertisement
             networks that track what sites you like to visit online.
