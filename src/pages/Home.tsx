@@ -10,6 +10,7 @@ import '../styles/home.css'
 import { Content } from '../components/Content'
 import { osIcons } from '../assets/os'
 import { Header } from '../components/Header'
+import { L10n } from '../components/l10n'
 
 const Home = () => {
   const [os, setOS] = React.useState('')
@@ -26,18 +27,20 @@ const Home = () => {
 
   return (
     <Layout primary noHeader>
-      <Header seamless />
-
       <Content primary bgStyle={'wow'}>
+        <Header seamless />
+
         <div className={'grid'}>
           <div>
             <h1 className={'landing-super-title'}>
-              The browser with privacy at heart.
+              <L10n>
+                SUPER_LANDING_PAGE_MASTHEAD
+              </L10n>
             </h1>
             <p>
-              Dot Browser is a privacy-conscious web browser with smarts
-              built-in for protection against trackers and advertisements
-              online.
+              <L10n>
+                SUPER_LANDING_PAGE_BODY
+              </L10n>
             </p>
 
             <div className={'grid-btns'}>

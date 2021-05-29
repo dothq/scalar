@@ -74,6 +74,7 @@
   color: var(--color-disabled);
   margin-top: 24px;
   justify-content: space-between;
+  opacity: 1;
 }
 
 .logo-text > div > a {
@@ -128,6 +129,7 @@
 
 .footer-socials {
   display: flex;
+  margin-left: 2rem;
 }
 
 .footer-socials > a {

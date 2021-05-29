@@ -581,3 +581,16 @@ input[type='email']:focus {
   grid-auto-flow: row;
   grid-template-columns: repeat(3, 1fr);
 }
+
+select#language-switcher {
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  border-radius: 6px;
+  opacity: 1;
+  color: black;
+  min-width: 145px;
+  height: 32px;
+  font-family: inherit;
+}

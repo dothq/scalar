@@ -10,7 +10,8 @@
     "deploy": "yarn build && yarn run build:sitemap && vercel --prod",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "build:sitemap": "ts-node utils/generate-sitemap.ts"
+    "build:sitemap": "ts-node utils/generate-sitemap.ts",
+    "gen:revision": "git rev-parse HEAD > ref"
   },
   "dependencies": {
     "@oieduardorabelo/use-user-agent": "^2.0.0",

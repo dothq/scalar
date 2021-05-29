@@ -1,7 +1,6 @@
 import express from 'express'
 import React from 'react'
 import bodyParser from 'body-parser'
-import cors from 'cors'
 
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
@@ -10,6 +9,7 @@ import App from './components/App'
 
 import redirects from './redirects'
 import ssrData from './ssr-data'
+import l10n from './l10n'
 
 import signup from './routes/signup'
 import weather from './routes/ntp/weather'
@@ -17,6 +17,16 @@ import news from './routes/ntp/news'
 import download from './routes/download'
 
 import images from './assets'
+
+import packageJson from '../package.json'
+import { existsSync, readFileSync } from 'fs'
+import { resolve } from 'path'
+
+let revision: any = "";
+
+if(existsSync(resolve(process.cwd(), "ref.txt"))) {
+  revision = readFileSync(resolve(process.cwd(), "ref.txt"), "utf-8").trim();
+}
 
 let assets: any
 
@@ -60,14 +70,29 @@ redirects.forEach((redirect) =>
   server.get(redirect.from, (_, res) => res.redirect(redirect.to))
 )
 
-server.use(async (req: express.Request, res: express.Response, next) => {
+server.all("/", (req, res) => {
+  const shortenedLangCode = req.headers['accept-language'] 
+                              ? req.headers['accept-language'].split("-")[0]
+                              : 'en';
+
+  res.redirect(`/${shortenedLangCode}`)
+})
+
+const mainRouter = express.Router()
+
+mainRouter.use(async (req: express.Request, res: express.Response, next) => {
   if (req.path.startsWith('/api')) return next()
 
   const context = {}
 
+  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length+1, "/");
+  const language = paddedUrl.split("/").filter(_ => _.length)[0];
+
+  if(!l10n.availableLanguages.includes(language)) return res.redirect(`/en`);
+
   const markup = renderToString(
     <StaticRouter context={context} location={req.url}>
-      <App />
+      <App language={language} />
     </StaticRouter>
   )
   const fullUrl = 'https://' + req.get('host') + req.originalUrl
@@ -101,7 +126,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
   if (req.headers['user-agent']?.includes('Trident/')) {
     return res.send(`
       <!doctype html>
-      <html lang="">
+      <html lang="${language}">
       <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet='utf-8' />
@@ -154,7 +179,7 @@ server.use(async (req: express.Request, res: express.Response, next) => {
 
   res.send(
     `<!doctype html>
-		<html lang="${req.headers['accept-language'] || 'en-GB'}">
+		<html lang="${language}" application-version="${packageJson.version}" application-revision="${revision}">
 		<head>
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<meta charSet='utf-8' />
@@ -189,5 +214,7 @@ server.use(signup)
 server.use(weather)
 server.use(news)
 server.use(download)
+
+server.use("/:language", mainRouter);
 
 export default server
