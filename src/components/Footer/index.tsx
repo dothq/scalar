@@ -48,10 +48,10 @@ export const Footer = () => {
                 </a>
               </div>
 
-              <a style={{ marginLeft: '0.5rem' }} href={'/about/terms'}>
+              <a style={{ marginLeft: '0.5rem' }} href={'about/terms'}>
                 Terms
               </a>
-              <a style={{ marginLeft: '1.5rem' }} href={'/about/privacy'}>
+              <a style={{ marginLeft: '1.5rem' }} href={'about/privacy'}>
                 Privacy
               </a>
             </div>
