@@ -33,14 +33,10 @@ const Home = () => {
         <div className={'grid'}>
           <div>
             <h1 className={'landing-super-title'}>
-              <L10n>
-                SUPER_LANDING_PAGE_MASTHEAD
-              </L10n>
+              <L10n>SUPER_LANDING_PAGE_MASTHEAD</L10n>
             </h1>
             <p>
-              <L10n>
-                SUPER_LANDING_PAGE_BODY
-              </L10n>
+              <L10n>SUPER_LANDING_PAGE_BODY</L10n>
             </p>
 
             <div className={'grid-btns'}>

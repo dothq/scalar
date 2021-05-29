@@ -23,16 +23,20 @@ export const Footer = () => {
         <div className={'footer-info'} style={{ flex: 1, width: '100%' }}>
           <p className={'logo-text'}>
             © {new Date().getFullYear()} Dot HQ. All rights reserved.
-            <div style={{ display: 'flex', alignItems: "center" }}>
-              <select id="language-switcher" value={l10n.currentLanguage} onSelect={_ => {
-                window.location.href = window.location.href.replace(
-                  `/${l10n.currentLanguage}`, 
-                  (document.getElementById("language-switcher") as any).value
-                )
-              }}>
-                {l10n.availableLanguages.map(lang => (
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <select
+                id="language-switcher"
+                value={l10n.currentLanguage}
+                onSelect={(_) => {
+                  window.location.href = window.location.href.replace(
+                    `/${l10n.currentLanguage}`,
+                    (document.getElementById('language-switcher') as any).value
+                  )
+                }}
+              >
+                {l10n.availableLanguages.map((lang) => (
                   <option value={lang}>
-                    {l10n.hydrate("LANGUAGE_DISPLAY_NAME", { lang })}
+                    {l10n.hydrate('LANGUAGE_DISPLAY_NAME', { lang })}
                   </option>
                 ))}
               </select>
