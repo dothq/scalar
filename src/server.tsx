@@ -24,8 +24,8 @@ import { resolve } from 'path'
 let revision: any = "";
 let packageJson: any = {};
 
-if(existsSync(resolve(process.cwd(), "ref.txt"))) {
-  revision = readFileSync(resolve(process.cwd(), "ref.txt"), "utf-8").trim();
+if (existsSync(resolve(process.cwd(), 'ref.txt'))) {
+  revision = readFileSync(resolve(process.cwd(), 'ref.txt'), 'utf-8').trim()
 }
 
 packageJson = JSON.parse(readFileSync(resolve(process.cwd(), "package.json"), "utf-8"));
@@ -72,10 +72,10 @@ redirects.forEach((redirect) =>
   server.get(redirect.from, (_, res) => res.redirect(redirect.to))
 )
 
-server.all("/", (req, res) => {
-  const shortenedLangCode = req.headers['accept-language'] 
-                              ? req.headers['accept-language'].split("-")[0]
-                              : 'en';
+server.all('/', (req, res) => {
+  const shortenedLangCode = req.headers['accept-language']
+    ? req.headers['accept-language'].split('-')[0]
+    : 'en'
 
   res.redirect(`/${shortenedLangCode}`)
 })
@@ -87,10 +87,10 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
 
   const context = {}
 
-  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length+1, "/");
-  const language = paddedUrl.split("/").filter(_ => _.length)[0];
+  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length + 1, '/')
+  const language = paddedUrl.split('/').filter((_) => _.length)[0]
 
-  if(!l10n.availableLanguages.includes(language)) return res.redirect(`/en`);
+  if (!l10n.availableLanguages.includes(language)) return res.redirect(`/en`)
 
   const markup = renderToString(
     <StaticRouter context={context} location={req.url}>
@@ -181,7 +181,9 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
 
   res.send(
     `<!doctype html>
-		<html lang="${language}" application-version="${packageJson.version}" application-revision="${revision}">
+		<html lang="${language}" application-version="${
+      packageJson.version
+    }" application-revision="${revision}">
 		<head>
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<meta charSet='utf-8' />
@@ -217,6 +219,6 @@ server.use(weather)
 server.use(news)
 server.use(download)
 
-server.use("/:language", mainRouter);
+server.use('/:language', mainRouter)
 
 export default server
