@@ -21,14 +21,16 @@ import images from './assets'
 import { existsSync, readFileSync } from 'fs'
 import { resolve } from 'path'
 
-let revision: any = "";
-let packageJson: any = {};
+let revision: any = ''
+let packageJson: any = {}
 
 if (existsSync(resolve(process.cwd(), 'ref.txt'))) {
   revision = readFileSync(resolve(process.cwd(), 'ref.txt'), 'utf-8').trim()
 }
 
-packageJson = JSON.parse(readFileSync(resolve(process.cwd(), "package.json"), "utf-8"));
+packageJson = JSON.parse(
+  readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8')
+)
 
 let assets: any
 
