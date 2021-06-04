@@ -27,7 +27,13 @@ export const Footer = () => {
               <select
                 id="language-switcher"
                 value={l10n.currentLanguage}
-                onChange={(e) => { const value = e.target.value; window.location.href = window.location.href.replace( `/${l10n.currentLanguage}`, "/" + value ) }}
+                onChange={(e) => {
+                  const value = e.target.value
+                  window.location.href = window.location.href.replace(
+                    `/${l10n.currentLanguage}`,
+                    '/' + value
+                  )
+                }}
               >
                 {l10n.availableLanguages.map((lang) => (
                   <option value={lang}>
