@@ -27,12 +27,7 @@ export const Footer = () => {
               <select
                 id="language-switcher"
                 value={l10n.currentLanguage}
-                onSelect={(_) => {
-                  window.location.href = window.location.href.replace(
-                    `/${l10n.currentLanguage}`,
-                    (document.getElementById('language-switcher') as any).value
-                  )
-                }}
+                onChange={(e) => { const value = e.target.value; window.location.href = window.location.href.replace( `/${l10n.currentLanguage}`, "/" + value ) }}
               >
                 {l10n.availableLanguages.map((lang) => (
                   <option value={lang}>
@@ -49,6 +44,9 @@ export const Footer = () => {
                 </a>
                 <a href={'https://dothq.link/dsc'} target={'_blank'}>
                   <i className={'discord-icon'}></i>
+                </a>
+                <a href={'https://dothq.link/matrix'} target={'_blank'}>
+                  <i className={'matrix-icon'}></i>
                 </a>
               </div>
 
