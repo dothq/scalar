@@ -2,31 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
         <loc>https://www.dothq.co/</loc>
-        <lastmod>2021-05-11</lastmod>
+        <lastmod>2021-07-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
    <url>
         <loc>https://www.dothq.co/id/signup</loc>
-        <lastmod>2021-05-11</lastmod>
+        <lastmod>2021-07-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
    <url>
         <loc>https://www.dothq.co/id/login</loc>
-        <lastmod>2021-05-11</lastmod>
+        <lastmod>2021-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+   <url>
+        <loc>https://www.dothq.co/products/desktop/download</loc>
+        <lastmod>2021-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+   <url>
+        <loc>https://www.dothq.co/products/desktop/features</loc>
+        <lastmod>2021-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+   <url>
+        <loc>https://www.dothq.co/products/desktop/comparison</loc>
+        <lastmod>2021-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+   <url>
+        <loc>https://www.dothq.co/products/desktop/whats-new</loc>
+        <lastmod>2021-07-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+   <url>
+        <loc>https://www.dothq.co/products/desktop/system-requirements</loc>
+        <lastmod>2021-07-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
    <url>
         <loc>https://www.dothq.co/about/terms</loc>
-        <lastmod>2021-05-11</lastmod>
+        <lastmod>2021-07-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
    <url>
         <loc>https://www.dothq.co/about/privacy</loc>
-        <lastmod>2021-05-11</lastmod>
+        <lastmod>2021-07-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
