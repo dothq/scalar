@@ -8,7 +8,6 @@
     "build": "tsc -b && razzle build",
     "start:prod": "NODE_ENV=production node build/server.js",
     "deploy:prod": "yarn build && yarn run build:sitemap && vercel --prod",
-    "build:prod": "yarn build && yarn run build:sitemap",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "build:sitemap": "ts-node utils/generate-sitemap.ts",
