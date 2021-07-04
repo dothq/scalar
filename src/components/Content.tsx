@@ -8,6 +8,9 @@ export const Content = ({
   primary,
   bgStyle,
   style,
+  containerStyle,
+  ignoreMtop,
+  isHome
 }: {
   children: any
   center?: boolean
@@ -16,12 +19,16 @@ export const Content = ({
   primary?: boolean
   bgStyle?: string
   style?: any
+  containerStyle?: any
+  ignoreMtop?: boolean
+  isHome?: boolean
 }) => {
   return (
     <div
       className={`hero-container ${fullHeight ? `hero-vh` : ``} ${
         primary ? `hero-primary` : ``
-      } ${bgStyle ? `hero-bg-${bgStyle}` : ``}`}
+      } ${bgStyle ? `hero-bg-${bgStyle}` : ``} ${ignoreMtop ? `hero-ignore-mtop` : ``} ${isHome ? `hero-is-home` : ``}`}
+      style={containerStyle}
     >
       <div
         className={`hero-content ${

@@ -14,7 +14,7 @@ const AboutPrivacy = () => {
   return (
     <Layout>
       <PrivacyStyle />
-      <Content centerHoriz>
+      <Content centerHoriz fullHeight={false} ignoreMtop={false} style={{ height: "auto" }}>
         <div id="privacy">
           <blockquote>
             Some information in our privacy policy is out of date, we are

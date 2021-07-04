@@ -62,7 +62,7 @@
   display: flex;
   padding: 10px 0px;
   margin: 0px auto;
-  max-width: 1300px;
+  max-width: 1650px;
 }
 
 .logo-text {
@@ -108,7 +108,7 @@
   display: flex;
   font-weight: 600;
 
-  color: var(--color);
+  color: var(--colour);
 
   margin-bottom: 12px;
 }
@@ -136,7 +136,12 @@
   width: 24px;
   height: 24px;
   margin-right: 28px;
-  color: inherit;
+  color: inherit !important;
+  border-bottom: none !important;
+}
+
+.footer-socials > a:hover {
+  background-color: none !important;
 }
 
 .footer-socials-header-override {

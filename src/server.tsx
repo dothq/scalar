@@ -15,11 +15,13 @@ import signup from './routes/signup'
 import weather from './routes/ntp/weather'
 import news from './routes/ntp/news'
 import download from './routes/download'
+import spaceNews from './routes/card-data/space-news'
 
 import images from './assets'
 
 import { existsSync, readFileSync } from 'fs'
 import { resolve } from 'path'
+import routes from './routes'
 
 let revision: any = ''
 let packageJson: any = {}
@@ -54,7 +56,6 @@ server.use((req: express.Request, res: express.Response, next) => {
   res.header('Server', 'me lon')
   next()
 })
-server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 server.use((req: express.Request, res: express.Response, next) => {
   if (process.env.NODE_ENV === 'development') {
     res.header('Access-Control-Allow-Origin', '*')
@@ -74,25 +75,25 @@ redirects.forEach((redirect) =>
   server.get(redirect.from, (_, res) => res.redirect(redirect.to))
 )
 
-server.all('/', (req, res) => {
-  const shortenedLangCode = req.headers['accept-language']
+const mainRouter = express.Router()
+
+mainRouter.use(async (req: any, res: express.Response, next) => {
+  const context = {}
+
+  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length + 1, '/');
+ 
+  if (
+    paddedUrl.startsWith('/api') ||
+    paddedUrl.startsWith('/static') ||
+    paddedUrl.startsWith('/assets') ||
+    paddedUrl === "/favicon.png"
+  ) return next()
+
+  let language = req.headers['accept-language']
     ? req.headers['accept-language'].split('-')[0]
     : 'en'
 
-  res.redirect(`/${shortenedLangCode}`)
-})
-
-const mainRouter = express.Router()
-
-mainRouter.use(async (req: express.Request, res: express.Response, next) => {
-  if (req.path.startsWith('/api')) return next()
-
-  const context = {}
-
-  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length + 1, '/')
-  const language = paddedUrl.split('/').filter((_) => _.length)[0]
-
-  if (!l10n.availableLanguages.includes(language)) return res.redirect(`/en`)
+  if (!l10n.availableLanguages.includes(language)) language = `en`
 
   const markup = renderToString(
     <StaticRouter context={context} location={req.url}>
@@ -181,6 +182,12 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
     `)
   }
 
+  const route = routes.find(r => req.path === r.path);
+  let title = (route && route.title) ? route.title : `Dot HQ`;
+
+  // this is such a dirty hack i fucking hate it
+  if(markup.includes(`id="ssr-ipc-404-indicator"`)) title = "Four Oh Four ─ Dot HQ";
+
   res.send(
     `<!doctype html>
 		<html lang="${language}" application-version="${
@@ -189,7 +196,7 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
 		<head>
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<meta charSet='utf-8' />
-			<title>Dot HQ</title>
+			<title>${title}</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			${meta}
       <link rel="shortcut icon" href="/favicon.png" />
@@ -206,7 +213,7 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
           : `<script src="${assets.client.js}" defer crossorigin></script>`
       }
 		</head>
-		<body class="${req.path === '/' ? 'dothq-is-home' : ''}">
+		<body class="dothq-is-home">
       <div id="app">${markup}</div>
       <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(
         ssrData[req.path] || {}
@@ -220,7 +227,10 @@ server.use(signup)
 server.use(weather)
 server.use(news)
 server.use(download)
+server.use(spaceNews)
 
-server.use('/:language', mainRouter)
+server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
+server.use("/assets", express.static(resolve(process.cwd(), "src", "assets")))
+server.use('/', mainRouter)
 
 export default server

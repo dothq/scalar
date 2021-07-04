@@ -135,7 +135,7 @@ If you are a California resident and would like to request any of this data, ple
 
 We will always revise this policy to stay in line with all new laws.
 
-You can view the changes of this policy by [clicking here](https://github.com/dothq/about/commits/master/PRIVACY_POLICY.md).
+You can view the changes of this policy by [clicking here](https://github.com/dothq/legal/commits/master/PRIVACY_POLICY.md).
 
 <a name="how-can-you-contact-us-about-this-policy"></a>
 

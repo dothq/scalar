@@ -5,18 +5,18 @@ import { Community } from './menus/Community'
 import { Company } from './menus/Company'
 import { Products } from './menus/Products'
 
-export const menus = [
+export const menus: any[] = [
   {
     name: 'Products',
     component: Products,
   },
   {
-    name: 'Company',
-    component: Company,
+    name: 'Blog',
+    component: <></>,
   },
   {
-    name: 'Community',
-    component: Community,
+    name: 'Help',
+    component: <></>
   },
   {
     name: 'About',

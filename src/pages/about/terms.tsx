@@ -16,9 +16,9 @@ import { PrivacyStyle } from '../about/privacy/style'
 
 const AboutTerms = () => {
   return (
-    <Layout>
+    <Layout fullHeight>
       <PrivacyStyle />
-      <Content centerHoriz>
+      <Content centerHoriz fullHeight>
         <div id="privacy">
           <TOS />
         </div>

@@ -15,8 +15,10 @@ export const Button = (props: {
   lsp?: number
   rsp?: number
   iconSize?: number
+  animateIcon?: boolean
+  bg?: any
 }) => {
-  const {
+  var {
     onClick,
     href,
     type,
@@ -29,7 +31,11 @@ export const Button = (props: {
     rsp,
     iconSize,
     children,
-  } = props
+    animateIcon,
+    bg
+  } = props;
+
+  const btnStyle = !!bg ? { "--btn-bg": bg, ...style } as any : style
 
   return (
     <a
@@ -37,9 +43,8 @@ export const Button = (props: {
       href={href}
       className={`btn ${type ? `btn-${type}` : ''} ${
         className ? className : ``
-      } ${disabled ? `btn-disabled` : ``}`}
-      style={style}
-      {...props}
+      } ${disabled ? `btn-disabled` : ``} ${animateIcon ? `btn-animate-icon` : ``} ${!!bg ? `btn-has-custom-theme` : ``}`}
+      style={btnStyle}
     >
       {iconLeft && (
         <Icon

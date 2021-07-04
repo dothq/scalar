@@ -10,4 +10,7 @@ export default {
   hmm: require('./hmm.svg'),
   home: require('./home.svg'),
   menu: require('./menu.svg'),
+  download: require('./download.svg'),
+
+  down: require('./chevron-down.svg')
 }

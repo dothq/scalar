@@ -33,6 +33,14 @@
   height: 16px;
 }
 
+.download-icon {
+  mask-image: url(../assets/download.svg);
+  mask-size: cover;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+}
+
 .forward-icon {
   background-image: url(../assets/back.svg);
   background-size: cover;
@@ -98,7 +106,7 @@
   width: 36px;
   height: 36px;
   border-radius: 100px;
-  background-color: var(--color);
+  background-color: var(--colour);
   display: block;
 }
 
@@ -106,7 +114,7 @@
   width: 36px;
   height: 36px;
   border-radius: 100px;
-  box-shadow: inset 0px 0px 0px 6px var(--color);
+  box-shadow: inset 0px 0px 0px 6px var(--colour);
   display: block;
 }
 
@@ -164,4 +172,23 @@
 .compass-pi {
   background-image: url(../assets/product-icons/compass.svg);
   background-size: cover !important;
+}
+
+.down-icon {
+  mask-image: url(http://localhost:3001/static/media/chevron-down.1432a59b.svg);
+  width: 10px;
+  height: 10px;
+  mask-size: cover;
+  background-color: currentColor;
+  margin-left: 8px;  
+}
+
+.dot-one-icon {
+  mask-image: url(../assets/product-icons/dot-one.svg);
+  mask-size: cover !important;
+}
+
+.dot-mobile-icon {
+  mask-image: url(../assets/product-icons/mobile.svg);
+  mask-size: cover !important;
 }

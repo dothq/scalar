@@ -9,7 +9,7 @@ const App = ({ language }: { language: string }) => {
       {routes.map((route: any) => (
         <Route
           key={Math.random()}
-          path={`/${language}${route.path}`}
+          path={route.path ? route.path : undefined}
           exact={route.exact || false}
           render={() => <route.component />}
         ></Route>

@@ -55,16 +55,6 @@
   margin-bottom: 20px;
 }
 
-.grid > div:first-of-type {
-  margin-top: 12rem;
-  line-height: 1.75rem;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
 @media only screen and (max-width: 1150px) {
   .grid > div:first-of-type {
     margin-top: 6.5rem;
@@ -85,10 +75,6 @@
 .grid-btns {
   margin-top: 48px;
   display: flex;
-}
-
-.grid-btns > a:first-of-type {
-  margin-right: 22px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -149,12 +135,18 @@
 }
 
 .landing-super-title {
-  color: var(--white);
+  color: var(--colour);
   font-size: 10vmin;
   line-height: 1em;
-  letter-spacing: -0.035em;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 750;
+  letter-spacing: -2px;
+}
+
+.landing-super-p {
+  max-width: 750px;
+  font-size: 1.5rem;
+  margin: 3rem 0;
+  line-height: 2.5rem;
 }
 
 /* Theme overrides */
@@ -163,48 +155,6 @@ body.dothq-is-home {
   background-color: var(--white);
 }
 
-body.dothq-is-home .btn {
-  border: none !important;
-}
-
-body.dothq-is-home .btn-primary {
-  background-color: var(--white) !important;
-  color: var(--black) !important;
-  transition: 0.2s opacity;
-}
-
-body.dothq-is-home .btn-primary:hover {
-  opacity: 0.7;
-}
-
-body.dothq-is-home .btn-secondary {
-  background-color: transparent !important;
-  color: var(--white) !important;
-}
-
-body.dothq-is-home .hero-primary {
-  background-color: var(--gray-6);
-}
-
-body.dothq-is-home .hero-container {
-  background-color: var(--white);
-}
-
-body.dothq-is-home nav {
-  margin-top: -100px;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  z-index: 1000;
-}
-
-body.dothq-is-home ::selection {
-  background: rgba(137, 220, 245, 0.47) !important;
-}
-
-body.dothq-is-home .dot-icon {
-  background-color: white;
-}
 
 body.dothq-is-home .grid-btns {
   transform: scale(1.25);
@@ -242,10 +192,6 @@ body.dothq-is-home .privacy-section {
   justify-content: center;
 }
 
-body.dothq-is-home .hero {
-  background-color: var(--white);
-}
-
 body.dothq-is-home footer {
   background-color: black !important;
   border: none !important;
@@ -259,6 +205,22 @@ body.dothq-is-home .logo-text {
   color: var(--gray-5);
 }
 
-body.dothq-is-home .footer-socials-header-override {
-  color: white;
+body.dothq-is-home .grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  max-width: 1660px;
+  margin: 0 auto;
+}
+
+body.dothq-is-home .grid .grid-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+body.dothq-is-home .grid .grid-btns > a:first-of-type {
+  margin-right: 22px;
 }

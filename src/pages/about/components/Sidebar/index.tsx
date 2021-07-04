@@ -13,7 +13,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
       </li>
       <li>
         <Button
-          href="/about"
+          href="about"
           type={selected === 'home' ? 'secondary' : 'text'}
           iconLeft={assets.home}
           style={{
@@ -28,7 +28,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
       </li>
       <li>
         <Button
-          href="/about/privacy"
+          href="about/privacy"
           type={selected === 'privacy-db' ? 'secondary' : 'text'}
           iconLeft={assets.browserWordmark}
           style={{
@@ -40,7 +40,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
       </li>
       <li>
         <Button
-          href="/about/privacy/website"
+          href="about/privacy/website"
           type={selected === 'privacy-site' ? 'secondary' : 'text'}
           iconLeft={assets.globe}
           style={{
@@ -52,7 +52,7 @@ export const AboutSidebar = ({ selected }: { selected: string }) => (
       </li>
       <li>
         <Button
-          href="/about/privacy/id"
+          href="about/privacy/id"
           type={selected === 'privacy-id' ? 'secondary' : 'text'}
           iconLeft={' '}
           style={{

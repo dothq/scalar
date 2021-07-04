@@ -21,9 +21,11 @@ class NotFound extends React.Component {
             We couldn't find that page.
           </p>
 
-          <Button type={'primary'} href={'/'} iconLeft={assets.back} rsp={12}>
+          <Button type={'primary'} href={'/'} iconLeft={assets.back} rsp={12} style={{ width: "auto" }}>
             Go home
           </Button>
+
+          <div role="presentation" tabIndex={-1} hidden aria-hidden="true" id={"ssr-ipc-404-indicator"}>__HELLO_I_AM_404__</div>
         </Content>
       </Layout>
     )

@@ -82,7 +82,7 @@ export const SocialIcon = styled.a`
 `
 
 export const Line = styled.div`
-  max-width: 1300px;
+  max-width: 1650px;
   height: 1px;
   margin: 0 auto;
   background-color: #0000001f;

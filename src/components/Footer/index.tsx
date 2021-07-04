@@ -22,44 +22,27 @@ export const Footer = () => {
       <div className={'footer-container'}>
         <div className={'footer-info'} style={{ flex: 1, width: '100%' }}>
           <p className={'logo-text'}>
-            © {new Date().getFullYear()} Dot HQ. All rights reserved.
+            <L10n>PAGE_FOOTER_COPYRIGHT</L10n>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <select
-                id="language-switcher"
-                value={l10n.currentLanguage}
-                onChange={(e) => {
-                  const value = e.target.value
-                  window.location.href = window.location.href.replace(
-                    `/${l10n.currentLanguage}`,
-                    '/' + value
-                  )
-                }}
-              >
-                {l10n.availableLanguages.map((lang) => (
-                  <option value={lang}>
-                    {l10n.hydrate('LANGUAGE_DISPLAY_NAME', { lang })}
-                  </option>
-                ))}
-              </select>
               <div className={'footer-socials'}>
-                <a href={'https://twitter.com/DotBrowser'} target={'_blank'}>
+                <a className={"aexclude"} href={'https://twitter.com/DotBrowser'} target={'_blank'}>
                   <i className={'twitter-icon'}></i>
                 </a>
-                <a href={'https://github.com/dothq'} target={'_blank'}>
+                <a className={"aexclude"} href={'https://github.com/dothq'} target={'_blank'}>
                   <i className={'github-icon'}></i>
                 </a>
-                <a href={'https://dothq.link/dsc'} target={'_blank'}>
+                <a className={"aexclude"} href={'https://dothq.link/dsc'} target={'_blank'}>
                   <i className={'discord-icon'}></i>
                 </a>
-                <a href={'https://dothq.link/matrix'} target={'_blank'}>
+                <a className={"aexclude"} href={'https://dothq.link/matrix'} target={'_blank'}>
                   <i className={'matrix-icon'}></i>
                 </a>
               </div>
 
-              <a style={{ marginLeft: '0.5rem' }} href={'about/terms'}>
+              <a className={"aexclude"} style={{ marginLeft: '0.5rem' }} href={`/about/terms`}>
                 Terms
               </a>
-              <a style={{ marginLeft: '1.5rem' }} href={'about/privacy'}>
+              <a className={"aexclude"} style={{ marginLeft: '1.5rem' }} href={`/about/privacy`}>
                 Privacy
               </a>
             </div>
