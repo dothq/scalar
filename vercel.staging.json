@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "alias": ["staging.dothq.co"],
+  "builds": [
+    {
+      "src": "build/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build/public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "build/public/static/$1"
+    },
+    {
+      "src": "/favicon.png",
+      "dest": "build/public/favicon.png"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "build/public/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "build/public/sitemap.xml"
+    },
+    {
+      "src": "/sw.js",
+      "dest": "build/public/sw.js"
+    },
+    {
+      "src": "/register-sw.js",
+      "dest": "build/public/register-sw.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "build/server.js"
+    }
+  ]
+}
