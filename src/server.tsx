@@ -80,14 +80,15 @@ const mainRouter = express.Router()
 mainRouter.use(async (req: any, res: express.Response, next) => {
   const context = {}
 
-  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length + 1, '/');
- 
+  const paddedUrl = req.originalUrl.padEnd(req.originalUrl.length + 1, '/')
+
   if (
     paddedUrl.startsWith('/api') ||
     paddedUrl.startsWith('/static') ||
     paddedUrl.startsWith('/assets') ||
-    paddedUrl === "/favicon.png"
-  ) return next()
+    paddedUrl === '/favicon.png'
+  )
+    return next()
 
   let language = req.headers['accept-language']
     ? req.headers['accept-language'].split('-')[0]
@@ -182,11 +183,12 @@ mainRouter.use(async (req: any, res: express.Response, next) => {
     `)
   }
 
-  const route = routes.find(r => req.path === r.path);
-  let title = (route && route.title) ? route.title : `Dot HQ`;
+  const route = routes.find((r) => req.path === r.path)
+  let title = route && route.title ? route.title : `Dot HQ`
 
   // this is such a dirty hack i fucking hate it
-  if(markup.includes(`id="ssr-ipc-404-indicator"`)) title = "Four Oh Four ─ Dot HQ";
+  if (markup.includes(`id="ssr-ipc-404-indicator"`))
+    title = 'Four Oh Four ─ Dot HQ'
 
   res.send(
     `<!doctype html>
@@ -230,7 +232,7 @@ server.use(download)
 server.use(spaceNews)
 
 server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
-server.use("/assets", express.static(resolve(process.cwd(), "src", "assets")))
+server.use('/assets', express.static(resolve(process.cwd(), 'src', 'assets')))
 server.use('/', mainRouter)
 
 export default server

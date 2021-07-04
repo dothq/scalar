@@ -26,7 +26,7 @@
 :root {
   --background: var(--background-light);
   --background-lighter: var(--background-light-lighter);
-  --background-light: #FFFFFF;
+  --background-light: #ffffff;
   --background-light-lighter: #eeeeee;
   --background-dark: #0e1525;
   --background-dark-lighter: #10192c;
@@ -51,39 +51,43 @@
   --primary-lighter: var(--dothq-blue-lighter);
   --primary-even-lighter: var(--dothq-blue-even-lighter);
 
-  --dothq-blue: #1662D3;
-  --dothq-blue-lighter: #6199EF;
+  --dothq-blue: #1662d3;
+  --dothq-blue-lighter: #6199ef;
   --dothq-blue-even-lighter: rgba(49, 127, 243, 0.5);
   --dothq-blue-even-even-lighter: rgba(49, 127, 243, 0.15);
 
-  --nav-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 18px 36px 5px;
+  --nav-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px,
+    rgba(0, 0, 0, 0.06) 0px 18px 36px 5px;
 
   --border: #e4e8ee;
 }
 
-html, body {
+html,
+body {
   scrollbar-color: var(--accent-1-dark) var(--background);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-      --background: var(--background-dark);
-      --background-lighter: var(--background-dark-lighter);
+    --background: var(--background-dark);
+    --background-lighter: var(--background-dark-lighter);
 
-      --colour: var(--colour-dark);
-      --colour-lighter: var(--colour-dark-lighter);
+    --colour: var(--colour-dark);
+    --colour-lighter: var(--colour-dark-lighter);
 
-      --accent-1: var(--accent-1-dark);
-      --accent-1-darker: var(--accent-1-dark-darker);
+    --accent-1: var(--accent-1-dark);
+    --accent-1-darker: var(--accent-1-dark-darker);
 
-      --primary: var(--dothq-blue-lighter);
+    --primary: var(--dothq-blue-lighter);
 
-      --nav-box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 1px, rgba(255, 255, 255, 0.08) 0px 18px 36px 5px;
-  
-      --border: #24292f;
-    }
+    --nav-box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 1px,
+      rgba(255, 255, 255, 0.08) 0px 18px 36px 5px;
 
-  html, body {
+    --border: #24292f;
+  }
+
+  html,
+  body {
     scrollbar-color: var(--accent-1-light) var(--background);
   }
 }

@@ -10,7 +10,7 @@ export const Content = ({
   style,
   containerStyle,
   ignoreMtop,
-  isHome
+  isHome,
 }: {
   children: any
   center?: boolean
@@ -27,7 +27,9 @@ export const Content = ({
     <div
       className={`hero-container ${fullHeight ? `hero-vh` : ``} ${
         primary ? `hero-primary` : ``
-      } ${bgStyle ? `hero-bg-${bgStyle}` : ``} ${ignoreMtop ? `hero-ignore-mtop` : ``} ${isHome ? `hero-is-home` : ``}`}
+      } ${bgStyle ? `hero-bg-${bgStyle}` : ``} ${
+        ignoreMtop ? `hero-ignore-mtop` : ``
+      } ${isHome ? `hero-is-home` : ``}`}
       style={containerStyle}
     >
       <div

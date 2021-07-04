@@ -8,32 +8,32 @@ interface Strings {
 
 const l10n = {
   availableLanguages: ['en', 'es', 'ja', 'ar', 'sv'],
-  _currentLanguage: "",
+  _currentLanguage: '',
 
   get currentLanguage() {
-    if(typeof(window) !== "undefined") {
+    if (typeof window !== 'undefined') {
       if (this._currentLanguage.length === 0) {
-        this._currentLanguage = window.document.documentElement.lang;
+        this._currentLanguage = window.document.documentElement.lang
       }
-  
-      return this._currentLanguage;
+
+      return this._currentLanguage
     } else {
-      return undefined;
+      return undefined
     }
   },
 
   hydrate: (l10nString: string, attributes?: any): string => {
     const strings: Strings = l10nStrings
-    const lang: string = `${l10n.currentLanguage}`;
+    const lang: string = `${l10n.currentLanguage}`
 
     const langStrings = strings[attributes.lang ? attributes.lang : lang]
 
     if (langStrings && langStrings[l10nString]) {
-      if (typeof langStrings[l10nString] === "function") {
-        return langStrings[l10nString]();
+      if (typeof langStrings[l10nString] === 'function') {
+        return langStrings[l10nString]()
       }
 
-      return langStrings[l10nString];
+      return langStrings[l10nString]
     }
     // Fallback to English translation if we can.
     if (!langStrings && strings.en && strings.en[l10nString])

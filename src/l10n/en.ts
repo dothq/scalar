@@ -11,7 +11,9 @@ export default {
     'Dot Browser is a privacy-conscious web browser with smarts built-in for protection against trackers and advertisements online.',
 
   PRIVACY_MATTERS_SECTION_TITLE: 'Your privacy is a right, not a privilege.',
-  PRIVACY_MATTERS_SECTION_SUBTITLE: 'Your data is constantly being sold through large advertisement networks that track what sites you like to visit online.',
+  PRIVACY_MATTERS_SECTION_SUBTITLE:
+    'Your data is constantly being sold through large advertisement networks that track what sites you like to visit online.',
 
-  PAGE_FOOTER_COPYRIGHT: () => `© ${new Date().getFullYear()} Dot HQ. All rights reserved.`
+  PAGE_FOOTER_COPYRIGHT: () =>
+    `© ${new Date().getFullYear()} Dot HQ. All rights reserved.`,
 }

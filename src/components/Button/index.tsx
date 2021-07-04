@@ -32,10 +32,10 @@ export const Button = (props: {
     iconSize,
     children,
     animateIcon,
-    bg
-  } = props;
+    bg,
+  } = props
 
-  const btnStyle = !!bg ? { "--btn-bg": bg, ...style } as any : style
+  const btnStyle = !!bg ? ({ '--btn-bg': bg, ...style } as any) : style
 
   return (
     <a
@@ -43,7 +43,9 @@ export const Button = (props: {
       href={href}
       className={`btn ${type ? `btn-${type}` : ''} ${
         className ? className : ``
-      } ${disabled ? `btn-disabled` : ``} ${animateIcon ? `btn-animate-icon` : ``} ${!!bg ? `btn-has-custom-theme` : ``}`}
+      } ${disabled ? `btn-disabled` : ``} ${
+        animateIcon ? `btn-animate-icon` : ``
+      } ${!!bg ? `btn-has-custom-theme` : ``}`}
       style={btnStyle}
     >
       {iconLeft && (
