@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledHeaderMenuItem = styled.div`
-    color: var(--colour-light);
-    display: flex;
-`;
+  color: var(--colour-light);
+  display: flex;
+`

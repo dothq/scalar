@@ -12,5 +12,5 @@ export default {
   menu: require('./menu.svg'),
   download: require('./download.svg'),
 
-  down: require('./chevron-down.svg')
+  down: require('./chevron-down.svg'),
 }

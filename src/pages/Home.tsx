@@ -17,8 +17,8 @@ import assets from '../assets'
 import l10n from '../l10n'
 
 const Home = () => {
-  const [os, setOS] = React.useState('');
-  const [lang, setLang] = React.useState('');
+  const [os, setOS] = React.useState('')
+  const [lang, setLang] = React.useState('')
 
   React.useEffect(() => {
     if (typeof window === 'undefined') return
@@ -27,19 +27,32 @@ const Home = () => {
 
     if (platform.toLowerCase() === 'win32') setOS('windows')
     else if (platform.toLowerCase() === 'macintel') setOS('macos')
-    else if (platform.toLowerCase().includes('linux')) setOS('linux');
+    else if (platform.toLowerCase().includes('linux')) setOS('linux')
 
-    if(l10n.currentLanguage) setLang(l10n.currentLanguage);
+    if (l10n.currentLanguage) setLang(l10n.currentLanguage)
   })
 
   return (
     <Layout primary noHeader>
       <Header seamless={true} />
-      <Content primary fullHeight ignoreMtop isHome style={{ minHeight: "92vh" }}>
-        <div className={'grid'} style={lang ? { 
-            maxWidth: lang !== "en" ? "1660px" : "1000px",
-            opacity: lang ? 1 : 0
-        } : {}}>
+      <Content
+        primary
+        fullHeight
+        ignoreMtop
+        isHome
+        style={{ minHeight: '92vh' }}
+      >
+        <div
+          className={'grid'}
+          style={
+            lang
+              ? {
+                  maxWidth: lang !== 'en' ? '1660px' : '1000px',
+                  opacity: lang ? 1 : 0,
+                }
+              : {}
+          }
+        >
           <h1 className={'landing-super-title'}>
             <L10n>SUPER_LANDING_PAGE_MASTHEAD</L10n>
           </h1>
@@ -68,19 +81,28 @@ const Home = () => {
               <L10n>GENERIC_LEARN_MORE</L10n>
             </Button>
           </div>
-          <div id={"cards"}></div>
+          <div id={'cards'}></div>
         </div>
       </Content>
       <Content>
         <Cards />
       </Content>
-      <Content style={{ alignItems: "flex-start", paddingTop: "6rem" }}>
-        <h1 style={{ marginBottom: "32px" }}>Frequently Asked Questions</h1>
+      <Content style={{ alignItems: 'flex-start', paddingTop: '6rem' }}>
+        <h1 style={{ marginBottom: '32px' }}>Frequently Asked Questions</h1>
         <FAQ />
       </Content>
-      <Content style={{ paddingBottom: "6rem" }}>
-        <div style={{ width: "418px", padding: "0 3rem" }}>
-          <Button href="/products/desktop/download" iconLeft={"/assets/download.svg"} iconSize={28} rsp={16} type={"primary"} style={{ fontSize: "28px", height: "80px" }}>Download Dot Browser</Button>
+      <Content style={{ paddingBottom: '6rem' }}>
+        <div style={{ width: '418px', padding: '0 3rem' }}>
+          <Button
+            href="/products/desktop/download"
+            iconLeft={'/assets/download.svg'}
+            iconSize={28}
+            rsp={16}
+            type={'primary'}
+            style={{ fontSize: '28px', height: '80px' }}
+          >
+            Download Dot Browser
+          </Button>
         </div>
       </Content>
     </Layout>

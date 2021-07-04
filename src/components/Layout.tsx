@@ -11,7 +11,7 @@ export const Layout = ({
   hasSexyGradient,
   noHeader,
   fullHeight,
-  style
+  style,
 }: {
   children?: any
   primary?: boolean
@@ -23,7 +23,9 @@ export const Layout = ({
   return (
     <>
       <section
-        className={`hero ${hasSexyGradient ? `hero-has-sexy-gradient` : ``} ${fullHeight ? `hero-vh`: ``} ${fullHeight && noHeader ? `hero-vh-ignore-mtop` : ``}`}
+        className={`hero ${hasSexyGradient ? `hero-has-sexy-gradient` : ``} ${
+          fullHeight ? `hero-vh` : ``
+        } ${fullHeight && noHeader ? `hero-vh-ignore-mtop` : ``}`}
         style={{ marginTop: fullHeight && noHeader ? `` : `0px`, ...style }}
       >
         {!noHeader && (

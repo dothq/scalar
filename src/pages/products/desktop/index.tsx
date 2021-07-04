@@ -39,21 +39,46 @@ const Browser = () => {
       <Header seamless={true}>
         <SubHeader transparent>
           <div>
-            <a className={"aexclude"} href={"/products/desktop"}>
+            <a className={'aexclude'} href={'/products/desktop'}>
               <h1>Dot Browser for Desktop</h1>
             </a>
           </div>
 
-          <div style={{ display: "flex", gap: "6px" }}>
-            <Button href={"/products/desktop/features"} type={"text"} style={{ height: "40px", padding: "0 14px" }}>Features</Button>
-            <Button href={"/products/desktop/comparison"} type={"text"} style={{ height: "40px", padding: "0 14px" }}>Comparison</Button>
-            <Button href={"/products/desktop/whats-new"} type={"text"} style={{ height: "40px", padding: "0 14px" }}>What's New</Button>
-            <Button href={"/products/desktop/download"} type={"primary"} style={{ height: "34px", marginLeft: "12px" }}>Download</Button>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <Button
+              href={'/products/desktop/features'}
+              type={'text'}
+              style={{ height: '40px', padding: '0 14px' }}
+            >
+              Features
+            </Button>
+            <Button
+              href={'/products/desktop/comparison'}
+              type={'text'}
+              style={{ height: '40px', padding: '0 14px' }}
+            >
+              Comparison
+            </Button>
+            <Button
+              href={'/products/desktop/whats-new'}
+              type={'text'}
+              style={{ height: '40px', padding: '0 14px' }}
+            >
+              What's New
+            </Button>
+            <Button
+              href={'/products/desktop/download'}
+              type={'primary'}
+              style={{ height: '34px', marginLeft: '12px' }}
+            >
+              Download
+            </Button>
           </div>
         </SubHeader>
       </Header>
       <Content primary fullHeight>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </Content>
     </Layout>
   )

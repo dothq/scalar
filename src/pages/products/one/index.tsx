@@ -19,20 +19,39 @@ const One = () => {
       <Header seamless={true}>
         <SubHeader transparent>
           <div>
-            <a className={"aexclude"} href={"/products/one"}>
+            <a className={'aexclude'} href={'/products/one'}>
               <h1>Dot One</h1>
             </a>
           </div>
 
-          <div style={{ display: "flex", gap: "6px" }}>
-            <Button href={"/products/one/features"} type={"text"} style={{ height: "40px", padding: "0 14px" }}>Features</Button>
-            <Button href={"/products/one/whats-new"} type={"text"} style={{ height: "40px", padding: "0 14px" }}>What's New</Button>
-            <Button href={"https://one.dothq.co"} type={"primary"} style={{ height: "34px", marginLeft: "12px" }}>Sign in</Button>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <Button
+              href={'/products/one/features'}
+              type={'text'}
+              style={{ height: '40px', padding: '0 14px' }}
+            >
+              Features
+            </Button>
+            <Button
+              href={'/products/one/whats-new'}
+              type={'text'}
+              style={{ height: '40px', padding: '0 14px' }}
+            >
+              What's New
+            </Button>
+            <Button
+              href={'https://one.dothq.co'}
+              type={'primary'}
+              style={{ height: '34px', marginLeft: '12px' }}
+            >
+              Sign in
+            </Button>
           </div>
         </SubHeader>
       </Header>
       <Content primary fullHeight>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </Content>
     </Layout>
   )

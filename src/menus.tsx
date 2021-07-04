@@ -16,7 +16,7 @@ export const menus: any[] = [
   },
   {
     name: 'Help',
-    component: <></>
+    component: <></>,
   },
   {
     name: 'About',
