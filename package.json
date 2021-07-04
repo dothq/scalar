@@ -54,6 +54,7 @@
     "prettier": "2.2.1",
     "prisma": "^2.20.1",
     "razzle": "^3.3.11",
+    "ts-node": "^10.0.0",
     "tslint-config-prettier": "^1.18.0"
   }
 }
