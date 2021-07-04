@@ -175,7 +175,7 @@
 }
 
 .down-icon {
-  mask-image: url(http://localhost:3001/static/media/chevron-down.1432a59b.svg);
+  mask-image: url(../assets/chevron-down.svg);
   width: 10px;
   height: 10px;
   mask-size: cover;
