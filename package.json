@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:prod": "if [ $(git rev-parse --abbrev-ref HEAD) = \"main\" ]; then yarn build && yarn run build:sitemap && vercel --prod -A vercel.prod.json; else echo \"You need to be on the main branch to deploy to prod.\"; fi",
-    "deploy:staging": "if [ $(git rev-parse --abbrev-ref HEAD) = \"staging\" ]; then yarn build && yarn run build:sitemap && vercel -A vercel.staging.json && vercel alias new-dothq-co-enderdev-dothq.vercel.app staging.dothq.co --scope dothq; else echo \"You need to be on the staging branch to deploy to staging.\"; fi",
+    "deploy:prod": "if [ $(git rev-parse --abbrev-ref HEAD) = \"main\" ]; then yarn build && vercel --prod; else echo \"You need to be on the main branch to deploy to prod.\"; fi",
+    "deploy:staging": "if [ $(git rev-parse --abbrev-ref HEAD) = \"staging\" ]; then yarn build && vercel; else echo \"You need to be on the staging branch to deploy to staging.\"; fi",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "build:sitemap": "ts-node utils/generate-sitemap.ts",
@@ -21,6 +21,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/node": "^16.6.1",
     "@types/react": "^17.0.18",
     "typescript": "^4.3.5"
   }
