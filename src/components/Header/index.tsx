@@ -23,7 +23,7 @@ export const Header = () => {
                     </Link>
                 </div>
 
-                <div className={"h-full flex items-center justify-center"}>
+                <div className={"h-full items-center justify-center hidden md:flex"}>
                     <div className={"flex column"}>
                         <Link href={"/products"}>
                             <a 
@@ -62,7 +62,7 @@ export const Header = () => {
                     </div>
                 </div>
 
-                <div className={"flex row flex-1 justify-end items-center"}>
+                <div className={"row flex-1 justify-end items-center hidden md:flex"}>
                     <LangPicker locale={locale} className={"mr-3"} />
 
                     <HollowButton colour={"black"}>
