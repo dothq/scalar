@@ -1,5 +1,4 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
-import { useRouter } from "next/router"
 
 class Document extends NextDocument {
     public render() {
@@ -11,7 +10,6 @@ class Document extends NextDocument {
             <Html>
                 <Head>
                     <meta charSet="utf-8"></meta>
-                    <meta name="description" content="Dot Browser is a privacy-centric, modern web browser that fights for your privacy when browsing the internet."></meta>
                     <meta name="keywords" content="browser dot dothq privacy modern web browser webbrowser modern ui fresh browsing online firefox-based firefox mozilla windows mac linux macos unix"></meta>
                     <meta name="google" content="notranslate"></meta>
                     <meta name="url" itemProp="url" content={url}></meta>
@@ -67,39 +65,9 @@ class Document extends NextDocument {
                     <link rel="apple-touch-icon" type="image/png" href="/static/icons/57x57.png" sizes="57x57"></link>
                     <link rel="fluid-icon" type="image/png" href="/static/icons/256x256.png" title="Dot HQ"></link>
 
-                    <script type="application/ld+json" dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "http://schema.org",
-                            "@type": "Organization",
-                            name: "Dot HQ",
-                            alternateName: "Dot Browser",
-                            description: "Get the browser that fights for your privacy when browsing the internet.",
-                            legalName: "Dot HQ",
-                            url: "https://www.dothq.co",
-                            logo: "https://www.dothq.co/static/icons/256x256.png",
-                            email: "support@dothq.co",
-                            sameAs: [
-                                "https://twitter.com/DotBrowser",
-                                "https://github.com/dothq",
-                                "https://discord.gg/WRDEK2D"
-                            ],
-                            contactPoint: [
-                                {
-                                    "@type": "ContactPoint",
-                                    email: "support@dothq.co",
-                                    url: "https://www.dothq.co/",
-                                    contactType: "customer service"
-                                }
-                            ]
-                        }, null, 2)
-                    }}></script>
-
                     <meta property="og:site_name" content="Dot HQ"></meta>
                     <meta property="og:url" content={url}></meta>
                     <meta property="og:type" content="website"></meta>
-                    <meta property="og:locale" content="en"></meta>
-                    <meta property="og:title" content="Get the browser that fights for your privacy."></meta>
-                    <meta property="og:description" content="Dot Browser is a privacy-centric, modern web browser that fights for your privacy when browsing the internet."></meta>
                     <meta property="og:image" content="/static/images/fight-for-privacy.png"></meta>
                     <meta property="og:image:type" content="image/png"></meta>
                     <meta property="og:image:width" content="1200"></meta>
@@ -107,8 +75,6 @@ class Document extends NextDocument {
                     <meta name="twitter:card" content="summary_large_image"></meta>
                     <meta name="twitter:site" content="@DotBrowser"></meta>
                     <meta name="twitter:creator" content="@DotBrowser"></meta>
-                    <meta name="twitter:title" content="Get the browser that fights for your privacy."></meta>
-                    <meta name="twitter:description" content="Dot Browser is a privacy-centric, modern web browser that fights for your privacy when browsing the internet."></meta>
                     <meta name="twitter:image" content="/static/images/fight-for-privacy.png"></meta>
                 </Head>
                 <body>

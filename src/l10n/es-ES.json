@@ -1,0 +1,30 @@
+{
+    "language-name": "Español (España)",
+
+    "page-default-title": "Dot Browser - El Navegador Que Lucha Por Su Privacidad.",
+    "page-description": "Dot Browser es un navegador web moderno centrado en la privacidad que lucha por su privacidad al navegar por Internet.",
+    "page-description-short": "Obtenga el navegador que lucha por su privacidad al navegar por Internet.",
+
+    "download-generic-text": "Descargar",
+
+    "landing-title": "El navegador que lucha por su privacidad.",
+    "landing-description": "Dot Browser es un navegador web moderno centrado en la privacidad basado en Firefox que lucha por su privacidad al navegar por Internet.",
+    
+    "landing-download-button-text": "Descargar Dot Browser",
+    "landing-download-availability-for-text": "Disponible para Windows, macOS, Linux y BSD.",
+    "landing-download-system-requirements-button": "Requisitos del sistema",
+
+    "errors": {
+        "error-403-title": "Cuatro Cero Tres",
+        "error-403-description": "No tiene los permisos o autorización requeridos para acceder a esta página.",
+        "error-403-button-text": "Volver A Probar",
+
+        "error-404-title": "Cuatro Cero Cuatro",
+        "error-404-description": "Esta página no parece existir.",
+        "error-404-button-text": "Volver",
+    
+        "error-500-title": "Cinco Centenar",
+        "error-500-description": "Nuestro servidor parece estar teniendo problemas actualmente.",
+        "error-500-button-text": "Volver A Probar"
+    }
+}

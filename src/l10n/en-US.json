@@ -1,0 +1,30 @@
+{
+    "language-name": "English (Simplified)",
+
+    "page-default-title": "Dot Browser - The Browser That Fights for Your Privacy.",
+    "page-description": "Dot Browser is a privacy-centric, modern web browser that fights for your privacy when browsing the internet.",
+    "page-description-short": "Get the browser that fights for your privacy when browsing the internet.",
+
+    "download-generic-text": "Download",
+
+    "landing-title": "The browser that fights for your privacy.",
+    "landing-description": "Dot Browser is a privacy-centric, modern web browser based on Firefox that fights for your privacy when browsing the internet.",
+
+    "landing-download-button-text": "Download Dot Browser",
+    "landing-download-availability-for-text": "Available for Windows, macOS, Linux and BSD.",
+    "landing-download-system-requirements-button": "System Requirements",
+
+    "errors": {
+        "error-403-title": "Four Oh Three",
+        "error-403-description": "You don't have the required permissions or authorisation to access this page.",
+        "error-403-button-text": "Try Again",
+
+        "error-404-title": "Four Oh Four",
+        "error-404-description": "This page doesn't seem to exist.",
+        "error-404-button-text": "Go Back",
+    
+        "error-500-title": "Five Hundred",
+        "error-500-description": "Our server seems to be having issues currently.",
+        "error-500-button-text": "Try Again"
+    }
+}

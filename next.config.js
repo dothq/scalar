@@ -1,7 +1,46 @@
 module.exports = {
     i18n: {
-        locales: ["en-GB", "en-US", "-"],
-        defaultLocale: "-"
+        locales: ["en-GB", "en-US", "es-ES"],
+        defaultLocale: "en-GB"
+    },
+    async redirects() {
+        return [
+            { 
+                source: '/join', 
+                destination: 'https://invite.gg/dot',
+                permanent: false,
+            },
+            { 
+                source: '/blog', 
+                destination: 'https://medium.com/dot-blog',
+                permanent: false,
+            },
+            { 
+                source: '/legal/privacy', 
+                destination: '/about/privacy',
+                permanent: false,
+            },
+            { 
+                source: '/legal/terms', 
+                destination: '/about/terms',
+                permanent: false,
+            },
+            { 
+                source: '/legal/cookies', 
+                destination: '/about/cookies',
+                permanent: false,
+            },
+            { 
+                source: '/legal/gdpr', 
+                destination: '/about/gdpr',
+                permanent: false,
+            },
+            { 
+                source: '/browser/desktop', 
+                destination: '/',
+                permanent: false,
+            }
+        ]
     },
     async headers() {
         return [
@@ -38,7 +77,13 @@ module.exports = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        value: `default-src 'none'; script-src https://*.dothq.co; style-src 'unsafe-inline' https://*.dothq.co; img-src 'self' data: https://*.dothq.co https://dotusercontent.com; font-src https://*.dothq.co; connect-src 'self' https://*.dothq.co; media-src https://*.dothq.co; frame-src https://dothq.co; frame-ancestors 'none'; form-action 'self' dothq.co; block-all-mixed-content; base-uri 'self'; manifest-src 'self'`
+                        value: process.env.NODE_ENV == "production" 
+                            ? `default-src 'none'; script-src https://*.dothq.co; style-src 'unsafe-inline' https://*.dothq.co; img-src 'self' data: https://*.dothq.co https://dotusercontent.com; font-src https://*.dothq.co; connect-src 'self' https://*.dothq.co; media-src https://*.dothq.co; frame-src https://dothq.co; frame-ancestors 'none'; form-action 'self' dothq.co; block-all-mixed-content; base-uri 'self'; manifest-src 'self'`
+                            : ``
+                    },
+                    {
+                        key: 'X-Powered-By',
+                        value: 'Bingus'
                     }
                 ],
             },

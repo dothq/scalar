@@ -1,12 +1,11 @@
-import React from "react";
 import { Error } from "../components/Error";
 
-const InternalServerError = () => {
+const NoAccess = () => {
     return (
         <Error 
-            code={500} 
+            code={403} 
             buttonClick={() => window.location.reload()} 
-            buttonHref={""} 
+            buttonHref={""}
         />
     )
 }
@@ -19,4 +18,4 @@ export function getStaticProps({ locale }: { locale: string }) {
     };
 }
 
-export default InternalServerError;
+export default NoAccess;

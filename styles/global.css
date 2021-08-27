@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Karla';
+    font-display: swap;
+    src: url("../public/static/fonts/Karla.woff2") format("woff2");
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
