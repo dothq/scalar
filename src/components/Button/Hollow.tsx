@@ -5,13 +5,15 @@ export const HollowButton = ({
     href, 
     colour, 
     onClick,
-    className
+    className,
+    reset
 }: { 
     children: any, 
     href?: string, 
     colour: string,
     onClick?: any,
-    className?: string
+    className?: string,
+    reset?: boolean
 }) => {
     const onLinkClick = (e: any) => {
         if(onClick) {
@@ -25,7 +27,8 @@ export const HollowButton = ({
     
     return (
         <Link href={typeof(href) == "undefined" ? "#" : href}>
-            <a onClick={onLinkClick} className={[
+            <a onClick={onLinkClick} className={!!reset ? className : [
+                ...(className || "").split(" "),
                 "flex",
                 "justify-center",
                 "items-center",
@@ -42,8 +45,7 @@ export const HollowButton = ({
                 `hover:border-${colour}`,
                 "hover:bg-transparent",
                 `hover:text-${colour}`,
-                "cursor-pointer",
-                ...(className || "").split(" ")
+                "cursor-pointer"
             ].join(" ")}>
                 {children}
             </a>

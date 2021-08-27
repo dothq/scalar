@@ -8,6 +8,7 @@ import { Menu } from "../Menu";
 import { languages } from "../../l10n/languages";
 import { LangPicker } from "../LangPicker";
 import { useTranslations } from "next-intl";
+import { BungerMenu } from "../../icons/Menu";
 
 export const Header = () => {
     const { locale } = useRouter();
@@ -67,6 +68,14 @@ export const Header = () => {
 
                     <HollowButton colour={"black"}>
                         {t("download-generic-text")}
+                    </HollowButton>
+                </div>
+
+                <div id={"bunger-🍔"} className={"row flex-1 justify-end items-center flex md:hidden"}>
+                    <LangPicker locale={locale} className={"mr-1"} />
+
+                    <HollowButton reset={true} className={"p-3 rounded-full hover:bg-gray6"} colour={""}>
+                        <BungerMenu />
                     </HollowButton>
                 </div>
             </div>

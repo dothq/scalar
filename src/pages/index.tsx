@@ -13,16 +13,16 @@ const Home = () => {
 
     return (
         <Layout>
-            <div className={"w-full flex flex-col h-full min-h-screen"}>
+            <div className={"w-full flex flex-col h-full md:min-h-screen"}>
                 <Header />
 
-                <div className={"w-full flex justify-center flex-1 my-30 md:my-40"}>
+                <div className={"w-full flex justify-center flex-1 my-20 md:my-40"}>
                     <div className={"max-w-6xl flex flex-col items-center justify-center"}>
-                        <h1 className={"text-5xl px-12 sm:text-6xl sm:max-w-3xl sm:px-8 md:max-w-4xl md:px-8 lg:text-7xl lg:max-w-5xl xl:text-8xl xl:max-w-6xl font-extrabold  text-center mb-10 tracking-tight"}>
+                        <h1 className={"text-4xl px-8 sm:text-6xl sm:max-w-3xl sm:px-8 md:max-w-4xl md:px-8 lg:text-7xl lg:max-w-5xl xl:text-8xl xl:max-w-6xl font-extrabold  text-center mb-10 tracking-tight"}>
                             {t("landing-title")}
                         </h1>
 
-                        <p className={"text-lg px-5 md:text-2xl max-w-3xl text-center text-gray3"}>
+                        <p className={"text-base px-5 md:text-2xl max-w-3xl text-center text-gray3"}>
                             {t("landing-description")}
                         </p>
 
