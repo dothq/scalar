@@ -14,7 +14,7 @@ export const Error = ({ code, buttonClick, buttonHref }: { code: number, buttonC
 
     return (
         <Layout title={String(t(`error-${code}-title`))}>
-            <div className="container mx-auto max-w-7xl h-full py-28 sm:px-10 xl:px-0 flex">
+            <div className="container mx-auto max-w-7xl h-full py-28 px-6 sm:px-10 xl:px-0 flex">
                 <div className={"flex flex-col flex-1"}>
                     <Logo className={"mb-10"} linked />
 

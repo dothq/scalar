@@ -1,0 +1,39 @@
+{
+    "language-name": "Svenska (Sverige)",
+
+    "page-default-title": "Dot Browser - Webbläsaren Som Står för Ditt Privatliv.",
+    "page-description": "Dot Browser är en integritet-centrerad, modern webbläsare som skyddardin integritet när du bläddrar på internet.",
+    "page-description-short": "Hämta webbläsaren som står för din integritet medans du bläddrar på internet.",
+
+    "download-generic-text": "Ladda ner",
+
+    "landing-title": "Webbläsaren som står för din integritet.",
+    "landing-description": "Dot Browser är en integritet-centrerad, modern webbläsare baserad på Firefox som bevarar din integritet medans du bläddrar på internet.",
+
+    "landing-download-button-text": "Ladda Ner Dot Browser",
+    "landing-download-availability-for-text": "Tillgänglig för Windows, macOS, Linux och BSD.",    
+    "landing-download-system-requirements-button": "System Krav",
+
+    "header-products-submenu": "Produkter",
+    "header-blog-submenu": "Blogg",
+    "header-help-submenu": "Hjälp",
+    "header-about-submenu": "Om oss",
+
+    "subheader-browser-desktop-title": "Dot Browser för Skrivbordet",
+
+    "cookie-banner-msg": "Vi använder inte oss utav kakor.",
+
+    "errors": {
+        "error-403-title": "Fyra Noll Tre",
+        "error-403-description": "Du har inte de begärda behörigheterna eller tillstånd för att komma åt denna sida.",
+        "error-403-button-text": "Försök Igen",
+
+        "error-404-title": "Fyra Noll Fyra",
+        "error-404-description": "Denna sidan verkar inte existera.",
+        "error-404-button-text": "Gå Tillbaka",
+    
+        "error-500-title": "Femhundra",
+        "error-500-description": "Våra servrar verkar ha lite problem just nu.",
+        "error-500-button-text": "Försök Igen"
+    }
+}

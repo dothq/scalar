@@ -1,6 +1,6 @@
 module.exports = {
     i18n: {
-        locales: ["en-GB", "en-US", "es-ES"],
+        locales: ["en-GB", "en-US", "es-ES", "fr-FR", "sv-SE", "ar"],
         defaultLocale: "en-GB"
     },
     async redirects() {
@@ -33,11 +33,6 @@ module.exports = {
             { 
                 source: '/legal/gdpr', 
                 destination: '/about/gdpr',
-                permanent: false,
-            },
-            { 
-                source: '/browser/desktop', 
-                destination: '/',
                 permanent: false,
             }
         ]

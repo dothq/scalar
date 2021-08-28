@@ -30,8 +30,8 @@ export const Header = () => {
                             <a 
                                 className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
                             >
-                                Products
-                                <ChevronDown className={"ml-2"} />
+                                {t("header-products-submenu")}
+                                <ChevronDown style={{ marginInlineStart: "0.5rem" }} />
                             </a>
                         </Link>
 
@@ -39,8 +39,8 @@ export const Header = () => {
                             <a 
                                 className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
                             >
-                                Blog
-                                <ChevronDown className={"ml-2"} />
+                                {t("header-blog-submenu")}
+                                <ChevronDown style={{ marginInlineStart: "0.5rem" }} />
                             </a>
                         </Link>
 
@@ -48,8 +48,8 @@ export const Header = () => {
                             <a 
                                 className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
                             >
-                                Help
-                                <ChevronDown className={"ml-2"} />
+                                {t("header-help-submenu")}
+                                <ChevronDown style={{ marginInlineStart: "0.5rem" }} />
                             </a>
                         </Link>
 
@@ -57,14 +57,14 @@ export const Header = () => {
                             <a 
                                 className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
                             >
-                                About
+                                {t("header-about-submenu")}
                             </a>
                         </Link>
                     </div>
                 </div>
 
                 <div className={"row flex-1 justify-end items-center hidden md:flex"}>
-                    <LangPicker locale={locale} className={"mr-3"} />
+                    <LangPicker locale={locale} style={{ marginInlineEnd: "0.5rem" }} />
 
                     <HollowButton colour={"black"}>
                         {t("download-generic-text")}

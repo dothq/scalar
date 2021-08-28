@@ -1,0 +1,39 @@
+{
+    "language-name": "العربية",
+
+    "page-default-title": "Dot Browser - المتصفح الذي يحارب من اجل خصوصيتك.",
+    "page-description": "Dot Browser هو متصفح عصري يرتكز على الخصوصية والذي يحارب من اجل خصوصيتك على الأنترنت.",
+    "page-description-short": "احصل على المتصفح الذي يحارب من اجل خصوصيتك على الأنترنت.",
+
+    "download-generic-text": "التنزيل",
+
+    "landing-title": "المتصفح الذي يحارب من اجل خصوصيتك.",
+    "landing-description": "Dot Browser هو متصفح عصري يرتكز على الخصوصية، مبني على Firefox، والذي يحارب من اجل خصوصيتك على الأنترنت.",
+
+    "landing-download-button-text": "تنزيل Dot Browser",
+    "landing-download-availability-for-text": "متوفر ل-Windows, macOS, Linux و BSD.",    
+    "landing-download-system-requirements-button": "متطلبات النظام",
+
+    "header-products-submenu": "المنتجات",
+    "header-blog-submenu": "المدونة",
+    "header-help-submenu": "المساعدة",
+    "header-about-submenu": "حول",
+
+    "subheader-browser-desktop-title": "Dot Browser لسطح المكتب",
+
+    "cookie-banner-msg": "نحن لا نستخدم ال-cookies.",
+
+    "errors": {
+        "error-403-title": "أربعمائة وثلاثة",
+        "error-403-description": "انت لا تملك الاذن او التخويل المطلوب للوصول الى هذه الصفحة.",
+        "error-403-button-text": "جرب مرة اخرى",
+
+        "error-404-title": "أربعمائة واربعة",
+        "error-404-description": "هذه الصفحة غير موجودة.",
+        "error-404-button-text": "الرجوع",
+    
+        "error-500-title": "خمسمائة",
+        "error-500-description": "يبدو هناك مشكلة مع الخادم الخاص بنا.",
+        "error-500-button-text": "جرب مرة اخرى"
+    }
+}

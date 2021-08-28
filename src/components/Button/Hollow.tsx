@@ -45,7 +45,9 @@ export const HollowButton = ({
                 `hover:border-${colour}`,
                 "hover:bg-transparent",
                 `hover:text-${colour}`,
-                "cursor-pointer"
+                `active:bg-gray6`,
+                "cursor-pointer",
+                "transition-all"
             ].join(" ")}>
                 {children}
             </a>

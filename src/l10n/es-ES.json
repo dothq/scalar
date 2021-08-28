@@ -14,6 +14,13 @@
     "landing-download-availability-for-text": "Disponible para Windows, macOS, Linux y BSD.",
     "landing-download-system-requirements-button": "Requisitos del sistema",
 
+    "header-products-submenu": "Productos",
+    "header-blog-submenu": "Blog",
+    "header-help-submenu": "Ayudar",
+    "header-about-submenu": "Sobre",
+
+    "subheader-browser-desktop-title": "Dot Browser para Escritorio",
+
     "errors": {
         "error-403-title": "Cuatro Cero Tres",
         "error-403-description": "No tiene los permisos o autorización requeridos para acceder a esta página.",

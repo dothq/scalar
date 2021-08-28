@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
+import { languages } from "../../l10n/languages";
 
 const Layout = ({ children, title, noSuffix }: { children: any, title?: string, noSuffix?: boolean }) => {
     const { locale, locales } = useRouter();
@@ -10,7 +11,7 @@ const Layout = ({ children, title, noSuffix }: { children: any, title?: string, 
     const url = `https://www.dothq.co`
 
     return (
-        <>
+        <div style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit" }}>
             <Head>
                 <title>{title 
                     ? noSuffix 
@@ -63,7 +64,7 @@ const Layout = ({ children, title, noSuffix }: { children: any, title?: string, 
             </Head>
 
             {children}
-        </>
+        </div>
     )
 }
 

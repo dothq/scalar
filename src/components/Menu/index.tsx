@@ -15,8 +15,8 @@ const MenuItem = (args: Item) => {
             href={args.href || "#"} 
             locale={args.locale}
         >
-            <a className={`cursor-pointer h-10 w-full px-5 text-sm flex items-center hover:bg-gray6 ${args.active ? `bg-gray6` : ``}`}>
-                {args.icon && <Icon className={"mr-3"} />} {args.text}
+            <a className={`rounded-lg cursor-pointer h-10 w-full px-3 text-sm flex items-center hover:bg-gray6 ${args.active ? `bg-gray6` : ``}`}>
+                {args.icon && <Icon style={{ marginInlineEnd: "0.75rem" }} />} {args.text}
             </a>
         </Link>
     )
@@ -34,7 +34,7 @@ interface Item {
 export const Menu = ({ visible, setVisible, items }: { visible?: boolean, setVisible?: any, items: Item[] }) => {
     return (
         <OutsideClickHandler onOutsideMouseUp={() => setVisible(false)}>
-            <menu className={`absolute ${visible ? "flex" : `hidden`} flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray6 rounded-2xl my-12 py-2 px-0 right-0 top-0`} style={{ minWidth: "200px" }}>
+            <menu className={`absolute ${visible ? "flex" : `hidden`} flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray6 rounded-2xl my-12 p-2 right-0 top-0 z-50 gap-1`} style={{ minWidth: "200px" }}>
                 {items.map(i => (
                     <MenuItem key={i.text} {...i} />
                 ))}

@@ -28,7 +28,7 @@ const Home = () => {
 
                         <div className={"flex gap-4 mt-12 mb-4"}>
                             <HollowButton 
-                                href={"/products/browser"} 
+                                href={"/browser"} 
                                 colour={"black"} 
                                 className={"text-xl px-10 h-14"}
                             >
@@ -40,7 +40,7 @@ const Home = () => {
                             <span className={"opacity-50"}>
                                 {t("landing-download-availability-for-text")}
                             </span>
-                            <Link href={"/products/browser/requirements"}>
+                            <Link href={"/browser/requirements"}>
                                 <a className={"opacity-70 font-medium"}>
                                     {t("landing-download-system-requirements-button")}
                                 </a>
