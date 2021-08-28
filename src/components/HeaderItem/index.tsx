@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { ChevronDown } from "../../icons/ChevronDown";
 
-export const HeaderItem = ({ text, href }: { text: string, href: string }) => {
+export const HeaderItem = ({ id, text, href, onMouseOver, onMouseLeave }: { id: string, text: string, href: string, onMouseOver?: any, onMouseLeave?: any }) => {
     const [visible, setVisible] = React.useState(false);
 
     const t = useTranslations("");
@@ -12,15 +12,12 @@ export const HeaderItem = ({ text, href }: { text: string, href: string }) => {
         <div className={"header-link-parent relative flex items-center justify-center cursor-pointer"} onMouseOver={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
             <Link href={href}>
                 <a 
+                    id={id}
                     onClick={(e: any) => {
                         e.preventDefault();
                     }}
-                    onMouseOver={(e: any) => {
-                        e.target.classList.add("header-link-active");
-                    }}
-                    onMouseLeave={(e: any) => {
-                        e.target.classList.remove("header-link-active");
-                    }}
+                    onMouseOver={(e: any) => onMouseOver ? onMouseOver() : {}}
+                    onMouseLeave={(e: any) => onMouseLeave ? onMouseLeave() : {}}
                     className={"header-link text-sm font-semibold flex max-h-9 justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
                 >
                     {text}
