@@ -23,7 +23,11 @@ export const LangPicker = ({ locale, className, style }: { locale: any, classNam
                     if(key == locale) return <Value key={key} />
                 })}
 
-                <ChevronDown style={{ marginInlineStart: "0.5rem", marginInlineEnd: "0.25rem" }} />
+                <ChevronDown className={"transition-transform"} style={{ 
+                    marginInlineStart: "0.5rem", 
+                    marginInlineEnd: "0.25rem",
+                    transform: l10nMenuVisible ? "rotate(180deg)" : ""
+                }} />
             </a>
 
             <Menu 
