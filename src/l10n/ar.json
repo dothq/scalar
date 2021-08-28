@@ -21,7 +21,13 @@
 
     "subheader-browser-desktop-title": "Dot Browser لسطح المكتب",
 
-    "cookie-banner-msg": "نحن لا نستخدم ال-cookies.",
+    "subheader-language-switcher-title": "محوّل اللغة",
+
+    "region-europe": "أوروبا",
+    "region-americas": "الأمريكتان",
+    "region-asia": "آسيا",
+
+    "see-all-languages": "مشاهدة كل اللغات",
 
     "errors": {
         "error-403-title": "أربعمائة وثلاثة",

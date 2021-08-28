@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 import { ChevronDown } from "../../icons/ChevronDown";
 import { flags } from "../../icons/Flags";
@@ -6,6 +7,8 @@ import { Menu } from "../Menu";
 
 export const LangPicker = ({ locale, className, style }: { locale: any, className?: string, style?: any }) => {
     const [l10nMenuVisible, setL10nMenuVisible] = React.useState<boolean>(false);
+
+    const t = useTranslations();
 
     return (
         <div className={`relative flex ${className || ""}`} style={style}>
@@ -36,7 +39,7 @@ export const LangPicker = ({ locale, className, style }: { locale: any, classNam
                     {
                         text: "",
                         icon: () => <div style={{ width: "100%", textAlign: "center" }}>
-                            See all languages
+                            {t("see-all-languages")}
                         </div>,
                         href: "/language-switcher"
                     }

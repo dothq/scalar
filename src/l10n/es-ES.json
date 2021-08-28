@@ -21,6 +21,14 @@
 
     "subheader-browser-desktop-title": "Dot Browser para Escritorio",
 
+    "subheader-language-switcher-title": "Selector de idioma",
+
+    "region-europe": "Europa",
+    "region-americas": "Américas",
+    "region-asia": "Asia",
+
+    "see-all-languages": "Ver todos los idiomas",
+
     "errors": {
         "error-403-title": "Cuatro Cero Tres",
         "error-403-description": "No tiene los permisos o autorización requeridos para acceder a esta página.",

@@ -6,14 +6,16 @@ export const HollowButton = ({
     colour, 
     onClick,
     className,
-    reset
+    reset,
+    disabled
 }: { 
     children: any, 
     href?: string, 
     colour: string,
     onClick?: any,
     className?: string,
-    reset?: boolean
+    reset?: boolean,
+    disabled?: boolean
 }) => {
     const onLinkClick = (e: any) => {
         if(onClick) {
@@ -47,7 +49,8 @@ export const HollowButton = ({
                 `hover:text-${colour}`,
                 `active:bg-gray6`,
                 "cursor-pointer",
-                "transition-all"
+                "transition-all",
+                disabled ? "opacity-50 pointer-events-none" : ""
             ].join(" ")}>
                 {children}
             </a>

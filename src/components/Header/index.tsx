@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
 import { ChevronDown } from "../../icons/ChevronDown";
@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 import { BungerMenu } from "../../icons/Menu";
 
 export const Header = () => {
-    const { locale } = useRouter();
+    const { locale, pathname } = useRouter();
 
     const t = useTranslations("");
     
@@ -20,7 +20,17 @@ export const Header = () => {
             <div className={"container flex-row max-w-7xl flex items-center"}>
                 <div className={"flex flex-1"}>
                     <Link href={"/"}>
-                        <a className={"bg-black rounded-full"} style={{ width: "36px", height: "36px", minWidth: "36px" }}></a>
+                        <a onContextMenu={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            if(pathname.startsWith("/bingus")) return router.push("/");
+                            router.push("/bingus");
+                        }} className={"bg-black rounded-full"} style={{ 
+                            width: "36px", 
+                            height: "36px", 
+                            minWidth: "36px" 
+                        }}></a>
                     </Link>
                 </div>
 

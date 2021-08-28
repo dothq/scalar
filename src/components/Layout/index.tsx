@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import { languages } from "../../l10n/languages";
 
-const Layout = ({ children, title, noSuffix }: { children: any, title?: string, noSuffix?: boolean }) => {
+const Layout = ({ children, title, noSuffix, selectionColour }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: string }) => {
     const { locale, locales } = useRouter();
 
     const t = useTranslations();
@@ -61,6 +61,14 @@ const Layout = ({ children, title, noSuffix }: { children: any, title?: string, 
                     <link key={locale} rel="alternate" href={`${url}/${locale}`} hrefLang={locale}></link>
                 ))}
                 <link rel="alternate" href={url} hrefLang="x-default"></link>
+
+                {selectionColour && <style jsx>
+                    {`
+                        ::selection {
+                            background-color: ${selectionColour} !important;
+                        }
+                    `}
+                </style>}
             </Head>
 
             {children}

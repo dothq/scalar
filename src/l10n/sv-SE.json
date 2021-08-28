@@ -21,7 +21,13 @@
 
     "subheader-browser-desktop-title": "Dot Browser för Skrivbordet",
 
-    "cookie-banner-msg": "Vi använder inte oss utav kakor.",
+    "subheader-language-switcher-title": "Språkväxlare",
+
+    "region-europe": "Europa",
+    "region-americas": "Amerika",
+    "region-asia": "Asien",
+
+    "see-all-languages": "Se alla språk",
 
     "errors": {
         "error-403-title": "Fyra Noll Tre",

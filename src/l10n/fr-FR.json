@@ -21,7 +21,13 @@
 
     "subheader-browser-desktop-title": "Dot Browser pour ordinateur de bureau",
 
-    "cookie-banner-msg": "Nous n'utilisons pas de cookies.",
+    "subheader-language-switcher-title": "Sélecteur de langue",
+
+    "region-europe": "L'Europe",
+    "region-americas": "Amériques",
+    "region-asia": "Asie",
+
+    "see-all-languages": "Voir toutes les langues",
 
     "errors": {
         "error-403-title": "Quatre Oh Trois",

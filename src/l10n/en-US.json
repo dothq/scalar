@@ -21,6 +21,14 @@
 
     "subheader-browser-desktop-title": "Dot Browser for Desktop",
 
+    "subheader-language-switcher-title": "Language Switcher",
+
+    "region-europe": "Europe",
+    "region-americas": "Americas",
+    "region-asia": "Asia",
+
+    "see-all-languages": "See all languages",
+
     "errors": {
         "error-403-title": "Four Oh Three",
         "error-403-description": "You don't have the required permissions or authorisation to access this page.",
