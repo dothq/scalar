@@ -19,7 +19,7 @@ export const Subheader = ({
 
     return (
         <div className={"sticky w-full h-16 flex justify-center"}>
-            <div className={"border-b border-gray6 flex h-full w-full items-center px-7"} style={{
+            <div className={"border-b border-gray6 flex h-full w-full items-center md:px-7 sm:px-8 px-7"} style={{
                 maxWidth: "83rem"
             }}>
                 <h1 className={"font-semibold"}>

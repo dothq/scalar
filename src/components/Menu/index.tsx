@@ -15,7 +15,7 @@ const MenuItem = (args: Item) => {
             href={args.href || "#"} 
             locale={args.locale}
         >
-            <a className={`rounded-lg cursor-pointer h-10 w-full px-3 text-sm flex items-center hover:bg-gray6 ${args.active ? `bg-gray6` : ``}`}>
+            <a onClick={args.onClick} className={`rounded-lg cursor-pointer h-10 w-full px-3 text-sm flex items-center hover:bg-gray6 ${args.active ? `bg-gray6` : ``}`}>
                 {args.icon && <Icon style={{ marginInlineEnd: "0.75rem" }} />} {args.text}
             </a>
         </Link>
@@ -28,7 +28,8 @@ interface Item {
     text: string, 
     icon?: any,
     active?: boolean,
-    locale?: string
+    locale?: string,
+    onClick?: any
 }
 
 export const Menu = ({ visible, setVisible, items }: { visible?: boolean, setVisible?: any, items: Item[] }) => {
@@ -36,7 +37,10 @@ export const Menu = ({ visible, setVisible, items }: { visible?: boolean, setVis
         <OutsideClickHandler onOutsideMouseUp={() => setVisible(false)}>
             <menu className={`absolute ${visible ? "flex" : `hidden`} flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray6 rounded-2xl my-12 p-2 right-0 top-0 z-50 gap-1`} style={{ minWidth: "200px" }}>
                 {items.map(i => (
-                    <MenuItem key={i.text} {...i} />
+                    <MenuItem onClick={() => {
+                        if(i.onClick) i.onClick();
+                        setVisible(false)
+                    }} key={i.text} {...i} />
                 ))}
             </menu>
         </OutsideClickHandler>

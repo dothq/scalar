@@ -20,18 +20,27 @@ export const LangPicker = ({ locale, className, style }: { locale: any, classNam
                     if(key == locale) return <Value key={key} />
                 })}
 
-                <ChevronDown  style={{ marginInlineStart: "0.5rem", marginInlineEnd: "0.25rem" }} />
+                <ChevronDown style={{ marginInlineStart: "0.5rem", marginInlineEnd: "0.25rem" }} />
             </a>
 
             <Menu 
                 visible={l10nMenuVisible} 
                 setVisible={setL10nMenuVisible}
-                items={languages.map(l => ({
-                    text: l.name,
-                    icon: (flags as any)[l.code],
-                    active: locale == l.code,
-                    locale: l.code
-                }))} />
+                items={[
+                    ...languages.map(l => ({
+                        text: l.name,
+                        icon: (flags as any)[l.code],
+                        active: locale == l.code,
+                        locale: l.code
+                    })),
+                    {
+                        text: "",
+                        icon: () => <div style={{ width: "100%", textAlign: "center" }}>
+                            See all languages
+                        </div>,
+                        href: "/language-switcher"
+                    }
+                ]} />
         </div>
     )
 }

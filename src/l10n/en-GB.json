@@ -23,6 +23,8 @@
 
     "cookie-banner-msg": "We don't use cookies.",
 
+    "subheader-language-switcher-title": "Language Switcher",
+
     "errors": {
         "error-403-title": "Four Oh Three",
         "error-403-description": "You don't have the required permissions or authorisation to access this page.",
