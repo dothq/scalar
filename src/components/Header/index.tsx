@@ -39,7 +39,7 @@ export const Header = () => {
                 </div>
 
                 <div className={"h-full items-center justify-center hidden md:flex"}>
-                    <div className={"flex column justify-center"} onMouseLeave={() => setMenuVisible(false)}>
+                    <div className={"flex column justify-center h-full"} onMouseLeave={() => setMenuVisible(false)}>
                         <HeaderItem 
                             text={String(t("header-products-submenu"))} 
                             href={"/products"} 
@@ -56,13 +56,14 @@ export const Header = () => {
                         />
 
                         <Link href={"/about"}>
-                            <a 
-                                onMouseOver={(e: any) => {
-                                    setMenuVisible(false);
-                                }}
-                                className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
-                            >
-                                {t("header-about-submenu")}
+                            <a onMouseOver={(e: any) => {
+                                setMenuVisible(false);
+                            }} className={"header-link-parent relative flex items-center justify-center cursor-pointer"}>
+                                <div 
+                                    className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-gray6 rounded-md"}
+                                >
+                                    {t("header-about-submenu")}
+                                </div>
                             </a>
                         </Link>
                     </div>

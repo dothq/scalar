@@ -13,6 +13,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.header-link.header-link-active > svg {
+.header-link-parent:hover > .header-link {
+    background-color: rgba(234, 234, 234, 1);
+}
+
+.header-link-parent:hover > .header-link > svg {
     transform: rotate(180deg)
 }
