@@ -32,6 +32,7 @@ module.exports = {
       green: "#0DD762",
       neon: "#00FFB7",
       blue: "#1662D3",
+      bluelight: "rgb(244, 248, 254)",
       violet: "#742CD0",
       pink: "#C32CD0",
       madder: "#D02C67",

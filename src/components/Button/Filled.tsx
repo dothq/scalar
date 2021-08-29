@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const HollowButton = ({ 
+export const FilledButton = ({ 
     children, 
     href, 
     colour, 
@@ -42,12 +42,8 @@ export const HollowButton = ({
                 "select-none",
                 `text-${colour == "white" ? "black" : "white"}`,
                 "font-medium",
-                "border-2",
-                "border-transparent",
-                `hover:border-${colour}`,
-                "hover:bg-transparent",
-                `hover:text-${colour}`,
-                `active:bg-gray6`,
+                `bg-gradient-to-r`,
+                `hover:bg-opacity-85`,
                 "cursor-pointer",
                 "transition-all",
                 disabled ? "opacity-50 pointer-events-none" : ""

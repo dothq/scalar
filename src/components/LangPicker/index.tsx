@@ -18,7 +18,7 @@ export const LangPicker = ({ locale, className, style }: { locale: any, classNam
 
                 if(l10nMenuVisible) return setL10nMenuVisible(false);
                 else setL10nMenuVisible(true);
-            }} href={"/language-switcher"} className={`rounded-full flex items-center h-min p-2 hover:bg-gray6 cursor-pointer ${l10nMenuVisible ? `pointer-events-none bg-gray6` : ``}`}>
+            }} href={"/language-switcher"} className={`rounded-full flex items-center h-min p-2 hover:bg-bluelight cursor-pointer ${l10nMenuVisible ? `pointer-events-none bg-gray6` : ``}`}>
                 {Object.entries(flags).map(([key, Value]) => {
                     if(key == locale) return <Value key={key} />
                 })}

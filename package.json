@@ -15,6 +15,7 @@
     "gen:revision": "git rev-parse HEAD > ref"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "document.contains": "^1.0.2",
     "next": "^11.1.0",
     "next-intl": "^1.5.1",

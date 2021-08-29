@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const HollowButton = ({ 
+export const TextButton = ({ 
     children, 
     href, 
     colour, 
@@ -37,17 +37,12 @@ export const HollowButton = ({
                 "rounded-full",
                 "w-max",
                 "h-12",
-                `bg-${colour}`,
                 "px-7",
                 "select-none",
-                `text-${colour == "white" ? "black" : "white"}`,
+                `text-${colour}`,
                 "font-medium",
-                "border-2",
-                "border-transparent",
-                `hover:border-${colour}`,
-                "hover:bg-transparent",
-                `hover:text-${colour}`,
-                `active:bg-gray6`,
+                `hover:bg-opacity-5`,
+                `hover:bg-${colour}`,
                 "cursor-pointer",
                 "transition-all",
                 disabled ? "opacity-50 pointer-events-none" : ""

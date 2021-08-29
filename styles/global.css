@@ -4,19 +4,14 @@
     src: url("../public/static/fonts/Karla.woff2") format("woff2");
 }
 
-*::selection {
-    background-color: black;
-    color: white;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* .header-link-parent:hover > .header-link {
-    background-color: rgba(234, 234, 234, 1);
-} */
-
 .header-link-parent:hover > .header-link > svg {
     transform: rotate(180deg)
+}
+
+.subheader-link:hover {
+    box-shadow: 0px 1px 0px gray, inset 0px -1px 0px gray;
 }

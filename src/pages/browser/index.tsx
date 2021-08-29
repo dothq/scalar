@@ -17,7 +17,16 @@ const Browser = () => {
             <div className={"w-full flex flex-col h-full md:min-h-screen"}>
                 <Header />
 
-                <Subheader id={"browser-desktop"} />
+                <Subheader 
+                    id={"browser-desktop"}
+                    rootHref={"/browser"}
+                    links={[
+                        { text: "Features", href: "/browser/features" },
+                        { text: "Comparison", href: "/browser/comparison" },
+                        { text: "What's New", href: "/browser/releases/latest" }
+                    ]}
+                    buttonAction={{ text: "Download", href: "/browser/download" }}
+                />
             </div>
         </Layout>
     )

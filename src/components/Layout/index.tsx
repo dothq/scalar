@@ -62,7 +62,7 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
                 ))}
                 <link rel="alternate" href={url} hrefLang="x-default"></link>
 
-                {selectionColour && <style jsx>
+                {selectionColour && <style>
                     {`
                         ::selection {
                             background-color: ${selectionColour} !important;

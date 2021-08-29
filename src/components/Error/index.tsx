@@ -27,7 +27,7 @@ export const Error = ({ code, buttonClick, buttonHref }: { code: number, buttonC
                     </p>
 
                     <HollowButton 
-                        colour={"black"} 
+                        colour={"blue"} 
                         href={buttonHref}
                         onClick={buttonClick}
                     >

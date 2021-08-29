@@ -19,6 +19,9 @@
     "header-help-submenu": "Help",
     "header-about-submenu": "About",
 
+    "header-dot-one-create-button": "Join Dot One",
+    "header-dot-one-login-button": "Sign In",
+
     "subheader-browser-desktop-title": "Dot Browser for Desktop",
 
     "subheader-language-switcher-title": "Language Switcher",
