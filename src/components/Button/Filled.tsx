@@ -34,18 +34,18 @@ export const FilledButton = ({
                 "flex",
                 "justify-center",
                 "items-center",
-                "rounded-full",
+                "rounded-md",
                 "w-max",
-                "h-12",
+                "h-10",
                 `bg-${colour}`,
-                "px-7",
+                "px-4",
                 "select-none",
                 `text-${colour == "white" ? "black" : "white"}`,
-                "font-medium",
                 `bg-gradient-to-r`,
                 `hover:bg-opacity-85`,
                 "cursor-pointer",
                 "transition-all",
+                "font-bold",
                 disabled ? "opacity-50 pointer-events-none" : ""
             ].join(" ")}>
                 {children}

@@ -3,9 +3,10 @@ import React from "react";
 import { ChevronDown } from "../../icons/ChevronDown";
 import { flags } from "../../icons/Flags";
 import { languages } from "../../l10n/languages";
+import { Themes } from "../../utils/theme";
 import { Menu } from "../Menu";
 
-export const LangPicker = ({ locale, className, style }: { locale: any, className?: string, style?: any }) => {
+export const LangPicker = ({ locale, className, style, theme }: { locale: any, className?: string, style?: any, theme?: number }) => {
     const [l10nMenuVisible, setL10nMenuVisible] = React.useState<boolean>(false);
 
     const t = useTranslations();
@@ -18,7 +19,7 @@ export const LangPicker = ({ locale, className, style }: { locale: any, classNam
 
                 if(l10nMenuVisible) return setL10nMenuVisible(false);
                 else setL10nMenuVisible(true);
-            }} href={"/language-switcher"} className={`rounded-full flex items-center h-min p-2 hover:bg-bluelight cursor-pointer ${l10nMenuVisible ? `pointer-events-none bg-gray6` : ``}`}>
+            }} href={"/language-switcher"} className={`rounded-md flex items-center h-min p-2 ${theme == Themes.Dark ? `hover:bg-gray3` : `hover:bg-bluelight`} cursor-pointer ${l10nMenuVisible ? `pointer-events-none ${theme == Themes.Dark ? `bg-gray3` : `bg-gray6`}` : ``}`}>
                 {Object.entries(flags).map(([key, Value]) => {
                     if(key == locale) return <Value key={key} />
                 })}

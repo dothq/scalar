@@ -12,8 +12,9 @@ import { BungerMenu } from "../../icons/Menu";
 import { HeaderItem } from "../HeaderItem";
 import { TextButton } from "../Button/Text";
 import axios, { AxiosResponse } from "axios";
+import { Themes } from "../../utils/theme";
 
-export const Header = () => {
+export const Header = ({ theme }: { theme?: number }) => {
     const { locale, pathname } = useRouter();
 
     const t = useTranslations("");
@@ -30,15 +31,15 @@ export const Header = () => {
 
     return (
         <>
-            <div className={`w-full ${motd ? `h-12` : `h-0`} flex items-center bg-bluelight justify-center transition-all overflow-hidden`}>
+            {/* <div className={`w-full ${motd ? `h-12` : `h-0`} flex items-center bg-bluelight justify-center transition-all overflow-hidden`}>
                 <div className={"container flex-row max-w-7xl h-full gap-3 flex items-center justify-center font-medium text-base text-blue"}>
                     {motd}
                 </div>
-            </div>
+            </div> */}
 
-            <header className={"shadow-2xl bg-white container max-h-20 h-20 w-full max-w-full flex justify-center md:px-8 sm:px-8 px-4"}>
+            <header className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container max-h-20 h-20 w-full max-w-full flex justify-center md:px-8 sm:px-8 px-4`}>
                 <div className={"container flex-row max-w-7xl flex items-center"}>
-                    <div className={"flex"}>
+                    <div className={"flex flex-1"}>
                         <Link href={"/"}>
                             <a onContextMenu={(e) => {
                                 e.preventDefault();
@@ -46,10 +47,11 @@ export const Header = () => {
 
                                 if(pathname.startsWith("/bingus")) return router.push("/");
                                 router.push("/bingus");
-                            }} className={"bg-black rounded-full"} style={{ 
+                            }} className={"rounded-full"} style={{ 
                                 width: "36px", 
                                 height: "36px", 
-                                minWidth: "36px" 
+                                minWidth: "36px",
+                                backgroundColor: "currentcolor"
                             }}></a>
                         </Link>
                     </div>
@@ -60,18 +62,21 @@ export const Header = () => {
                                 id={"header-link-products"}
                                 text={String(t("header-products-submenu"))} 
                                 href={"/products"} 
+                                theme={theme}
                             />
 
                             <HeaderItem 
                                 id={"header-link-blog"}
                                 text={String(t("header-blog-submenu"))} 
                                 href={"/blog"} 
+                                theme={theme}
                             />
 
                             <HeaderItem 
                                 id={"header-link-help"}
                                 text={String(t("header-help-submenu"))} 
                                 href={"/help"} 
+                                theme={theme}
                             />
 
                             <Link href={"/about"}>
@@ -80,7 +85,7 @@ export const Header = () => {
                                 >
                                     <div 
                                         id={"header-link-about"}
-                                        className={"header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 hover:bg-bluelight rounded-md"}
+                                        className={`header-link text-sm font-semibold flex justify-center items-center cursor-pointer z-10 px-5 py-2 ${theme == Themes.Dark ? `hover:bg-gray3` : `hover:bg-bluelight`} rounded-md`}
                                     >
                                         {t("header-about-submenu")}
                                     </div>
@@ -89,14 +94,14 @@ export const Header = () => {
                         </div>
                     </div>
                     
-                    <div className={"row flex-1 justify-end items-center hidden md:flex gap-2"}>
-                        <LangPicker locale={locale} />
+                    <div className={"row flex-1 justify-end items-center hidden md:flex gap-4"}>
+                        <LangPicker locale={locale} theme={theme} />
 
-                        <TextButton className={"md:hidden lg:flex"} colour={"blue"}>
+                        {/* <TextButton className={"md:hidden lg:flex"} colour={"blue"}>
                             {t("header-dot-one-login-button")}
-                        </TextButton>
+                        </TextButton> */}
 
-                        <HollowButton className={"md:hidden lg:flex"} colour={"blue"}>
+                        <HollowButton className={"md:hidden lg:flex"} colour={theme == Themes.Dark ? `white` : `blue`}>
                             {t("header-dot-one-create-button")}
                         </HollowButton>
                     </div>

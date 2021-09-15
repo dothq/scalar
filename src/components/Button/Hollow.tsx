@@ -7,7 +7,8 @@ export const HollowButton = ({
     onClick,
     className,
     reset,
-    disabled
+    disabled,
+    style
 }: { 
     children: any, 
     href?: string, 
@@ -15,7 +16,8 @@ export const HollowButton = ({
     onClick?: any,
     className?: string,
     reset?: boolean,
-    disabled?: boolean
+    disabled?: boolean,
+    style?: any
 }) => {
     const onLinkClick = (e: any) => {
         if(onClick) {
@@ -29,25 +31,25 @@ export const HollowButton = ({
     
     return (
         <Link href={typeof(href) == "undefined" ? "#" : href}>
-            <a onClick={onLinkClick} className={!!reset ? className : [
+            <a onClick={onLinkClick} style={style} className={!!reset ? className : [
                 ...(className || "").split(" "),
                 "flex",
                 "justify-center",
                 "items-center",
-                "rounded-full",
                 "w-max",
-                "h-12",
+                "h-10",
                 `bg-${colour}`,
-                "px-7",
+                "px-4",
                 "select-none",
                 `text-${colour == "white" ? "black" : "white"}`,
-                "font-medium",
+                "font-bold",
                 "border-2",
                 "border-transparent",
+                `bg-opacity-100`,
                 `hover:border-${colour}`,
                 "hover:bg-transparent",
                 `hover:text-${colour}`,
-                `active:bg-gray6`,
+                `hover:bg-opacity-100`,
                 "cursor-pointer",
                 "transition-all",
                 disabled ? "opacity-50 pointer-events-none" : ""

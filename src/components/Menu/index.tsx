@@ -35,7 +35,7 @@ interface Item {
 export const Menu = ({ visible, setVisible, items }: { visible?: boolean, setVisible?: any, items: Item[] }) => {
     return (
         <OutsideClickHandler onOutsideMouseUp={() => setVisible(false)}>
-            <menu className={`absolute ${visible ? "flex select-all" : `hidden select-none`} flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray6 rounded-2xl my-12 p-2 right-0 top-0 z-50 gap-1`} style={{ minWidth: "200px" }}>
+            <menu className={`absolute ${visible ? "flex select-all" : `hidden select-none`} flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray6 text-black rounded-2xl my-12 p-2 right-0 top-0 z-50 gap-1`} style={{ minWidth: "200px" }}>
                 {items.map(i => (
                     <MenuItem onClick={() => {
                         if(i.onClick) i.onClick();

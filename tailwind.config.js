@@ -37,6 +37,7 @@ module.exports = {
       pink: "#C32CD0",
       madder: "#D02C67",
       bingus: "#CF9B90",
+      pureblack: "#09090a",
       black: "#191A1C",
       gray1: "#18171D",
       gray2: "#1A1A22",

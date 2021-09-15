@@ -4,9 +4,23 @@
     src: url("../public/static/fonts/Karla.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../public/static/fonts/Satoshi.woff2') format('woff2'),
+        url('../public/static/fonts/Satoshi.woff') format('woff'),
+        url('../public/static/fonts/Satoshi.ttf') format('truetype');
+        font-weight: 300 900;
+        font-display: swap;
+        font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satoshi';
+}
 
 .header-link-parent:hover > .header-link > svg {
     transform: rotate(180deg)

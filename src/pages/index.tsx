@@ -6,6 +6,7 @@ import { FilledButton } from "../components/Button/Filled";
 import { HollowButton } from "../components/Button/Hollow";
 import { Header } from "../components/Header";
 import Layout from "../components/Layout";
+import { Themes } from "../utils/theme";
 
 const Home = () => {
     const { locale } = useRouter();
@@ -13,34 +14,42 @@ const Home = () => {
     const t = useTranslations("");
 
     return (
-        <Layout>
-            <div className={"w-full flex flex-col h-full"}>
-                <Header />
+        <Layout selectionColour={"rgb(255, 255, 255, 0.5)"}>
+            <div className={"w-full flex flex-col h-screen text-white"}>
+                <Header theme={Themes.Dark} />
 
-                <div className={"w-full flex justify-center flex-1 py-20 md:py-40 bg-blue bg-opacity-5"} style={{ backgroundImage: `linear-gradient(to top, #f5f5f5, white)` }}>
-                    <div className={"max-w-6xl flex flex-col items-center justify-center text-gray1"}>
-                        <h1 className={"text-4xl px-8 sm:text-6xl sm:max-w-3xl sm:px-8 md:max-w-4xl md:px-8 lg:text-7xl lg:max-w-5xl xl:text-8xl xl:max-w-6xl font-extrabold text-center mb-10 tracking-tight"}>
-                            {t("landing-title")}
+                <div className={"w-full flex justify-center md:py-40 flex-1"}>
+                    <div className={"max-w-7xl flex flex-col justify-center w-full gap-16"}>
+                        <h1 className={"text-9xl text-gray6 font-normal"}>
+                            The browser with privacy at heart.
                         </h1>
 
-                        <p className={"text-base px-5 md:text-2xl max-w-3xl text-center text-opacity-70"}>
-                            {t("landing-description")}
-                        </p>
-
-                        <div className={"flex gap-4 mt-12 mb-4"}>
-                            <FilledButton 
-                                href={"/browser"} 
-                                colour={"blue"} 
-                                className={"text-xl px-10 h-14"}
-                            >
-                                {t("landing-download-button-text")}
-                            </FilledButton>
-                        </div>
+                        <span className={"text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>Dot Browser is a next-generation browser designed with privacy at its core.</span>
+                    
+                        <HollowButton 
+                            colour={"white"}
+                            className={"px-12 h-14 text-xl"}
+                            style={{ borderRadius: "0px" }}
+                        >
+                            Download
+                        </HollowButton>
                     </div>
-
-
                 </div>
             </div>
+
+            <div className={"w-full flex justify-center flex-1 py-20 md:py-40 "}>
+                <div className={"max-w-7xl flex flex-col items-center justify-center w-full"}>
+                    <h1 className={"text-9xl text-gray6 font-semibold"}>
+                        No, seriously. No hidden strings or gotchas.
+                    </h1>
+                </div>
+            </div>
+
+            <style>{`
+                body {
+                    background-color: rgb(9, 9, 10);
+                }
+            `}</style>
         </Layout>
     )
 }
