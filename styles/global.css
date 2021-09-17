@@ -53,10 +53,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(180deg)
 }
 
-.subheader-link:hover {
-    box-shadow: 0px 1px 0px gray, inset 0px -1px 0px gray;
-}
-
 .noise {
     backdrop-filter: blur(12px);
     --tw-bg-opacity: 0.9 !important;
