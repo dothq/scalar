@@ -2,6 +2,7 @@ import type { AppProps } from "next/app"
 import { NextIntlProvider } from "next-intl";
 
 import "../../styles/global.css";
+import { GetServerSidePropsContext } from "next";
 
 const Application = ({ Component, pageProps }: AppProps) => {
     return (

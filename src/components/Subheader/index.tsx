@@ -26,7 +26,7 @@ export const Subheader = ({
     const t = useTranslations();
 
     return (
-        <div className={"sticky top-0 bg-white w-full h-16 flex justify-center border-b border-t border-gray6 md:px-8 sm:px-8 px-4"}>
+        <div className={"sticky top-0 z-0 bg-white w-full h-16 flex justify-center border-b border-t border-gray6 md:px-8 sm:px-8 px-4"}>
             <div className={"container flex-row max-w-7xl flex items-center"}>
                 <div className={"flex flex-1 h-9 items-center"}>
                     <Link href={rootHref || ""}>

@@ -1,6 +1,7 @@
 import React from "react";
 import { HollowButton } from "../components/Button/Hollow";
 import { Header } from "../components/Header";
+import { Input } from "../components/Input";
 import Layout from "../components/Layout";
 
 const Bingus = () => {
@@ -49,16 +50,16 @@ const Bingus = () => {
                     <p>{status}</p>
                     <img src={`/static/images/lord-bingus${state.length ? `-${state}` : ``}.webp`} className={"rounded-3xl mt-6"}></img>
 
-                    <input 
-                        className={"mt-12 appearance-none outline-none w-96 px-4 py-2 bg-gray6 border-transparent border-2 focus:border-bingus focus:bg-white transition-all rounded-full"} 
+                    <Input 
                         type={"text"} 
+                        colour={"bingus"}
                         placeholder={"Enter a gift to give to Lord Bingus"}
                         ref={giftRef}
                         onChange={() => {
                             if(!giftRef.current?.value.trim().length) return setThinking(true);
                             else setThinking(false);
                         }}
-                    ></input>
+                    ></Input>
 
                     <HollowButton 
                         onClick={doTheThings}

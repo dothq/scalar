@@ -1,49 +1,92 @@
+import axios from "axios";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { useRouter } from "next/router"
 import React from "react";
-import { FilledButton } from "../components/Button/Filled";
+import { Controller, Scene } from "react-scrollmagic";
+import { ThemeColours } from "../../theme";
 import { HollowButton } from "../components/Button/Hollow";
 import { Header } from "../components/Header";
 import Layout from "../components/Layout";
+import { Download } from "../icons/Download";
 import { Themes } from "../utils/theme";
+import { Converter } from "showdown";
+import xss from "xss";
+import { useScrollYPosition } from "react-use-scroll-position";
 
-const Home = () => {
+const Home = ({ motd }: { motd?: string }) => {
     const { locale } = useRouter();
 
     const t = useTranslations("");
 
+    const y = useScrollYPosition();
+
     return (
-        <Layout selectionColour={"rgb(255, 255, 255, 0.5)"}>
-            <div className={"w-full flex flex-col h-screen text-white"}>
-                <Header theme={Themes.Dark} />
+        <Layout selectionColour={ThemeColours.Violet.toHex(0.25)}>
+            <Header theme={Themes.Dark} motd={motd} />
 
-                <div className={"w-full flex justify-center md:py-40 flex-1"}>
-                    <div className={"max-w-7xl flex flex-col justify-center w-full gap-16"}>
-                        <h1 className={"text-9xl text-gray6 font-normal"}>
-                            The browser with privacy at heart.
-                        </h1>
+            <Controller vertical={true}>
+                <Scene 
+                    duration={2000}
+                    pin
+                    offset={450}
+                >
+                    <div>
+                        {/* <div className={"landing-trick-1"}>
+                            <img src={}
+                        </div> */}
+                        <div className={"w-full text-white flex justify-center"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                            <div className={"max-w-7xl sm:py-20 md:py-0 sm:text-center sm:px-5 md:px-0 md:text-left"}>
+                                <div className={"flex flex-col justify-center w-full h-full gap-16"}>
+                                    <h1 className={"text-9xl text-gray6 font-normal"}>
+                                        {t("landing-title")}
+                                    </h1>
 
-                        <span className={"text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>Dot Browser is a next-generation browser designed with privacy at its core.</span>
-                    
-                        <HollowButton 
-                            colour={"white"}
-                            className={"px-12 h-14 text-xl"}
-                            style={{ borderRadius: "0px" }}
-                        >
-                            Download
-                        </HollowButton>
+                                    <span className={"text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>
+                                        {t("landing-description")}
+                                    </span>
+                                
+                                    <HollowButton 
+                                        colour={"white"}
+                                        className={"px-12 h-20 text-4xl"}
+                                        style={{ borderRadius: "0px" }}
+                                    >
+                                        <Download width={24} height={24} style={{ marginInlineEnd: "16px" }} />
+                                        Download 
+                                    </HollowButton>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </Scene>
+                <Scene 
+                    duration={0}
+                    offset={450}
+                    pin={{ pushFollowers: false }}
+                >
+                    <div className={"w-full text-white flex justify-center"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                        <div className={"max-w-7xl sm:py-20 md:py-0 sm:text-center sm:px-5 md:px-0 md:text-left"}>
+                            <div className={"flex flex-col justify-center w-full h-full gap-16"}>
+                                <h1 className={"text-9xl text-gray6 font-normal"}>
+                                    {t("landing-title")}
+                                </h1>
 
-            <div className={"w-full flex justify-center flex-1 py-20 md:py-40 "}>
-                <div className={"max-w-7xl flex flex-col items-center justify-center w-full"}>
-                    <h1 className={"text-9xl text-gray6 font-semibold"}>
-                        No, seriously. No hidden strings or gotchas.
-                    </h1>
-                </div>
-            </div>
+                                <span className={"text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>
+                                    {t("landing-description")}
+                                </span>
+                            
+                                <HollowButton 
+                                    colour={"white"}
+                                    className={"px-12 h-20 text-4xl"}
+                                    style={{ borderRadius: "0px" }}
+                                >
+                                    <Download width={24} height={24} style={{ marginInlineEnd: "16px" }} />
+                                    Download 
+                                </HollowButton>
+                            </div>
+                        </div>
+                    </div>
+                </Scene>
+            </Controller>
 
             <style>{`
                 body {
@@ -54,10 +97,17 @@ const Home = () => {
     )
 }
 
-export function getStaticProps({ locale }: { locale: string }) {
+export async function getStaticProps({ locale }: { locale: string }) {
+    const res = await axios.get("https://raw.githubusercontent.com/dothq/motd/main/motd.md");
+
+    const converter = new Converter({ openLinksInNewWindow: true });
+    
     return {
         props: {
             messages: require(`../l10n/${locale}.json`),
+            motd: xss(
+                converter.makeHtml(res.data)
+            )
         }
     };
 }

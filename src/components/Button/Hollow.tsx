@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import React from 'react';
+import { useRipple } from 'react-use-ripple';
+import { ThemeColours } from "../../../theme";
 
 export const HollowButton = ({ 
     children, 
@@ -28,10 +31,15 @@ export const HollowButton = ({
             onClick();
         }
     }
+
+    const ref = React.createRef<HTMLAnchorElement>();
+    if(colour && colour.length) {
+        useRipple(ref, { animationLength: 350, rippleColor: ThemeColours[colour].toRGB(0.3) });
+    }
     
     return (
         <Link href={typeof(href) == "undefined" ? "#" : href}>
-            <a onClick={onLinkClick} style={style} className={!!reset ? className : [
+            <a onClick={onLinkClick} style={style} ref={ref} className={!!reset ? className : [
                 ...(className || "").split(" "),
                 "flex",
                 "justify-center",

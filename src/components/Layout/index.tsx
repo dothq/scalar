@@ -2,6 +2,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import { languages } from "../../l10n/languages";
+import React from "react";
+import { ArrowTop } from "../../icons/ArrowTop";
+import { useRipple } from "react-use-ripple";
+import { ThemeColours } from "../../../theme";
 
 const Layout = ({ children, title, noSuffix, selectionColour }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: string }) => {
     const { locale, locales } = useRouter();
@@ -10,8 +14,19 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
 
     const url = `https://www.dothq.co`
 
+    const [scTopVisible, setScTopVisible] = React.useState(false);
+
+    React.useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScTopVisible(window.scrollY >= 200)
+        })
+    })
+
+    const toTopRef = React.createRef<HTMLAnchorElement>();
+    useRipple(toTopRef, { animationLength: 350, rippleColor: ThemeColours.White.toHex(0.3) });
+
     return (
-        <div style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit" }}>
+        <div style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit", scrollBehavior: "smooth" }}>
             <Head>
                 <title>{title 
                     ? noSuffix 
@@ -72,6 +87,14 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
             </Head>
 
             {children}
+
+            <a 
+                className={`bg-white shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 border-transparent hover:bg-pureblack hover:border-white hover:text-white cursor-pointer`}
+                onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+                ref={toTopRef}
+            >
+                <ArrowTop />
+            </a>
         </div>
     )
 }

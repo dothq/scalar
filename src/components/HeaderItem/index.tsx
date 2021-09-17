@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
+import { useRipple } from "react-use-ripple";
+import { ThemeColours } from "../../../theme";
 import { ChevronDown } from "../../icons/ChevronDown";
 import { Themes } from "../../utils/theme";
 
@@ -8,6 +10,9 @@ export const HeaderItem = ({ id, text, href, onMouseOver, onMouseLeave, theme }:
     const [visible, setVisible] = React.useState(false);
 
     const t = useTranslations("");
+
+    const ref = React.createRef<HTMLAnchorElement>();
+    useRipple(ref, { animationLength: 350, rippleColor: theme == Themes.Dark ? ThemeColours.Black.toHex(0.15) : ThemeColours.Blue.toHex(0.15) });
 
     return (
         <div className={"header-link-parent relative flex items-center justify-center cursor-pointer"} onMouseOver={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
@@ -19,6 +24,7 @@ export const HeaderItem = ({ id, text, href, onMouseOver, onMouseLeave, theme }:
                     }}
                     onMouseOver={(e: any) => onMouseOver ? onMouseOver() : {}}
                     onMouseLeave={(e: any) => onMouseLeave ? onMouseLeave() : {}}
+                    ref={ref}
                     className={`header-link text-sm font-semibold flex max-h-9 justify-center items-center cursor-pointer z-10 px-5 py-2 ${theme == Themes.Dark ? `hover:bg-gray3` : `hover:bg-bluelight`} rounded-md transition-colors`}
                 >
                     {text}

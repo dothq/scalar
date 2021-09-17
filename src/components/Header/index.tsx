@@ -13,31 +13,40 @@ import { HeaderItem } from "../HeaderItem";
 import { TextButton } from "../Button/Text";
 import axios, { AxiosResponse } from "axios";
 import { Themes } from "../../utils/theme";
+import { ThemeColours } from "../../../theme";
 
-export const Header = ({ theme }: { theme?: number }) => {
+export const Header = ({ theme, motd }: { theme?: number, motd?: string }) => {
     const { locale, pathname } = useRouter();
 
     const t = useTranslations("");
 
-    const [motd, setMotd] = React.useState();
+    const [border, setBorder] = React.useState(`noise border-b-2 border-gray${theme == Themes.Dark ? 1 : 6}`);
+
+    const onScroll = () => {
+        if(window.scrollY >= 80) {
+            setBorder(`noise border-b-2 border-gray${theme == Themes.Dark ? 1 : 6}`)
+        } else {
+            setBorder("border-b-2 border-transparent")
+        }
+    }
 
     React.useEffect(() => {
-        axios.get(
-            "https://raw.githubusercontent.com/dothq/motd/main/motd.md"
-        ).then((r: AxiosResponse) => {
-            setMotd(r.data)
-        });
-    }, [])
+        window.addEventListener("scroll", onScroll);
+        window.addEventListener("DOMContentLoaded", onScroll);
+    }, []);
+
+    React.useEffect(onScroll, [pathname])
 
     return (
         <>
-            {/* <div className={`w-full ${motd ? `h-12` : `h-0`} flex items-center bg-bluelight justify-center transition-all overflow-hidden`}>
-                <div className={"container flex-row max-w-7xl h-full gap-3 flex items-center justify-center font-medium text-base text-blue"}>
-                    {motd}
+            <div className={`w-full h-12 flex items-center ${theme == Themes.Dark ? `bg-gray1 text-gray6` : `bg-bluelight text-blue`} justify-center transition-all overflow-hidden border-b-1 sticky top-0`}>
+                <div className={"container flex-row max-w-7xl h-full gap-3 flex items-center justify-center font-medium text-base motd-special"} dangerouslySetInnerHTML={{
+                    __html: `${motd}`
+                }} style={({ "--motd-accent-color": theme == Themes.Dark ? ThemeColours.Neon.toHex() : ThemeColours.Blue.toHex() }) as any}>
                 </div>
-            </div> */}
+            </div>
 
-            <header className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container max-h-20 h-20 w-full max-w-full flex justify-center md:px-8 sm:px-8 px-4`}>
+            <header className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container h-20 w-full max-w-full flex top-0 justify-center md:px-8 sticky z-50 sm:px-8 px-4 ${border} transition-all`}>
                 <div className={"container flex-row max-w-7xl flex items-center"}>
                     <div className={"flex flex-1"}>
                         <Link href={"/"}>

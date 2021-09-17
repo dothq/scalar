@@ -1,16 +1,3 @@
-const baseFont = [
-  "-apple-system",
-  "BlinkMacSystemFont",
-  "Segoe UI",
-  "Roboto",
-  "Oxygen",
-  "Ubuntu",
-  "Cantarell",
-  "Open Sans",
-  "Helvetica Neue",
-  "sans-serif"
-]
-
 module.exports = {
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx}", 
@@ -26,33 +13,42 @@ module.exports = {
       xl: "1920px",
     },
     colors: {
-      red: "#F64242",
-      orange: "#FF7A00",
-      yellow: "#FFCC32",
-      green: "#0DD762",
-      neon: "#00FFB7",
-      blue: "#1662D3",
-      bluelight: "rgb(244, 248, 254)",
-      violet: "#742CD0",
-      pink: "#C32CD0",
-      madder: "#D02C67",
-      bingus: "#CF9B90",
-      pureblack: "#09090a",
-      black: "#191A1C",
-      gray1: "#18171D",
-      gray2: "#1A1A22",
-      gray3: "#343434",
-      gray4: "#737373",
-      gray5: "#B6B6B6",
-      gray6: "#EAEAEA",
-      gray7: "#F9F9F9",
-      white: "#FFFFFF",
-      transparent: "#00000000"
+      red: '#f64242',
+      orange: '#ff7a00',
+      yellow: '#ffcc32',
+      green: '#0dd762',
+      neon: '#00ffb7',
+      blue: '#1662d3',
+      bluelight: '#f4f8fe',
+      violet: '#742cd0',
+      pink: '#c32cd0',
+      madder: '#d02c67',
+      bingus: '#cf9b90',
+      pureblack: '#09090a',
+      black: '#191a1c',
+      gray1: '#18171d',
+      gray2: '#1a1a22',
+      gray3: '#343434',
+      gray4: '#737373',
+      gray5: '#b6b6b6',
+      gray6: '#eaeaea',
+      gray7: '#f9f9f9',
+      white: '#ffffff',
+      transparent: '#00000000'
     },
     fontFamily: {
       sans: [
         "Karla",
-        ...baseFont
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue",
+        "sans-serif"
       ]
     }
   },
