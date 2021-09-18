@@ -6,6 +6,7 @@ import { NextIntlProvider } from "next-intl";
 import { LoadEvent } from "../events/load";
 
 import "../../styles/global.css";
+import "../../styles/app.css";
 
 const Application = ({ Component, pageProps }: AppProps) => {
     React.useEffect(() => {

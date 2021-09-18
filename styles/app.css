@@ -1,0 +1,58 @@
+@layer utilities {
+    .shadow-3xl {
+        --tw-shadow: 18px 18px 48px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .animate-slide-in {
+        animation: 0.8s slide-in forwards;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px rgba(255, 255, 255, 0.0125);
+    border: solid 3px rgba(255, 255, 255, 0.0125);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    box-shadow: inset 0 0 10px 10px rgba(128, 128, 128, 0.7);
+    border: solid 3px transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 10px 10px rgba(128, 128, 128, 1);
+}
+
+::-webkit-scrollbar-thumb:active {
+    box-shadow: inset 0 0 10px 10px rgb(22, 98, 211);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satoshi';
+    font-variant: no-common-ligatures;
+}
+
+.header-link-parent:hover > .header-link > svg {
+    transform: rotate(180deg)
+}
+
+.noise {
+    backdrop-filter: blur(12px);
+    --tw-bg-opacity: 0.9 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300' height='300' fill='none'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' stitchTiles='stitch' baseFrequency='0.75'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='300' height='300' style=''%3E%3C/rect%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.5'%3E%3C/rect%3E%3C/svg%3E");
+    background-blend-mode: overlay;
+}
+
+.motd-special a {
+    color: var(--motd-accent-color);
+    font-weight: 600;
+}
