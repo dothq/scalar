@@ -23,9 +23,6 @@ export class LoadEvent {
         document.documentElement.classList.add(`platform-${parsed.os}`);
         parsed.mobile && document.documentElement.classList.add("mobile");
         document.documentElement.classList.add(BUILD_BRANCH);
-        document.documentElement.classList.add(
-            document.documentElement.getAttribute("lang") || navigator.language
-        );
     }
 
     public logEnvironment() {
