@@ -84,7 +84,7 @@ const Home = ({ motd }: { motd?: string }) => {
                         <div className={"group border-2 border-white shadow-3xl rounded-xl animate-slide-in flex relative"}>
                             {jsEnabled && <div style={{ 
                                 borderRadius: "9px",
-                                backgroundImage: `linear-gradient(to top, ${ThemeColours.Black.toHex(0.4)}, transparent)`
+                                backgroundImage: `linear-gradient(to bottom, transparent 85%, ${ThemeColours.Black.toHex(0.5)} 100%)`
                             }} className={"group-hover:opacity-100 opacity-0 transition-opacity z-10 flex gap-8 w-full h-full p-10 absolute items-end"}>
                                 {playing 
                                     ? <Pause href={"#"} onClick={() => setPlaying(false)} className={"text-white hover:opacity-50 transition-opacity transform scale-125"} />
