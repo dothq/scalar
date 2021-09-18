@@ -47,7 +47,7 @@ const Home = ({ motd }: { motd?: string }) => {
                                         style={{ borderRadius: "0px" }}
                                     >
                                         <Download width={24} height={24} style={{ marginInlineEnd: "16px" }} />
-                                        Download 
+                                        {t("download-generic-text")} 
                                     </HollowButton>
                                 </div>
                             </div>
