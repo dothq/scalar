@@ -21,7 +21,7 @@ export const Header = ({ theme, motd }: { theme?: number, motd?: string }) => {
     const t = useTranslations("");
 
     return (
-        <>
+        <header className={"sticky top-0"}>
             {motd && <div className={`w-full h-12 flex items-center ${theme == Themes.Dark ? `bg-gray1 text-gray6` : `bg-bluelight text-blue`} justify-center transition-all overflow-hidden border-b-1 sticky top-0`}>
                 <div className={"container flex-row max-w-7xl h-full gap-3 flex items-center justify-center font-medium text-base motd-special"} dangerouslySetInnerHTML={{
                     __html: `${motd}`
@@ -29,7 +29,7 @@ export const Header = ({ theme, motd }: { theme?: number, motd?: string }) => {
                 </div>
             </div>}
 
-            <header className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container h-20 w-full max-w-full flex top-0 justify-center md:px-8 sticky z-50 sm:px-8 px-4 transition-all`}>
+            <div className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container h-20 w-full max-w-full flex top-0 justify-center md:px-8 sticky z-50 sm:px-8 px-4 transition-all`}>
                 <div className={"container flex-row max-w-7xl flex items-center"}>
                     <div className={"flex flex-1"}>
                         <Link href={"/"}>
@@ -106,7 +106,7 @@ export const Header = ({ theme, motd }: { theme?: number, motd?: string }) => {
                         </HollowButton>
                     </div>
                 </div>
-            </header>
-        </>
+            </div>
+        </header>
     )
 }

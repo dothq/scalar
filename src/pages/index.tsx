@@ -19,45 +19,49 @@ const Home = ({ motd }: { motd?: string }) => {
 
     const t = useTranslations("");
 
-    const y = useScrollYPosition();
+    const [y, setY] = React.useState(0);
+
+    React.useEffect(() => {
+        window.addEventListener("scroll", () => {
+
+        })
+    }, [])
 
     return (
         <Layout selectionColour={ThemeColours.Violet.toHex(0.25)}>
             <Header theme={Themes.Dark} motd={motd} />
 
-            <Controller vertical={true}>
-                <Scene>
-                    <div>
-                        <div className={"bg-gradient-to-r from-violet to-madder absolute top-72 left-0 w-full h-5/6 filter opacity-10"} style={{ zIndex: -1, filter: "blur(200px)" }}>
-                        </div>
-                        <div className={"w-full text-white flex justify-center z-10"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
-                            <div className={"max-w-7xl sm:py-20 md:py-0 sm:text-center sm:px-5 md:px-0 md:text-left"}>
-                                <div className={"flex flex-col justify-center w-full h-full gap-16"}>
-                                    <h1 className={"text-9xl text-gray6 font-normal"}>
-                                        {t("landing-title")}
-                                    </h1>
+            <main className={"relative z-30"}>
+                <div className={"w-full text-white flex justify-center z-10 relative"} style={{ height: "calc(100vh - 24vh)", minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                    <div className={"max-w-7xl sm:py-20 md:py-0 sm:text-center sm:px-5 md:px-0 md:text-left fixed"} style={{ height: "inherit" }}>
+                        <div className={"flex flex-col justify-center w-full h-full gap-16"}>
+                            <h1 className={"text-9xl text-gray6 font-normal"}>
+                                {t("landing-title")}
+                            </h1>
 
-                                    <span className={"text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>
-                                        {t("landing-description")}
-                                    </span>
-                                
-                                    <HollowButton 
-                                        colour={"white"}
-                                        className={"px-12 h-20 text-4xl"}
-                                        style={{ borderRadius: "0px" }}
-                                    >
-                                        <Download width={24} height={24} style={{ marginInlineEnd: "16px" }} />
-                                        {t("download-generic-text")} 
-                                    </HollowButton>
-                                </div>
-                            </div>
+                            <span className={"text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>
+                                {t("landing-description")}
+                            </span>
+                        
+                            <HollowButton 
+                                colour={"white"}
+                                className={"px-12 h-20 text-4xl"}
+                                style={{ borderRadius: "0px" }}
+                            >
+                                <Download width={24} height={24} style={{ marginInlineEnd: "16px" }} />
+                                {t("download-generic-text")} 
+                            </HollowButton>
                         </div>
                     </div>
-                </Scene>
-                <Scene 
-                    duration={0}
-                    offset={450}
-                    pin={{ pushFollowers: false }}
+                </div>
+
+                <div 
+                    id={"home-cover-sticky"}
+                    className={"w-full flex justify-center z-20 bg-black text-white absolute"}
+                    style={{
+                        top: "934px",
+                        willChange: "transform"
+                    }}
                 >
                     <div className={"w-full text-white flex justify-center"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
                         <div className={"max-w-5xl sm:py-20 md:py-0 sm:px-5 md:px-0 text-center"}>
@@ -74,8 +78,8 @@ const Home = ({ motd }: { motd?: string }) => {
                             </div>
                         </div>
                     </div>
-                </Scene>
-            </Controller>
+                </div>
+            </main>
 
             <style>{`
                 body {
