@@ -5,7 +5,7 @@ if buildid
     revision = `git rev-parse HEAD`.gsub("\n", "")
 
     puts "Running 'git remote'"
-    remote = `git remote`.gsub("\n", "")
+    remote = ENV["VERCEL_GIT_COMMIT_REF"] || `git remote`.gsub("\n", "")
 
     puts "Running 'git branch --show-current'"
     branch = `git branch --show-current`.gsub("\n", "")
