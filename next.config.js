@@ -73,7 +73,7 @@ module.exports = {
                     {
                         key: 'Content-Security-Policy',
                         value: process.env.NODE_ENV == "production" 
-                            ? `default-src 'none'; script-src https://*.dothq.co; style-src 'unsafe-inline' https://*.dothq.co; img-src 'self' data: https://*.dothq.co https://dotusercontent.com; font-src https://*.dothq.co; connect-src 'self' https://*.dothq.co; media-src https://*.dothq.co; frame-src https://dothq.co; frame-ancestors 'none'; form-action 'self' dothq.co; block-all-mixed-content; base-uri 'self'; manifest-src 'self'`
+                            ? `default-src https://*.dothq.co; script-src https://*.dothq.co; style-src 'unsafe-inline' https://*.dothq.co; img-src 'self' data: https://*.dothq.co https://dotusercontent.com; font-src https://*.dothq.co; connect-src 'self' https://*.dothq.co; media-src https://*.dothq.co; frame-src https://dothq.co; frame-ancestors 'none'; form-action 'self' dothq.co; block-all-mixed-content; base-uri 'self'; manifest-src 'self'`
                             : ``
                     },
                     {
