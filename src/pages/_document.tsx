@@ -7,7 +7,12 @@ class Document extends NextDocument {
         const urlLegal = `${url}/legal`
 
         return (
-            <Html>
+            <Html 
+                className={"no-js"}
+                prefix={"og: https://ogp.me/ns#"} 
+                itemScope={true} 
+                itemType={"http://schema.org/WebSite"}
+            >
                 <Head>
                     <meta charSet="utf-8"></meta>
                     <meta name="keywords" content="browser dot dothq privacy modern web browser webbrowser modern ui fresh browsing online firefox-based firefox mozilla windows mac linux macos unix"></meta>

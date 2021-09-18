@@ -80,4 +80,4 @@ build
 .env.production.local
 .vercel
 .next
-ref.txt
+env.ts

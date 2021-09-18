@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "ruby scripts/environment-revision.rb && next dev",
+    "build": "ruby scripts/environment-revision.rb && next build",
     "start": "next start",
     "lint": "next lint",
     "deploy:prod": "if [ $(git rev-parse --abbrev-ref HEAD) = \"main\" ]; then vercel --prod; else echo \"You need to be on the main branch to deploy to prod.\"; fi",
@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "build:sitemap": "ts-node utils/generate-sitemap.ts",
-    "gen:revision": "git rev-parse HEAD > ref"
+    "gen:revision": "git rev-parse HEAD > ref",
+    "preinstall": "ruby scripts/environment-revision.rb"
   },
   "dependencies": {
     "axios": "^0.21.1",
