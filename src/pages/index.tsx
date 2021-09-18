@@ -28,14 +28,14 @@ const Home = ({ motd }: { motd?: string }) => {
     }, [])
 
     return (
-        <Layout selectionColour={ThemeColours.Violet.toHex(0.25)}>
-            <Header theme={Themes.Dark} motd={motd} />
+        <Layout selectionColour={ThemeColours.Blue.toHex(0.25)}>
+            <Header theme={Themes.Light} motd={motd} />
 
             <main className={"relative z-30"}>
-                <div className={"w-full text-white flex justify-center z-10 relative"} style={{ height: "calc(100vh - 24vh)", minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                <div className={"w-full text-black flex justify-center z-10 relative bg-white"} style={{ height: "calc(100vh - 24vh)", minHeight: "calc(100vh - 24vh)", top: 0 }}>
                     <div className={"max-w-7xl sm:py-20 md:py-0 sm:text-center sm:px-5 md:px-0 md:text-left fixed"} style={{ height: "inherit" }}>
                         <div className={"flex flex-col justify-center w-full h-full gap-16"}>
-                            <h1 className={"text-9xl text-gray6 font-normal"}>
+                            <h1 className={"text-9xl text-gray2 font-medium"}>
                                 {t("landing-title")}
                             </h1>
 
@@ -44,7 +44,7 @@ const Home = ({ motd }: { motd?: string }) => {
                             </span>
                         
                             <HollowButton 
-                                colour={"white"}
+                                colour={"blue"}
                                 className={"px-12 h-20 text-4xl"}
                                 style={{ borderRadius: "0px" }}
                             >
@@ -57,22 +57,22 @@ const Home = ({ motd }: { motd?: string }) => {
 
                 <div 
                     id={"home-cover-sticky"}
-                    className={"w-full flex justify-center z-20 bg-black text-white absolute"}
+                    className={"w-full flex justify-center z-20 bg-gray6 text-black absolute"}
                     style={{
                         top: "934px",
                         willChange: "transform"
                     }}
                 >
-                    <div className={"w-full text-white flex justify-center"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                    <div className={"w-full text-black flex justify-center"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
                         <div className={"max-w-5xl sm:py-20 md:py-0 sm:px-5 md:px-0 text-center"}>
                             <div className={"flex flex-col justify-center w-full h-full gap-16 items-center"}>
-                                <h1 className={"text-9xl text-gray4 font-medium"}>
-                                    Fact: Your data is sold, on average, <span className={"text-gray6"}>
-                                        10 times a day.<Reference theme={Themes.Dark} n={1} />
+                                <h1 className={"text-9xl text-gray3 font-normal"}>
+                                    Fact: Your data is sold, on average, <span className={"text-madder font-semibold"}>
+                                        10 times a day.<Reference n={1} />
                                     </span>
                                 </h1>
 
-                                <span className={"text-3xl max-w-3xl text-gray5 flex flex-col gap-6"}>
+                                <span className={"text-3xl max-w-3xl text-gray4 flex flex-col gap-6"}>
                                     All of this is happening behind closed doors, and sometimes without your knowledge.
                                 </span>
                             </div>
@@ -80,12 +80,6 @@ const Home = ({ motd }: { motd?: string }) => {
                     </div>
                 </div>
             </main>
-
-            <style>{`
-                body {
-                    background-color: rgb(9, 9, 10);
-                }
-            `}</style>
         </Layout>
     )
 }

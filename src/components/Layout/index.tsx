@@ -26,7 +26,7 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
     useRipple(toTopRef, { animationLength: 350, rippleColor: ThemeColours.White.toHex(0.3) });
 
     return (
-        <div style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit", scrollBehavior: "smooth" }}>
+        <div className={"slashed-zero"} style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit", scrollBehavior: "smooth" }}>
             <Head>
                 <title>{title 
                     ? noSuffix 
@@ -89,7 +89,7 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
             {children}
 
             <a 
-                className={`bg-white shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 border-transparent hover:bg-pureblack hover:border-white hover:text-white cursor-pointer`}
+                className={`bg-white shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 border-transparent hover:bg-pureblack hover:border-white hover:text-white cursor-pointer z-50`}
                 onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
                 ref={toTopRef}
             >
