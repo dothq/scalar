@@ -6,8 +6,9 @@ import React from "react";
 import { ArrowTop } from "../../icons/ArrowTop";
 import { useRipple } from "react-use-ripple";
 import { ThemeColours } from "../../../theme";
+import { Themes } from "../../utils/theme";
 
-const Layout = ({ children, title, noSuffix, selectionColour }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: string }) => {
+const Layout = ({ children, title, noSuffix, selectionColour, theme }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: string, theme?: number }) => {
     const { locale, locales } = useRouter();
 
     const t = useTranslations();
@@ -23,7 +24,10 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
     })
 
     const toTopRef = React.createRef<HTMLAnchorElement>();
-    useRipple(toTopRef, { animationLength: 350, rippleColor: ThemeColours.White.toHex(0.3) });
+    useRipple(toTopRef, { 
+        animationLength: 350, 
+        rippleColor: theme == Themes.Dark ? ThemeColours.White.toHex(0.3) : ThemeColours.Blue.toHex(0.3) 
+    });
 
     return (
         <div className={"slashed-zero"} style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit", scrollBehavior: "smooth" }}>
@@ -89,7 +93,7 @@ const Layout = ({ children, title, noSuffix, selectionColour }: { children: any,
             {children}
 
             <a 
-                className={`bg-white shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 border-transparent hover:bg-pureblack hover:border-white hover:text-white cursor-pointer z-50`}
+                className={`${theme == Themes.Dark ? `bg-white text-black` : `bg-blue text-white`} shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 border-transparent ${theme == Themes.Dark ? `hover:bg-pureblack hover:border-white hover:text-white` : `hover:bg-white hover:border-blue hover:text-blue`} cursor-pointer z-50`}
                 onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
                 ref={toTopRef}
             >
