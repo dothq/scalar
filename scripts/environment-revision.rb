@@ -10,8 +10,15 @@ if buildid
     puts "Running 'git branch --show-current'"
     branch = `git branch --show-current`.gsub("\n", "")
 
-    puts "Running 'git remote get-url #{remote}'"
-    remote_url = `git remote get-url #{remote}`.gsub("\n", "")
+    if ENV["VERCEL"]
+        git_provider = ENV["VERCEL_GIT_PROVIDER"]
+        git_owner = ENV["VERCEL_GIT_REPO_OWNER"]
+        git_repo = ENV["VERCEL_GIT_REPO_SLUG"]
+        remote_url = "https://#{git_provider}.com/#{git_owner}/#{git_repo}"
+    else
+        puts "Running 'git remote get-url #{remote}'"
+        remote_url = `git remote get-url #{remote}`.gsub("\n", "")
+    end
 
     buildid.syswrite(
 "export const BUILD_REVISION = \"#{revision}\"
