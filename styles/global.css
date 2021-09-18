@@ -47,6 +47,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Satoshi';
+    font-variant: no-common-ligatures;
 }
 
 .header-link-parent:hover > .header-link > svg {
