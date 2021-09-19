@@ -60,7 +60,7 @@ const Home = ({ motd }: { motd?: string }) => {
                         
                             <HollowButton 
                                 colour={"blue"}
-                                className={"px-8 h-16 text-2xl md:px-10 md:h-16 md:text-3xl lg:px-12 lg:h-20 lg:text-4xl"}
+                                className={"px-8 h-16 py-6 text-2xl md:px-10 md:py-8 md:text-3xl lg:px-12 lg:h-20 lg:text-4xl"}
                                 style={{ borderRadius: "0px" }}
                             >
                                 <Download className={"w-5 h-5 md:w-6 md:h-6"} style={{ marginInlineEnd: "16px" }} />
@@ -75,11 +75,11 @@ const Home = ({ motd }: { motd?: string }) => {
                     className={"w-full flex justify-center z-20 bg-transparent text-black flex-col items-center sticky"}
                 >
                     <div className={"text-black max-w-full flex flex-col justify-start items-center pb-36 px-7 lg:px-12 lg2:px-16 xl:px-20"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
-                        <div className={"group border-2 border-white shadow-3xl rounded-xl animate-slide-in flex relative"}>
+                        <div className={"group animate-slide-in flex relative"}>
                             {jsEnabled && <div style={{ 
                                 borderRadius: "9px",
                                 backgroundImage: `linear-gradient(to bottom, transparent 85%, ${ThemeColours.Black.toHex(0.5)} 100%)`
-                            }} className={"group-hover:opacity-100 opacity-0 transition-opacity z-10 hidden gap-8 w-full h-full p-10 absolute items-end lg:visible lg:flex"}>
+                            }} className={"group-hover:opacity-100 opacity-0 transition-opacity z-10 hidden gap-8 w-full h-full p-10 absolute items-end lg:visible lg:flex border-2 border-white rounded-xl"}>
                                 {playing 
                                     ? <Pause href={"#"} onClick={() => setPlaying(false)} className={"text-white hover:opacity-50 transition-opacity transform scale-125"} />
                                     : <Play href={"#"} onClick={() => setPlaying(true)} className={"text-white hover:opacity-50 transition-opacity transform scale-125"} />
@@ -88,7 +88,7 @@ const Home = ({ motd }: { motd?: string }) => {
                             </div>}
                             <img 
                                 style={{ borderRadius: "9px" }} 
-                                className={"hidden lg:visible lg:flex"}
+                                className={"hidden lg:visible lg:flex border-2 border-white shadow-3xl rounded-xl "}
                                 src={"/static/images/mockups/browser.jpg"}
                             ></img>
                             <img 
