@@ -7,6 +7,32 @@
     .animate-slide-in {
         animation: 0.8s slide-in forwards;
     }
+
+    .h-35vh {
+        height: 35vh;
+    }
+
+    .h-50vh {
+        height: 50vh;
+    }
+
+    .h-70vh {
+        height: 70vh;
+    }
+
+    @media (min-width: 976px) {
+        .lg\:h-35vh {
+            height: 35vh;
+        }
+    
+        .lg\:h-50vh {
+            height: 50vh;
+        }
+    
+        .lg\:h-70vh {
+            height: 70vh;
+        }
+    }
 }
 
 ::-webkit-scrollbar {

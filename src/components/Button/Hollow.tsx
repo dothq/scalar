@@ -59,7 +59,7 @@ export const HollowButton = ({
                 `hover:text-${colour}`,
                 `hover:bg-opacity-100`,
                 "cursor-pointer",
-                "transition-all",
+                "transition-colors",
                 disabled ? "opacity-50 pointer-events-none" : ""
             ].join(" ")}>
                 {children}

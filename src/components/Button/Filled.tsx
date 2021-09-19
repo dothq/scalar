@@ -52,7 +52,7 @@ export const FilledButton = ({
                 `bg-gradient-to-r`,
                 `hover:bg-opacity-85`,
                 "cursor-pointer",
-                "transition-all",
+                "transition-colors",
                 "font-bold",
                 disabled ? "opacity-50 pointer-events-none" : ""
             ].join(" ")}>

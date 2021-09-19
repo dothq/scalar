@@ -45,7 +45,7 @@ export const TextButton = ({
                 `hover:bg-${colour}`,
                 `active:bg-${colour}`,
                 "cursor-pointer",
-                "transition-all",
+                "transition-colors",
                 disabled ? "opacity-50 pointer-events-none" : ""
             ].join(" ")}>
                 {children}
