@@ -34,7 +34,6 @@ const Home = ({ motd }: { motd?: string }) => {
 
             if(container) {
                 container.style.opacity = Math.max(1.0 - (window.scrollY / 725), 0).toString()
-                container.style.transform = `scale(${Math.max(1.0 - (window.scrollY / 6000), 0)})`
             }
         })
     }, [])
@@ -50,8 +49,6 @@ const Home = ({ motd }: { motd?: string }) => {
                     style={{ 
                         height: "calc(100vh - 30vh)", 
                         zIndex: -1,
-                        transformOrigin: "bottom center",
-                        willChange: "transform"
                     }}
                 >
                     <div className={"max-w-7xl sm:py-20 md:py-0 sm:text-center sm:px-5 md:px-0 md:text-left fixed"} style={{ height: "inherit" }}>
@@ -78,9 +75,9 @@ const Home = ({ motd }: { motd?: string }) => {
 
                 <div 
                     id={"home-cover-sticky"}
-                    className={"w-full flex justify-center z-20 bg-white text-black flex-col"}
+                    className={"w-full flex justify-center z-20 bg-white text-black flex-col items-center sticky"}
                 >
-                    <div className={"w-full text-black flex flex-col justify-start items-center pb-36 px-24"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                    <div className={"text-black max-w-full flex flex-col justify-start items-center pb-36 px-20"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
                         <div className={"group border-2 border-white shadow-3xl rounded-xl animate-slide-in flex relative"}>
                             {jsEnabled && <div style={{ 
                                 borderRadius: "9px",
