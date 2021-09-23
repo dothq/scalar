@@ -26,6 +26,8 @@ const Home = ({ motd }: { motd?: string }) => {
     const [playing, setPlaying] = React.useState(true); 
     const [jsEnabled, setJsEnabled] = React.useState(false); 
 
+    const [browserImgFixed, setBrowserImgFixed] = React.useState(false);
+
     React.useEffect(() => {
         setJsEnabled(true);
 
@@ -45,25 +47,25 @@ const Home = ({ motd }: { motd?: string }) => {
             <main className={"relative z-30"}>
                 <div 
                     id={"home-container"}
-                    className={"w-full h-50vh lg:h-70vh text-black flex justify-center relative bg-white"} 
+                    className={"w-full min-h-50vh sm:min-h-70vh text-black flex justify-center items-center md:items-start relative bg-white"} 
                     style={{ zIndex: -1 }}
                 >
-                    <div className={"max-w-7xl sm:py-20 md:py-0 sm:px-5 md:px-0 fixed"} style={{ height: "inherit" }}>
-                        <div className={"flex flex-col justify-center w-full h-full gap-16 px-3 md:px-12 lg:px-12 xl:px-0"}>
-                            <h1 className={"text-6xl md:text-7xl md:max-w-4xl lg:max-w-full lg:text-8xl xl:text-9xl text-gray2 font-medium"}>
+                    <div className={"max-w-7xl sm:px-5 md:px-0 fixed"} style={{ height: "inherit" }}>
+                        <div className={"flex flex-col justify-center w-full h-full gap-8 lg:gap-16 px-3 md:px-12 lg:px-12 xl:px-0"}>
+                            <h1 className={"text-4xl md:max-w-4xl md:text-7xl lg:max-w-full xl:text-9xl text-gray2 font-medium"}>
                                 {t("landing-title")}
                             </h1>
 
-                            <span className={"text-2xl lg:text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>
+                            <span className={"text-lg md:text-2xl lg:text-3xl flex font-light"} style={{ maxWidth: "42rem" }}>
                                 {t("landing-description")}
                             </span>
                         
                             <HollowButton 
                                 colour={"blue"}
-                                className={"px-8 h-16 py-6 text-2xl md:px-10 md:py-8 md:text-3xl lg:px-12 lg:h-20 lg:text-4xl"}
+                                className={"px-8 h-14 py-2 text-lg md:text-2xl md:px-10 md:py-4 lg:px-10 lg:h-20 lg:text-4xl"}
                                 style={{ borderRadius: "0px" }}
                             >
-                                <Download className={"w-5 h-5 md:w-6 md:h-6"} style={{ marginInlineEnd: "16px" }} />
+                                <Download className={"w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"} style={{ marginInlineEnd: "16px" }} />
                                 {t("download-generic-text")} 
                             </HollowButton>
                         </div>
@@ -74,7 +76,7 @@ const Home = ({ motd }: { motd?: string }) => {
                     id={"home-cover-sticky"}
                     className={"w-full flex justify-center z-20 bg-transparent text-black flex-col items-center sticky"}
                 >
-                    <div className={"text-black max-w-full flex flex-col justify-start items-center pb-36 px-7 lg:px-12 lg2:px-16 xl:px-20"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                    <div className={"text-black max-w-full flex flex-col justify-start items-center pb-36 px-7 lg:px-12 lg2:px-16 xl:px-20 relative"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
                         <div className={"group animate-slide-in flex relative"}>
                             {jsEnabled && <div style={{ 
                                 borderRadius: "9px",
@@ -113,6 +115,17 @@ const Home = ({ motd }: { motd?: string }) => {
                                     All of this is happening behind closed doors, and sometimes without your knowledge.
                                 </span>
                             </div>
+                        </div>
+                    </div>
+
+                    <div className={"w-full min-h-70vh text-black flex justify-center bg-white"}>
+                        <div className={"max-w-7xl text-center flex"}>
+                            <div className={""}>
+                                <h1>Dot Browser features privacy-by-default.</h1>
+                            </div>
+                            <figure className={`${browserImgFixed ? `fixed` : `absolute`}`}>
+                                <img src={"/static/images/mockups/browser.jpg"}></img>
+                            </figure>
                         </div>
                     </div>
                 </div>
