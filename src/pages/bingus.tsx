@@ -55,9 +55,8 @@ const Bingus = () => {
                         colour={"bingus"}
                         placeholder={"Enter a gift to give to Lord Bingus"}
                         ref={giftRef}
-                        onChange={() => {
-                            if(!giftRef.current?.value.trim().length) return setThinking(true);
-                            else setThinking(false);
+                        onKeyUp={(e: any) => {
+                            setThinking(!e.target.value.trim().length)
                         }}
                     ></Input>
 
