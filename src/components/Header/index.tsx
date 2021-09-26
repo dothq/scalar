@@ -20,8 +20,27 @@ export const Header = ({ theme, motd }: { theme?: number, motd?: string }) => {
 
     const t = useTranslations("");
 
+    const [shown, setShown] = React.useState(0);
+    const [shadow, setShadow] = React.useState(true);
+
+    React.useEffect(() => {
+        setShadow(false);
+
+        window.addEventListener("scroll", () => {
+            const header = document.getElementById("header");
+
+            if(header) {
+                if(window.scrollY >= 712) {
+                    header.style.transform = `translateY(-${Math.min(window.scrollY - 712, 182)}px)`;
+                } else {
+                    header.style.transform = `translateY(${Math.max(window.scrollY - 712, 0)}px)`;
+                }
+            }
+        })
+    }, [])
+
     return (
-        <header className={"sticky top-0 z-50 w-full"}>
+        <header id={"header"} className={`sticky top-0 z-50 w-full transform-gpu ${shadow ? `shadow-md` : `shadow-none`}`}>
             {motd && <div className={`hidden lg:visible lg:flex w-full h-12 items-center ${theme == Themes.Dark ? `bg-gray1 text-gray6` : `bg-bluelight text-blue`} justify-center transition-all overflow-hidden border-b-1 sticky top-0`}>
                 <div className={"container flex-row max-w-7xl h-full gap-3 flex items-center justify-center font-medium text-base motd-special"} dangerouslySetInnerHTML={{
                     __html: `${motd}`

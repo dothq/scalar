@@ -22,7 +22,7 @@ export const Input = (props: { colour: string, groupAddon?: any } & React.Detail
                     "bg-transparent",
                     ...(props.className?.split("") || [])
                 ].join(" ")} 
-                {...props}
+                {...{ ...props, groupAddon: "" }}
             ></input>
         </fieldset>
     )

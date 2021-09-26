@@ -31,8 +31,12 @@ const Home = ({ motd }: { motd?: string }) => {
     React.useEffect(() => {
         setJsEnabled(true);
 
+        const browserImg: any = document.getElementById("browser-home-img");
+        const { top, height } = browserImg.getBoundingClientRect()
+
         window.addEventListener("scroll", () => {
             const container = document.getElementById("home-container");
+            const browserImgDesktop = document.getElementById("browser-home-img-desktop");
 
             if(container) {
                 container.style.opacity = Math.max(1.0 - (window.scrollY / 725), 0).toString()
@@ -77,7 +81,7 @@ const Home = ({ motd }: { motd?: string }) => {
                     className={"w-full flex justify-center z-20 bg-transparent text-black flex-col items-center sticky"}
                 >
                     <div className={"text-black max-w-full flex flex-col justify-start items-center pb-36 px-7 lg:px-12 lg2:px-16 xl:px-20 relative"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
-                        <div className={"group animate-slide-in flex relative"}>
+                        <div id={"browser-home-img"} className={"group animate-slide-in flex relative"}>
                             {jsEnabled && <div style={{ 
                                 borderRadius: "9px",
                                 backgroundImage: `linear-gradient(to bottom, transparent 85%, ${ThemeColours.Black.toHex(0.5)} 100%)`
@@ -89,6 +93,7 @@ const Home = ({ motd }: { motd?: string }) => {
                                 <Reload className={"text-white hover:opacity-50 transition-opacity transform scale-125"} />
                             </div>}
                             <img 
+                                id={"browser-home-img-desktop"}
                                 style={{ borderRadius: "9px" }} 
                                 className={"hidden lg:visible lg:flex border-2 border-white shadow-3xl rounded-xl "}
                                 src={"/static/images/mockups/browser.jpg"}
@@ -101,7 +106,7 @@ const Home = ({ motd }: { motd?: string }) => {
                         </div>
                     </div>
 
-                    <div className={"w-full text-black flex justify-center bg-blue bg-opacity-10"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
+                    <div className={"w-full text-black flex justify-center bg-white bg-opacity-10"} style={{ minHeight: "calc(100vh - 24vh)", top: 0 }}>
                         <div className={"max-w-5xl sm:py-20 md:py-0 sm:px-5 md:px-0 text-center"}>
                             <div className={"flex flex-col justify-center w-full h-full gap-16 items-center"}>
                                 <h1 className={"text-6xl text-blue text-opacity-70 font-normal flex flex-col gap-2"}>
@@ -118,15 +123,40 @@ const Home = ({ motd }: { motd?: string }) => {
                         </div>
                     </div>
 
-                    <div className={"w-full min-h-70vh text-black flex justify-center bg-white"}>
-                        <div className={"max-w-7xl text-center flex"}>
-                            <div className={""}>
-                                <h1>Dot Browser features privacy-by-default.</h1>
+                    <div className={"w-full flex justify-center bg-violet text-white bg-cover bg-no-repeat bg-fixed"} style={{ backgroundImage: `url("/static/images/grid-lighter.svg"), linear-gradient(${ThemeColours.Violet.toHex(0.7)}, ${ThemeColours.Madder.toHex(0.7)})` }}>
+                        <div className={"w-full flex"}>
+                            <div className={"w-full px-24 xl:px-48 pt-56 pb-72 flex flex-1 flex-col gap-56"}>
+                                <div className={"flex h-96 justify-center gap-8 flex-col"}>
+                                    <h1 className={"text-7xl font-bold"}>Privacy-by-default? <u>Yep!</u></h1>
+                                    <p className={"text-3xl max-w-2xl opacity-8"}>
+                                        Gone are the days of fiddling around with settings and extensions. It's all ready for you.</p>
+                                </div>
+                                <div className={"flex h-96 justify-center gap-8 flex-col"}>
+                                    <h1 className={"text-7xl max-w-4xl font-bold"}>Migrating my old data? <u>Easy as pie.</u></h1>
+                                    <p className={"text-3xl max-w-2xl opacity-8"}>
+                                        Migrating all your bookmarks and browsing history takes seconds.
+                                    </p>
+                                </div>
+                                <div className={"flex h-96 justify-center gap-8 flex-col"}>
+                                    <h1 className={"text-7xl max-w-4xl font-bold"}>And my extensions? <u>Absolutely.</u></h1>
+                                    <p className={"text-3xl max-w-2xl opacity-8"}>
+                                        All your favourite extensions from Chromium and Firefox browsers are available.
+                                    </p>
+                                </div>
                             </div>
-                            <figure className={`${browserImgFixed ? `fixed` : `absolute`}`}>
-                                <img src={"/static/images/mockups/browser.jpg"}></img>
+                            <figure className={"sticky-browser-img sticky z-50 top-72 mt-40 mb-56 rounded-tl-lg rounded-bl-lg flex-1 overflow-hidden"} style={{ height: "max-content", boxShadow: "18px 18px 48px 28px rgba(255, 255, 255, 0.15)" }}>
+                                <div>
+                                    
+                                </div>
+                                <img 
+                                    src={"/static/images/mockups/browser.jpg"}
+                                ></img>
                             </figure>
                         </div>
+                    </div>
+
+                    <div className={"h-96"}>
+                        WIP
                     </div>
                 </div>
             </main>

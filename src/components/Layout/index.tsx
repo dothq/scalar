@@ -97,7 +97,7 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme }: { childre
             {children}
 
             <a 
-                className={`${theme == Themes.Dark ? `bg-white text-black` : `bg-blue text-white`} shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 border-transparent ${theme == Themes.Dark ? `hover:bg-pureblack hover:border-white hover:text-white` : `hover:bg-white hover:border-blue hover:text-blue`} cursor-pointer z-50`}
+                className={`${theme == Themes.Dark ? `bg-white text-black border-transparent` : `bg-blue border-transparent text-white`} shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 ${theme == Themes.Dark ? `hover:bg-pureblack hover:border-white hover:text-white` : `hover:bg-white hover:border-blue hover:text-blue`} cursor-pointer z-50`}
                 onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })

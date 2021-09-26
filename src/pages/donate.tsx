@@ -15,7 +15,7 @@ const Donate = () => {
         setUrl(`https://liberapay.com/dothq/donate?amount=${amount}&currency=GBP&period=monthly#amount`)
     }, [amount])
 
-    const onInputChange = (e) => {
+    const onInputChange = (e: any) => {
         if(!e.currentTarget.value.length) setAmount(0);
 
         try {
