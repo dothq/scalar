@@ -92,6 +92,10 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url("/static/images/grid.svg");
 }
 
+.grid-light-pattern {
+    background-image: url("/static/images/grid-lighter.svg");
+}
+
 .motd-special a {
     color: var(--motd-accent-color);
     font-weight: 600;
@@ -111,4 +115,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .input-active:focus-within {
     box-shadow: 0px 0px 0px 2px var(--dot-ui-input-accent);
+}
+
+.flickity-viewport {
+    border-radius: 16px;
 }

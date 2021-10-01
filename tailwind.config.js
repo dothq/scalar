@@ -55,6 +55,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ["active"],
+      boxShadow: ["active"],
     }
   },
   plugins: [],
