@@ -56,6 +56,7 @@ module.exports = {
     extend: {
       backgroundColor: ["active"],
       boxShadow: ["active"],
+      border: ["active"],
     }
   },
   plugins: [],

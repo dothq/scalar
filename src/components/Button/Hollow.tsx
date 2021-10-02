@@ -32,7 +32,7 @@ export const HollowButton = ({
             e.stopPropagation();
             if(typeof(window) !== "undefined") window.stop();
 
-            onClick();
+            onClick(e);
         }
     }
 

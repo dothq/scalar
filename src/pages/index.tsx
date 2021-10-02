@@ -21,6 +21,9 @@ import { HistoryIcon } from "../icons/History";
 import { BookmarksIcon } from "../icons/Bookmarks";
 import { DownloadsIcon } from "../icons/Downloads";
 import Link from "next/link";
+import { Waypoint } from "react-waypoint";
+import { FAQAccordian } from "../components/FAQ";
+import { Tab } from "../components/Tab";
 
 const Home = ({ motd }: { motd?: string }) => {
     const t = useTranslations("");
@@ -31,6 +34,8 @@ const Home = ({ motd }: { motd?: string }) => {
     const [activeTab, setActiveTab] = React.useState(0);
 
     const [flickityRef, setFlickityRef] = React.useState<Flickity>();
+
+    const [headerDark, setHeaderDark] = React.useState(false);
 
     let flickityRegisteredInt: any;
 
@@ -64,7 +69,7 @@ const Home = ({ motd }: { motd?: string }) => {
 
     return (
         <Layout selectionColour={ThemeColours.Blue.toHex(0.25)}>
-            <Header theme={Themes.Light} motd={motd} />
+            <Header theme={headerDark ? Themes.Dark : Themes.Light} motd={motd} />
 
             <main className={"relative z-30 overflow-x-hidden lg:overflow-x-visible"}>
                 <div 
@@ -179,50 +184,18 @@ const Home = ({ motd }: { motd?: string }) => {
                                 <h1 className={"md:text-7xl lg:text-8xl text-6xl font-semibold text-center"}>How does it all work?</h1>
 
                                 <ul className={"flex gap-5 flex-wrap justify-center px-10 md:px-0"}>
-                                    <li className={"h-full"}>
-                                        <a 
-                                            className={`rounded-full py-3 px-6 font-bold select-none transition-all ${activeTab == 0 ? `bg-blue text-white shadow-xl` : `bg-transparent text-black shadow-none cursor-pointer hover:bg-white hover:shadow active:bg-gray6 active:shadow-inner`}`}
-                                            onClick={() => setActiveTab(0)}
-                                            style={{
-                                                transitionDuration: "0.3s"
-                                            }}
-                                        >
-                                            Ad Blocking
-                                        </a>
-                                    </li>
-                                    <li className={"h-full"}>
-                                        <a 
-                                            className={`rounded-full py-3 px-6 font-bold select-none transition-all ${activeTab == 1 ? `bg-blue text-white shadow-xl` : `bg-transparent text-black shadow-none cursor-pointer hover:bg-white hover:shadow active:bg-gray6 active:shadow-inner`}`}
-                                            onClick={() => setActiveTab(1)}
-                                            style={{
-                                                transitionDuration: "0.3s"
-                                            }}
-                                        >
-                                            Quick Launch
-                                        </a>
-                                    </li>
-                                    <li className={"h-full"}>
-                                        <a 
-                                            className={`rounded-full py-3 px-6 font-bold select-none transition-all ${activeTab == 2 ? `bg-blue text-white shadow-xl` : `bg-transparent text-black shadow-none cursor-pointer hover:bg-white hover:shadow active:bg-gray6 active:shadow-inner`}`}
-                                            onClick={() => setActiveTab(2)}
-                                            style={{
-                                                transitionDuration: "0.3s"
-                                            }}
-                                        >
-                                            Anti-Fingerprinting
-                                        </a>
-                                    </li>
-                                    <li className={"h-full"}>
-                                        <a 
-                                            className={`rounded-full py-3 px-6 font-bold select-none transition-all ${activeTab == 3 ? `bg-blue text-white shadow-xl` : `bg-transparent text-black shadow-none cursor-pointer hover:bg-white hover:shadow active:bg-gray6 active:shadow-inner`}`}
-                                            onClick={() => setActiveTab(3)}
-                                            style={{
-                                                transitionDuration: "0.3s"
-                                            }}
-                                        >
-                                            Open-Source
-                                        </a>
-                                    </li>
+                                    <Tab active={activeTab == 0} onClick={() => setActiveTab(0)}>
+                                        Ad Blocking
+                                    </Tab>
+                                    <Tab active={activeTab == 1} onClick={() => setActiveTab(1)}>
+                                        Quick Launch
+                                    </Tab>
+                                    <Tab active={activeTab == 2} onClick={() => setActiveTab(2)}>
+                                        Anti-Fingerprinting
+                                    </Tab>
+                                    <Tab active={activeTab == 3} onClick={() => setActiveTab(3)}>
+                                        Open-Source
+                                    </Tab>
                                 </ul>
 
                                 <Flickity 
@@ -281,6 +254,20 @@ const Home = ({ motd }: { motd?: string }) => {
                             </div>
                         </div>
                     </div>
+
+                    <Waypoint 
+                        onEnter={() => setHeaderDark(true)}
+                        onLeave={() => setHeaderDark(false)}
+                        bottomOffset={"90%"}
+                    >
+                        <div className={"bg-pureblack text-white w-full flex flex-col items-center grid-pattern py-36"}>
+                            <div className={"w-full max-w-7xl gap-8 flex flex-col my-0 px-auto"}>
+                                <h1 className={"text-7xl font-medium"}>Any questions?</h1>
+
+                                <FAQAccordian theme={Themes.Dark} />
+                            </div>
+                        </div>
+                    </Waypoint>
                 </div>
             </main>
         </Layout>
@@ -288,7 +275,9 @@ const Home = ({ motd }: { motd?: string }) => {
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
-    const res = await axios.get("https://raw.githubusercontent.com/dothq/motd/main/motd.md");
+    const res: any = {
+        data: null
+    }
 
     const converter = new Converter({ openLinksInNewWindow: true });
     

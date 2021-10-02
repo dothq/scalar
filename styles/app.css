@@ -120,3 +120,29 @@ h1, h2, h3, h4, h5, h6 {
 .flickity-viewport {
     border-radius: 16px;
 }
+
+.accordian-item > input {
+    display: none;
+}
+
+.accordian-item .accordian-content {
+    transition: max-height 0.3s ease 0s;
+    max-height: 800px;
+    overflow: hidden;
+}
+
+.accordian-item > input + label + .accordian-content {
+    max-height: 0px;
+}
+
+.accordian-item > input:checked + label + .accordian-content {
+    max-height: 500px;
+}
+
+.accordian-item > input:checked + label {
+    font-weight: 600;
+}
+
+.accordian-item > input:checked + label > svg {
+    transform: rotate(180deg);
+}
