@@ -1,60 +1,45 @@
 import router, { useRouter } from "next/router";
 import Link from "next/link";
 import React from "react";
-import { ChevronDown } from "../../icons/ChevronDown";
-import { flags } from "../../icons/Flags";
 import { HollowButton } from "../Button/Hollow";
-import { Menu } from "../Menu";
-import { languages } from "../../l10n/languages";
 import { LangPicker } from "../LangPicker";
 import { useTranslations } from "next-intl";
 import { BungerMenu } from "../../icons/Menu";
 import { HeaderItem } from "../HeaderItem";
-import { TextButton } from "../Button/Text";
-import axios, { AxiosResponse } from "axios";
 import { Themes } from "../../utils/theme";
 import { ThemeColours } from "../../../theme";
+import resolveConfig from "tailwindcss/resolveConfig"
+import tailwindConfig from "../../../tailwind.config.js"
 
-export const Header = ({ theme, motd }: { theme?: number, motd?: string }) => {
+const twConfig = resolveConfig(tailwindConfig as any)
+
+export const Header = ({ theme, motd, fixed }: { theme?: number, motd?: string, fixed?: boolean }) => {
     const { locale, pathname } = useRouter();
 
     const t = useTranslations("");
 
-    const [shown, setShown] = React.useState(true);
-    const [shadow, setShadow] = React.useState(true);
-
     React.useEffect(() => {
-        setShadow(false);
+        const headerPage: any = document.getElementById("header-page");
+        const headerMotd: any = document.getElementById("header-motd");
 
         window.addEventListener("scroll", () => {
-            const scrolledUp = (window as any).oldScroll < window.scrollY;
+            if(!headerMotd) return;
 
-            (window as any).oldScroll = window.scrollY;
-
-            if(scrolledUp) {
-                if(window.scrollY >= 712) setShown(false);
-                setShadow(false);
-            } else if(!scrolledUp) {
-                setShown(true);
-
-                if(window.scrollY >= 712) setShadow(true);
-                else setShadow(false);
-            }
+            headerPage.style.transform = `translateY(-${Math.min(window.scrollY, 48)}px)`
+            headerPage.style.boxShadow = window.scrollY >= 700 ? twConfig.theme.boxShadow?.lg : ``
         })
     }, [])
 
     return (
-        <header className={`sticky top-0 z-50 w-full transition-all transform-gpu ${shadow ? `shadow-lg` : `shadow-none`}`} style={{ 
-            transform: shown ? `` : `translateY(-128px)` 
-        }}>
-            {motd && <div className={`hidden lg:visible lg:flex w-full h-12 items-center ${theme == Themes.Dark ? `bg-gray1 text-gray6` : `bg-bluelight text-blue`} justify-center transition-all overflow-hidden border-b-1 sticky top-0`}>
+        <header id={"header"} className={`sticky top-0 z-50 w-full transition-all transform-gpu`}>
+            {motd && <div id={"header-motd"} className={`hidden lg:visible lg:flex w-full h-12 items-center ${theme == Themes.Dark ? `bg-gray1 text-gray6` : `bg-bluelight text-blue`} justify-center transition-all overflow-hidden border-b-1 sticky top-0`}>
                 <div className={"container flex-row max-w-7xl h-full gap-3 flex items-center justify-center font-medium text-base motd-special"} dangerouslySetInnerHTML={{
                     __html: `${motd}`
                 }} style={({ "--motd-accent-color": theme == Themes.Dark ? ThemeColours.Neon.toHex() : ThemeColours.Blue.toHex() }) as any}>
                 </div>
             </div>}
 
-            <div className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container h-20 w-full max-w-full flex top-0 justify-center md:px-8 sticky z-50 sm:px-8 px-4 transition-all`}>
+            <div id={"header-page"} className={`${theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} container h-20 w-full max-w-full flex top-0 justify-center md:px-8 sticky z-50 sm:px-8 px-4 transition-shadow`}>
                 <div className={"container flex-row max-w-7xl flex items-center"}>
                     <div className={"flex flex-1"}>
                         <Link href={"/"}>
