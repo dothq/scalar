@@ -66,7 +66,7 @@ const Home = ({ motd }: { motd?: string }) => {
         <Layout selectionColour={ThemeColours.Blue.toHex(0.25)}>
             <Header theme={Themes.Light} motd={motd} />
 
-            <main className={"relative z-30"}>
+            <main className={"relative z-30 overflow-x-hidden"}>
                 <div 
                     id={"home-container"}
                     className={"w-full min-h-50vh lg:min-h-60vh lg2:min-h-70vh text-black flex justify-center items-center md:items-start relative bg-white"} 
@@ -176,9 +176,9 @@ const Home = ({ motd }: { motd?: string }) => {
                     <div className={"relative w-full h-full"}>
                         <div className={"w-full bg-gray7 py-36"}>
                             <div id={"feature-walkthrough"} className={"flex flex-col items-center gap-14 w-full"}>
-                                <h1 className={"text-8xl font-semibold"}>How does it all work?</h1>
+                                <h1 className={"md:text-7xl lg:text-8xl text-6xl font-semibold text-center"}>How does it all work?</h1>
 
-                                <ul className={"flex gap-5"}>
+                                <ul className={"flex gap-5 flex-wrap justify-center px-10 md:px-0"}>
                                     <li className={"h-full"}>
                                         <a 
                                             className={`rounded-full py-3 px-6 font-bold select-none transition-all ${activeTab == 0 ? `bg-blue text-white shadow-xl` : `bg-transparent text-black shadow-none cursor-pointer hover:bg-white hover:shadow active:bg-gray6 active:shadow-inner`}`}
