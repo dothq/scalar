@@ -66,7 +66,7 @@ const Home = ({ motd }: { motd?: string }) => {
         <Layout selectionColour={ThemeColours.Blue.toHex(0.25)}>
             <Header theme={Themes.Light} motd={motd} />
 
-            <main className={"relative z-30 overflow-x-hidden"}>
+            <main className={"relative z-30 overflow-x-hidden lg:overflow-x-visible"}>
                 <div 
                     id={"home-container"}
                     className={"w-full min-h-50vh lg:min-h-60vh lg2:min-h-70vh text-black flex justify-center items-center md:items-start relative bg-white"} 
@@ -252,7 +252,7 @@ const Home = ({ motd }: { motd?: string }) => {
                                     </div>
 
                                     <div className={"w-full flex flex-col px-4"}>
-                                        <img className={"w-full h-full rounded-2xl"} src={"/static/images/features/adblock@2x.jpg"}></img>
+                                        <img className={"w-full h-full rounded-2xl"} src={"/static/images/features/anti-fingerprinting@2x.jpg"}></img>
                                     
                                         <div className={"flex flex-col gap-6 mt-8"}>
                                             <h1 className={"text-5xl font-semibold"}>Hey stranger. 🕵</h1>
@@ -267,11 +267,11 @@ const Home = ({ motd }: { motd?: string }) => {
                                             <h1 className={"text-5xl font-semibold"}>Built on open-source. 🚀</h1>
                                             <p className={"text-2xl text-gray3"}>Open-source technologies are at the core of Dot Browser. You can view the{" "}
                                                 <Link href={"https://github.com/dothq/browser"}>
-                                                    <a className={"text-blue font-bold"}>source of the browser</a>
+                                                    <a target={"_blank"} className={"text-blue font-bold"}>source of the browser</a>
                                                 </Link> 
                                                 {" "}and{" "}
                                                 <Link href={"https://github.com/dothq"}>
-                                                    <a className={"text-blue font-bold"}>other projects</a>
+                                                    <a target={"_blank"} className={"text-blue font-bold"}>other projects</a>
                                                 </Link> 
                                                 {" "}on our GitHub.
                                             </p>
