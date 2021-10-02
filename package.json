@@ -41,6 +41,7 @@
     "@types/react-currency-format": "^1.0.0",
     "@types/react-text-mask": "^5.4.9",
     "@types/showdown": "^1.9.4",
+    "@types/tailwindcss": "^2.2.1",
     "autoprefixer": "^10.3.3",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.8",
