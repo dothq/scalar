@@ -12,6 +12,8 @@ const InternalServerError = () => {
 }
 
 export function getStaticProps({ locale }: { locale: string }) {
+    if(locale == "en") locale = "en-GB";
+
     return {
         props: {
             messages: require(`../l10n/${locale}.json`),

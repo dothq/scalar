@@ -16,6 +16,8 @@ export const LangPicker = ({ locale, className, style, theme }: { locale: any, c
     const ref = React.createRef<HTMLAnchorElement>();
     useRipple(ref, { animationLength: 350, rippleColor: theme == Themes.Dark ? ThemeColours.Gray4.toHex(0.3) : ThemeColours.Blue.toHex(0.3) });
 
+    if(locale == "en") locale = "en-GB"
+
     return (
         <div className={`relative flex ${className || ""}`} style={style}>
             <a ref={ref} onClick={e => {

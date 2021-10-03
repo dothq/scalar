@@ -281,6 +281,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
 
     const converter = new Converter({ openLinksInNewWindow: true });
     
+    if(locale == "en") locale = "en-GB";
+
     return {
         props: {
             messages: require(`../l10n/${locale}.json`),

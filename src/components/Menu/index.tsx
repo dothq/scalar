@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ThemeColours } from "../../../theme";
 import React from "react";
 import { useRipple } from "react-use-ripple";
+import { useRouter } from "next/router";
 
 const MenuItem = (args: Item) => {
     if(args.type == "separator") {
@@ -16,9 +17,11 @@ const MenuItem = (args: Item) => {
     const ref = React.createRef<HTMLAnchorElement>();
     useRipple(ref, { animationLength: 350, rippleColor: ThemeColours.Black.toHex(0.15) });
     
+    const { pathname } = useRouter();
+
     return (
         <Link
-            href={args.href || "#"} 
+            href={args.href || pathname} 
             locale={args.locale}
         >
             <a ref={ref} onClick={args.onClick} className={`rounded-lg cursor-pointer h-10 w-full px-3 text-sm flex items-center hover:bg-gray6 ${args.active ? `bg-gray6` : ``}`}>
