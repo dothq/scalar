@@ -30,4 +30,9 @@ export const languages = [
         rtl: true,
         group: "Asia"
     },
+    {
+        name: "Polski",
+        code: "pl",
+        group: "Europe"
+    },
 ]

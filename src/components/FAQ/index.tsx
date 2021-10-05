@@ -26,13 +26,13 @@ const FAQItem = ({ text, theme }: { text: string, theme?: number }) => {
             <label 
                 htmlFor={id}
                 ref={ref}
-                className={`flex items-center px-6 w-full h-32 text-3xl justify-between transition-all ${theme == Themes.Dark ? `hover:bg-white hover:text-black` : `hover:bg-black hover:text-white`}`}
+                className={`flex items-center px-6 w-full h-32 text-3xl justify-between transition-all ${theme == Themes.Dark ? `hover:bg-white hover:text-black` : `hover:bg-black hover:text-white`} py-8 h-auto`}
             >
                 <span>
                     {text}
                 </span>
 
-                <ChevronDown width={24} height={24} stroke={"currentColor"} className={"transition-transform"} />
+                <ChevronDown width={24} height={24} stroke={"currentColor"} className={"transition-transform"} style={{ minWidth: "1.5rem" }} />
             </label>
         </>
     )
