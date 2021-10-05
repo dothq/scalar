@@ -32,6 +32,64 @@
 
     "see-all-languages": "Se alla språk",
 
+    "feature-privacy-by-default": "Är integritet som standard?",
+    "feature-privacy-by-default-affirmation": "Japp!",
+    "feature-privacy-by-default-description": "Borta, är dagarna av fiddlandet med inställningar och andra tillägg. Den är redan redo för dig.",
+
+    "feature-migration": "Kan jag migrera mitt gamla data?", 
+    "feature-migration-affirmation": "Lätt som en plätt.",
+    "feature-migration-description": "Migrering av alla dina bokmärken och historik tar bara några sekunder.",
+
+    "feature-extensions": "Mina tillägg då?",
+    "feature-extensions-affirmation": "Självklart.",
+    "feature-extensions-description": "Alla dina favorit tillägg från Chromium och Firefox webbläsare fungerar med Dot.",
+
+    "feature-carousel-title": "Men hur fungerar allt egentligen?",
+
+    "feature-carousel-section-ad-blocking": "Reklam blockering",
+    "feature-carousel-section-ad-blocking-title": "Robust men diskret. 🤫",
+    "feature-carousel-section-ad-blocking-description": "Dot Shield är en kraftful reklam-blockerare byggt rakt innuti Dot. Den är tyst och blockerar de mesta reklamer och olika spårare.",
+
+    "feature-carousel-section-quick-launch": "Snabb start",
+    "feature-carousel-section-quick-launch-title": "Abrakadabra! 🪄",
+    "feature-carousel-section-quick-launch-description": "Du kan snabbt navigera till webbsidor {0}, söka igenom din historik {1}, bokmärken {2} och nedladdningar {3} allt genom att trycka på {kbd} för att öppna startaren.",
+
+    "feature-carousel-section-anti-fingerprinting": "Anti-digital fingeravtryckning",
+    "feature-carousel-section-anti-fingerprinting-title": "Hejsan främling. 🕵",
+    "feature-carousel-section-anti-fingerprinting-description": "Dot kommer automatiskt att randomisera din webbläsars konfiguration för att få dig att smälta in medans du surfar på internet.",
+
+    "feature-carousel-section-oss": "Öppen källkod",
+    "feature-carousel-section-oss-title": "Byggt på öppenkod. 🚀",
+    "feature-carousel-section-oss-description": "Öppen källkods teknologier är ett av de grunderna som definierar Dot Browser. Du kan kika på {0}koden av webbläsaren{/0} och {1}andra olika projekt{/1} på vår GitHub.",
+
+    "faq-title": "Några frågor?",
+    "faq-question-1": "Vad är Dot Browser?",
+    "faq-question-2": "Är Dot Browser byggt på Chrome?",
+    "faq-question-3": "Vilka platformar stödjer Dot Browser?",
+    "faq-question-4": "Hur är Dot Browser mer anonym än andra webbläsare?",
+    "faq-question-5": "Är det någonstans jag kan donera för stödja dig ekonomiskt?",
+    "faq-question-6": "Jag har en fråga som handlar om Dot Browser. Vart kan jag få support?",
+
+    "cta-sub": "Skydda din integritet.",
+    "cta-title": "Ladda ner Dot Browser",
+
+    "footer-explore-section": "Utforska",
+    "footer-explore-section-home": "Hem",
+    "footer-explore-section-about": "Om",
+    "footer-explore-section-blog": "Blog",
+    "footer-explore-section-donate": "Donera",
+
+    "footer-learn-section": "Lär",
+    "footer-learn-section-faq": "FAQ",
+    "footer-learn-section-support": "Support",
+    "footer-learn-section-documentation": "Dokumentation",
+
+    "footer-legal-section": "Rättigheter",
+    "footer-legal-section-privacy": "Integritet",
+    "footer-legal-section-terms": "Användarvillkor",
+
+    "footer-copyright-notice": "© {0}, Dot HQ. Alla rättigheter förbehållna.",
+
     "errors": {
         "error-403-title": "Fyra Noll Tre",
         "error-403-description": "Du har inte de begärda behörigheterna eller tillstånd för att komma åt denna sida.",

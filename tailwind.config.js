@@ -34,7 +34,14 @@ module.exports = {
       gray6: "#eaeaea",
       gray7: "#f9f9f9",
       white: "#ffffff",
-      transparent: "#00000000"
+      transparent: "#00000000",
+
+      // Brands
+      discord: "#5865f2",
+      twitter: "#1d9bf0",
+      github: "#000000",
+      reddit: "#ff4500",
+      matrix: "#000000"
     },
     fontFamily: {
       sans: [

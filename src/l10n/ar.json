@@ -32,6 +32,64 @@
 
     "see-all-languages": "مشاهدة كل اللغات",
 
+    "feature-privacy-by-default": "الخصوصية بشكل افتراضي؟",
+    "feature-privacy-by-default-affirmation": "نعم!",
+    "feature-privacy-by-default-description": "ايام المعاناة مع الاعدادات والاضافات قد ولت. كل شيء مجهز لك.",
+
+    "feature-migration": "نقل بياناتي القديمة؟ ",
+    "feature-migration-affirmation": "سهل كتناول فطيرة.",
+    "feature-migration-description": "نقل كل إشاراتك المرجعية وسجل التصفح يأخذ بضع ثواني.",
+
+    "feature-extensions": "وملحقاتي؟",
+    "feature-extensions-affirmation": "بالطبع.",
+    "feature-extensions-description": "كل ملحقاتك المفضلة من Chromium و Firefox متوفرة.",
+
+    "feature-carousel-title": "كيف يعمل لك هذا؟",
+
+    "feature-carousel-section-ad-blocking": "حجب الاعلانات",
+    "feature-carousel-section-ad-blocking-title": "قوي لكن متحفظ. 🤫",
+    "feature-carousel-section-ad-blocking-description": "Dot Shield هو حاجب اعلانات قوي مبني في Dot. انه لا يعيق عملك ويحجب الاعلانات والمتعقبين.",
+
+    "feature-carousel-section-quick-launch": "التشغيل السريع",
+    "feature-carousel-section-quick-launch-title": "ابرا كدابرا! 🪄",
+    "feature-carousel-section-quick-launch-description": "يمكنك التنقل بسرعة بين الصفحات {0}, تفتيش سجلك {1}, اشاراتك المرجعية {2} وسجل تنزيلاتك {3} عن طريق ضغط {kbd} لفتح منصة الإطلاق.",
+
+    "feature-carousel-section-anti-fingerprinting": "ماسح للبصمات",
+    "feature-carousel-section-anti-fingerprinting-title": "يا أيها الغريب. 🕵",
+    "feature-carousel-section-anti-fingerprinting-description": "Dot سوف يقوم بتغير اعداداتك بشكل عشوائي تلقائيًا لمساعدتك على الاندماج عند تصفح الانترنت.",
+
+    "feature-carousel-section-oss": "مفتوح المصدر",
+    "feature-carousel-section-oss-title": "مبني على مصدر مفتوح. 🚀",
+    "feature-carousel-section-oss-description": "التكنلوجيا مفتوحة المصدر هي الاساس ل-Dot Browser. بامكانك عرض {0}مصدر المتصفح{/0} و {1}مشاريع اخرى{/1} على صفحة ال-GitHub الخاصة بنا.",
+
+    "faq-title": "اي سؤال؟",
+    "faq-question-1": "ماذا هو Dot Browser؟",
+    "faq-question-2": "هل يعتمد Dot Browser على Chrome؟",
+    "faq-question-3": "اي منصات تدعم Dot Browser؟",
+    "faq-question-4": "لماذا Dot Browser هو متصفح اكثر امانًا من المتصفحات الاخرى؟",
+    "faq-question-5": "هل هنالك اي شيء للتبرع به من ��جل المساعدة ماليًأ؟",
+    "faq-question-6": "لدي سؤال حول Dot Browser, اين يمكنني الحصول على الدعم؟",
+
+    "cta-sub": "احمي خصوصيتك",
+    "cta-title": "تنزيل Dot Browser",
+
+    "footer-explore-section": "الاستكشاف",
+    "footer-explore-section-home": "الصفحة الرئيسية",
+    "footer-explore-section-about": "حول",
+    "footer-explore-section-blog": "المدونة",
+    "footer-explore-section-donate": "التبرع",
+
+    "footer-learn-section": "اكتشف",
+    "footer-learn-section-faq": "اسئلة متكررة (FAQ)",
+    "footer-learn-section-support": "الدعم",
+    "footer-learn-section-documentation": "التوثيق",
+
+    "footer-legal-section": "قانوني",
+    "footer-legal-section-privacy": "الخصوصية",
+    "footer-legal-section-terms": "الشروط",
+
+    "footer-copyright-notice": "© {0}, Dot HQ. كل الحقوق محفوظة.",
+
     "errors": {
         "error-403-title": "أربعمائة وثلاثة",
         "error-403-description": "انت لا تملك الاذن او التخويل المطلوب للوصول الى هذه الصفحة.",

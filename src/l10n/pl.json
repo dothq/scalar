@@ -1,0 +1,106 @@
+{
+    "language-name": "Polski",
+
+    "page-default-title": "Dot Browser ─ Przeglądarka, Która Walczy o Twoją Prywatność.",
+    "page-description": "Dot Browser to skupiona na prywatności, nowoczesna przeglądarka internetowa, która walczy o Twoją prywatność podczas przeglądania Internetu.",
+    "page-description-short": "Pobierz przeglądarkę, która walczy o Twoją prywatność podczas przeglądania Internetu.",
+
+    "download-generic-text": "Pobierz",
+
+    "landing-title": "Przeglądarka, która walczy o Twoją prywatność.",
+    "landing-description": "Dot Browser to skupiona na prywatności, nowoczesna przeglądarka internetowa oparta na Firefoxie, która walczy o Twoją prywatność podczas przeglądania Internetu.",
+
+    "landing-download-button-text": "Pobierz Dot Browser",
+    "landing-download-availability-for-text": "Dostępny na Windows, macOS, Linux i BSD.",    
+    "landing-download-system-requirements-button": "Wymagania systemowe",
+
+    "header-products-submenu": "Produkty",
+    "header-blog-submenu": "Blog",
+    "header-help-submenu": "Pomoc",
+    "header-about-submenu": "O nas",
+
+    "header-dot-one-create-button": "Dołącz do Dot One",
+    "header-dot-one-login-button": "Zaloguj się",
+
+    "subheader-browser-desktop-title": "Dot Browser dla PC",
+
+    "subheader-language-switcher-title": "Przełącz język",
+
+    "region-europe": "Europa",
+    "region-americas": "Ameryka",
+    "region-asia": "Azja",
+
+    "see-all-languages": "Wszystkie języki",
+
+    "feature-privacy-by-default": "Domyślna ochrona prywatności?",
+    "feature-privacy-by-default-affirmation": "Tak!",
+    "feature-privacy-by-default-description": "Czasy bawienia się z ustawieniami i rozszerzeniami minęły. Wszystko jest już dla Ciebie przygotowane.",
+
+    "feature-migration": "Przenoszenie starych danych? ",
+    "feature-migration-affirmation": "Proste jak bułka z masłem.",
+    "feature-migration-description": "Przenoszenie wszystkich zakładek i historii przeglądania zajmuje tylko chwilę.",
+
+    "feature-extensions": "A rozszerzenia? ",
+    "feature-extensions-affirmation": "Jeszcze jak.",
+    "feature-extensions-description": "Wszystkie Twoje ulubione rozszerzenia z przeglądarek Chromium i Firefox są dostępne.",
+
+    "feature-carousel-title": "Jak to wszystko działa?",
+
+    "feature-carousel-section-ad-blocking": "Blokowanie reklam",
+    "feature-carousel-section-ad-blocking-title": "Solidne, ale dyskretne. 🤫",
+    "feature-carousel-section-ad-blocking-description": "Dot Shield to potężny bloker reklam wbudowany w Dot. Nie utrudnia użytkowania i blokuje większość reklam oraz skryptów śledzących.",
+
+    "feature-carousel-section-quick-launch": "Szybki start",
+    "feature-carousel-section-quick-launch-title": "Abrakadabra! 🪄",
+    "feature-carousel-section-quick-launch-description": "Możesz błyskawicznie poruszać się po stronach internetowych {0}, szukać w Twojej historii {1}, zakładkach {2} oraz pobranych plikach {3}, naciskając {kbd}, aby otworzyć launcher.",
+
+    "feature-carousel-section-anti-fingerprinting": "Ochrona przed śledzeniem",
+    "feature-carousel-section-anti-fingerprinting-title": "Hej, nieznajoma osobo. 🕵",
+    "feature-carousel-section-anti-fingerprinting-description": "Dot automatycznie losuje konfigurację Twojej przeglądarki, abyś wtopił* się w tłum, przeglądając strony internetowe.",
+
+    "feature-carousel-section-oss": "Otwarto-źródłowy",
+    "feature-carousel-section-oss-title": "Zbudowany na otwartym kodzie. 🚀",
+    "feature-carousel-section-oss-description": "Otwartoźródłowe technologie to podstawa Dot Browsera. Możesz przejrzeć {0}kod przeglądarki{/0} i {1}innych projektów{/1} na naszym GitHubie.",
+
+    "faq-title": "Jakieś pytania?",
+    "faq-question-1": "Czym jest Dot Browser?",
+    "faq-question-2": "Czy Dot Browser oparty jest na Chrome?",
+    "faq-question-3": "Na jakich platformach Dot Browser jest dostępny?",
+    "faq-question-4": "W jaki sposób Dot Browser jest bardziej prywatny od innych przeglądarek?",
+    "faq-question-5": "Czy mogę w jakiś sposób wpłacić pieniądze, aby wesprzeć was finansowo?",
+    "faq-question-6": "Mam pytanie dotyczące Dot Browsera, gdzie mogę znaleźć pomoc?",
+
+    "cta-sub": "Chroń swoją prywatność.",
+    "cta-title": "Pobierz Dot Browser",
+
+    "footer-explore-section": "Przeglądaj",
+    "footer-explore-section-home": "Strona domowa",
+    "footer-explore-section-about": "O nas",
+    "footer-explore-section-blog": "Blog",
+    "footer-explore-section-donate": "Wesprzyj nas",
+
+    "footer-learn-section": "Dowiedz się więcej",
+    "footer-learn-section-faq": "FAQ",
+    "footer-learn-section-support": "Wsparcie",
+    "footer-learn-section-documentation": "Dokumentacja",
+
+    "footer-legal-section": "Dokumenty prawne",
+    "footer-legal-section-privacy": "Prywatność",
+    "footer-legal-section-terms": "Regulamin",
+
+    "footer-copyright-notice": "© {0}, Dot HQ. Wszelkie prawa zastrzeżone.",
+
+    "errors": {
+        "error-403-title": "Czterysta Trzy",
+        "error-403-description": "Nie posiadasz wymaganych uprawnień, aby uzyskać dostęp do tej strony.",
+        "error-403-button-text": "Spróbuj ponownie",
+
+        "error-404-title": "Czterysta Cztery",
+        "error-404-description": "Wygląda na to, że ta strona nie istnieje.",
+        "error-404-button-text": "Wstecz",
+    
+        "error-500-title": "Czterysta",
+        "error-500-description": "Wygląda na to, że jest obecnie problem z naszym serwerem.",
+        "error-500-button-text": "Spróbuj ponownie"
+    }
+}
