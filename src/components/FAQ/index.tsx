@@ -1,4 +1,5 @@
 import { useID } from "@dothq/id";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 import { useRipple } from "react-use-ripple";
@@ -37,10 +38,12 @@ const FAQItem = ({ id, text, theme }: { id: string, text: string, theme?: number
 }
 
 export const FAQAccordian = ({ theme }: { theme?: number }) => {
+    const t = useTranslations("");
+
     return (
         <div className={"flex flex-col gap-2 mt-6"}>
             <div className={"accordian-item mt-2"}>
-                <FAQItem id={"what-is-dot"} theme={theme} text={"What is Dot Browser?"} />
+                <FAQItem id={"what-is-dot"} theme={theme} text={t("faq-question-1")} />
 
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
@@ -101,7 +104,7 @@ export const FAQAccordian = ({ theme }: { theme?: number }) => {
             </div>
 
             <div className={"accordian-item"}>
-                <FAQItem id={"is-dot-based-on-chrome"} theme={theme} text={"Is Dot Browser based on Chrome?"} />
+                <FAQItem id={"is-dot-based-on-chrome"} theme={theme} text={t("faq-question-2")} />
 
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
@@ -133,7 +136,7 @@ export const FAQAccordian = ({ theme }: { theme?: number }) => {
             </div>
 
             <div className={"accordian-item"}>
-                <FAQItem id={"what-platforms-support-dot"} theme={theme} text={"What platforms support Dot Browser?"} />
+                <FAQItem id={"what-platforms-support-dot"} theme={theme} text={t("faq-question-3")} />
 
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
@@ -159,7 +162,7 @@ export const FAQAccordian = ({ theme }: { theme?: number }) => {
             </div>
 
             <div className={"accordian-item"}>
-                <FAQItem id={"how-is-dot-more-private-than-other-browsers"} theme={theme} text={"How is Dot Browser more private than other browsers?"} />
+                <FAQItem id={"how-is-dot-more-private-than-other-browsers"} theme={theme} text={t("faq-question-4")} />
             
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
@@ -169,7 +172,7 @@ export const FAQAccordian = ({ theme }: { theme?: number }) => {
             </div>
 
             <div className={"accordian-item"}>
-                <FAQItem id={"is-there-anywhere-i-can-donate"} theme={theme} text={"Is there anywhere I can donate to help you financially?"} />
+                <FAQItem id={"is-there-anywhere-i-can-donate"} theme={theme} text={t("faq-question-5")} />
             
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
@@ -194,7 +197,7 @@ export const FAQAccordian = ({ theme }: { theme?: number }) => {
             </div>
 
             <div className={"accordian-item"}>
-                <FAQItem id={"i-have-a-question"} theme={theme} text={"I have a question about Dot Browser and or where can I find support?"} />
+                <FAQItem id={"i-have-a-question"} theme={theme} text={t("faq-question-6")} />
                 
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
