@@ -21,6 +21,7 @@
     "countries-and-timezones": "^3.2.3",
     "document.contains": "^1.0.2",
     "flickity": "^2.2.2",
+    "netlify-cms-app": "^2.15.48",
     "next": "^11.1.0",
     "next-intl": "^2.0.5",
     "next-useragent": "^2.6.0",
