@@ -17,3 +17,6 @@ description: |-
     .then(_ => console.log("Bingus is pleased.")
   ```
 ---
+## Bingus is Amazing
+
+I love Bingus he is very epic
