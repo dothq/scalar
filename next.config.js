@@ -6,33 +6,33 @@ module.exports = {
     async redirects() {
         return [
             { 
-                source: '/join', 
-                destination: 'https://invite.gg/dot',
+                source: "/join", 
+                destination: "https://invite.gg/dot",
                 permanent: false,
             },
             { 
-                source: '/blog', 
-                destination: 'https://medium.com/dot-blog',
+                source: "/blog", 
+                destination: "https://medium.com/dot-blog",
                 permanent: false,
             },
             { 
-                source: '/legal/privacy', 
-                destination: '/about/privacy',
+                source: "/legal/privacy", 
+                destination: "/about/privacy",
                 permanent: false,
             },
             { 
-                source: '/legal/terms', 
-                destination: '/about/terms',
+                source: "/legal/terms", 
+                destination: "/about/terms",
                 permanent: false,
             },
             { 
-                source: '/legal/cookies', 
-                destination: '/about/cookies',
+                source: "/legal/cookies", 
+                destination: "/about/cookies",
                 permanent: false,
             },
             { 
-                source: '/legal/gdpr', 
-                destination: '/about/gdpr',
+                source: "/legal/gdpr", 
+                destination: "/about/gdpr",
                 permanent: false,
             }
         ]
@@ -40,48 +40,51 @@ module.exports = {
     async headers() {
         return [
             {
-                source: '/(.*)',
+                source: "/(.*)",
                 headers: [
                     {
-                        key: 'X-DNS-Prefetch-Control',
-                        value: 'on'
+                        key: "X-DNS-Prefetch-Control",
+                        value: "on"
                     },
                     {
-                        key: 'Strict-Transport-Security',
-                        value: 'max-age=63072000; includeSubDomains; preload'
+                        key: "Strict-Transport-Security",
+                        value: "max-age=63072000; includeSubDomains; preload"
                     },
                     {
-                        key: 'X-XSS-Protection',
-                        value: '1; mode=block'
+                        key: "X-XSS-Protection",
+                        value: "1; mode=block"
                     },
                     {
-                        key: 'X-Frame-Options',
-                        value: 'SAMEORIGIN'
+                        key: "X-Frame-Options",
+                        value: "SAMEORIGIN"
                     },
                     {
-                        key: 'Permissions-Policy',
-                        value: 'interest-cohort=()'
+                        key: "Permissions-Policy",
+                        value: "interest-cohort=()"
                     },
                     {
-                        key: 'X-Content-Type-Options',
-                        value: 'nosniff'
+                        key: "X-Content-Type-Options",
+                        value: "nosniff"
                     },
                     {
-                        key: 'Referrer-Policy',
-                        value: 'same-origin'
+                        key: "Referrer-Policy",
+                        value: "same-origin"
                     },
                     {
-                        key: 'Content-Security-Policy',
+                        key: "Content-Security-Policy",
                         value: process.env.NODE_ENV == "production" 
-                            ? `default-src https://*.dothq.co; script-src https://*.dothq.co; style-src 'unsafe-inline' https://*.dothq.co; img-src 'self' data: https://*.dothq.co https://dotusercontent.com; font-src https://*.dothq.co; connect-src 'self' https://*.dothq.co; media-src https://*.dothq.co; frame-src https://dothq.co; frame-ancestors 'none'; form-action 'self' dothq.co; block-all-mixed-content; base-uri 'self'; manifest-src 'self'`
+                            ? `default-src https://*.dothq.co; script-src https://*.dothq.co; style-src "unsafe-inline" https://*.dothq.co; img-src "self" data: https://*.dothq.co https://dotusercontent.com; font-src https://*.dothq.co; connect-src "self" https://*.dothq.co; media-src https://*.dothq.co; frame-src https://dothq.co; frame-ancestors "none"; form-action "self" dothq.co; block-all-mixed-content; base-uri "self"; manifest-src "self"`
                             : ``
                     },
                     {
-                        key: 'X-Powered-By',
-                        value: 'Bingus'
+                        key: "X-Powered-By",
+                        value: "Bingus"
                     }
                 ],
             },
         ]
     },
+    experimental: { 
+        esmExternals: true 
+    }
 }
