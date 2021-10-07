@@ -7,8 +7,9 @@ import { ArrowTop } from "../../icons/ArrowTop";
 import { useRipple } from "react-use-ripple";
 import { ThemeColours } from "../../../theme";
 import { Themes } from "../../utils/theme";
+import { Colour } from "../../../utils/colour";
 
-const Layout = ({ children, title, noSuffix, selectionColour, theme }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: string, theme?: number }) => {
+const Layout = ({ children, title, noSuffix, selectionColour, theme }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: Colour, theme?: number }) => {
     const { locale, locales } = useRouter();
 
     const t = useTranslations();
@@ -88,7 +89,7 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme }: { childre
                 {selectionColour && <style>
                     {`
                         ::selection {
-                            background-color: ${selectionColour} !important;
+                            background-color: ${selectionColour.toHex(0.15)} !important;
                         }
                     `}
                 </style>}
