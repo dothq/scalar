@@ -52,7 +52,7 @@
 
     "feature-carousel-section-quick-launch": "Snabb start",
     "feature-carousel-section-quick-launch-title": "Abrakadabra! 🪄",
-    "feature-carousel-section-quick-launch-description": "Du kan snabbt navigera till webbsidor {0}, söka igenom din historik {1}, bokmärken {2} och nedladdningar {3} allt genom att trycka på {kbd} för att öppna startaren.",
+    "feature-carousel-section-quick-launch-description": "Du kan snabbt navigera till webbsidor <webicon></webicon>, söka igenom din historik <historyicon></historyicon> bokmärken <bookmarksicon></bookmarksicon> och nedladdningar <downloadsicon></downloadsicon> allt genom att trycka på <launcherkbd></launcherkbd> för att öppna startaren.",
 
     "feature-carousel-section-anti-fingerprinting": "Anti-digital fingeravtryckning",
     "feature-carousel-section-anti-fingerprinting-title": "Hejsan främling. 🕵",
@@ -60,7 +60,7 @@
 
     "feature-carousel-section-oss": "Öppen källkod",
     "feature-carousel-section-oss-title": "Byggt på öppenkod. 🚀",
-    "feature-carousel-section-oss-description": "Öppen källkods teknologier är ett av de grunderna som definierar Dot Browser. Du kan kika på {0}koden av webbläsaren{/0} och {1}andra olika projekt{/1} på vår GitHub.",
+    "feature-carousel-section-oss-description": "Öppen källkods teknologier är ett av de grunderna som definierar Dot Browser. Du kan kika på <bl>koden av webbläsaren</bl> och <gl>andra olika projekt</gl> på vår GitHub.",
 
     "faq-title": "Några frågor?",
     "faq-question-1": "Vad är Dot Browser?",
@@ -79,6 +79,8 @@
     "footer-explore-section-blog": "Blog",
     "footer-explore-section-donate": "Donera",
 
+    "footer-products-section": "Produkter",
+
     "footer-learn-section": "Lär",
     "footer-learn-section-faq": "FAQ",
     "footer-learn-section-support": "Support",
@@ -88,7 +90,7 @@
     "footer-legal-section-privacy": "Integritet",
     "footer-legal-section-terms": "Användarvillkor",
 
-    "footer-copyright-notice": "© {0}, Dot HQ. Alla rättigheter förbehållna.",
+    "footer-copyright-notice": "© {year}, Dot HQ. Alla rättigheter förbehållna.",
 
     "errors": {
         "error-403-title": "Fyra Noll Tre",

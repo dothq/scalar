@@ -159,11 +159,19 @@ export const Ar = (args: any) => (
     </svg>
 )
 
+export const Pl = (args: any) => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...args}>
+        <path d="M12 0C18.64 0 24 5.36 24 12H0C0 5.36 5.36 0 12 0Z" fill="#F9F9F9"/>
+        <path d="M12 24C5.36 24 0 18.64 0 12H24C24 18.64 18.64 24 12 24Z" fill="#CF1E33"/>
+    </svg>
+)
+
 export const flags = {
     "en-GB": EnGB,
     "en-US": EnUS,
     "es-ES": EsES,
     "fr-FR": FrFR,
     "sv-SE": SvSE,
-    "ar": Ar
+    "ar": Ar,
+    "pl": Pl
 }

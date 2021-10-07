@@ -131,20 +131,21 @@ const Home = ({ motd }: { motd?: string }) => {
                         <div className={"w-full flex"}>
                             <div className={"w-full px-24 xl:px-48 pt-56 pb-72 flex flex-1 flex-col gap-56"}>
                                 <div className={"flex h-96 justify-center gap-10 flex-col"}>
-                                    <h1 className={"text-7xl font-bold flex flex-col gap-4"}>Privacy-by-default? <span className={"text-violet"}>Yep!</span></h1>
+                                    <h1 className={"text-7xl font-bold flex flex-col gap-4"}>{t("feature-privacy-by-default")} <span className={"text-violet"}>{t("feature-privacy-by-default-affirmation")}</span></h1>
                                     <p className={"text-3xl max-w-2xl text-gray3"}>
-                                        Gone are the days of fiddling around with settings and extensions. It's all ready for you.</p>
-                                </div>
-                                <div className={"flex h-96 justify-center gap-10 flex-col"}>
-                                    <h1 className={"text-7xl max-w-4xl font-bold flex flex-col gap-4"}>Migrating my old data? <span className={"text-orange"}>Easy as pie.</span></h1>
-                                    <p className={"text-3xl max-w-2xl text-gray3"}>
-                                        Migrating all your bookmarks and browsing history takes seconds.
+                                        {t("feature-privacy-by-default-description")}
                                     </p>
                                 </div>
                                 <div className={"flex h-96 justify-center gap-10 flex-col"}>
-                                    <h1 className={"text-7xl max-w-4xl font-bold flex flex-col gap-4"}>And my extensions? <span className={"text-blue"}>Absolutely.</span></h1>
+                                    <h1 className={"text-7xl font-bold flex flex-col gap-4"}>{t("feature-migration")} <span className={"text-orange"}>{t("feature-migration-affirmation")}</span></h1>
                                     <p className={"text-3xl max-w-2xl text-gray3"}>
-                                        All your favourite extensions from Chromium and Firefox browsers are available.
+                                        {t("feature-migration-description")}
+                                    </p>
+                                </div>
+                                <div className={"flex h-96 justify-center gap-10 flex-col"}>
+                                    <h1 className={"text-7xl font-bold flex flex-col gap-4"}>{t("feature-extensions")} <span className={"text-blue"}>{t("feature-extensions-affirmation")}</span></h1>
+                                    <p className={"text-3xl max-w-2xl text-gray3"}>
+                                        {t("feature-extensions-description")}
                                     </p>
                                 </div>
                             </div>
@@ -168,7 +169,9 @@ const Home = ({ motd }: { motd?: string }) => {
                     >
                         <div className={"bg-pureblack text-white w-full flex flex-col items-center grid-pattern py-36"}>
                             <div className={"w-full max-w-7xl gap-8 flex flex-col my-0 px-auto"}>
-                                <h1 className={"text-7xl font-medium"}>Any questions?</h1>
+                                <h1 className={"text-7xl font-medium"}>
+                                    {t("faq-title")}
+                                </h1>
 
                                 <FAQAccordian theme={Themes.Dark} />
                             </div>

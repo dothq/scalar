@@ -52,7 +52,7 @@
 
     "feature-carousel-section-quick-launch": "Szybki start",
     "feature-carousel-section-quick-launch-title": "Abrakadabra! 🪄",
-    "feature-carousel-section-quick-launch-description": "Możesz błyskawicznie poruszać się po stronach internetowych {0}, szukać w Twojej historii {1}, zakładkach {2} oraz pobranych plikach {3}, naciskając {kbd}, aby otworzyć launcher.",
+    "feature-carousel-section-quick-launch-description": "Możesz błyskawicznie poruszać się po stronach internetowych <webicon></webicon>, szukać w Twojej historii <historyicon></historyicon> zakładkach <bookmarksicon></bookmarksicon> oraz pobranych plikach <downloadsicon></downloadsicon>, naciskając <launcherkbd></launcherkbd> , aby otworzyć launcher.",
 
     "feature-carousel-section-anti-fingerprinting": "Ochrona przed śledzeniem",
     "feature-carousel-section-anti-fingerprinting-title": "Hej, nieznajoma osobo. 🕵",
@@ -60,7 +60,7 @@
 
     "feature-carousel-section-oss": "Otwarto-źródłowy",
     "feature-carousel-section-oss-title": "Zbudowany na otwartym kodzie. 🚀",
-    "feature-carousel-section-oss-description": "Otwartoźródłowe technologie to podstawa Dot Browsera. Możesz przejrzeć {0}kod przeglądarki{/0} i {1}innych projektów{/1} na naszym GitHubie.",
+    "feature-carousel-section-oss-description": "Otwartoźródłowe technologie to podstawa Dot Browsera. Możesz przejrzeć <bl>kod przeglądarki</bl> i <gl>innych projektów</gl> na naszym GitHubie.",
 
     "faq-title": "Jakieś pytania?",
     "faq-question-1": "Czym jest Dot Browser?",
@@ -79,6 +79,8 @@
     "footer-explore-section-blog": "Blog",
     "footer-explore-section-donate": "Wesprzyj nas",
 
+    "footer-products-section": "Produkty",
+
     "footer-learn-section": "Dowiedz się więcej",
     "footer-learn-section-faq": "FAQ",
     "footer-learn-section-support": "Wsparcie",
@@ -88,7 +90,7 @@
     "footer-legal-section-privacy": "Prywatność",
     "footer-legal-section-terms": "Regulamin",
 
-    "footer-copyright-notice": "© {0}, Dot HQ. Wszelkie prawa zastrzeżone.",
+    "footer-copyright-notice": "© {year}, Dot HQ. Wszelkie prawa zastrzeżone.",
 
     "errors": {
         "error-403-title": "Czterysta Trzy",

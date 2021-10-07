@@ -9,8 +9,11 @@ import { Twitter } from "../../icons/Twitter"
 import { Themes } from "../../utils/theme"
 import { LangPicker } from "../LangPicker"
 import { Logo } from "../Logo"
+import { useTranslations } from "next-intl"
 
 export const Footer = ({ theme }: { theme?: number }) => {
+    const t = useTranslations("");
+
     const { locale } = useRouter();
 
     return (
@@ -20,26 +23,26 @@ export const Footer = ({ theme }: { theme?: number }) => {
                     <li className={"w-64 md:w-48"}>
                         <ul className={"flex flex-col gap-2"}>
                             <li className={"mb-2"}>
-                                <span className={"font-bold text-xl"}>Explore</span>
+                                <span className={"font-bold text-xl"}>{t("footer-explore-section")}</span>
                             </li>
                             <li>
                                 <Link href={"/"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Home</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-explore-section-home")}</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={"/about"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>About</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-explore-section-about")}</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={"/blog"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Blog</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-explore-section-blog")}</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={"/donate"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Donate</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-explore-section-donate")}</a>
                                 </Link>
                             </li>
                         </ul>
@@ -48,20 +51,20 @@ export const Footer = ({ theme }: { theme?: number }) => {
                     <li className={"w-64 md:w-48"}>
                         <ul className={"flex flex-col gap-2"}>
                             <li className={"mb-2"}>
-                                <span className={"font-bold text-xl"}>Learn</span>
+                                <span className={"font-bold text-xl"}>{t("footer-learn-section")}</span>
                             </li>
                             <li>
                                 <Link href={"/faq"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>FAQ</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-learn-section-faq")}</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={"/support"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Support</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-learn-section-support")}</a>
                                 </Link>
                             </li>
                             <li>
-                                <a target={"_blank"} href={"https://docs.dothq.co"} className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Documentation</a>
+                                <a target={"_blank"} href={"https://docs.dothq.co"} className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-learn-section-documentation")}</a>
                             </li>
                         </ul>
                     </li>
@@ -69,7 +72,7 @@ export const Footer = ({ theme }: { theme?: number }) => {
                     <li className={"w-64 md:w-48"}>
                         <ul className={"flex flex-col gap-2"}>
                             <li className={"mb-2"}>
-                                <span className={"font-bold text-xl"}>Products</span>
+                                <span className={"font-bold text-xl"}>{t("footer-products-section")}</span>
                             </li>
                             <li>
                                 <Link href={"/browser"}>
@@ -92,16 +95,16 @@ export const Footer = ({ theme }: { theme?: number }) => {
                     <li className={"w-64 md:w-48"}>
                         <ul className={"flex flex-col gap-2"}>
                             <li className={"mb-2"}>
-                                <span className={"font-bold text-xl"}>Legal</span>
+                                <span className={"font-bold text-xl"}>{t("footer-legal-section")}</span>
                             </li>
                             <li>
                                 <Link href={"/about/privacy"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Privacy</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-legal-section-privacy")}</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={"/about/terms"}>
-                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>Terms</a>
+                                    <a className={"text-lg text-blue font-medium hover:bg-blue hover:text-white"}>{t("footer-legal-section-terms")}</a>
                                 </Link>
                             </li>
                             <li>
@@ -116,10 +119,10 @@ export const Footer = ({ theme }: { theme?: number }) => {
                 <div className={"w-full flex justify-between pt-14 mt-14 flex-wrap gap-10 border-t-2 border-gray6"}>
                     <div className={"flex flex-col gap-6 items-start"}>
                         <Logo linked />
-                        <span className={"text-sm"}>© {new Date().getFullYear()}, Dot HQ. All rights reserved.</span>
+                        <span className={"text-sm"}>{t("footer-copyright-notice", { year: new Date().getFullYear() })}</span>
                     </div>
                     <div className={"flex flex-row gap-6 md:items-center md:justify-end"}>
-                        <LangPicker menuTop={"-382px"} locale={locale} />
+                        <LangPicker menuTop={"-422px"} locale={locale} />
 
                         <a target={"_blank"} title={"Discord"} className={"text-gray3 hover:text-discord transition-all"} href={"https://discord.gg/WRDEK2D"}>
                             <Discord className={"fill-current"} />

@@ -52,7 +52,7 @@
 
     "feature-carousel-section-quick-launch": "التشغيل السريع",
     "feature-carousel-section-quick-launch-title": "ابرا كدابرا! 🪄",
-    "feature-carousel-section-quick-launch-description": "يمكنك التنقل بسرعة بين الصفحات {0}, تفتيش سجلك {1}, اشاراتك المرجعية {2} وسجل تنزيلاتك {3} عن طريق ضغط {kbd} لفتح منصة الإطلاق.",
+    "feature-carousel-section-quick-launch-description": "يمكنك التنقل بسرعة بين الصفحات <webicon></webicon>, تفتيش سجلك <historyicon></historyicon> اشاراتك المرجعية <bookmarksicon></bookmarksicon> وسجل تنزيلاتك <downloadsicon></downloadsicon> عن طريق ضغط <launcherkbd></launcherkbd>  لفتح منصة الإطلاق.",
 
     "feature-carousel-section-anti-fingerprinting": "ماسح للبصمات",
     "feature-carousel-section-anti-fingerprinting-title": "يا أيها الغريب. 🕵",
@@ -60,7 +60,7 @@
 
     "feature-carousel-section-oss": "مفتوح المصدر",
     "feature-carousel-section-oss-title": "مبني على مصدر مفتوح. 🚀",
-    "feature-carousel-section-oss-description": "التكنلوجيا مفتوحة المصدر هي الاساس ل-Dot Browser. بامكانك عرض {0}مصدر المتصفح{/0} و {1}مشاريع اخرى{/1} على صفحة ال-GitHub الخاصة بنا.",
+    "feature-carousel-section-oss-description": "التكنلوجيا مفتوحة المصدر هي الاساس ل-Dot Browser. بامكانك عرض <bl>مصدر المتصفح</bl> و <gl>مشاريع اخرى</gl> على صفحة ال-GitHub الخاصة بنا.",
 
     "faq-title": "اي سؤال؟",
     "faq-question-1": "ماذا هو Dot Browser؟",
@@ -79,6 +79,8 @@
     "footer-explore-section-blog": "المدونة",
     "footer-explore-section-donate": "التبرع",
 
+    "footer-products-section": "منتجات",
+
     "footer-learn-section": "اكتشف",
     "footer-learn-section-faq": "اسئلة متكررة (FAQ)",
     "footer-learn-section-support": "الدعم",
@@ -88,7 +90,7 @@
     "footer-legal-section-privacy": "الخصوصية",
     "footer-legal-section-terms": "الشروط",
 
-    "footer-copyright-notice": "© {0}, Dot HQ. كل الحقوق محفوظة.",
+    "footer-copyright-notice": "© {year}, Dot HQ. كل الحقوق محفوظة.",
 
     "errors": {
         "error-403-title": "أربعمائة وثلاثة",

@@ -52,7 +52,7 @@
 
     "feature-carousel-section-quick-launch": "Quick Launch",
     "feature-carousel-section-quick-launch-title": "Abracadabra! 🪄",
-    "feature-carousel-section-quick-launch-description": "Puedes fácilmente navegar entre páginas {0}, buscar en tu historial {1}, marcadores {2} y descargas {3}, todo esto presionando {kbd} para abrir el buscador.",
+    "feature-carousel-section-quick-launch-description": "Puedes fácilmente navegar entre páginas <webicon></webicon>, buscar en tu historial <historyicon></historyicon> marcadores <bookmarksicon></bookmarksicon> y descargas <downloadsicon></downloadsicon>, todo esto presionando <launcherkbd></launcherkbd>  para abrir el buscador.",
 
     "feature-carousel-section-anti-fingerprinting": "Anti Toma de Huellas Digitales",
     "feature-carousel-section-anti-fingerprinting-title": "Hey, extraño. 🕵",
@@ -60,7 +60,7 @@
 
     "feature-carousel-section-oss": "Código Abierto",
     "feature-carousel-section-oss-title": "Construído en código abierto. 🚀",
-    "feature-carousel-section-oss-description": "Tecnologías de código abierto son el núcleo de Dot. Puedes ver el {0}código del navegador{/0} y {1}otros proyectos{/1} en nuestra página de Github..",
+    "feature-carousel-section-oss-description": "Tecnologías de código abierto son el núcleo de Dot. Puedes ver el <bl>código del navegador</bl> y <gl>otros proyectos</gl> en nuestra página de Github..",
 
     "faq-title": "¿Alguna pregunta?",
     "faq-question-1": "¿Qué es Dot Browser?",
@@ -79,6 +79,8 @@
     "footer-explore-section-blog": "Blog",
     "footer-explore-section-donate": "Donar",
 
+    "footer-products-section": "Productos",
+
     "footer-learn-section": "Ver más",
     "footer-learn-section-faq": "FAQ",
     "footer-learn-section-support": "Soporte",
@@ -88,7 +90,7 @@
     "footer-legal-section-privacy": "Privacidad",
     "footer-legal-section-terms": "Términos",
 
-    "footer-copyright-notice": "© {0}, Dot HQ. Todos los derechos reservados.",
+    "footer-copyright-notice": "© {year}, Dot HQ. Todos los derechos reservados.",
 
     "errors": {
         "error-403-title": "Cuatro Cero Tres",

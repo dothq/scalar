@@ -22,7 +22,7 @@
     "document.contains": "^1.0.2",
     "flickity": "^2.2.2",
     "next": "^11.1.0",
-    "next-intl": "^1.5.1",
+    "next-intl": "^2.0.5",
     "next-useragent": "^2.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
