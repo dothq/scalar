@@ -49,7 +49,7 @@ const Home = ({ motd }: { motd?: string }) => {
     }, [])
 
     return (
-        <Layout selectionColour={ThemeColours.Blue.toHex(0.25)}>
+        <Layout selectionColour={ThemeColours.Blue}>
             <Header theme={headerDark ? Themes.Dark : Themes.Light} motd={motd} />
 
             <main className={"relative z-30 overflow-x-hidden lg:overflow-x-visible"}>

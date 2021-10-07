@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import React from "react";
+import { ThemeColours } from "../../../theme";
 import { HollowButton } from "../Button/Hollow";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
@@ -14,7 +15,7 @@ export const Error = ({ code, buttonClick, buttonHref }: { code: number, buttonC
     const t = useTranslations("errors");
 
     return (
-        <Layout title={String(t(`error-${code}-title`))}>
+        <Layout title={String(t(`error-${code}-title`))} selectionColour={ThemeColours.Blue}>
             <div className={"flex flex-col min-h-screen"}>
                 <div className={"w-full py-28 md:px-8 sm:px-8 px-4 flex justify-center flex-1 items-center"}>
                     <div className="container max-w-7xl w-full h-full flex min-h-full">

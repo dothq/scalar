@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeColours } from "../../theme";
 import { HollowButton } from "../components/Button/Hollow";
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
@@ -35,7 +36,7 @@ const Bingus = () => {
     }
 
     return (
-        <Layout title={"Bingus Shrine"} selectionColour={"rgb(207, 155, 144)"}>
+        <Layout title={"Bingus Shrine"} selectionColour={ThemeColours.Bingus}>
             <div className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
                 <Header />
 
