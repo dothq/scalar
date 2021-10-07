@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import React from "react";
 import { HollowButton } from "../Button/Hollow";
+import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { LangPicker } from "../LangPicker";
 import Layout from "../Layout";
@@ -14,30 +15,36 @@ export const Error = ({ code, buttonClick, buttonHref }: { code: number, buttonC
 
     return (
         <Layout title={String(t(`error-${code}-title`))}>
-            <div className="container mx-auto max-w-7xl h-full py-28 px-6 sm:px-10 xl:px-0 flex">
-                <div className={"flex flex-col flex-1"}>
-                    <Logo className={"mb-10"} linked />
+            <div className={"flex flex-col min-h-screen"}>
+                <div className={"w-full py-28 md:px-8 sm:px-8 px-4 flex justify-center flex-1 items-center"}>
+                    <div className="container max-w-7xl w-full h-full flex min-h-full">
+                        <div className={"flex flex-col flex-1 mx-auto"}>
+                            <Logo className={"mb-10"} linked />
 
-                    <h1 className={"text-6xl font-extrabold max-w-xs mb-4"}>
-                        {t(`error-${code}-title`)}
-                    </h1>
+                            <h1 className={"text-6xl font-extrabold max-w-xs mb-4"}>
+                                {t(`error-${code}-title`)}
+                            </h1>
 
-                    <p className={"text-lg mb-10 max-w-md"}>
-                        {t(`error-${code}-description`)}
-                    </p>
+                            <p className={"text-lg mb-10 max-w-md"}>
+                                {t(`error-${code}-description`)}
+                            </p>
 
-                    <HollowButton 
-                        colour={"blue"} 
-                        href={buttonHref}
-                        onClick={buttonClick}
-                    >
-                        {t(`error-${code}-button-text`)}
-                    </HollowButton>
+                            <HollowButton 
+                                colour={"blue"} 
+                                href={buttonHref}
+                                onClick={buttonClick}
+                            >
+                                {t(`error-${code}-button-text`)}
+                            </HollowButton>
+                        </div>
+
+                        <div className={"flex flex-col"}>
+                            <LangPicker locale={locale} />
+                        </div>
+                    </div>
                 </div>
 
-                <div className={"flex flex-col"}>
-                    <LangPicker locale={locale} />
-                </div>
+                <Footer />
             </div>
         </Layout>
     )
