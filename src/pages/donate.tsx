@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import { Themes } from "../utils/theme";
 import { Tab } from "../components/Tab";
 import { ThemeColours } from "../../theme";
+import { Footer } from "../components/Footer";
 
 const constructDonateUrl = ({ amount, currency, period }: { amount: number, currency: string, period: string }) => {
     return `https://liberapay.com/dothq/donate?amount=${amount}&currency=${currency}&period=${period}#amount`
@@ -162,8 +163,6 @@ const Donate = () => {
                                 }, 500);
 
                                 window.addEventListener("click", () => {
-                                    setError("Payment was cancelled.")
-
                                     onClickListener()
                                 })
                             }}
@@ -277,6 +276,8 @@ const Donate = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </Layout>
     )
 }
