@@ -38,6 +38,13 @@
 }
 
 @responsive {
+    .min-h-80vh {
+        min-height: 80vh;
+        height: 80vh;
+    }
+}
+
+@responsive {
     .min-h-90vh {
         min-height: 90vh;
         height: 90vh;
@@ -94,6 +101,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .grid-light-pattern {
     background-image: url("/static/images/grid-lighter.svg");
+}
+
+.map-pattern {
+    background-image: url("/static/images/world-map.png");
+    background-position: center top;
 }
 
 .motd-special a {
