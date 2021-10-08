@@ -55,7 +55,7 @@ const Home = ({ motd }: { motd?: string }) => {
             <main className={"relative z-30 overflow-x-hidden lg:overflow-x-visible"}>
                 <div 
                     id={"home-container"}
-                    className={"w-full min-h-50vh lg:min-h-60vh lg2:min-h-70vh text-black flex justify-center items-center md:items-start relative bg-white"} 
+                    className={"w-full min-h-60vh lg:min-h-70vh lg2:min-h-80vh text-black flex justify-center items-center md:items-start relative bg-white"} 
                     style={{ zIndex: -1 }}
                 >
                     <div className={"fixed px-7 lg:px-12 lg2:px-16 xl:px-20"} style={{ height: "inherit" }}>
