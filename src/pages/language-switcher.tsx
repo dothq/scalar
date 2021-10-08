@@ -25,7 +25,11 @@ const LanguageSwitcher = () => {
             <div className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
                 <Header />
 
-                <Subheader id={"language-switcher"} />
+                <div className={"w-full flex justify-center bg-white map-pattern text-black py-32 pb-44 text-center"}>
+                    <div className={"max-w-7xl"}>
+                        <h1 className={"text-6xl font-bold"} style={{ lineHeight: "5rem" }}>{t("subheader-language-switcher-title")}</h1>
+                    </div>
+                </div>
 
                 <div className={"container my-10 max-w-7xl w-full flex flex-col gap-8 flex-wrap md:px-8 sm:px-8 lg:px-0 px-0"}>
                     {groups.map(group => (
