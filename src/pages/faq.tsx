@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeColours } from "../../theme";
 import { HollowButton } from "../components/Button/Hollow";
 import { FAQAccordian } from "../components/FAQ";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 import Layout from "../components/Layout";
@@ -23,6 +24,8 @@ const FAQ = () => {
                     <FAQAccordian theme={Themes.Light} />
                 </div>
             </div>
+
+            <Footer />
         </Layout>
     )
 }
