@@ -52,7 +52,7 @@
 
     "feature-carousel-section-quick-launch": "Quick Launch",
     "feature-carousel-section-quick-launch-title": "Abracadabra! 🪄",
-    "feature-carousel-section-quick-launch-description": "You can quickly navigate webpages <webicon></webicon>, search your history <historyicon></historyicon> bookmarks <bookmarksicon></bookmarksicon> and downloads <downloadsicon></downloadsicon> all by pressing <launcherkbd></launcherkbd>  to open the launcher.",
+    "feature-carousel-section-quick-launch-description": "You can quickly navigate webpages <webicon></webicon>, search your history, <historyicon></historyicon> bookmarks, <bookmarksicon></bookmarksicon> and downloads <downloadsicon></downloadsicon> by simply pressing <launcherkbd></launcherkbd>  to open the launcher.",
 
     "feature-carousel-section-anti-fingerprinting": "Anti-Fingerprinting",
     "feature-carousel-section-anti-fingerprinting-title": "Hey stranger. 🕵",
