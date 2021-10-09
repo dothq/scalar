@@ -1,3 +1,3 @@
 ---
-name: Development and Engineering
+name: Development & Engineering
 ---
