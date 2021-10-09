@@ -17,7 +17,7 @@ res.send(`
 @font-face {
     font-family: 'Karla';
     font-display: swap;
-    src: url("http://${host}/static/fonts/Karla.woff2") format("woff2");
+    src: url("http${process.env.NODE_ENV == "production" ? "s" : ""}://${host}/static/fonts/Karla.woff2") format("woff2");
 }
 
 ::selection {
