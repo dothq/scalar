@@ -73,14 +73,12 @@ class Document extends NextDocument {
                     <meta property="og:site_name" content="Dot HQ"></meta>
                     <meta property="og:url" content={url}></meta>
                     <meta property="og:type" content="website"></meta>
-                    <meta property="og:image" content="/static/images/fight-for-privacy.png"></meta>
                     <meta property="og:image:type" content="image/png"></meta>
                     <meta property="og:image:width" content="1200"></meta>
                     <meta property="og:image:height" content="630"></meta>
                     <meta name="twitter:card" content="summary_large_image"></meta>
                     <meta name="twitter:site" content="@DotBrowser"></meta>
                     <meta name="twitter:creator" content="@DotBrowser"></meta>
-                    <meta name="twitter:image" content="/static/images/fight-for-privacy.png"></meta>
                 </Head>
                 <body>
                     <Main />

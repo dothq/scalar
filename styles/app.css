@@ -51,6 +51,10 @@
     }
 }
 
+:root.no-js .no-js-hidden {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -77,6 +81,7 @@
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {

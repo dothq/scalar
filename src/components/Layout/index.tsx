@@ -9,7 +9,7 @@ import { ThemeColours } from "../../../theme";
 import { Themes } from "../../utils/theme";
 import { Colour } from "../../../utils/colour";
 
-const Layout = ({ children, title, noSuffix, selectionColour, theme }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: Colour, theme?: number }) => {
+const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, metaDescription, metaImg }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: Colour, theme?: number, metaTitle?: string, metaDescription?: string, metaImg?: string }) => {
     const { locale, locales } = useRouter();
 
     const t = useTranslations();
@@ -74,10 +74,13 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme }: { childre
                     }, null, 2)
                 }}></script>
 
-                <meta property="og:title" content={String(t("page-description-short"))}></meta>
-                <meta property="og:description" content={String(t("page-description"))}></meta>
-                <meta name="twitter:title" content={String(t("page-description-short"))}></meta>
-                <meta name="twitter:description" content={String(t("page-description"))}></meta>
+                <meta property="og:title" content={metaTitle ? `${metaTitle} ─ Dot HQ` : String(t("page-description-short"))}></meta>
+                <meta property="og:description" content={metaDescription ? metaDescription : String(t("page-description"))}></meta>
+                <meta name="twitter:title" content={metaTitle ? `${metaTitle} ─ Dot HQ` : String(t("page-description-short"))}></meta>
+                <meta name="twitter:description" content={metaDescription ? metaDescription : String(t("page-description"))}></meta>
+
+                <meta property="og:image" content={metaImg ? metaImg : "/static/images/fight-for-privacy.png"}></meta>
+                <meta name="twitter:image" content={metaImg ? metaImg : "/static/images/fight-for-privacy.png"}></meta>
 
                 <meta property="og:locale" content={locale}></meta>
 
@@ -86,13 +89,16 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme }: { childre
                 ))}
                 <link rel="alternate" href={url} hrefLang="x-default"></link>
 
-                {selectionColour && <style>
+                <style>
                     {`
                         ::selection {
-                            background-color: ${selectionColour.toHex(0.15)} !important;
+                            background-color: ${selectionColour 
+                                ? selectionColour.toHex(0.15)
+                                : ThemeColours.Blue.toHex(0.15)
+                            } !important;
                         }
                     `}
-                </style>}
+                </style>
             </Head>
 
             {children}

@@ -16,7 +16,7 @@ export default {
         }
     },
     media_folder: "public/static/images",
-    public_folder: "public",
+    public_folder: "/static/images",
     collections: [
         {
             name: "posts",
@@ -24,7 +24,7 @@ export default {
             label_singular: "post",
             folder: "src/data/posts",
             create: true,
-            slug: "{{year}}/{{month}}/{{day}}/{{slug}}",
+            slug: "{{slug}}",
             fields: [
                 {
                     label: "Title",
@@ -43,7 +43,16 @@ export default {
                     widget: "relation",
                     collection: "authors",
                     search_fields: ["name", "twitter", "github"],
-                    value_field: "name",
+                    value_field: "{{slug}}",
+                    display_fields: ["name"]
+                },
+                {
+                    label: "Category",
+                    name: "category_id",
+                    widget: "relation",
+                    collection: "categories",
+                    search_fields: ["name"],
+                    value_field: "{{slug}}",
                     display_fields: ["name"]
                 },
                 {
@@ -83,6 +92,21 @@ export default {
                     name: "github",
                     widget: "string",
                     hint: "Example: EnderDev"
+                }
+            ],
+        },
+        {
+            name: "categories",
+            label: "Post Categories",
+            label_singular: "category",
+            folder: "src/data/categories",
+            create: true,
+            slug: "{{fields.name}}",
+            fields: [
+                {
+                    label: "Name",
+                    name: "name",
+                    widget: "string",
                 }
             ],
         },

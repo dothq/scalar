@@ -9,7 +9,25 @@ Over the course of April, we have been hard at work at making Dot Browser even b
 
 # New Dot HQ Branding
 
-![](https://miro.medium.com/max/700/0*LVr4i4bMqUPnnjiV)
+```tsx
+import React from "react";
+
+class Application extends React.Component {
+    public constructor() {
+
+    }
+
+    public render() {
+        const myvar: string = "hello";
+        const num: number = 1;
+        const mybool: boolean = true;
+
+        return (
+            <h1>Hello World 👋</h1>
+        )
+    }
+}
+```
 
 # New Website
 

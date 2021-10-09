@@ -11,11 +11,6 @@ module.exports = {
                 permanent: false,
             },
             { 
-                source: "/blog", 
-                destination: "https://medium.com/dot-blog",
-                permanent: false,
-            },
-            { 
                 source: "/legal/privacy", 
                 destination: "/about/privacy",
                 permanent: false,
@@ -34,7 +29,12 @@ module.exports = {
                 source: "/legal/gdpr", 
                 destination: "/about/gdpr",
                 permanent: false,
-            }
+            },
+            {
+                source: "/public/static/:path*",
+                destination: "/static/:path*",
+                permanent: false,
+            },
         ]
     },
     async headers() {

@@ -57,6 +57,23 @@ module.exports = {
         "Helvetica Neue",
         "sans-serif"
       ]
+    },
+    scale: {
+      "0": "0",
+      "25": ".25",
+      "50": ".5",
+      "75": ".75",
+      "90": ".9",
+      "95": ".95",
+      "100": "1",
+      "1005": "1.005",
+      "1010": "1.010",
+      "1025": "1.025",
+      "105": "1.05",
+      "110": "1.1",
+      "125": "1.25",
+      "150": "1.5",
+      "200": "2",
     }
   },
   variants: {
@@ -64,6 +81,9 @@ module.exports = {
       backgroundColor: ["active"],
       boxShadow: ["active"],
       border: ["active"],
+      transform: ["group-hover"],
+      translate: ["group-hover"],
+      scale: ["group-hover"],
     }
   },
   plugins: [],
