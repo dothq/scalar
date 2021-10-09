@@ -1,6 +1,6 @@
 ---
 title: April 2021 Development Report
-image: public/0-swfdruftzmj_6snh.png
+image: /static/images/0-swfdruftzmj_6snh.png
 author: Kieran
 category_id: Product & Features
 published_at: 2021-04-30T23:00:33.442Z
