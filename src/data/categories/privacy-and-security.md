@@ -1,3 +1,3 @@
 ---
-name: Product & Features
+name: Privacy & Security
 ---
