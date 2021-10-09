@@ -8,10 +8,14 @@ export const Comments = () => {
     React.useEffect(() => {
         setBase(`${window.location.protocol}//${window.location.host}`)
 
-        const domain: any = window.location.host.match(/[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}?$/);
+        setInterval(() => {
+            if(visible !== 0) return;
 
-        if(domain && domain[0] == "dothq.co") setVisible(1);
-        else setVisible(2);
+            const domain: any = window.location.host.match(/[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}?$/);
+
+            if(domain && domain[0] == "dothq.co") setVisible(1);
+            else setVisible(2);
+        }, 10)
 
         setTimeout(() => {
             const url = new URL(window.location.href);
