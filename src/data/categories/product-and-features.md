@@ -1,3 +1,3 @@
 ---
-name: Product and Features
+name: Product & Features
 ---
