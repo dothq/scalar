@@ -60,5 +60,3 @@ We’ve been hard at work getting Dot ID’s ready for use. Our accounts hub is 
 Thank you for reading!
 
 Stay tuned for our May 2021 Development Report, coming out (you guessed it), 1st June 2021!
-
-Written by [Trevor](https://trevorthalacker.com)
