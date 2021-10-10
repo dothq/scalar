@@ -1,9 +1,13 @@
 import React from "react"
 import { Giscus } from "@giscus/react"
+import { useRouter } from "next/router";
 
 export const Comments = () => {
     const [visible, setVisible] = React.useState(0);
     const [base, setBase] = React.useState("");
+
+    const { asPath } = useRouter();
+    const { pathname } = new URL(asPath, "http://localhost");
 
     React.useEffect(() => {
         setBase(`${window.location.protocol}//${window.location.host}`)
@@ -28,12 +32,15 @@ export const Comments = () => {
 
     return (
         <div className={"border-t border-gray6 py-8 mt-4 max-w-4xl"}>
+            {visible == 0 && <>Loading comments...</>}
+
             {visible == 1 && <Giscus
                 repo="dothq-comments/www"
                 repoId="R_kgDOGMMIZg"
                 category="Comments"
                 categoryId="DIC_kwDOGMMIZs4B_XUH"
-                mapping="pathname"
+                mapping="specific"
+                term={pathname}
                 reactionsEnabled={"0"}
                 emitMetadata={"0"}
                 theme={`${base}/api/giscus/index.css` as any}
