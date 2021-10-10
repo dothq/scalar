@@ -14,7 +14,7 @@ import tailwindConfig from "../../../tailwind.config.js"
 const twConfig = resolveConfig(tailwindConfig as any)
 
 export const Header = ({ theme, motd, fixed, bg }: { theme?: number, motd?: string, fixed?: boolean, bg?: string }) => {
-    const { locale, pathname } = useRouter();
+    const { locale, asPath } = useRouter();
 
     const t = useTranslations("");
 
@@ -51,7 +51,7 @@ export const Header = ({ theme, motd, fixed, bg }: { theme?: number, motd?: stri
                                     e.preventDefault();
                                     e.stopPropagation();
 
-                                    if(pathname.startsWith("/bingus")) return router.push("/");
+                                    if(asPath.startsWith("/bingus")) return router.push("/");
                                     router.push("/bingus");
                                 }} className={"rounded-full"} style={{ 
                                     width: "36px", 

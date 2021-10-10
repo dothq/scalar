@@ -29,6 +29,8 @@ import { HollowButton } from "../../components/Button";
 import { Undo } from "../../icons/Undo";
 import { useRipple } from "react-use-ripple";
 import markdownToText from "markdown-to-text";
+import { languages } from "../../l10n/languages";
+import { useTranslations } from "next-intl";
 
 const toMs = (raw?: number) => {
     if(!raw) return `0:00`;
@@ -39,8 +41,10 @@ const toMs = (raw?: number) => {
     return `${m.toString()}:${s.toString().padStart(2, "0")}`
 }
 
-const BlogPost = ({ title, content, published_at, image, bite, plain }: Post & { content: string, plain: string }) => {
+const BlogPost = ({ title, content, published_at, image, bite, plain, authorData }: Post & { content: string, plain: string, authorData: any }) => {
     const { locale } = useRouter();
+
+    const t = useTranslations();
 
     const audioRef = React.createRef<HTMLAudioElement>();
 
@@ -114,7 +118,7 @@ const BlogPost = ({ title, content, published_at, image, bite, plain }: Post & {
                     <div className={"flex gap-2 text-2xl font-medium"}>
                         <Link href={"/blog"}>
                             <a className={"opacity-50 flex flex-row items-center gap-3 transition-opacity hover:opacity-100 w-max"} style={{ lineHeight: "3rem" }}>
-                                <ArrowTop className={"transform -rotate-90 w-4 h-4"} /> Blog
+                                <ArrowTop className={"transform -rotate-90 w-4 h-4"} /> {t("header-blog-submenu")}
                             </a>
                         </Link>
                     </div>
@@ -136,17 +140,17 @@ const BlogPost = ({ title, content, published_at, image, bite, plain }: Post & {
                     </h2>
                     
                     <div className={"flex gap-4 mt-6"}>
-                        <a href={"https://github.com/EnderDev_"} target={"_blank"}>
+                        <a href={`https://twitter.com/${authorData.twitter}`} target={"_blank"}>
                             <img 
-                                src={`/api/www/twitter-avatar/EnderDev_`}
+                                src={`/api/www/twitter-avatar/${authorData.twitter}`}
                                 className={"rounded-full w-12 h-12 border border-gray6"}
                             ></img>
                         </a>
 
                         <div className={"flex flex-col"}>
-                            <h4 className={"text-md md:text-xl font-medium"}>Kieran</h4>
-                            <a href={"https://github.com/EnderDev_"} target={"_blank"}>
-                                <span className={"text-gray4 text-base font-medium transition-colors hover:text-blue"}>@EnderDev_</span>
+                            <h4 className={"text-md md:text-xl font-medium"}>{authorData.name}</h4>
+                            <a href={`https://twitter.com/${authorData.twitter}`} target={"_blank"}>
+                                <span className={"text-gray4 text-base font-medium transition-colors hover:text-blue"}>@{authorData.twitter}</span>
                             </a>
                         </div>
                     </div>
@@ -252,15 +256,21 @@ export const getStaticProps = async ({ locale, params }: NextPageContext & { par
         resolve(path, "../..", "categories", `${data.category_id}.md`),
         "utf-8"
     )).data.name;
-
-    const bite = existsSync(resolve(process.cwd(), "public", "static", "bites", `${slug}.mp3`))
-        ? `/static/bites/${slug}.mp3`
+    
+    const author = matter(readFileSync(
+        resolve(path, "../..", "authors", `${data.author}.md`),
+        "utf-8"
+    )).data;
+    
+    const bite = existsSync(resolve(process.cwd(), "public", "static", "bites", slug, `${locale}.mp3`))
+        ? `/static/bites/${slug}/${locale}.mp3`
         : undefined;
 
     return {
         props: {
             category,
             ...data,
+            authorData: author,
             bite,
             plain,
             content: result.toString(),
@@ -290,12 +300,23 @@ export async function getStaticPaths() {
         .map((fn) => fn.replace(base + "/", ""))
         .map((fn) => fn.split("/"))
 
+    let slugs: any = [
+        { slug: mdFiles[0], locale: undefined }
+    ];
+
+    mdFiles.forEach((s: any) => {
+        languages.forEach(l => {
+            slugs.push({ slug: s, locale: l.code })
+        })
+    })
+
     return {
-        paths: mdFiles.map((name: string[]) => ({
+        paths: slugs.map(({ slug, locale }: { slug: string[], locale: string }) => ({
             params: {
-                slug: name,
+                slug,
             },
+            locale
         })),
-        fallback: false,
+        fallback: true,
     };
   }

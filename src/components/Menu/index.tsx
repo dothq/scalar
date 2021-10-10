@@ -17,11 +17,11 @@ const MenuItem = (args: Item) => {
     const ref = React.createRef<HTMLAnchorElement>();
     useRipple(ref, { animationLength: 350, rippleColor: ThemeColours.Black.toHex(0.15) });
     
-    const { pathname } = useRouter();
+    const { asPath } = useRouter();
 
     return (
         <Link
-            href={args.href || pathname} 
+            href={args.href || asPath} 
             locale={args.locale}
         >
             <a ref={ref} onClick={args.onClick} className={`rounded-lg cursor-pointer h-10 w-full px-3 text-sm flex items-center hover:bg-gray6 ${args.active ? `bg-gray6` : ``}`}>

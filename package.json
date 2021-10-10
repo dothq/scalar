@@ -25,6 +25,7 @@
     "document.contains": "^1.0.2",
     "dotenv": "^10.0.0",
     "flickity": "^2.2.2",
+    "fs-extra": "^10.0.0",
     "markdown-to-text": "^0.1.1",
     "netlify-cms-app": "^2.15.48",
     "next": "^11.1.0",
@@ -57,6 +58,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
+    "@types/fs-extra": "^9.0.13",
     "@types/glob": "^7.1.4",
     "@types/node": "^16.7.3",
     "@types/react": "^17.0.18",
