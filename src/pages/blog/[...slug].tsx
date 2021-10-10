@@ -261,7 +261,7 @@ export const getStaticProps = async ({ locale, params }: NextPageContext & { par
         resolve(path, "../..", "authors", `${data.author}.md`),
         "utf-8"
     )).data;
-    
+
     const bite = existsSync(resolve(process.cwd(), "public", "static", "bites", slug, `${locale}.mp3`))
         ? `/static/bites/${slug}/${locale}.mp3`
         : undefined;
@@ -294,6 +294,8 @@ export async function getStaticPaths() {
     );
     const files = glob.sync(path);
   
+    console.log(files)
+
     const mdFiles = files
         .filter((fn) => fn.endsWith(".md"))
         .map((fn) => fn.replace(".md", ""))
