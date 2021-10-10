@@ -107,7 +107,7 @@ const BlogPost = ({ title, content, published_at, image, bite, plain, authorData
         <Layout 
             title={title}
             metaTitle={title}
-            metaDescription={plain.replace(/\n/g, " ").substr(0, 200)}
+            metaDescription={plain ? plain.replace(/\n/g, " ").substr(0, 200) : undefined}
             metaImg={image}
             selectionColour={ThemeColours.Blue}
         >
