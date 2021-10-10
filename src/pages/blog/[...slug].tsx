@@ -44,7 +44,11 @@ const toMs = (raw?: number) => {
 const BlogPost = ({ title, content, published_at, image, bite, plain, authorData }: Post & { content: string, plain: string, authorData: any }) => {
     const { locale } = useRouter();
 
-    const t = useTranslations();
+    let t;
+
+    try {
+        t = useTranslations();
+    } catch(e) {}
 
     const audioRef = React.createRef<HTMLAudioElement>();
 
@@ -118,7 +122,7 @@ const BlogPost = ({ title, content, published_at, image, bite, plain, authorData
                     <div className={"flex gap-2 text-2xl font-medium"}>
                         <Link href={"/blog"}>
                             <a className={"opacity-50 flex flex-row items-center gap-3 transition-opacity hover:opacity-100 w-max"} style={{ lineHeight: "3rem" }}>
-                                <ArrowTop className={"transform -rotate-90 w-4 h-4"} /> {t("header-blog-submenu")}
+                                <ArrowTop className={"transform -rotate-90 w-4 h-4"} /> {t ? t("header-blog-submenu") : ""}
                             </a>
                         </Link>
                     </div>
@@ -140,17 +144,17 @@ const BlogPost = ({ title, content, published_at, image, bite, plain, authorData
                     </h2>
                     
                     <div className={"flex gap-4 mt-6"}>
-                        <a href={`https://twitter.com/${authorData.twitter}`} target={"_blank"}>
+                        <a href={`https://twitter.com/${authorData ? authorData.twitter : ""}`} target={"_blank"}>
                             <img 
-                                src={`/api/www/twitter-avatar/${authorData.twitter}`}
+                                src={`/api/www/twitter-avatar/${authorData ? authorData.twitter : ""}`}
                                 className={"rounded-full w-12 h-12 border border-gray6"}
                             ></img>
                         </a>
 
                         <div className={"flex flex-col"}>
-                            <h4 className={"text-md md:text-xl font-medium"}>{authorData.name}</h4>
-                            <a href={`https://twitter.com/${authorData.twitter}`} target={"_blank"}>
-                                <span className={"text-gray4 text-base font-medium transition-colors hover:text-blue"}>@{authorData.twitter}</span>
+                            <h4 className={"text-md md:text-xl font-medium"}>{authorData ? authorData.name : ""}</h4>
+                            <a href={`https://twitter.com/${authorData ? authorData.name : ""}`} target={"_blank"}>
+                                <span className={"text-gray4 text-base font-medium transition-colors hover:text-blue"}>@{authorData ? authorData.twitter : ""}</span>
                             </a>
                         </div>
                     </div>
