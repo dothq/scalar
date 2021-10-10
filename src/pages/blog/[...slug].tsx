@@ -153,7 +153,7 @@ const BlogPost = ({ title, content, published_at, image, bite, plain, authorData
 
                         <div className={"flex flex-col"}>
                             <h4 className={"text-md md:text-xl font-medium"}>{authorData ? authorData.name : ""}</h4>
-                            <a href={`https://twitter.com/${authorData ? authorData.name : ""}`} target={"_blank"}>
+                            <a href={`https://twitter.com/${authorData ? authorData.twitter : ""}`} target={"_blank"}>
                                 <span className={"text-gray4 text-base font-medium transition-colors hover:text-blue"}>@{authorData ? authorData.twitter : ""}</span>
                             </a>
                         </div>
