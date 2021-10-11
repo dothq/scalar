@@ -41,6 +41,8 @@ We’ve been experimenting and building a new website to showcase Dot Browser. K
 
 Also this month, we integrated our ad blocker (known as Dot Shield) into the browser. Now, you don’t even have to do anything to start blocking ads, other than download Dot!
 
+APPLE NASDAQ
+
 # Did someone mention cookies?
 
 We have made some needed changes to the privacy side of Dot Browser this month, including: finally blocking third-party cookies and disabling the captive portal pings.
