@@ -13,6 +13,7 @@ import glob from "glob";
 import { resolve } from "path";
 import { readFileSync } from "fs";
 import matter from "gray-matter";
+import { ThemeColours } from "../../../theme";
 
 export interface Post {
     slug: string,
@@ -35,14 +36,14 @@ const Blog = ({ posts }: { posts: Post[] }) => {
 
     return (
         <Layout>
-            <Header theme={headerPost ? Themes.Dark : Themes.Light} bg={!headerPost ? "bg-white text-black shadow-md" : "bg-blue text-white"} />
+            <Header theme={Themes.Light} />
 
-            {sorted[0] && <div className={"w-full bg-blue grid-light-pattern absolute"} style={{ 
+            {sorted[0] && <div className={"w-full bg-white grid-light-pattern absolute"} style={{ 
                 height: "41vh",
                 minHeight: "41vh"
             }}></div>}
 
-            <div className={"w-full flex justify-center bg-transparent text-white pt-24 pb-16 text-left flex-col items-center"}>
+            <div className={"w-full flex justify-center bg-transparent text-black pt-24 pb-16 text-left flex-col items-center md:px-8 sm:px-8 px-4"}>
                 {sorted[0] && <>
                     <div className={"max-w-7xl w-full flex justify-between relative flex-col"}>
                         <h1 className={"text-6xl font-bold"} style={{ lineHeight: "5rem" }}>Blog</h1>

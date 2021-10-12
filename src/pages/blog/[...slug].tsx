@@ -31,6 +31,7 @@ import { useRipple } from "react-use-ripple";
 import markdownToText from "markdown-to-text";
 import { languages } from "../../l10n/languages";
 import { useTranslations } from "next-intl";
+import axios from "axios";
 
 const toMs = (raw?: number) => {
     if(!raw) return `0:00`;
@@ -41,8 +42,8 @@ const toMs = (raw?: number) => {
     return `${m.toString()}:${s.toString().padStart(2, "0")}`
 }
 
-const BlogPost = ({ title, content, published_at, image, bite, plain, authorData }: Post & { content: string, plain: string, authorData: any }) => {
-    const { locale } = useRouter();
+const BlogPost = ({ slug, title, content, published_at, image, bite, plain, authorData }: Post & { content: string, plain: string, authorData: any }) => {
+    const { locale, query } = useRouter();
 
     let t;
 
@@ -95,6 +96,19 @@ const BlogPost = ({ title, content, published_at, image, bite, plain, authorData
 
     React.useEffect(() => {
         onCommit();
+    }, []);
+
+    React.useEffect(() => {
+        try {
+            const mount: any = document.getElementById("views-count-mount");
+
+            axios.get(`/api/ssr/blog-views/${query.slug}`)
+                .then(r => {
+                    mount.innerHTML = r.data;
+                })
+        } catch(e) {
+            
+        }
     }, [])
 
     const backRef = React.createRef<HTMLAnchorElement>();
@@ -157,6 +171,10 @@ const BlogPost = ({ title, content, published_at, image, bite, plain, authorData
                                 <span className={"text-gray4 text-base font-medium transition-colors hover:text-blue"}>@{authorData ? authorData.twitter : ""}</span>
                             </a>
                         </div>
+                    </div>
+
+                    <div id={"views-count-mount"} className={"h-6"}>
+
                     </div>
                 </div>
             </div>

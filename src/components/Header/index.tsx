@@ -13,7 +13,7 @@ import tailwindConfig from "../../../tailwind.config.js"
 
 const twConfig = resolveConfig(tailwindConfig as any)
 
-export const Header = ({ theme, motd, fixed, bg }: { theme?: number, motd?: string, fixed?: boolean, bg?: string }) => {
+export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?: string, fixed?: boolean, bg?: string, blur?: boolean }) => {
     const { locale, asPath } = useRouter();
 
     const t = useTranslations("");
@@ -43,7 +43,7 @@ export const Header = ({ theme, motd, fixed, bg }: { theme?: number, motd?: stri
                 id={"header-page"} 
                 className={`container h-20 w-full max-w-full flex top-0 sticky z-50`}
             >
-                <div className={`w-full flex justify-center ${bg ? bg : theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} transition-all md:px-8 sm:px-8 px-4`}>
+                <div className={`w-full flex justify-center ${bg ? bg : theme == Themes.Dark ? `bg-pureblack text-white` : `bg-white text-black`} ${blur ? `bg-opacity-80 backdrop-filter backdrop-blur-lg saturate-200` : ``} transition-all md:px-8 sm:px-8 px-4`}>
                     <div className={"container flex-row max-w-7xl flex items-center"}>
                         <div className={"flex flex-1"}>
                             <Link href={"/"}>
