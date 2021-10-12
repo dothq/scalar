@@ -16,7 +16,7 @@ export const Error = ({ code, buttonClick, buttonHref }: { code: number, buttonC
 
     return (
         <Layout title={String(t(`error-${code}-title`))} selectionColour={ThemeColours.Blue}>
-            <div className={"flex flex-col min-h-screen"}>
+            <div id={"main-content"} className={"flex flex-col min-h-screen"}>
                 <div className={"w-full py-28 md:px-8 sm:px-8 px-4 flex justify-center flex-1 items-center"}>
                     <div className="container max-w-7xl w-full h-full flex min-h-full">
                         <div className={"flex flex-col flex-1 mx-auto"}>

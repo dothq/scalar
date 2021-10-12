@@ -107,7 +107,7 @@ const BlogPost = ({ slug, title, content, published_at, image, bite, plain, auth
                     mount.innerHTML = r.data;
                 })
         } catch(e) {
-            
+
         }
     }, [])
 
@@ -131,7 +131,7 @@ const BlogPost = ({ slug, title, content, published_at, image, bite, plain, auth
         >
             <Header />
             
-            <div className={"w-full flex flex-col justify-center items-center gap-36 md:px-8 sm:px-8 px-4"}>
+            <div id={"main-content"} className={"w-full flex flex-col justify-center items-center gap-36 md:px-8 sm:px-8 px-4"}>
                 <div className={"max-w-7xl w-full flex justify-between relative flex-col gap-3 md:gap-6 py-20 border-b border-gray6"}>
                     <div className={"flex gap-2 text-2xl font-medium"}>
                         <Link href={"/blog"}>

@@ -84,6 +84,8 @@ class Document extends NextDocument {
                     `}</script>
                 </Head>
                 <body>
+                    <a className={"skip-to-main"} href={"#main-content"} tabIndex={0}>Skip to main content</a>
+                    
                     <Main />
                     <NextScript />
                 </body>

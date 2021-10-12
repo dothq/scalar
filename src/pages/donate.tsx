@@ -45,7 +45,7 @@ const Donate = () => {
                 }
             `}</style>
 
-            <div className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
+            <div id={"main-content"} className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
                 <Header theme={Themes.Light} bg={"bg-gray7"} />
 
                 <div className={"w-full flex justify-center bg-gray7 grid-pattern text-black py-36 pb-44 md:px-8 sm:px-8 px-4"}>

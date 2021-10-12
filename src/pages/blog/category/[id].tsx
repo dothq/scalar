@@ -20,7 +20,7 @@ const BlogCategory = ({ name, posts }: { name: string, posts: Post[] }) => {
         <Layout>
             <Header />
 
-            <div className={"w-full flex flex-col justify-center py-20 items-center"}>
+            <div id={"main-content"} className={"w-full flex flex-col justify-center py-20 items-center"}>
                 <div className={"max-w-7xl w-full flex justify-between relative flex-col gap-6"}>
                     <Link href={"/blog"}>
                         <a className={"text-2xl font-medium opacity-50 flex flex-row items-center gap-3 transition-opacity hover:opacity-100 w-max"} style={{ lineHeight: "3rem" }}>

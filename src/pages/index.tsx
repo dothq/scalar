@@ -52,7 +52,7 @@ const Home = ({ motd }: { motd?: string }) => {
         <Layout selectionColour={ThemeColours.Blue}>
             <Header theme={headerDark ? Themes.Dark : Themes.Light} motd={motd} />
 
-            <main className={"relative z-30 overflow-x-hidden lg:overflow-x-visible"}>
+            <main id={"main-content"} className={"relative z-30 overflow-x-hidden lg:overflow-x-visible"}>
                 <div 
                     id={"home-container"}
                     className={"w-full min-h-60vh lg:min-h-70vh lg2:min-h-80vh text-black flex justify-center items-center md:items-start relative bg-white"} 

@@ -14,7 +14,7 @@ const FAQ = () => {
             <div className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
                 <Header theme={Themes.Dark} />
 
-                <div className={"w-full flex justify-center bg-pureblack grid-pattern text-white py-36 pb-44 text-center"}>
+                <div id={"main-content"} className={"w-full flex justify-center bg-pureblack grid-pattern text-white py-36 pb-44 text-center"}>
                     <div className={"max-w-7xl"}>
                         <h1 className={"text-6xl font-bold"} style={{ lineHeight: "5rem" }}>Frequently Asked Questions</h1>
                     </div>

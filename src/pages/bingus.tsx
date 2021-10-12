@@ -40,7 +40,7 @@ const Bingus = () => {
             <div className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
                 <Header />
 
-                <div className={"hidden"}>
+                <div id={"main-content"} className={"hidden"}>
                     <img src={"/static/images/lord-bingus.webp"}></img>
                     <img src={"/static/images/lord-bingus-angry.webp"}></img>
                     <img src={"/static/images/lord-bingus-happy.webp"}></img>

@@ -31,7 +31,7 @@ const LanguageSwitcher = () => {
                     </div>
                 </div>
 
-                <div className={"container my-10 max-w-7xl w-full flex flex-col gap-8 flex-wrap md:px-8 sm:px-8 lg:px-0 px-0"}>
+                <div id={"main-content"} className={"container my-10 max-w-7xl w-full flex flex-col gap-8 flex-wrap md:px-8 sm:px-8 lg:px-0 px-0"}>
                     {groups.map(group => (
                         <div className={"gap-8 flex flex-col"} key={group}>
                             <h1 className={"text-2xl font-semibold"}>{t(`region-${group.toLowerCase()}`)}</h1>

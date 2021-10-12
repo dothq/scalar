@@ -43,7 +43,7 @@ const Blog = ({ posts }: { posts: Post[] }) => {
                 minHeight: "41vh"
             }}></div>}
 
-            <div className={"w-full flex justify-center bg-transparent text-black pt-24 pb-16 text-left flex-col items-center md:px-8 sm:px-8 px-4"}>
+            <div id={"main-content"} className={"w-full flex justify-center bg-transparent text-black pt-24 pb-16 text-left flex-col items-center md:px-8 sm:px-8 px-4"}>
                 {sorted[0] && <>
                     <div className={"max-w-7xl w-full flex justify-between relative flex-col"}>
                         <h1 className={"text-6xl font-bold"} style={{ lineHeight: "5rem" }}>Blog</h1>
