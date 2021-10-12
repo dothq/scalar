@@ -79,6 +79,9 @@ class Document extends NextDocument {
                     <meta name="twitter:card" content="summary_large_image"></meta>
                     <meta name="twitter:site" content="@DotBrowser"></meta>
                     <meta name="twitter:creator" content="@DotBrowser"></meta>
+                    <script>{`
+                        document.documentElement.classList.remove("no-js");
+                    `}</script>
                 </Head>
                 <body>
                     <Main />
