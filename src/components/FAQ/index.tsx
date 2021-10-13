@@ -108,10 +108,10 @@ export const FAQAccordian = ({ theme }: { theme?: number }) => {
 
                 <div className={"accordian-content text-2xl"}>
                     <div className={`p-6 ${theme == Themes.Dark ? `text-gray6` : `text-gray3`} flex flex-col gap-6`}>
-                        <strong>Nope, Dot Browser is based on Firefox.</strong>
+                        <strong>Nope, Dot Browser is based on Gecko (the engine that powers Firefox).</strong>
                         
                         <span>
-                            We decided to go with Firefox as the base for Dot Browser because
+                            We decided to go with Gecko as the base for Dot Browser because
                             there are already a plethora of Chromium-based web browsers out
                             there, and we want to stand out among the others.
                         </span>

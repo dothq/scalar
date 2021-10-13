@@ -15,7 +15,7 @@ class Document extends NextDocument {
             >
                 <Head>
                     <meta charSet="utf-8"></meta>
-                    <meta name="keywords" content="browser dot dothq privacy modern web browser webbrowser modern ui fresh browsing online firefox-based firefox mozilla windows mac linux macos unix"></meta>
+                    <meta name="keywords" content="browser dot dothq privacy modern web browser webbrowser modern ui fresh browsing online firefox-based gecko-based gecko gecko-browser geckobrowsers firefox mozilla windows mac linux macos unix"></meta>
                     <meta name="google" content="notranslate"></meta>
                     <meta name="url" itemProp="url" content={url}></meta>
                     <meta name="identifier-url" content={url}></meta>
