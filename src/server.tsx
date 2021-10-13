@@ -208,9 +208,6 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
 		</head>
 		<body class="${req.path === '/' ? 'dothq-is-home' : ''}">
       <div id="app">${markup}</div>
-      <script id="__PAGE_DATA__" type="application/json">${JSON.stringify(
-        ssrData[req.path] || {}
-      )}</script>
 		</body>
 		</html>`
   )
