@@ -66,9 +66,8 @@ server.use((req: express.Request, res: express.Response, next) => {
   res.header('Server', 'me lon')
   next()
 })
-server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 
-server.use((req: any, res, next) => {
+server.use((req, res, next) => {
   const r = Math.random();
 
   if(req.cookies.experiment && req.cookies.experiment === "new-landing") {
@@ -76,11 +75,15 @@ server.use((req: any, res, next) => {
   }
 
   if(r < 0.15) {
+    if(!req.header("accept")?.includes("text/html")) return;
+
     res.cookie("experiment", "new-landing", { maxAge: new Date(Date.now() + 604800000).getTime(), httpOnly: true })
   }
 
   next();
 })
+
+server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 
 server.use((req: express.Request, res: express.Response, next) => {
   if (process.env.NODE_ENV === 'development') {
