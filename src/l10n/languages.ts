@@ -35,4 +35,9 @@ export const languages = [
         code: "pl",
         group: "Europe"
     },
+    {
+        name: "Cymraeg",
+        code: "cy",
+        group: "Europe"
+    }
 ]

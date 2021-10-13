@@ -1,6 +1,6 @@
 module.exports = {
     i18n: {
-        locales: ["en", "en-GB", "en-US", "es-ES", "fr-FR", "sv-SE", "ar", "pl"],
+        locales: ["en", "en-GB", "en-US", "es-ES", "fr-FR", "sv-SE", "ar", "pl", "cy"],
         defaultLocale: "en"
     },
     async redirects() {
