@@ -1,6 +1,10 @@
 import express from 'express'
 import React from 'react'
 import bodyParser from 'body-parser'
+import cookieParser from "cookie-parser"
+const abtest = require("easy-abtest")
+import proxy from "express-http-proxy"
+import session from "express-session"
 
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
@@ -17,6 +21,9 @@ import news from './routes/ntp/news'
 import download from './routes/download'
 
 import images from './assets'
+
+import dotenv from "dotenv";
+dotenv.config();
 
 import { existsSync, readFileSync } from 'fs'
 import { resolve } from 'path'
@@ -47,7 +54,12 @@ syncLoadAssets()
 
 const server = express()
 
+server.use(cookieParser())
 server.use(bodyParser.json())
+
+server.use(session({
+  secret: `${process.env.SESSTOK}`
+}))
 
 server.use((req: express.Request, res: express.Response, next) => {
   res.header('X-Powered-By', 'me lon')
@@ -55,6 +67,21 @@ server.use((req: express.Request, res: express.Response, next) => {
   next()
 })
 server.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
+
+server.use((req: any, res, next) => {
+  const r = Math.random();
+
+  if(req.cookies.experiment && req.cookies.experiment === "new-landing") {
+    return proxy("https://dev.dothq.co")(req, res, next)
+  }
+
+  if(r < 0.15) {
+    res.cookie("experiment", "new-landing", { maxAge: new Date(Date.now() + 604800000).getTime(), httpOnly: true })
+  }
+
+  next();
+})
+
 server.use((req: express.Request, res: express.Response, next) => {
   if (process.env.NODE_ENV === 'development') {
     res.header('Access-Control-Allow-Origin', '*')
