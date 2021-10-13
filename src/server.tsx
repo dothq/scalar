@@ -70,16 +70,19 @@ server.use((req: express.Request, res: express.Response, next) => {
 })
 
 server.use((req, res, next) => {
-  const r = Math.random();
+  const r = Math.random()
 
   if (req.cookies.experiment && req.cookies.experiment === 'new-landing') {
     return proxy('https://dev.dothq.co')(req, res, next)
   }
 
-  if(r < 0.15) {
-    if(!req.header("accept")?.includes("text/html")) return;
+  if (r < 0.15) {
+    if (!req.header('accept')?.includes('text/html')) return
 
-    res.cookie("experiment", "new-landing", { maxAge: new Date(Date.now() + 604800000).getTime(), httpOnly: true })
+    res.cookie('experiment', 'new-landing', {
+      maxAge: new Date(Date.now() + 604800000).getTime(),
+      httpOnly: true,
+    })
   }
 
   next()
