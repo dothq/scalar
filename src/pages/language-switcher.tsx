@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router"
 import React from "react";
 import { HollowButton } from "../components/Button/Hollow";
+import { CTA } from "../components/CTA";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import Layout from "../components/Layout";
 import { Subheader } from "../components/Subheader";
@@ -61,6 +63,9 @@ const LanguageSwitcher = () => {
                         </div>
                     ))}
                 </div>
+
+                <CTA />
+                <Footer />
             </div>
         </Layout>
     )

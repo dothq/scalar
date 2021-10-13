@@ -8,7 +8,7 @@ import { languages } from "../../l10n/languages";
 import { Themes } from "../../utils/theme";
 import { Menu } from "../Menu";
 
-export const LangPicker = ({ locale, className, style, theme, menuTop }: { locale: any, className?: string, style?: any, theme?: number, menuTop?: string }) => {
+export const LangPicker = ({ locale, className, style, theme, menuTop, openerLocation }: { locale: any, className?: string, style?: any, theme?: number, menuTop?: string, openerLocation: string }) => {
     const [l10nMenuVisible, setL10nMenuVisible] = React.useState<boolean>(false);
 
     const t = useTranslations();
@@ -43,6 +43,7 @@ export const LangPicker = ({ locale, className, style, theme, menuTop }: { local
                 visible={l10nMenuVisible} 
                 setVisible={setL10nMenuVisible}
                 menuTop={menuTop}
+                openerLocation={openerLocation}
                 items={[
                     ...languages.map(l => ({
                         text: l.name,

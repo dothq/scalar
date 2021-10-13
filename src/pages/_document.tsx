@@ -79,12 +79,15 @@ class Document extends NextDocument {
                     <meta name="twitter:card" content="summary_large_image"></meta>
                     <meta name="twitter:site" content="@DotBrowser"></meta>
                     <meta name="twitter:creator" content="@DotBrowser"></meta>
-                    <script>{`
-                        document.documentElement.classList.remove("no-js");
-                    `}</script>
                 </Head>
                 <body>
-                    <a className={"skip-to-main"} href={"#main-content"} tabIndex={0}>Skip to main content</a>
+                    <a 
+                        className={"skip-to-main sr-only focus:not-sr-only"} 
+                        href={"#main-content"} 
+                        tabIndex={0}
+                    >
+                        Skip to main content
+                    </a>
                     
                     <Main />
                     <NextScript />

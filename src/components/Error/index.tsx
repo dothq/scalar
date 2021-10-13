@@ -40,7 +40,7 @@ export const Error = ({ code, buttonClick, buttonHref }: { code: number, buttonC
                         </div>
 
                         <div className={"flex flex-col"}>
-                            <LangPicker locale={locale} />
+                            <LangPicker locale={locale} openerLocation={"top-right"} />
                         </div>
                     </div>
                 </div>

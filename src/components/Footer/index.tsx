@@ -122,7 +122,7 @@ export const Footer = ({ theme }: { theme?: number }) => {
                         <span className={"text-sm"}>{t("footer-copyright-notice", { year: new Date().getFullYear() })}</span>
                     </div>
                     <div className={"flex flex-row gap-6 md:items-center md:justify-end"}>
-                        <LangPicker menuTop={"-422px"} locale={locale} />
+                        <LangPicker menuTop={"-422px"} locale={locale} openerLocation={"bottom-right"} />
 
                         <a target={"_blank"} title={"Discord"} className={"text-gray3 hover:text-discord transition-all"} href={"https://discord.gg/WRDEK2D"}>
                             <Discord className={"fill-current"} />

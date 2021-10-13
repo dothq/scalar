@@ -101,7 +101,7 @@ export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?
                         </div>
                         
                         <div className={"row flex-1 justify-end items-center hidden md:flex gap-4"}>
-                            <LangPicker locale={locale} theme={theme} />
+                            <LangPicker locale={locale} theme={theme} openerLocation={"top-right"} />
 
                             {/* <TextButton className={"md:hidden lg:flex"} colour={"blue"}>
                                 {t("header-dot-one-login-button")}
@@ -113,7 +113,7 @@ export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?
                         </div>
 
                         <div id={"bunger-🍔"} className={"row flex-1 justify-end items-center flex md:hidden"}>
-                            <LangPicker locale={locale} className={"mr-1"} />
+                            <LangPicker locale={locale} className={"mr-1"} openerLocation={"top-right"} />
 
                             <HollowButton reset={true} className={"p-3 rounded-full hover:bg-gray6"} colour={""}>
                                 <BungerMenu />
