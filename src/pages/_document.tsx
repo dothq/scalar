@@ -92,7 +92,6 @@ class Document extends NextDocument {
                     <Main />
                     <NextScript />
                 </body>
-                <script defer data-domain="dothq.co" src="https://plausible.io/js/plausible.js"></script>
             </Html>
         )
   }
