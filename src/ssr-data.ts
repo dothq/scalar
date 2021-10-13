@@ -1,8 +1,6 @@
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
-const data: any = {
-
-}
+const data: any = {}
 
 export default data
