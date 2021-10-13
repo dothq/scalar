@@ -20,7 +20,7 @@ export const LangPicker = ({ locale, className, style, theme, menuTop, openerLoc
 
     return (
         <div className={`relative flex ${className || ""}`} style={style}>
-            <a ref={ref} onClick={e => {
+            <a title={languages.find(l => l.code == locale)?.name} ref={ref} onClick={e => {
                 e.stopPropagation();
                 e.preventDefault();
 
