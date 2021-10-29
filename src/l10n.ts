@@ -7,7 +7,7 @@ interface Strings {
 }
 
 const l10n = {
-  availableLanguages: ['en', 'es'],
+  availableLanguages: ['en', 'es', 'ru', 'uk'],
 
   get currentLanguage(): string {
     if (typeof window === 'undefined') return ''
