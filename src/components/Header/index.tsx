@@ -37,7 +37,7 @@ export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?
 
         window.addEventListener("scroll", () => {
             if(headerMotd) headerPage.style.transform = `translateY(-${Math.min(window.scrollY, 48)}px)`
-            headerPage.childNodes[0].style.boxShadow = window.scrollY >= 1 ? twConfig.theme.boxShadow?.lg : ``
+            headerPage.childNodes[0].style.boxShadow = window.scrollY >= 1 ? (twConfig as any).theme.boxShadow?.lg : ``
             headerPage.style.height = window.scrollY >= 1 ? "4rem" : "6rem"
         })
     }, [])
