@@ -286,7 +286,7 @@ export const getStaticProps = async ({ locale, params }: NextPageContext & { par
 
     const bite = existsSync(resolve(process.cwd(), "public", "static", "bites", slug, `${locale}.mp3`))
         ? `/static/bites/${slug}/${locale}.mp3`
-        : undefined;
+        : "/static/bites/${slug}/en-GB.mp3";
 
     return {
         props: {
