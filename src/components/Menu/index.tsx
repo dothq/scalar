@@ -24,7 +24,7 @@ const MenuItem = (args: Item) => {
             href={args.href || asPath} 
             locale={args.locale}
         >
-            <a ref={ref} onClick={args.onClick} className={`cursor-pointer h-10 w-full px-3 text-sm flex items-center ${args.active ? `bg-blue text-white font-semibold` : `hover:bg-gray7`} select-none`}>
+            <a ref={ref} onClick={args.onClick} className={`cursor-pointer rounded-lg h-10 w-full px-3 text-sm flex items-center ${args.active ? `bg-blue text-white font-semibold` : `hover:bg-gray7`} select-none`}>
                 {args.icon && <Icon style={{ marginInlineEnd: "0.75rem" }} />} {args.text}
             </a>
         </Link>
@@ -44,7 +44,7 @@ interface Item {
 export const Menu = ({ visible, setVisible, items, menuTop, openerLocation }: { visible?: boolean, setVisible?: any, items: Item[], menuTop?: string, openerLocation?: string }) => {
     return (
         <OutsideClickHandler onOutsideMouseUp={() => setVisible(false)}>
-            <menu className={`absolute flex ${visible ? "select-all scale-100 opacity-100 pointer-events-auto" : `select-none scale-95 opacity-0 pointer-events-none`} p-2 transform-gpu duration-175 origin-${openerLocation ? openerLocation : `top-left`} transition-all flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray7 text-black my-12 right-0 ${menuTop ? `` : `top-0`} z-50 gap-1`} style={{ minWidth: "200px", top: menuTop }}>
+            <menu className={`absolute flex ${visible ? "select-all scale-100 opacity-100 pointer-events-auto" : `select-none scale-95 opacity-0 pointer-events-none`} p-2 transform-gpu duration-175 origin-${openerLocation ? openerLocation : `top-left`} transition-all flex-col shadow-lg w-max min-w-80 h-auto bg-white border border-gray7 rounded-xl text-black my-12 right-0 ${menuTop ? `` : `top-0`} gap-1`} style={{ minWidth: "200px", top: menuTop ,zIndex: 2996567 }}>
                 {items.map(i => (
                     <MenuItem onClick={() => {
                         if(i.onClick) i.onClick();

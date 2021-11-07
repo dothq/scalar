@@ -40,33 +40,35 @@ const Bingus = () => {
             <div className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
                 <Header />
 
-                <div id={"main-content"} className={"hidden"}>
-                    <img src={"/static/images/lord-bingus.webp"}></img>
-                    <img src={"/static/images/lord-bingus-angry.webp"}></img>
-                    <img src={"/static/images/lord-bingus-happy.webp"}></img>
-                </div>
+                <main id={"main-content"}>
+                    <div className={"hidden"}>
+                        <img src={"/static/images/lord-bingus.webp"}></img>
+                        <img src={"/static/images/lord-bingus-angry.webp"}></img>
+                        <img src={"/static/images/lord-bingus-happy.webp"}></img>
+                    </div>
 
-                <div className={"container my-10 max-w-7xl w-full flex flex-col gap-4 flex-wrap md:px-8 sm:px-8 lg:px-0 px-0 justify-center items-center"}>
-                    <h1 className={"text-4xl font-bold"}>Bingus Shrine</h1>
-                    <p>{status}</p>
-                    <img src={`/static/images/lord-bingus${state.length ? `-${state}` : ``}.webp`} className={"rounded-3xl mt-6"}></img>
+                    <div className={"container my-10 max-w-7xl w-full flex flex-col gap-4 flex-wrap md:px-8 sm:px-8 lg:px-0 px-0 justify-center items-center"}>
+                        <h1 className={"text-4xl font-bold"}>Bingus Shrine</h1>
+                        <p>{status}</p>
+                        <img src={`/static/images/lord-bingus${state.length ? `-${state}` : ``}.webp`} className={"rounded-3xl mt-6"}></img>
 
-                    <Input 
-                        type={"text"} 
-                        colour={"bingus"}
-                        placeholder={"Enter a gift to give to Lord Bingus"}
-                        ref={giftRef}
-                        onKeyUp={(e: any) => {
-                            setThinking(!e.target.value.trim().length)
-                        }}
-                    ></Input>
+                        <Input 
+                            type={"text"} 
+                            colour={"bingus"}
+                            placeholder={"Enter a gift to give to Lord Bingus"}
+                            ref={giftRef}
+                            onKeyUp={(e: any) => {
+                                setThinking(!e.target.value.trim().length)
+                            }}
+                        ></Input>
 
-                    <HollowButton 
-                        onClick={doTheThings}
-                        colour={"bingus"}
-                        disabled={thinking}
-                    >Offer gift</HollowButton>
-                </div>
+                        <HollowButton 
+                            onClick={doTheThings}
+                            colour={"bingus"}
+                            disabled={thinking}
+                        >Offer gift</HollowButton>
+                    </div>
+                </main>
             </div>
         </Layout>
     )

@@ -12,13 +12,21 @@ const InternalServerError = () => {
 }
 
 export function getStaticProps({ locale }: { locale: string }) {
-    if(locale == "en") locale = "en-GB";
+    try {
+        if(locale == "en") locale = "en-GB";
 
-    return {
-        props: {
-            messages: require(`../l10n/${locale}.json`),
-        }
-    };
+        return {
+            props: {
+                messages: require(`../l10n/${locale}.json`),
+            }
+        };
+    } catch(e) {
+        return {
+            props: {
+                messages: require(`../l10n/en-GB.json`),
+            }
+        };
+    }
 }
 
 export default InternalServerError;

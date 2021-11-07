@@ -13,7 +13,8 @@ export const HollowButton = ({
     disabled,
     style,
     id,
-    target
+    target,
+    rippleOpacity
 }: { 
     children: any, 
     href?: string, 
@@ -24,7 +25,8 @@ export const HollowButton = ({
     disabled?: boolean,
     style?: any,
     id?: any,
-    target?: string
+    target?: string,
+    rippleOpacity?: number
 }) => {
     const onLinkClick = (e: any) => {
         if(onClick) {
@@ -38,7 +40,7 @@ export const HollowButton = ({
 
     const ref = React.createRef<HTMLAnchorElement>();
     if(colour && colour.length) {
-        useRipple(ref, { animationLength: 350, rippleColor: ThemeColours[colour].toRGB(0.3) });
+        useRipple(ref, { animationLength: 350, rippleColor: ThemeColours[colour].toRGB(rippleOpacity ? rippleOpacity : 0.3) });
     }
     
     return (
@@ -51,11 +53,12 @@ export const HollowButton = ({
                 "w-max",
                 "h-10",
                 `bg-${colour}`,
-                "px-4",
+                "px-5",
                 "select-none",
                 `text-${colour == "white" ? "black" : "white"}`,
                 "font-bold",
                 "border-2",
+                "text-sm",
                 "border-transparent",
                 `bg-opacity-100`,
                 `hover:border-${colour}`,
