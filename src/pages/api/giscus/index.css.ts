@@ -267,7 +267,7 @@ h1, h2 {
 
 .gsc-reactions-popover {
     border: none !important;
-    box-shadow: ${twConfig.theme.boxShadow?.md};
+    box-shadow: ${(twConfig as any).theme.boxShadow?.md};
 }
 
 .markdown > * {
