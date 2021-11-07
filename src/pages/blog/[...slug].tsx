@@ -30,7 +30,7 @@ import { Undo } from "../../icons/Undo";
 import { useRipple } from "react-use-ripple";
 import markdownToText from "markdown-to-text";
 import { languages } from "../../l10n/languages";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../../utils/l10n";
 import axios from "axios";
 
 const toMs = (raw?: number) => {
@@ -48,7 +48,7 @@ const BlogPost = ({ slug, title, content, published_at, image, bite, plain, auth
     let t;
 
     try {
-        t = useTranslations();
+        t = useTranslations("");
     } catch(e) {}
 
     const audioRef = React.createRef<HTMLAudioElement>();

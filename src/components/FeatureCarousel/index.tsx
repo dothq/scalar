@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../../utils/l10n";
 import Link from "next/link";
 import React from "react";
 import Flickity from "react-flickity-component";
@@ -81,13 +81,13 @@ export const FeatureCarousel = () => {
                             <div className={"flex flex-col gap-6 mt-8"}>
                                 <h1 className={"text-5xl font-semibold"}>{t("feature-carousel-section-quick-launch-title")}</h1>
                                 <p className={"text-2xl text-gray3 block"}>
-                                    {t.rich("feature-carousel-section-quick-launch-description", {
+                                    {/* {t.rich("feature-carousel-section-quick-launch-description", {
                                         webicon: () => <DefaultFaviconIcon fill={ThemeColours.Gray3.toHex()} className={"inline"} />,
                                         historyicon: () => <HistoryIcon fill={ThemeColours.Gray3.toHex()} className={"inline"} />,
                                         bookmarksicon: () => <BookmarksIcon fill={ThemeColours.Gray3.toHex()} className={"inline"} />,
                                         downloadsicon: () => <DownloadsIcon fill={ThemeColours.Gray3.toHex()} className={"inline"} />,
                                         launcherkbd: () => <Keybind keys={["Ctrl", "Space"]} />
-                                    })}
+                                    })} */}
                                 </p>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ export const FeatureCarousel = () => {
                             <div className={"flex flex-col gap-6 mt-8"}>
                                 <h1 className={"text-5xl font-semibold"}>{t("feature-carousel-section-oss-title")}</h1>
                                 <p className={"text-2xl text-gray3"}>
-                                    {t.rich("feature-carousel-section-oss-description", {
+                                    {/* {t.rich("feature-carousel-section-oss-description", {
                                         bl: (children) => <Link href={"https://github.com/dothq/browser"}>
                                             <a className={"text-blue font-semibold"}>
                                                 {children}
@@ -118,7 +118,7 @@ export const FeatureCarousel = () => {
                                                 {children}
                                             </a>
                                         </Link>,
-                                    })} 
+                                    })}  */}
                                 </p>
                             </div>
                         </div>

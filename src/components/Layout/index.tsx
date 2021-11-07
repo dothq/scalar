@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../../utils/l10n";
 import { languages } from "../../l10n/languages";
 import React from "react";
 import { ArrowTop } from "../../icons/ArrowTop";

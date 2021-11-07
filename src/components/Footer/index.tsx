@@ -9,7 +9,7 @@ import { Twitter } from "../../icons/Twitter"
 import { Themes } from "../../utils/theme"
 import { LangPicker } from "../LangPicker"
 import { Logo } from "../Logo"
-import { useTranslations } from "next-intl"
+import { useTranslations } from "../../../utils/l10n"
 
 export const Footer = ({ theme }: { theme?: number }) => {
     const t = useTranslations("");

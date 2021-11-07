@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../../utils/l10n";
 import Link from "next/link";
 import React from "react";
 import { useRipple } from "react-use-ripple";

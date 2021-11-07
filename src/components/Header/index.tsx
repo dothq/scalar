@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { HollowButton } from "../Button/Hollow";
 import { LangPicker } from "../LangPicker";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../../utils/l10n";
 import { BungerMenu } from "../../icons/Menu";
 import { HeaderItem } from "../HeaderItem";
 import { Themes } from "../../utils/theme";

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../utils/l10n";
 import React from "react";
 import { ThemeColours } from "../../theme";
 import { HollowButton } from "../components/Button/Hollow";

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useTranslations } from "next-intl";
+import { useTranslations } from "../../../utils/l10n";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import React from "react";
