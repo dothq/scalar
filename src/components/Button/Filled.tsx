@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import React from 'react';
 import { useRipple } from 'react-use-ripple';
 import { ThemeColours } from '../../../theme';
@@ -42,7 +42,7 @@ export const FilledButton = ({
                 "flex",
                 "justify-center",
                 "items-center",
-                "rounded-md",
+                "rounded-full",
                 "w-max",
                 "h-10",
                 `bg-${colour}`,

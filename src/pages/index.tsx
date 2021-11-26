@@ -1,104 +1,72 @@
-import axios from "axios";
-import { useTranslations } from "../../utils/l10n";
+import "flickity/css/flickity.css";
 import React from "react";
-import { ThemeColours } from "../../theme";
-import { HollowButton } from "../components/Button/Hollow";
-import { Header } from "../components/Header";
-import Layout from "../components/Layout";
-import { Keybind } from "../components/Keybind";
-import { Download } from "../icons/Download";
-import { Themes } from "../utils/theme";
 import { Converter } from "showdown";
 import xss from "xss";
-import { Pause } from "../icons/Pause";
-import { Reload } from "../icons/Reload";
-import { Play } from "../icons/Play";
-import Flickity from "react-flickity-component";
-
-import "flickity/css/flickity.css";
-import { DefaultFaviconIcon } from "../icons/DefaultFavicon";
-import { HistoryIcon } from "../icons/History";
-import { BookmarksIcon } from "../icons/Bookmarks";
-import { DownloadsIcon } from "../icons/Downloads";
-import Link from "next/link";
-import { Waypoint } from "react-waypoint";
-import { FAQAccordian } from "../components/FAQ";
-import { Tab } from "../components/Tab";
-import { Footer } from "../components/Footer";
+import { ThemeColours } from "../../theme";
+import { useTranslations } from "../../utils/l10n";
+import { HollowButton } from "../components/Button/Hollow";
 import { CTA } from "../components/CTA";
+import { FAQAccordian } from "../components/FAQ";
 import { FeatureCarousel } from "../components/FeatureCarousel";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import Layout from "../components/Layout";
 import { Reference } from "../components/Reference";
+import { Themes } from "../utils/theme";
 
 const Home = ({ motd }: { motd?: string }) => {
     const t = useTranslations("");
 
-    const [playing, setPlaying] = React.useState(true); 
-    const [jsEnabled, setJsEnabled] = React.useState(false); 
-
     const [headerDark, setHeaderDark] = React.useState(false);
 
-    const [hideHeader, setHH] = React.useState(false);
-
     React.useEffect(() => {
-        setJsEnabled(true);
-
-        // const canvas = document.getElementById("browser-img") as HTMLCanvasElement;
-        // const ctx = canvas.getContext("2d");
-
-        // const img = new Image();
-        // img.src = "/static/images/mockups/browser.jpg"
-
-        // ctx?.drawImage(img, 0, 0, canvas.scrollWidth, canvas.scrollHeight);
-
         window.addEventListener("scroll", () => {
             const container = document.getElementById("home-container");
 
-            if(container) {
+            if (container) {
                 (container.childNodes[0].childNodes[0] as any).style.opacity = Math.max(1.0 - (window.scrollY / 725), 0).toString();
             }
         })
     }, [])
 
     return (
-        <Layout selectionColour={ThemeColours.Blue}>
-            <Header theme={headerDark ? Themes.Dark : Themes.Light} motd={motd} />
-
-            <main id={"main-content"} className={"relative bg-white z-30 overflow-x-hidden lg:overflow-x-visible mt-20"}>
-                <div 
+        <Layout theme={Themes.Dark} selectionColour={ThemeColours.White}>
+            <main id={"main-content"} className={"bg-void z-30 h-screen overflow-x-hidden lg:overflow-x-visible"}>
+                <Header theme={Themes.Dark} motd={motd} />
+                
+                <div
                     id={"home-container"}
-                    className={"w-full min-h-60vh lg:min-h-70vh lg2:min-h-80vh text-black flex justify-center items-center md:items-start relative bg-white"} 
+                    className={"w-full h-full text-white flex justify-center items-center md:items-start bg-void"}
                     style={{ zIndex: -1 }}
                 >
-                    <div className={"fixed px-7 lg:px-12 lg2:px-16 xl:px-20"} style={{ height: "inherit" }}>
+                    <div className={"px-7 lg:px-12 lg2:px-16 xl:px-20"} style={{ height: "inherit" }}>
                         <div className={"flex flex-col justify-center w-full h-full gap-10 lg:gap-16 max-w-7xl"}>
                             <h1 className={"text-4xl md:max-w-4xl md:text-7xl lg:max-w-full xl:text-9xl font-medium"}>
                                 {t("landing-title")}
                             </h1>
 
-                            <span className={"text-lg md:text-2xl lg2:text-3xl flex font-light text-gray3"} style={{ maxWidth: "42rem" }}>
+                            <span className={"text-lg md:text-2xl lg2:text-3xl flex font-light text-white"} style={{ maxWidth: "42rem" }}>
                                 {t("landing-description")}
                             </span>
-                        
-                            <HollowButton 
-                                colour={"blue"}
-                                className={"px-8 h-14 py-2 text-lg md:text-2xl md:px-10 md:py-4 lg:px-10 lg:h-20 lg:text-4xl"}
+
+                            <HollowButton
+                                colour={"white"}
                             >
-                                <Download className={"w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"} style={{ marginInlineEnd: "16px" }} />
-                                {t("download-generic-text")} 
+                                {t("download-generic-text")} The Stuff
                             </HollowButton>
                         </div>
                     </div>
                 </div>
 
-                <div 
+                <div
                     id={"home-cover-sticky"}
-                    className={"w-full flex justify-center z-50 bg-transparent text-black flex-col items-center sticky bg-white"}
+                    className={"w-full hidden justify-center z-50 bg-transparent text-black flex-col items-center sticky bg-white"}
                 >
                     <div className={"z-40 w-full h-full flex relative px-7 lg:px-12 lg2:px-16 xl:px-20 bg-white"} style={{ height: "500vh" }}>
                         <div className={"w-full h-screen my-1 sticky flex top-24 left-0 justify-center"}>
-                            <img 
+                            <img
                                 id={"browser-home-img-desktop"}
-                                style={{ borderRadius: "9px", height: "max-content" }} 
+                                style={{ borderRadius: "9px", height: "max-content" }}
                                 className={"border-2 border-white shadow-3xl rounded-xl"}
                                 src={"/static/images/mockups/browser.jpg"}
                             ></img>
@@ -147,9 +115,9 @@ const Home = ({ motd }: { motd?: string }) => {
                                 </div>
                                 <figure className={"sticky-browser-img sticky z-50 top-72 mt-40 mb-56 flex-1 overflow-hidden hidden lg2:flex"} style={{ height: "max-content" }}>
                                     <div>
-                                        
+
                                     </div>
-                                    <img 
+                                    <img
                                         src={"/static/images/lockups/security.svg"}
                                     ></img>
                                 </figure>
@@ -183,8 +151,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
     }
 
     const converter = new Converter({ openLinksInNewWindow: true });
-    
-    if(locale == "en") locale = "en-GB";
+
+    if (locale == "en") locale = "en-GB";
 
     return {
         props: {

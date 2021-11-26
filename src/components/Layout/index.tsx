@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useTranslations } from "../../../utils/l10n";
-import { languages } from "../../l10n/languages";
 import React from "react";
-import { ArrowTop } from "../../icons/ArrowTop";
 import { useRipple } from "react-use-ripple";
 import { ThemeColours } from "../../../theme";
-import { Themes } from "../../utils/theme";
 import { Colour } from "../../../utils/colour";
+import { useTranslations } from "../../../utils/l10n";
+import { ArrowTop } from "../../icons/ArrowTop";
+import { languages } from "../../l10n/languages";
+import { Themes } from "../../utils/theme";
 
 const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, metaDescription, metaImg }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: Colour, theme?: number, metaTitle?: string, metaDescription?: string, metaImg?: string }) => {
     const { locale, locales } = useRouter();
@@ -96,6 +96,13 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, 
                                 ? selectionColour.toHex(0.15)
                                 : ThemeColours.Blue.toHex(0.15)
                             } !important;
+                        }
+
+                        html, body {
+                            background-color: ${theme == Themes.Dark 
+                                ? ThemeColours.Void.toHex(1) 
+                                : ThemeColours.White.toHex(1)
+                            };
                         }
                     `}
                 </style>
