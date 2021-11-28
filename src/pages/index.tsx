@@ -60,7 +60,7 @@ const Home = ({ motd }: { motd?: string }) => {
 
                 <div
                     id={"home-cover-sticky"}
-                    className={"w-full hidden justify-center z-50 bg-transparent text-black flex-col items-center sticky bg-white"}
+                    className={"w-full justify-center z-50 bg-transparent text-black flex-col items-center sticky bg-white"}
                 >
                     <div className={"z-40 w-full h-full flex relative px-7 lg:px-12 lg2:px-16 xl:px-20 bg-white"} style={{ height: "500vh" }}>
                         <div className={"w-full h-screen my-1 sticky flex top-24 left-0 justify-center"}>
