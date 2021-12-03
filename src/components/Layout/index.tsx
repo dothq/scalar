@@ -35,7 +35,7 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, 
     });
 
     return (
-        <div className={"slashed-zero"} style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit" }}>
+        <div className={"slashed-zero relative"} style={{ direction: languages.find(x => x.code == locale)?.rtl ? "rtl" : "inherit" }}>
             <Head>
                 <title>{title 
                     ? noSuffix 

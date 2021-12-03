@@ -88,6 +88,14 @@ html {
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-padding-top: 7.5rem;
+    max-width: 1680px;
+    min-width: 350px;
+    margin: 0 auto;
+    @apply bg-black;
+}
+
+body {
+    position: relative;
 }
 
 .header-link-parent:hover > .header-link > svg {

@@ -1,9 +1,9 @@
 import anime from "animejs";
 import React from "react";
 import { useTranslations } from "../../../utils/l10n";
-import { ChevronDown } from "../../icons/ChevronDown";
+import { ArrowTop } from "../../icons/ArrowTop";
 import { Themes } from "../../utils/theme";
-import { HollowButton, TextButton } from "../Button";
+import { LightButton } from "../Button/Light";
 import { Logo } from "../Logo";
 
 export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?: string, fixed?: boolean, bg?: string, blur?: boolean }) => {
@@ -50,108 +50,74 @@ export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?
     return (
         <header 
             id={"header"} 
-            className={`z-50 w-full flex-col h-28 flex fixed top-0 transition-all ${theme == Themes.Dark ? `bg-void text-white` : `bg-white text-black`}`} 
             style={{ zIndex: 99999 }}
         >
+            <article 
+                id={"notification"}
+                className={"bg-gray7 h-14 text-center gap-2 shadow-inner relative text-black font-semibold flex justify-center items-center"}
+                style={{ boxShadow: "inset 0px -4px 14px 0px #00000005" }}
+            >
+                <span>Find out how we're improving translation systems using artificial inteligence.</span>
+
+                <LightButton colour={"blue"} noTitle className={"group"}>
+                    Learn More
+                    <ArrowTop className={`transform rotate-90 scale-75 -translate-x-1 group-hover:translate-x-0 transition-all`}></ArrowTop>
+                </LightButton>
+            </article>
+
             <div 
                 id={"header-page"} 
-                className={`flex items-center w-full h-full justify-between px-10 z-20 ${theme == Themes.Dark ? `bg-void text-white` : `bg-white text-black`}`}
+                className={`flex items-center w-full justify-between border-b border-gray6 py-4 px-6 z-20 ${theme == Themes.Dark ? `bg-void text-white` : `bg-white text-black`}`}
             >
-                <Logo linked className={"bg-current"} />
+                <ul className={`flex flex-1 gap-1 justify-start`}>
+                    <Logo linked className={"bg-current"} size={8} />
+                </ul>
 
-                <ul className={`flex gap-8`}>
+                <ul className={`flex flex-1 gap-1 justify-center`}>
                     <li>
-                        <TextButton 
-                            colour={theme == Themes.Dark ? "white" : "void"} 
-                            noTitle 
-                            onClick={() => {
-                                if(!openAnimDone) return;
-
-                                if(openItem !== "products" && open) {
-                                    clearTimeout(procInt);
-                                    setOpen(false);
-                                    setOpenItem("");
-
-                                    procInt = setTimeout(() => {
-                                        setOpen(true);
-                                        setOpenItem("products");
-                                    }, 500);
-                                } else {
-                                    setOpen(!open);
-                                    setOpenItem("products");
-                                }
-                            }}
-                        >
+                        <LightButton>
                             Products
-
-                            <i id={"products-item-chevron"} className={"item-chevron"}>
-                                <ChevronDown className={`flex transform scale-150 mx-4`} />
-                            </i>
-                        </TextButton>
+                        </LightButton>
                     </li>
 
                     <li>
-                    <TextButton 
-                        colour={theme == Themes.Dark ? "white" : "void"} 
-                        noTitle 
-                        onClick={() => {
-                            if(!openAnimDone) return;
+                        <LightButton>
+                            Community
+                        </LightButton>
+                    </li>
 
-                            if(openItem !== "about" && open) {
-                                clearTimeout(procInt);
-                                setOpen(false);
-                                setOpenItem("");
+                    <li>
+                        <LightButton>
+                            Resources
+                        </LightButton>
+                    </li>
 
-                                procInt = setTimeout(() => {
-                                    setOpen(true);
-                                    setOpenItem("about");
-                                }, 600);
-                            } else {
-                                setOpen(!open);
-                                setOpenItem("about");
-                            }
-                        }}
-                    >
+                    <li>
+                        <LightButton>
                             About
-
-                            <i id={"about-item-chevron"} className={"item-chevron"}>
-                                <ChevronDown className={`flex transform scale-150 mx-4`} />
-                            </i>
-                        </TextButton>
+                        </LightButton>
                     </li>
                 </ul>
-            </div>
 
-            <div id={"header-page-popdown"} className={"absolute top-28 w-full"}>
-                <div className={`px-10 py-14 pt-5 h-96 w-full flex border-b-2 transition-all ${!open ? `border-transparent duration-500 delay-700` : theme == Themes.Dark ? `border-gray3` : `border-gray6`} bg-void ${theme == Themes.Dark ? `bg-void text-white` : `bg-white text-black`}`} style={{ zIndex: -1 }}>
-                    {openItem == "products" && <div className={"flex justify-between w-full"}>
-                        <div className={"flex w-full h-full max-w-lg flex-col justify-between"}>
-                            <h1 className={"text-5xl font-bold max-w-md"}>Privacy is a right, not a privilage.</h1>
+                <ul className={`flex flex-1 gap-1 justify-end`}>
+                    <li>
+                        <LightButton href={"https://accounts.dothq.co/sign-in"}>
+                            Sign In
+                        </LightButton>
+                    </li>
 
-                            <HollowButton colour={theme == Themes.Dark ? "white" : "void"}>Get our stuff</HollowButton>
-                        </div>
+                    <li>
+                        <LightButton 
+                            colour={"blue"}
+                            noTitle
+                            href={"https://accounts.dothq.co"}
+                        >
+                            <span>Join Dot One</span>
 
-                        <div className={"flex gap-8 w-full justify-end max-w-[100rem]"}>
-                            <a href={"/browser"} className={"flex flex-col gap-6"}>
-                                <div className={"pt-12 pl-12 flex-1 flex items-end bg-blue text-white rounded-3xl overflow-hidden"}>
-                                    <img className={"rounded-tl-xl h-56 scale-110 origin-top-left shadow-sm"} src={"/static/images/mockups/browser-ui.svg"}></img>
-                                </div>
-                                <h1 className={"text-5xl font-bold"}>Dot Browser</h1>
-                            </a>
-
-                            <a href={"/one"}>
-                                <div className={"p-12 flex-1 flex items-end bg-yellow rounded-3xl"}>
-
-                                </div>
-                                <h1 className={"text-5xl font-bold"}>Dot One</h1>
-                            </a>
-                        </div>
-                    </div>}
-
-                    {openItem == "about" && <div>
-                        <h1>We do stuff sometimes.</h1>
-                    </div>}
-                </div>
+                            <ArrowTop className={"transform rotate-90"} />
+                        </LightButton>
+                    </li>
+                </ul>
             </div>
         </header>
     )

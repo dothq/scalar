@@ -16,7 +16,8 @@ export interface HollowButtonProps {
     id?: any,
     target?: string,
     rippleOpacity?: number,
-    noTitle?: boolean
+    noTitle?: boolean,
+    ref?: any
 };
 
 export const HollowButton = ({ 
@@ -31,7 +32,8 @@ export const HollowButton = ({
     id,
     target,
     rippleOpacity,
-    noTitle
+    noTitle,
+    ref
 }: HollowButtonProps) => {
     const onLinkClick = (e: any) => {
         if(onClick) {
@@ -43,9 +45,11 @@ export const HollowButton = ({
         }
     }
 
-    const ref = React.createRef<HTMLAnchorElement>();
-    if(colour && colour.length && rippleOpacity !== 0) {
-        useRipple(ref, { animationLength: 350, rippleColor: ThemeColours[colour].toRGB(rippleOpacity ? rippleOpacity : 0.15) });
+    if(!ref) {
+        ref = React.createRef<HTMLAnchorElement>();
+        if(colour && colour.length && rippleOpacity !== 0) {
+            useRipple(ref, { animationLength: 350, rippleColor: ThemeColours[colour].toRGB(rippleOpacity ? rippleOpacity : 0.15) });
+        }
     }
     
     return (

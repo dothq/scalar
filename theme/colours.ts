@@ -13,7 +13,7 @@ const base = {
     Madder: new Colour(208, 44, 103, 1),
     Bingus: new Colour(207, 155, 144, 1),
     PureBlack: new Colour(9, 9, 10, 1),
-    Void: new Colour(0, 0, 0, 1),
+    Void: new Colour(1, 0, 0, 1),
     Black: new Colour(25, 26, 28, 1),
     Gray1: new Colour(24, 23, 29, 1),
     Gray2: new Colour(26, 26, 34, 1),

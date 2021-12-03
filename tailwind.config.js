@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'jit',
   purge: [
     "./src/pages/**/*.{js,ts,jsx,tsx}", 
     "./src/components/**/*.{js,ts,jsx,tsx}"
@@ -26,7 +25,7 @@ module.exports = {
       madder: "#d02c67",
       bingus: "#cf9b90",
       pureblack: "#09090a",
-      void: "#000000",
+      void: "#010000",
       black: "#191a1c",
       gray1: "#18171d",
       gray2: "#1a1a22",
