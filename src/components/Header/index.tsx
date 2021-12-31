@@ -1,73 +1,43 @@
-import anime from "animejs";
 import React from "react";
-import { useTranslations } from "../../../utils/l10n";
-import { ArrowTop } from "../../icons/ArrowTop";
 import { Themes } from "../../utils/theme";
+import { AnimatedChevron } from "../AnimatedChevron";
 import { LightButton } from "../Button/Light";
+import { Divide } from "../Divide";
 import { Logo } from "../Logo";
 
-export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?: string, fixed?: boolean, bg?: string, blur?: boolean }) => {
-    const t = useTranslations("");
-
-    const [open, setOpen] = React.useState(false);
-    const [openItem, setOpenItem] = React.useState("");
-
-    const [openAnimDone, setOpenAnimDone] = React.useState(true);
-
-    let procInt: any;
-
+export const Header = ({ theme, children }: { theme?: number, children?: any }) => {
     React.useEffect(() => {
-        setOpenAnimDone(false);
+        const floatingHeader: any = document.getElementById("header-floating");
 
-        anime({
-            targets: `.item-chevron`,
-            rotate: 0,
-            easing: `easeOutElastic(1, ${open ? 1 : 2})`,
-            duration: 500
+        window.addEventListener("scroll", () => {
+            floatingHeader.style.display = window.scrollY >= 200 ? "flex" : "none";
+            floatingHeader.style.transform = `translateY(${window.scrollY >= 400 ? "0rem" : "-4rem"})`
         })
-
-        anime({
-            targets: "#header-page-popdown",
-            translateY: open ? "0rem" : "-23.8rem",
-            easing: `easeOutElastic(1, ${open ? 1 : 2})`,
-            duration: 500
-        })
-
-        setTimeout(() => {
-            setOpenAnimDone(true);
-        }, 500);
-    }, [open]);
-
-    React.useEffect(() => {
-        anime({
-            targets: `#${openItem}-item-chevron`,
-            rotate: open ? 180 : 0,
-            easing: `easeOutElastic(1, ${open ? 1 : 2})`,
-            duration: 500
-        })
-    }, [openItem])
-
+    }, []);
+    
     return (
         <header 
             id={"header"} 
+            className={"flex flex-col justify-center items-center w-full"}
             style={{ zIndex: 99999 }}
         >
             <article 
                 id={"notification"}
-                className={"bg-gray7 h-14 text-center gap-2 shadow-inner relative text-black font-semibold flex justify-center items-center"}
-                style={{ boxShadow: "inset 0px -4px 14px 0px #00000005" }}
+                className={"h-14 bg-black w-full text-center relative text-white font-semibold flex justify-center items-center"}
             >
-                <span>Find out how we're improving translation systems using artificial inteligence.</span>
+                <span>Find out about how we're translating using artificial intelligence.</span>
 
-                <LightButton colour={"blue"} noTitle className={"group"}>
+                <Divide y colour={"white"} py={4} px={4} />
+
+                <LightButton colour={"white"} filled filledColour={"white bg-opacity-10 hover:bg-opacity-20 active:bg-opacity-25"} noTitle className={"group"}>
                     Learn More
-                    <ArrowTop className={`transform rotate-90 scale-75 -translate-x-1 group-hover:translate-x-0 transition-all`}></ArrowTop>
+                    <AnimatedChevron />
                 </LightButton>
             </article>
 
             <div 
                 id={"header-page"} 
-                className={`flex items-center w-full justify-between border-b border-gray6 py-4 px-6 z-20 ${theme == Themes.Dark ? `bg-void text-white` : `bg-white text-black`}`}
+                className={`flex page-fit items-center w-full justify-between border-b border-void border-opacity-5 py-4 px-6 z-20 ${theme == Themes.Dark ? `bg-void text-white` : theme == Themes.None ? `bg-transparent text-white` : `bg-white text-black`}`}
             >
                 <ul className={`flex flex-1 gap-1 justify-start`}>
                     <Logo linked className={"bg-current"} size={8} />
@@ -108,16 +78,28 @@ export const Header = ({ theme, motd, fixed, bg, blur }: { theme?: number, motd?
 
                     <li>
                         <LightButton 
-                            colour={"blue"}
+                            colour={"white"}
+                            className={"group"}
                             noTitle
+                            filled
+                            filledColour={"blue bg-opacity-100 hover:bg-opacity-80 active:bg-opacity-85"}
                             href={"https://accounts.dothq.co"}
                         >
                             <span>Join Dot One</span>
 
-                            <ArrowTop className={"transform rotate-90"} />
+                            <AnimatedChevron />
                         </LightButton>
                     </li>
                 </ul>
+            </div>
+
+            <div id={"header-floating"} className={"fixed mt-2 top-0 hidden w-full z-50 page-fit transition-all"} style={{ transform: "translateY(-4rem)" }}>
+                {children && <div 
+                    className={"w-full h-14 bg-white bg-opacity-90 bg-repeat backdrop-filter backdrop-blur-xl mx-4 mt-2 xl:mt-0 xl:mx-0 backdrop-saturate-200 backdrop-brightness-125 rounded-lg shadow-md px-2 flex items-center"}
+                    style={{ backgroundImage: `url(/static/images/noise.png)` }}
+                >
+                    {children}
+                </div>}
             </div>
         </header>
     )

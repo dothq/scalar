@@ -4,7 +4,7 @@ const fucking: any = {
     "page-description": "Dot Browser is a privacy-centric, modern web browser that fights for your privacy when browsing the internet.",
     "page-description-short": "Get the browser that fights for your privacy when browsing the internet.",
     "download-generic-text": "Download",
-    "landing-title": "The browser that fights for your privacy.",
+    "landing-title": "The browser that\nfights for your privacy.",
     "landing-description": "Dot Browser is a privacy-centric, modern web browser based on Gecko that fights for your privacy when browsing the internet.",
     "landing-download-button-text": "Download Dot Browser",
     "landing-download-availability-for-text": "Available for Windows, macOS, Linux and BSD.",

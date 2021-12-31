@@ -1,15 +1,11 @@
 import "flickity/css/flickity.css";
 import React from "react";
-import { ThemeColours } from "../../theme";
 import { useTranslations } from "../../utils/l10n";
-import { FilledButton } from "../components/Button";
-import { CTA } from "../components/CTA";
-import { FAQAccordian } from "../components/FAQ";
-import { FeatureCarousel } from "../components/FeatureCarousel";
+import { AnimatedChevron } from "../components/AnimatedChevron";
+import { LightButton } from "../components/Button/Light";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import Layout from "../components/Layout";
-import { Reference } from "../components/Reference";
 import { Themes } from "../utils/theme";
 
 const Home = ({ motd }: { motd?: string }) => {
@@ -20,113 +16,74 @@ const Home = ({ motd }: { motd?: string }) => {
             const img = document.getElementById("browser-landing-image");
 
             if(img) {
-                img.style.transform = `scale(${1.00 + (window.scrollY / 15000)})`
+                img.style.transform = `scale(${1.00 + (window.scrollY / 20000)})`
             }
         })
     }, [])
 
     return (
-        <Layout theme={Themes.Light} selectionColour={ThemeColours.Blue}>
-            <Header theme={Themes.Light} motd={motd} />
-
-            <main id={"main-content"} className={"flex flex-col z-30"}>
+        <Layout theme={Themes.Light}>
+            <main id={"main-content"} className={"flex flex-col z-30 gap-20"}>
                 <section
                     id={"home-container"}
-                    className={"w-full h-full overflow-hidden text-white flex justify-center items-center bg-cover md:items-start"}
-                    style={{ 
-                        backgroundImage: `url(/static/images/branding-gradient.jpg)`
-                    }}
+                    className={"w-full h-full overflow-hidden flex-col gap-10 text-white flex justify-center items-center bg-cover md:items-start"}
                 >
-                    <div className={"px-7 lg:px-12 lg2:px-16 xl:px-20 pt-40"}>
-                        <div className={"flex flex-col justify-center relative text-center items-center w-full h-full gap-10 lg:gap-16 max-w-7xl"}>
-                            <h1 className={"text-4xl md:max-w-4xl md:text-7xl lg:max-w-full xl:text-9xl font-medium"}>
-                                {t("landing-title")}
-                            </h1>
+                    <Header theme={Themes.Light} />
 
-                            <FilledButton
-                                colour={"white"}
-                            >
-                                {t("download-generic-text")}
-                            </FilledButton>
+                    <div className={"w-full flex px-6 flex-col page-fit text-void my-0 mx-auto justify-center md:items-start items-center text-center md:text-left py-20 gap-4"}>
+                        <h3 className={"max-w-3xl font-semibold"}>Next-generation products with privacy at the heart</h3>
+                        <h6 className={"max-w-2xl text-gray4 leading-tight"}>We're Dot HQ and we build privacy-centric software and services.</h6>
+                    </div>
 
-                            <img 
-                                id={"browser-landing-image"}
-                                className={"rounded-lg origin-top"} 
-                                src={"/static/images/mockups/browser-ui-gradient.png"}
-                            ></img>
+                    <div className={"w-full page-fit px-6 my-0 mx-auto flex flex-col lg2:grid grid-cols-3 grid-rows-1 gap-6"}>
+                        <div 
+                            style={{ gridArea: "1 / 1 / 3 / 3", backgroundImage: "url(/static/images/branding-gradient.jpg)" }} 
+                            className={"rounded-3xl bg-cover highlight h-fit bg-center overflow-hidden relative bg-white bg-gradient-to-br from-blue to-aqua text-white p-14 flex flex-col gap-12 lg:gap-6"}
+                        >
+                            <div className={"h-full flex flex-col gap-6"}>
+                                <h5 
+                                    className={"font-semibold flex h-9 bg-current text-5xl"} 
+                                    style={{ maskImage: "url(/static/images/products/browser.svg)", maskRepeat: "no-repeat" }}
+                                >Dot Browser</h5>
+                                <h6 className={"max-w-xl tracking-tight"}>A browser that protects your privacy while navigating the web.</h6> 
+                            </div>
+
+                            <img className={"top-1/2 hidden lg2:flex right-0 left-80 absolute rounded-lg transform scale-150 origin-top-left"} src={"/static/images/mockups/browser-ui-gradient.png"}></img>
+                        
+                            <LightButton className={"group"} noTitle colour={"black"} filled filledColour={"white bg-opacity-100 hover:bg-opacity-80 active:bg-opacity-85"} style={{ width: "max-content" }}>
+                                Learn More
+                                <AnimatedChevron />
+                            </LightButton>
+                        </div>
+
+                        <div className={"rounded-3xl bg-blue bg-gradient-to-br from-blue to-discord text-white p-10 flex flex-col gap-12 lg:gap-6 h-fit"}>
+                            <h5 
+                                className={"font-semibold flex h-9 bg-current text-4xl"} 
+                                style={{ maskImage: "url(/static/images/products/one.svg)", maskRepeat: "no-repeat" }}
+                            >Dot One</h5>
+                            <h6 className={"max-w-xl text-xl tracking-tight"}>Securely synchronise your data between devices without leaking a single byte of data to us.</h6> 
+                        
+                            <LightButton className={"group"} noTitle colour={"black"} filled filledColour={"white bg-opacity-100 hover:bg-opacity-80 active:bg-opacity-85"} style={{ width: "max-content" }}>
+                                Learn More
+                                <AnimatedChevron />
+                            </LightButton>
+                        </div>
+
+                        <div className={"rounded-3xl bg-violet bg-gradient-to-br from-pink to-violet p-10 flex flex-col gap-12 lg:gap-6 h-fit"}>
+                            <h5 
+                                className={"font-semibold flex h-9 bg-current text-4xl"} 
+                                style={{ maskImage: "url(/static/images/products/translate.svg)", maskRepeat: "no-repeat" }}
+                            >Dot Translate</h5>
+                            <h6 className={"max-w-xl text-xl tracking-tight"}>Translate text between languages with high-accuracy using Dot Translate. Powered by Artificial Intelligence.</h6> 
+                        
+                            <LightButton className={"group"} noTitle colour={"black"} filled filledColour={"white bg-opacity-100 hover:bg-opacity-80 active:bg-opacity-85"} style={{ width: "max-content" }}>
+                                Learn More
+                                <AnimatedChevron />
+                            </LightButton>
                         </div>
                     </div>
                 </section>
 
-                <section className={"m-6 bg-void text-white rounded-xl p-6 relative flex justify-center items-center"}>
-                    <div className={"max-w-5xl flex w-full py-24"}>
-                        <h1 className={"text-4xl font-semibold"}>Privacy is a right, not a privilage.</h1>
-                    </div>
-                </section>
-
-                <section className={"w-full text-black flex justify-center bg-white h-96 z-10 pt-24"}>
-                    <div className={"max-w-5xl sm:py-20 md:py-0 sm:px-5 md:px-0 text-center"}>
-                        <div className={"flex flex-col justify-center w-full h-full gap-16 items-center"}>
-                            <h1 className={"text-6xl text-black text-opacity-70 font-normal flex flex-col gap-2"}>
-                                On average, your data is sold<br />
-                                <span className={"text-black font-semibold text-9xl"}>
-                                    10 times a day.<Reference n={1} />
-                                </span>
-                            </h1>
-
-                            <span className={"text-3xl max-w-3xl text-black text-opacity-60 flex flex-col gap-6"}>
-                                All of this is happening behind closed doors, and sometimes without your knowledge.
-                            </span>
-                        </div>
-                    </div>
-                </section>
-
-                <section className={"w-full flex justify-center bg-white text-black bg-cover bg-no-repeat grid-pattern"}>
-                    <div className={"w-full flex"}>
-                        <div className={"w-full px-24 xl:px-48 pt-56 pb-72 flex flex-1 flex-col gap-56"}>
-                            <div className={"flex h-96 justify-center gap-10 flex-col"}>
-                                <h1 className={"text-7xl font-bold flex flex-col gap-4"}>{t("feature-privacy-by-default")} <span className={"text-violet"}>{t("feature-privacy-by-default-affirmation")}</span></h1>
-                                <p className={"text-3xl max-w-2xl text-gray3"}>
-                                    {t("feature-privacy-by-default-description")}
-                                </p>
-                            </div>
-                            <div className={"flex h-96 justify-center gap-10 flex-col"}>
-                                <h1 className={"text-7xl font-bold flex flex-col gap-4"}>{t("feature-migration")} <span className={"text-orange"}>{t("feature-migration-affirmation")}</span></h1>
-                                <p className={"text-3xl max-w-2xl text-gray3"}>
-                                    {t("feature-migration-description")}
-                                </p>
-                            </div>
-                            <div className={"flex h-96 justify-center gap-10 flex-col"}>
-                                <h1 className={"text-7xl font-bold flex flex-col gap-4"}>{t("feature-extensions")} <span className={"text-blue"}>{t("feature-extensions-affirmation")}</span></h1>
-                                <p className={"text-3xl max-w-2xl text-gray3"}>
-                                    {t("feature-extensions-description")}
-                                </p>
-                            </div>
-                        </div>
-                        <figure className={"sticky-browser-img sticky z-50 top-72 mt-40 mb-56 flex-1 overflow-hidden hidden lg2:flex"} style={{ height: "max-content" }}>
-                            <div>
-
-                            </div>
-                            <img
-                                src={"/static/images/lockups/security.svg"}
-                            ></img>
-                        </figure>
-                    </div>
-                </section>
-
-                <FeatureCarousel />
-
-                <section className={"bg-white text-black w-full flex flex-col items-center py-36"}>
-                    <div className={"w-full max-w-7xl gap-8 flex flex-col my-0 px-auto"}>
-                        <h1 className={"text-7xl font-medium"}>
-                            {t("faq-title")}
-                        </h1>
-
-                        <FAQAccordian theme={Themes.Light} />
-                    </div>
-                </section>
-
-                <CTA />
                 <Footer />
             </main>
         </Layout>

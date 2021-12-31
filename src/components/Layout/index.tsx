@@ -8,6 +8,7 @@ import { useTranslations } from "../../../utils/l10n";
 import { ArrowTop } from "../../icons/ArrowTop";
 import { languages } from "../../l10n/languages";
 import { Themes } from "../../utils/theme";
+import { LightButton } from "../Button/Light";
 
 const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, metaDescription, metaImg }: { children: any, title?: string, noSuffix?: boolean, selectionColour?: Colour, theme?: number, metaTitle?: string, metaDescription?: string, metaImg?: string }) => {
     const { locale, locales } = useRouter();
@@ -93,8 +94,8 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, 
                     {`
                         ::selection {
                             background-color: ${selectionColour 
-                                ? selectionColour.toHex(0.15)
-                                : ThemeColours.Blue.toHex(0.15)
+                                ? selectionColour.toHex(0.75)
+                                : ThemeColours.Gray5.toHex(0.3)
                             } !important;
                         }
 
@@ -110,18 +111,22 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, 
 
             {children}
 
-            <a 
-                className={`${theme == Themes.Dark ? `bg-white text-black border-transparent` : `bg-blue border-transparent text-white`} shadow-lg h-12 w-12 flex justify-center items-center fixed right-6 bottom-0 transform ${scTopVisible ? `-translate-y-6 opacity-100` : `translate-y-12 opacity-0`} transition-all border-2 ${theme == Themes.Dark ? `hover:bg-pureblack hover:border-white hover:text-white` : `hover:bg-white hover:border-blue hover:text-blue`} cursor-pointer z-50`}
+            <LightButton
+                colour={"white"}
+                filled
+                noTitle
+                filledColour={"blue hover:bg-opacity-80 active:bg-opacity-70"}
                 onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
                 }}
                 href={"#"}
                 ref={toTopRef}
-                hidden={!scTopInitVisible}
+                className={"z-50 fixed right-4 bottom-4"}
+                style={{ padding: "1rem", transform: scTopVisible ? "" : "translateY(100px)" }}
             >
                 <ArrowTop />
-            </a>
+            </LightButton>
         </div>
     )
 }

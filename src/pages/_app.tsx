@@ -1,15 +1,16 @@
-import React from "react";
-
-import type { AppProps } from "next/app"
+import { UserProvider } from "@auth0/nextjs-auth0";
 import { NextIntlProvider } from "next-intl";
-
-import { LoadEvent } from "../events/load";
-
-import "../../styles/global.css";
+import type { AppProps } from "next/app";
+import React from "react";
 import "../../styles/app.css";
 import "../../styles/blog.css";
 import "../../styles/focus.css";
-import { UserProvider } from "@auth0/nextjs-auth0";
+import "../../styles/global.css";
+import "../../styles/typography.css";
+import { LoadEvent } from "../events/load";
+
+
+
 
 const Application = ({ Component, pageProps }: AppProps) => {
     React.useEffect(() => {

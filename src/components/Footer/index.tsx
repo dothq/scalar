@@ -1,6 +1,7 @@
-import { useRouter } from "next/router"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import React from "react"
+import { useTranslations } from "../../../utils/l10n"
 import { Discord } from "../../icons/Discord"
 import { GitHub } from "../../icons/GitHub"
 import { Matrix } from "../../icons/Matrix"
@@ -9,7 +10,6 @@ import { Twitter } from "../../icons/Twitter"
 import { Themes } from "../../utils/theme"
 import { LangPicker } from "../LangPicker"
 import { Logo } from "../Logo"
-import { useTranslations } from "../../../utils/l10n"
 
 export const Footer = ({ theme }: { theme?: number }) => {
     const t = useTranslations("");
@@ -17,8 +17,8 @@ export const Footer = ({ theme }: { theme?: number }) => {
     const { locale } = useRouter();
 
     return (
-        <footer className={`w-full flex justify-center md:px-8 sm:px-8 px-4 ${theme == Themes.Dark ? `bg-black text-white` : `bg-gray7 text-black`} z-50`}>
-            <div className={"max-w-7xl w-full py-28"}>
+        <footer className={`w-full flex justify-center md:px-8 sm:px-8 px-4 ${theme == Themes.Dark ? `bg-black text-white` : `bg-white text-black`} z-50`}>
+            <div className={"page-fit w-full py-28 border-t border-void border-opacity-5"}>
                 <ul className={"flex gap-24 flex-wrap"}>
                     <li className={"w-64 md:w-48"}>
                         <ul className={"flex flex-col gap-2"}>
@@ -116,7 +116,7 @@ export const Footer = ({ theme }: { theme?: number }) => {
                     </li>
                 </ul>
 
-                <div className={"w-full flex justify-between pt-14 mt-14 flex-wrap gap-10 border-t-2 border-gray6"}>
+                <div className={"w-full flex justify-between pt-14 mt-14 flex-wrap gap-10 border-t border-void border-opacity-5"}>
                     <div className={"flex flex-col gap-6 items-start"}>
                         <Logo linked />
                         <span className={"text-sm"}>{t("footer-copyright-notice", { year: new Date().getFullYear() })}</span>

@@ -19,6 +19,7 @@ module.exports = {
       green: "#0dd762",
       neon: "#00ffb7",
       blue: "#1662d3",
+      aqua: "#38BDF8",
       bluelight: "#f4f8fe",
       violet: "#742cd0",
       pink: "#c32cd0",
@@ -85,6 +86,8 @@ module.exports = {
       transform: ["group-hover"],
       translate: ["group-hover"],
       scale: ["group-hover"],
+      brightness: ["hover", "active", "group-hover"],
+      backgroundOpacity: ["active"],
     }
   },
   plugins: [],
