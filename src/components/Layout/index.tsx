@@ -116,7 +116,7 @@ const Layout = ({ children, title, noSuffix, selectionColour, theme, metaTitle, 
                 filled
                 noTitle
                 filledColour={"blue hover:bg-opacity-80 active:bg-opacity-70"}
-                onClick={(e) => {
+                onClick={(e: any) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
                 }}
