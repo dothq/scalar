@@ -1,12 +1,12 @@
 import React from "react";
+import { ThemeColours } from "../../theme";
 import { HollowButton } from "../components/Button/Hollow";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 import Layout from "../components/Layout";
-import { Themes } from "../utils/theme";
 import { Tab } from "../components/Tab";
-import { ThemeColours } from "../../theme";
-import { Footer } from "../components/Footer";
+import { Themes } from "../utils/theme";
 
 const constructDonateUrl = ({ amount, currency, period }: { amount: number, currency: string, period: string }) => {
     return `https://liberapay.com/dothq/donate?amount=${amount}&currency=${currency}&period=${period}#amount`
@@ -46,7 +46,7 @@ const Donate = () => {
             `}</style>
 
             <div id={"main-content"} className={"w-full flex flex-col h-full md:min-h-screen items-center"}>
-                <Header theme={Themes.Light} bg={"bg-gray7"} />
+                <Header theme={Themes.Light} />
 
                 <div className={"w-full flex justify-center bg-gray7 grid-pattern text-black py-36 pb-44 md:px-8 sm:px-8 px-4"}>
                     <div className={"max-w-7xl flex flex-col justify-start w-full gap-8"}>
