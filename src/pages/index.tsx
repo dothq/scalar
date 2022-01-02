@@ -43,7 +43,7 @@ const Home = ({ motd }: { motd?: string }) => {
                             <div className={"h-full flex flex-col gap-6"}>
                                 <h5 
                                     className={"font-semibold flex h-9 bg-current text-5xl"} 
-                                    style={{ maskImage: "url(/static/images/products/browser.svg)", maskRepeat: "no-repeat" }}
+                                    style={{ WebkitMaskImage: "url(/static/images/products/browser.svg)", WebkitMaskRepeat: "no-repeat" }}
                                 >Dot Browser</h5>
                                 <h6 className={"max-w-xl tracking-tight"}>A browser that protects your privacy while navigating the web.</h6> 
                             </div>
@@ -59,7 +59,7 @@ const Home = ({ motd }: { motd?: string }) => {
                         <div className={"rounded-3xl bg-blue bg-gradient-to-br from-blue to-discord text-white p-10 flex flex-col gap-12 lg:gap-6 h-fit"}>
                             <h5 
                                 className={"font-semibold flex h-9 bg-current text-4xl"} 
-                                style={{ maskImage: "url(/static/images/products/one.svg)", maskRepeat: "no-repeat" }}
+                                style={{ WebkitMaskImage: "url(/static/images/products/one.svg)", WebkitMaskRepeat: "no-repeat" }}
                             >Dot One</h5>
                             <h6 className={"max-w-xl text-xl tracking-tight"}>Securely synchronise your data between devices without leaking a single byte of data to us.</h6> 
                         
@@ -72,7 +72,7 @@ const Home = ({ motd }: { motd?: string }) => {
                         <div className={"rounded-3xl bg-violet bg-gradient-to-br from-pink to-violet p-10 flex flex-col gap-12 lg:gap-6 h-fit"}>
                             <h5 
                                 className={"font-semibold flex h-9 bg-current text-4xl"} 
-                                style={{ maskImage: "url(/static/images/products/translate.svg)", maskRepeat: "no-repeat" }}
+                                style={{ WebkitMaskImage: "url(/static/images/products/translate.svg)", WebkitMaskRepeat: "no-repeat" }}
                             >Dot Translate</h5>
                             <h6 className={"max-w-xl text-xl tracking-tight"}>Translate text between languages with high-accuracy using Dot Translate. Powered by Artificial Intelligence.</h6> 
                         
