@@ -1,108 +1,0 @@
-{
-    "language-name": "العربية",
-
-    "page-default-title": "Dot Browser ─ المتصفح الذي يحارب من اجل خصوصيتك.",
-    "page-description": "Dot Browser هو متصفح عصري يرتكز على الخصوصية والذي يحارب من اجل خصوصيتك على الأنترنت.",
-    "page-description-short": "احصل على المتصفح الذي يحارب من اجل خصوصيتك على الأنترنت.",
-
-    "download-generic-text": "التنزيل",
-
-    "landing-title": "المتصفح الذي يحارب من اجل خصوصيتك.",
-    "landing-description": "Dot Browser هو متصفح عصري يرتكز على الخصوصية، مبني على Gecko، والذي يحارب من اجل خصوصيتك على الأنترنت.",
-
-    "landing-download-button-text": "تنزيل Dot Browser",
-    "landing-download-availability-for-text": "متوفر ل-Windows, macOS, Linux و BSD.",    
-    "landing-download-system-requirements-button": "متطلبات النظام",
-
-    "header-products-submenu": "المنتجات",
-    "header-blog-submenu": "المدونة",
-    "header-help-submenu": "المساعدة",
-    "header-about-submenu": "حول",
-
-    "header-dot-one-create-button": "Join Dot One",
-    "header-dot-one-login-button": "Sign In",
-
-    "subheader-browser-desktop-title": "Dot Browser لسطح المكتب",
-
-    "subheader-language-switcher-title": "محوّل اللغة",
-
-    "region-europe": "أوروبا",
-    "region-americas": "الأمريكتان",
-    "region-asia": "آسيا",
-
-    "see-all-languages": "مشاهدة كل اللغات",
-
-    "feature-privacy-by-default": "الخصوصية بشكل افتراضي؟",
-    "feature-privacy-by-default-affirmation": "نعم!",
-    "feature-privacy-by-default-description": "ايام المعاناة مع الاعدادات والاضافات قد ولت. كل شيء مجهز لك.",
-
-    "feature-migration": "نقل بياناتي القديمة؟ ",
-    "feature-migration-affirmation": "سهل كتناول فطيرة.",
-    "feature-migration-description": "نقل كل إشاراتك المرجعية وسجل التصفح يأخذ بضع ثواني.",
-
-    "feature-extensions": "وملحقاتي؟",
-    "feature-extensions-affirmation": "بالطبع.",
-    "feature-extensions-description": "كل ملحقاتك المفضلة من Chromium و Firefox متوفرة.",
-
-    "feature-carousel-title": "كيف يعمل لك هذا؟",
-
-    "feature-carousel-section-ad-blocking": "حجب الاعلانات",
-    "feature-carousel-section-ad-blocking-title": "قوي لكن متحفظ. 🤫",
-    "feature-carousel-section-ad-blocking-description": "Dot Shield هو حاجب اعلانات قوي مبني في Dot. انه لا يعيق عملك ويحجب الاعلانات والمتعقبين.",
-
-    "feature-carousel-section-quick-launch": "التشغيل السريع",
-    "feature-carousel-section-quick-launch-title": "ابرا كدابرا! 🪄",
-    "feature-carousel-section-quick-launch-description": "يمكنك التنقل بسرعة بين الصفحات <webicon></webicon>, تفتيش سجلك <historyicon></historyicon> اشاراتك المرجعية <bookmarksicon></bookmarksicon> وسجل تنزيلاتك <downloadsicon></downloadsicon> عن طريق ضغط <launcherkbd></launcherkbd>  لفتح منصة الإطلاق.",
-
-    "feature-carousel-section-anti-fingerprinting": "ماسح للبصمات",
-    "feature-carousel-section-anti-fingerprinting-title": "يا أيها الغريب. 🕵",
-    "feature-carousel-section-anti-fingerprinting-description": "Dot سوف يقوم بتغير اعداداتك بشكل عشوائي تلقائيًا لمساعدتك على الاندماج عند تصفح الانترنت.",
-
-    "feature-carousel-section-oss": "مفتوح المصدر",
-    "feature-carousel-section-oss-title": "مبني على مصدر مفتوح. 🚀",
-    "feature-carousel-section-oss-description": "التكنلوجيا مفتوحة المصدر هي الاساس ل-Dot Browser. بامكانك عرض <bl>مصدر المتصفح</bl> و <gl>مشاريع اخرى</gl> على صفحة ال-GitHub الخاصة بنا.",
-
-    "faq-title": "اي سؤال؟",
-    "faq-question-1": "ماذا هو Dot Browser؟",
-    "faq-question-2": "هل يعتمد Dot Browser على Chrome؟",
-    "faq-question-3": "اي منصات تدعم Dot Browser؟",
-    "faq-question-4": "لماذا Dot Browser هو متصفح اكثر امانًا من المتصفحات الاخرى؟",
-    "faq-question-5": "هل هنالك اي شيء للتبرع به من ��جل المساعدة ماليًأ؟",
-    "faq-question-6": "لدي سؤال حول Dot Browser, اين يمكنني الحصول على الدعم؟",
-
-    "cta-sub": "احمي خصوصيتك",
-    "cta-title": "تنزيل Dot Browser",
-
-    "footer-explore-section": "الاستكشاف",
-    "footer-explore-section-home": "الصفحة الرئيسية",
-    "footer-explore-section-about": "حول",
-    "footer-explore-section-blog": "المدونة",
-    "footer-explore-section-donate": "التبرع",
-
-    "footer-products-section": "منتجات",
-
-    "footer-learn-section": "اكتشف",
-    "footer-learn-section-faq": "اسئلة متكررة (FAQ)",
-    "footer-learn-section-support": "الدعم",
-    "footer-learn-section-documentation": "التوثيق",
-
-    "footer-legal-section": "قانوني",
-    "footer-legal-section-privacy": "الخصوصية",
-    "footer-legal-section-terms": "الشروط",
-
-    "footer-copyright-notice": "© {year}, Dot HQ. كل الحقوق محفوظة.",
-
-    "errors": {
-        "error-403-title": "أربعمائة وثلاثة",
-        "error-403-description": "انت لا تملك الاذن او التخويل المطلوب للوصول الى هذه الصفحة.",
-        "error-403-button-text": "جرب مرة اخرى",
-
-        "error-404-title": "أربعمائة واربعة",
-        "error-404-description": "هذه الصفحة غير موجودة.",
-        "error-404-button-text": "الرجوع",
-    
-        "error-500-title": "خمسمائة",
-        "error-500-description": "يبدو هناك مشكلة مع الخادم الخاص بنا.",
-        "error-500-button-text": "جرب مرة اخرى"
-    }
-}
