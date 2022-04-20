@@ -1,0 +1,11 @@
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="https://www.dothq.co/static/icons/70x70.png"/>
+            <square150x150logo src="https://www.dothq.co/static/icons/150x150.png"/>
+            <square310x310logo src="https://www.dothq.co/static/icons/310x310.png"/>
+            <wide310x150logo src="https://www.dothq.co/static/icons/310x150.png"/>
+            <tilecolor>#fefefe</tilecolor>
+        </tile>
+    </msapplication>
+</browserconfig>
