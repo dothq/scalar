@@ -1,0 +1,1 @@
+dothq-brand-name = Dot HQ

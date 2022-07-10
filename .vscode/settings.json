@@ -1,5 +1,12 @@
 {
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
+    },
+    "explorer.excludeGitIgnore": true,
+    "files.associations": {
+        "*.template": "html"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
     }
 }

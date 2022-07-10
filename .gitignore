@@ -81,3 +81,7 @@ build
 .vercel
 .next
 env.ts
+
+# Added by cargo
+
+/target
