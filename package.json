@@ -13,7 +13,9 @@
     "dependencies": {
         "@stitches/core": "^1.2.8",
         "@stitches/react": "^1.2.8",
+        "gray-matter": "^4.0.3",
         "next": "12.2.3",
+        "next-mdx-remote": "^4.1.0",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },
