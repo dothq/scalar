@@ -1,0 +1,1 @@
+page-title-template = { $title } — { -brand-name-dothq } (UK)

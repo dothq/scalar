@@ -1,4 +1,11 @@
-import NextDocument, { Head, Html, Main, NextScript } from "next/document";
+import { DEFAULT_LOCALE, isValidLocale } from "@utils/l10n";
+import NextDocument, {
+	Head,
+	Html,
+	Main,
+	NextScript
+} from "next/document";
+import { getCssText } from "stitches.config";
 
 class Document extends NextDocument {
 	public render() {
@@ -6,44 +13,113 @@ class Document extends NextDocument {
 
 		const urlLegal = `${url}/legal`;
 
+		let [locale] = this.props.dangerousAsPath
+			.substring(1)
+			.split("/");
+
+		if (!isValidLocale(locale)) {
+			locale = DEFAULT_LOCALE;
+		}
+
 		return (
 			<Html
 				className={"no-js"}
 				prefix={"og: https://ogp.me/ns#"}
 				itemScope={true}
 				itemType={"http://schema.org/WebSite"}
+				lang={locale}
 			>
 				<Head>
 					<meta charSet="utf-8"></meta>
 					<meta name="google" content="notranslate"></meta>
-					<meta name="url" itemProp="url" content={url}></meta>
+					<meta
+						name="url"
+						itemProp="url"
+						content={url}
+					></meta>
 					<meta name="identifier-url" content={url}></meta>
-					<meta name="name" itemProp="name" content="Dot Browser"></meta>
-					<meta name="application-name" content="Dot Browser"></meta>
+					<meta
+						name="name"
+						itemProp="name"
+						content="Dot Browser"
+					></meta>
+					<meta
+						name="application-name"
+						content="Dot Browser"
+					></meta>
 					<meta name="copyright" content={urlLegal}></meta>
 					<meta name="imprint" content={urlLegal}></meta>
 					<meta name="robots" content="index,follow"></meta>
-					<meta name="author" content="Dot HQ, support@dothq.co"></meta>
-					<meta name="reply-to" content="support@dothq.co"></meta>
-					<meta name="email" content="support@dothq.co"></meta>
+					<meta
+						name="author"
+						content="Dot HQ, support@dothq.co"
+					></meta>
+					<meta
+						name="reply-to"
+						content="support@dothq.co"
+					></meta>
+					<meta
+						name="email"
+						content="support@dothq.co"
+					></meta>
 					<meta name="owner" content="Dot HQ"></meta>
 					<meta name="coverage" content="worldwide"></meta>
 					<meta name="distribution" content="global"></meta>
-					<meta name="rating" content="safe for kids"></meta>
-					<meta name="isFamilyFriendly" itemProp="isFamilyFriendly" content="true"></meta>
-					<meta name="apple-mobile-web-app-title" content="Dot HQ"></meta>
-					<meta name="application-name" content="Dot Browser"></meta>
+					<meta
+						name="rating"
+						content="safe for kids"
+					></meta>
+					<meta
+						name="isFamilyFriendly"
+						itemProp="isFamilyFriendly"
+						content="true"
+					></meta>
+					<meta
+						name="apple-mobile-web-app-title"
+						content="Dot HQ"
+					></meta>
+					<meta
+						name="application-name"
+						content="Dot Browser"
+					></meta>
 					<meta name="theme-color" content="#fefefe"></meta>
-					<meta name="msapplication-TileColor" content="#fefefe"></meta>
-					<meta name="msapplication-TileImage" content="/static/icons/144x144.png"></meta>
-					<meta name="msapplication-config" content="/browserconfig.xml"></meta>
-					<link rel="sitemap" href="/sitemap.xml" type="application/xml"></link>
-					<link rel="manifest" href="/site.webmanifest"></link>
-					<link rel="canonical" href="https://www.dothq.co/"></link>
-					<link rel="home" href="https://www.dothq.co/"></link>
-					<link rel="start" href="https://www.dothq.co/"></link>
-					<link rel="index" href="https://www.dothq.co/sitemap.xml"></link>
-					<link rel="help" href="mailto:support@dothq.co"></link>
+					<meta
+						name="msapplication-TileColor"
+						content="#fefefe"
+					></meta>
+					<meta
+						name="msapplication-TileImage"
+						content="/static/icons/144x144.png"
+					></meta>
+					<meta
+						name="msapplication-config"
+						content="/browserconfig.xml"
+					></meta>
+					<link
+						rel="sitemap"
+						href="/sitemap.xml"
+						type="application/xml"
+					></link>
+					<link
+						rel="canonical"
+						href="https://www.dothq.co/"
+					></link>
+					<link
+						rel="home"
+						href="https://www.dothq.co/"
+					></link>
+					<link
+						rel="start"
+						href="https://www.dothq.co/"
+					></link>
+					<link
+						rel="index"
+						href="https://www.dothq.co/sitemap.xml"
+					></link>
+					<link
+						rel="help"
+						href="mailto:support@dothq.co"
+					></link>
 					<link rel="copyright" href={urlLegal}></link>
 					<link rel="imprint" href={urlLegal}></link>
 
@@ -53,9 +129,22 @@ class Document extends NextDocument {
 						href="/favicon.ico"
 						sizes="16x16 24x24 32x32 64x64 128x128"
 					></link>
-					<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg"></link>
-					<link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
-					<link rel="icon" type="image/png" href="/static/icons/256x256.png"></link>
+					<link
+						rel="icon"
+						type="image/svg+xml"
+						sizes="any"
+						href="/favicon.svg"
+					></link>
+					<link
+						rel="icon"
+						type="image/x-icon"
+						href="/favicon.ico"
+					></link>
+					<link
+						rel="icon"
+						type="image/png"
+						href="/static/icons/256x256.png"
+					></link>
 					<link
 						rel="icon"
 						type="image/png"
@@ -158,26 +247,44 @@ class Document extends NextDocument {
 						title="Dot HQ"
 					></link>
 
-					<meta property="og:site_name" content="Dot HQ"></meta>
+					<meta
+						property="og:site_name"
+						content="Dot HQ"
+					></meta>
 					<meta property="og:url" content={url}></meta>
 					<meta property="og:type" content="website"></meta>
-					<meta property="og:image:type" content="image/png"></meta>
-					<meta property="og:image:width" content="1200"></meta>
-					<meta property="og:image:height" content="630"></meta>
-					<meta name="twitter:card" content="summary_large_image"></meta>
-					<meta name="twitter:site" content="@DotBrowser"></meta>
-					<meta name="twitter:creator" content="@DotBrowser"></meta>
+					<meta
+						property="og:image:type"
+						content="image/png"
+					></meta>
+					<meta
+						property="og:image:width"
+						content="1200"
+					></meta>
+					<meta
+						property="og:image:height"
+						content="630"
+					></meta>
+					<meta
+						name="twitter:card"
+						content="summary_large_image"
+					></meta>
+					<meta
+						name="twitter:site"
+						content="@DotBrowser"
+					></meta>
+					<meta
+						name="twitter:creator"
+						content="@DotBrowser"
+					></meta>
+					<style
+						id="stitches"
+						dangerouslySetInnerHTML={{
+							__html: getCssText()
+						}}
+					/>
 				</Head>
 				<body>
-					{/* @todo change this */}
-					<a
-						className={"skip-to-main sr-only focus:not-sr-only"}
-						href={"#main-content"}
-						tabIndex={0}
-					>
-						Skip to main content
-					</a>
-
 					<Main />
 					<NextScript />
 				</body>

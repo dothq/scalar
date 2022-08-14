@@ -4,6 +4,8 @@ import { resolve } from "path";
 import { NavbarItem } from ".";
 
 export const getNavbarStaticProps = async () => {
+	if (typeof window !== "undefined") return [];
+
 	const navbarContentDir = resolve(contentDir, "common", "navbar");
 
 	const { items } = await readMDX<{ items: string[] }>(resolve(navbarContentDir, "index.mdx"));
