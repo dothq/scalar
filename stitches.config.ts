@@ -1,5 +1,16 @@
 import { createStitches } from "@stitches/react";
 
+const systemFont = [
+	"-apple-system",
+	"BlinkMacSystemFont",
+	'"Segoe UI"',
+	"Helvetica",
+	"Arial",
+	"sans-serif",
+	'"Apple Color Emoji"',
+	'"Segoe UI Emoji"'
+];
+
 export const {
 	styled,
 	css,
@@ -20,8 +31,14 @@ export const {
 			blue: "#1662D3",
 			pink: "#FE5CF7",
 			violet: "#B75CFE",
-			white: "#EFF5FF",
-			black: "#000B1B"
+			gray1: "#EFF5FF",
+			gray2: "#BFC6D1",
+			gray3: "#8F97A3",
+			gray4: "#5F6876",
+			gray5: "#303948",
+			gray6: "#000B1B",
+			white: "#FFFFFF",
+			black: "#000000"
 		},
 		space: {
 			1: "4px",
@@ -46,17 +63,8 @@ export const {
 			xxl: "96px"
 		},
 		fonts: {
-			sans: [
-				"Satoshi",
-				"-apple-system",
-				"BlinkMacSystemFont",
-				'"Segoe UI"',
-				"Helvetica",
-				"Arial",
-				"sans-serif",
-				'"Apple Color Emoji"',
-				'"Segoe UI Emoji"'
-			].join(", "),
+			sans: ["Inter", ...systemFont].join(", "),
+			sansVar: ["Inter var", ...systemFont].join(", "),
 			mono: "monospace"
 		},
 		fontWeights: {},
@@ -120,3 +128,20 @@ export const {
 		py: (value: number) => ({ pt: value, pb: value })
 	}
 });
+
+export const themes = {
+	light: {
+		colors: {
+			background: "$white",
+			color: "$gray6",
+			primary: "$gray6"
+		}
+	},
+	dark: {
+		colors: {
+			background: "$gray6",
+			color: "$gray1",
+			primary: "$gray1"
+		}
+	}
+};

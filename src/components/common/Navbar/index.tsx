@@ -1,4 +1,6 @@
 import Link from "@components/ui/Link";
+import Logo from "@components/ui/Logo";
+import { NavbarContainer, StyledNavbar } from "./style";
 
 export type NavbarItem = {
 	id: string;
@@ -10,16 +12,18 @@ export type NavbarItem = {
 
 const Navbar = ({ items }: { items: NavbarItem[] }) => {
 	return (
-		<nav>
-			<ul>
+		<StyledNavbar>
+			<NavbarContainer>
+				<Logo as={Link} href={"/"} />
+
 				{items &&
 					items.map((i) => (
 						<li key={i.id}>
 							<Link href={i.href || "#"}>{i.name}</Link>
 						</li>
 					))}
-			</ul>
-		</nav>
+			</NavbarContainer>
+		</StyledNavbar>
 	);
 };
 

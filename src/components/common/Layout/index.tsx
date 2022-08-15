@@ -1,3 +1,4 @@
+import { formatString, Locale } from "@utils/l10n";
 import Head from "next/head";
 import { css } from "stitches.config";
 import Navbar from "../Navbar";
@@ -7,22 +8,47 @@ const Layout = ({
 	title,
 	useLocaleTitleTem,
 	items,
-	locale
+	locale,
+	canonicalURL,
+	loadedLocales
 }: {
 	children: any;
 	title: string;
 	useLocaleTitleTem: boolean;
 	items: Parameters<typeof Navbar>[0]["items"];
 	locale: string;
+	canonicalURL: string;
+	loadedLocales: Locale[];
 }) => {
 	return (
 		<>
 			<Head>
 				<title>
 					{useLocaleTitleTem
-						? `${title} — Dot HQ (UK)`
+						? formatString(locale)(
+								"page-title-template",
+								{
+									title
+								}
+						  )
 						: title}
 				</title>
+
+				<link
+					rel="alternate"
+					hrefLang="x-default"
+					href={canonicalURL}
+				></link>
+
+				{loadedLocales.map((l) => (
+					<link
+						key={l.code}
+						rel="alternate"
+						hrefLang={l.code}
+						href={`${canonicalURL}/${l.code}`}
+						title={l.name}
+					></link>
+				))}
 			</Head>
 
 			<div

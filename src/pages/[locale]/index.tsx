@@ -1,5 +1,5 @@
 const Home = ({ locale }: { locale: string }) => {
-	return <h1>hello {locale}</h1>;
+	return <h1>Hello</h1>;
 };
 
 export const getServerSideProps = () => {

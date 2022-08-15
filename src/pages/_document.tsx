@@ -1,3 +1,4 @@
+import { createStitches } from "@stitches/core";
 import { DEFAULT_LOCALE, isValidLocale } from "@utils/l10n";
 import NextDocument, {
 	Head,
@@ -5,7 +6,7 @@ import NextDocument, {
 	Main,
 	NextScript
 } from "next/document";
-import { getCssText } from "stitches.config";
+import { getCssText, themes } from "stitches.config";
 
 class Document extends NextDocument {
 	public render() {
@@ -281,6 +282,24 @@ class Document extends NextDocument {
 						id="stitches"
 						dangerouslySetInnerHTML={{
 							__html: getCssText()
+						}}
+					/>
+					<style
+						media="(prefers-color-scheme: light)"
+						id="stitches-light"
+						dangerouslySetInnerHTML={{
+							__html: createStitches({
+								theme: themes.light
+							}).getCssText()
+						}}
+					/>
+					<style
+						media="(prefers-color-scheme: dark)"
+						id="stitches-dark"
+						dangerouslySetInnerHTML={{
+							__html: createStitches({
+								theme: themes.dark
+							}).getCssText()
 						}}
 					/>
 				</Head>
