@@ -55,19 +55,29 @@ export const {
 			12: "200px"
 		},
 		fontSizes: {
-			sm: "12px",
-			base: "16px",
+			xm: "12px",
+			sm: "16px",
+			base: "20px",
 			md: "24px",
 			lg: "32px",
 			xl: "64px",
-			xxl: "96px"
+			xxl: "80px"
 		},
 		fonts: {
-			sans: ["Inter", ...systemFont].join(", "),
-			sansVar: ["Inter var", ...systemFont].join(", "),
+			sans: ["Satoshi", ...systemFont].join(", "),
+			sansVar: ["Satoshi var", ...systemFont].join(", "),
 			mono: "monospace"
 		},
-		fontWeights: {},
+		fontWeights: {
+			extrathin: 100,
+			thin: 200,
+			light: 300,
+			base: 400,
+			medium: 500,
+			bold: 600,
+			extrabold: 700,
+			black: 800
+		},
 		lineHeights: {
 			base: 1.5
 		},
@@ -111,21 +121,21 @@ export const {
 		}),
 
 		// Margin & padding
-		mt: (value: number) => ({ marginInlineStart: value }),
-		mb: (value: number) => ({ marginInlineEnd: value }),
-		ml: (value: number) => ({ marginBlockStart: value }),
-		mr: (value: number) => ({ marginBlockEnd: value }),
+		mt: (value: any) => ({ marginBlockStart: value }),
+		mb: (value: any) => ({ marginBlockEnd: value }),
+		ml: (value: any) => ({ marginInlineStart: value }),
+		mr: (value: any) => ({ marginInlineEnd: value }),
 
-		pt: (value: number) => ({ paddingInlineStart: value }),
-		pb: (value: number) => ({ paddingInlineEnd: value }),
-		pl: (value: number) => ({ paddingBlockStart: value }),
-		pr: (value: number) => ({ paddingBlockEnd: value }),
+		pt: (value: any) => ({ paddingBlockStart: value }),
+		pb: (value: any) => ({ paddingBlockEnd: value }),
+		pl: (value: any) => ({ paddingInlineStart: value }),
+		pr: (value: any) => ({ paddingInlineEnd: value }),
 
-		mx: (value: number) => ({ ml: value, mr: value }),
-		my: (value: number) => ({ mt: value, mb: value }),
+		mx: (value: any) => ({ ml: value, mr: value }),
+		my: (value: any) => ({ mt: value, mb: value }),
 
-		px: (value: number) => ({ pl: value, pr: value }),
-		py: (value: number) => ({ pt: value, pb: value })
+		px: (value: any) => ({ pl: value, pr: value }),
+		py: (value: any) => ({ pt: value, pb: value })
 	}
 });
 
@@ -134,6 +144,7 @@ export const themes = {
 		colors: {
 			background: "$white",
 			color: "$gray6",
+			paragraphColor: "$gray5",
 			primary: "$gray6"
 		}
 	},
@@ -141,6 +152,7 @@ export const themes = {
 		colors: {
 			background: "$gray6",
 			color: "$gray1",
+			paragraphColor: "$gray2",
 			primary: "$gray1"
 		}
 	}

@@ -18,21 +18,27 @@ export const allLocales = () => {
 };
 
 export const getFTLStrings = (locale: string) => {
-	const stringFiles = glob.sync(
-		resolve(L10N_DIR, locale, "**", "*.ftl")
-	);
+	try {
+		const stringFiles = glob.sync(
+			resolve(L10N_DIR, locale, "**", "*.ftl")
+		);
 
-	const targets = [];
+		const targets = [];
 
-	for (const file of stringFiles) {
-		if (file && file.length) {
-			const ftl = readFileSync(file, "utf-8");
+		for (const file of stringFiles) {
+			if (file && file.length) {
+				const ftl = readFileSync(file, "utf-8");
 
-			targets.push(ftl);
+				targets.push(ftl);
+			}
 		}
-	}
 
-	return targets.join("\n\n");
+		return targets.join("\n\n");
+	} catch (e) {
+		console.error(e);
+
+		return "";
+	}
 };
 
 export const getBundle = (locale: string) => {

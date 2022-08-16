@@ -1,7 +1,7 @@
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
+import { MDXRenderer, MDXRendererProps } from "@components/ui/MDX";
 
-const NotFound = (props: MDXRemoteProps) => {
-	return <MDXRemote {...props} />;
+const NotFound = (props: MDXRendererProps) => {
+	return <MDXRenderer {...props} />;
 };
 
 export default NotFound;

@@ -4,15 +4,15 @@ import matter from "gray-matter";
 import { AppContext } from "next/app";
 import vm from "vm";
 import {
-	allLocales,
-	DEFAULT_LOCALE,
-	formatString,
-	getFTLStrings,
-	isValidLocale
+    allLocales,
+    DEFAULT_LOCALE,
+    formatString,
+    getFTLStrings,
+    isValidLocale
 } from "./l10n";
 import { getCanonicalURL } from "./url";
 
-export const getMDX = async (path: string) => {
+export const getMDX = async (path: string, locale: string) => {
 	const { readFile } = await import("fs/promises");
 
 	let source = await readFile(path, "utf-8");
@@ -26,16 +26,17 @@ export const getMDX = async (path: string) => {
 		.replace(/{ [a-z0-9-]+ }/g, (m: string) => {
 			const id = m.replace(/{/, "").replace(/}/, "").trim();
 
-			return id;
+			return formatString(locale)(id);
 		});
 
 	return source;
 };
 
 export const readMDX = async <T extends object>(
-	path: string
+	path: string,
+	locale: string
 ): Promise<T & { content: string }> => {
-	const source = await getMDX(path);
+	const source = await getMDX(path, locale);
 	const { content, data } = matter(source);
 
 	return { ...data, content } as T & { content: string };
@@ -47,9 +48,6 @@ export const fetchSSRStaticProps = async ({ ctx }: AppContext) => {
 		isForced404: false
 	};
 
-	components.navbar = await getNavbarStaticProps();
-	components.not_found = await get404StaticProps();
-
 	if (isValidLocale(ctx.query.locale)) {
 		pageProps.locale = ctx.query.locale;
 	} else {
@@ -57,6 +55,9 @@ export const fetchSSRStaticProps = async ({ ctx }: AppContext) => {
 		pageProps.isForced404 = true;
 		pageProps.locale = DEFAULT_LOCALE;
 	}
+
+	components.navbar = await getNavbarStaticProps(pageProps);
+	components.not_found = await get404StaticProps(pageProps);
 
 	pageProps.components = components;
 	pageProps.canonicalURL = getCanonicalURL(ctx.req);

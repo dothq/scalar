@@ -12,8 +12,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 100,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Thin.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Thin.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Thin.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Thin.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -22,8 +22,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 100,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-ThinItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-ThinItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-ThinItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-ThinItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -32,8 +32,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 200,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-ExtraLight.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-ExtraLight.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-ExtraLight.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-ExtraLight.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -42,8 +42,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 200,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-ExtraLightItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-ExtraLightItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-ExtraLightItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-ExtraLightItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -52,8 +52,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 300,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Light.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Light.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Light.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Light.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -62,8 +62,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 300,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-LightItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-LightItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-LightItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-LightItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -72,8 +72,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 400,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Regular.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Regular.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Regular.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Regular.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -82,8 +82,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 400,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Italic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Italic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Italic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Italic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -92,8 +92,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 500,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Medium.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Medium.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Medium.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Medium.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -102,8 +102,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 500,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-MediumItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-MediumItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-MediumItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-MediumItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -112,8 +112,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 600,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-SemiBold.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-SemiBold.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-SemiBold.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-SemiBold.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -122,8 +122,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 600,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-SemiBoldItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-SemiBoldItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-SemiBoldItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-SemiBoldItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -132,8 +132,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 700,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Bold.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Bold.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Bold.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Bold.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -142,8 +142,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 700,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-BoldItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-BoldItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-BoldItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-BoldItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -152,8 +152,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 800,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-ExtraBold.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-ExtraBold.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-ExtraBold.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-ExtraBold.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -162,8 +162,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 800,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-ExtraBoldItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-ExtraBoldItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-ExtraBoldItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-ExtraBoldItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -172,8 +172,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 900,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-Black.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-Black.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-Black.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-Black.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -182,8 +182,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: 900,
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-BlackItalic.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-BlackItalic.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-BlackItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-BlackItalic.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -192,8 +192,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: "100 900",
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-roman.var.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-roman.var.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-roman.var.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-roman.var.woff') format('woff')"
 				].join(", ")
 			},
 			{
@@ -202,11 +202,136 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 				fontWeight: "100 900",
 				fontDisplay: "swap",
 				src: [
-					"url('/media/foundation/fonts/Inter-italic.var.woff2') format('woff2')",
-					"url('/media/foundation/fonts/Inter-italic.var.woff') format('woff')"
+					"url('/media/foundation/fonts/inter/Inter-italic.var.woff2') format('woff2')",
+					"url('/media/foundation/fonts/inter/Inter-italic.var.woff') format('woff')"
+				].join(", ")
+			},
+
+			/* Satoshi */
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "normal",
+				fontWeight: 300,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Light.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Light.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "italic",
+				fontWeight: 300,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-LightItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-LightItalic.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "normal",
+				fontWeight: 400,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Regular.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Regular.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "italic",
+				fontWeight: 400,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Italic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Italic.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "normal",
+				fontWeight: 500,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Medium.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Medium.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "italic",
+				fontWeight: 500,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-MediumItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-MediumItalic.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "normal",
+				fontWeight: 600,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Bold.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Bold.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "italic",
+				fontWeight: 600,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-BoldItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-BoldItalic.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "normal",
+				fontWeight: 700,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Black.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Black.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi",
+				fontStyle: "italic",
+				fontWeight: 700,
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-BlackItalic.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-BlackItalic.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi var",
+				fontStyle: "normal",
+				fontWeight: "100 900",
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi.var.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi.var.woff') format('woff')"
+				].join(", ")
+			},
+			{
+				fontFamily: "Satoshi var",
+				fontStyle: "italic",
+				fontWeight: "100 900",
+				fontDisplay: "swap",
+				src: [
+					"url('/media/foundation/fonts/satoshi/Satoshi-Italic.var.woff2') format('woff2')",
+					"url('/media/foundation/fonts/satoshi/Satoshi-Italic.var.woff') format('woff')"
 				].join(", ")
 			}
 		],
+		"*, *:before, *:after": {
+			boxSizing: "inherit"
+		},
 		body: {
 			fontSmoothing: "antialiased",
 			color: "$color",
@@ -221,7 +346,8 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 			}
 		},
 		html: {
-			fontSize: "100%"
+			fontSize: "100%",
+			boxSizing: "border-box"
 		},
 		"html, body": {
 			background: "$background"
