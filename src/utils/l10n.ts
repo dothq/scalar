@@ -73,23 +73,25 @@ export const formatString = (locale: string) => {
 		bundle.addResource(resource);
 	}
 
-	return (id: string, args?: any) => {
+	return (l10nId: string, args?: any) => {
+		const [id, accessor] = l10nId.split(".");
+
 		const formatErrors: any[] = [];
 
 		const msg = bundle.getMessage(id);
+		const value =
+			accessor && accessor.length
+				? msg?.attributes[accessor]
+				: msg?.value;
 
-		if (!msg || !msg.value) {
+		if (!value || !value?.length) {
 			console.warn(
-				`Unknown l10n string '${id}' in '${locale}'.`
+				`Unknown l10n string '${l10nId}' in '${locale}'.`
 			);
 			return id;
 		}
 
-		const str = bundle.formatPattern(
-			msg.value,
-			args,
-			formatErrors
-		);
+		const str = bundle.formatPattern(value, args, formatErrors);
 
 		if (formatErrors.length) {
 			throw formatErrors;

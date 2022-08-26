@@ -1,7 +1,12 @@
-import { formatString, Locale } from "@utils/l10n";
+import { A11yPanel } from "@components/a11y";
+import { DEFAULT_LOCALE, formatString, Locale } from "@utils/l10n";
 import Head from "next/head";
-import { css } from "stitches.config";
+import React from "react";
 import Navbar from "../Navbar";
+
+export const LayoutContext = React.createContext<{
+	locale: string;
+}>({ locale: DEFAULT_LOCALE });
 
 const Layout = ({
 	children,
@@ -21,7 +26,11 @@ const Layout = ({
 	loadedLocales: Locale[];
 }) => {
 	return (
-		<>
+		<LayoutContext.Provider
+			value={{
+				locale
+			}}
+		>
 			<Head>
 				<title>
 					{useLocaleTitleTem
@@ -51,45 +60,11 @@ const Layout = ({
 				))}
 			</Head>
 
-			<div
-				id={"a11y-panel"}
-				className={css({
-					background: "$white",
-					bb: "1px solid $black",
-					"&:not(:focus-within), &:focus": {
-						clip: "rect(1px,1px,1px,1px)",
-						overflow: "hidden",
-						opacity: 0,
-						height: 0
-					}
-				})()}
-			>
-				<div
-					className={css({
-						display: "flex",
-						flexDirection: "column",
-						padding: "3rem",
-						gap: "$3",
-						"& > *": {
-							width: "max-content"
-						}
-					})()}
-				>
-					<h2>Accessibility options</h2>
-
-					<a
-						className={"skip-to-main"}
-						href={"#main-content"}
-						tabIndex={0}
-					>
-						Skip to main content
-					</a>
-				</div>
-			</div>
+			<A11yPanel />
 
 			<Navbar items={items} />
 			<main id="main-content">{children}</main>
-		</>
+		</LayoutContext.Provider>
 	);
 };
 

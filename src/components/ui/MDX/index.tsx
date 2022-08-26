@@ -1,9 +1,11 @@
+import { Typography } from "@components/common/Typography";
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
-import { Typography } from "../Typography";
+import componentRegistry from "../..";
 
-const t8y = (type: string) => {
+const t8y = <T extends string>(type: T) => {
+	// eslint-disable-next-line react/display-name
 	return {
-		[type]: ({ children, ...props }: any) => (
+		[type.toUpperCase()]: ({ children, ...props }: any) => (
 			<Typography {...props} as={type}>
 				{children}
 			</Typography>
@@ -16,14 +18,16 @@ export const MDXRenderer = (props: MDXRemoteProps) => {
 	return (
 		<MDXRemote
 			{...props}
-			components={{
-				...(props.components || {}),
-				...t8y("h1"),
-				...t8y("h2"),
-				...t8y("h3"),
-				...t8y("h4"),
-				...t8y("p")
-			}}
+			components={
+				{
+					...(props.components || {}),
+					...componentRegistry,
+					...t8y("h1"),
+					...t8y("h2"),
+					...t8y("h3"),
+					...t8y("h4")
+				} as any
+			}
 		/>
 	);
 };

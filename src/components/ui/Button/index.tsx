@@ -60,7 +60,71 @@ const StyledButton = styled("a", {
 				}
 			},
 			light: lightVariant,
-			dark: darkVariant
+			dark: darkVariant,
+			red: {
+				$$bgcolor: "$colors$red",
+				$$textcolor: "$colors$white"
+			},
+			orange: {
+				$$bgcolor: "$colors$orange",
+				$$textcolor: "$colors$white"
+			},
+			yellow: {
+				$$bgcolor: "$colors$yellow",
+				$$textcolor: "$colors$black"
+			},
+			green: {
+				$$bgcolor: "$colors$green",
+				$$textcolor: "$colors$white"
+			},
+			aqua: {
+				$$bgcolor: "$colors$aqua",
+				$$textcolor: "$colors$white"
+			},
+			blue: {
+				$$bgcolor: "$colors$blue",
+				$$textcolor: "$colors$white"
+			},
+			pink: {
+				$$bgcolor: "$colors$pink",
+				$$textcolor: "$colors$white"
+			},
+			violet: {
+				$$bgcolor: "$colors$violet",
+				$$textcolor: "$colors$white"
+			},
+			gray1: {
+				$$bgcolor: "$colors$gray1",
+				$$textcolor: "$colors$black"
+			},
+			gray2: {
+				$$bgcolor: "$colors$gray2",
+				$$textcolor: "$colors$black"
+			},
+			gray3: {
+				$$bgcolor: "$colors$gray3",
+				$$textcolor: "$colors$white"
+			},
+			gray4: {
+				$$bgcolor: "$colors$gray4",
+				$$textcolor: "$colors$white"
+			},
+			gray5: {
+				$$bgcolor: "$colors$gray5",
+				$$textcolor: "$colors$white"
+			},
+			gray6: {
+				$$bgcolor: "$colors$gray6",
+				$$textcolor: "$colors$white"
+			},
+			white: {
+				$$bgcolor: "$colors$white",
+				$$textcolor: "$colors$black"
+			},
+			black: {
+				$$bgcolor: "$colors$black",
+				$$textcolor: "$colors$white"
+			}
 		},
 		hasIcon: {
 			true: {
@@ -95,20 +159,28 @@ export const ButtonLabel = styled("label", {
 	transition: "0.05s color linear"
 });
 
-interface ButtonProps {
+interface ButtonProps extends VariantProps<typeof StyledButton> {
 	icon?: ReactElement;
-	children?: any;
 	css?: CSS;
+	as?: any;
+	children?: any;
+	href?: string;
+	tabIndex?: number;
+	ariaLabel: string;
 }
 
 export const Button = ({
 	icon,
 	children,
+	href,
+	ariaLabel,
 	...props
-}: ButtonProps & VariantProps<typeof StyledButton>) => {
+}: ButtonProps) => {
 	return (
 		<StyledButton
 			hasIcon={typeof icon !== "undefined"}
+			aria-label={ariaLabel}
+			href={href}
 			{...props}
 		>
 			<ButtonLabel>{children}</ButtonLabel>

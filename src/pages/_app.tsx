@@ -1,4 +1,5 @@
 import Layout from "@components/common/Layout";
+import { ParagraphStyles } from "@components/common/Typography";
 import App, { AppContext, AppProps } from "next/app";
 import { globalCss } from "stitches.config";
 import NotFoundPage from "./404";
@@ -360,6 +361,9 @@ const Scalar = ({ Component, pageProps }: AppProps) => {
 		a: {
 			color: "$primary",
 			textDecoration: "underline"
+		},
+		p: {
+			...ParagraphStyles
 		}
 	})();
 

@@ -1,29 +1,38 @@
 import { CSS, VariantProps } from "@stitches/react";
 import { styled } from "stitches.config";
 
+export const ParagraphStyles = {
+	fontSize: "$base",
+	fontWeight: "$medium",
+	lineHeight: "$base",
+	color: "$paragraphColor"
+};
+
 const StyledTypography = styled("span", {
+	fontSize: "$$fontSize",
+	lineHeight: "calc($$fontSize + $$fontSize / 5)",
+
 	variants: {
-		type: {
+		__type: {
 			h1: {
-				fontSize: "$xxl",
+				$$fontSize: "$fontSizes$xxl",
+				lineHeight: "96px",
 				fontWeight: "$extrabold"
 			},
 			h2: {
-				fontSize: "$xl",
+				$$fontSize: "$fontSizes$xl",
 				fontWeight: "$extrabold"
 			},
 			h3: {
-				fontSize: "$lg",
+				$$fontSize: "$fontSizes$lg",
 				fontWeight: "$bold"
 			},
 			h4: {
-				fontSize: "$md",
+				$$fontSize: "$fontSizes$md",
 				fontWeight: "$medium"
 			},
 			p: {
-				fontSize: "$base",
-				fontWeight: "$medium",
-				color: "$paragraphColor"
+				...ParagraphStyles
 			}
 		}
 	}
@@ -31,7 +40,7 @@ const StyledTypography = styled("span", {
 
 interface TypographyProps {
 	children?: any;
-	as: VariantProps<typeof StyledTypography>["type"];
+	as: VariantProps<typeof StyledTypography>["__type"];
 	css?: CSS;
 }
 
@@ -41,7 +50,11 @@ export const Typography = ({
 	...props
 }: TypographyProps & VariantProps<typeof StyledTypography>) => {
 	return (
-		<StyledTypography as={as as any} type={as as any} {...props}>
+		<StyledTypography
+			as={as as any}
+			__type={as as any}
+			{...props}
+		>
 			{children}
 		</StyledTypography>
 	);

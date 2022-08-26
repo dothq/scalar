@@ -97,7 +97,9 @@ export const {
 		md: "(min-width: 824px)",
 		lg: "(min-width: 1100px)",
 		xl: "(min-width: 1460px)",
-		xl2: "(min-width: 1920px)"
+		xl2: "(min-width: 1920px)",
+		dark: "(prefers-color-scheme: dark)",
+		light: "(prefers-color-scheme: light)"
 	},
 	utils: {
 		// Borders
@@ -131,11 +133,23 @@ export const {
 		pl: (value: any) => ({ paddingInlineStart: value }),
 		pr: (value: any) => ({ paddingInlineEnd: value }),
 
-		mx: (value: any) => ({ ml: value, mr: value }),
-		my: (value: any) => ({ mt: value, mb: value }),
+		mx: (value: any) => ({
+			marginInlineStart: value,
+			marginInlineEnd: value
+		}),
+		my: (value: any) => ({
+			marginBlockStart: value,
+			marginBlockEnd: value
+		}),
 
-		px: (value: any) => ({ pl: value, pr: value }),
-		py: (value: any) => ({ pt: value, pb: value })
+		px: (value: any) => ({
+			paddingInlineStart: value,
+			paddingInlineEnd: value
+		}),
+		py: (value: any) => ({
+			paddingBlockStart: value,
+			paddingBlockEnd: value
+		})
 	}
 });
 
@@ -145,6 +159,7 @@ export const themes = {
 			background: "$white",
 			color: "$gray6",
 			paragraphColor: "$gray5",
+			border: "$gray1",
 			primary: "$gray6"
 		}
 	},
@@ -153,6 +168,7 @@ export const themes = {
 			background: "$gray6",
 			color: "$gray1",
 			paragraphColor: "$gray2",
+			border: "$gray5",
 			primary: "$gray1"
 		}
 	}
