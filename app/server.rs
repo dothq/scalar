@@ -44,11 +44,12 @@ async fn shutdown_signal_handle() {
 pub async fn start_https_server() {
     let app = Router::new()
         /* Normal pages should go in localised_router */
-        .nest("/", redirect_router())
         .nest("/:locale", localised_router())
         /* Middleware */
         .route_layer(middleware::from_fn(l10n_middleware))
         .route_layer(middleware::from_fn(tld_migration_middleware))
+        /* Redirects */
+        .nest("/", redirect_router())
         /* Initial URL redirection */
         .route("/", any(l10n_redirector))
         /* Media and static assets */
