@@ -10,6 +10,7 @@ use tokio::signal;
 
 use crate::l10n::l10n_redirector;
 use crate::middleware::l10n::l10n_middleware;
+use crate::middleware::security::security_middleware;
 use crate::middleware::tld_migration::tld_migration_middleware;
 use crate::pages::errors::not_found::not_found;
 use crate::router::{localised_router, redirect_router};
@@ -48,6 +49,7 @@ pub async fn start_https_server() {
         /* Middleware */
         .route_layer(middleware::from_fn(l10n_middleware))
         .route_layer(middleware::from_fn(tld_migration_middleware))
+        .route_layer(middleware::from_fn(security_middleware))
         /* Redirects */
         .nest("/", redirect_router())
         /* Initial URL redirection */
