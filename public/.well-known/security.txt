@@ -1,0 +1,8 @@
+Contact: https://www.dothq.org/security
+
+Acknowledgments: https://www.dothq.org/security/thanks
+
+Canonical: https://www.dothq.org/.well-known/security.txt
+
+Preferred-Languages: en
+Expires: 2024-01-01T15:00:00.000Z

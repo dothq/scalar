@@ -1,1 +1,0 @@
-page-title-template = { $title } — { brand-name-dothq } ({ language-short-code })
