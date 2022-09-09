@@ -2,18 +2,17 @@
  * &&License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-use crate::{pages::errors::not_found::return_404, utils::l10n::DEFAULT_LOCALE};
+use crate::utils::l10n::DEFAULT_LOCALE;
 use accept_language::parse;
 use axum::{
-    http::{HeaderMap, Request, StatusCode},
-    middleware::Next,
-    response::{IntoResponse, Redirect, Response},
+    http::HeaderMap,
+    response::{IntoResponse, Redirect},
 };
 use fluent_langneg::{convert_vec_str_to_langids_lossy, negotiate_languages, NegotiationStrategy};
 use std::{env, fs::read_dir};
 use unic_langid::LanguageIdentifier;
 
-fn get_all_locales() -> Vec<String> {
+pub fn get_all_locales() -> Vec<String> {
     let l10n_path = env::current_dir().unwrap().join("l10n");
 
     let mut locales: Vec<String> = Vec::new();
@@ -59,17 +58,4 @@ pub async fn l10n_redirector(headers: HeaderMap) -> impl IntoResponse {
     let path = format!("/{}", locale);
 
     Redirect::temporary(path.as_str())
-}
-
-pub async fn l10n_middleware<B>(req: Request<B>, next: Next<B>) -> Result<Response, Response> {
-    let locale = req.uri().path().split("/").collect::<Vec<&str>>()[1];
-
-    let all_locales = get_all_locales();
-
-    let is_valid_locale = all_locales.into_iter().any(|l| l == locale);
-
-    match is_valid_locale {
-        true => Ok(next.run(req).await),
-        false => Err(return_404().await),
-    }
 }

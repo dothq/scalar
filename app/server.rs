@@ -8,7 +8,9 @@ use axum::{middleware, Router, Server};
 use std::net::SocketAddr;
 use tokio::signal;
 
-use crate::l10n::{l10n_middleware, l10n_redirector};
+use crate::l10n::l10n_redirector;
+use crate::middleware::l10n::l10n_middleware;
+use crate::middleware::tld_migration::tld_migration_middleware;
 use crate::pages::errors::not_found::not_found;
 use crate::router::{localised_router, redirect_router};
 use crate::utils::media::media;
@@ -41,11 +43,17 @@ async fn shutdown_signal_handle() {
 
 pub async fn start_https_server() {
     let app = Router::new()
+        /* Normal pages should go in localised_router */
         .nest("/", redirect_router())
         .nest("/:locale", localised_router())
+        /* Middleware */
         .route_layer(middleware::from_fn(l10n_middleware))
+        .route_layer(middleware::from_fn(tld_migration_middleware))
+        /* Initial URL redirection */
         .route("/", any(l10n_redirector))
+        /* Media and static assets */
         .merge(media())
+        /* 404 page */
         .fallback(not_found.into_service());
 
     let address = SocketAddr::from(([127, 0, 0, 1], 3000));

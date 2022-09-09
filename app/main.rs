@@ -5,11 +5,13 @@
 #![allow(incomplete_features)]
 #![feature(inherent_associated_types)]
 
-mod l10n;
+mod middleware;
 mod pages;
+mod utils;
+
+mod l10n;
 mod router;
 mod server;
-mod utils;
 
 use crate::server::start_https_server;
 
