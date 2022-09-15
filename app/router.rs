@@ -2,11 +2,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+use std::{convert::Infallible, borrow::Borrow};
+
 use axum::{
-    response::Redirect,
-    routing::{any, get},
-    Router,
+    response::{Redirect},
+    routing::{any, get, MethodRouter},
+    Router, body::Body,
 };
+
+use crate::{l10n::get_all_locales, pages::{about::about, index::index}};
 
 macro_rules! redirect {
     ($path: expr) => {{
@@ -14,18 +18,56 @@ macro_rules! redirect {
     }};
 }
 
+/* Routes here will work without /[ab-CD] */
 pub fn redirect_router() -> Router {
-    /* Routes here will work without /[ab-CD] */
-    let router = Router::new().route("/security.txt", redirect!("/.well-known/security.txt"));
+    let mut router = Router::new();
+
+    let routes = get_routes();
+    let locales = get_all_locales();
+
+    for locale in locales {
+        for route in &routes {
+            let localised_path = format!("/{}{}", locale, route.path.as_str());
+
+            router = router.route(&route.path, get(move || async move {
+                Redirect::permanent(&localised_path)
+            }));
+        }
+    }
+
+    /* Overwrite any existing pages */
+    router = router.route("/security.txt", redirect!("/.well-known/security.txt"));
 
     router
 }
 
-pub fn localised_router() -> Router {
-    use crate::pages::index::index;
+pub struct ScalarRoute {
+    path: String,
+    handler: MethodRouter<Body, Infallible>
+}
 
-    /* All locales will start with the user's locale */
-    let router = Router::new().route("/", get(index));
+pub fn get_routes() -> Vec<ScalarRoute> {
+    let routes: Vec<ScalarRoute> = vec![
+        ScalarRoute {
+            path: String::from("/"),
+            handler: get(index)
+        },
+        ScalarRoute {
+            path: String::from("/about"),
+            handler: get(about)
+        }
+    ];
+
+    routes
+}
+
+pub fn localised_router() -> Router {
+    let mut router = Router::new();
+    let routes = get_routes();
+
+    for route in routes {
+        router = router.route(route.path.as_str(), route.handler);
+    }
 
     router
 }

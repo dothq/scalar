@@ -12,6 +12,7 @@ axum = "0.5.15"
 axum-extra = { version = "0.3.7", features = ["spa"] }
 axum-macros = "0.2.3"
 axum-server = { version = "0.4.2", features = ["tls-rustls"] }
+fluent = "0.16.0"
 fluent-langneg = "0.13.0"
 glob = "0.3.0"
 tokio = { version = "1.0", features = ["full"] }

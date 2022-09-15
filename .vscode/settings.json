@@ -14,6 +14,10 @@
 	},
 	"editor.formatOnSave": true,
 	"editor.formatOnType": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[html]": {
+		"editor.defaultFormatter": ""
+	},
 	"files.associations": {
 		"*.mdx": "markdown"
 	},

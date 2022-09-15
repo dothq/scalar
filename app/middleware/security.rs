@@ -2,11 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-use axum::{
-    http::{HeaderMap, Request},
-    middleware::Next,
-    response::Response,
-};
+use axum::{http::Request, middleware::Next, response::Response};
 
 pub async fn security_middleware<B>(req: Request<B>, next: Next<B>) -> Result<Response, Response> {
     let mut res = next.run(req).await;

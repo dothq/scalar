@@ -7,22 +7,23 @@ use std::collections::HashMap;
 use askama::Template;
 use axum::{http::Request, response::IntoResponse};
 use unic_langid::LanguageIdentifier;
-
+ 
 use crate::{
     l10n::{get_fluent_bundle, get_locale_from_req_uri, L10nProvider},
     utils::templates::HtmlTemplate,
 };
-
+ 
 #[derive(Template)]
-#[template(path = "pages/index.html")]
-struct LandingTemplate {
+#[template(path = "pages/about.html")]
+struct AboutTemplate {
     l: L10nProvider,
 }
-
-pub async fn index<B>(req: Request<B>) -> impl IntoResponse {
+ 
+pub async fn about<B>(req: Request<B>) -> impl IntoResponse {
     let provider = L10nProvider::new::<B>(req).await;
-
-    let template = LandingTemplate { l: provider };
-
+ 
+    let template = AboutTemplate { l: provider };
+ 
     HtmlTemplate(template)
 }
+ 

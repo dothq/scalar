@@ -4,6 +4,7 @@
 
 #![allow(incomplete_features)]
 #![feature(inherent_associated_types)]
+#![feature(let_chains)]
 
 mod middleware;
 mod pages;

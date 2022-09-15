@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ title }} - Dot HQ{% endblock %}</title>
-</head>
+<!-- prettier-ignore-attribute -->
+<html
+	lang="{{ l.locale() }}"
+	class="no-js"
+	prefix="og: https://ogp.me/ns#"
+	itemscope="true"
+	itemtype="http://schema.org/WebSite"
+>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		{% include "_meta.html" %}
+		<title>
+			{% block title %}{{ title }}{% endblock %} ― Dot HQ ({{
+			l.str("language-short-code") }})
+		</title>
+	</head>
 
-<body>
-    {% block content %}{{ content }}{% endblock %}
-</body>
-
+	<body>
+		<div id="__scalar">
+			{% block content %}{{ content }}{% endblock %}
+		</div>
+	</body>
 </html>

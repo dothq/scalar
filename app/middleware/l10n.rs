@@ -15,6 +15,6 @@ pub async fn l10n_middleware<B>(req: Request<B>, next: Next<B>) -> Result<Respon
 
     match is_valid_locale {
         true => Ok(next.run(req).await),
-        false => Err(return_404().await),
+        false => Err(return_404(req).await),
     }
 }

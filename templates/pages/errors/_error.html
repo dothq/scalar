@@ -1,0 +1,7 @@
+{% extends "_head.html" %}
+
+{% block content %}
+<h1>{% block error_title %}{{ error_title }}{% endblock %}</h1>
+
+<p>{% block error_description %}{{ error_description }}{% endblock %}</p>
+{% endblock %}
