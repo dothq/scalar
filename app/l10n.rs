@@ -113,7 +113,11 @@ impl L10nProvider {
     }
 
     pub fn host(&self) -> String {
-        format!("//{}", self.headers.get("host").unwrap().to_str().unwrap().to_string())
+        self.headers.get("host").unwrap().to_str().unwrap().to_string()
+    }
+
+    pub fn domain(&self) -> String {
+        self.host().replace("www.", "")
     }
 
     pub fn str_args(&self, id: &str, args: Option<&FluentArgs>) -> String {

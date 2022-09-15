@@ -10,6 +10,7 @@ use tokio::signal;
 
 use crate::l10n::l10n_redirector;
 use crate::middleware::l10n::l10n_middleware;
+use crate::middleware::origin::origin_middleware;
 use crate::middleware::security::security_middleware;
 use crate::middleware::tld_migration::tld_migration_middleware;
 use crate::pages::errors::not_found::not_found;
@@ -57,7 +58,9 @@ pub async fn start_https_server() {
         /* Media and static assets */
         .merge(media())
         /* 404 page */
-        .fallback(not_found.into_service());
+        .fallback(not_found.into_service())
+        /* This always needs to be at the bottom */
+        .route_layer(middleware::from_fn(origin_middleware));
 
     let address = SocketAddr::from(([127, 0, 0, 1], 3000));
 

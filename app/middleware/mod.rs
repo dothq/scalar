@@ -5,3 +5,4 @@
 pub mod l10n;
 pub mod security;
 pub mod tld_migration;
+pub mod origin;

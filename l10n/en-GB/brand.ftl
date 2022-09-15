@@ -4,3 +4,4 @@
 
 brand-full-name = Dot HQ
 brand-short-name = Dot
+brand-email-address = @dothq.org

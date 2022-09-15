@@ -18,5 +18,8 @@ use crate::server::start_https_server;
 
 #[tokio::main]
 async fn main() {
+    std::env::var("SCALAR_ALLOWED_ORIGINS")
+        .expect("Environment variable 'SCALAR_ALLOWED_ORIGINS' is required. Expects: comma separated hostnames");
+
     start_https_server().await;
 }

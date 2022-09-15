@@ -5,15 +5,10 @@
 	lang="{{ l.locale() }}"
 	class="no-js"
 	prefix="og: https://ogp.me/ns#"
-	itemscope="true"
+	itemscope=""
 	itemtype="http://schema.org/WebSite"
 >
 	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1"
-		/>
 		{% include "_meta.html" %}
 		<title>
 			{% block title %}{{ title }}{% endblock %} ― Dot HQ ({{
