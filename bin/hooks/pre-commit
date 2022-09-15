@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+set -eo pipefail
+cargo clippy --fix --allow-dirty

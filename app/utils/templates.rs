@@ -22,7 +22,7 @@ where
 
                 (
                     StatusCode::INTERNAL_SERVER_ERROR,
-                    format!("Failed to render template."),
+                    "Failed to render template.".to_string(),
                 )
                     .into_response()
             }

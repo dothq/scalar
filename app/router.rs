@@ -2,15 +2,19 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-use std::{convert::Infallible, borrow::Borrow};
+use std::convert::Infallible;
 
 use axum::{
-    response::{Redirect},
+    body::Body,
+    response::Redirect,
     routing::{any, get, MethodRouter},
-    Router, body::Body,
+    Router,
 };
 
-use crate::{l10n::get_all_locales, pages::{about::about, index::index}};
+use crate::{
+    l10n::get_all_locales,
+    pages::{about::about, index::index},
+};
 
 macro_rules! redirect {
     ($path: expr) => {{
@@ -29,9 +33,10 @@ pub fn redirect_router() -> Router {
         for route in &routes {
             let localised_path = format!("/{}{}", locale, route.path.as_str());
 
-            router = router.route(&route.path, get(move || async move {
-                Redirect::permanent(&localised_path)
-            }));
+            router = router.route(
+                &route.path,
+                get(move || async move { Redirect::permanent(&localised_path) }),
+            );
         }
     }
 
@@ -43,19 +48,19 @@ pub fn redirect_router() -> Router {
 
 pub struct ScalarRoute {
     path: String,
-    handler: MethodRouter<Body, Infallible>
+    handler: MethodRouter<Body, Infallible>,
 }
 
 pub fn get_routes() -> Vec<ScalarRoute> {
     let routes: Vec<ScalarRoute> = vec![
         ScalarRoute {
             path: String::from("/"),
-            handler: get(index)
+            handler: get(index),
         },
         ScalarRoute {
             path: String::from("/about"),
-            handler: get(about)
-        }
+            handler: get(about),
+        },
     ];
 
     routes

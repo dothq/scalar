@@ -2,14 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-use std::collections::HashMap;
+
 
 use askama::Template;
 use axum::{http::Request, response::IntoResponse};
-use unic_langid::LanguageIdentifier;
+
 
 use crate::{
-    l10n::{get_fluent_bundle, get_locale_from_req_uri, L10nProvider},
+    l10n::{L10nProvider},
     utils::templates::HtmlTemplate,
 };
 

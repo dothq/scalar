@@ -6,7 +6,7 @@ use crate::utils::l10n::DEFAULT_LOCALE;
 use accept_language::parse;
 use axum::{
     http::{HeaderMap, Request, Uri},
-    response::{IntoResponse, Redirect}, middleware::Next,
+    response::{IntoResponse, Redirect},
 };
 use fluent::FluentArgs;
 use fluent::{FluentBundle, FluentResource};
@@ -38,9 +38,9 @@ pub fn get_all_locales() -> Vec<String> {
 }
 
 pub fn get_locale_from_req_uri<B>(req: Request<B>) -> String {
-    let locale = req.uri().path().split("/").collect::<Vec<&str>>()[1]
+    let locale = req.uri().path().split('/').collect::<Vec<&str>>()[1]
         .to_string()
-        .clone();
+        ;
 
     let all_locales = get_all_locales();
 
@@ -76,7 +76,7 @@ pub fn get_locale_from_req_header<B>(req: Request<B>) -> String {
         NegotiationStrategy::Filtering,
     );
 
-    negotiated[0].to_string().to_string()
+    negotiated[0].to_string()
 }
 
 pub async fn l10n_redirector<B>(req: Request<B>) -> impl IntoResponse {
@@ -87,11 +87,12 @@ pub async fn l10n_redirector<B>(req: Request<B>) -> impl IntoResponse {
     Redirect::temporary(path.as_str())
 }
 
+#[allow(dead_code)]
 pub struct L10nProvider {
     bundle: FluentBundle<FluentResource>,
     locale: LanguageIdentifier,
     uri: Uri,
-    headers: HeaderMap
+    headers: HeaderMap,
 }
 
 impl L10nProvider {
@@ -108,12 +109,17 @@ impl L10nProvider {
             bundle,
             locale: lang_id.to_owned(),
             uri: uri.parse::<Uri>().unwrap(),
-            headers
+            headers,
         }
     }
 
     pub fn host(&self) -> String {
-        self.headers.get("host").unwrap().to_str().unwrap().to_string()
+        self.headers
+            .get("host")
+            .unwrap()
+            .to_str()
+            .unwrap()
+            .to_string()
     }
 
     pub fn domain(&self) -> String {
@@ -121,7 +127,7 @@ impl L10nProvider {
     }
 
     pub fn str_args(&self, id: &str, args: Option<&FluentArgs>) -> String {
-        let msg = match self.bundle.get_message(&id) {
+        let msg = match self.bundle.get_message(id) {
             Some(v) => v,
             None => return id.to_string(),
         };
@@ -132,16 +138,16 @@ impl L10nProvider {
         };
 
         let mut errors = vec![];
-        let value = self.bundle.format_pattern(&pattern, args, &mut errors);
+        let value = self.bundle.format_pattern(pattern, args, &mut errors);
 
         if errors.is_empty() {
-            return value.to_string();
+            value.to_string()
         } else {
             for err in errors {
                 println!("Error printing id={} args={:#?} {}", id, args, err);
             }
 
-            return id.to_string();
+            id.to_string()
         }
     }
 
@@ -172,7 +178,7 @@ pub async fn get_fluent_bundle(lang_id: LanguageIdentifier) -> FluentBundle<Flue
     }
 
     let res = FluentResource::try_new(ftl_string)
-        .expect(format!("Failed to parse the FTL for {}.", lang_id.to_string()).as_str());
+        .unwrap_or_else(|_| panic!("Failed to parse the FTL for {}.", lang_id));
 
     let mut bundle = FluentBundle::new(vec![lang_id]);
 
