@@ -1,5 +1,5 @@
 [package]
-name = "scalar"
+name = "scalar-app"
 version = "0.1.0"
 edition = "2021"
 
@@ -22,5 +22,5 @@ tower-http = "0.3.4"
 unic-langid = "0.9.0"
 
 [[bin]]
-name = "scalar"
+name = "scalar-app"
 path = "app/main.rs"
