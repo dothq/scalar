@@ -5,19 +5,18 @@
 use askama::Template;
 use axum::{http::Request, response::IntoResponse};
 
-
-use crate::{l10n::L10nProvider, utils::templates::HtmlTemplate};
+use crate::utils::templates::{HtmlTemplate, TemplateContextProvider};
 
 #[derive(Template)]
 #[template(path = "pages/about.html")]
 struct AboutTemplate {
-    l: L10nProvider,
+    ctx: TemplateContextProvider,
 }
 
 pub async fn about<B>(req: Request<B>) -> impl IntoResponse {
-    let provider = L10nProvider::new::<B>(req).await;
+    let ctx = TemplateContextProvider::new(req).await;
 
-    let template = AboutTemplate { l: provider };
+    let template = AboutTemplate { ctx };
 
     HtmlTemplate(template)
 }

@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 use axum::body::StreamBody;
+use axum::response::IntoResponse;
 use axum::{http::StatusCode, routing::get, Router};
 use glob::glob;
 use std::env;
@@ -35,8 +36,17 @@ pub fn media() -> Router {
 
                     let stream = ReaderStream::new(file);
                     let body = StreamBody::new(stream);
+                    let mime_type = mime_guess::from_path(&file_path)
+                        .first()
+                        .unwrap()
+                        .to_string();
 
-                    Ok(body)
+                    let mut res = body.into_response();
+
+                    res.headers_mut()
+                        .insert("content-type", mime_type.parse().unwrap());
+
+                    Ok(res)
                 }),
             );
         }

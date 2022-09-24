@@ -2,27 +2,21 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-
-
 use askama::Template;
 use axum::{http::Request, response::IntoResponse};
 
-
-use crate::{
-    l10n::{L10nProvider},
-    utils::templates::HtmlTemplate,
-};
+use crate::utils::templates::{HtmlTemplate, TemplateContextProvider};
 
 #[derive(Template)]
 #[template(path = "pages/index.html")]
 struct LandingTemplate {
-    l: L10nProvider,
+    ctx: TemplateContextProvider,
 }
 
 pub async fn index<B>(req: Request<B>) -> impl IntoResponse {
-    let provider = L10nProvider::new::<B>(req).await;
+    let ctx = TemplateContextProvider::new(req).await;
 
-    let template = LandingTemplate { l: provider };
+    let template = LandingTemplate { ctx };
 
     HtmlTemplate(template)
 }

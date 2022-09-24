@@ -1,8 +1,13 @@
+{%- import "utils/_script.html" as sm -%}
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
 <!DOCTYPE html>
 
-<!-- prettier-ignore-attribute -->
 <html
-	lang="{{ l.locale() }}"
+	lang="{{ ctx.l.locale() }}"
 	class="no-js"
 	prefix="og: https://ogp.me/ns#"
 	itemscope=""
@@ -12,12 +17,20 @@
 		{% include "_meta.html" %}
 		<title>
 			{% block title %}{{ title }}{% endblock %} ― Dot HQ ({{
-			l.str("language-short-code") }})
+			ctx.l.str("language-short-code") }})
 		</title>
+        <!-- All our pages should work without JavaScript. 
+           - If you believe this isn't the case, please file a 
+           - bug report at https://github.com/dothq/scalar/issues/new 
+           - and we will ensure this is resolved. -->
+        {% call sm::import_js("scalar.js") %}
+        {% block head %}{% endblock %}
 	</head>
 
 	<body>
 		<div id="__scalar">
+            {% include "components/navbar.html" %}
+
 			{% block content %}{{ content }}{% endblock %}
 		</div>
 	</body>

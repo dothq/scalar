@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-use crate::{l10n::L10nProvider, utils::templates::HtmlTemplate};
+use crate::utils::templates::{HtmlTemplate, TemplateContextProvider};
 use askama::Template;
 use axum::{
     http::{Request, StatusCode},
@@ -12,13 +12,13 @@ use axum::{
 #[derive(Template)]
 #[template(path = "pages/errors/not_found.html")]
 struct NotFoundTemplate {
-    l: L10nProvider,
+    ctx: TemplateContextProvider,
 }
 
 pub async fn not_found<B>(req: Request<B>) -> impl IntoResponse {
-    let provider = L10nProvider::new::<B>(req).await;
+    let ctx = TemplateContextProvider::new(req).await;
 
-    let template = NotFoundTemplate { l: provider };
+    let template = NotFoundTemplate { ctx };
 
     (StatusCode::NOT_FOUND, HtmlTemplate(template))
 }

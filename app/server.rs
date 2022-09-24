@@ -50,7 +50,6 @@ pub async fn start_https_server() {
         /* Middleware */
         .route_layer(middleware::from_fn(l10n_middleware))
         .route_layer(middleware::from_fn(tld_migration_middleware))
-        .route_layer(middleware::from_fn(security_middleware))
         /* Redirects */
         .nest("/", redirect_router())
         /* Initial URL redirection */
@@ -59,6 +58,8 @@ pub async fn start_https_server() {
         .merge(media())
         /* 404 page */
         .fallback(not_found.into_service())
+        /* Adds security headers */
+        .layer(middleware::from_fn(security_middleware))
         /* This always needs to be at the bottom */
         .route_layer(middleware::from_fn(origin_middleware));
 

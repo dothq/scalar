@@ -1,7 +1,12 @@
+{%- import "utils/_script.html" as sm -%}
 {% extends "_head.html" %}
+
+{% block head %}
+{% call sm::import_js("pages/index.js") %}
+{% endblock %}
 
 {% block title %}Privacy for all{% endblock %}
 
 {% block content %}
-<h1>{{ l.str("language-full-name") }}</h1>
+<h1>{{ ctx.l.str("language-full-name") }}</h1>
 {% endblock %}

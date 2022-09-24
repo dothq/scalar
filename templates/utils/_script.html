@@ -1,0 +1,9 @@
+{% macro import_js(path) %}
+<script 
+    type="text/javascript" 
+    async 
+    defer 
+    charset="utf-8"
+    src="/media/js/{{ path }}"
+></script>
+{% endmacro %}

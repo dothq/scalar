@@ -7,14 +7,16 @@ edition = "2021"
 
 [dependencies]
 accept-language = "2.0.0"
-askama = "0.11.1"
+askama = { version = "0.11.1", features = ["markdown"] }
 axum = "0.5.15"
 axum-extra = { version = "0.3.7", features = ["spa"] }
 axum-macros = "0.2.3"
 axum-server = { version = "0.4.2", features = ["tls-rustls"] }
+comrak = "0.14.0"
 fluent = "0.16.0"
 fluent-langneg = "0.13.0"
 glob = "0.3.0"
+mime_guess = "2.0.4"
 tokio = { version = "1.0", features = ["full"] }
 tokio-util = "0.7.3"
 tower = "0.4.13"

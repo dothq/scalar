@@ -38,9 +38,7 @@ pub fn get_all_locales() -> Vec<String> {
 }
 
 pub fn get_locale_from_req_uri<B>(req: Request<B>) -> String {
-    let locale = req.uri().path().split('/').collect::<Vec<&str>>()[1]
-        .to_string()
-        ;
+    let locale = req.uri().path().split('/').collect::<Vec<&str>>()[1].to_string();
 
     let all_locales = get_all_locales();
 
@@ -124,6 +122,10 @@ impl L10nProvider {
 
     pub fn domain(&self) -> String {
         self.host().replace("www.", "")
+    }
+
+    pub fn all_locales(&self) -> Vec<String> {
+        get_all_locales()
     }
 
     pub fn str_args(&self, id: &str, args: Option<&FluentArgs>) -> String {
