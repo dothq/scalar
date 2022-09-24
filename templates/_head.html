@@ -1,4 +1,4 @@
-{%- import "utils/_script.html" as sm -%}
+{%- import "utils/_resources.html" as sm -%}
 
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -8,6 +8,7 @@
 
 <html
 	lang="{{ ctx.l.locale() }}"
+    dir="{{ ctx.l.chardir() }}"
 	class="no-js"
 	prefix="og: https://ogp.me/ns#"
 	itemscope=""
@@ -24,12 +25,13 @@
            - bug report at https://github.com/dothq/scalar/issues/new 
            - and we will ensure this is resolved. -->
         {% call sm::import_js("scalar.js") %}
+        {% call sm::import_css("scalar.css") %}
         {% block head %}{% endblock %}
 	</head>
 
 	<body>
 		<div id="__scalar">
-            {% include "components/navbar.html" %}
+            {% include "components/navbar/index.html" %}
 
 			{% block content %}{{ content }}{% endblock %}
 		</div>

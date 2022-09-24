@@ -7,3 +7,11 @@
     src="/media/js/{{ path }}"
 ></script>
 {% endmacro %}
+
+{% macro import_css(path) %}
+<link 
+    href="/media/css/{{ path }}" 
+    rel="stylesheet" 
+    type="text/css"
+>
+{% endmacro %}

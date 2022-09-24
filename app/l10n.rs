@@ -17,7 +17,7 @@ use std::{
     env,
     fs::{read_dir, read_to_string},
 };
-use unic_langid::LanguageIdentifier;
+use unic_langid::{CharacterDirection, LanguageIdentifier};
 
 pub fn get_all_locales() -> Vec<String> {
     let l10n_path = env::current_dir().unwrap().join("l10n");
@@ -159,6 +159,13 @@ impl L10nProvider {
 
     pub fn locale(&self) -> String {
         self.locale.to_string()
+    }
+
+    pub fn chardir(&self) -> &str {
+        match self.locale.character_direction() {
+            CharacterDirection::LTR => "ltr",
+            CharacterDirection::RTL => "rtl",
+        }
     }
 }
 
