@@ -15,6 +15,7 @@
 	itemtype="http://schema.org/WebSite"
 >
 	<head>
+        {% call sm::import_css("scalar.css") %}
 		{% include "_meta.html" %}
 		<title>
 			{% block title %}{{ title }}{% endblock %} ― Dot HQ ({{
@@ -25,7 +26,6 @@
            - bug report at https://github.com/dothq/scalar/issues/new 
            - and we will ensure this is resolved. -->
         {% call sm::import_js("scalar.js") %}
-        {% call sm::import_css("scalar.css") %}
         {% block head %}{% endblock %}
 	</head>
 
@@ -33,7 +33,12 @@
 		<div id="__scalar">
             {% include "components/navbar/index.html" %}
 
-			{% block content %}{{ content }}{% endblock %}
+            <main id="main-content" class="fdn-main-content">
+                {% block content %}
+                    {{ content }}
+                {% endblock %}
+            </main>
+			
 		</div>
 	</body>
 </html>

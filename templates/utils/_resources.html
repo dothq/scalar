@@ -4,13 +4,13 @@
     async 
     defer 
     charset="utf-8"
-    src="/media/js/{{ path }}"
+    src="/media/js/{{ path }}?r={{ ctx.revision() }}"
 ></script>
 {% endmacro %}
 
 {% macro import_css(path) %}
 <link 
-    href="/media/css/{{ path }}" 
+    href="/media/css/{{ path }}?r={{ ctx.revision() }}" 
     rel="stylesheet" 
     type="text/css"
 >

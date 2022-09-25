@@ -1,3 +1,16 @@
-<nav class="fdn-navigation" aria-label="Dot HQ">
+{% let id = ctx.gen_id(3) %}
 
+<nav class="fdn-navigation" aria-label="Dot HQ">
+    <div class="fdn-navigation-container">
+        <div class="fdn-navigation-content">
+            {% include "components/navbar/components/logo.html" %}
+            {% include "components/navbar/components/a11y.html" %}
+
+            {% include "components/navbar/items.html" %}
+
+            {% include "components/navbar/end.html" %}
+        </div>
+
+        {% include "components/navbar/components/drawer.html" %}
+    </div>
 </nav>

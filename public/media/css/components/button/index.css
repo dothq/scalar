@@ -1,0 +1,71 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("helpers.css");
+
+:root {
+	--default-btn-spacing-x: 1.25rem;
+	--default-btn-spacing-y: 0.8rem;
+	--default-btn-font-size: 1rem;
+}
+
+.fdn-button {
+	--btn-spacing-x: var(--spacing-x, var(--default-btn-spacing-x));
+	--btn-spacing-y: var(--spacing-y, var(--default-btn-spacing-y));
+	--btn-font-size: var(--font-size, var(--default-btn-font-size));
+
+	display: flex;
+	width: fit-content;
+
+	position: relative;
+
+	padding-inline-start: var(--btn-spacing-x);
+	padding-inline-end: var(--btn-spacing-x);
+	padding-block-start: var(--btn-spacing-y);
+	padding-block-end: var(--btn-spacing-y);
+
+	font-size: var(--btn-font-size);
+	font-weight: 500;
+
+	background-color: var(--bg-colour);
+	color: var(--text-colour);
+	border: 2px solid var(--border-colour, var(--bg-colour));
+
+	border-radius: 9999px;
+
+	text-decoration: none;
+
+	transition: 0.2s background-color ease, 0.2s color ease;
+}
+
+.fdn-button:hover,
+.fdn-button:active {
+	background-color: var(--bg-action-colour, transparent);
+	color: var(--text-hover-colour, var(--bg-colour));
+}
+
+.fdn-button::before {
+	content: "";
+
+	position: absolute;
+	inset: 0px;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: var(
+		--bg-before-colour,
+		var(--bg-action-colour, var(--bg-colour))
+	);
+
+	border-radius: inherit;
+
+	transition: opacity 0.05s linear 0s;
+
+	opacity: 0;
+}
+
+.fdn-button:active::before {
+	opacity: 0.1;
+}

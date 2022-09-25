@@ -22,5 +22,15 @@ pub async fn security_middleware<B>(req: Request<B>, next: Next<B>) -> Result<Re
     res.headers_mut()
         .insert("Referrer-Policy", "no-referrer".parse().unwrap());
 
+    if !cfg!(debug_assertions) {
+        res.headers_mut()
+            .insert("Cache-Control", "max-age=604800".parse().unwrap());
+    }
+
+    let rev = std::env::var("SCALAR_REVISION").unwrap();
+
+    res.headers_mut()
+        .insert("X-Git-Revision", rev.parse().unwrap());
+
     Ok(res)
 }

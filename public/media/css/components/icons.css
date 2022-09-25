@@ -1,0 +1,23 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.fdn-icon {
+	display: flex;
+	width: var(--icon-size, 1rem);
+	height: var(--icon-size, 1rem);
+	mask-image: var(--icon);
+	mask-size: cover;
+	mask-repeat: no-repeat;
+	background-color: currentColor;
+	font-size: 0px;
+	user-select: none;
+}
+
+.fdn-icon-menu {
+	--icon: url(/media/icons/ui/menu.svg);
+}
+
+.fdn-icon-close {
+	--icon: url(/media/icons/ui/close.svg);
+}

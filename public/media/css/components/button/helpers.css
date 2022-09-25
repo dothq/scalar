@@ -1,0 +1,45 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sizes */
+
+.fdn-button.sm {
+	--spacing-x: 0.75rem;
+	--spacing-y: 0.4rem;
+	--font-size: 0.8rem;
+}
+
+.fdn-button.md {
+	--spacing-x: var(--default-btn-spacing-x);
+	--spacing-y: var(--default-btn-spacing-y);
+	--font-size: var(--default-btn-font-size);
+}
+
+.fdn-button.lg {
+	--spacing-x: 2.4rem;
+	--spacing-y: 1rem;
+	--font-size: 2rem;
+}
+
+/* Colours */
+
+.fdn-button.blue {
+	--bg-colour: var(--colours-blue);
+	--text-colour: var(--colours-white);
+}
+
+.fdn-button.secondary {
+	--bg-colour: transparent;
+	--bg-action-colour: var(--colours-gray2);
+	--bg-before-colour: var(--colours-black);
+	--border-colour: transparent;
+	--text-colour: var(--colours-black);
+	--text-hover-colour: var(--text-colour);
+}
+
+/* Utilities */
+
+.fdn-button.has-icon {
+	--btn-spacing-x: var(--btn-spacing-y);
+}

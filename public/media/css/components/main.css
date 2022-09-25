@@ -1,0 +1,34 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("typography.css");
+
+.fdn-main-content {
+	margin: 0 auto;
+	scroll-margin-top: 4.5rem;
+}
+
+.fdn-content > .fdn-content-container {
+	padding: 0 0.5rem;
+	max-width: 64rem;
+	margin: 0 auto;
+}
+
+@media (min-width: 25rem) {
+	.fdn-content > .fdn-content-container {
+		padding: 0 1rem;
+	}
+}
+
+@media (min-width: 15rem) {
+	.fdn-content > .fdn-content-container {
+		padding: 0 1.5rem;
+	}
+}
+
+@media (min-width: 80rem) {
+	.fdn-content > .fdn-content-container {
+		max-width: 80rem;
+	}
+}

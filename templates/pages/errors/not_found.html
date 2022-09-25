@@ -1,6 +1,6 @@
 {% extends "_error.html" %}
 
-{% block title %}404: Page Not Found{% endblock %}
+{% block title %}{{ ctx.l.str("error-not-found-page-title") }}{% endblock %}
 
-{% block error_title %}We couldn't find that page.{% endblock %}
-{% block error_description %}Sorry, we couldn't find the page you were looking for.{% endblock %}
+{% block error_title %}{{ ctx.l.str("error-not-found-title") }}{% endblock %}
+{% block error_description %}{{ ctx.l.str("error-not-found-subtitle") }}{% endblock %}

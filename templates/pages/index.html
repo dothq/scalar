@@ -8,5 +8,23 @@
 {% block title %}Privacy for all{% endblock %}
 
 {% block content %}
-<h1>{{ ctx.l.str("language-full-name") }}</h1>
+<section class="fdn-content">
+    <div class="fdn-content-container">
+        <h1>{{ ctx.l.str("language-full-name") }}</h1>
+        <a href="#">hello world</a>
+        <br><br>
+
+        <a class="fdn-button blue sm" href="#">Small</a>
+        <a class="fdn-button blue md" href="#">Medium [D]</a>
+        <a class="fdn-button blue lg" href="#">Large</a>
+
+        <a class="fdn-button blue has-icon" href="#">
+            <i class="fdn-icon fdn-icon-menu">menu</i>
+        </a>
+
+        <a class="fdn-button secondary has-icon" href="#">
+            <i class="fdn-icon fdn-icon-menu">menu</i>
+        </a>
+    </div>
+</section>
 {% endblock %}
