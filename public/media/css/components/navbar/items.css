@@ -8,11 +8,26 @@
 	justify-content: center;
 	order: 0;
 	flex: 1;
-	gap: 1rem;
+	gap: 2.5rem;
 }
 
 @media (max-width: 52rem) {
 	.fdn-navigation-content .fdn-navigation-items {
 		display: none;
 	}
+}
+
+@media (max-width: 40rem) {
+	.fdn-navigation-content .fdn-navigation-end #donate-button-item {
+		display: none;
+	}
+}
+
+.fdn-navigation-item {
+	align-items: center;
+	height: 4.5rem;
+	--border-radii: 0;
+	--spacing-x: 0;
+	--text-colour: var(--colours-black);
+	--text-hover-colour: var(--colours-gray4);
 }

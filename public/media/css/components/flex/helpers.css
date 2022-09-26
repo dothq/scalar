@@ -1,0 +1,87 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Orientation */
+
+.fdn-stack.h,
+.fdn-stack.horiz,
+.fdn-stack.horizontal {
+	display: flex;
+	flex-direction: row;
+}
+
+.fdn-stack.v,
+.fdn-stack.vert,
+.fdn-stack.vertical {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Flex */
+
+.fdn-stack.flex-1 {
+	flex: 1;
+}
+
+/* Gap */
+
+.fdn-stack.gap-sm {
+	gap: 0.5rem;
+}
+
+.fdn-stack.gap-md {
+	gap: 1rem;
+}
+
+.fdn-stack.gap-lg {
+	gap: 1.5rem;
+}
+
+.fdn-stack.gap-xl {
+	gap: 2.5rem;
+}
+
+.fdn-stack.gap-xxl {
+	gap: 5rem;
+}
+
+.fdn-stack.gap-xxxl {
+	gap: 10rem;
+}
+
+/* Justify */
+
+.fdn-stack.x-start {
+	justify-content: flex-start;
+}
+
+.fdn-stack.x-middle {
+	justify-content: center;
+}
+
+.fdn-stack.x-end {
+	justify-content: flex-end;
+}
+
+.fdn-stack.x-between {
+	justify-content: space-between;
+}
+
+/* Align */
+
+.fdn-stack.y-start {
+	align-items: flex-start;
+}
+
+.fdn-stack.y-middle {
+	align-items: center;
+}
+
+.fdn-stack.y-end {
+	align-items: flex-end;
+}
+
+.fdn-stack.y-between {
+	justify-content: space-between;
+}

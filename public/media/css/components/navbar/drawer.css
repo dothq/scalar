@@ -8,7 +8,7 @@
 	position: relative;
 	height: inherit;
 	overflow: hidden;
-	transition: 0.2s height;
+	transition: var(--drawer-animation-length) height;
 	transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 	/* This needs to be a box-shadow inset so the border doesn't overlap with the navbar */
 	box-shadow: inset 0px 1px 0px 0px var(--colours-gray2);
@@ -17,7 +17,6 @@
 .fdn-navigation-drawer {
 	height: 0px;
 	outline: none;
-	visibility: hidden;
 }
 
 @media (min-width: 52rem) {
@@ -27,12 +26,12 @@
 }
 
 .fdn-navigation-drawer:target {
-	visibility: visible;
-	height: 16rem;
+	height: var(--drawer-height);
 	scroll-margin-top: 4.5rem;
+	overflow: visible;
 }
 
-.fdn-navigation-drawer:target .fdn-navigation-drawer-container {
+.fdn-navigation-drawer-container {
 	display: flex;
 	width: 100%;
 }
@@ -42,6 +41,14 @@
 	align-items: flex-start;
 	gap: 0;
 	justify-content: flex-start;
+	transition: 0s visibility var(--drawer-animation-length);
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.fdn-navigation-drawer:target .fdn-navigation-items {
+	transition: 0s visibility 0s;
+	visibility: visible;
 }
 
 .fdn-navigation-drawer-container .fdn-navigation-items li {
@@ -49,6 +56,7 @@
 }
 
 .fdn-navigation-drawer-container .fdn-navigation-item {
+	width: 100%;
 	height: 4rem;
 	align-items: center;
 	justify-content: flex-start;
@@ -59,8 +67,21 @@
 	content: none;
 }
 
+.no-js .fdn-navigation-drawer:target #menu-close {
+	display: flex;
+	position: absolute;
+	right: 0;
+	top: calc(-4.5rem - 3px);
+}
+
 #menu-close {
-	padding: 1rem;
 	height: fit-content;
 	margin-block-start: 1rem;
+	display: none;
+	--bg-colour: var(--colours-white);
+	--bg-action-colour: var(--colours-gray2);
+}
+
+.fdn-navigation-drawer-container #donate-button {
+	margin-block-start: 0.5rem;
 }

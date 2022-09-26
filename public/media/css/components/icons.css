@@ -14,10 +14,14 @@
 	user-select: none;
 }
 
-.fdn-icon-menu {
+.fdn-icon.menu {
 	--icon: url(/media/icons/ui/menu.svg);
 }
 
-.fdn-icon-close {
+.fdn-icon.close {
 	--icon: url(/media/icons/ui/close.svg);
+}
+
+.fdn-icon.lock {
+	--icon: url(/media/icons/ui/lock.svg);
 }

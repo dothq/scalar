@@ -17,6 +17,7 @@
 
 	display: flex;
 	width: fit-content;
+	gap: 0.5rem;
 
 	position: relative;
 
@@ -26,13 +27,13 @@
 	padding-block-end: var(--btn-spacing-y);
 
 	font-size: var(--btn-font-size);
-	font-weight: 500;
+	font-weight: 600;
 
 	background-color: var(--bg-colour);
 	color: var(--text-colour);
 	border: 2px solid var(--border-colour, var(--bg-colour));
 
-	border-radius: 9999px;
+	border-radius: var(--border-radii, 9999px);
 
 	text-decoration: none;
 
@@ -67,5 +68,5 @@
 }
 
 .fdn-button:active::before {
-	opacity: 0.1;
+	opacity: var(--bg-active-colour-intensity, 0.1);
 }
