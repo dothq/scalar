@@ -2,21 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { getComponentConfig } from "../../../utils/data";
 import Button from "../../ui/Button";
 import Logo from "../../ui/Logo";
 import A11y from "../A11y";
-import NavItem from "./Item";
+import NavDrawer from "./Drawer";
+import NavItems from "./Items";
 
 const Nav = () => {
-	const config = getComponentConfig<{
-		name: string;
-		items: {
-			text: string;
-			href: string;
-		}[];
-	}>("nav");
-
 	return (
 		<nav class="fdn-navigation" aria-label="Dot HQ">
 			<div class="fdn-navigation-container">
@@ -24,13 +16,17 @@ const Nav = () => {
 					<Logo mark type />
 					<A11y />
 
-					<ul class="fdn-navigation-items" role="list">
-						{config.items.map((i) => (
-							<NavItem {...i} />
-						))}
-					</ul>
+					<NavItems />
 
 					<ul class="fdn-navigation-end" role="list">
+						<li id="menu-button">
+							<a
+								class="fdn-button secondary has-icon"
+								href="#navbar"
+							>
+								<i class="fdn-icon menu">menu</i>
+							</a>
+						</li>
 						<li>
 							<Button colour={"black"}>
 								Contribute
@@ -39,6 +35,8 @@ const Nav = () => {
 					</ul>
 				</div>
 			</div>
+
+			<NavDrawer />
 		</nav>
 	);
 };
