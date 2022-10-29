@@ -29,3 +29,5 @@ yarn-error.log*
 
 # Added by cargo
 target
+
+.scalar
