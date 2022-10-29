@@ -28,7 +28,10 @@ const Layout = ({
 				<div id="__scalar">
 					<Nav />
 
-					<main id={"main-content"}>
+					<main
+						class="fdn-main-content"
+						id={"main-content"}
+					>
 						<Component />
 					</main>
 				</div>
