@@ -11,7 +11,7 @@
 	transition: var(--drawer-animation-length) height;
 	transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 	/* This needs to be a box-shadow inset so the border doesn't overlap with the navbar */
-	box-shadow: inset 0px 1px 0px 0px var(--colours-gray2);
+	box-shadow: inset 0px 1px 0px 0px var(--fdn-colours-gray2);
 }
 
 .fdn-navigation-drawer {
@@ -78,8 +78,8 @@
 	height: fit-content;
 	margin-block-start: 1rem;
 	display: none;
-	--bg-colour: var(--colours-white);
-	--bg-action-colour: var(--colours-gray2);
+	--bg-colour: var(--fdn-colours-white);
+	--bg-action-colour: var(--fdn-colours-gray2);
 }
 
 .fdn-navigation-drawer-container #donate-button {

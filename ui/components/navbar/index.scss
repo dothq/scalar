@@ -10,8 +10,8 @@
 .fdn-navigation {
 	width: 100%;
 	min-height: 4.5rem;
-	background-color: var(--colours-white);
-	border-bottom: 1px solid var(--colours-gray3);
+	background-color: var(--fdn-colours-white);
+	border-bottom: 1px solid var(--fdn-colours-gray3);
 }
 
 .fdn-navigation-container {
@@ -66,7 +66,7 @@
 #menu-button {
 	display: flex;
 	align-items: center;
-	color: var(--colours-black);
+	color: var(--fdn-colours-black);
 	height: 4.5rem;
 }
 

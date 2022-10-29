@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"@fastify/static": "^6.5.0",
+		"clsx": "^1.2.1",
 		"dotenv": "^16.0.3",
 		"fastify": "^4.9.2",
 		"glob": "^8.0.3",

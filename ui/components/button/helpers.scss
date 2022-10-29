@@ -25,115 +25,51 @@
 /* Colours */
 
 .fdn-button.red {
-	--bg-colour: var(--colours-red);
-	--text-colour: var(--colours-white);
+	--bg-colour: var(--fdn-colours-red);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.orange {
-	--bg-colour: var(--colours-orange);
-	--text-colour: var(--colours-white);
+	--bg-colour: var(--fdn-colours-orange);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.yellow {
-	--bg-colour: var(--colours-yellow);
-	--text-colour: var(--colours-black);
+	--bg-colour: var(--fdn-colours-yellow);
+	--text-colour: var(--fdn-colours-black);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.green {
-	--bg-colour: var(--colours-green);
-	--text-colour: var(--colours-white);
-	--bg-active-colour-intensity: 0.2;
-}
-
-.fdn-button.lime {
-	--bg-colour: var(--colours-lime);
-	--text-colour: var(--colours-black);
+	--bg-colour: var(--fdn-colours-green);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.blue {
-	--bg-colour: var(--colours-blue);
-	--text-colour: var(--colours-white);
+	--bg-colour: var(--fdn-colours-blue);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.purple {
-	--bg-colour: var(--colours-purple);
-	--text-colour: var(--colours-white);
+	--bg-colour: var(--fdn-colours-purple);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.pink {
-	--bg-colour: var(--colours-pink);
-	--text-colour: var(--colours-white);
+	--bg-colour: var(--fdn-colours-pink);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
 }
 
 .fdn-button.black {
-	--bg-colour: var(--colours-black);
-	--text-colour: var(--colours-white);
+	--bg-colour: var(--fdn-colours-black);
+	--text-colour: var(--fdn-colours-white);
 	--bg-active-colour-intensity: 0.2;
-}
-
-.fdn-button.gray1 {
-	--bg-action-colour: var(--colours-gray1);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--text-colour);
-}
-
-.fdn-button.gray3 {
-	--bg-action-colour: var(--colours-gray3);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--text-colour);
-}
-
-.fdn-button.gray4 {
-	--bg-action-colour: var(--colours-gray4);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--text-colour);
-}
-
-.fdn-button.gray5 {
-	--bg-action-colour: var(--colours-gray5);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--colours-white);
-}
-
-.fdn-button.gray6 {
-	--bg-action-colour: var(--colours-gray6);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--colours-white);
-}
-
-.fdn-button.gray7 {
-	--bg-action-colour: var(--colours-gray7);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--colours-white);
-}
-
-.fdn-button.secondary,
-.fdn-button.gray2 {
-	--bg-colour: transparent;
-	--bg-action-colour: var(--colours-gray2);
-	--bg-before-colour: var(--colours-black);
-	--border-colour: transparent;
-	--text-colour: var(--colours-black);
-	--text-hover-colour: var(--text-colour);
 }
 
 /* Utilities */

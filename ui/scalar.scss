@@ -17,44 +17,55 @@
 
 /* Globals */
 :root {
-	--colours-red: hsl(0, 82%, 48%);
-	--colours-orange: hsl(25, 99%, 44%);
-	--colours-yellow: hsl(45, 100%, 52%);
-	--colours-yellow-dark: hsl(45, 100%, 27%);
-	--colours-green: hsl(120, 97%, 27%);
-	--colours-lime: hsl(145, 76%, 54%);
-	--colours-blue: hsl(212, 99%, 38%);
-	--colours-purple: hsl(266, 65%, 49%);
-	--colours-pink: hsl(295, 65%, 49%);
-	--colours-black: hsl(0, 0%, 7%);
-	--colours-white: hsl(255, 100%, 100%);
-	--colours-pblack: hsl(0, 0%, 0%);
-	--colours-gray1: hsl(217, 100%, 97%);
-	--colours-gray2: rgb(222, 228, 236);
-	--colours-gray3: hsl(217, 16%, 78%);
-	--colours-gray4: hsl(216, 10%, 60%);
-	--colours-gray5: hsl(217, 11%, 42%);
-	--colours-gray6: hsl(218, 20%, 24%);
-	--colours-gray7: hsl(216, 100%, 5%);
-	--fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI",
+	/* Colours */
+	--fdn-colours-red: hsl(0, 95%, 36%);
+	--fdn-colours-orange: hsl(29, 90%, 53%);
+	--fdn-colours-yellow: hsl(54, 100%, 48%);
+	--fdn-colours-green: hsl(130, 100%, 20%);
+	--fdn-colours-blue: hsl(209, 97%, 39%);
+	--fdn-colours-purple: hsl(263, 95%, 40%);
+	--fdn-colours-pink: hsl(317, 100%, 43%);
+	--fdn-colours-black: hsl(216, 100%, 5%);
+	--fdn-colours-white: hsl(255, 100%, 100%);
+	--fdn-colours-pblack: hsl(0, 0%, 0%);
+	--fdn-colours-link: hsl(209, 65%, 35%);
+	--fdn-colours-visited-link: hsl(263, 65%, 35%);
+
+	/* Text colours */
+	--fdn-text-colour: hsl(180, 3%, 7%);
+	--fdn-text-secondary-colour: hsl(225, 8%, 39%);
+
+	/* Border colours */
+	--fdn-border-colour: hsl(0, 0%, 87%);
+
+	/* State colours */
+	--fdn-success-colour: var(--fdn-colours-green);
+	--fdn-error-colour: var(--fdn-colours-red);
+
+	/* Fonts */
+	--fdn-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Helvetica, Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji";
-	--fonts-heading: Satoshi, var(--fonts-system);
-	--fonts-headingVar: Satoshi var, var(--fonts-system);
-	--fonts-body: Inter, var(--fonts-system);
-	--fonts-bodyVar: Inter var, var(--fonts-system);
+	--fdn-fonts-heading: Satoshi, var(--fdn-fonts-system);
+	--fdn-fonts-headingVar: Satoshi var, var(--fdn-fonts-system);
+	--fdn-fonts-body: Inter, var(--fdn-fonts-system);
+	--fdn-fonts-bodyVar: Inter var, var(--fdn-fonts-system);
+}
+
+/* Header-specific styles */
+:root {
 	--drawer-height: 20.5rem;
 	--drawer-animation-length: 0.3s;
 }
 
 html {
-	scrollbar-color: var(--colours-gray4) var(--colours-white);
+	scrollbar-color: var(--fdn-border-colour) var(--fdn-colours-white);
 }
 
 body {
-	color: var(--colours-black);
-	background-color: var(--colours-white);
-	font-family: var(--fonts-body);
+	color: var(--fdn-colours-black);
+	background-color: var(--fdn-colours-white);
+	font-family: var(--fdn-fonts-body);
 }
 
 h1,
@@ -66,12 +77,12 @@ h5,
 h6,
 a.fdn-button,
 button {
-	font-family: var(--fonts-heading);
+	font-family: var(--fdn-fonts-heading);
 }
 
 @supports (font-variation-settings: normal) {
 	body {
-		font-family: var(--fonts-bodyVar);
+		font-family: var(--fdn-fonts-bodyVar);
 	}
 
 	h1,
@@ -83,18 +94,22 @@ button {
 	h6,
 	a.fdn-button,
 	button {
-		font-family: var(--fonts-headingVar);
+		font-family: var(--fdn-fonts-headingVar);
 	}
 }
 
 :focus-visible:not(.fdn-focus-none) {
-	box-shadow: 0px 0px 0px 0.25rem var(--colours-white);
-	outline: 2px solid var(--colours-blue);
+	box-shadow: 0px 0px 0px 0.25rem var(--fdn-colours-white);
+	outline: 2px solid var(--fdn-colours-blue);
 	outline-offset: 0.25rem;
 }
 
 a {
-	color: var(--colours-blue);
+	color: var(--fdn-colours-link);
+}
+
+a:visited {
+	color: var(--fdn-colours-visited-link);
 }
 
 [hidden] {
@@ -108,5 +123,5 @@ hr {
 	color: inherit;
 	margin-block: 0;
 	margin-inline: 0;
-	background-color: var(--colours-gray2);
+	background-color: var(--fdn-border-colour);
 }
