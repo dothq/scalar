@@ -39,8 +39,13 @@ export const router: FastifyPluginCallback = async (
 
 	const pagesBuildDir = resolve(process.cwd(), ".scalar", "pages");
 
+	const windowsPrefix =
+		process.platform == "win32" ? "file:///" : "";
+
 	const Layout = (
-		(await import(resolve(pagesBuildDir, "@layout.js"))) as any
+		(await import(
+			windowsPrefix + resolve(pagesBuildDir, "@layout.js")
+		)) as any
 	).default.default;
 
 	for await (const path of routes) {
@@ -66,7 +71,9 @@ export const router: FastifyPluginCallback = async (
 				baselinePath.substring(1).replace(".tsx", ".js")
 			);
 
-			const module = (await import(compiledPath)).default;
+			const module = (
+				await import(windowsPrefix + compiledPath)
+			).default;
 
 			const Component = module.default;
 
