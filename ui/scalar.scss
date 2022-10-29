@@ -50,6 +50,9 @@
 	--fdn-fonts-headingVar: Satoshi var, var(--fdn-fonts-system);
 	--fdn-fonts-body: Inter, var(--fdn-fonts-system);
 	--fdn-fonts-bodyVar: Inter var, var(--fdn-fonts-system);
+
+	/* Sizing */
+	--fdn-content-width: 68.75rem; /* 1100px */
 }
 
 /* Header-specific styles */
@@ -108,7 +111,7 @@ a {
 	color: var(--fdn-colours-link);
 }
 
-a:visited {
+main a:not(.fdn-not-visited):visited {
 	color: var(--fdn-colours-visited-link);
 }
 

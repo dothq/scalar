@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import Nav from "../components/common/Nav";
 import { withCacheBuster } from "../utils/cache";
 
 const Layout = ({
@@ -25,7 +26,11 @@ const Layout = ({
 
 			<body>
 				<div id="__scalar">
-					<Component />
+					<Nav />
+
+					<main id={"main-content"}>
+						<Component />
+					</main>
 				</div>
 			</body>
 		</html>

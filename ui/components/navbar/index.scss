@@ -11,31 +11,25 @@
 	width: 100%;
 	min-height: 4.5rem;
 	background-color: var(--fdn-colours-white);
-	border-bottom: 1px solid var(--fdn-colours-gray3);
+	padding: 0 0.5rem;
 }
 
 .fdn-navigation-container {
 	margin: 0 auto;
-	padding: 0 0.5rem;
-	max-width: 64rem;
+	max-width: var(--fdn-content-width);
 	height: inherit;
+	border-bottom: 1px solid var(--fdn-border-colour);
 }
 
 @media (min-width: 25rem) {
-	.fdn-navigation-container {
+	.fdn-navigation {
 		padding: 0 1rem;
 	}
 }
 
 @media (min-width: 15rem) {
-	.fdn-navigation-container {
+	.fdn-navigation {
 		padding: 0 1.5rem;
-	}
-}
-
-@media (min-width: 80rem) {
-	.fdn-navigation-container {
-		max-width: 80rem;
 	}
 }
 

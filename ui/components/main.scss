@@ -11,7 +11,7 @@
 
 .fdn-content > .fdn-content-container {
 	padding: 0 0.5rem;
-	max-width: 64rem;
+	max-width: var(--fdn-content-width);
 	margin: 0 auto;
 }
 

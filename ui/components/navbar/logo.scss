@@ -9,8 +9,8 @@
 }
 
 .fdn-logo a {
-	color: inherit;
-	width: inherit;
+	color: var(--fdn-text-colour);
+	width: fit-content;
 	height: inherit;
 	display: flex;
 	align-items: center;
