@@ -8,9 +8,9 @@
 	"license": "MPL-2.0",
 	"private": true,
 	"scripts": {
-		"execute": "node .scalar/main.js",
-		"start": "yarn build && yarn execute",
-		"build": "node scripts/build"
+		"start": "node .scalar/main.js",
+		"build": "node scripts/build",
+		"dev": "yarn build && yarn start"
 	},
 	"dependencies": {
 		"@fastify/static": "^6.5.0",
