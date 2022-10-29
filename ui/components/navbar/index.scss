@@ -69,3 +69,9 @@
 		display: none;
 	}
 }
+
+@media (max-width: 52rem) {
+	.fdn-navigation-end > :not(#menu-button) {
+		display: none;
+	}
+}
