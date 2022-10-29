@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 40rem) {
-	.fdn-navigation-content .fdn-navigation-end #donate-button-item {
+	.fdn-navigation-content .fdn-navigation-end > :not(#menu-button) {
 		display: none;
 	}
 }

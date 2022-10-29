@@ -67,7 +67,7 @@
 	content: none;
 }
 
-.no-js .fdn-navigation-drawer:target #menu-close {
+.fdn-navigation-drawer:target #menu-close {
 	display: flex;
 	position: absolute;
 	right: 0;
@@ -79,7 +79,8 @@
 	margin-block-start: 1rem;
 	display: none;
 	--bg-colour: var(--fdn-colours-white);
-	--bg-action-colour: var(--fdn-colours-gray2);
+	--text-hover-colour: var(--fdn-colours-black);
+	--bg-action-colour: var(--fdn-border-colour);
 }
 
 .fdn-navigation-drawer-container #donate-button {
