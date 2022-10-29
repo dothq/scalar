@@ -3,17 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* Utility */
-@import url("utils/a11y.css");
-@import url("utils/reset.css");
-@import url("utils/fonts.css");
+@use "utils/a11y";
+@use "utils/reset";
+@use "utils/fonts";
 
 /* Components */
-@import url("components/navbar/index.css");
-@import url("components/main.css");
-@import url("components/error.css");
-@import url("components/icons.css");
-@import url("components/button/index.css");
-@import url("components/flex/index.css");
+@use "components/navbar";
+@use "components/main";
+@use "components/error";
+@use "components/icons";
+@use "components/button";
+@use "components/flex";
 
 /* Globals */
 :root {
