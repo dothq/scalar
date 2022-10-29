@@ -8,7 +8,8 @@
 	"license": "MPL-2.0",
 	"private": true,
 	"scripts": {
-		"start": "node .scalar/main.js",
+		"execute": "node .scalar/main.js",
+		"start": "yarn build && yarn execute",
 		"build": "node scripts/build"
 	},
 	"dependencies": {
