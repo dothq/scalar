@@ -3,9 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import fastifyStatic from "@fastify/static";
-import { FastifyPluginCallback } from "fastify";
+import {
+	FastifyPluginCallback,
+	FastifyReply,
+	FastifyRequest
+} from "fastify";
 import glob from "glob";
-import { resolve } from "path";
+import { basename, resolve } from "path";
 import { createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
 
@@ -60,12 +64,14 @@ export const router: FastifyPluginCallback = async (
 				return ":" + m.substring(1, m.length - 1);
 			});
 
-		if (fastifyPath.substring(1).charAt(0) == "@") {
-			/* Pages that start with @ are private */
+		if (fastifyPath.startsWith("@layout")) {
 			continue;
 		}
 
-		server.get(fastifyPath, async (req, res) => {
+		const handler = async (
+			req: FastifyRequest,
+			res: FastifyReply
+		) => {
 			const compiledPath = resolve(
 				pagesBuildDir,
 				baselinePath.substring(1).replace(".tsx", ".js")
@@ -98,9 +104,19 @@ export const router: FastifyPluginCallback = async (
 				})
 			);
 
+			if (basename(compiledPath) == "404.js") {
+				res.status(404);
+			}
+
 			res.header("content-type", "text/html");
 			res.send(html);
-		});
+		};
+
+		if (fastifyPath == "/404") {
+			server.setNotFoundHandler(handler);
+		}
+
+		server.get(fastifyPath, handler);
 	}
 
 	done();
