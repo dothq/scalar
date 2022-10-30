@@ -2,14 +2,20 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-const NavItem = ({ text, href }: { text: string; href: string }) => {
+const HeaderItem = ({
+	text,
+	href
+}: {
+	text: string;
+	href: string;
+}) => {
 	return (
 		<li>
-			<a class="fdn-navigation-item fdn-button" href={href}>
+			<a class="fdn-header-item fdn-button" href={href}>
 				{text}
 			</a>
 		</li>
 	);
 };
 
-export default NavItem;
+export default HeaderItem;

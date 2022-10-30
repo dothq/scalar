@@ -2,28 +2,29 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.fdn-navigation-items {
+.fdn-header-items {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	order: 0;
 	flex: 1;
 	gap: 2.5rem;
+	width: 100%;
 }
 
 @media (max-width: 52rem) {
-	.fdn-navigation-content .fdn-navigation-items {
+	.fdn-header-content .fdn-header-items {
 		display: none;
 	}
 }
 
 @media (max-width: 40rem) {
-	.fdn-navigation-content .fdn-navigation-end > :not(#menu-button) {
+	.fdn-header-content .fdn-header-end > :not(#menu-button) {
 		display: none;
 	}
 }
 
-.fdn-navigation-item {
+.fdn-header-item {
 	align-items: center;
 	height: 4.5rem;
 	--border-radii: 0;

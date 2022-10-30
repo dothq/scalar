@@ -17,6 +17,7 @@ const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
 			>
 				<svg
 					alt="The Dot HQ Logo"
+					aria-label="The Dot HQ Logo"
 					viewBox={`0 0 ${width} 48`}
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"

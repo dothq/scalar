@@ -5,18 +5,15 @@
 import Button from "../../ui/Button";
 import NavItems from "./Items";
 
-const NavDrawer = () => {
+const HeaderDrawer = () => {
 	return (
 		<div
-			id="navbar"
-			class="fdn-navigation-drawer fdn-focus-none"
+			id="header-menu"
+			class="fdn-header-drawer fdn-focus-none"
 			tabIndex={-1}
 		>
-			<div
-				class="fdn-navigation-drawer-container"
-				tabIndex={-1}
-			>
-				<ul class="fdn-navigation-items" role="list">
+			<div class="fdn-header-drawer-container" tabIndex={-1}>
+				<ul class="fdn-header-items" role="list">
 					<NavItems />
 
 					<li>
@@ -42,4 +39,4 @@ const NavDrawer = () => {
 	);
 };
 
-export default NavDrawer;
+export default HeaderDrawer;

@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.fdn-navigation-a11y {
+.fdn-header-a11y {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -10,7 +10,7 @@
 	z-index: 999999;
 }
 
-.fdn-navigation-a11y-link:focus {
+.fdn-header-a11y-link:focus {
 	padding: 1rem;
 	background-color: var(--fdn-colours-white);
 	color: var(--fdn-colours-blue);

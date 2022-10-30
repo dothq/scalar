@@ -5,22 +5,22 @@
 import { getComponentConfig } from "../../../utils/data";
 import NavItem from "./Item";
 
-const NavItems = () => {
+const HeaderItems = () => {
 	const config = getComponentConfig<{
 		name: string;
 		items: {
 			text: string;
 			href: string;
 		}[];
-	}>("nav");
+	}>("header");
 
 	return (
-		<ul class="fdn-navigation-items" role="list">
+		<>
 			{config.items.map((i) => (
 				<NavItem {...i} />
 			))}
-		</ul>
+		</>
 	);
 };
 
-export default NavItems;
+export default HeaderItems;

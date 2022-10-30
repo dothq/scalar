@@ -3,44 +3,75 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import Footer from "../components/common/Footer";
-import Nav from "../components/common/Nav";
+import Header from "../components/common/Header";
+import Meta from "../components/common/Meta";
+import HTMLComment from "../components/ui/HTMLComment";
 import { withCacheBuster } from "../utils/cache";
 
 const Layout = ({
 	meta,
+	url,
 	Component
 }: {
 	meta: any;
+	url: URL;
 	Component: any;
 }) => {
 	return (
-		<html>
-			<head>
-				<meta charSet="utf-8"></meta>
-				<title>{meta.title} ― Dot HQ (UK)</title>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link
-					rel="stylesheet"
-					href={withCacheBuster("/media/css/scalar.css")}
-					type="text/css"
-				></link>
-			</head>
+		<>
+			<html
+				lang="en-GB"
+				dir="ltr"
+				class="no-js"
+				prefix="og: https://ogp.me/ns#"
+				itemScope
+				itemType="http://schema.org/WebSite"
+			>
+				<head>
+					<link
+						rel="stylesheet"
+						href={withCacheBuster(
+							"/media/css/scalar.css"
+						)}
+						type="text/css"
+					></link>
+					<Meta host={url.host} />
+					<title>{meta.title} ― Dot HQ (UK)</title>
+					<HTMLComment>
+						All our pages should work with JavaScript
+						disabled.
+						{"\n"}- If you believe this isn't the case,
+						please
+						{"\n"}- file a bug report at
+						https://github.com/dothq/scalar/issues/new
+						{"\n"}- and we will ensure this gets resolved.
+					</HTMLComment>
+					<script
+						type="text/javascript"
+						async
+						defer
+						charSet="utf-8"
+						src={withCacheBuster("/media/js/scalar.js")}
+					></script>
+				</head>
 
-			<body>
-				<div id="__scalar">
-					<Nav />
+				<body>
+					<div id="__scalar">
+						<Header />
 
-					<main
-						class="fdn-main-content"
-						id={"main-content"}
-					>
-						<Component />
-					</main>
+						<main
+							class="fdn-main-content"
+							id={"main-content"}
+							role="main"
+						>
+							<Component />
+						</main>
 
-					<Footer />
-				</div>
-			</body>
-		</html>
+						<Footer />
+					</div>
+				</body>
+			</html>
+		</>
 	);
 };
 

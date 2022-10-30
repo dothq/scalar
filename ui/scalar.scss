@@ -9,7 +9,7 @@
 
 /* Components */
 @use "components/footer";
-@use "components/navbar";
+@use "components/header";
 @use "components/main";
 @use "components/error";
 @use "components/icons";
@@ -30,6 +30,7 @@
 	--fdn-colours-black: hsl(216, 100%, 5%);
 	--fdn-colours-white: hsl(255, 100%, 100%);
 	--fdn-colours-pblack: hsl(0, 0%, 0%);
+	--fdn-colours-gray: hsl(0, 0%, 87%);
 	--fdn-colours-link: hsl(209, 65%, 35%);
 	--fdn-colours-visited-link: hsl(263, 65%, 35%);
 
@@ -71,6 +72,12 @@ body {
 	color: var(--fdn-colours-black);
 	background-color: var(--fdn-colours-white);
 	font-family: var(--fdn-fonts-satoshi);
+}
+
+#__scalar {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 h1,

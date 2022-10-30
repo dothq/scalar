@@ -36,6 +36,12 @@
 	display: flex;
 	color: var(--fdn-text-secondary-colour);
 	text-decoration: none;
+	transition: 0.2s color ease;
+}
+
+.fdn-footer-section-list-item a:hover,
+.fdn-footer-section-list-item a:focus {
+	color: var(--fdn-colours-link);
 }
 
 @media (max-width: 52rem) {

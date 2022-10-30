@@ -12,6 +12,7 @@ import glob from "glob";
 import { basename, resolve } from "path";
 import { createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
+import { URL } from "url";
 
 export const mediaRouter: FastifyPluginCallback = (
 	server,
@@ -90,7 +91,8 @@ export const router: FastifyPluginCallback = async (
 			const props = {
 				path: req.url,
 				params: req.params || {},
-				meta: module.meta || {}
+				meta: module.meta || {},
+				url: new URL(req.url, `http://${req.hostname}`)
 			};
 
 			process.env.SCALAR_ORIGINAL_PATH = path.split(

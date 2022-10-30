@@ -8,21 +8,23 @@ import A11y from "../A11y";
 import NavDrawer from "./Drawer";
 import NavItems from "./Items";
 
-const Nav = () => {
+const Header = () => {
 	return (
-		<nav class="fdn-navigation" aria-label="Dot HQ">
-			<div class="fdn-navigation-container">
-				<div class="fdn-navigation-content">
+		<header class="fdn-header" aria-label="Dot HQ">
+			<div class="fdn-header-container">
+				<div class="fdn-header-content">
 					<Logo mark type />
 					<A11y />
 
-					<NavItems />
+					<ul class="fdn-header-items" role="list">
+						<NavItems />
+					</ul>
 
-					<ul class="fdn-navigation-end" role="list">
+					<ul class="fdn-header-end" role="list">
 						<li id="menu-button">
 							<a
 								class="fdn-button secondary has-icon"
-								href="#navbar"
+								href="#header-menu"
 							>
 								<i class="fdn-icon menu">menu</i>
 							</a>
@@ -40,8 +42,8 @@ const Nav = () => {
 			</div>
 
 			<NavDrawer />
-		</nav>
+		</header>
 	);
 };
 
-export default Nav;
+export default Header;

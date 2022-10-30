@@ -5,8 +5,9 @@
 @use "typography";
 
 .fdn-main-content {
-	margin: 0 auto;
 	scroll-margin-top: 4.5rem;
+	flex: 1;
+	width: 100%;
 }
 
 .fdn-content > .fdn-content-container {

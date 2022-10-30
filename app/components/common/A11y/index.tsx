@@ -4,10 +4,10 @@
 
 const A11y = () => {
 	return (
-		<ul class="fdn-navigation-a11y" role="list">
+		<ul class="fdn-header-a11y" role="list">
 			<li>
 				<a
-					class="fdn-navigation-a11y-link fdn-visually-hidden"
+					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="#main-content"
 				>
 					Skip to content
@@ -15,7 +15,7 @@ const A11y = () => {
 			</li>
 			<li>
 				<a
-					class="fdn-navigation-a11y-link fdn-visually-hidden"
+					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="/accessibility"
 				>
 					Accessibility options

@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.fdn-navigation-drawer {
+.fdn-header-drawer {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -10,33 +10,33 @@
 	overflow: hidden;
 	transition: var(--drawer-animation-length) height;
 	transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-	/* This needs to be a box-shadow inset so the border doesn't overlap with the navbar */
-	box-shadow: inset 0px 1px 0px 0px var(--fdn-colours-gray2);
+	padding: 0 0.5rem;
+	box-shadow: 0px 1px 0px 0px var(--fdn-border-colour);
 }
 
-.fdn-navigation-drawer {
+.fdn-header-drawer {
 	height: 0px;
 	outline: none;
 }
 
 @media (min-width: 52rem) {
-	.fdn-navigation-drawer {
+	.fdn-header-drawer {
 		display: none;
 	}
 }
 
-.fdn-navigation-drawer:target {
+.fdn-header-drawer:target {
 	height: var(--drawer-height);
 	scroll-margin-top: 4.5rem;
 	overflow: visible;
 }
 
-.fdn-navigation-drawer-container {
+.fdn-header-drawer-container {
 	display: flex;
 	width: 100%;
 }
 
-.fdn-navigation-drawer-container .fdn-navigation-items {
+.fdn-header-drawer-container .fdn-header-items {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0;
@@ -46,16 +46,16 @@
 	overflow: hidden;
 }
 
-.fdn-navigation-drawer:target .fdn-navigation-items {
+.fdn-header-drawer:target .fdn-header-items {
 	transition: 0s visibility 0s;
 	visibility: visible;
 }
 
-.fdn-navigation-drawer-container .fdn-navigation-items li {
+.fdn-header-drawer-container .fdn-header-items li {
 	width: 100%;
 }
 
-.fdn-navigation-drawer-container .fdn-navigation-item {
+.fdn-header-drawer-container .fdn-header-item {
 	width: 100%;
 	height: 4rem;
 	align-items: center;
@@ -63,14 +63,14 @@
 	text-align: left;
 }
 
-.fdn-navigation-drawer-container .fdn-navigation-item::after {
+.fdn-header-drawer-container .fdn-header-item::after {
 	content: none;
 }
 
-.fdn-navigation-drawer:target #menu-close {
+.fdn-header-drawer:target #menu-close {
 	display: flex;
 	position: absolute;
-	right: 0;
+	right: var(--close-right, 0.5rem);
 	top: calc(-4.5rem - 3px);
 }
 
@@ -83,6 +83,6 @@
 	--bg-action-colour: var(--fdn-border-colour);
 }
 
-.fdn-navigation-drawer-container #donate-button {
+.fdn-header-drawer-container #donate-button {
 	margin-block-start: 0.5rem;
 }

@@ -1,0 +1,72 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+name: Footer
+items:
+    - id: products
+      title: Products
+      items:
+          - text: Browser
+            href: /browser
+
+          - text: Translate
+            href: /translate
+
+          - text: One
+            href: /one
+
+    - id: resources
+      title: Resources
+      items:
+          - text: Releases
+            href: /releases
+
+          - text: Branding
+            href: /branding
+
+          - text: Developers
+            href: https://developer.dothq.org
+            in_new: true
+
+    - id: support
+      title: Support
+      items:
+          - text: Get help
+            href: /support
+
+          - text: Bugs
+            href: /support/bugs
+
+          - text: Ideas
+            href: /support/ideas
+
+    - id: community
+      title: Community
+      items:
+          - text: Contribute
+            href: /contribute
+
+          - text: Donate
+            href: /contribute/donate
+
+          - text: Blog
+            href: /blog
+
+    - id: about
+      title: About
+      items:
+          - text: Dot HQ
+            href: /about
+
+          - text: Privacy
+            href: /about/privacy
+
+          - text: Terms
+            href: /about/terms
+
+          - text: Environment
+            href: /about/environment
+
+          - text: Charter
+            href: /about/charter
