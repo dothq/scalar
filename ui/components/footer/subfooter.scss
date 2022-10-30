@@ -1,0 +1,24 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.fdn-footer-copying {
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.fdn-footer-editing {
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.fdn-footer-editing pre {
+	text-align: right;
+	font-size: 0.9rem;
+	color: var(--fdn-text-secondary-colour);
+}
+
+.fdn-footer-editing .fdn-footer-editing-links {
+	display: flex;
+	gap: 1rem;
+}

@@ -8,17 +8,30 @@ interface ButtonProps {
 	colour?: FDNColour;
 	size?: FDNSize;
 	children?: string;
+	fullwidth?: boolean;
+	href?: any;
 }
 
-const Button = ({ children, size, colour }: ButtonProps) => {
+const Button = ({
+	children,
+	size,
+	colour,
+	fullwidth,
+	href
+}: ButtonProps) => {
 	size = size ? size : "md";
 
 	const className = clsx("fdn-button", {
 		[size as string]: true,
-		[colour as string]: true
+		[colour as string]: true,
+		"full-width": fullwidth
 	});
 
-	return <a className={className}>{children}</a>;
+	return (
+		<a href={href} className={className}>
+			{children}
+		</a>
+	);
 };
 
 export default Button;

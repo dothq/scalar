@@ -12,7 +12,7 @@ export const meta = {
 const Index = () => {
 	return (
 		<>
-			<h1>Hello world {process.env.SCALAR_GIT_REVISION}</h1>
+			<h1>Hello world</h1>
 
 			<Button colour={"black"}>Contribute</Button>
 		</>

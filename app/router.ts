@@ -87,6 +87,10 @@ export const router: FastifyPluginCallback = async (
 				meta: module.meta || {}
 			};
 
+			process.env.SCALAR_ORIGINAL_PATH = path.split(
+				process.cwd()
+			)[1];
+
 			const html = renderToString(
 				createElement(Layout, {
 					...props,

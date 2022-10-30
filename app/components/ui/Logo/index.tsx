@@ -3,6 +3,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
+	let width = 0;
+
+	if (mark) width += 49;
+	if (type) width += 192;
+
 	return (
 		<div class="fdn-logo">
 			<a
@@ -12,7 +17,7 @@ const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
 			>
 				<svg
 					alt="The Dot HQ Logo"
-					viewBox="0 0 239 48"
+					viewBox={`0 0 ${width} 48`}
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
 					xmlnsXlink="http://www.w3.org/1999/xlink"

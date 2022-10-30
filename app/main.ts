@@ -16,6 +16,16 @@ const main = async () => {
 		await asyncExec("git rev-parse HEAD")
 	).stdout.trim();
 
+	process.env.SCALAR_GIT_REMOTE = (
+		await asyncExec("git config --get remote.origin.url")
+	).stdout
+		.trim()
+		.replace(".git", "");
+
+	process.env.SCALAR_GIT_BRANCH = (
+		await asyncExec("git rev-parse --abbrev-ref HEAD")
+	).stdout.trim();
+
 	const server = createHttpServer();
 
 	const host = process.env.HOST ? process.env.HOST : "127.0.0.1";

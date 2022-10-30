@@ -15,6 +15,7 @@
 @use "components/icons";
 @use "components/button";
 @use "components/flex";
+@use "components/logo";
 
 /* Globals */
 :root {
@@ -47,10 +48,10 @@
 	--fdn-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Helvetica, Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji";
-	--fdn-fonts-heading: Satoshi, var(--fdn-fonts-system);
-	--fdn-fonts-headingVar: Satoshi var, var(--fdn-fonts-system);
-	--fdn-fonts-body: Inter, var(--fdn-fonts-system);
-	--fdn-fonts-bodyVar: Inter var, var(--fdn-fonts-system);
+	--fdn-fonts-satoshi: Satoshi, var(--fdn-fonts-system);
+	--fdn-fonts-satoshiVar: Satoshi var, var(--fdn-fonts-system);
+	--fdn-fonts-inter: Inter, var(--fdn-fonts-system);
+	--fdn-fonts-interVar: Inter var, var(--fdn-fonts-system);
 
 	/* Sizing */
 	--fdn-content-width: 68.75rem; /* 1100px */
@@ -69,7 +70,7 @@ html {
 body {
 	color: var(--fdn-colours-black);
 	background-color: var(--fdn-colours-white);
-	font-family: var(--fdn-fonts-body);
+	font-family: var(--fdn-fonts-satoshi);
 }
 
 h1,
@@ -81,12 +82,12 @@ h5,
 h6,
 a.fdn-button,
 button {
-	font-family: var(--fdn-fonts-heading);
+	font-family: var(--fdn-fonts-satoshi);
 }
 
 @supports (font-variation-settings: normal) {
 	body {
-		font-family: var(--fdn-fonts-bodyVar);
+		font-family: var(--fdn-fonts-satoshiVar);
 	}
 
 	h1,
@@ -98,7 +99,7 @@ button {
 	h6,
 	a.fdn-button,
 	button {
-		font-family: var(--fdn-fonts-headingVar);
+		font-family: var(--fdn-fonts-satoshiVar);
 	}
 }
 
@@ -110,6 +111,8 @@ button {
 
 a {
 	color: var(--fdn-colours-link);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
 }
 
 main a:not(.fdn-not-visited):visited {
@@ -120,12 +123,27 @@ main a:not(.fdn-not-visited):visited {
 	display: none !important;
 }
 
-hr {
-	width: 1px;
+pre {
+	font-family: monospace;
+}
+
+hr.fdn-separator {
+	width: 0;
+	height: 0;
 	margin: 0;
 	border: 0;
 	color: inherit;
 	margin-block: 0;
 	margin-inline: 0;
 	background-color: var(--fdn-border-colour);
+}
+
+.fdn-separator.h {
+	width: 100%;
+	height: 1px;
+}
+
+.fdn-separator.v {
+	width: 1px;
+	height: 100%;
 }

@@ -2,22 +2,39 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@use "logo";
 @use "sitemap";
+@use "subfooter";
 
 .fdn-footer {
-    width: 100%;
-    background-color: var(--fdn-colours-white);
-    border-top: 1px solid var(--fdn-border-colour);
+	width: 100%;
+	background-color: var(--fdn-colours-white);
+	border-top: 1px solid var(--fdn-border-colour);
 	padding: 0 0.5rem;
 }
 
 .fdn-footer-container {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
 	margin: 0 auto;
 	max-width: var(--fdn-content-width);
-	height: inherit;
+	padding: 4rem 0;
 }
 
-.fdn-footer-container > div {
+.fdn-footer-content {
 	display: flex;
 	justify-content: space-between;
+}
+
+@media (min-width: 25rem) {
+	.fdn-footer {
+		padding: 0 1rem;
+	}
+}
+
+@media (min-width: 15rem) {
+	.fdn-footer {
+		padding: 0 1.5rem;
+	}
 }

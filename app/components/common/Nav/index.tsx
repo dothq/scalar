@@ -28,7 +28,10 @@ const Nav = () => {
 							</a>
 						</li>
 						<li>
-							<Button colour={"black"}>
+							<Button
+								colour={"black"}
+								href={"/contribute"}
+							>
 								Contribute
 							</Button>
 						</li>

@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import Button from "../../ui/Button";
 import NavItems from "./Items";
 
 const NavDrawer = () => {
@@ -19,13 +20,13 @@ const NavDrawer = () => {
 					<NavItems />
 
 					<li>
-						<a
-							id="donate-button"
-							class="fdn-button blue full-width"
-							href="/donate"
+						<Button
+							colour={"black"}
+							fullwidth
+							href={"/contribute"}
 						>
 							Contribute
-						</a>
+						</Button>
 					</li>
 				</ul>
 
