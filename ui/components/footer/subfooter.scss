@@ -22,3 +22,13 @@
 	display: flex;
 	gap: 1rem;
 }
+
+@media (max-width: 52rem) {
+	.fdn-footer-copying {
+		margin-block-end: 1.5rem;
+	}
+
+	.fdn-footer-editing pre {
+		text-align: left;
+	}
+}

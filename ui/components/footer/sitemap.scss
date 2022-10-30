@@ -37,3 +37,9 @@
 	color: var(--fdn-text-secondary-colour);
 	text-decoration: none;
 }
+
+@media (max-width: 52rem) {
+	.fdn-footer-sitemap {
+		justify-content: flex-start;
+	}
+}
