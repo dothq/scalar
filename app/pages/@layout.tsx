@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import Footer from "../components/common/Footer";
 import Nav from "../components/common/Nav";
 import { withCacheBuster } from "../utils/cache";
 
@@ -35,6 +36,8 @@ const Layout = ({
 					>
 						<Component />
 					</main>
+
+					<Footer />
 				</div>
 			</body>
 		</html>
