@@ -1,5 +1,7 @@
 # Scalar
 
+[![Accessibility Mark](https://github.com/dothq/scalar/actions/workflows/a11y.yml/badge.svg)](https://github.com/dothq/scalar/actions/workflows/a11y.yml)
+
 The Dot HQ Website
 
 ## Licenses
