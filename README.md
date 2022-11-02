@@ -1,6 +1,6 @@
 # Scalar
 
-[![Accessibility Mark](https://github.com/dothq/scalar/actions/workflows/a11y.yml/badge.svg)](https://github.com/dothq/scalar/actions/workflows/a11y.yml)
+[![Build](https://github.com/dothq/scalar/actions/workflows/build.yml/badge.svg)](https://github.com/dothq/scalar/actions/workflows/build.yml) [![Accessibility Mark](https://github.com/dothq/scalar/actions/workflows/a11y.yml/badge.svg)](https://github.com/dothq/scalar/actions/workflows/a11y.yml)
 
 The Dot HQ Website
 
