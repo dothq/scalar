@@ -13,6 +13,7 @@ import { basename, resolve } from "path";
 import { createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
 import { URL } from "url";
+import { addMPLLicenseHeader } from "./utils/html";
 
 export const mediaRouter: FastifyPluginCallback = (
 	server,
@@ -111,7 +112,7 @@ export const router: FastifyPluginCallback = async (
 			}
 
 			res.header("content-type", "text/html");
-			res.send(html);
+			res.send(addMPLLicenseHeader(html));
 		};
 
 		if (fastifyPath == "/404") {
