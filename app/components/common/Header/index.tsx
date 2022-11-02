@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { Menu } from "../../icons";
 import Button from "../../ui/Button";
 import Logo from "../../ui/Logo";
 import A11y from "../A11y";
@@ -25,8 +26,9 @@ const Header = () => {
 							<a
 								class="fdn-button secondary has-icon"
 								href="#header-menu"
+								aria-label="Open Navigation Menu..."
 							>
-								<i class="fdn-icon menu">menu</i>
+								<Menu />
 							</a>
 						</li>
 						<li>
