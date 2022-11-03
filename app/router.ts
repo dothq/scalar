@@ -8,8 +8,10 @@ import {
 	FastifyReply,
 	FastifyRequest
 } from "fastify";
+import { readFileSync } from "fs";
 import glob from "glob";
-import { basename, resolve } from "path";
+import { parseAcceptLanguage } from "intl-parse-accept-language";
+import { resolve } from "path";
 import { createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
 import { URL } from "url";
@@ -53,6 +55,8 @@ export const router: FastifyPluginCallback = async (
 			windowsPrefix + resolve(pagesBuildDir, "@layout.js")
 		)) as any
 	).default.default;
+
+	const errorHandlers = new Map<number, any>();
 
 	for await (const path of routes) {
 		const baselinePath = path.split(
@@ -107,20 +111,73 @@ export const router: FastifyPluginCallback = async (
 				})
 			);
 
-			if (basename(compiledPath) == "404.js") {
-				res.status(404);
-			}
-
 			res.header("content-type", "text/html");
 			res.send(addMPLLicenseHeader(html));
 		};
 
-		if (fastifyPath == "/404") {
-			server.setNotFoundHandler(handler);
-		}
+		if (
+			parseInt(fastifyPath.split("/")[1]).toString() ==
+			fastifyPath.split("/")[1]
+		) {
+			const statusCode = parseInt(fastifyPath.split("/")[1]);
 
-		server.get(fastifyPath, handler);
+			// We have a static HTML page specifically for 500 errors
+			if (statusCode == 500) return;
+
+			errorHandlers.set(statusCode, handler);
+		} else {
+			server.get(fastifyPath, handler);
+		}
 	}
+
+	const serverErrHandler = (
+		statusCode: number,
+		req: FastifyRequest,
+		res: FastifyReply
+	) => {
+		try {
+			const handler = errorHandlers.get(statusCode);
+
+			res.status(statusCode);
+
+			return handler(req, res);
+		} catch (e) {
+			let locale =
+				parseAcceptLanguage(
+					req.headers["accept-language"]
+				)[0].split("-")[0] || "";
+
+			if (locale.startsWith("en")) {
+				locale = "";
+			}
+
+			return res
+				.status(500)
+				.header("content-type", "text/html")
+				.send(
+					readFileSync(
+						resolve(
+							process.cwd(),
+							".scalar",
+							"public",
+							"errors",
+							"500.html"
+						),
+						"utf-8"
+					).replace("[ERROR_SUBS_LANG]", locale)
+				);
+		}
+	};
+
+	server.setNotFoundHandler((req, res) =>
+		serverErrHandler(404, req, res)
+	);
+
+	server.setErrorHandler((err, req, res) => {
+		const statusCode = err.statusCode || 500;
+
+		return serverErrHandler(statusCode, req, res);
+	});
 
 	done();
 };

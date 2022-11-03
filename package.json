@@ -18,6 +18,7 @@
 		"dotenv": "^16.0.3",
 		"fastify": "^4.9.2",
 		"glob": "^8.0.3",
+		"intl-parse-accept-language": "^1.0.0",
 		"preact": "^10.11.2",
 		"preact-render-to-string": "^5.2.6",
 		"yaml": "^2.1.3"
