@@ -45,10 +45,12 @@
 
 .fdn-input .fdn-input-prefix {
 	border-right: 2px solid var(--fdn-border-colour);
+	padding-inline-start: 2px;
 }
 
 .fdn-input .fdn-input-suffix {
 	border-left: 2px solid var(--fdn-border-colour);
+	padding-inline-end: 2px;
 }
 
 .fdn-input input {
