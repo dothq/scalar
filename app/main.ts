@@ -37,4 +37,8 @@ const main = async () => {
 	});
 };
 
+process.on("uncaughtException", (e) => {
+	console.error(e);
+});
+
 main();

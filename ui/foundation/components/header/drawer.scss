@@ -78,9 +78,7 @@
 	height: fit-content;
 	margin-block-start: 1rem;
 	display: none;
-	--bg-colour: var(--fdn-colours-white);
-	--text-hover-colour: var(--fdn-colours-black);
-	--bg-action-colour: var(--fdn-border-colour);
+	background-color: var(--fdn-colours-white);
 }
 
 .fdn-header-drawer-container #donate-button {

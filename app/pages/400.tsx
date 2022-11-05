@@ -5,18 +5,21 @@
 import { l } from "../l10n";
 
 export const meta = {
-	title: l("error-not-found-page-title"),
+	title: l("error-bad-request-page-title"),
 	description: "Dot HQ"
 };
 
-const NotFound = () => {
+const BadRequest = () => {
 	return (
 		<>
-			<h1>{l("error-not-found-title")}</h1>
+			<h1>Bad Request</h1>
 
-			<p>{l("error-not-found-subtitle")}</p>
+			<p>
+				Your request was unable to be processed due to a
+				problem with the data provided.
+			</p>
 		</>
 	);
 };
 
-export default NotFound;
+export default BadRequest;

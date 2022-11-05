@@ -20,8 +20,26 @@
 	line-height: 1.5;
 }
 
+.fdn-main-content h4 {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
 .fdn-main-content p {
 	font-size: 1.125rem;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1.375;
+	color: var(--fdn-text-secondary-colour);
+}
+
+.fdn-main-content pre,
+.fdn-main-content code {
+	font-size: 1.125rem;
+}
+
+.fdn-main-content strong,
+.fdn-main-content b {
+	font-size: 1.125rem;
+	font-weight: 500;
 }

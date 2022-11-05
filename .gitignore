@@ -31,3 +31,5 @@ yarn-error.log*
 target
 
 .scalar
+
+.env

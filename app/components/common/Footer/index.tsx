@@ -28,10 +28,9 @@ const Footer = () => {
 
 	if (gitRepoHost == "github.com") {
 		const baseDomain = `https://github.com/${gitRepo}`;
-		const filePath = `${process.env.SCALAR_GIT_REVISION}${process.env.SCALAR_ORIGINAL_PATH}`;
 
-		viewSourceURL = `${baseDomain}/blob/${filePath}`;
-		editPageURL = `${baseDomain}/edit/${filePath}`;
+		viewSourceURL = `${baseDomain}/blob/${process.env.SCALAR_GIT_REVISION}${process.env.SCALAR_ORIGINAL_PATH}`;
+		editPageURL = `${baseDomain}/edit/${gitBranch}${process.env.SCALAR_ORIGINAL_PATH}`;
 	}
 
 	return (

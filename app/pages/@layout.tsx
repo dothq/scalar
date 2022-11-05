@@ -5,6 +5,7 @@
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import Meta from "../components/common/Meta";
+import Script from "../components/Script";
 import HTMLComment from "../components/ui/HTMLComment";
 import { withCacheBuster } from "../utils/cache";
 
@@ -35,6 +36,16 @@ const Layout = ({
 						)}
 						type="text/css"
 					></link>
+					{meta.css &&
+						meta.css.map((path: string) => (
+							<link
+								rel="stylesheet"
+								href={withCacheBuster(
+									`/media/css/${path}`
+								)}
+								type="text/css"
+							></link>
+						))}
 					<Meta host={url.host} />
 					<title>{meta.title} ― Dot HQ (UK)</title>
 					<HTMLComment>
@@ -46,13 +57,11 @@ const Layout = ({
 						https://github.com/dothq/scalar/issues/new
 						{"\n"}- and we will ensure this gets resolved.
 					</HTMLComment>
-					<script
-						type="text/javascript"
-						async
-						defer
-						charSet="utf-8"
-						src={withCacheBuster("/media/js/scalar.js")}
-					></script>
+					<Script src={"scalar.js"} defer />
+					{meta.js &&
+						meta.js.map((path: string) => (
+							<Script src={path} defer />
+						))}
 				</head>
 
 				<body>

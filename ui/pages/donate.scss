@@ -1,0 +1,54 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.donate-app {
+	width: 100%;
+	--donate-app-gutters: calc((100% - var(--fdn-content-width)) / 2);
+}
+
+.donate-aside {
+	max-width: 25rem;
+	padding-inline-end: 1.5rem;
+}
+
+.donate-aside .fdn-aside-header {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.donate-aside-container {
+	display: flex;
+	background-color: var(--fdn-colours-white);
+	padding-inline-start: var(--donate-app-gutters);
+	padding-block-start: 4rem;
+}
+
+.donate-flow-container {
+	display: flex;
+	background-color: var(--fdn-bg-default);
+	flex: 1;
+	width: 100%;
+	padding-inline-end: var(--donate-app-gutters);
+	padding-block-start: 4rem;
+	padding-inline-start: 3rem;
+}
+
+.fdn-card {
+	flex: 1;
+}
+
+.donate-card-container {
+	padding-inline-start: calc(42px + 26px);
+}
+
+.donate-amounts-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+}
+
+.donate-amounts-grid #custom_amount {
+	grid-column: span 2;
+}

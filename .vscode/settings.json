@@ -3,7 +3,7 @@
 		"source.organizeImports": true,
 		"source.fixAll": true
 	},
-	"explorer.excludeGitIgnore": true,
+	"explorer.excludeGitIgnore": false,
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,

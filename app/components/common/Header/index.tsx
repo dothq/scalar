@@ -12,34 +12,41 @@ import NavItems from "./Items";
 const Header = () => {
 	return (
 		<header class="fdn-header" aria-label="Dot HQ">
-			<div class="fdn-header-container">
-				<div class="fdn-header-content">
-					<Logo mark type />
-					<A11y />
+			<div class="fdn-header-wrapper">
+				<div class="fdn-header-container">
+					<div class="fdn-header-content">
+						<Logo mark type />
+						<A11y />
 
-					<ul class="fdn-header-items" role="list">
-						<NavItems />
-					</ul>
+						<ul class="fdn-header-items" role="list">
+							<NavItems />
+						</ul>
 
-					<ul class="fdn-header-end" role="list">
-						<li id="menu-button">
-							<a
-								class="fdn-button secondary has-icon"
-								href="#header-menu"
-								aria-label="Open Navigation Menu..."
-							>
-								<Menu />
-							</a>
-						</li>
-						<li>
-							<Button
-								colour={"black"}
-								href={"/contribute"}
-							>
-								Contribute
-							</Button>
-						</li>
-					</ul>
+						<ul class="fdn-header-end" role="list">
+							<li id="menu-button">
+								<a
+									class="fdn-button secondary has-icon"
+									href="#header-menu"
+									aria-label="Open Navigation Menu..."
+								>
+									<Menu />
+								</a>
+							</li>
+							<li>
+								<Button
+									colour={"black"}
+									href={"/contribute"}
+								>
+									Contribute
+								</Button>
+							</li>
+						</ul>
+					</div>
+
+					<hr
+						class="fdn-header-line"
+						aria-hidden="true"
+					></hr>
 				</div>
 			</div>
 

@@ -16,23 +16,37 @@
 @use "components/button";
 @use "components/flex";
 @use "components/logo";
+@use "components/form";
+@use "components/aside";
+@use "components/card";
 
 /* Globals */
 :root {
 	/* Colours */
 	--fdn-colours-red: hsl(0, 95%, 36%);
+	--fdn-colours-red-secondary: hsla(0, 95%, 36%, 0.07);
 	--fdn-colours-orange: hsl(29, 90%, 53%);
+	--fdn-colours-orange-secondary: hsla(29, 90%, 53%, 0.07);
 	--fdn-colours-yellow: hsl(54, 100%, 48%);
+	--fdn-colours-yellow-secondary: hsla(54, 100%, 48%, 0.07);
 	--fdn-colours-green: hsl(130, 100%, 20%);
+	--fdn-colours-green-secondary: hsla(130, 100%, 20%, 0.07);
 	--fdn-colours-blue: hsl(209, 97%, 39%);
+	--fdn-colours-blue-secondary: hsla(209, 97%, 39%, 0.07);
 	--fdn-colours-purple: hsl(263, 95%, 40%);
+	--fdn-colours-purple-secondary: hsla(263, 95%, 40%, 0.07);
 	--fdn-colours-pink: hsl(317, 100%, 43%);
+	--fdn-colours-pink-secondary: hsla(317, 100%, 43%, 0.07);
 	--fdn-colours-black: hsl(216, 100%, 5%);
+	--fdn-colours-black-secondary: hsla(216, 100%, 5%, 0.07);
 	--fdn-colours-white: hsl(255, 100%, 100%);
 	--fdn-colours-pblack: hsl(0, 0%, 0%);
 	--fdn-colours-gray: hsl(0, 0%, 87%);
 	--fdn-colours-link: hsl(209, 65%, 35%);
 	--fdn-colours-visited-link: hsl(263, 65%, 35%);
+
+	/* Backgrounds */
+	--fdn-bg-default: hsl(0, 0%, 96%);
 
 	/* Text colours */
 	--fdn-text-colour: hsl(180, 3%, 7%);
@@ -70,7 +84,7 @@ html {
 
 body {
 	color: var(--fdn-colours-black);
-	background-color: var(--fdn-colours-white);
+	background-color: var(--fdn-bg-default);
 	font-family: var(--fdn-fonts-satoshi);
 }
 
@@ -112,8 +126,10 @@ button {
 
 :focus-visible:not(.fdn-focus-none) {
 	box-shadow: 0px 0px 0px 0.25rem var(--fdn-colours-white);
-	outline: 2px solid var(--fdn-colours-blue);
-	outline-offset: 0.25rem;
+	outline: 2px solid
+		var(--focus-outline-colour, var(--fdn-colours-blue));
+	outline-offset: var(--focus-outline-offset, 0.25rem);
+	z-index: 2;
 }
 
 a {

@@ -10,6 +10,7 @@ interface ButtonProps {
 	children?: string;
 	fullwidth?: boolean;
 	href?: any;
+	type?: "primary" | "secondary";
 }
 
 const Button = ({
@@ -17,13 +18,16 @@ const Button = ({
 	size,
 	colour,
 	fullwidth,
-	href
+	href,
+	type
 }: ButtonProps) => {
+	type = type ? type : "primary";
 	size = size ? size : "md";
 
 	const className = clsx("fdn-button", {
 		[size as string]: true,
 		[colour as string]: true,
+		[type as string]: true,
 		"full-width": fullwidth
 	});
 

@@ -13,6 +13,10 @@
 	background-color: var(--fdn-colours-white);
 }
 
+.fdn-header-wrapper {
+	padding: 0 0.5rem;
+}
+
 .fdn-header-container {
 	margin: 0 auto;
 	max-width: var(--fdn-content-width);
@@ -26,15 +30,17 @@
 	position: relative;
 	height: 4.5rem;
 	gap: 1.5rem;
-	border-bottom: 1px solid var(--fdn-border-colour);
-	margin: 0 0.5rem;
+}
+
+.fdn-header-container .fdn-header-line {
+	height: 1px;
+	background-color: var(--fdn-border-colour);
+	margin: 0;
+	border: none;
 }
 
 @media (min-width: 25rem) {
-	.fdn-header-content {
-		margin: 0 1rem;
-	}
-
+	.fdn-header-wrapper,
 	.fdn-header-drawer {
 		padding: 0 1rem;
 	}
@@ -45,10 +51,7 @@
 }
 
 @media (min-width: 15rem) {
-	.fdn-header-content {
-		margin: 0 1.5rem;
-	}
-
+	.fdn-header-wrapper,
 	.fdn-header-drawer {
 		padding: 0 1.5rem;
 	}

@@ -1,0 +1,150 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sizes */
+
+.fdn-button.sm {
+	--spacing-x: 0.75rem;
+	--spacing-y: 0.4rem;
+	--font-size: 0.8rem;
+}
+
+.fdn-button.md {
+	--spacing-x: var(--default-btn-spacing-x);
+	--spacing-y: var(--default-btn-spacing-y);
+	--font-size: var(--default-btn-font-size);
+}
+
+.fdn-button.lg {
+	--spacing-x: 2.4rem;
+	--spacing-y: 1rem;
+	--font-size: 2rem;
+}
+
+/* Colours */
+
+.fdn-button.red {
+	--primary-bg-colour: var(--fdn-colours-red);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-red-secondary);
+	--secondary-text-colour: var(--fdn-colours-red);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.orange {
+	--primary-bg-colour: var(--fdn-colours-orange);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-orange-secondary);
+	--secondary-text-colour: var(--fdn-colours-orange);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.yellow {
+	--primary-bg-colour: var(--fdn-colours-yellow);
+	--primary-text-colour: var(--fdn-colours-black);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-yellow-secondary);
+	--secondary-text-colour: var(--fdn-colours-yellow);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.green {
+	--primary-bg-colour: var(--fdn-colours-green);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-green-secondary);
+	--secondary-text-colour: var(--fdn-colours-green);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.blue {
+	--primary-bg-colour: var(--fdn-colours-blue);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-blue-secondary);
+	--secondary-text-colour: var(--fdn-colours-blue);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.purple {
+	--primary-bg-colour: var(--fdn-colours-purple);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-purple-secondary);
+	--secondary-text-colour: var(--fdn-colours-purple);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.pink {
+	--primary-bg-colour: var(--fdn-colours-pink);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-pink-secondary);
+	--secondary-text-colour: var(--fdn-colours-pink);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+.fdn-button.black {
+	--primary-bg-colour: var(--fdn-colours-black);
+	--primary-text-colour: var(--fdn-colours-white);
+	--primary-bg-active-colour-intensity: 0.2;
+
+	--secondary-bg-colour: var(--fdn-colours-black-secondary);
+	--secondary-text-colour: var(--fdn-colours-black);
+	--secondary-bg-active-colour-intensity: 0.2;
+}
+
+/* Utilities */
+
+.fdn-button.has-icon {
+	--btn-spacing-x: var(--btn-spacing-y);
+}
+
+.fdn-button.full-width {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}
+
+.fdn-button.no-x-padding {
+	--spacing-x: 0;
+}
+
+.fdn-button.no-y-padding {
+	--spacing-y: 0;
+}
+
+/* Coloured Types */
+
+.fdn-button.primary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black) {
+	--bg-colour: var(--primary-bg-colour);
+	--text-colour: var(--primary-text-colour);
+	--bg-active-colour-intensity: var(
+		--primary-bg-active-colour-intensity
+	);
+}
+
+.fdn-button.secondary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black) {
+	--bg-colour: var(--secondary-bg-colour);
+	--text-colour: var(--secondary-text-colour);
+	--bg-active-colour-intensity: var(
+		--secondary-bg-active-colour-intensity
+	);
+}
+
+.fdn-button.secondary:not(:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black)) {
+	--bg-action-colour: var(--fdn-colours-gray);
+	--bg-colour: transparent;
+	--text-colour: var(--fdn-colours-black);
+	--text-hover-colour: var(--fdn-colours-black);
+}

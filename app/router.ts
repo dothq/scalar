@@ -58,78 +58,6 @@ export const router: FastifyPluginCallback = async (
 
 	const errorHandlers = new Map<number, any>();
 
-	for await (const path of routes) {
-		const baselinePath = path.split(
-			resolve(process.cwd(), "app", "pages")
-		)[1];
-
-		const fastifyPath = baselinePath
-			.replace("index.tsx", "")
-			.replace(".tsx", "")
-			.replace(/\[[a-zA-Z0-9_]+\]/, (m) => {
-				return ":" + m.substring(1, m.length - 1);
-			});
-
-		if (fastifyPath.startsWith("@layout")) {
-			continue;
-		}
-
-		const handler = async (
-			req: FastifyRequest,
-			res: FastifyReply
-		) => {
-			const compiledPath = resolve(
-				pagesBuildDir,
-				baselinePath.substring(1).replace(".tsx", ".js")
-			);
-
-			const module = (
-				await import(windowsPrefix + compiledPath)
-			).default;
-
-			const Component = module.default;
-
-			if (typeof Component == "undefined") {
-				return res.send("");
-			}
-
-			const props = {
-				path: req.url,
-				params: req.params || {},
-				meta: module.meta || {},
-				url: new URL(req.url, `http://${req.hostname}`)
-			};
-
-			process.env.SCALAR_ORIGINAL_PATH = path.split(
-				process.cwd()
-			)[1];
-
-			const html = renderToString(
-				createElement(Layout, {
-					...props,
-					Component: () => createElement(Component, props)
-				})
-			);
-
-			res.header("content-type", "text/html");
-			res.send(addMPLLicenseHeader(html));
-		};
-
-		if (
-			parseInt(fastifyPath.split("/")[1]).toString() ==
-			fastifyPath.split("/")[1]
-		) {
-			const statusCode = parseInt(fastifyPath.split("/")[1]);
-
-			// We have a static HTML page specifically for 500 errors
-			if (statusCode == 500) return;
-
-			errorHandlers.set(statusCode, handler);
-		} else {
-			server.get(fastifyPath, handler);
-		}
-	}
-
 	const serverErrHandler = (
 		statusCode: number,
 		req: FastifyRequest,
@@ -168,6 +96,101 @@ export const router: FastifyPluginCallback = async (
 				);
 		}
 	};
+
+	for await (const path of routes) {
+		const baselinePath = path.split(
+			resolve(process.cwd(), "app", "pages")
+		)[1];
+
+		const fastifyPath = baselinePath
+			.replace("index.tsx", "")
+			.replace(".tsx", "")
+			.replace(/\[[a-zA-Z0-9_]+\]/, (m) => {
+				return ":" + m.substring(1, m.length - 1);
+			})
+			.replace(/\/$/, "");
+
+		if (fastifyPath.startsWith("@layout")) {
+			continue;
+		}
+
+		const handler = async (
+			req: FastifyRequest,
+			res: FastifyReply
+		) => {
+			try {
+				// await l10n.load(req);
+
+				const compiledPath = resolve(
+					pagesBuildDir,
+					baselinePath.substring(1).replace(".tsx", ".js")
+				);
+
+				const module = (
+					await import(windowsPrefix + compiledPath)
+				).default;
+
+				const Component = module.default;
+
+				if (typeof Component == "undefined") {
+					return res.send("");
+				}
+
+				const props = {
+					path: req.url,
+					params: req.params || {},
+					meta: module.meta || {},
+					url: new URL(req.url, `http://${req.hostname}`),
+					formData: new URLSearchParams(
+						(req.body as string) || ""
+					),
+					req,
+					res
+				};
+
+				process.env.SCALAR_ORIGINAL_PATH = path.split(
+					process.cwd()
+				)[1];
+
+				try {
+					const CompEl = createElement(Component, props);
+
+					const html = renderToString(
+						createElement(Layout, {
+							...props,
+							Component: () => CompEl
+						})
+					);
+
+					res.header("content-type", "text/html");
+					res.send(addMPLLicenseHeader(html));
+				} catch (e) {
+					console.error(e);
+
+					serverErrHandler(500, req, res);
+				}
+			} catch (e) {
+				console.error(e);
+
+				serverErrHandler(500, req, res);
+			}
+		};
+
+		if (
+			parseInt(fastifyPath.split("/")[1]).toString() ==
+			fastifyPath.split("/")[1]
+		) {
+			const statusCode = parseInt(fastifyPath.split("/")[1]);
+
+			// We have a static HTML page specifically for 500 errors
+			if (statusCode == 500) return;
+
+			errorHandlers.set(statusCode, handler);
+		} else {
+			server.get(fastifyPath, handler);
+			server.post(fastifyPath, handler);
+		}
+	}
 
 	server.setNotFoundHandler((req, res) =>
 		serverErrHandler(404, req, res)
