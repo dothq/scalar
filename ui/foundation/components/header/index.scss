@@ -11,6 +11,9 @@
 	width: 100%;
 	min-height: 4.5rem;
 	background-color: var(--fdn-colours-white);
+	position: sticky;
+	top: 0;
+	z-index: 999;
 }
 
 .fdn-header-wrapper {
