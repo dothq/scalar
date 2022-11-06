@@ -1,0 +1,76 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+# Lots of different components use this file so try not to remove stuff!
+
+name: Donations
+
+amounts: [5.00, 10.00, 25.00, 50.00, 100.00, 200.00]
+# Base currency is the currency used to convert to other currencies
+base_currency: eur # EUR is mostly stable so we're using it
+
+donation_hard_limit: "99999.99"
+
+tree_partners:
+    fiat:
+        id: ecologi
+        name: Ecologi
+        url: https://ecologi.com
+        per_tree_rate: 0.29 # in EUR
+        amount_to_plant: 5
+
+fiat:
+    enabled: true
+    currencies:
+        - id: gbp
+          name: Great British Pounds
+          symbol: £
+          format_amount: "{symbol}{amount}"
+          local_currency_of: ["en-GB"]
+
+        - id: eur
+          name: Euros
+          symbol: €
+          format_amount: "{symbol}{amount}"
+          local_currency_of: ["fr", "es"]
+
+        - id: usd
+          name: US Dollar
+          symbol: $US
+          format_amount: "{amount} {symbol}"
+          local_currency_of: ["en-US"]
+
+        - id: aud
+          name: Australian Dollar
+          symbol: $AU
+          format_amount: "{amount} {symbol}"
+          local_currency_of: ["en-AU"]
+
+        - id: sek
+          name: Swedish Krona
+          symbol: SEK
+          local_currency_of: ["sv"]
+
+crypto:
+    enabled: true
+    currencies:
+        - id: bitcoin
+          name: Bitcoin
+          symbol: ₿
+          local_currency_of: []
+
+        - id: bitcoin_cash
+          name: Bitcoin Cash
+          symbol: BCH
+          local_currency_of: []
+
+        - id: monero
+          name: Monero
+          symbol: XMR
+          local_currency_of: []
+
+        - id: ethereum
+          name: Ethereum
+          symbol: ETH
+          local_currency_of: []
