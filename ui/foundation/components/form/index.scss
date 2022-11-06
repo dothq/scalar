@@ -2,7 +2,64 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@use "helpers";
+
 @use "input";
 
 .fdn-form {
+}
+
+.fdn-field {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	gap: 0.8rem;
+}
+
+.fdn-field label {
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+.fdn-field .fdn-input-error {
+	display: none;
+	visibility: hidden;
+	line-height: 1.5;
+	color: var(--fdn-error-colour);
+	font-weight: 500;
+}
+
+.fdn-field .fdn-input {
+	border: 2px solid var(--fdn-border-colour);
+	border-radius: 1.5rem;
+	display: flex;
+	height: var(--max-height);
+	width: 100%;
+	max-height: var(--max-height);
+	position: relative;
+}
+
+.fdn-input .fdn-input-prefix,
+.fdn-input .fdn-input-suffix {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	font-weight: 500;
+}
+
+.fdn-input .fdn-input-prefix {
+	border-right: 2px solid var(--fdn-border-colour);
+	padding-inline-start: 2px;
+}
+
+.fdn-input .fdn-input-suffix {
+	border-left: 2px solid var(--fdn-border-colour);
+	padding-inline-end: 2px;
+}
+
+select.fdn-internal-input + .fdn-input-suffix {
+	position: absolute;
+	right: 0;
 }

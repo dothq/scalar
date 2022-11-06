@@ -21,17 +21,17 @@
 
 /* Has* */
 
-.fdn-field.has-prefix .fdn-input input {
+.fdn-field.has-prefix .fdn-input .fdn-internal-input {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
 
-.fdn-field.has-suffix .fdn-input input {
+.fdn-field.has-suffix .fdn-input .fdn-internal-input {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.fdn-field.has-error .fdn-input input {
+.fdn-field.has-error .fdn-input .fdn-internal-input {
 	outline: 2px solid var(--fdn-error-colour);
 }
 
