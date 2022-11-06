@@ -9,7 +9,6 @@
 	flex-direction: column;
 	width: fit-content;
 	gap: 0.8rem;
-	height: var(--max-height);
 }
 
 .fdn-field label {
@@ -17,13 +16,21 @@
 	font-size: 1rem;
 }
 
+.fdn-field .fdn-input-error {
+	display: none;
+	visibility: hidden;
+	line-height: 1.5;
+	color: var(--fdn-error-colour);
+	font-weight: 500;
+}
+
 .fdn-field .fdn-input {
 	border: 2px solid var(--fdn-border-colour);
 	border-radius: 1.5rem;
 	display: flex;
-	height: 100%;
+	height: var(--max-height);
 	width: 100%;
-	flex: 1;
+	max-height: var(--max-height);
 }
 
 .fdn-input .fdn-input-prefix,
@@ -67,5 +74,5 @@
 	outline: none;
 
 	--focus-outline-offset: 2px;
-	transition: 0.025s outline;
+	transition: 0.05s outline ease;
 }

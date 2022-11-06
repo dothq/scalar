@@ -12,6 +12,7 @@ const TextField = ({
 	outerId,
 	id,
 	size,
+	error,
 	...rest
 }: {
 	label?: any;
@@ -20,12 +21,14 @@ const TextField = ({
 	outerId?: string;
 	size?: FDNSize;
 	id?: string;
+	error?: string;
 } & JSXInternal.HTMLAttributes<HTMLInputElement>) => {
 	size = size ? size : ("md" as any);
 
 	const className = clsx("fdn-field", {
 		"has-prefix": !!prefix,
 		"has-suffix": !!suffix,
+		"has-error": !!error,
 		[size as string]: true
 	});
 
@@ -46,6 +49,8 @@ const TextField = ({
 					</span>
 				)}
 			</div>
+
+			<span className={"fdn-input-error"}>{error}</span>
 		</div>
 	);
 };

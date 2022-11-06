@@ -19,7 +19,7 @@
 	--max-height: 3.85rem; /* Calculated height from padding + font-sise */
 }
 
-/* Has prefix/suffix */
+/* Has* */
 
 .fdn-field.has-prefix .fdn-input input {
 	border-top-left-radius: 0;
@@ -29,4 +29,13 @@
 .fdn-field.has-suffix .fdn-input input {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+}
+
+.fdn-field.has-error .fdn-input input {
+	outline: 2px solid var(--fdn-error-colour);
+}
+
+.fdn-field.has-error .fdn-input-error {
+	display: flex;
+	visibility: visible;
 }
