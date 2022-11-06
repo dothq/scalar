@@ -19,6 +19,9 @@
 	width: fit-content;
 	gap: 0.5rem;
 
+	align-items: center;
+	justify-content: center;
+
 	position: relative;
 
 	padding-inline-start: var(--btn-spacing-x);
@@ -38,6 +41,8 @@
 	text-decoration: none;
 
 	transition: 0.2s background-color ease, 0.2s color ease;
+
+	max-height: var(--max-height);
 }
 
 .fdn-button:hover,

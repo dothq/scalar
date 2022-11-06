@@ -8,18 +8,21 @@
 	--spacing-x: 0.75rem;
 	--spacing-y: 0.4rem;
 	--font-size: 0.8rem;
+	--max-height: 1.85rem; /* Calculated height from padding + font-sise */
 }
 
 .fdn-button.md {
 	--spacing-x: var(--default-btn-spacing-x);
 	--spacing-y: var(--default-btn-spacing-y);
 	--font-size: var(--default-btn-font-size);
+	--max-height: 2.85rem; /* Calculated height from padding + font-sise */
 }
 
 .fdn-button.lg {
-	--spacing-x: 2.4rem;
-	--spacing-y: 1rem;
-	--font-size: 2rem;
+	--spacing-x: 1.8rem;
+	--spacing-y: 1.05rem;
+	--font-size: 1.5rem;
+	--max-height: 3.85rem; /* Calculated height from padding + font-sise */
 }
 
 /* Colours */

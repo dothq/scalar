@@ -1,0 +1,32 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sizes */
+
+.fdn-field.sm {
+	--font-size: 0.8rem;
+	--max-height: 1.85rem; /* Calculated height from padding + font-sise */
+}
+
+.fdn-field.md {
+	--font-size: var(--default-btn-font-size);
+	--max-height: 2.85rem; /* Calculated height from padding + font-sise */
+}
+
+.fdn-field.lg {
+	--font-size: 1.5rem;
+	--max-height: 3.85rem; /* Calculated height from padding + font-sise */
+}
+
+/* Has prefix/suffix */
+
+.fdn-field.has-prefix .fdn-input input {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.fdn-field.has-suffix .fdn-input input {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}

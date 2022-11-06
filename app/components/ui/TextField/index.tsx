@@ -11,17 +11,22 @@ const TextField = ({
 	suffix,
 	outerId,
 	id,
+	size,
 	...rest
 }: {
 	label?: any;
 	prefix?: any;
 	suffix?: any;
 	outerId?: string;
+	size?: FDNSize;
 	id?: string;
 } & JSXInternal.HTMLAttributes<HTMLInputElement>) => {
+	size = size ? size : ("md" as any);
+
 	const className = clsx("fdn-field", {
 		"has-prefix": !!prefix,
-		"has-suffix": !!suffix
+		"has-suffix": !!suffix,
+		[size as string]: true
 	});
 
 	return (

@@ -2,21 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@use "helpers";
+
 .fdn-field {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
 	gap: 0.8rem;
-}
-
-.fdn-field.has-prefix .fdn-input input {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.fdn-field.has-suffix .fdn-input input {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+	height: var(--max-height);
 }
 
 .fdn-field label {
@@ -55,17 +48,24 @@
 
 .fdn-input input {
 	appearance: none;
+
 	display: flex;
 	width: 100%;
 	height: 100%;
+
 	margin: 0;
+	padding-inline-start: 0.75rem;
+
 	background-color: transparent;
 	color: var(--fdn-colours-black);
+
+	font-size: var(--font-size);
 	font-weight: 600;
+
 	border-radius: 1.5rem;
 	border: none;
 	outline: none;
-	padding-inline-start: 0.75rem;
+
 	--focus-outline-offset: 2px;
 	transition: 0.025s outline;
 }
