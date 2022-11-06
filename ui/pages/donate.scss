@@ -76,3 +76,7 @@
 .donate-flow-container .fdn-card {
 	scroll-margin-top: 3rem;
 }
+
+.no-js .donate-amounts-grid .fdn-button {
+	display: none;
+}
