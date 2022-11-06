@@ -168,7 +168,7 @@ const DonationFront = () => {
 							<TextField
 								outerId={"custom_amount"}
 								id={"custom_amount_input"}
-								type={"num"}
+								type={"tel"}
 								prefix={"£"}
 							/>
 						</div>
