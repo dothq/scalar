@@ -5,11 +5,19 @@
 .donate-app {
 	width: 100%;
 	--donate-app-gutters: calc((100% - var(--fdn-content-width)) / 2);
+	scroll-behavior: smooth;
 }
 
 .donate-aside {
 	max-width: 25rem;
 	padding-inline-end: 1.5rem;
+}
+
+.donate-aside,
+.fdn-aside-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
 }
 
 .donate-aside .fdn-aside-header {
@@ -22,7 +30,7 @@
 	display: flex;
 	background-color: var(--fdn-colours-white);
 	padding-inline-start: var(--donate-app-gutters);
-	padding-block-start: 4rem;
+	padding-block: 4rem;
 }
 
 .donate-flow-container {
@@ -31,12 +39,10 @@
 	flex: 1;
 	width: 100%;
 	padding-inline-end: var(--donate-app-gutters);
-	padding-block-start: 4rem;
+	padding-block: 4rem;
 	padding-inline-start: 3rem;
-}
-
-.fdn-card {
-	flex: 1;
+	flex-direction: column;
+	gap: 3rem;
 }
 
 .donate-card-container {
@@ -51,4 +57,18 @@
 
 .donate-amounts-grid #custom_amount {
 	grid-column: span 2;
+}
+
+.donate-aside-text-container {
+	display: flex;
+	gap: 0.75rem;
+	flex-direction: column;
+}
+
+.donate-aside-text-container h3 {
+	line-height: 1.25;
+}
+
+.donate-aside-text-container p {
+	line-height: 1.75;
 }

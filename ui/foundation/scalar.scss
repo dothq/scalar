@@ -80,6 +80,7 @@
 
 html {
 	scrollbar-color: var(--fdn-border-colour) var(--fdn-colours-white);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -138,7 +139,7 @@ a {
 	text-decoration-thickness: 2px;
 }
 
-main a:not(.fdn-not-visited):visited {
+main a:not(.fdn-not-visited, .fdn-button):visited {
 	color: var(--fdn-colours-visited-link);
 }
 
