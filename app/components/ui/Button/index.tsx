@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import clsx from "clsx";
+import { createElement } from "preact";
 
 interface ButtonProps {
 	colour?: FDNColour;
@@ -31,10 +32,10 @@ const Button = ({
 		"full-width": fullwidth
 	});
 
-	return (
-		<a href={href} className={className}>
-			{children}
-		</a>
+	return createElement(
+		href ? "a" : "button",
+		{ href, className },
+		children
 	);
 };
 
