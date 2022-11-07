@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { FastifyRequest } from "fastify";
+import { parseAcceptLanguage } from "intl-parse-accept-language";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import Meta from "../components/common/Meta";
@@ -12,16 +14,22 @@ import { withCacheBuster } from "../utils/cache";
 const Layout = ({
 	meta,
 	url,
+	req,
 	Component
 }: {
 	meta: any;
 	url: URL;
+	req: FastifyRequest;
 	Component: any;
 }) => {
+	const lang = parseAcceptLanguage(
+		req.headers["accept-language"]
+	)[0];
+
 	return (
 		<>
 			<html
-				lang="en-GB"
+				lang={lang}
 				dir="ltr"
 				class="no-js"
 				prefix="og: https://ogp.me/ns#"

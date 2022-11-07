@@ -7,6 +7,7 @@
 name: Donations
 
 amounts: [5.00, 10.00, 25.00, 50.00, 100.00, 200.00]
+default_amount: 2 # Starting from 0, the index in the amounts
 # Base currency is the currency used to convert to other currencies
 base_currency: eur # EUR is mostly stable so we're using it
 
@@ -28,29 +29,35 @@ fiat:
           symbol: £
           format_amount: "{symbol}{amount}"
           local_currency_of: ["en-GB"]
+          rate: 1
 
         - id: eur
           name: Euros
           symbol: €
           format_amount: "{symbol}{amount}"
           local_currency_of: ["fr", "es"]
+          rate: 1
 
         - id: usd
           name: US Dollar
           symbol: $US
           format_amount: "{amount} {symbol}"
           local_currency_of: ["en-US"]
+          rate: 1
 
         - id: aud
           name: Australian Dollar
           symbol: $AU
           format_amount: "{amount} {symbol}"
           local_currency_of: ["en-AU"]
+          rate: 1
 
         - id: sek
           name: Swedish Krona
           symbol: SEK
+          format_amount: "{amount} {symbol}"
           local_currency_of: ["sv"]
+          rate: 10
 
 crypto:
     enabled: true

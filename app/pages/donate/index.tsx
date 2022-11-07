@@ -3,11 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { negotiateLanguages } from "@fluent/langneg";
+import clsx from "clsx";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { Giving } from "../../components/icons/Giving";
 import Aside from "../../components/ui/Aside";
 import Button from "../../components/ui/Button";
 import Card from "../../components/ui/Card";
+import ClientData from "../../components/ui/ClientData";
 import Select from "../../components/ui/Select";
 import TextField from "../../components/ui/TextField";
 import { PageProps } from "../../types";
@@ -24,19 +26,29 @@ export const meta = {
 const DonationFront = ({ req }: PageProps) => {
 	const data = getComponentConfig<any>("donations");
 
+	const allCurrencies = data.fiat.currencies.concat(
+		data.crypto.currencies
+	);
+
 	const allCurrencyLocales = data.fiat.currencies
 		.map((h: any) => h.local_currency_of)
 		.reduce((a: any, b: any) => a.concat(b));
 
-	let defaultCurrency = "unset";
+	let defaultCurrencyId = "unset";
+	let defaultCurrency = allCurrencies.find(
+		(c: any) => c.id == defaultCurrencyId
+	);
 
 	if (
 		(req.query as any).currency &&
-		data.fiat.currencies.find(
+		allCurrencies.find(
 			(c: any) => c.id == (req.query as any).currency
 		)
 	) {
-		defaultCurrency = (req.query as any).currency;
+		defaultCurrencyId = (req.query as any).currency;
+		defaultCurrency = allCurrencies.find(
+			(c: any) => c.id == defaultCurrencyId
+		);
 	} else {
 		defaultCurrency = data.fiat.currencies.find((c: any) =>
 			c.local_currency_of.includes(
@@ -51,18 +63,58 @@ const DonationFront = ({ req }: PageProps) => {
 					}
 				)[0]
 			)
-		).id;
+		);
+
+		defaultCurrencyId = defaultCurrency.id;
 	}
+
+	const getExchangedRate = (amount: number, rate: number) => {
+		return Math.round((amount * rate) / 5) * 5;
+	};
+
+	const defaultCurrencyExchangeRate = defaultCurrency.rate;
+
+	const subsAmountCurrSymbol = (
+		amount: number,
+		currencyId: string
+	) => {
+		const currency = allCurrencies.find(
+			(c: any) => c.id == currencyId
+		);
+
+		const ctx = {
+			...currency,
+			amount
+		};
+
+		const value = currency.format_amount.replace(
+			/{[a-z0-9_\- ]+}/g,
+			(m: any) => {
+				const key = m
+					.replace("{", "")
+					.replace("}", "")
+					.trim();
+
+				return ctx[key];
+			}
+		);
+
+		return value;
+	};
+
+	const formattedCurrency = (num: number) => {
+		return num.toLocaleString(
+			parseAcceptLanguage(req.headers["accept-language"]),
+			{
+				maximumFractionDigits: 2,
+				minimumFractionDigits: 2
+			}
+		);
+	};
 
 	return (
 		<>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `window.SCALAR_DONATION_CONFIG = JSON.parse(\"${JSON.stringify(
-						data
-					).replace(/"/g, '\\"')}\");`
-				}}
-			></script>
+			<ClientData id={"SCALAR_DONATION_CONFIG"} data={data} />
 			<section className={"fdn-stack donate-app"}>
 				<div className={"donate-aside-container"}>
 					<Aside
@@ -182,6 +234,7 @@ const DonationFront = ({ req }: PageProps) => {
 									let items: any = [
 										{
 											value: "unset",
+											disabled: true,
 											children:
 												"Choose a currency"
 										}
@@ -224,7 +277,8 @@ const DonationFront = ({ req }: PageProps) => {
 									items = items.map((c: any) => ({
 										...c,
 										selected:
-											defaultCurrency == c.value
+											defaultCurrencyId ==
+											c.value
 									}));
 
 									return items;
@@ -262,60 +316,105 @@ const DonationFront = ({ req }: PageProps) => {
 								"donate-card-container fdn-stack v gap-md"
 							}
 						>
-							<div className={"donate-amounts-grid"}>
-								<Button
-									type={"secondary"}
-									fullwidth
-									colour={"red"}
-								>
-									£5
-								</Button>
+							<div
+								className={clsx(
+									"donate-amounts-grid",
+									{
+										large:
+											defaultCurrencyExchangeRate >=
+											3
+									}
+								)}
+							>
+								{data.amounts.map(
+									(am: number, i: number) => {
+										const exchangedAmount =
+											getExchangedRate(
+												am,
+												defaultCurrencyExchangeRate
+											);
 
-								<Button
-									type={"secondary"}
-									fullwidth
-									colour={"red"}
-								>
-									£10
-								</Button>
+										let queryAmount = parseFloat(
+											(req.query as any).amount
+										);
 
-								<Button
-									type={"primary"}
-									fullwidth
-									colour={"red"}
-								>
-									£25
-								</Button>
-
-								<Button
-									type={"secondary"}
-									fullwidth
-									colour={"red"}
-								>
-									£50
-								</Button>
-
-								<Button
-									type={"secondary"}
-									fullwidth
-									colour={"red"}
-								>
-									£100
-								</Button>
-
-								<Button
-									type={"secondary"}
-									fullwidth
-									colour={"red"}
-								>
-									£200
-								</Button>
+										return (
+											<Button
+												type={
+													(
+														queryAmount
+															? exchangedAmount ==
+															  queryAmount
+															: i ==
+															  data.default_amount
+													)
+														? "primary"
+														: "secondary"
+												}
+												fullwidth
+												colour={"red"}
+												data-amount={
+													exchangedAmount
+												}
+												data-original-amount={
+													am
+												}
+											>
+												{subsAmountCurrSymbol(
+													exchangedAmount,
+													defaultCurrencyId
+												)}
+											</Button>
+										);
+									}
+								)}
 
 								<TextField
 									outerId={"custom_amount"}
 									id={"custom_amount_input"}
-									type={"tel"}
 									prefix={"£"}
+									autocomplete="off"
+									error={
+										(req.query as any).amount
+											? (req.query as any)
+													.amount <
+											  getExchangedRate(
+													data.amounts[0],
+													defaultCurrencyExchangeRate
+											  )
+												? `Sorry, to combat fraud the minimum amount for donations is ${formattedCurrency(
+														getExchangedRate(
+															data
+																.amounts[0],
+															defaultCurrencyExchangeRate
+														)
+												  )}.`
+												: ""
+											: ""
+									}
+									value={
+										data.amounts
+											.map((am: number) => {
+												return getExchangedRate(
+													am,
+													defaultCurrencyExchangeRate
+												);
+											})
+											.find(
+												(am: number) =>
+													am ==
+													parseFloat(
+														(
+															req.query as any
+														).amount
+													)
+											)
+											? ""
+											: parseFloat(
+													(req.query as any)
+														.amount
+											  )
+									}
 								/>
 							</div>
 						</div>

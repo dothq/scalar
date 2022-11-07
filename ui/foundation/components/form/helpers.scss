@@ -21,12 +21,12 @@
 
 /* Has* */
 
-.fdn-field.has-prefix .fdn-input .fdn-internal-input {
+.fdn-field.has-prefix .fdn-input .fdn-internal-input:not(select) {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
 
-.fdn-field.has-suffix .fdn-input .fdn-internal-input {
+.fdn-field.has-suffix .fdn-input .fdn-internal-input:not(select) {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }

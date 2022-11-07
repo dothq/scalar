@@ -51,12 +51,16 @@
 
 .donate-amounts-grid {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(var(--grid-cols, 4), 1fr);
 	gap: 1rem;
 }
 
+.donate-amounts-grid.large {
+	--grid-cols: 3;
+}
+
 .donate-amounts-grid #custom_amount {
-	grid-column: span 2;
+	grid-column: span var(--grid-cols, 2);
 }
 
 .donate-aside-text-container {
