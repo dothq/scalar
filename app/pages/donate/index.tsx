@@ -404,7 +404,8 @@ const DonationFront = async ({ req, res }: PageProps) => {
 								/>
 
 								<Button
-									href={"#step-2"}
+									id={"donate-step-2-next-btn"}
+									href={"#step-3"}
 									type={"primary"}
 									colour={"blue"}
 								>
@@ -574,6 +575,7 @@ const DonationFront = async ({ req, res }: PageProps) => {
 
 					<Card
 						id={"step-3"}
+						className={"fdn-disabled"}
 						header={
 							<>
 								<Giving colour="red" size={2.625} />
@@ -586,6 +588,14 @@ const DonationFront = async ({ req, res }: PageProps) => {
 									"fdn-stack h flex-1 x-end gap-md"
 								}
 							>
+								<Button
+									id={"donate-step-3-previous-btn"}
+									href={"#step-2"}
+									type={"secondary"}
+								>
+									Previous
+								</Button>
+
 								<Button
 									href={"#step-4"}
 									type={"primary"}

@@ -374,3 +374,17 @@ $("#donate-payment-method-card-number").addEventListener(
 		);
 	}
 );
+
+$("#donate-step-2-next-btn").addEventListener("click", (e) => {
+	if (paymentState.get("amount")) {
+		$("#step-1").classList.add("fdn-disabled");
+		$("#step-2").classList.add("fdn-disabled");
+		$("#step-3").classList.remove("fdn-disabled");
+	}
+});
+
+$("#donate-step-3-previous-btn").addEventListener("click", (e) => {
+	$("#step-1").classList.remove("fdn-disabled");
+	$("#step-2").classList.remove("fdn-disabled");
+	$("#step-3").classList.add("fdn-disabled");
+});
