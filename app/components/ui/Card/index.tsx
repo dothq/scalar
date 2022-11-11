@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import clsx from "clsx";
 import { JSXInternal } from "preact/src/jsx";
 
 const Card = ({
@@ -14,8 +15,10 @@ const Card = ({
 	footer?: any;
 	children?: any;
 } & JSXInternal.HTMLAttributes<HTMLDivElement>) => {
+	const className = clsx("fdn-card", rest.className);
+
 	return (
-		<div {...rest} className={"fdn-card"}>
+		<div {...rest} className={className}>
 			{header && (
 				<header className={"fdn-card-header"}>
 					{header}
