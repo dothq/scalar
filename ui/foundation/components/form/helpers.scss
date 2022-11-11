@@ -31,6 +31,10 @@
 	border-bottom-right-radius: 0;
 }
 
+.fdn-field:not(.has-prefix) .fdn-internal-input:not(select) {
+	padding-inline-start: 1rem;
+}
+
 .fdn-field.has-error .fdn-input .fdn-internal-input {
 	outline: 2px solid var(--fdn-error-colour);
 }

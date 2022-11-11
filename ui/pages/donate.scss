@@ -84,3 +84,14 @@
 .no-js .donate-amounts-grid .fdn-button {
 	display: none;
 }
+
+.donate-amounts-grid .fdn-button.primary,
+#donate-pay-methods .fdn-button.primary {
+	pointer-events: none;
+}
+
+.donate-payment-method-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}

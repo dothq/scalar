@@ -38,3 +38,7 @@
 .fdn-icon.black {
 	--bg-colour: var(--fdn-colours-black);
 }
+
+.fdn-icon.current-color {
+	--bg-colour: currentColor;
+}

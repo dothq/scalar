@@ -140,9 +140,14 @@
 .fdn-button.secondary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black) {
 	--bg-colour: var(--secondary-bg-colour);
 	--text-colour: var(--secondary-text-colour);
-	--bg-active-colour-intensity: var(
-		--secondary-bg-active-colour-intensity
-	);
+	--bg-action-colour: transparent;
+	--text-hover-colour: var(--secondary-text-colour);
+	--bg-before-colour: var(--text-colour);
+	--border-colour: transparent;
+}
+
+.fdn-button.secondary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black):hover {
+	--border-colour: var(--text-colour);
 }
 
 .fdn-button.secondary:not(:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black)) {

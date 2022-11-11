@@ -7,7 +7,7 @@ import { Menu } from "./Menu";
 
 export interface IconProps {
 	size?: number;
-	colour?: FDNColour;
+	colour?: FDNColour | "current-color";
 	ariaLabel?: string;
 }
 
@@ -15,9 +15,11 @@ export const Icon = ({
 	children,
 	size,
 	colour,
-	ariaLabel
+	ariaLabel,
+	viewBox
 }: {
 	children: any;
+	viewBox?: any;
 } & IconProps) => {
 	const className = clsx("fdn-icon", {
 		[colour || "black"]: true
@@ -29,7 +31,7 @@ export const Icon = ({
 		<svg
 			width={s * 16}
 			height={s * 16}
-			viewBox={`0 0 16 16`}
+			viewBox={viewBox ? viewBox : `0 0 16 16`}
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			className={className}

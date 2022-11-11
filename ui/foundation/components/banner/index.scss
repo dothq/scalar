@@ -1,0 +1,22 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@use "helpers";
+
+.fdn-banner {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	background: var(--bg-colour);
+	color: var(--text-colour);
+	padding: 2rem;
+	gap: 1.5rem;
+	border-radius: 1rem;
+}
+
+.fdn-banner p {
+	color: inherit;
+	flex: 1;
+}

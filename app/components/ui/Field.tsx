@@ -43,8 +43,8 @@ const Field = ({
 	});
 
 	return (
-		<div id={outerId} className={className}>
-			{label && <label htmlFor={id}>{label}</label>}
+		<div id={outerId} className={className} data-type={rest.type}>
+			{label && <label for={id}>{label}</label>}
 
 			<div className={"fdn-input"}>
 				{prefix && (

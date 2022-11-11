@@ -43,3 +43,8 @@
 	font-size: 1.125rem;
 	font-weight: 500;
 }
+
+.fdn-main-content p strong,
+.fdn-main-content p b {
+	color: var(--fdn-colours-black);
+}

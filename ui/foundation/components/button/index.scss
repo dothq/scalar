@@ -40,7 +40,8 @@
 
 	text-decoration: none;
 
-	transition: 0.2s background-color ease, 0.2s color ease;
+	transition: 0.2s background-color ease, 0.2s color ease,
+		0.2s border ease;
 
 	max-height: var(--max-height);
 }
@@ -74,4 +75,9 @@
 
 .fdn-button:active::before {
 	opacity: var(--bg-active-colour-intensity, 0.1);
+}
+
+:root:not(.no-js) .fdn-button.no-js,
+:root.no-js .fdn-button.no-js + .fdn-button:not(.no-js) {
+	display: none;
 }

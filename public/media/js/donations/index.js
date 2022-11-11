@@ -5,26 +5,60 @@
 const $ = (...args) => document.querySelector(args);
 const $$ = (...args) => document.querySelectorAll(args);
 
-const inputState = new Map();
-const paymentState = new Map();
+const allCurrencies = (
+	window.SCALAR_DONATION_CONFIG.fiat.enabled
+		? window.SCALAR_DONATION_CONFIG.fiat.currencies
+		: []
+).concat(
+	window.SCALAR_DONATION_CONFIG.crypto.enabled
+		? window.SCALAR_DONATION_CONFIG.crypto.currencies
+		: []
+);
 
-new URL(window.location.href).searchParams.forEach((v, k) => {
-	if (k == "amount") {
-		v = parseFloat(v);
+const allAmountsInGrid = Array.from(
+	$$(".donate-amounts-grid > .fdn-button")
+);
+
+const allMethods = Array.from(
+	$$("#donate-pay-methods > .fdn-button")
+);
+
+const getCookie = (name) => {
+	const cookies = document.cookie.split(";");
+
+	for (var i = 0; i < cookies.length; i++) {
+		const cookiePair = cookies[i].split("=");
+
+		if (name == cookiePair[0].trim()) {
+			return decodeURIComponent(cookiePair[1]);
+		}
 	}
 
-	paymentState.set(k, v);
-});
+	return null;
+};
 
-const setError = (el, message) => {
-	removeError(el);
+const setCookie = (name, value, days) => {
+	const d = new Date();
+	d.setTime(
+		days < 0 ? -1 : d.getTime() + days * 24 * 60 * 60 * 1000
+	);
 
-	const fdnField = el.parentNode.parentNode;
+	const expires = "expires=" + d.toUTCString();
+	document.cookie = name + "=" + value + ";" + expires + ";path=/";
+};
 
-	fdnField.classList.add("has-error");
-	fdnField.getElementsByClassName(
-		"fdn-input-error"
-	)[0].textContent = message;
+const allCookies = () => {
+	const pairs = document.cookie.split(";");
+	const cookies = {};
+
+	for (var i = 0; i < pairs.length; i++) {
+		const pair = pairs[i].split("=");
+		cookies[(pair[0] + "").trim()] = decodeURIComponent(
+			pair.slice(1).join("=")
+		);
+	}
+
+	return cookies;
 };
 
 const removeError = (el) => {
@@ -32,41 +66,6 @@ const removeError = (el) => {
 
 	fdnField.classList.remove("has-error");
 };
-
-const formattedCurrency = (num) => {
-	return num.toLocaleString(document.documentElement.lang, {
-		maximumFractionDigits: 2,
-		minimumFractionDigits: 2
-	});
-};
-
-const getPriceInCurrency = (amount, currency) => {
-	const currencyExchangeRate =
-		window.SCALAR_DONATION_CONFIG.fiat.currencies
-			.concat(window.SCALAR_DONATION_CONFIG.crypto.currencies)
-			.find((c) => c.id == currency).rate;
-
-	return amount * currencyExchangeRate;
-};
-
-const updateURL = () => {
-	const url = new URL(window.location.href);
-
-	paymentState.forEach((v, k) => {
-		console.log(v, k);
-		url.searchParams.set(k, v.toString());
-	});
-
-	window.history.replaceState(
-		{},
-		"",
-		url.href.split(url.origin)[1]
-	);
-};
-
-const allAmountsInGrid = Array.from(
-	$(".donate-amounts-grid").querySelectorAll(".fdn-button.red")
-);
 
 const setAmount = (index, value) => {
 	allAmountsInGrid.forEach((btn, i) => {
@@ -95,12 +94,107 @@ const setAmount = (index, value) => {
 		inputState.set($("#custom_amount_input"), "");
 		removeError($("#custom_amount_input"));
 	}
+};
 
-	updateURL();
+const setPaymentMethod = (el) => {
+	const id = el.getAttribute("data-method-id");
+
+	allMethods.forEach((m) =>
+		m.classList.replace("primary", "secondary")
+	);
+	el.classList.replace("secondary", "primary");
+
+	paymentState.set("payment_method", id);
+
+	$$(".donate-payment-method-container").forEach(
+		(c) => (c.hidden = true)
+	);
+	$(`#donate-pay-method-${id}`).hidden = false;
+};
+
+const inputState = new Map();
+const paymentState = new Map();
+
+paymentState.set(
+	"currency",
+	getCookie("currency")
+		? getCookie("currency")
+		: $("#currency_input").value
+);
+
+if (allAmountsInGrid.find((e) => e.classList.contains("primary"))) {
+	const amountIndex = allAmountsInGrid.findIndex((e) =>
+		e.classList.contains("primary")
+	);
+
+	setAmount(amountIndex);
+}
+
+new URL(window.location.href).searchParams.forEach((v, k) => {
+	if (!paymentState.has(k)) {
+		if (k == "amount") v = parseFloat(v);
+
+		paymentState.set(k, v);
+	}
+});
+
+const currencyIsCrypto =
+	!!window.SCALAR_DONATION_CONFIG.crypto.currencies.find(
+		(c) => c.id == paymentState.get("currency")
+	);
+
+const setError = (el, message) => {
+	removeError(el);
+
+	const fdnField = el.parentNode.parentNode;
+
+	fdnField.classList.add("has-error");
+	fdnField.getElementsByClassName(
+		"fdn-input-error"
+	)[0].textContent = message;
+};
+
+const formattedCurrency = (num) => {
+	return num.toLocaleString(document.documentElement.lang, {
+		minimumFractionDigits: 2,
+		maximumFractionDigits: currencyIsCrypto ? 10 : 2
+	});
+};
+
+const getPriceInCurrency = (amount, currency) => {
+	const currencyExchangeRate = allCurrencies.find(
+		(c) => c.id == currency
+	).rate;
+
+	return amount * currencyExchangeRate;
 };
 
 const resetAmount = () => {
 	setAmount(window.SCALAR_DONATION_CONFIG.default_amount);
+};
+
+const subsAmountCurrSymbol = (amount, currencyId) => {
+	const currency = allCurrencies.find(
+		(c) =>
+			c.id ==
+			(currencyId ? currencyId : paymentState.get("currency"))
+	);
+
+	const ctx = {
+		...currency,
+		amount
+	};
+
+	const value = currency.format_amount.replace(
+		/{[a-z0-9_\- ]+}/g,
+		(m) => {
+			const key = m.replace("{", "").replace("}", "").trim();
+
+			return ctx[key];
+		}
+	);
+
+	return value;
 };
 
 // Set inputs
@@ -119,32 +213,65 @@ if (
 
 $("#currency_input").addEventListener("change", (e) => {
 	paymentState.set("currency", e.target.value);
-	updateURL();
+	setCookie("currency", paymentState.get("currency"), 30);
+	window.location.hash = "#step-1";
 
 	window.location.reload();
-	// paymentState.set("currency", e.target.value);
-	// updateURL();
+});
 
-	// allAmountsInGrid.forEach((am) => {
-	// 	const newPrice = getPriceInCurrency(
-	// 		parseFloat(am.getAttribute("data-amount")),
-	// 		e.target.value
-	// 	);
+const updateCryptoExNote = () => {
+	if (!window.SCALAR_DONATION_CONFIG.crypto.enabled) return;
 
-	// 	am.textContent = getPriceInCurrency(
-	// 		parseFloat(am.getAttribute("data-amount")),
-	// 		e.target.value
-	// 	);
-	// });
+	const currency =
+		window.SCALAR_DONATION_CONFIG.crypto.currencies.find(
+			(c) => c.id == paymentState.get("currency")
+		);
+	const value = $("#custom_amount_input").value.replace(/,/g, "");
+	const currentAmount = parseFloat(value ? value : 1);
 
-	// removeError($("#custom_amount_input"));
-	// $("#custom_amount_input").value = "";
+	$(
+		"#donate-crypto-exchange-note"
+	).textContent = `${subsAmountCurrSymbol(
+		formattedCurrency(currentAmount, 10)
+	)} ~ ${subsAmountCurrSymbol(
+		formattedCurrency(
+			parseFloat((currentAmount / currency.rate).toFixed(2))
+		),
+		window.SCALAR_DONATION_CONFIG.base_currency
+	)}`;
+};
 
-	// resetAmount();
+if (currencyIsCrypto) {
+	updateCryptoExNote();
+}
+
+$("#custom_amount_input").addEventListener("keyup", (e) => {
+	if (
+		window.SCALAR_DONATION_CONFIG.crypto.enabled &&
+		window.SCALAR_DONATION_CONFIG.crypto.currencies.find(
+			(c) => c.id == paymentState.get("currency")
+		)
+	) {
+		const currentAmount = parseFloat(e.target.value);
+
+		if (currentAmount == 0) return;
+
+		updateCryptoExNote();
+	}
 });
 
 $("#custom_amount_input").addEventListener("blur", (e) => {
+	e.target.value = e.target.value.trim();
+
 	if (!e.target.value.length) {
+		if (
+			!allAmountsInGrid.filter((a) =>
+				a.classList.contains("primary")
+			).length
+		) {
+			resetAmount();
+		}
+
 		removeError(e.target);
 		inputState.set(e.target, e.target.value);
 
@@ -180,15 +307,15 @@ $("#custom_amount_input").addEventListener("blur", (e) => {
 	if (parsed >= hardLimit) {
 		return setError(
 			e.target,
-			`Sorry, we cannot process any donations over ${formattedCurrency(
-				hardLimit
+			`Sorry, we cannot process any donations over ${subsAmountCurrSymbol(
+				formattedCurrency(hardLimit)
 			)} at the moment.`
 		);
 	} else if (parsed < lowestAllowed) {
 		return setError(
 			e.target,
-			`Sorry, to combat fraud the minimum amount for donations is ${formattedCurrency(
-				lowestAllowed
+			`Sorry, to combat fraud the minimum amount for donations is ${subsAmountCurrSymbol(
+				formattedCurrency(lowestAllowed)
 			)}.`
 		);
 	} else {
@@ -203,13 +330,13 @@ $("#custom_amount_input").addEventListener("blur", (e) => {
 			}
 		});
 
+	updateCryptoExNote();
 	paymentState.set("amount", parsed);
 	setAmount(-1);
-	updateURL();
 });
 
 $("#custom_amount_input").addEventListener("focus", (e) => {
-	if (inputState.has(e.target)) {
+	if (inputState.has(e.target) && !currencyIsCrypto) {
 		e.target.value = inputState.get(e.target);
 	}
 });
@@ -223,4 +350,27 @@ $$(".donate-flow-form").forEach((f) =>
 		e.preventDefault();
 		e.stopPropagation();
 	})
+);
+
+allMethods.forEach((btn) => {
+	btn.addEventListener("click", (e) => setPaymentMethod(e.target));
+});
+
+$("#donate-payment-method-card-number").addEventListener(
+	"input",
+	(e) => {
+		const trimmed = e.target.value
+			.replace(/[^0-9 ]+/, "")
+			.trim()
+			.replace(/\s/g, "");
+
+		if (e.target.value.length >= 19)
+			return (e.target.value = e.target.value.substring(0, 19));
+
+		e.target.value = trimmed;
+
+		e.target.value = (e.target.value.match(/.{1,4}/g) || []).join(
+			" "
+		);
+	}
 );

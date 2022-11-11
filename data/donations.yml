@@ -40,15 +40,15 @@ fiat:
 
         - id: usd
           name: US Dollar
-          symbol: $US
-          format_amount: "{amount} {symbol}"
+          symbol: US$
+          format_amount: "{symbol}{amount}"
           local_currency_of: ["en-US"]
           rate: 1
 
         - id: aud
           name: Australian Dollar
-          symbol: $AU
-          format_amount: "{amount} {symbol}"
+          symbol: AU$
+          format_amount: "{symbol}{amount}"
           local_currency_of: ["en-AU"]
           rate: 1
 
@@ -60,28 +60,32 @@ fiat:
           rate: 10
 
 crypto:
-    enabled: true
+    enabled: false
     currencies:
         - id: bitcoin
           name: Bitcoin
           symbol: BTC
           format_amount: "{amount} {symbol}"
           local_currency_of: []
+          rate: 0.000048
 
         - id: bitcoin_cash
           name: Bitcoin Cash
           symbol: BCH
           format_amount: "{amount} {symbol}"
           local_currency_of: []
+          rate: 0.0085
 
         - id: monero
           name: Monero
           symbol: XMR
           format_amount: "{amount} {symbol}"
           local_currency_of: []
+          rate: 0.0065
 
         - id: ethereum
           name: Ethereum
           symbol: ETH
           format_amount: "{amount} {symbol}"
           local_currency_of: []
+          rate: 0.00064

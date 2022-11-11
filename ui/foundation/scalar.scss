@@ -19,6 +19,7 @@
 @use "components/form";
 @use "components/aside";
 @use "components/card";
+@use "components/banner";
 
 /* Globals */
 :root {
@@ -54,8 +55,11 @@
 
 	/* Border colours */
 	--fdn-border-colour: hsl(0, 0%, 87%);
+	--fdn-border-secondary-colour: hsl(0, 0%, 77%);
 
 	/* State colours */
+	--fdn-info-colour: var(--fdn-colours-blue);
+	--fdn-warn-colour: var(--fdn-colours-yellow);
 	--fdn-success-colour: var(--fdn-colours-green);
 	--fdn-error-colour: var(--fdn-colours-red);
 
@@ -170,4 +174,10 @@ hr.fdn-separator {
 .fdn-separator.v {
 	width: 1px;
 	height: 100%;
+}
+
+.fdn-disabled {
+	opacity: 0.5 !important;
+	pointer-events: none !important;
+	border: 1px solid var(--fdn-border-secondary-colour);
 }

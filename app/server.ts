@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import fastifyCookie from "@fastify/cookie";
 import fastifyFormbody from "@fastify/formbody";
 import { fastify } from "fastify";
 import { v1 } from "./api/v1";
@@ -11,6 +12,7 @@ export const server = fastify({ logger: {} });
 
 export const createHttpServer = () => {
 	server.register(fastifyFormbody);
+	server.register(fastifyCookie);
 
 	server.register(router, { prefix: "/" });
 	server.register(v1, { prefix: "/api/v1" });

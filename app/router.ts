@@ -12,7 +12,7 @@ import { readFileSync } from "fs";
 import glob from "glob";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { resolve } from "path";
-import { createElement } from "preact";
+import { cloneElement, createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
 import { URL } from "url";
 import { addMPLLicenseHeader } from "./utils/html";
@@ -132,6 +132,9 @@ export const router: FastifyPluginCallback = async (
 
 				const Component = module.default;
 
+				const isAsync =
+					Component.constructor.name === "AsyncFunction";
+
 				if (typeof Component == "undefined") {
 					return res.send("");
 				}
@@ -153,7 +156,17 @@ export const router: FastifyPluginCallback = async (
 				)[1];
 
 				try {
-					const CompEl = createElement(Component, props);
+					let CompEl: any = null;
+
+					if (isAsync) {
+						const Comp = await Component(props);
+
+						console.log(Comp);
+
+						CompEl = cloneElement(Comp);
+					} else {
+						CompEl = createElement(Component, props);
+					}
 
 					const html = renderToString(
 						createElement(Layout, {

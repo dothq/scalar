@@ -2,8 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { FastifyPluginCallback } from "fastify";
+import Field, { FieldProps } from "../Field";
 
-export const v1: FastifyPluginCallback = (server, opts, done) => {
-	done();
+const Radio = ({ ...rest }: FieldProps) => {
+	return (
+		<Field {...rest} type={"radio"}>
+			<input />
+		</Field>
+	);
 };
+
+export default Radio;

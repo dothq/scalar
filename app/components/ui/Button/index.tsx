@@ -9,9 +9,10 @@ import { JSXInternal } from "preact/src/jsx";
 interface ButtonProps {
 	colour?: FDNColour;
 	size?: FDNSize;
-	children?: string;
+	children?: any;
 	fullwidth?: boolean;
 	href?: any;
+	noJS?: boolean;
 	type?: "primary" | "secondary";
 }
 
@@ -22,6 +23,7 @@ const Button = ({
 	fullwidth,
 	href,
 	type,
+	noJS,
 	...rest
 }: JSXInternal.HTMLAttributes<HTMLAnchorElement> & ButtonProps) => {
 	type = type ? type : "primary";
@@ -33,15 +35,23 @@ const Button = ({
 			[size as string]: true,
 			[colour as string]: true,
 			[type as string]: true,
+			"no-js": noJS,
 			"full-width": fullwidth
 		},
 		(rest as any).className || ""
 	);
 
 	return createElement(
-		href ? "a" : "button",
-		{ ...rest, href, className },
-		children
+		noJS ? "input" : href ? "a" : "button",
+		{
+			...rest,
+			href,
+			className,
+			...(noJS
+				? { type: "submit", value: children.toString() }
+				: {})
+		},
+		noJS ? [] : children
 	);
 };
 

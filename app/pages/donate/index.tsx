@@ -5,12 +5,22 @@
 import { negotiateLanguages } from "@fluent/langneg";
 import clsx from "clsx";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
+import { Amex } from "../../components/icons/cards/Amex";
+import { Discover } from "../../components/icons/cards/Discover";
+import { Mastercard } from "../../components/icons/cards/Mastercard";
+import { Visa } from "../../components/icons/cards/Visa";
 import { Giving } from "../../components/icons/Giving";
+import { Institution } from "../../components/icons/Institution";
+import { JavaScript } from "../../components/icons/JavaScript";
+import { PaymentCard } from "../../components/icons/PaymentCard";
 import Aside from "../../components/ui/Aside";
+import Banner from "../../components/ui/Banner";
 import Button from "../../components/ui/Button";
 import Card from "../../components/ui/Card";
 import ClientData from "../../components/ui/ClientData";
+import Radio from "../../components/ui/Radio";
 import Select from "../../components/ui/Select";
+import Separator from "../../components/ui/Separator";
 import TextField from "../../components/ui/TextField";
 import { PageProps } from "../../types";
 import { getComponentConfig } from "../../utils/data";
@@ -23,12 +33,12 @@ export const meta = {
 	css: ["donate.css"]
 };
 
-const DonationFront = ({ req }: PageProps) => {
+const DonationFront = async ({ req, res }: PageProps) => {
 	const data = getComponentConfig<any>("donations");
 
-	const allCurrencies = data.fiat.currencies.concat(
-		data.crypto.currencies
-	);
+	const allCurrencies = (
+		data.fiat.enabled ? data.fiat.currencies : []
+	).concat(data.crypto.enabled ? data.crypto.currencies : []);
 
 	const allCurrencyLocales = data.fiat.currencies
 		.map((h: any) => h.local_currency_of)
@@ -39,18 +49,8 @@ const DonationFront = ({ req }: PageProps) => {
 		(c: any) => c.id == defaultCurrencyId
 	);
 
-	if (
-		(req.query as any).currency &&
-		allCurrencies.find(
-			(c: any) => c.id == (req.query as any).currency
-		)
-	) {
-		defaultCurrencyId = (req.query as any).currency;
-		defaultCurrency = allCurrencies.find(
-			(c: any) => c.id == defaultCurrencyId
-		);
-	} else {
-		defaultCurrency = data.fiat.currencies.find((c: any) =>
+	const getLocalCurrency = () => {
+		return data.fiat.currencies.find((c: any) =>
 			c.local_currency_of.includes(
 				negotiateLanguages(
 					parseAcceptLanguage(
@@ -64,9 +64,25 @@ const DonationFront = ({ req }: PageProps) => {
 				)[0]
 			)
 		);
+	};
+
+	if (
+		req.cookies.currency &&
+		allCurrencies.find((c: any) => c.id == req.cookies.currency)
+	) {
+		defaultCurrencyId = req.cookies.currency;
+		defaultCurrency = allCurrencies.find(
+			(c: any) => c.id == defaultCurrencyId
+		);
+	} else {
+		defaultCurrency = getLocalCurrency();
 
 		defaultCurrencyId = defaultCurrency.id;
 	}
+
+	const defaultCurrencyIsCrypto = !!data.crypto.currencies.find(
+		(c: any) => c.id == defaultCurrencyId
+	);
 
 	const getExchangedRate = (amount: number, rate: number) => {
 		return Math.round((amount * rate) / 5) * 5;
@@ -74,13 +90,22 @@ const DonationFront = ({ req }: PageProps) => {
 
 	const defaultCurrencyExchangeRate = defaultCurrency.rate;
 
+	const defaultCurrencyCodeSide =
+		defaultCurrency.format_amount.indexOf("{amount}") >=
+		defaultCurrency.format_amount.indexOf("{symbol}")
+			? "left"
+			: "right";
+
 	const subsAmountCurrSymbol = (
-		amount: number,
+		amount: any,
 		currencyId: string
 	) => {
 		const currency = allCurrencies.find(
 			(c: any) => c.id == currencyId
 		);
+
+		if (!currency)
+			throw new Error(`No currency found by ${currencyId}.`);
 
 		const ctx = {
 			...currency,
@@ -192,11 +217,74 @@ const DonationFront = ({ req }: PageProps) => {
 									.
 								</p>
 							</div>
+
+							<div
+								className={
+									"donate-aside-text-container"
+								}
+							>
+								<h3>
+									How long will my payment
+									information be stored?
+								</h3>
+								<p>
+									Your payment information will be
+									stored for the duration of your
+									donation. For one-time donations,
+									your payment information will be
+									stored for up to 14 days to allow
+									for refunds to take place. For
+									monthly donations, your payment
+									information will be stored until
+									cancelled.
+								</p>
+							</div>
+
+							<div
+								className={
+									"donate-aside-text-container"
+								}
+							>
+								<h3>Am I eligible for a refund?</h3>
+								<p>
+									Yes, after you have made your
+									donation you should make note of
+									the URL or refund token given to
+									you. You are entitled to a refund
+									up to 14 days, after that we
+									cannot process your refund.
+									Donations made through
+									cryptocurrencies are not eligible
+									for refunds.
+								</p>
+							</div>
+
+							<div
+								className={
+									"donate-aside-text-container"
+								}
+							>
+								<h3>Any more questions?</h3>
+								<p>
+									We are able to answer your burning
+									questions on donations in any of
+									our official communication
+									channels.
+								</p>
+							</div>
 						</>
 					</Aside>
 				</div>
 
 				<div className={"donate-flow-container"}>
+					<noscript>
+						<Banner type={"warn"} icon={<JavaScript />}>
+							We're sorry, the donation page needs
+							JavaScript to be enabled in order to
+							function at the moment.
+						</Banner>
+					</noscript>
+
 					<Card
 						id={"step-1"}
 						header={
@@ -256,14 +344,16 @@ const DonationFront = ({ req }: PageProps) => {
 										);
 									}
 
-									items.push({
-										disabled: true
-									});
-
 									if (
 										data.crypto.enabled &&
 										data.crypto.currencies
 									) {
+										if (data.fiat.enabled) {
+											items.push({
+												disabled: true
+											});
+										}
+
 										data.crypto.currencies.map(
 											(c: any) => {
 												items.push({
@@ -301,8 +391,20 @@ const DonationFront = ({ req }: PageProps) => {
 									"fdn-stack h flex-1 x-end gap-md"
 								}
 							>
+								<Radio
+									id={"frequency_one_time"}
+									name={"frequency"}
+									label={"One-time"}
+									checked
+								/>
+								<Radio
+									id={"frequency_monthly"}
+									name={"frequency"}
+									label={"Monthly"}
+								/>
+
 								<Button
-									href={"#step-3"}
+									href={"#step-2"}
 									type={"primary"}
 									colour={"blue"}
 								>
@@ -359,6 +461,9 @@ const DonationFront = ({ req }: PageProps) => {
 												data-original-amount={
 													am
 												}
+												hidden={
+													defaultCurrencyIsCrypto
+												}
 											>
 												{subsAmountCurrSymbol(
 													exchangedAmount,
@@ -372,7 +477,16 @@ const DonationFront = ({ req }: PageProps) => {
 								<TextField
 									outerId={"custom_amount"}
 									id={"custom_amount_input"}
-									prefix={"£"}
+									prefix={
+										defaultCurrencyCodeSide ==
+											"left" &&
+										defaultCurrency.symbol
+									}
+									suffix={
+										defaultCurrencyCodeSide ==
+											"right" &&
+										defaultCurrency.symbol
+									}
 									autocomplete="off"
 									error={
 										(req.query as any).amount
@@ -417,6 +531,44 @@ const DonationFront = ({ req }: PageProps) => {
 									}
 								/>
 							</div>
+							{defaultCurrencyIsCrypto && (
+								<>
+									<p
+										id={
+											"donate-crypto-exchange-note"
+										}
+									>
+										{subsAmountCurrSymbol(
+											1,
+											defaultCurrencyId
+										)}{" "}
+										~{" "}
+										{subsAmountCurrSymbol(
+											formattedCurrency(
+												1 /
+													defaultCurrency.rate
+											),
+											data.base_currency
+										)}
+									</p>
+
+									<p>
+										<strong>Note:</strong>{" "}
+										Donations made using
+										cryptocurrencies will incur a
+										15% carbon tax to cover
+										emissions.{" "}
+										<a
+											href={
+												"/about/environment#cryptocurrencies"
+											}
+											target={"_blank"}
+										>
+											Why?
+										</a>
+									</p>
+								</>
+							)}
 						</div>
 					</Card>
 
@@ -446,26 +598,88 @@ const DonationFront = ({ req }: PageProps) => {
 					>
 						<div
 							className={
-								"donate-card-container fdn-stack h gap-md"
+								"donate-card-container fdn-stack v gap-md"
 							}
 						>
-							<Button type={"primary"} colour={"blue"}>
-								Card
-							</Button>
+							{!defaultCurrencyIsCrypto && (
+								<div
+									id={"donate-pay-methods"}
+									className={"fdn-stack h gap-md"}
+								>
+									<Button
+										type={"secondary"}
+										colour={"blue"}
+										data-method-id={"card"}
+									>
+										<PaymentCard
+											colour={"current-color"}
+										/>
+										Card
+									</Button>
 
-							<Button
-								type={"secondary"}
-								colour={"blue"}
-							>
-								Bank transfer
-							</Button>
+									<Button
+										type={"secondary"}
+										colour={"blue"}
+										data-method-id={
+											"bank_transfer"
+										}
+									>
+										<Institution
+											colour={"current-color"}
+										/>
+										Bank transfer
+									</Button>
+								</div>
+							)}
 
-							<Button
-								type={"secondary"}
-								colour={"blue"}
+							<Separator orientation={"h"} />
+
+							<div
+								className={
+									"donate-payment-methods-container fdn-stack h gap-md"
+								}
 							>
-								Cryptocurrency
-							</Button>
+								<div
+									className={
+										"donate-payment-method-container"
+									}
+									id={"donate-pay-method-card"}
+									hidden
+								>
+									<h4>Card</h4>
+
+									<p>
+										Your card details will only be
+										sent to Stripe, Inc (our
+										payment processor).
+									</p>
+
+									<form className={"fdn-form"}>
+										<TextField
+											id={
+												"donate-payment-method-card-number"
+											}
+											label={"Card Number"}
+											suffix={
+												<div
+													className={
+														"fdn-stack h gap-sm"
+													}
+												>
+													<Visa size={2} />
+													<Mastercard
+														size={2}
+													/>
+													<Amex size={2} />
+													<Discover
+														size={2}
+													/>
+												</div>
+											}
+										/>
+									</form>
+								</div>
+							</div>
 						</div>
 					</Card>
 				</div>
