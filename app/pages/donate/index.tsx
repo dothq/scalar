@@ -688,6 +688,28 @@ const DonationFront = async ({ req, res }: PageProps) => {
 												</div>
 											}
 										/>
+
+										<div
+											className={
+												"fdn-stack h gap-md x-between"
+											}
+										>
+											<TextField
+												id={
+													"donate-payment-method-card-expiry"
+												}
+												label={"Expiry Date"}
+												autoComplete={"off"}
+											/>
+											<TextField
+												id={
+													"donate-payment-method-card-cvc"
+												}
+												label={"CVC"}
+												autoComplete={"off"}
+												type={"password"}
+											/>
+										</div>
 									</form>
 								</div>
 							</div>

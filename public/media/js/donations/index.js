@@ -375,6 +375,49 @@ $("#donate-payment-method-card-number").addEventListener(
 	}
 );
 
+$("#donate-payment-method-card-expiry").addEventListener(
+	"input",
+	(e) => {
+		const trimmed = e.target.value
+			.replace(/[^0-9]+/, "")
+			.trim()
+			.replace(/\s/g, "");
+
+		if (e.target.value.length >= 5)
+			return (e.target.value = e.target.value.substring(0, 5));
+
+		e.target.value = trimmed;
+
+		const exp = e.target.value.match(/.{1,2}/g) || [];
+
+		if (exp.length) {
+			if (exp[0] > 12 && !exp[1]) {
+				return (e.target.value = e.target.value.substring(
+					0,
+					1
+				));
+			}
+		}
+
+		e.target.value = exp.join("/");
+	}
+);
+
+$("#donate-payment-method-card-cvc").addEventListener(
+	"input",
+	(e) => {
+		const trimmed = e.target.value
+			.replace(/[^0-9]+/, "")
+			.trim()
+			.replace(/\s/g, "");
+
+		if (e.target.value.length >= 3)
+			return (e.target.value = e.target.value.substring(0, 3));
+
+		e.target.value = trimmed;
+	}
+);
+
 $("#donate-step-2-next-btn").addEventListener("click", (e) => {
 	if (paymentState.get("amount")) {
 		$("#step-1").classList.add("fdn-disabled");
