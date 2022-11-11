@@ -670,6 +670,7 @@ const DonationFront = async ({ req, res }: PageProps) => {
 												"donate-payment-method-card-number"
 											}
 											label={"Card Number"}
+											autoComplete={"off"}
 											suffix={
 												<div
 													className={
