@@ -7,6 +7,9 @@
 @use "input";
 
 .fdn-form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 	padding-block: 2rem;
 }
 
@@ -41,6 +44,7 @@
 	height: var(--max-height);
 	width: 100%;
 	max-height: var(--max-height);
+	min-height: var(--max-height);
 	position: relative;
 }
 
@@ -81,6 +85,7 @@ select.fdn-internal-input + .fdn-input-suffix {
 	min-width: calc(var(--max-height) - 1rem);
 	max-height: calc(var(--max-height) - 1rem);
 	max-width: calc(var(--max-height) - 1rem);
+	min-height: calc(var(--max-height) - 1rem);
 }
 
 .fdn-internal-input[type="radio"],
