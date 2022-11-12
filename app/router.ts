@@ -9,13 +9,11 @@ import {
 	FastifyRequest
 } from "fastify";
 import { readFileSync } from "fs";
-import glob from "glob";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
-import { resolve } from "path";
-import { cloneElement, createElement } from "preact";
-import { renderToString } from "preact-render-to-string";
-import { URL } from "url";
-import { addMPLLicenseHeader } from "./utils/html";
+import { basename, resolve } from "path";
+import { renderPage } from "./jsx";
+import { getAvailableLocales, negotiateLocale } from "./l10n";
+import { createRouteStruct } from "./utils/router";
 
 export const mediaRouter: FastifyPluginCallback = (
 	server,
@@ -38,38 +36,34 @@ export const router: FastifyPluginCallback = async (
 	opts,
 	done
 ) => {
-	server.register(mediaRouter, { prefix: "/" });
+	const struct = createRouteStruct();
 
-	const routes = glob.sync(
-		resolve(process.cwd(), "app", "pages", "**", "*.tsx"),
-		{ nodir: true }
-	);
-
-	const pagesBuildDir = resolve(process.cwd(), ".scalar", "pages");
-
-	const windowsPrefix =
-		process.platform == "win32" ? "file:///" : "";
-
-	const Layout = (
-		(await import(
-			windowsPrefix + resolve(pagesBuildDir, "@layout.js")
-		)) as any
-	).default.default;
-
-	const errorHandlers = new Map<number, any>();
-
-	const serverErrHandler = (
+	const serverErrHandler = async (
 		statusCode: number,
 		req: FastifyRequest,
 		res: FastifyReply
 	) => {
 		try {
-			const handler = errorHandlers.get(statusCode);
-
 			res.status(statusCode);
 
-			return handler(req, res);
+			const state = struct.get(statusCode.toString());
+
+			if (
+				!state &&
+				!(state as any).find((s: any) => s.type == "jsx")
+			)
+				throw new Error(
+					`No state found for status code ${statusCode}.`
+				);
+
+			return await renderPage(
+				req,
+				res,
+				state!.find((s) => s.type == "jsx")!
+			);
 		} catch (e) {
+			console.error(e);
+
 			let locale =
 				parseAcceptLanguage(
 					req.headers["accept-language"]
@@ -97,123 +91,63 @@ export const router: FastifyPluginCallback = async (
 		}
 	};
 
-	for await (const path of routes) {
-		const baselinePath = path.split(
-			resolve(process.cwd(), "app", "pages")
-		)[1];
+	const setErrorHandler = (code: number) => {
+		if (code == 404) {
+			server.setNotFoundHandler((req, res) =>
+				serverErrHandler(404, req, res)
+			);
+		}
 
-		const fastifyPath = baselinePath
-			.replace("index.tsx", "")
-			.replace(".tsx", "")
-			.replace(/\[[a-zA-Z0-9_]+\]/, (m) => {
-				return ":" + m.substring(1, m.length - 1);
-			})
-			.replace(/\/$/, "");
+		server.setErrorHandler((err, req, res) => {
+			console.error(err);
 
-		if (fastifyPath.startsWith("@layout")) {
+			const statusCode = err.statusCode || 500;
+
+			return serverErrHandler(statusCode, req, res);
+		});
+	};
+
+	for (const [path, state] of struct.entries()) {
+		if (path.startsWith("@")) continue;
+
+		if (+path === +path) {
+			setErrorHandler(+basename(path));
 			continue;
 		}
 
-		const handler = async (
-			req: FastifyRequest,
-			res: FastifyReply
-		) => {
-			try {
-				// await l10n.load(req);
+		server.all(path, (req, res) => {
+			const requestedLocales = parseAcceptLanguage(
+				req.headers["accept-language"]
+			);
+			const locale = negotiateLocale(requestedLocales);
 
-				const compiledPath = resolve(
-					pagesBuildDir,
-					baselinePath.substring(1).replace(".tsx", ".js")
-				);
+			const trimmedPath = req.url.endsWith("/")
+				? req.url.substring(0, req.url.length - 1)
+				: req.url;
 
-				const module = (
-					await import(windowsPrefix + compiledPath)
-				).default;
+			return res
+				.redirect(302, `/${locale}${trimmedPath}`)
+				.send("");
+		});
 
-				const Component = module.default;
+		for (const locale of getAvailableLocales()) {
+			const localisedPath = path.endsWith("/")
+				? `/${locale}${path.substring(0, path.length - 1)}`
+				: `/${locale}${path}`;
 
-				const isAsync =
-					Component.constructor.name === "AsyncFunction";
-
-				if (typeof Component == "undefined") {
-					return res.send("");
-				}
-
-				const props = {
-					path: req.url,
-					params: req.params || {},
-					meta: module.meta || {},
-					url: new URL(req.url, `http://${req.hostname}`),
-					formData: new URLSearchParams(
-						(req.body as string) || ""
-					),
-					req,
-					res
-				};
-
-				process.env.SCALAR_ORIGINAL_PATH = path.split(
-					process.cwd()
-				)[1];
-
-				try {
-					let CompEl: any = null;
-
-					if (isAsync) {
-						const Comp = await Component(props);
-
-						console.log(Comp);
-
-						CompEl = cloneElement(Comp);
-					} else {
-						CompEl = createElement(Component, props);
+			server.all(localisedPath, async (req, res) => {
+				for (const route of state) {
+					if (route.type == "jsx" && req.method == "GET") {
+						return await renderPage(req, res, route);
+					} else if (route.type == "api") {
+						return res.send("wip");
 					}
-
-					const html = renderToString(
-						createElement(Layout, {
-							...props,
-							Component: () => CompEl
-						}), {}, { pretty: true }
-					);
-
-					res.header("content-type", "text/html");
-					res.send(addMPLLicenseHeader(html));
-				} catch (e) {
-					console.error(e);
-
-					serverErrHandler(500, req, res);
 				}
-			} catch (e) {
-				console.error(e);
-
-				serverErrHandler(500, req, res);
-			}
-		};
-
-		if (
-			parseInt(fastifyPath.split("/")[1]).toString() ==
-			fastifyPath.split("/")[1]
-		) {
-			const statusCode = parseInt(fastifyPath.split("/")[1]);
-
-			// We have a static HTML page specifically for 500 errors
-			if (statusCode == 500) return;
-
-			errorHandlers.set(statusCode, handler);
-		} else {
-			server.get(fastifyPath, handler);
-			server.post(fastifyPath, handler);
+			});
 		}
 	}
 
-	server.setNotFoundHandler((req, res) =>
-		serverErrHandler(404, req, res)
-	);
-
-	server.setErrorHandler((err, req, res) => {
-		const statusCode = err.statusCode || 500;
-
-		return serverErrHandler(statusCode, req, res);
-	});
+	server.register(mediaRouter, { prefix: "/" });
 
 	done();
 };

@@ -11,7 +11,7 @@ import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { resolve } from "path";
 
 // This should never be changed!
-const DEFAULT_LOCALE = "en-GB";
+export const DEFAULT_LOCALE = "en-GB";
 
 export const l = async (str: string, ctx?: any) => {
 	return str;
@@ -33,6 +33,25 @@ export const l = async (str: string, ctx?: any) => {
 	// } else {
 	// 	return value;
 	// }
+};
+
+export const getAvailableLocales = () =>
+	readdirSync(resolve(process.cwd(), ".scalar", "l10n")).map(
+		(l) => l.split(".")[0]
+	);
+
+export const isValidLocale = (locale: string) =>
+	getAvailableLocales().includes(locale);
+
+export const negotiateLocale = (requestedLocales: string[]) => {
+	return negotiateLanguages(
+		requestedLocales,
+		getAvailableLocales(),
+		{
+			defaultLocale: DEFAULT_LOCALE,
+			strategy: "matching"
+		}
+	)[0];
 };
 
 const createL10n = async (req: FastifyRequest) => {

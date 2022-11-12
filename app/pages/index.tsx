@@ -3,16 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import Button from "../components/ui/Button";
+import { PageProps } from "../types";
 
 export const meta = {
 	title: "Privacy for all",
 	description: "Dot HQ"
 };
 
-const Index = () => {
+const Index = ({ lang }: PageProps) => {
 	return (
 		<>
-			<h1>Hello world</h1>
+			<h1>Hello world {lang}</h1>
 
 			<Button colour={"black"}>Contribute</Button>
 		</>

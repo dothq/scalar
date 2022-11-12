@@ -15,6 +15,7 @@ interface PageProps<
 	formData: URLSearchParams;
 	req: FastifyRequest;
 	res: FastifyReply;
+	lang: string;
 }
 
 declare var __scalar_js: any[];
