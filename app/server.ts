@@ -8,7 +8,9 @@ import { fastify } from "fastify";
 import { v1 } from "./api/v1";
 import { router } from "./router";
 
-export const server = fastify({ logger: {} });
+export const server = fastify({
+	logger: process.env.NODE_ENV == "develop"
+});
 
 export const createHttpServer = () => {
 	server.register(fastifyFormbody);
