@@ -172,7 +172,7 @@ export const router: FastifyPluginCallback = async (
 						createElement(Layout, {
 							...props,
 							Component: () => CompEl
-						})
+						}), {}, { pretty: true }
 					);
 
 					res.header("content-type", "text/html");
