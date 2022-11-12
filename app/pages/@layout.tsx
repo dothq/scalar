@@ -15,13 +15,37 @@ const Layout = ({
 	meta,
 	url,
 	req,
-	Component
+	Component,
+	schema
 }: {
 	meta: any;
 	url: URL;
 	req: FastifyRequest;
 	Component: any;
+	schema: any;
 }) => {
+	schema = schema || {
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		name: "Dot HQ",
+		url: `https://${url.host}/`,
+		logo: `https://${url.host}/media/icons/256x256.png`,
+		email: "contact+www@dothq.org",
+		sameAs: [
+			"https://twitter.com/DotBrowser",
+			"https://github.com/dothq",
+			"https://mastodon.social/@dothq"
+		],
+		contactPoint: [
+			{
+				"@type": "ContactPoint",
+				email: "contact+support@essential.gg",
+				url: `https://${url.host}/support`,
+				contactType: "customer service"
+			}
+		]
+	};
+
 	const lang = parseAcceptLanguage(
 		req.headers["accept-language"]
 	)[0];
@@ -55,6 +79,12 @@ const Layout = ({
 							></link>
 						))}
 					<Meta host={url.host} />
+					<script
+						type="application/ld+json"
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify(schema, null, 4)
+						}}
+					></script>
 					<title>{meta.title} ― Dot HQ (UK)</title>
 					<HTMLComment>
 						All our pages should work with JavaScript
