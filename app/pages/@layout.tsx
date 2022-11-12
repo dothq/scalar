@@ -87,7 +87,7 @@ const Layout = ({
 					></script>
 					<title>{meta.title} ― Dot HQ (UK)</title>
 					<HTMLComment>
-						All our pages should work with JavaScript
+						Most of our pages should work with JavaScript
 						disabled.
 						{"\n"}- If you believe this isn't the case,
 						please
