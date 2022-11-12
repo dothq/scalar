@@ -14,6 +14,30 @@ export const createHttpServer = () => {
 	server.register(fastifyFormbody);
 	server.register(fastifyCookie);
 
+	server.addHook("preHandler", (req, res, done) => {
+		if (process.env.NODE_ENV == "develop") return done();
+
+		if (!req.headers.host) return res.status(403).send("");
+
+		const host = new URL(`${req.protocol}://${req.headers.host}`);
+
+		const allowedHosts =
+			process.env.SCALAR_ALLOWED_HOSTS!.split(",");
+
+		if (allowedHosts.includes(host.hostname)) {
+			if (host.hostname == "dothq.co") {
+				return res.redirect(
+					302,
+					`https://dothq.org${req.url || "/"}`
+				);
+			}
+
+			done();
+		} else {
+			return res.redirect(302, `https://${allowedHosts[0]}`);
+		}
+	});
+
 	server.register(router, { prefix: "/" });
 	server.register(v1, { prefix: "/api/v1" });
 
