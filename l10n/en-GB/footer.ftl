@@ -11,13 +11,13 @@ footer-products-section-translate = { -brand-translate-short-text }
 footer-products-section-one = { -brand-one-short-text }
 footer-products-section-shield = { -brand-shield-short-text }
 
-# Resources
+# Community
 
-footer-resources-section = Resources
+footer-community-section = Community
 
-footer-resources-section-releases = Releases
-footer-resources-section-branding = Branding
-footer-resources-section-developers = Developers
+footer-community-section-contribute = Contribute
+footer-community-section-donate = Donate
+footer-community-section-blog = Blog
 
 # Support
 
@@ -27,13 +27,14 @@ footer-support-section-get-help = Get help
 footer-support-section-bugs = Bugs
 footer-support-section-ideas = Ideas
 
-# Community
+# Resources
 
-footer-community-section = Community
+footer-resources-section = Resources
 
-footer-community-section-contribute = Contribute
-footer-community-section-donate = Donate
-footer-community-section-blog = Blog
+footer-resources-section-releases = Releases
+footer-resources-section-branding = Branding
+footer-resources-section-developers = Developers
+footer-resources-section-open-source = Open-source
 
 # About
 
