@@ -65,6 +65,7 @@ export const renderPage = async (
 	(global as any).SCALAR_LANG_DEFAULT_BUNDLE = await getL10nBundle(
 		DEFAULT_LOCALE
 	);
+	(global as any).SCALAR_URL = req.url;
 
 	const Layout = (
 		await importJSXPage(resolve(pagesBuildDir, "@layout.js"))
