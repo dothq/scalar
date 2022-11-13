@@ -2176,10 +2176,9 @@ get-proxy@^2.0.0:
   dependencies:
     npm-conf "^1.1.0"
 
-get-site-urls@^3.0.0:
+get-site-urls@dothq/get-site-urls:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/get-site-urls/-/get-site-urls-3.0.0.tgz#5941d976f07b275b7a4d3712d378f99410296fb6"
-  integrity sha512-HJYGtvUqqSmZCNQUqQC7pBWfnXfp4zf9Yf3cTKVE9y4b76AM96joTYDzXYNTI+gkvZX9bF24f22ZrIVXbKFtgA==
+  resolved "https://codeload.github.com/dothq/get-site-urls/tar.gz/0e9b8371c89a7a7f4da37fc9de5e84ec88afc9fd"
   dependencies:
     got "^12.1.0"
     htmlparser2 "^8.0.1"
