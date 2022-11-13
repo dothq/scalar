@@ -151,7 +151,10 @@ const main = () => {
 		);
 	}
 
-	if (maybeReinvalidateCache("css", resolve(process.cwd(), "ui"))) {
+	if (
+		maybeReinvalidateCache("css", resolve(process.cwd(), "ui")) ||
+		!existsSync(resolve(options.outdir, "public", "media", "css"))
+	) {
 		console.log("Compiling SCSS to CSS...");
 
 		rimraf.sync(
