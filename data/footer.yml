@@ -5,7 +5,7 @@
 name: Footer
 items:
     - id: products
-      title: Products
+      title: ${{ l("footer-products-section") }}
       items:
           - children: ${{ l("footer-products-section-browser") }}
             href: /browser
@@ -17,7 +17,7 @@ items:
             href: /one
 
     - id: community
-      title: Community
+      title: ${{ l("footer-community-section") }}
       items:
           - children: ${{ l("footer-community-section-contribute") }}
             href: /contribute
@@ -29,7 +29,7 @@ items:
             href: /blog
 
     - id: support
-      title: Support
+      title: ${{ l("footer-support-section") }}
       items:
           - children: ${{ l("footer-support-section-get-help") }}
             href: /support
@@ -41,7 +41,7 @@ items:
             href: /support/ideas
 
     - id: resources
-      title: Resources
+      title: ${{ l("footer-resources-section") }}
       items:
           - children: ${{ l("footer-resources-section-releases") }}
             href: /releases
@@ -58,7 +58,7 @@ items:
             target: _blank
 
     - id: about
-      title: About
+      title: ${{ l("footer-about-section") }}
       items:
           - children: ${{ l("footer-about-section-us") }}
             href: /about
