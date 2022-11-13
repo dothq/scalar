@@ -2,19 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { getLocale, l } from "../../../l10n";
+import { l } from "../../../l10n";
 import { localisedHref } from "../../Link";
 import Button from "../../ui/Button";
 import Select from "../../ui/Select";
 import FooterSection from "./section";
 
 const FooterLanguage = () => {
-	let go = (global as any).SCALAR_URL.replace(
-		`/${getLocale()}`,
-		""
-	);
-
-	go = go.length == 0 ? "/" : go;
+	let go = "/" + ((global as any).SCALAR_URL.split("/")[2] || "");
 
 	return (
 		<FooterSection title={l("footer-language-section")}>
