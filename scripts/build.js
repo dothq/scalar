@@ -107,16 +107,17 @@ const main = () => {
 		}
 	);
 
-	if (maybeReinvalidateCache("main", serverPaths)) {
+	if (
+		maybeReinvalidateCache("main", serverPaths) ||
+		maybeReinvalidateCache("pages", pagesEntrypoints)
+	) {
 		console.log("Compiling server...");
 
 		build({
 			entryPoints: ["app/main.ts"],
 			...options
 		});
-	}
 
-	if (maybeReinvalidateCache("pages", pagesEntrypoints)) {
 		console.log("Compiling pages...");
 
 		rimraf.sync(resolve(options.outdir, "pages"));
