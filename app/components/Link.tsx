@@ -9,10 +9,11 @@ export const localisedHref = (href: string) => {
 	if (href && !href.startsWith("http"))
 		return `/${getLocale()}${
 			href.startsWith("#")
-				? "/" +
-				  (global as any).SCALAR_URL.split("/")[2].split(
-						"#"
-				  )[0]
+				? ((global as any).SCALAR_URL.split("/")[2]
+						? "/" +
+						  (global as any).SCALAR_URL.split("/")[2]
+						: ""
+				  ).split("#")[0]
 				: ""
 		}${href.replace(/\/+$/, "")}`;
 	else return href;
