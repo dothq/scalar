@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { HeaderConfig } from ".";
+import { HeaderConfig, renderHeaderElement } from ".";
 import { Close } from "../../icons/Close";
 import Button from "../../ui/Button";
 import NavItems from "./Items";
@@ -18,15 +18,13 @@ const HeaderDrawer = ({ config }: { config: HeaderConfig }) => {
 				<ul class="fdn-header-items" role="list">
 					<NavItems config={config} />
 
-					<li>
-						<Button
-							colour={"black"}
-							fullwidth
-							href={"/contribute"}
-						>
-							Contribute
-						</Button>
-					</li>
+					<>
+						{config.end.map((i: any) => {
+							i.fullwidth = true;
+
+							return <li>{renderHeaderElement(i)}</li>;
+						})}
+					</>
 				</ul>
 
 				<div id="menu-close">

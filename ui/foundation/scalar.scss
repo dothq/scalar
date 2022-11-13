@@ -143,6 +143,11 @@ a {
 	text-decoration-thickness: 2px;
 }
 
+a:hover,
+a:focus-visible {
+	text-decoration: none;
+}
+
 main a:not(.fdn-not-visited, .fdn-button):visited {
 	color: var(--fdn-colours-visited-link);
 }

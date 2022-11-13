@@ -5,16 +5,18 @@
 import { JSXInternal } from "preact/src/jsx";
 import { getLocale } from "../l10n";
 
+export const localisedHref = (href: string) => {
+	if (href && !href.startsWith("http"))
+		return `/${getLocale()}${href.replace(/\/+$/, "")}`;
+	else return href;
+};
+
 const Link = (
 	props: JSXInternal.HTMLAttributes<HTMLAnchorElement> & {
 		href?: any;
 	}
 ) => {
-	if (props.href && !props.href.startsWith("http"))
-		props.href = `/${getLocale()}${props.href.replace(
-			/\/+$/,
-			""
-		)}`;
+	props.href = localisedHref(props.href);
 
 	return <a {...props}>{props.children}</a>;
 };

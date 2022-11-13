@@ -5,6 +5,7 @@
 import clsx from "clsx";
 import { createElement } from "preact";
 import { JSXInternal } from "preact/src/jsx";
+import { localisedHref } from "../../Link";
 
 interface ButtonProps {
 	colour?: FDNColour;
@@ -48,7 +49,7 @@ const Button = ({
 		noJS ? "input" : href ? "a" : "button",
 		{
 			...rest,
-			href,
+			href: localisedHref(href),
 			className,
 			...(noJS
 				? { type: "submit", value: children.toString() }

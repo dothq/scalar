@@ -22,5 +22,6 @@ items:
 end:
     - element: button
       children: ${{ l("header-cta-button-text") }}
+      href: /contribute
       colour: black
       type: primary
