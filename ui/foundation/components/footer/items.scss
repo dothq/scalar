@@ -2,10 +2,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.fdn-footer-sitemap {
+.fdn-footer-item {
 	display: flex;
 	flex-wrap: wrap;
-	flex: 1;
 	justify-content: flex-end;
 	gap: 2.5rem;
 }
@@ -45,7 +44,15 @@
 }
 
 @media (max-width: 52rem) {
-	.fdn-footer-sitemap {
+	.fdn-footer-item {
 		justify-content: flex-start;
 	}
+}
+
+.fdn-footer-sitemap {
+	flex: 2;
+}
+
+.fdn-footer-socials .fdn-footer-section-list {
+	flex-direction: row;
 }

@@ -6,7 +6,8 @@ import Link from "../../Link";
 import Localised from "../../Localised";
 import Logo from "../../ui/Logo";
 import Separator from "../../ui/Separator";
-import Sitemap from "./sitemap";
+import FooterSitemap from "./sitemap";
+import FooterSocials from "./socials";
 
 const Footer = () => {
 	const isGitRepo =
@@ -43,7 +44,8 @@ const Footer = () => {
 						<Logo mark type={false} />
 					</div>
 
-					<Sitemap />
+					<FooterSitemap />
+					<FooterSocials />
 				</div>
 
 				<Separator orientation={"h"} />

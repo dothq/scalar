@@ -45,6 +45,10 @@ footer-about-section-terms = Terms
 footer-about-section-environment = Environment
 footer-about-section-charter = Charter
 
+# Socials
+
+footer-socials-section = Follow us
+
 footer-view-source = View page source
 footer-edit-page = Edit this page
 

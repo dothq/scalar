@@ -7,10 +7,10 @@ import { getLocale } from "../l10n";
 
 const Link = (
 	props: JSXInternal.HTMLAttributes<HTMLAnchorElement> & {
-		href?: string;
+		href?: any;
 	}
 ) => {
-	if (props.href)
+	if (props.href && !props.href.startsWith("http"))
 		props.href = `/${getLocale()}${props.href.replace(
 			/\/+$/,
 			""

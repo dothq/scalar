@@ -7,66 +7,86 @@ items:
     - id: products
       title: Products
       items:
-          - text: ${{ l("footer-products-section-browser") }}
+          - children: ${{ l("footer-products-section-browser") }}
             href: /browser
 
-          - text: ${{ l("footer-products-section-translate") }}
+          - children: ${{ l("footer-products-section-translate") }}
             href: /translate
 
-          - text: ${{ l("footer-products-section-one") }}
+          - children: ${{ l("footer-products-section-one") }}
             href: /one
 
     - id: resources
       title: Resources
       items:
-          - text: ${{ l("footer-resources-section-releases") }}
+          - children: ${{ l("footer-resources-section-releases") }}
             href: /releases
 
-          - text: ${{ l("footer-resources-section-branding") }}
+          - children: ${{ l("footer-resources-section-branding") }}
             href: /branding
 
-          - text: ${{ l("footer-resources-section-developers") }}
+          - children: ${{ l("footer-resources-section-developers") }}
             href: https://developer.dothq.org
-            in_new: true
+            target: _blank
 
     - id: support
       title: Support
       items:
-          - text: ${{ l("footer-support-section-get-help") }}
+          - children: ${{ l("footer-support-section-get-help") }}
             href: /support
 
-          - text: ${{ l("footer-support-section-bugs") }}
+          - children: ${{ l("footer-support-section-bugs") }}
             href: /support/bugs
 
-          - text: ${{ l("footer-support-section-ideas") }}
+          - children: ${{ l("footer-support-section-ideas") }}
             href: /support/ideas
 
     - id: community
       title: Community
       items:
-          - text: ${{ l("footer-community-section-contribute") }}
+          - children: ${{ l("footer-community-section-contribute") }}
             href: /contribute
 
-          - text: ${{ l("footer-community-section-donate") }}
+          - children: ${{ l("footer-community-section-donate") }}
             href: /contribute/donate
 
-          - text: ${{ l("footer-community-section-blog") }}
+          - children: ${{ l("footer-community-section-blog") }}
             href: /blog
 
     - id: about
       title: About
       items:
-          - text: ${{ l("footer-about-section-us") }}
+          - children: ${{ l("footer-about-section-us") }}
             href: /about
 
-          - text: ${{ l("footer-about-section-privacy") }}
+          - children: ${{ l("footer-about-section-privacy") }}
             href: /about/privacy
 
-          - text: ${{ l("footer-about-section-terms") }}
+          - children: ${{ l("footer-about-section-terms") }}
             href: /about/terms
 
-          - text: ${{ l("footer-about-section-environment") }}
+          - children: ${{ l("footer-about-section-environment") }}
             href: /about/environment
 
-          - text: ${{ l("footer-about-section-charter") }}
+          - children: ${{ l("footer-about-section-charter") }}
             href: /about/charter
+socials:
+    - id: twitter
+      title: "@DotBrowser"
+      href: https://twitter.com/@DotBrowser
+      target: _blank
+
+    - id: mastodon
+      title: "@dothq@mastodon.social"
+      href: https://mastodon.social/@dothq
+      target: _blank
+
+    - id: discord
+      title: "discord.gg/WRDEK2D"
+      href: https://discord.gg/WRDEK2D
+      target: _blank
+
+    - id: matrix
+      title: "#dothq:matrix.org"
+      href: https://matrix.to/#/#dothq:matrix.org
+      target: _blank
