@@ -11,7 +11,6 @@ import {
 	DEFAULT_LOCALE,
 	getL10nBundle,
 	getNativeLocaleMap,
-	isValidLocale,
 	maybeGetLangFromPath,
 	negotiateLocale
 } from "./l10n";
@@ -44,21 +43,14 @@ export const renderPage = async (
 ) => {
 	let lang = DEFAULT_LOCALE;
 
-	if (routeData.isErr) {
-		const pathLang = maybeGetLangFromPath(req);
+	const pathLang = maybeGetLangFromPath(req);
 
-		if (pathLang) {
-			lang = pathLang;
-		} else {
-			lang = negotiateLocale(
-				parseAcceptLanguage(req.headers["accept-language"])
-			);
-		}
-	} else if (
-		(req.params as any).lang &&
-		isValidLocale((req.params as any).lang)
-	) {
-		lang = (req.params as any).lang;
+	if (pathLang) {
+		lang = pathLang;
+	} else {
+		lang = negotiateLocale(
+			parseAcceptLanguage(req.headers["accept-language"])
+		);
 	}
 
 	(global as any).SCALAR_REQUEST_LANG = lang;
