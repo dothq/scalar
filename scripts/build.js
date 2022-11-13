@@ -3,13 +3,15 @@ const {
 	writeFileSync,
 	appendFileSync,
 	readFileSync,
-	readdirSync
+	readdirSync,
+	existsSync
 } = require("fs");
 const { ensureDirSync, cpSync } = require("fs-extra");
 const { glob } = require("glob");
 const { resolve, basename } = require("path");
 const sass = require("sass");
 const rimraf = require("rimraf");
+const { createHash } = require("crypto");
 
 const options = {
 	outdir: resolve(process.cwd(), ".scalar"),
@@ -42,68 +44,172 @@ const compileScss = (path, isPage) => {
 	);
 };
 
+const maybeReinvalidateCache = (name, paths) => {
+	if (process.env.NODE_ENV !== "develop") return true;
+
+	if (!Array.isArray(paths) && typeof paths == "string") {
+		paths = glob.sync(resolve(paths, "**", "*"), { nodir: true });
+	}
+
+	if (!existsSync(resolve(options.outdir, `${name}.cache`))) {
+		generateHash(name, paths);
+		return true;
+	}
+
+	const oldHash = readFileSync(
+		resolve(options.outdir, `${name}.cache`),
+		"utf-8"
+	).trim();
+
+	const newHash = generateHash(name, paths);
+
+	return newHash !== oldHash;
+};
+
+const generateHash = (name, paths) => {
+	const hashes = [];
+
+	for (const path of paths) {
+		const data = readFileSync(path, "utf-8");
+
+		const sha = createHash("sha1");
+		sha.update(data);
+
+		hashes.push(sha.digest("hex"));
+	}
+
+	const mainSha = createHash("sha1");
+	mainSha.update(hashes.join("-"));
+	const finalHash = mainSha.digest("hex");
+
+	writeFileSync(
+		resolve(options.outdir, `${name}.cache`),
+		finalHash
+	);
+
+	return finalHash;
+};
+
 const main = () => {
-	rimraf.sync(options.outdir);
+	const d = Date.now();
 
-	build({
-		entryPoints: ["app/main.ts"],
-		...options
-	});
+	ensureDirSync(options.outdir);
 
-	build({
-		entryPoints: glob.sync(
-			resolve(process.cwd(), "app", "pages", "**", "*"),
-			{ nodir: true }
-		),
-		...options,
-		outdir: resolve(options.outdir, "pages")
-	});
+	const pagesEntrypoints = glob.sync(
+		resolve(process.cwd(), "app", "pages", "**", "*"),
+		{ nodir: true }
+	);
 
-	cpSync(
-		resolve(process.cwd(), "public"),
-		resolve(options.outdir, "public"),
+	const serverPaths = glob.sync(
+		resolve(process.cwd(), "app", "**", "*"),
 		{
-			recursive: true
+			nodir: true
 		}
 	);
 
-	compileScss("foundation/scalar.scss");
+	if (maybeReinvalidateCache("main", serverPaths)) {
+		console.log("Compiling server...");
 
-	for (const pageScss of glob.sync(
-		resolve(process.cwd(), "ui", "pages", "**", "*.scss")
-	)) {
-		compileScss(
-			pageScss.split(resolve(process.cwd(), "ui") + "/")[1],
-			true
+		build({
+			entryPoints: ["app/main.ts"],
+			...options
+		});
+	}
+
+	if (maybeReinvalidateCache("pages", pagesEntrypoints)) {
+		console.log("Compiling pages...");
+
+		rimraf.sync(resolve(options.outdir, "pages"));
+
+		build({
+			entryPoints: glob.sync(
+				resolve(process.cwd(), "app", "pages", "**", "*"),
+				{ nodir: true }
+			),
+			...options,
+			outdir: resolve(options.outdir, "pages")
+		});
+	}
+
+	if (
+		maybeReinvalidateCache(
+			"public",
+			resolve(process.cwd(), "public")
+		)
+	) {
+		console.log("Copying public data...");
+
+		rimraf.sync(resolve(options.outdir, "public"));
+
+		cpSync(
+			resolve(process.cwd(), "public"),
+			resolve(options.outdir, "public"),
+			{
+				recursive: true
+			}
 		);
+	}
+
+	if (maybeReinvalidateCache("css", resolve(process.cwd(), "ui"))) {
+		console.log("Compiling SCSS to CSS...");
+
+		rimraf.sync(
+			resolve(options.outdir, "public", "media", "css")
+		);
+
+		compileScss("foundation/scalar.scss");
+
+		for (const pageScss of glob.sync(
+			resolve(process.cwd(), "ui", "pages", "**", "*.scss")
+		)) {
+			compileScss(
+				pageScss.split(resolve(process.cwd(), "ui") + "/")[1],
+				true
+			);
+		}
 	}
 
 	const l10nDir = resolve(process.cwd(), "l10n");
 
-	for (const l10n of readdirSync(l10nDir)) {
-		const ftls = glob.sync(resolve(l10nDir, l10n, "**", "*.ftl"));
+	if (maybeReinvalidateCache("l10n", l10nDir)) {
+		console.log("Compiling L10n data...");
 
-		ensureDirSync(resolve(options.outdir, "l10n"));
+		rimraf.sync(resolve(options.outdir, "l10n"));
 
-		writeFileSync(
-			resolve(options.outdir, "l10n", `${l10n}.ftl`),
-			"# This Source Code Form is subject to the terms of the Mozilla Public\n" +
-				"# License, v. 2.0. If a copy of the MPL was not distributed with this\n" +
-				"# file, You can obtain one at http://mozilla.org/MPL/2.0/.\n"
-		);
-
-		for (const ftl of ftls) {
-			appendFileSync(
-				resolve(options.outdir, "l10n", `${l10n}.ftl`),
-				readFileSync(ftl, "utf-8").replace(
-					`# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.`,
-					""
-				)
+		for (const l10n of readdirSync(l10nDir)) {
+			const ftls = glob.sync(
+				resolve(l10nDir, l10n, "**", "*.ftl")
 			);
+
+			ensureDirSync(resolve(options.outdir, "l10n"));
+
+			writeFileSync(
+				resolve(options.outdir, "l10n", `${l10n}.ftl`),
+				""
+			);
+
+			for (const ftl of ftls) {
+				let data = readFileSync(ftl, "utf-8");
+
+				const license = [
+					"# This Source Code Form is subject to the terms of the Mozilla Public",
+					"# License, v. 2.0. If a copy of the MPL was not distributed with this",
+					"# file, You can obtain one at http://mozilla.org/MPL/2.0/."
+				];
+
+				license.forEach((ln) => {
+					data = data.replace(ln, "");
+				});
+
+				appendFileSync(
+					resolve(options.outdir, "l10n", `${l10n}.ftl`),
+					data
+				);
+			}
 		}
 	}
+
+	console.log(`Done in ${Date.now() - d}ms!`);
 };
 
 main();
