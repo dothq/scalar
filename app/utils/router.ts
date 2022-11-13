@@ -71,6 +71,14 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 			state.isErr = true;
 		}
 
+		if (
+			serverPath.charAt(0) !== "/" &&
+			!state.isErr &&
+			serverPath.charAt(0) !== "@"
+		) {
+			serverPath = "/" + serverPath;
+		}
+
 		if (routeMap.has(serverPath)) {
 			routeMap.set(serverPath, [
 				...routeMap.get(serverPath),

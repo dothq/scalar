@@ -46,6 +46,7 @@
 	max-height: var(--max-height);
 	min-height: var(--max-height);
 	position: relative;
+	overflow: hidden;
 }
 
 .fdn-input .fdn-input-prefix,
@@ -69,6 +70,10 @@
 		var(--border-color, var(--fdn-border-colour));
 	padding-inline-end: 1rem;
 	padding-inline-start: 0.925rem;
+}
+
+select.fdn-internal-input {
+	padding-inline-end: 3rem;
 }
 
 select.fdn-internal-input + .fdn-input-suffix {

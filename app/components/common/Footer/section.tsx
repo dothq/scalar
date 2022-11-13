@@ -7,21 +7,29 @@ import Link from "../../Link";
 
 const FooterSection = ({
 	title,
-	items
+	items,
+	children
 }: {
 	title: string;
-	items: JSXInternal.HTMLAttributes<HTMLAnchorElement>[];
+	items?: JSXInternal.HTMLAttributes<HTMLAnchorElement>[];
+	children?: any;
 }) => {
 	return (
 		<section className="fdn-footer-section">
 			<h1 className="fdn-footer-section-title">{title}</h1>
-			<ul className="fdn-footer-section-list" role="list">
-				{items.map((i) => (
-					<li className="fdn-footer-section-list-item">
-						<Link {...i}>{i.children}</Link>
-					</li>
-				))}
-			</ul>
+			{children ? (
+				children
+			) : items ? (
+				<ul className="fdn-footer-section-list" role="list">
+					{items.map((i) => (
+						<li className="fdn-footer-section-list-item">
+							<Link {...i}>{i.children}</Link>
+						</li>
+					))}
+				</ul>
+			) : (
+				<></>
+			)}
 		</section>
 	);
 };

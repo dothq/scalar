@@ -43,3 +43,11 @@
 	display: flex;
 	visibility: visible;
 }
+
+/* Width */
+
+.fdn-field.full-width {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}

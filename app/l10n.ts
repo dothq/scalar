@@ -20,8 +20,8 @@ export const getLocale = () => {
 		throw new Error("No lang passed to global.");
 	}
 
-	return (global as any).SCALAR_REQUEST_LANG
-}
+	return (global as any).SCALAR_REQUEST_LANG;
+};
 
 export const l = (str: string, ctx?: any) => {
 	if (
@@ -111,4 +111,31 @@ export const maybeGetLangFromPath = (req: FastifyRequest) => {
 	const pathParts = req.url.split("/").slice(1);
 
 	return isValidLocale(pathParts[0]) ? pathParts[0] : null;
+};
+
+export const getNativeLocaleMap = async () => {
+	const map = [];
+
+	for await (const locale of getAvailableLocales()) {
+		const bundle = await getL10nBundle(locale);
+
+		if (!bundle) throw new Error(`No bundle for ${locale}.`);
+
+		bundle.addResource(
+			new FluentResource(
+				"language-native-name = { -language-short-name }"
+			)
+		);
+
+		const msg = bundle.getMessage("language-native-name");
+
+		if (msg && msg.value) {
+			map.push({
+				value: locale,
+				children: bundle.formatPattern(msg.value)
+			});
+		}
+	}
+
+	return map;
 };

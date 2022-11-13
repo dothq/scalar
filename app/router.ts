@@ -11,8 +11,8 @@ import {
 import { readFileSync } from "fs";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { basename, resolve } from "path";
-import { renderPage } from "./jsx";
 import { getAvailableLocales, negotiateLocale } from "./l10n";
+import { renderPage } from "./ssr";
 import { createRouteStruct } from "./utils/router";
 
 export const mediaRouter: FastifyPluginCallback = (
@@ -107,6 +107,8 @@ export const router: FastifyPluginCallback = async (
 		});
 	};
 
+	console.log(struct);
+
 	for (const [path, state] of struct.entries()) {
 		if (path.startsWith("@")) continue;
 
@@ -136,12 +138,10 @@ export const router: FastifyPluginCallback = async (
 				: `/${locale}${path}`;
 
 			server.all(localisedPath, async (req, res) => {
+				console.log(localisedPath, state);
+
 				for (const route of state) {
-					if (route.type == "jsx" && req.method == "GET") {
-						return await renderPage(req, res, route);
-					} else if (route.type == "api") {
-						return res.send("wip");
-					}
+					return await renderPage(req, res, route);
 				}
 			});
 		}

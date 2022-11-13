@@ -45,3 +45,10 @@
 		flex-direction: column;
 	}
 }
+
+.fdn-footer-langage-switcher {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	align-items: flex-end;
+}

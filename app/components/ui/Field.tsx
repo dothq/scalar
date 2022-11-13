@@ -14,6 +14,7 @@ export type FieldProps = {
 	size?: FDNSize;
 	id?: string;
 	error?: string;
+	fullwidth?: boolean;
 } & JSXInternal.HTMLAttributes<HTMLInputElement>;
 
 const Field = ({
@@ -25,6 +26,7 @@ const Field = ({
 	size,
 	error,
 	children,
+	fullwidth,
 	...rest
 }: FieldProps & { children: any }) => {
 	size = size ? size : ("md" as any);
@@ -33,6 +35,7 @@ const Field = ({
 		"has-prefix": !!prefix,
 		"has-suffix": !!suffix,
 		"has-error": !!error,
+		"full-width": !!fullwidth,
 		[size as string]: true
 	});
 

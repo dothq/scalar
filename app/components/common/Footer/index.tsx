@@ -6,6 +6,7 @@ import Link from "../../Link";
 import Localised from "../../Localised";
 import Logo from "../../ui/Logo";
 import Separator from "../../ui/Separator";
+import FooterLanguage from "./language";
 import FooterSitemap from "./sitemap";
 import FooterSocials from "./socials";
 
@@ -42,10 +43,17 @@ const Footer = () => {
 				<div class="fdn-footer-content">
 					<div class="fdn-footer-logo-container">
 						<Logo mark type={false} />
+
+						<div
+							className={"fdn-footer-extras-container"}
+						>
+							<FooterSocials />
+
+							<FooterLanguage />
+						</div>
 					</div>
 
 					<FooterSitemap />
-					<FooterSocials />
 				</div>
 
 				<Separator orientation={"h"} />

@@ -50,6 +50,10 @@ footer-about-section-charter = Charter
 
 footer-socials-section = Follow us
 
+# Language Switcher
+
+footer-language-section = Language
+
 footer-view-source = View page source
 footer-edit-page = Edit this page
 

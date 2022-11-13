@@ -10,6 +10,7 @@ import { renderToString } from "preact-render-to-string";
 import {
 	DEFAULT_LOCALE,
 	getL10nBundle,
+	getNativeLocaleMap,
 	isValidLocale,
 	maybeGetLangFromPath,
 	negotiateLocale
@@ -19,7 +20,7 @@ import { pagesBuildDir, RouteData } from "./utils/router";
 
 const windowsPrefix = process.platform == "win32" ? "file:///" : "";
 
-export const importJSXPage = async (
+export const importPage = async (
 	path: string
 ): Promise<{ component: any; [key: string]: any }> => {
 	const module = ((await import(windowsPrefix + path)) as any)
@@ -66,54 +67,65 @@ export const renderPage = async (
 		DEFAULT_LOCALE
 	);
 	(global as any).SCALAR_URL = req.url;
+	(global as any).SCALAR_LANGUAGE_MAP = await getNativeLocaleMap();
 
-	const Layout = (
-		await importJSXPage(resolve(pagesBuildDir, "@layout.js"))
-	).component;
+	if (routeData.type == "jsx") {
+		const Layout = (
+			await importPage(resolve(pagesBuildDir, "@layout.js"))
+		).component;
 
-	const mod = await importJSXPage(routeData.compiledPath);
+		const mod = await importPage(routeData.compiledPath);
 
-	const isAsyncRendered =
-		mod.component.constructor.name === "AsyncFunction";
+		const isAsyncRendered =
+			mod.component.constructor.name === "AsyncFunction";
 
-	const props = {
-		path: req.url,
-		params: req.params || {},
-		meta: mod.meta || {},
-		lang,
-		url: new URL(req.url, `http://${req.hostname}`),
-		req,
-		res
-	};
+		const props = {
+			path: req.url,
+			params: req.params || {},
+			meta: mod.meta || {},
+			lang,
+			url: new URL(req.url, `http://${req.hostname}`),
+			req,
+			res
+		};
 
-	process.env.SCALAR_ORIGINAL_PATH = routeData.originalPath.split(
-		process.cwd()
-	)[1];
+		process.env.SCALAR_ORIGINAL_PATH =
+			routeData.originalPath.split(process.cwd())[1];
 
-	try {
-		let CompEl: any = null;
+		try {
+			let CompEl: any = null;
 
-		if (isAsyncRendered) {
-			const Comp = await mod.component(props);
+			if (isAsyncRendered) {
+				const Comp = await mod.component(props);
 
-			CompEl = cloneElement(Comp);
-		} else {
-			CompEl = createElement(mod.component, props);
+				CompEl = cloneElement(Comp);
+			} else {
+				CompEl = createElement(mod.component, props);
+			}
+
+			const html = renderToString(
+				createElement(Layout, {
+					...props,
+					Component: () => CompEl
+				}),
+				{}
+			);
+
+			res.header("content-type", "text/html");
+			res.send(addMPLLicenseHeader(html));
+		} catch (e) {
+			console.error(e);
+
+			console.log("500 todo");
 		}
+	} else if (routeData.type == "api") {
+		const mod = await importPage(routeData.compiledPath);
 
-		const html = renderToString(
-			createElement(Layout, {
-				...props,
-				Component: () => CompEl
-			}),
-			{}
-		);
+		const isAsyncRendered =
+			mod.component.constructor.name === "AsyncFunction";
 
-		res.header("content-type", "text/html");
-		res.send(addMPLLicenseHeader(html));
-	} catch (e) {
-		console.error(e);
+		const fn = mod.component;
 
-		console.log("500 todo");
+		return isAsyncRendered ? await fn(req, res) : fn(req, res);
 	}
 };
