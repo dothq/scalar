@@ -132,7 +132,8 @@ export const getNativeLocaleMap = async () => {
 		if (msg && msg.value) {
 			map.push({
 				value: locale,
-				children: bundle.formatPattern(msg.value)
+				children: bundle.formatPattern(msg.value),
+				selected: locale == getLocale()
 			});
 		}
 	}
