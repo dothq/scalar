@@ -3,3 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 document.documentElement.classList.remove("no-js");
+
+document
+	.querySelector("#app-language-switcher select")
+	.addEventListener("change", () => {
+		document.querySelector("#app-language-switcher").submit();
+	});
