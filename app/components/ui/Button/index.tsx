@@ -31,6 +31,7 @@ const Button = ({
 }: JSXInternal.HTMLAttributes<HTMLAnchorElement> & ButtonProps) => {
 	type = type ? type : "primary";
 	size = size ? size : ("md" as any);
+	href = href ? localisedHref(href) : undefined;
 
 	const className = clsx(
 		"fdn-button",
@@ -49,7 +50,7 @@ const Button = ({
 		noJS ? "input" : href ? "a" : "button",
 		{
 			...rest,
-			href: localisedHref(href),
+			href,
 			className,
 			...(noJS
 				? { type: "submit", value: children.toString() }
