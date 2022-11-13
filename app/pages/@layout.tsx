@@ -2,28 +2,22 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { FastifyRequest } from "fastify";
-import { parseAcceptLanguage } from "intl-parse-accept-language";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import Meta from "../components/common/Meta";
 import Script from "../components/Script";
 import HTMLComment from "../components/ui/HTMLComment";
+import { l } from "../l10n";
+import { PageProps } from "../types";
 import { withCacheBuster } from "../utils/cache";
 
 const Layout = ({
 	meta,
 	url,
-	req,
 	Component,
-	schema
-}: {
-	meta: any;
-	url: URL;
-	req: FastifyRequest;
-	Component: any;
-	schema: any;
-}) => {
+	schema,
+	lang
+}: PageProps & { Component: any }) => {
 	schema = schema || {
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -45,10 +39,6 @@ const Layout = ({
 			}
 		]
 	};
-
-	const lang = parseAcceptLanguage(
-		req.headers["accept-language"]
-	)[0];
 
 	return (
 		<>
@@ -85,7 +75,17 @@ const Layout = ({
 							__html: JSON.stringify(schema, null, 4)
 						}}
 					></script>
-					<title>{meta.title} ― Dot HQ (UK)</title>
+					<title>
+						{typeof meta.titleSuffix !== "undefined"
+							? meta.titleSuffix == true
+								? l("page-title-format", {
+										title: meta.title
+								  })
+								: meta.title
+							: l("page-title-format", {
+									title: meta.title
+							  })}
+					</title>
 					<HTMLComment>
 						Most of our pages should work with JavaScript
 						disabled.

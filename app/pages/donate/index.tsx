@@ -13,6 +13,7 @@ import { Giving } from "../../components/icons/Giving";
 import { Institution } from "../../components/icons/Institution";
 import { JavaScript } from "../../components/icons/JavaScript";
 import { PaymentCard } from "../../components/icons/PaymentCard";
+import Link from "../../components/Link";
 import Aside from "../../components/ui/Aside";
 import Banner from "../../components/ui/Banner";
 import Button from "../../components/ui/Button";
@@ -205,7 +206,7 @@ const DonationFront = async ({ req, res }: PageProps) => {
 									Our payment processor is Stripe,
 									Inc.
 									<br />
-									<a
+									<Link
 										target={"_blank"}
 										href={
 											"/about/privacy#data-processors"
@@ -213,7 +214,7 @@ const DonationFront = async ({ req, res }: PageProps) => {
 									>
 										How does this affect my
 										privacy?
-									</a>
+									</Link>
 									.
 								</p>
 							</div>
@@ -559,14 +560,14 @@ const DonationFront = async ({ req, res }: PageProps) => {
 										cryptocurrencies will incur a
 										15% carbon tax to cover
 										emissions.{" "}
-										<a
+										<Link
 											href={
 												"/about/environment#cryptocurrencies"
 											}
 											target={"_blank"}
 										>
 											Why?
-										</a>
+										</Link>
 									</p>
 								</>
 							)}

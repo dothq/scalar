@@ -6,6 +6,7 @@ import { l } from "../l10n";
 
 export const meta = {
 	title: l("error-not-found-page-title"),
+	titleSuffix: false,
 	description: "Dot HQ"
 };
 

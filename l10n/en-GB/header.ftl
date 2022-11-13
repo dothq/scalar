@@ -2,7 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
--language-full-name = English (United Kingdom)
--language-short-code = UK
+header-browser-item = { -brand-browser-short-text }
+header-products-item = Products
+header-community-item = Community
+header-about-item = About
 
-page-title-format = { $title } ― { -brand-full-name } ({ -language-short-code })
+header-cta-button-text = Contribute

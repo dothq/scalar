@@ -2,14 +2,37 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { createElement } from "preact";
+import { getComponentConfig } from "../../../utils/data";
 import { Menu } from "../../icons";
 import Button from "../../ui/Button";
 import Logo from "../../ui/Logo";
 import A11y from "../A11y";
 import NavDrawer from "./Drawer";
-import NavItems from "./Items";
+import NavItem from "./Item";
+
+type HeaderConfigElement = {
+	element: string;
+	[key: string]: any;
+};
+
+export interface HeaderConfig {
+	name: string;
+	items: HeaderConfigElement[];
+	end: HeaderConfigElement[];
+}
+
+export const renderHeaderElement = (i: HeaderConfigElement) => {
+	if (i.element == "link") {
+		return createElement(NavItem, i as any, i.children);
+	} else if (i.element == "button") {
+		return createElement(Button, i as any, i.children);
+	}
+};
 
 const Header = () => {
+	const config = getComponentConfig<HeaderConfig>("header");
+
 	return (
 		<header class="fdn-header" aria-label="Dot HQ">
 			<div class="fdn-header-wrapper">
@@ -19,27 +42,29 @@ const Header = () => {
 						<A11y />
 
 						<ul class="fdn-header-items" role="list">
-							<NavItems />
+							<>
+								{config.items.map((i: any) =>
+									renderHeaderElement(i)
+								)}
+							</>
 						</ul>
 
 						<ul class="fdn-header-end" role="list">
 							<li id="menu-button">
-								<a
-									class="fdn-button secondary has-icon"
+								<Button
+									type={"secondary"}
 									href="#header-menu"
 									aria-label="Open Navigation Menu..."
+									hasIcon
 								>
 									<Menu />
-								</a>
-							</li>
-							<li>
-								<Button
-									colour={"black"}
-									href={"/contribute"}
-								>
-									Contribute
 								</Button>
 							</li>
+							<>
+								{config.end.map((i: any) => (
+									<li>{renderHeaderElement(i)}</li>
+								))}
+							</>
 						</ul>
 					</div>
 
@@ -50,7 +75,7 @@ const Header = () => {
 				</div>
 			</div>
 
-			<NavDrawer />
+			<NavDrawer config={config} />
 		</header>
 	);
 };

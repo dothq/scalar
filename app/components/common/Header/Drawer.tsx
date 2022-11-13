@@ -2,11 +2,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { HeaderConfig } from ".";
 import { Close } from "../../icons/Close";
 import Button from "../../ui/Button";
 import NavItems from "./Items";
 
-const HeaderDrawer = () => {
+const HeaderDrawer = ({ config }: { config: HeaderConfig }) => {
 	return (
 		<div
 			id="header-menu"
@@ -15,7 +16,7 @@ const HeaderDrawer = () => {
 		>
 			<div class="fdn-header-drawer-container" tabIndex={-1}>
 				<ul class="fdn-header-items" role="list">
-					<NavItems />
+					<NavItems config={config} />
 
 					<li>
 						<Button
@@ -29,13 +30,14 @@ const HeaderDrawer = () => {
 				</ul>
 
 				<div id="menu-close">
-					<a
-						class="fdn-button secondary has-icon"
-						href="#menu-button"
+					<Button
+						type={"secondary"}
+						href={"#menu-button"}
 						aria-label="Close Navigation Menu..."
+						hasIcon
 					>
 						<Close />
-					</a>
+					</Button>
 				</div>
 			</div>
 		</div>

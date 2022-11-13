@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import Link from "../../Link";
+import Localised from "../../Localised";
 import Logo from "../../ui/Logo";
 import Separator from "../../ui/Separator";
 import Sitemap from "./sitemap";
@@ -48,18 +50,18 @@ const Footer = () => {
 
 				<div class="fdn-footer-content">
 					<p class="fdn-footer-copying">
-						© 2019–{new Date().getFullYear()} Dot HQ.
-						<br />
-						Content on this page is licensed under{" "}
-						<a
-							href={
-								"https://creativecommons.org/licenses/by-sa/4.0/"
+						<Localised
+							id={"footer-copyright-text"}
+							year={new Date().getFullYear().toString()}
+							license-btn={
+								<Link
+									href={
+										"https://creativecommons.org/licenses/by-sa/4.0/"
+									}
+									target={"_blank"}
+								/>
 							}
-							target={"_blank"}
-						>
-							CC BY-SA 4.0
-						</a>
-						.
+						/>
 					</p>
 
 					{isGitRepo && (
@@ -69,18 +71,18 @@ const Footer = () => {
 							</pre>
 
 							<div class="fdn-footer-editing-links">
-								<a
+								<Link
 									href={viewSourceURL}
 									target={"_blank"}
 								>
 									View page source
-								</a>
-								<a
+								</Link>
+								<Link
 									href={editPageURL}
 									target={"_blank"}
 								>
 									Edit this page
-								</a>
+								</Link>
 							</div>
 						</div>
 					)}

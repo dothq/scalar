@@ -23,6 +23,7 @@ export type RouteData = {
 	type: string;
 	originalPath: string;
 	compiledPath: string;
+	isErr: boolean;
 };
 
 export const createRouteStruct = (): Map<string, RouteData[]> => {
@@ -34,7 +35,8 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 		const state = {
 			type: "",
 			originalPath: "",
-			compiledPath: ""
+			compiledPath: "",
+			isErr: false
 		};
 
 		const parsed = parse(path);
@@ -64,6 +66,10 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 			splitRoutePath,
 			`${parsed.name}.js`
 		);
+
+		if (+serverPath === +serverPath) {
+			state.isErr = true;
+		}
 
 		if (routeMap.has(serverPath)) {
 			routeMap.set(serverPath, [

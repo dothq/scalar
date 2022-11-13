@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { getComponentConfig } from "../../../utils/data";
+import Link from "../../Link";
 
 const SitemapSection = ({
 	title,
@@ -17,12 +18,12 @@ const SitemapSection = ({
 			<ul className="fdn-footer-section-list" role="list">
 				{items.map((i) => (
 					<li className="fdn-footer-section-list-item">
-						<a
+						<Link
 							href={i.href}
 							target={i.in_new ? "_blank" : ""}
 						>
 							{i.text}
-						</a>
+						</Link>
 					</li>
 				))}
 			</ul>

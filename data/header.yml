@@ -4,14 +4,23 @@
 
 name: Header
 items:
-    - text: Browser
+    - element: link
+      children: ${{ l("header-browser-item") }}
       href: /browser
 
-    - text: Products
+    - element: link
+      children: ${{ l("header-products-item") }}
       href: /products
 
-    - text: Community
+    - element: link
+      children: ${{ l("header-community-item") }}
       href: /community
 
-    - text: About
+    - element: link
+      children: ${{ l("header-about-item") }}
       href: /about
+end:
+    - element: button
+      children: ${{ l("header-cta-button-text") }}
+      colour: black
+      type: primary

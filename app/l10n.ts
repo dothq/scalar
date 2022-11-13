@@ -7,32 +7,61 @@ import { negotiateLanguages } from "@fluent/langneg";
 import { FastifyRequest } from "fastify";
 import { readdirSync } from "fs";
 import { readFile } from "fs/promises";
-import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { resolve } from "path";
 
 // This should never be changed!
 export const DEFAULT_LOCALE = "en-GB";
 
-export const l = async (str: string, ctx?: any) => {
-	return str;
+export const getLocale = () => {
+	if (
+		!("SCALAR_REQUEST_LANG" in global) ||
+		!(global as any).SCALAR_REQUEST_LANG
+	) {
+		throw new Error("No lang passed to global.");
+	}
 
-	// const msg = bundle.getMessage(str);
+	return (global as any).SCALAR_REQUEST_LANG
+}
 
-	// if (!msg || !msg.value) return str;
+export const l = (str: string, ctx?: any) => {
+	if (
+		!("SCALAR_LANG_BUNDLE" in global) ||
+		!(global as any).SCALAR_LANG_BUNDLE
+	) {
+		throw new Error("No lang bundle passed to global.");
+	}
 
-	// const formatErrors: any[] = [];
+	const bundle = (global as any).SCALAR_LANG_BUNDLE as FluentBundle;
 
-	// const value = bundle.formatPattern(
-	// 	msg.value,
-	// 	ctx || {},
-	// 	formatErrors
-	// );
+	let msg = bundle.getMessage(str);
 
-	// if (formatErrors.length) {
-	// 	return str;
-	// } else {
-	// 	return value;
-	// }
+	if (!msg || !msg.value) {
+		const fallbackBundle = (global as any)
+			.SCALAR_LANG_DEFAULT_BUNDLE as FluentBundle;
+
+		const fallbackMsg = fallbackBundle.getMessage(str);
+
+		if (!fallbackMsg || !fallbackMsg.value) return str;
+		else msg = fallbackMsg;
+	}
+
+	const formatErrors: any[] = [];
+
+	const value = bundle.formatPattern(
+		msg.value!,
+		ctx || {},
+		formatErrors
+	);
+
+	if (formatErrors.length) {
+		for (const err of formatErrors) {
+			console.error(str, err);
+		}
+
+		return str;
+	} else {
+		return value;
+	}
 };
 
 export const getAvailableLocales = () =>
@@ -42,6 +71,30 @@ export const getAvailableLocales = () =>
 
 export const isValidLocale = (locale: string) =>
 	getAvailableLocales().includes(locale);
+
+export const getL10nBundle = async (lang: string) => {
+	if (!isValidLocale(lang)) return null;
+
+	const ftl = await readFile(
+		resolve(process.cwd(), ".scalar", "l10n", `${lang}.ftl`),
+		"utf-8"
+	);
+
+	const resource = new FluentResource(ftl);
+
+	const bundle = new FluentBundle(lang);
+	const errors = bundle.addResource(resource);
+
+	if (errors.length) {
+		for (const error of errors) {
+			console.error(error);
+		}
+
+		throw new Error(`Failed to load '${lang}'.`);
+	}
+
+	return bundle;
+};
 
 export const negotiateLocale = (requestedLocales: string[]) => {
 	return negotiateLanguages(
@@ -54,38 +107,8 @@ export const negotiateLocale = (requestedLocales: string[]) => {
 	)[0];
 };
 
-const createL10n = async (req: FastifyRequest) => {
-	const availableLocales = readdirSync(
-		resolve(process.cwd(), ".scalar", "l10n")
-	).map((l) => l.split(".")[0]);
+export const maybeGetLangFromPath = (req: FastifyRequest) => {
+	const pathParts = req.url.split("/").slice(1);
 
-	const requestedLocales = parseAcceptLanguage(
-		req.headers["accept-language"]
-	);
-
-	const locale = negotiateLanguages(
-		requestedLocales,
-		availableLocales,
-		{ defaultLocale: DEFAULT_LOCALE, strategy: "matching" }
-	)[0];
-
-	const ftl = await readFile(
-		resolve(process.cwd(), ".scalar", "l10n", `${locale}.ftl`),
-		"utf-8"
-	);
-
-	const resource = new FluentResource(ftl);
-
-	const bundle = new FluentBundle(locale);
-	const errors = bundle.addResource(resource);
-
-	if (errors.length) {
-		for (const error of errors) {
-			console.error(error);
-		}
-
-		throw new Error(`Failed to load '${locale}'.`);
-	}
-
-	return bundle;
+	return isValidLocale(pathParts[0]) ? pathParts[0] : null;
 };

@@ -2,24 +2,26 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import Link from "../../Link";
+
 const A11y = () => {
 	return (
 		<ul class="fdn-header-a11y" role="list">
 			<li>
-				<a
+				<Link
 					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="#main-content"
 				>
 					Skip to content
-				</a>
+				</Link>
 			</li>
 			<li>
-				<a
+				<Link
 					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="/accessibility"
 				>
 					Accessibility options
-				</a>
+				</Link>
 			</li>
 		</ul>
 	);

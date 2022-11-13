@@ -3,10 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { FastifyReply, FastifyRequest } from "fastify";
+import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { resolve } from "path";
 import { cloneElement, createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
-import { DEFAULT_LOCALE } from "./l10n";
+import {
+	DEFAULT_LOCALE,
+	getL10nBundle,
+	isValidLocale,
+	maybeGetLangFromPath,
+	negotiateLocale
+} from "./l10n";
 import { addMPLLicenseHeader } from "./utils/html";
 import { pagesBuildDir, RouteData } from "./utils/router";
 
@@ -34,6 +41,31 @@ export const renderPage = async (
 	res: FastifyReply,
 	routeData: RouteData
 ) => {
+	let lang = DEFAULT_LOCALE;
+
+	if (routeData.isErr) {
+		const pathLang = maybeGetLangFromPath(req);
+
+		if (pathLang) {
+			lang = pathLang;
+		} else {
+			lang = negotiateLocale(
+				parseAcceptLanguage(req.headers["accept-language"])
+			);
+		}
+	} else if (
+		(req.params as any).lang &&
+		isValidLocale((req.params as any).lang)
+	) {
+		lang = (req.params as any).lang;
+	}
+
+	(global as any).SCALAR_REQUEST_LANG = lang;
+	(global as any).SCALAR_LANG_BUNDLE = await getL10nBundle(lang);
+	(global as any).SCALAR_LANG_DEFAULT_BUNDLE = await getL10nBundle(
+		DEFAULT_LOCALE
+	);
+
 	const Layout = (
 		await importJSXPage(resolve(pagesBuildDir, "@layout.js"))
 	).component;
@@ -47,7 +79,7 @@ export const renderPage = async (
 		path: req.url,
 		params: req.params || {},
 		meta: mod.meta || {},
-		lang: (req.params as any).lang || DEFAULT_LOCALE,
+		lang,
 		url: new URL(req.url, `http://${req.hostname}`),
 		req,
 		res
@@ -73,8 +105,7 @@ export const renderPage = async (
 				...props,
 				Component: () => CompEl
 			}),
-			{},
-			{ pretty: true }
+			{}
 		);
 
 		res.header("content-type", "text/html");

@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import Button from "../components/ui/Button";
+import { l } from "../l10n";
 import { PageProps } from "../types";
 
 export const meta = {
@@ -13,7 +14,7 @@ export const meta = {
 const Index = ({ lang }: PageProps) => {
 	return (
 		<>
-			<h1>Hello world {lang}</h1>
+			<h1>Hello world {l("bingus")}</h1>
 
 			<Button colour={"black"}>Contribute</Button>
 		</>

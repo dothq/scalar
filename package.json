@@ -29,6 +29,8 @@
 		"glob": "^8.0.3",
 		"intl-parse-accept-language": "^1.0.0",
 		"mymonero-core-js": "dothq/mymonero-core-js",
+		"node-html-parser": "^6.1.1",
+		"object-traversal": "^1.0.1",
 		"preact": "^10.11.2",
 		"preact-render-to-string": "^5.2.6",
 		"stripe": "^10.15.0",

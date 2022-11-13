@@ -2,24 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import { getComponentConfig } from "../../../utils/data";
-import NavItem from "./Item";
+import { HeaderConfig, renderHeaderElement } from ".";
 
-const HeaderItems = () => {
-	const config = getComponentConfig<{
-		name: string;
-		items: {
-			text: string;
-			href: string;
-		}[];
-	}>("header");
-
+const HeaderItems = ({ config }: { config: HeaderConfig }) => {
 	return (
-		<>
-			{config.items.map((i) => (
-				<NavItem {...i} />
-			))}
-		</>
+		<>{config.items.map((i: any) => renderHeaderElement(i))}</>
 	);
 };
 

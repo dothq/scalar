@@ -14,6 +14,7 @@ interface ButtonProps {
 	href?: any;
 	noJS?: boolean;
 	type?: "primary" | "secondary";
+	hasIcon?: boolean;
 }
 
 const Button = ({
@@ -24,6 +25,7 @@ const Button = ({
 	href,
 	type,
 	noJS,
+	hasIcon,
 	...rest
 }: JSXInternal.HTMLAttributes<HTMLAnchorElement> & ButtonProps) => {
 	type = type ? type : "primary";
@@ -36,7 +38,8 @@ const Button = ({
 			[colour as string]: true,
 			[type as string]: true,
 			"no-js": noJS,
-			"full-width": fullwidth
+			"full-width": fullwidth,
+			"has-icon": hasIcon
 		},
 		(rest as any).className || ""
 	);

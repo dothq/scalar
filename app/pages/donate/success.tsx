@@ -43,8 +43,6 @@ const DonationFront__Success = () => {
 				no longer be able to request a refund using the button
 				below.
 			</p>
-
-			<a class="fdn-button red">Refund transaction</a>
 		</>
 	);
 };

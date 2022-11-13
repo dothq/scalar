@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { useID } from "@dothq/id";
+import Link from "../../Link";
 
 const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
 	const ssrInstanceId = useID(1);
@@ -14,7 +15,7 @@ const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
 
 	return (
 		<div class="fdn-logo">
-			<a
+			<Link
 				class="fdn-not-visited"
 				href="/"
 				aria-label="Dot HQ Home"
@@ -78,7 +79,7 @@ const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
 						</>
 					)}
 				</svg>
-			</a>
+			</Link>
 		</div>
 	);
 };
