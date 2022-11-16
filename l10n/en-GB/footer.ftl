@@ -31,7 +31,6 @@ footer-support-section-ideas = Ideas
 
 footer-resources-section = Resources
 
-footer-resources-section-releases = Releases
 footer-resources-section-branding = Branding
 footer-resources-section-developers = Developers
 footer-resources-section-open-source = Open-source

@@ -43,9 +43,6 @@ items:
     - id: resources
       title: ${{ l("footer-resources-section") }}
       items:
-          - children: ${{ l("footer-resources-section-releases") }}
-            href: /releases
-
           - children: ${{ l("footer-resources-section-branding") }}
             href: /branding
 
