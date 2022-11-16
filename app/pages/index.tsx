@@ -12,6 +12,8 @@ export const meta = {
 };
 
 const Index = ({ lang }: PageProps) => {
+	throw new Error("bomus");
+
 	return (
 		<>
 			<h1>Hello world {l("bingus")}</h1>

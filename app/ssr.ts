@@ -105,10 +105,10 @@ export const renderPage = async (
 
 			res.header("content-type", "text/html");
 			res.send(addMPLLicenseHeader(html));
-		} catch (e) {
+		} catch (e: any) {
 			console.error(e);
 
-			console.log("500 todo");
+			throw e;
 		}
 	} else if (routeData.type == "api") {
 		const mod = await importPage(routeData.compiledPath);

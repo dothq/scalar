@@ -2,8 +2,16 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { FastifyReply, FastifyRequest } from "fastify";
+import { readFileSync } from "fs";
 import { glob } from "glob";
+import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { join, parse, resolve } from "path";
+
+export const serverErrorFileBuffer = readFileSync(
+	resolve(process.cwd(), ".scalar", "public", "errors", "500.html"),
+	"utf-8"
+);
 
 export const pagesOrigDir = resolve(process.cwd(), "app", "pages");
 
@@ -90,4 +98,28 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 	}
 
 	return routeMap;
+};
+
+export const serverError = (
+	req: FastifyRequest,
+	res: FastifyReply,
+	error?: Error | Error[]
+) => {
+	const stack = Array.isArray(error) ? error : [error];
+
+	let locale =
+		parseAcceptLanguage(req.headers["accept-language"])[0].split(
+			"-"
+		)[0] || "";
+
+	if (locale.startsWith("en")) {
+		locale = "";
+	}
+
+	return res
+		.status(500)
+		.header("content-type", "text/html")
+		.send(
+			serverErrorFileBuffer.replace("[ERROR_SUBS_LANG]", locale)
+		);
 };

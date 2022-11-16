@@ -8,12 +8,11 @@ import {
 	FastifyReply,
 	FastifyRequest
 } from "fastify";
-import { readFileSync } from "fs";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { basename, resolve } from "path";
 import { getAvailableLocales, negotiateLocale } from "./l10n";
 import { renderPage } from "./ssr";
-import { createRouteStruct } from "./utils/router";
+import { createRouteStruct, serverError } from "./utils/router";
 
 export const mediaRouter: FastifyPluginCallback = (
 	server,
@@ -38,13 +37,17 @@ export const router: FastifyPluginCallback = async (
 ) => {
 	const struct = createRouteStruct();
 
-	const serverErrHandler = async (
+	const errorHandler = async (
 		statusCode: number,
 		req: FastifyRequest,
-		res: FastifyReply
+		res: FastifyReply,
+		error?: Error
 	) => {
 		try {
 			res.status(statusCode);
+
+			if (statusCode == 500)
+				return serverError(req, res, error);
 
 			const state = struct.get(statusCode.toString());
 
@@ -61,53 +64,34 @@ export const router: FastifyPluginCallback = async (
 				res,
 				state!.find((s) => s.type == "jsx")!
 			);
-		} catch (e) {
-			console.error(e);
+		} catch (e: any) {
+			console.error("Failed to render error page!", e);
 
-			let locale =
-				parseAcceptLanguage(
-					req.headers["accept-language"]
-				)[0].split("-")[0] || "";
+			const stack = [];
+			if (error) stack.push(error);
+			stack.push(e);
 
-			if (locale.startsWith("en")) {
-				locale = "";
-			}
-
-			return res
-				.status(500)
-				.header("content-type", "text/html")
-				.send(
-					readFileSync(
-						resolve(
-							process.cwd(),
-							".scalar",
-							"public",
-							"errors",
-							"500.html"
-						),
-						"utf-8"
-					).replace("[ERROR_SUBS_LANG]", locale)
-				);
+			return serverError(
+				req,
+				res,
+				stack.length ? stack : undefined
+			);
 		}
 	};
 
 	const setErrorHandler = (code: number) => {
 		if (code == 404) {
 			server.setNotFoundHandler((req, res) =>
-				serverErrHandler(404, req, res)
+				errorHandler(404, req, res)
 			);
 		}
 
 		server.setErrorHandler((err, req, res) => {
-			console.error(err);
-
 			const statusCode = err.statusCode || 500;
 
-			return serverErrHandler(statusCode, req, res);
+			return errorHandler(statusCode, req, res);
 		});
 	};
-
-	console.log(struct);
 
 	for (const [path, state] of struct.entries()) {
 		if (path.startsWith("@")) continue;
@@ -138,8 +122,6 @@ export const router: FastifyPluginCallback = async (
 				: `/${locale}${path}`;
 
 			server.all(localisedPath, async (req, res) => {
-				console.log(localisedPath, state);
-
 				for (const route of state) {
 					return await renderPage(req, res, route);
 				}
