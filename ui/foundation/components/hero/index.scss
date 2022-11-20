@@ -1,0 +1,31 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@use "helpers";
+
+.fdn-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: var(--bg-colour);
+	color: var(--text-colour);
+
+	height: var(--height);
+}
+
+.fdn-hero .fdn-hero-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: var(--hero-body-width, var(--fdn-content-width));
+	height: 100%;
+	margin: 0 auto;
+
+	gap: 0.5rem;
+
+	padding: var(--padding-y, 0) 0;
+}
