@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { getLocale } from "../../../l10n";
+
 const Meta = ({ host }: { host: string }) => {
 	return (
 		<>
@@ -49,17 +51,23 @@ const Meta = ({ host }: { host: string }) => {
 				href="/sitemap.xml"
 				type="application/xml"
 			/>
-			<link rel="canonical" href={`https://${host}/en-GB`} />
+			<link
+				rel="canonical"
+				href={`https://${host}/${getLocale()}`}
+			/>
 			<link
 				rel="alternate"
 				hrefLang="x-default"
 				href={`https://${host}`}
 			/>
-			<link
-				rel="alternate"
-				hrefLang="{{ locale }}"
-				href={`https://${host}/en-GB`}
-			/>
+			{(global as any).SCALAR_LANGUAGE_MAP.map((l: any) => (
+				<link
+					rel="alternate"
+					hrefLang={l.value}
+					href={`https://${host}/${l.value}`}
+					title={l.children}
+				/>
+			))}
 			<link rel="home" href={`https://${host}`} />
 			<link rel="start" href={`https://${host}`} />
 			<link rel="index" href={`https://${host}/sitemap.xml`} />
