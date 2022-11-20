@@ -50,38 +50,44 @@
 	gap: 10rem;
 }
 
-/* Justify */
+/* X axis */
 
-.fdn-stack.x-start {
-	justify-content: flex-start;
+.fdn-stack.x-start,
+.fdn-stack.x-flex-start {
+	--x: flex-start;
 }
 
-.fdn-stack.x-middle {
-	justify-content: center;
+.fdn-stack.x-center {
+	--x: center;
 }
 
-.fdn-stack.x-end {
-	justify-content: flex-end;
+.fdn-stack.x-end,
+.fdn-stack.x-flex-end {
+	--x: flex-end;
 }
 
-.fdn-stack.x-between {
-	justify-content: space-between;
+.fdn-stack.x-between,
+.fdn-stack.x-space-between {
+	--x: space-between;
 }
 
-/* Align */
+/* Y axis */
 
-.fdn-stack.y-start {
-	align-items: flex-start;
+.fdn-stack.y-start,
+.fdn-stack.y-flex-start {
+	--y: flex-start;
 }
 
-.fdn-stack.y-middle {
-	align-items: center;
+.fdn-stack.y-center {
+	--y: center;
 }
 
-.fdn-stack.y-end {
-	align-items: flex-end;
+.fdn-stack.y-end,
+.fdn-stack.y-flex-end {
+	--y: flex-end;
 }
 
-.fdn-stack.y-between {
-	justify-content: space-between;
+.fdn-stack.y-between,
+.fdn-stack.y-space-between {
+	--y: space-between;
 }

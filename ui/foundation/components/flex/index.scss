@@ -7,3 +7,13 @@
 .fdn-stack {
 	display: flex;
 }
+
+.fdn-stack.v {
+	align-items: var(--x);
+	justify-content: var(--y);
+}
+
+.fdn-stack.h {
+	align-items: var(--y);
+	justify-content: var(--x);
+}
