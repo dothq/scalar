@@ -40,14 +40,10 @@ export const router: FastifyPluginCallback = async (
 	const errorHandler = async (
 		statusCode: number,
 		req: FastifyRequest,
-		res: FastifyReply,
-		error?: Error
+		res: FastifyReply
 	) => {
 		try {
 			res.status(statusCode);
-
-			if (statusCode == 500)
-				return serverError(req, res, error);
 
 			const state = struct.get(statusCode.toString());
 
@@ -65,17 +61,7 @@ export const router: FastifyPluginCallback = async (
 				state!.find((s) => s.type == "jsx")!
 			);
 		} catch (e: any) {
-			console.error("Failed to render error page!", e);
-
-			const stack = [];
-			if (error) stack.push(error);
-			stack.push(e);
-
-			return serverError(
-				req,
-				res,
-				stack.length ? stack : undefined
-			);
+			return serverError(req, res);
 		}
 	};
 
@@ -87,6 +73,8 @@ export const router: FastifyPluginCallback = async (
 		}
 
 		server.setErrorHandler((err, req, res) => {
+			console.error("Failed to render page!", err);
+
 			const statusCode = err.statusCode || 500;
 
 			return errorHandler(statusCode, req, res);
