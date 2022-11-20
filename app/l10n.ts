@@ -8,6 +8,9 @@ import { FastifyRequest } from "fastify";
 import { readdirSync } from "fs";
 import { readFile } from "fs/promises";
 import { resolve } from "path";
+import Localised, {
+	createLocalisedComponent
+} from "./components/Localised";
 
 // This should never be changed!
 export const DEFAULT_LOCALE = "en-GB";
@@ -41,8 +44,10 @@ export const l = (str: string, ctx?: any) => {
 
 		const fallbackMsg = fallbackBundle.getMessage(str);
 
-		if (!fallbackMsg || !fallbackMsg.value) return str;
-		else msg = fallbackMsg;
+		if (!fallbackMsg || !fallbackMsg.value) {
+			console.warn(`Unknown string with ID '${str}'.`);
+			return str;
+		} else msg = fallbackMsg;
 	}
 
 	const formatErrors: any[] = [];
@@ -139,4 +144,16 @@ export const getNativeLocaleMap = async () => {
 	}
 
 	return map;
+};
+
+export const useTranslations = (
+	prefix: string
+): [typeof l, typeof Localised] => {
+	const lfn = (...args: any) => {
+		args[0] = `${prefix}-${args[0]}`;
+
+		return (l as any)(...args);
+	};
+
+	return [lfn, createLocalisedComponent(lfn)];
 };
