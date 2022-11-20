@@ -16,14 +16,20 @@ export const Icon = ({
 	size,
 	colour,
 	ariaLabel,
-	viewBox
+	viewBox,
+	...rest
 }: {
 	children: any;
 	viewBox?: any;
+	className?: string;
 } & IconProps) => {
-	const className = clsx("fdn-icon", {
-		[colour || "black"]: true
-	});
+	const className = clsx(
+		"fdn-icon",
+		{
+			[colour || "black"]: true
+		},
+		rest.className || ""
+	);
 
 	const s = size || 1;
 
