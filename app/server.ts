@@ -17,6 +17,13 @@ export const createHttpServer = () => {
 	server.register(fastifyCookie);
 
 	server.addHook("preHandler", (req, res, done) => {
+		if (
+			req.url.charAt(req.url.length - 1) == "/" &&
+			req.url !== "/"
+		) {
+			return res.redirect(307, req.url.slice(0, -1));
+		}
+
 		if (process.env.NODE_ENV == "develop") return done();
 
 		if (!req.headers.host) return res.status(403).send("");
