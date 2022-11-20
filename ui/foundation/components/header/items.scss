@@ -30,5 +30,10 @@
 	--border-radii: 0;
 	--spacing-x: 0;
 	--text-colour: var(--fdn-colours-black);
-	--text-hover-colour: var(--fdn-text-secondary-colour);
+	--text-hover-colour: var(--fdn-colours-black);
+	border-bottom: 2px solid transparent !important;
+}
+
+.fdn-header-item:hover {
+	border-bottom: 2px solid currentColor !important;
 }
