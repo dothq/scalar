@@ -5,6 +5,7 @@
 import { exec } from "child_process";
 import { config } from "dotenv";
 import { promisify } from "util";
+import { DEFAULT_LOCALE, getL10nBundle } from "./l10n";
 import { createHttpServer } from "./server";
 
 config();
@@ -25,6 +26,10 @@ const main = async () => {
 	process.env.SCALAR_GIT_BRANCH = (
 		await asyncExec("git rev-parse --abbrev-ref HEAD")
 	).stdout.trim();
+
+	(global as any).SCALAR_LANG_DEFAULT_BUNDLE = await getL10nBundle(
+		DEFAULT_LOCALE
+	);
 
 	const server = createHttpServer();
 

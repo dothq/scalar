@@ -55,9 +55,6 @@ export const renderPage = async (
 
 	(global as any).SCALAR_REQUEST_LANG = lang;
 	(global as any).SCALAR_LANG_BUNDLE = await getL10nBundle(lang);
-	(global as any).SCALAR_LANG_DEFAULT_BUNDLE = await getL10nBundle(
-		DEFAULT_LOCALE
-	);
 	(global as any).SCALAR_URL = req.url;
 	(global as any).SCALAR_LANGUAGE_MAP = await getNativeLocaleMap();
 
