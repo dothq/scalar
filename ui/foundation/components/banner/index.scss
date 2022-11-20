@@ -17,6 +17,9 @@
 }
 
 .fdn-banner p {
+	display: flex;
+	align-items: center;
+	min-height: 2rem;
 	color: inherit;
 	flex: 1;
 }
