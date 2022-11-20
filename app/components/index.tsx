@@ -14,5 +14,8 @@ type FDNColour =
 	| "white";
 
 type FDNSize = "sm" | "md" | "lg";
+type FDNSizeExtended = FDNSize | "xl" | "fw" | "fh";
 
 type FDNStateType = "info" | "warn" | "success" | "error";
+
+type FDNOrientation = "h" | "v";
