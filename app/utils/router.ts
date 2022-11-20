@@ -2,11 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import ejs from "ejs";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { readFileSync } from "fs";
 import { glob } from "glob";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { join, parse, resolve } from "path";
+import { DEFAULT_LOCALE, maybeGetLangFromPath } from "../l10n";
 
 export const serverErrorFileBuffer = readFileSync(
 	resolve(process.cwd(), ".scalar", "public", "errors", "500.html"),
@@ -102,24 +104,20 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 
 export const serverError = (
 	req: FastifyRequest,
-	res: FastifyReply,
-	error?: Error | Error[]
+	res: FastifyReply
 ) => {
-	const stack = Array.isArray(error) ? error : [error];
+	const pathLang = maybeGetLangFromPath(req);
 
-	let locale =
-		parseAcceptLanguage(req.headers["accept-language"])[0].split(
-			"-"
-		)[0] || "";
+	const lang =
+		(pathLang
+			? pathLang
+			: parseAcceptLanguage(req.headers["accept-language"])[0]
+		).split("-")[0] || DEFAULT_LOCALE;
 
-	if (locale.startsWith("en")) {
-		locale = "";
-	}
+	const html = ejs.render(serverErrorFileBuffer, { lang });
 
 	return res
 		.status(500)
 		.header("content-type", "text/html")
-		.send(
-			serverErrorFileBuffer.replace("[ERROR_SUBS_LANG]", locale)
-		);
+		.send(html);
 };

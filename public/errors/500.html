@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 
-<html lang="[ERROR_SUBS_LANG]">
+<html lang="<%= lang %>">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,7 +12,6 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>500 Internal Server Error - Dot HQ</title>
 		<script>
 			const disallowedHosts = [
 				"localhost",
@@ -44,7 +43,6 @@
 					BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 					Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 					sans-serif;
-				--display-x-default: flex;
 			}
 
 			h1,
@@ -63,19 +61,11 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				gap: 10px;
-				text-align: center;
-				flex: 1;
-			}
-
-			main div {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
 				padding: 10vh 2rem;
 				text-align: center;
 				gap: 10px;
+				max-width: 370px;
+				margin: 0 auto;
 			}
 
 			h1 {
@@ -85,35 +75,9 @@
 			p {
 				color: rgba(0, 0, 0, 0.75);
 			}
-
-			main div {
-				display: var(--display, none);
-				max-width: var(--max-width, 300px);
-			}
-
-			main div.x-default {
-				display: var(--display-x-default);
-			}
 		</style>
 	</head>
 	<body>
-		<style>
-			:lang(es),
-			:lang(fr) {
-				--display-x-default: none;
-			}
-
-			:lang(es) .es {
-				--display: flex;
-				--max-width: 400px;
-			}
-
-			:lang(fr) .fr {
-				--display: flex;
-				--max-width: 350px;
-			}
-		</style>
-
 		<header>
 			<svg
 				height="32"
@@ -173,29 +137,35 @@
 		</header>
 
 		<main role="main">
-			<div class="x-default">
+			<% if (!lang || lang == "en") { %>
+				<title>500 Internal Server Error - Dot HQ</title>
+				
 				<h1>500 Server Error</h1>
 				<p>
 					We're experiencing some difficulties and cannot
 					process your request right now.
 				</p>
-			</div>
+			<% } %>
 
-			<div class="es">
+			<% if (lang == "es") { %>
+				<title>500 Error de servidor - Dot HQ</title>
+
 				<h1>500 Error de servidor</h1>
 				<p>
 					Estamos experimentando algunas dificultades y no
 					podemos procesar tu petición en estos momentos.
 				</p>
-			</div>
+			<% } %>
 
-			<div class="fr">
+			<% if (lang == "fr") { %>
+				<title>500 Erreur du serveur - Dot HQ</title>
+
 				<h1>500 Erreur du serveur</h1>
 				<p>
 					Nous rencontrons des difficultés et ne pouvons
 					traiter votre demande dès maintenant.
 				</p>
-			</div>
+			<% } %>
 		</main>
 	</body>
 </html>
