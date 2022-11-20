@@ -42,3 +42,25 @@
 .fdn-icon.current-color {
 	--bg-colour: currentColor;
 }
+
+.fdn-icon.fdn-icon-arrow-right-animated {
+	.arrow-head {
+		opacity: 0;
+		transition: 0.2s opacity ease;
+	}
+
+	.arrow-arm {
+		transform: translateX(-4px);
+		transition: 0.2s transform ease;
+	}
+}
+
+*:hover > .fdn-icon.fdn-icon-arrow-right-animated {
+	.arrow-head {
+		opacity: 1;
+	}
+
+	.arrow-arm {
+		transform: translateX(0px);
+	}
+}
