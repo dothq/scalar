@@ -6,4 +6,9 @@
 -language-short-name = English (UK)
 -language-short-code = UK
 
+language-select-format = { $percent ->
+        [100] { $name }
+       *[other] { $name } - { $percent }%
+    }
+
 page-title-format = { $title } ― { -brand-full-name } ({ -language-short-code })

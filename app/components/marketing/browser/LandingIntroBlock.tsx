@@ -41,7 +41,10 @@ const BrowserLandingIntroBlock = () => {
 									<Localised id={"description"} />
 								</p>
 
-								<Button colour={"blue"}>
+								<Button
+									colour={"blue"}
+									href={"/browser"}
+								>
 									<Localised
 										id={"cta-btn-text"}
 										arrow-right={

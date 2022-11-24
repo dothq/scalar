@@ -118,6 +118,16 @@ export const maybeGetLangFromPath = (req: FastifyRequest) => {
 	return isValidLocale(pathParts[0]) ? pathParts[0] : null;
 };
 
+export const getPercentTranslated = () => {
+	const bundle = (global as any).SCALAR_LANG_BUNDLE as FluentBundle;
+
+	const percent = bundle.getMessage("language-per-cent-localised");
+
+	if (!percent || !percent.value) return 0;
+
+	return parseInt(bundle.formatPattern(percent?.value));
+};
+
 export const getNativeLocaleMap = async () => {
 	const map = [];
 
@@ -132,12 +142,28 @@ export const getNativeLocaleMap = async () => {
 			)
 		);
 
-		const msg = bundle.getMessage("language-native-name");
+		const nativeName = bundle.getMessage("language-native-name");
+		const percent = bundle.getMessage(
+			"language-per-cent-localised"
+		);
+		const selectFormat = bundle.getMessage(
+			"language-select-format"
+		);
 
-		if (msg && msg.value) {
+		if (
+			nativeName &&
+			nativeName.value &&
+			percent &&
+			percent.value &&
+			selectFormat &&
+			selectFormat.value
+		) {
 			map.push({
 				value: locale,
-				children: bundle.formatPattern(msg.value),
+				children: bundle.formatPattern(selectFormat?.value, {
+					name: bundle.formatPattern(nativeName.value),
+					percent: +bundle.formatPattern(percent.value)
+				}),
 				selected: locale == getLocale()
 			});
 		}

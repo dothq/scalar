@@ -11,7 +11,7 @@ const Banner = ({
 	children
 }: {
 	type: FDNStateType;
-	icon: any;
+	icon?: any;
 	children: any;
 }) => {
 	const className = clsx("fdn-banner", {

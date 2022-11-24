@@ -12,6 +12,9 @@ const { resolve, basename } = require("path");
 const sass = require("sass");
 const rimraf = require("rimraf");
 const { createHash } = require("crypto");
+const { FluentResource } = require("@fluent/bundle");
+
+const DEFAULT_LOCALE = "en-GB";
 
 const options = {
 	outdir: resolve(process.cwd(), ".scalar"),
@@ -88,6 +91,42 @@ const generateHash = (name, paths) => {
 	);
 
 	return finalHash;
+};
+
+const getPerCentLocalised = (lang) => {
+	if (lang == DEFAULT_LOCALE) return 100;
+
+	const langData = readFileSync(
+		resolve(options.outdir, "l10n", `${lang}.ftl`),
+		"utf-8"
+	);
+
+	const defaultLangData = readFileSync(
+		resolve(options.outdir, "l10n", `${DEFAULT_LOCALE}.ftl`),
+		"utf-8"
+	);
+
+	const langResource = new FluentResource(langData);
+	const defaultLangResource = new FluentResource(defaultLangData);
+
+	let totalTranslated = 0;
+
+	for (const str of langResource.body) {
+		const defaultStr = defaultLangResource.body.find(
+			(s) => s.id == str.id
+		);
+
+		if (!defaultStr) {
+			throw new Error(
+				`String ID '${str.id}' not allowed as it was absent from ${DEFAULT_LOCALE}.`
+			);
+		}
+
+		if (defaultStr && defaultStr.value !== str.value)
+			totalTranslated++;
+	}
+
+	return (totalTranslated / langResource.body.length) * 100;
 };
 
 const main = () => {
@@ -210,6 +249,21 @@ const main = () => {
 					data
 				);
 			}
+
+			const percentage = getPerCentLocalised(l10n);
+
+			// Don't bundle locales not 10% localised
+			if (percentage < 10) {
+				rimraf.sync(
+					resolve(options.outdir, "l10n", `${l10n}.ftl`)
+				);
+				continue;
+			}
+
+			appendFileSync(
+				resolve(options.outdir, "l10n", `${l10n}.ftl`),
+				`\n\nlanguage-per-cent-localised = { NUMBER(${percentage}, maximumFractionDigits: 0) }`
+			);
 		}
 	}
 

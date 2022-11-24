@@ -2,10 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-marketing-introduction-cta-title = 
+browser-landing-intro-block-title = 
     A safer way to
     surf the web.
-marketing-introduction-cta-subtitle = 
-    Dot Browser is a next-generation web browser
-    with rugged privacy features out-of-the-box.
-marketing-introduction-cta-explore-btn = Explore Dot Browser
+
+browser-landing-intro-block-description = 
+    A next-generation web browser with rugged 
+    privacy features out-of-the-box.
+
+browser-landing-intro-block-cta-btn-text = Explore <arrow-right>
