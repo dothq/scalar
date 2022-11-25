@@ -34,7 +34,7 @@ const Layout = ({
 		contactPoint: [
 			{
 				"@type": "ContactPoint",
-				email: "contact+support@essential.gg",
+				email: "contact+support@dothq.org",
 				url: `https://${url.host}/support`,
 				contactType: "customer service"
 			}
