@@ -262,7 +262,9 @@ const main = () => {
 
 			appendFileSync(
 				resolve(options.outdir, "l10n", `${l10n}.ftl`),
-				`\n\nlanguage-per-cent-localised = { NUMBER(${percentage}, maximumFractionDigits: 0) }`
+				`\n\nlanguage-per-cent-localised = ${percentage.toFixed(
+					0
+				)}`
 			);
 		}
 	}

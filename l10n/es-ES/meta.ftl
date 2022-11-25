@@ -11,4 +11,10 @@ language-select-format = { $percent ->
        *[other] { $name } - { $percent }%
     }
 
+language-not-localised = 
+    Este idioma está solo del { $percent }% traducido.
+    Algunas partes de la página aparecerán en { $fallback-lang }. 
+    
+    <contribute-btn>Contribuir al { -language-short-name }</contribute-btn>
+
 page-title-format = { $title } ― { -brand-full-name } ({ -language-short-code })

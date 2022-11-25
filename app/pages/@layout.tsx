@@ -4,11 +4,11 @@
 
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
+import L10nBanner from "../components/common/L10nBanner";
 import Meta from "../components/common/Meta";
 import Script from "../components/Script";
-import Banner from "../components/ui/Banner";
 import HTMLComment from "../components/ui/HTMLComment";
-import { getPercentTranslated, l } from "../l10n";
+import { l } from "../l10n";
 import { PageProps } from "../types";
 import { withCacheBuster } from "../utils/cache";
 
@@ -105,15 +105,6 @@ const Layout = ({
 
 				<body>
 					<div id="__scalar">
-						{getPercentTranslated() < 100 && (
-							<Banner type={"info"}>
-								This language isn't fully translated
-								yet. Some parts of the page will
-								appear in English. You can help
-								contribute to our translations.
-							</Banner>
-						)}
-
 						<Header />
 
 						<main
@@ -123,6 +114,8 @@ const Layout = ({
 						>
 							<Component />
 						</main>
+
+						<L10nBanner />
 
 						<Footer />
 					</div>

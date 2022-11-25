@@ -26,16 +26,11 @@ export const getLocale = () => {
 	return (global as any).SCALAR_REQUEST_LANG;
 };
 
-export const l = (str: string, ctx?: any) => {
-	if (
-		!("SCALAR_LANG_BUNDLE" in global) ||
-		!(global as any).SCALAR_LANG_BUNDLE
-	) {
-		throw new Error("No lang bundle passed to global.");
-	}
-
-	const bundle = (global as any).SCALAR_LANG_BUNDLE as FluentBundle;
-
+export const getTranslation = (
+	bundle: FluentBundle,
+	str: string,
+	ctx?: any
+) => {
 	let msg = bundle.getMessage(str);
 
 	if (!msg || !msg.value) {
@@ -69,6 +64,19 @@ export const l = (str: string, ctx?: any) => {
 	}
 };
 
+export const l = (str: string, ctx?: any) => {
+	if (
+		!("SCALAR_LANG_BUNDLE" in global) ||
+		!(global as any).SCALAR_LANG_BUNDLE
+	) {
+		throw new Error("No lang bundle passed to global.");
+	}
+
+	const bundle = (global as any).SCALAR_LANG_BUNDLE as FluentBundle;
+
+	return getTranslation(bundle, str, ctx);
+};
+
 export const getAvailableLocales = () =>
 	readdirSync(resolve(process.cwd(), ".scalar", "l10n")).map(
 		(l) => l.split(".")[0]
@@ -80,10 +88,12 @@ export const isValidLocale = (locale: string) =>
 export const getL10nBundle = async (lang: string) => {
 	if (!isValidLocale(lang)) return null;
 
-	const ftl = await readFile(
+	let ftl = await readFile(
 		resolve(process.cwd(), ".scalar", "l10n", `${lang}.ftl`),
 		"utf-8"
 	);
+
+	ftl += "\n\nlanguage-native-name = { -language-short-name }";
 
 	const resource = new FluentResource(ftl);
 

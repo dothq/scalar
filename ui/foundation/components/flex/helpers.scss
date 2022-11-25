@@ -91,3 +91,13 @@
 .fdn-stack.y-space-between {
 	--y: space-between;
 }
+
+/* Sizing */
+
+.fdn-stack.w-full {
+	width: 100%;
+}
+
+.fdn-stack.h-full {
+	height: 100%;
+}

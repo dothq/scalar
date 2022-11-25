@@ -4,29 +4,40 @@
 
 import clsx from "clsx";
 import { cloneElement } from "preact";
+import { JSXInternal } from "preact/src/jsx";
 
 const Banner = ({
 	type,
+	size,
 	icon,
-	children
+	children,
+	...rest
 }: {
-	type: FDNStateType;
+	type?: FDNStateType;
+	size?: FDNSize;
 	icon?: any;
 	children: any;
-}) => {
-	const className = clsx("fdn-banner", {
-		[type as string]: true
-	});
+} & Omit<JSXInternal.HTMLAttributes<HTMLElement>, "size">) => {
+	size = size ? size : "md";
+
+	const className = clsx(
+		"fdn-banner",
+		{
+			[type as string]: !!type,
+			[size as string]: true
+		},
+		rest.className || ""
+	);
 
 	return (
-		<aside className={className}>
+		<aside {...rest} className={className}>
 			{icon &&
 				cloneElement(icon, {
 					size: 2,
 					colour: "current-color"
 				})}
 
-			<p>{children}</p>
+			<p className={"fdn-p"}>{children}</p>
 		</aside>
 	);
 };

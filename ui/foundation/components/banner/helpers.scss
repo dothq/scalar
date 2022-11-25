@@ -7,6 +7,7 @@
 .fdn-banner.info {
 	--bg-colour: var(--fdn-info-colour);
 	--text-colour: var(--fdn-colours-white);
+	--link-colour: var(--fdn-colours-white);
 }
 
 .fdn-banner.warn {
@@ -19,14 +20,31 @@
 		),
 		var(--fdn-warn-colour);
 	--text-colour: var(--fdn-colours-black);
+	--link-colour: var(--fdn-colours-black);
 }
 
 .fdn-banner.error {
 	--bg-colour: var(--fdn-error-colour);
 	--text-colour: var(--fdn-colours-white);
+	--link-colour: var(--fdn-colours-white);
 }
 
 .fdn-banner.success {
 	--bg-colour: var(--fdn-success-colour);
 	--text-colour: var(--fdn-colours-white);
+	--link-colour: var(--fdn-colours-white);
+}
+
+/* Sizes */
+
+.fdn-banner.sm {
+	--padding: 1.25rem;
+}
+
+.fdn-banner.md {
+	--padding: 2rem;
+}
+
+.fdn-banner.lg {
+	--padding: 4rem;
 }

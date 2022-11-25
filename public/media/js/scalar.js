@@ -9,3 +9,10 @@ document
 	.addEventListener("change", () => {
 		document.querySelector("#app-language-switcher").submit();
 	});
+
+document.addEventListener("scroll", () => {
+	document.documentElement.classList.toggle(
+		"header-scroll-threshold",
+		window.scrollY >= 200
+	);
+});

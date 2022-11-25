@@ -9,17 +9,21 @@
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: row;
-	background: var(--bg-colour);
-	color: var(--text-colour);
-	padding: 2rem;
+	background: var(--bg-colour, var(--fdn-colours-gray-secondary));
+	color: var(--text-colour, var(--fdn-colours-black));
+	padding: var(--padding);
 	gap: 1.5rem;
-	border-radius: 1rem;
+	border-radius: var(--border-radius, 1rem);
 }
 
 .fdn-banner p {
 	display: flex;
 	align-items: center;
-	min-height: 2rem;
+	min-height: var(--padding);
 	color: inherit;
 	flex: 1;
+}
+
+.fdn-banner a:not(.fdn-button) {
+	color: var(--link-colour, var(--fdn-colours-link));
 }
