@@ -38,7 +38,7 @@ const Footer = () => {
 	}
 
 	return (
-		<footer class="fdn-footer">
+		<footer id={"footer-content"} class="fdn-footer">
 			<div class="fdn-footer-container">
 				<div class="fdn-footer-content">
 					<div class="fdn-footer-logo-container">

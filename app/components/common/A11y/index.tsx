@@ -18,6 +18,14 @@ const A11y = () => {
 			<li>
 				<Link
 					class="fdn-header-a11y-link fdn-visually-hidden"
+					href="#footer-content"
+				>
+					Skip to end
+				</Link>
+			</li>
+			<li>
+				<Link
+					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="/accessibility"
 				>
 					Accessibility options
