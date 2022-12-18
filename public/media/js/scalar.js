@@ -13,6 +13,6 @@ document
 document.addEventListener("scroll", () => {
 	document.documentElement.classList.toggle(
 		"header-scroll-threshold",
-		window.scrollY >= 200
+		window.scrollY >= 100
 	);
 });
