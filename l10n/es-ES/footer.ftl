@@ -51,7 +51,7 @@ footer-socials-section = Follow us
 
 # Language Switcher
 
-footer-language-section = Language
+footer-language-section = Idioma
 
 footer-view-source = View page source
 footer-edit-page = Edit this page
