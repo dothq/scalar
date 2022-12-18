@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { cloneElement } from "preact";
 import HTMLComment from "../ui/HTMLComment";
 
 export const Block = ({
@@ -14,7 +15,16 @@ export const Block = ({
 	return (
 		<>
 			<HTMLComment> @{id} </HTMLComment>
-			{children}
+			{cloneElement(children, {
+				...children.props,
+				className: [`block-${id}`]
+					.concat(
+						children.props.className
+							? children.props.className.split(" ")
+							: []
+					)
+					.join(" ")
+			})}
 		</>
 	);
 };
