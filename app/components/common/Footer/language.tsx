@@ -9,7 +9,10 @@ import Select from "../../ui/Select";
 import FooterSection from "./section";
 
 const FooterLanguage = () => {
-	let go = "/" + ((global as any).SCALAR_URL.split("/")[2] || "");
+	let go =
+		"/" +
+		((global as any).SCALAR_URL.split("/").splice(2).join("/") ||
+			"");
 
 	return (
 		<FooterSection title={l("footer-language-section")}>
