@@ -203,3 +203,20 @@ hr.fdn-separator {
 .fdn-needs-js:not(:root:not(.no-js) *) {
 	display: none;
 }
+
+/* Overflow helper classes */
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.overflow-clip {
+	overflow: clip;
+}
+
+.overflow-scroll {
+	overflow: scroll;
+}
+
+.overflow-visible {
+	overflow: visible;
+}

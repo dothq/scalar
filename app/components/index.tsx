@@ -19,3 +19,5 @@ type FDNSizeExtended = FDNSize | "xl" | "fw" | "fh";
 type FDNStateType = "info" | "warn" | "success" | "error";
 
 type FDNOrientation = "h" | "v";
+
+type FDNOverflow = "hidden" | "scroll" | "clip" | "visible";

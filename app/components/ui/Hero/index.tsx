@@ -23,11 +23,13 @@ const Hero = ({
 	size,
 	detatched,
 	children,
+	overflow,
 	...rest
 }: {
 	colour?: FDNColour;
 	size?: FDNSizeExtended;
 	detatched?: boolean;
+	overflow?: FDNOverflow;
 } & Omit<JSXInternal.HTMLAttributes<HTMLElement>, "size">) => {
 	size = size ? size : ("md" as any);
 
@@ -36,7 +38,8 @@ const Hero = ({
 		{
 			[colour as string]: !!colour,
 			[size as string]: !!size,
-			detatched: !!detatched
+			detatched: !!detatched,
+			[`overflow-${overflow}`]: !!overflow
 		},
 		rest.className || ""
 	);
