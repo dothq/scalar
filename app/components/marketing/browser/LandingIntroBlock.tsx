@@ -9,6 +9,7 @@ import { ArrowRightAnimated } from "../../icons/animated/ArrowRightAnimated";
 import Button from "../../ui/Button";
 import ConstrainedChildren from "../../ui/ConstrainedChildren";
 import { Hero, HeroBody } from "../../ui/Hero";
+import ProductLockup from "../../ui/ProductLockup";
 import Stack from "../../ui/Stack";
 
 const BLOCK_ID = "browser-landing-intro-block";
@@ -18,7 +19,12 @@ const BrowserLandingIntroBlock = () => {
 
 	return (
 		<Block id={BLOCK_ID}>
-			<Hero detatched colour={"white"} size={"xl"}>
+			<Hero
+				detatched
+				colour={"white"}
+				size={"xl"}
+				overflow={"hidden"}
+			>
 				<HeroBody>
 					<ConstrainedChildren>
 						<Stack orientation={"h"} gap={"md"}>
@@ -27,6 +33,13 @@ const BrowserLandingIntroBlock = () => {
 								gap={"md"}
 								flex={"1"}
 							>
+								<ProductLockup
+									mark
+									type
+									product={"browser"}
+									href={"/browser"}
+								/>
+
 								<h1>
 									<Localised id={"title"} />
 								</h1>
