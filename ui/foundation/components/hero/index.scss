@@ -21,11 +21,17 @@
 	flex-direction: column;
 	justify-content: center;
 
-	width: var(--hero-body-width, var(--fdn-content-width));
+	width: 100%;
+	max-width: var(--hero-body-width, var(--fdn-content-width));
 	height: 100%;
-	margin: 0 auto;
 
 	gap: 0.5rem;
 
 	padding: var(--padding-y, 0) 0;
+}
+
+@media (min-width: 15rem) {
+	.fdn-hero {
+		padding: 0 2rem;
+	}
 }
