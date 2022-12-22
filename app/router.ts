@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import fastifyCompress from "@fastify/compress";
 import fastifyStatic from "@fastify/static";
 import {
 	FastifyPluginCallback,
@@ -19,6 +20,8 @@ export const mediaRouter: FastifyPluginCallback = (
 	opts,
 	done
 ) => {
+	server.register(fastifyCompress, { global: false });
+
 	return fastifyStatic(
 		server,
 		{
