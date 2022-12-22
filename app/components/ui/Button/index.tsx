@@ -7,7 +7,7 @@ import { createElement } from "preact";
 import { JSXInternal } from "preact/src/jsx";
 import { localisedHref } from "../../Link";
 
-interface ButtonProps {
+export interface ButtonProps {
 	colour?: FDNColour;
 	size?: FDNSize;
 	children?: any;
