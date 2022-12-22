@@ -7,10 +7,44 @@ items:
     - element: link
       children: ${{ l("header-browser-item") }}
       href: /browser
+      items:
+          - element: menu_item
+            href: /browser/desktop
+            title: ${{ l("header-browser-item-desktop-title") }}
+            subtitle: ${{ l("header-browser-item-desktop-subtitle") }}
+            icon: BrowserDesktop
+
+          - element: menu_item
+            href: /browser/android
+            title: ${{ l("header-browser-item-android-title") }}
+            subtitle: ${{ l("header-browser-item-android-subtitle") }}
+            icon: BrowserDesktop
 
     - element: link
       children: ${{ l("header-products-item") }}
       href: /products
+      items:
+          - element: menu_item
+            href: /one
+            title: ${{ l("header-products-item-one-title") }}
+            subtitle: ${{ l("header-products-item-one-subtitle") }}
+            icon: One
+
+          - element: menu_item
+            href: /translate
+            title: ${{ l("header-products-item-translate-title") }}
+            subtitle: ${{ l("header-products-item-translate-subtitle") }}
+            icon: Translate
+
+          - element: menu_item
+            href: /browser/features#shield
+            title: ${{ l("header-products-item-shield-title") }}
+            subtitle: ${{ l("header-products-item-shield-subtitle") }}
+            icon: Shield
+
+          - element: link
+            href: /products
+            children: ${{ l("header-products-item-view-all-link") }}
 
     - element: link
       children: ${{ l("header-community-item") }}

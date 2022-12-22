@@ -11,9 +11,19 @@ import A11y from "../A11y";
 import NavDrawer from "./Drawer";
 import NavItem from "./Item";
 
-type HeaderConfigElement = {
+export type HeaderConfigElement = {
 	element: string;
+	items: HeaderConfigElementChildItem[];
 	[key: string]: any;
+};
+
+export type HeaderConfigElementChildItem = {
+	element: string;
+	href?: string;
+	title?: string;
+	subtitle?: string;
+	icon?: any;
+	children?: any;
 };
 
 export interface HeaderConfig {
@@ -24,7 +34,11 @@ export interface HeaderConfig {
 
 export const renderHeaderElement = (i: HeaderConfigElement) => {
 	if (i.element == "link") {
-		return createElement(NavItem, i as any, i.children);
+		return createElement(
+			NavItem,
+			{ ...(i as any), menuItems: i.items || [] },
+			i.children
+		);
 	} else if (i.element == "button") {
 		return createElement(Button, i as any, i.children);
 	}
