@@ -16,7 +16,7 @@
 	"editor.formatOnType": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"[html]": {
-		"editor.defaultFormatter": ""
+		"editor.defaultFormatter": "vscode.html-language-features"
 	},
 	"files.associations": {
 		"*.mdx": "markdown"
