@@ -2,26 +2,37 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.fdn-main-content h1 {
+.fdn-main-content h1,
+.fdn-h1 {
 	font-size: 5rem;
 	font-weight: 700;
 	line-height: 1.25;
 }
 
-.fdn-main-content h2 {
+.fdn-main-content h2,
+.fdn-h2 {
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1.25;
 }
 
-.fdn-main-content h3 {
+.fdn-main-content h3,
+.fdn-h3 {
 	font-size: 2.5rem;
 	font-weight: 600;
 	line-height: 1.25;
 }
 
-.fdn-main-content h4 {
+.fdn-main-content h4,
+.fdn-h4 {
 	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.fdn-main-content h5,
+.fdn-h5 {
+	font-size: 1.15rem;
 	font-weight: 600;
 	line-height: 1.1;
 }
@@ -29,6 +40,14 @@
 .fdn-main-content p,
 .fdn-p {
 	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.375;
+	color: var(--fdn-text-secondary-colour);
+}
+
+.fdn-main-content span,
+.fdn-span {
+	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.375;
 	color: var(--fdn-text-secondary-colour);
