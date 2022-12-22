@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { l } from "../../../l10n";
 import Link from "../../Link";
 
 const A11y = () => {
@@ -12,7 +13,7 @@ const A11y = () => {
 					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="#main-content"
 				>
-					Skip to content
+					{l("a11y-skip-to-content")}
 				</Link>
 			</li>
 			<li>
@@ -20,7 +21,7 @@ const A11y = () => {
 					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="#footer-content"
 				>
-					Skip to end
+					{l("a11y-skip-to-end")}
 				</Link>
 			</li>
 			<li>
@@ -28,7 +29,7 @@ const A11y = () => {
 					class="fdn-header-a11y-link fdn-visually-hidden"
 					href="/accessibility"
 				>
-					Accessibility options
+					{l("a11y-options")}
 				</Link>
 			</li>
 		</ul>
