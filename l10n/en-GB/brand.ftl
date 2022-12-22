@@ -20,3 +20,11 @@
 
 -brand-shield-short-text = Shield
 -brand-shield-long-text = Dot Shield
+
+-brand-windows = Windows
+-brand-macos = macOS
+-brand-linux = Linux
+-brand-ubuntu = Ubuntu
+-brand-fedora = Fedora
+-brand-arch-linux = Arch Linux
+-brand-android = Android
