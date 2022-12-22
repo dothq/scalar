@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import { l } from "../../../l10n";
 import Link from "../../Link";
 import Localised from "../../Localised";
 import Logo from "../../ui/Logo";
@@ -85,13 +86,13 @@ const Footer = () => {
 									href={viewSourceURL}
 									target={"_blank"}
 								>
-									View page source
+									{l("footer-view-source")}
 								</Link>
 								<Link
 									href={editPageURL}
 									target={"_blank"}
 								>
-									Edit this page
+									{l("footer-edit-page")}
 								</Link>
 							</div>
 						</div>
