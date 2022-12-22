@@ -5,9 +5,11 @@
 import { readFileSync } from "fs";
 import { traverse } from "object-traversal";
 import { resolve } from "path";
+import { createElement, Fragment } from "preact";
 import vm from "vm";
 import yaml from "yaml";
 import * as l10n from "../l10n";
+import Icons from "./icons";
 
 export const getComponentConfig = <T>(name: string): T => {
 	const path = resolve(process.cwd(), "data", `${name}.yml`);
@@ -17,6 +19,17 @@ export const getComponentConfig = <T>(name: string): T => {
 	var parsed = yaml.parse(data);
 
 	traverse(parsed, ({ parent, key, value }: any) => {
+		if (key == "icon") {
+			if (!(value in Icons)) {
+				console.warn(
+					`Invalid icon name '${value}' in icons list.`
+				);
+				return () => createElement(Fragment, {});
+			}
+
+			return (parent[key] = (Icons as any)[value]);
+		}
+
 		if (typeof value == "string") {
 			parent[key] = value.replace(
 				/\${{(.*)}}/g,
