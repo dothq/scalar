@@ -2,5 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-a11y-skip-to-content = Skip to content
-a11y-options = Accessibility options
+a11y-skip-to-content = Saltar al contenido
+a11y-skip-to-end = Saltar al final
+a11y-options = Opciones de accesibilidad

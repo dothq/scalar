@@ -3,11 +3,11 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 browser-landing-intro-block-title = 
-    A safer way to
-    surf the web.
+    Un forma más segura de 
+    explorar la web.
 
 browser-landing-intro-block-description = 
-    A next-generation web browser with rugged 
-    privacy features out-of-the-box.
+    Un navegador web de próxima generación 
+    con características de privacidad robustas.
 
-browser-landing-intro-block-cta-btn-text = Explore <arrow-right>
+browser-landing-intro-block-cta-btn-text = Explorar <arrow-right>

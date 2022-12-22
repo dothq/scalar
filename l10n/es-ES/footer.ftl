@@ -21,41 +21,41 @@ footer-community-section-blog = Blog
 
 # Support
 
-footer-support-section = Support
+footer-support-section = Apoyo
 
-footer-support-section-get-help = Get help
+footer-support-section-get-help = Consigue ayuda
 footer-support-section-bugs = Bugs
 footer-support-section-ideas = Ideas
 
 # Resources
 
-footer-resources-section = Resources
+footer-resources-section = Recursos
 
-footer-resources-section-branding = Branding
-footer-resources-section-developers = Developers
-footer-resources-section-open-source = Open-source
+footer-resources-section-branding = Marca
+footer-resources-section-developers = Desarrolladores
+footer-resources-section-open-source = Fuente abierta
 
 # About
 
-footer-about-section = About
+footer-about-section = Sobre
 
 footer-about-section-us = { -brand-full-name }
-footer-about-section-privacy = Privacy
-footer-about-section-terms = Terms
-footer-about-section-environment = Environment
-footer-about-section-charter = Charter
+footer-about-section-privacy = Privacidad
+footer-about-section-terms = Términos
+footer-about-section-environment = Medio ambiente
+footer-about-section-charter = Carta
 
 # Socials
 
-footer-socials-section = Follow us
+footer-socials-section = Síguenos
 
 # Language Switcher
 
 footer-language-section = Idioma
 
-footer-view-source = View page source
-footer-edit-page = Edit this page
+footer-view-source = Ver fuente de página
+footer-edit-page = Edita esta página
 
 footer-copyright-text = 
     © 2019–{ $year } { -brand-full-name }.
-    Content on this page is licensed under <license-btn>CC BY-SA 4.0</license-btn>.
+    El contenido de esta página está licenciado bajo la licencia <license-btn>CC BY-SA 4.0</license-btn>.
