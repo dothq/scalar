@@ -31,6 +31,15 @@ export const getTranslation = (
 	str: string,
 	ctx?: any
 ) => {
+	if (str.charAt(0) == "-") {
+		bundle.addResource(
+			new FluentResource(`${str.substring(1)}={ ${str} }`),
+			{ allowOverrides: true }
+		);
+
+		str = str.substring(1);
+	}
+
 	let msg = bundle.getMessage(str);
 
 	if (!msg || !msg.value) {
@@ -168,11 +177,13 @@ export const getNativeLocaleMap = async () => {
 			selectFormat &&
 			selectFormat.value
 		) {
+			const percentInt = +bundle.formatPattern(percent.value);
+
 			map.push({
 				value: locale,
 				children: bundle.formatPattern(selectFormat?.value, {
 					name: bundle.formatPattern(nativeName.value),
-					percent: +bundle.formatPattern(percent.value)
+					percent: percentInt <= 60 ? percentInt : 100
 				}),
 				selected: locale == getLocale()
 			});
