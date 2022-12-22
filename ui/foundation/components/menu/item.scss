@@ -1,0 +1,21 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* @todo use of !important here is not really a good idea */
+.fdn-menu-item {
+	--border-radii: 0.5rem;
+	--max-height: auto !important;
+	--spacing-y: var(--spacing-x) !important;
+	min-width: 350px !important;
+	justify-content: flex-start;
+	gap: 1.25rem !important;
+	align-items: flex-start;
+}
+
+.fdn-menu-link {
+	font-weight: 500;
+	width: fit-content;
+	margin: 0 auto;
+	margin-block: 1rem;
+}

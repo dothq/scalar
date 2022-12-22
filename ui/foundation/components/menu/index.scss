@@ -1,0 +1,56 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@use "helpers";
+@use "item";
+
+.fdn-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: -1rem;
+
+	opacity: var(--opacity);
+	pointer-events: var(--pointer-events);
+
+	transition: 0.15s opacity;
+
+	--opacity: 0;
+	--pointer-events: none;
+}
+
+.fdn-menu-container {
+	display: flex;
+	gap: 0.25rem;
+	flex-direction: column;
+
+	max-width: min-content;
+
+	background-color: var(--fdn-colours-white);
+
+	border: 1px solid var(--fdn-border-colour);
+	border-radius: 1rem;
+
+	box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+		0 30px 60px -30px rgba(0, 0, 0, 0.3);
+
+	padding: 1rem;
+
+	margin-top: 1rem;
+}
+
+.fdn-menu-arrow {
+	position: absolute;
+
+	top: 0.5rem;
+	left: var(--arrow-position, 1rem);
+
+	color: var(--fdn-colours-white);
+
+	filter: drop-shadow(1px 0px 0px var(--fdn-border-colour))
+		drop-shadow(-1px 0px 0px var(--fdn-border-colour))
+		drop-shadow(0px -0.5px 0px var(--fdn-border-colour));
+
+	margin-top: 0.0625rem; /* 1px */
+}
