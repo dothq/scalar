@@ -11,11 +11,13 @@
 	flex: 1;
 
 	margin: 0;
-	padding-inline-start: 0.75rem;
+	padding-inline-start: var(--padding-start, 0.75rem);
+	padding-inline-end: var(--padding-end, 0);
 
 	background-color: transparent;
 	color: var(--fdn-colours-black);
 
+	font-family: inherit;
 	font-size: var(--font-size);
 	font-weight: 600;
 
