@@ -24,14 +24,6 @@ const A11y = () => {
 					{l("a11y-skip-to-end")}
 				</Link>
 			</li>
-			<li>
-				<Link
-					class="fdn-header-a11y-link fdn-visually-hidden"
-					href="/accessibility"
-				>
-					{l("a11y-options")}
-				</Link>
-			</li>
 		</ul>
 	);
 };

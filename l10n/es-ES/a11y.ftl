@@ -4,4 +4,3 @@
 
 a11y-skip-to-content = Saltar al contenido
 a11y-skip-to-end = Saltar al final
-a11y-options = Opciones de accesibilidad
