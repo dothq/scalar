@@ -11,7 +11,7 @@ const L10nBanner = () => {
 	return (
 		<>
 			{getPercentTranslated() < 100 && (
-				<Banner size={"sm"}>
+				<Banner size={"fw"}>
 					<span
 						className={
 							"fdn-stack h x-between w-full y-center fdn-page-constrain"

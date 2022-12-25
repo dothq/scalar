@@ -27,3 +27,9 @@
 .fdn-banner a:not(.fdn-button) {
 	color: var(--link-colour, var(--fdn-colours-link));
 }
+
+@media (min-width: 15rem) {
+	.fdn-banner.full-width {
+		--padding: 0 2rem;
+	}
+}

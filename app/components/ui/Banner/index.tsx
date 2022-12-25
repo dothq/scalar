@@ -14,10 +14,13 @@ const Banner = ({
 	...rest
 }: {
 	type?: FDNStateType;
-	size?: FDNSize;
+	size?: FDNSizeExtended;
 	icon?: any;
 	children: any;
-} & Omit<JSXInternal.HTMLAttributes<HTMLElement>, "size">) => {
+} & Omit<
+	JSXInternal.HTMLAttributes<HTMLElement>,
+	"size" | "icon"
+>) => {
 	size = size ? size : "md";
 
 	const className = clsx(
