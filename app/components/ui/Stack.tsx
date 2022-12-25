@@ -14,7 +14,11 @@ const Stack = ({
 	x,
 	y,
 	xy,
-	children
+	wrap,
+	w,
+	h,
+	children,
+	...rest
 }: {
 	orientation?: FDNOrientation;
 	gap?: FDNSize;
@@ -23,6 +27,10 @@ const Stack = ({
 	x?: string;
 	y?: string;
 	xy?: string;
+	wrap?: boolean;
+	w?: string;
+	h?: string;
+	className?: string;
 	children?: any;
 }) => {
 	as = as ? as : "div";
@@ -37,15 +45,22 @@ const Stack = ({
 		}
 	}
 
-	const className = clsx("fdn-stack", {
-		[orientation as string]: !!orientation,
-		[`gap-${gap}`]: !!gap,
-		[`flex-${flex}`]: !!flex,
-		[`x-${x}`]: !!x,
-		[`y-${y}`]: !!y
-	});
+	const className = clsx(
+		"fdn-stack",
+		{
+			[orientation as string]: !!orientation,
+			[`gap-${gap}`]: !!gap,
+			[`flex-${flex}`]: !!flex,
+			[`x-${x}`]: !!x,
+			[`y-${y}`]: !!y,
+			[`w-${w}`]: !!w,
+			[`h-${h}`]: !!h,
+			wrap: !!wrap
+		},
+		rest.className || ""
+	);
 
-	return createElement(as, { className }, children);
+	return createElement(as, { ...rest, className }, children);
 };
 
 export default Stack;
