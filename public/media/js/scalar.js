@@ -31,3 +31,14 @@ const updateArrowPositions = () => {
 document.querySelector(".fdn-header-content").addEventListener("mouseenter", () => {
 	updateArrowPositions();
 })
+
+const updateLanguageSwitcherGoURL = () => {
+	document.forms["app-language-switcher"].elements.go.value =
+		"/" + window.location.pathname.split("/").splice(2).join("/") + window.location.search + window.location.hash
+}
+
+updateLanguageSwitcherGoURL();
+
+window.addEventListener("hashchange", () => {
+	updateLanguageSwitcherGoURL();
+})
