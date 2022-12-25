@@ -20,12 +20,13 @@ const generatedLanguages = {
 }
 
 const l10nBuildDir = resolve(process.cwd(), ".scalar", "l10n");
-const baseLanguageCombined = readFileSync(resolve(l10nBuildDir, `${baseLanguage}.ftl`), "utf-8")
-    .split("\n")
-    .filter(ln => !ln.startsWith("#"))
-    .join("\n");
 
 function buildStubLanguages() {
+    const baseLanguageCombined = readFileSync(resolve(l10nBuildDir, `${baseLanguage}.ftl`), "utf-8")
+        .split("\n")
+        .filter(ln => !ln.startsWith("#"))
+        .join("\n");
+
     for (const [lang, transform] of Object.entries(generatedLanguages)) {
         const overrides = parse(readFileSync(resolve(process.cwd(), "l10n", lang, "overrides.ftl"), "utf-8"));
         const resource = parse(baseLanguageCombined);
