@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { cloneElement } from "preact";
+import { withCacheBuster } from "../../utils/cache";
 import HTMLComment from "../ui/HTMLComment";
 
 export const Block = ({
@@ -15,6 +16,10 @@ export const Block = ({
 	return (
 		<>
 			<HTMLComment> @{id} </HTMLComment>
+			<link
+				rel="stylesheet"
+				href={withCacheBuster(`/media/css/blocks/${id}.css`)}
+			></link>
 			{cloneElement(children, {
 				...children.props,
 				className: [`block-${id}`]

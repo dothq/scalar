@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import BrowserLandingIntroBlock from "../components/marketing/browser/LandingIntroBlock";
+import BrowserLandingIntroBlock from "../components/marketing/browser/browser-landing-intro-block";
 import { l } from "../l10n";
 import { PageProps } from "../types";
 

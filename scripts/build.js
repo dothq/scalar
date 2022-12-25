@@ -4,11 +4,12 @@ const {
 	appendFileSync,
 	readFileSync,
 	readdirSync,
-	existsSync
+	existsSync,
+	exists
 } = require("fs");
 const { ensureDirSync, cpSync } = require("fs-extra");
 const { glob } = require("glob");
-const { resolve, basename } = require("path");
+const { resolve, basename, dirname, parse } = require("path");
 const sass = require("sass");
 const rimraf = require("rimraf");
 const { createHash } = require("crypto");
@@ -25,27 +26,38 @@ const options = {
 	minify: process.env.NODE_ENV !== "develop"
 };
 
-const compileScss = (path, isPage) => {
-	const { css } = sass.compile(resolve(process.cwd(), "ui", path), {
+const compileScss = (path, meta) => {
+	let { css } = sass.compile(resolve(process.cwd(), "ui", path), {
 		style: "compressed"
 	});
 
 	ensureDirSync(resolve(options.outdir, "public", "media", "css"));
 
-	let outName = (
-		isPage
-			? path.replace("pages/", "").split("/")[0]
-			: basename(path)
-	).replace(".scss", ".css");
+	let outName = basename(path);
+
+	if (meta) {
+		if (meta.isPage) {
+			outName = path.replace("pages/", "").split("/")[0];
+		} else if (meta.isBlock) {
+			ensureDirSync(resolve(options.outdir, "public", "media", "css", dirname(path)));
+
+			outName = path;
+		}
+	}
+
+	outName = outName.replace(".scss", ".css");
 
 	if (!outName.endsWith(".css")) {
 		outName += ".css";
 	}
 
-	appendFileSync(
-		resolve(options.outdir, "public", "media", "css", outName),
+	const outPath = resolve(options.outdir, "public", "media", "css", outName);
+
+	(existsSync(outPath) ? appendFileSync : writeFileSync)(
+		outPath,
 		css
 	);
+
 };
 
 const maybeReinvalidateCache = (name, paths) => {
@@ -208,7 +220,16 @@ const main = () => {
 		)) {
 			compileScss(
 				pageScss.split(resolve(process.cwd(), "ui") + "/")[1],
-				true
+				{ isPage: true }
+			);
+		}
+
+		for (const blockScss of glob.sync(
+			resolve(process.cwd(), "ui", "blocks", "**", "*.scss")
+		)) {
+			compileScss(
+				blockScss.split(resolve(process.cwd(), "ui") + "/")[1],
+				{ isBlock: true }
 			);
 		}
 	}
