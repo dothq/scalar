@@ -6,16 +6,22 @@ import { getPercentTranslated, getTranslation } from "../../../l10n";
 import Localised from "../../Localised";
 import Banner from "../../ui/Banner";
 import Button from "../../ui/Button";
+import Stack from "../../ui/Stack";
 
 const L10nBanner = () => {
 	return (
 		<>
 			{getPercentTranslated() < 100 && (
 				<Banner size={"fw"}>
-					<span
-						className={
-							"fdn-stack h x-between w-full y-center fdn-page-constrain"
-						}
+					<Stack
+						orientation={"h"}
+						x={"between"}
+						y={"center"}
+						w={"full"}
+						gap={"lg"}
+						wrap
+						className={"fdn-page-constrain"}
+						as={"span"}
 					>
 						<Localised
 							id={"language-not-localised"}
@@ -32,7 +38,7 @@ const L10nBanner = () => {
 								/>
 							}
 						/>
-					</span>
+					</Stack>
 				</Banner>
 			)}
 		</>
