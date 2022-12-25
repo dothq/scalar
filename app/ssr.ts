@@ -9,7 +9,7 @@ import { cloneElement, createElement } from "preact";
 import { renderToString } from "preact-render-to-string";
 import {
 	DEFAULT_LOCALE,
-	getL10nBundle,
+	getAllBundles,
 	getNativeLocaleMap,
 	maybeGetLangFromPath,
 	negotiateLocale
@@ -54,7 +54,7 @@ export const renderPage = async (
 	}
 
 	(global as any).SCALAR_REQUEST_LANG = lang;
-	(global as any).SCALAR_LANG_BUNDLE = await getL10nBundle(lang);
+	(global as any).SCALAR_BUNDLES = await getAllBundles();
 	(global as any).SCALAR_URL = req.url;
 	(global as any).SCALAR_LANGUAGE_MAP = await getNativeLocaleMap();
 
@@ -68,10 +68,19 @@ export const renderPage = async (
 		const isAsyncRendered =
 			mod.component.constructor.name === "AsyncFunction";
 
+		const meta = { ...mod.meta } || {};
+
+		for (const [key, value] of Object.entries(meta)) {
+			if (typeof value == "function") {
+				const res = value();
+				meta[key] = res;
+			}
+		}
+
 		const props = {
 			path: req.url,
 			params: req.params || {},
-			meta: mod.meta || {},
+			meta,
 			lang,
 			url: new URL(req.url, `http://${req.hostname}`),
 			req,

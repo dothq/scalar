@@ -75,13 +75,15 @@ export const getTranslation = (
 
 export const l = (str: string, ctx?: any) => {
 	if (
-		!("SCALAR_LANG_BUNDLE" in global) ||
-		!(global as any).SCALAR_LANG_BUNDLE
+		!("SCALAR_BUNDLES" in global) ||
+		!(global as any).SCALAR_BUNDLES
 	) {
-		throw new Error("No lang bundle passed to global.");
+		throw new Error("No lang bundles passed to global.");
 	}
 
-	const bundle = (global as any).SCALAR_LANG_BUNDLE as FluentBundle;
+	const bundle = (global as any).SCALAR_BUNDLES.get(
+		getLocale()
+	) as FluentBundle;
 
 	return getTranslation(bundle, str, ctx);
 };
@@ -120,12 +122,17 @@ export const getL10nBundle = async (lang: string) => {
 	return bundle;
 };
 
-export const negotiateLocale = (requestedLocales: string[]) => {
+export const negotiateLocale = (
+	requestedLocales: string[],
+	availableLocales?: string[],
+	defaultLocale?: any
+) => {
 	return negotiateLanguages(
 		requestedLocales,
-		getAvailableLocales(),
+		availableLocales || getAvailableLocales(),
 		{
-			defaultLocale: DEFAULT_LOCALE,
+			defaultLocale:
+				defaultLocale == null ? undefined : DEFAULT_LOCALE,
 			strategy: "matching"
 		}
 	)[0];
@@ -138,13 +145,25 @@ export const maybeGetLangFromPath = (req: FastifyRequest) => {
 };
 
 export const getPercentTranslated = () => {
-	const bundle = (global as any).SCALAR_LANG_BUNDLE as FluentBundle;
+	const bundle = (global as any).SCALAR_BUNDLES.get(
+		getLocale()
+	) as FluentBundle;
 
 	const percent = bundle.getMessage("language-per-cent-localised");
 
 	if (!percent || !percent.value) return 0;
 
 	return parseInt(bundle.formatPattern(percent?.value));
+};
+
+export const getAllBundles = async () => {
+	const bundles = new Map();
+
+	for await (const locale of getAvailableLocales()) {
+		bundles.set(locale, await getL10nBundle(locale));
+	}
+
+	return bundles;
 };
 
 export const getNativeLocaleMap = async () => {

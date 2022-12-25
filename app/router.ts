@@ -118,6 +118,51 @@ export const router: FastifyPluginCallback = async (
 				}
 			});
 		}
+
+		const splitUniqueLanguages = Array.from(
+			new Set(
+				getAvailableLocales()
+					.filter((l) => l.includes("-"))
+					.map((l) => l.split("-")[0])
+			)
+		);
+
+		for (const language of splitUniqueLanguages) {
+			const localisedPath = path.endsWith("/")
+				? `/${language}${path.substring(0, path.length - 1)}`
+				: `/${language}${path}`;
+
+			server.all(localisedPath, (req, res) => {
+				const trimmedPath = req.url.split(language)[1];
+
+				const foundLocale = getAvailableLocales().filter(
+					(l) => l.startsWith(language + "-")
+				);
+
+				const requestedLocales = parseAcceptLanguage(
+					req.headers["accept-language"]
+				);
+
+				const locale = negotiateLocale(
+					requestedLocales,
+					foundLocale
+				);
+
+				if (locale) {
+					return res
+						.redirect(302, `/${locale}${trimmedPath}`)
+						.send("");
+				} else {
+					/* @todo get the most popular locale (perhaps using country population numbers) */
+					return res
+						.redirect(
+							302,
+							`/${foundLocale[0]}${trimmedPath}`
+						)
+						.send("");
+				}
+			});
+		}
 	}
 
 	server.register(mediaRouter, { prefix: "/" });

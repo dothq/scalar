@@ -6,7 +6,7 @@ import { Hero, HeroBody } from "../components/ui/Hero";
 import { l } from "../l10n";
 
 export const meta = {
-	title: l("error-not-found-page-title"),
+	title: () => l("error-not-found-page-title"),
 	titleSuffix: false,
 	description: "Dot HQ"
 };
