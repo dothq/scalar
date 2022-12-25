@@ -13,6 +13,7 @@ const sass = require("sass");
 const rimraf = require("rimraf");
 const { createHash } = require("crypto");
 const { FluentResource } = require("@fluent/bundle");
+const buildStubLanguages = require("./l10n");
 
 const DEFAULT_LOCALE = "en-GB";
 
@@ -268,6 +269,8 @@ const main = () => {
 			);
 		}
 	}
+
+	buildStubLanguages();
 
 	console.log(`Done in ${Date.now() - d}ms!`);
 };
