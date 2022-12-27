@@ -32,6 +32,13 @@
 
 .fdn-main-content h5,
 .fdn-h5 {
+	font-size: min(1.5rem, 3dvw);
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.fdn-main-content h6,
+.fdn-h6 {
 	font-size: min(1.15rem, 2.3dvw);
 	font-weight: 600;
 	line-height: 1.1;
