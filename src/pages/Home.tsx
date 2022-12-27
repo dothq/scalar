@@ -77,20 +77,27 @@ const Home = () => {
         <FeatureGrid id={'features'} />
       </Content>
       <Content>
-        <div className={'section sponsors-section'} style={{ color: "black" }}>
+        <div className={'section sponsors-section'} style={{ color: 'black' }}>
           <h2>Our sponsors</h2>
           <p style={{ marginTop: '1rem' }}>
-            The following organisations have graciously provided support to Dot HQ:
+            The following organisations have graciously provided support to Dot
+            HQ:
           </p>
 
-          <br /><br />
+          <br />
+          <br />
 
-          <div style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
-            <a href="https://tutanota.com" target={"_blank"} style={{ color: "black", textDecoration: "none" }}>
+          <div
+            style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}
+          >
+            <a
+              href="https://tutanota.com"
+              target={'_blank'}
+              style={{ color: 'black', textDecoration: 'none' }}
+            >
               <img src={assets.tutanotaSponsor} alt="Tutanota"></img>
-              <p>Providing email services</p> 
+              <p>Providing email services</p>
             </a>
-
           </div>
         </div>
       </Content>

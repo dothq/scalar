@@ -17,5 +17,5 @@ export default {
   browserApr: require('./browser-apr.webp'),
   browserLightApr: require('./browser-light-apr.webp'),
 
-  tutanotaSponsor: require("./tutanota-sponsor.svg")
+  tutanotaSponsor: require('./tutanota-sponsor.svg'),
 }
