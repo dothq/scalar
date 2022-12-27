@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import BrowserLandingIntroBlock from "../components/marketing/browser/browser-landing-intro-block";
+import SponsorsBlock from "../components/marketing/sponsors-block";
 import { l } from "../l10n";
 import { PageProps } from "../types";
 
@@ -15,6 +16,8 @@ const Index = ({ lang }: PageProps) => {
 	return (
 		<>
 			<BrowserLandingIntroBlock />
+
+			<SponsorsBlock />
 		</>
 	);
 };

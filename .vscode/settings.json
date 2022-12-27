@@ -19,7 +19,8 @@
 		"editor.defaultFormatter": "vscode.html-language-features"
 	},
 	"files.associations": {
-		"*.mdx": "markdown"
+		"*.mdx": "markdown",
+		"*.svg": "html"
 	},
 	"macros.list": {
 		"license": [
