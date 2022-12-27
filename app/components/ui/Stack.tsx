@@ -21,7 +21,7 @@ const Stack = ({
 	...rest
 }: {
 	orientation?: FDNOrientation;
-	gap?: FDNSize;
+	gap?: FDNSizeExtended;
 	as?: keyof JSXInternal.IntrinsicElements;
 	flex?: string;
 	x?: string;
