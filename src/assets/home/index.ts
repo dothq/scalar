@@ -16,4 +16,6 @@ export default {
   rickrolled: require('./rickrolled.gif'),
   browserApr: require('./browser-apr.webp'),
   browserLightApr: require('./browser-light-apr.webp'),
+
+  tutanotaSponsor: require("./tutanota-sponsor.svg")
 }

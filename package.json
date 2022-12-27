@@ -56,7 +56,6 @@
     "concurrently": "^5.3.0",
     "husky": "^4.3.8",
     "prettier": "2.2.1",
-    "prisma": "^2.20.1",
     "razzle": "^3.3.11",
     "tslint-config-prettier": "^1.18.0"
   }

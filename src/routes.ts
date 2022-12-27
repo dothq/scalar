@@ -14,10 +14,6 @@ import Browser from './pages/products/browser'
 import BrowserThanks from './pages/products/browser/thanks'
 import Compass from './pages/products/compass'
 
-// Help
-import Help from './pages/help'
-import HelpPage from './pages/help/page'
-
 // 404 pages
 import NotFound from './pages/404'
 

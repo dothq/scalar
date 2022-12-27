@@ -15,7 +15,6 @@ import redirects from './redirects'
 import ssrData from './ssr-data'
 import l10n from './l10n'
 
-import signup from './routes/signup'
 import weather from './routes/ntp/weather'
 import news from './routes/ntp/news'
 import download from './routes/download'
@@ -248,7 +247,6 @@ mainRouter.use(async (req: express.Request, res: express.Response, next) => {
   )
 })
 
-server.use(signup)
 server.use(weather)
 server.use(news)
 server.use(download)

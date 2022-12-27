@@ -11,6 +11,7 @@ import { Content } from '../components/Content'
 import { osIcons } from '../assets/os'
 import { Header } from '../components/Header'
 import { L10n } from '../components/l10n'
+import assets from '../assets/home'
 
 const Home = () => {
   const [os, setOS] = React.useState('')
@@ -74,6 +75,24 @@ const Home = () => {
       </Content>
       <Content>
         <FeatureGrid id={'features'} />
+      </Content>
+      <Content>
+        <div className={'section sponsors-section'} style={{ color: "black" }}>
+          <h2>Our sponsors</h2>
+          <p style={{ marginTop: '1rem' }}>
+            The following organisations have graciously provided support to Dot HQ:
+          </p>
+
+          <br /><br />
+
+          <div style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
+            <a href="https://tutanota.com" target={"_blank"} style={{ color: "black", textDecoration: "none" }}>
+              <img src={assets.tutanotaSponsor} alt="Tutanota"></img>
+              <p>Providing email services</p> 
+            </a>
+
+          </div>
+        </div>
       </Content>
     </Layout>
   )
