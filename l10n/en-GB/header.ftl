@@ -26,6 +26,18 @@ header-products-item-view-all-link = View all products
 # Community Item
 header-community-item = Community
 
+header-community-item-blog-title = Blog
+header-community-item-blog-subtitle = Keep to date on the newest information from { -brand-full-name }.
+
+header-community-item-help-title = Help and support
+header-community-item-help-subtitle = Get help with using our products and get your questions answered.
+
+header-community-item-discord-title = Discord
+header-community-item-discord-subtitle = Join our Discord server to stay up to date with the latest updates.
+
+header-community-item-matrix-title = Matrix
+header-community-item-matrix-subtitle = Join our Matrix server to stay up to date with the latest updates.
+
 # Community Item
 header-about-item = About
 

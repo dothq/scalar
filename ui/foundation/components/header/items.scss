@@ -46,10 +46,18 @@
 	border-bottom: 2px solid currentColor !important;
 }
 
-.fdn-header-content .fdn-header-item:hover + .fdn-header-menu,
-.fdn-header-content .fdn-header-item:focus-within + .fdn-header-menu,
+.fdn-header-content
+	.fdn-header-item:hover:not(:target)
+	+ .fdn-header-menu,
+.fdn-header-content
+	.fdn-header-item:focus-within:not(:target)
+	+ .fdn-header-menu,
 .fdn-header-content .fdn-header-menu:hover,
 .fdn-header-content .fdn-header-menu:focus-within {
 	--opacity: 1;
 	--pointer-events: all;
+}
+
+.fdn-header-item:target {
+	pointer-events: none;
 }

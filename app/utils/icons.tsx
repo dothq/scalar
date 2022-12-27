@@ -14,6 +14,7 @@ import { Giving } from "../components/icons/Giving";
 import { Institution } from "../components/icons/Institution";
 import { JavaScript } from "../components/icons/JavaScript";
 import { Menu } from "../components/icons/Menu";
+import { News } from "../components/icons/News";
 import { PaymentCard } from "../components/icons/PaymentCard";
 import { Discord } from "../components/icons/social/Discord";
 import { Mastodon } from "../components/icons/social/Mastodon";
@@ -48,6 +49,7 @@ const Icons = {
 	JavaScript: (props: any) => <JavaScript {...props} />,
 	Menu: (props: any) => <Menu {...props} />,
 	PaymentCard: (props: any) => <PaymentCard {...props} />,
+	News: (props: any) => <News {...props} />,
 
 	/* Card icons */
 	Amex: (props: any) => <Amex {...props} />,

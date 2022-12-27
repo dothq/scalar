@@ -46,9 +46,9 @@ const HeaderItem = ({
 										}
 									>
 										{i.title && (
-											<h5 className={"fdn-h5"}>
+											<h6 className={"fdn-h6"}>
 												{i.title}
-											</h5>
+											</h6>
 										)}
 										{i.subtitle && (
 											<span

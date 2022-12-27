@@ -49,6 +49,40 @@ items:
     - element: link
       children: ${{ l("header-community-item") }}
       href: /community
+      items:
+          - element: menu_item
+            href: /blog
+            title: ${{ l("header-community-item-blog-title") }}
+            subtitle: ${{ l("header-community-item-blog-subtitle") }}
+            icon:
+                name: News
+                size: 2
+                colour: blue
+
+          - element: menu_item
+            href: /support
+            title: ${{ l("header-community-item-help-title") }}
+            subtitle: ${{ l("header-community-item-help-subtitle") }}
+            icon:
+                name: Giving
+                size: 2
+                colour: red
+
+          - element: menu_item
+            href: /community#discord
+            title: ${{ l("header-community-item-discord-title") }}
+            subtitle: ${{ l("header-community-item-discord-subtitle") }}
+            icon:
+                name: Discord
+                size: 2
+
+          - element: menu_item
+            href: /community#matrix
+            title: ${{ l("header-community-item-matrix-title") }}
+            subtitle: ${{ l("header-community-item-matrix-subtitle") }}
+            icon:
+                name: Matrix
+                size: 2
 
     - element: link
       children: ${{ l("header-about-item") }}

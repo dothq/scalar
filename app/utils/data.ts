@@ -20,14 +20,34 @@ export const getComponentConfig = <T>(name: string): T => {
 
 	traverse(parsed, ({ parent, key, value }: any) => {
 		if (key == "icon") {
-			if (!(value in Icons)) {
+			let data: any = {
+				name: value
+			};
+
+			if (typeof value == "object") {
+				data = value;
+			}
+
+			if (!(data.name in Icons)) {
 				console.warn(
-					`Invalid icon name '${value}' in icons list.`
+					`Invalid icon name '${data.name}' in icons list.`
 				);
 				return () => createElement(Fragment, {});
 			}
 
-			return (parent[key] = (Icons as any)[value]);
+			const I = (props: any) =>
+				createElement((Icons as any)[data.name], {
+					size: data.size
+						? parseInt(
+								data.size.toString().replace(/x/g, "")
+						  )
+						: null,
+					colour: data.colour ? data.colour : null
+				});
+
+			parent[key] = I;
+
+			return I;
 		}
 
 		if (typeof value == "string") {
