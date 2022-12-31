@@ -77,7 +77,9 @@ export const createHttpServer = () => {
 				"font-src 'self';",
 				"connect-src 'self';",
 				`frame-src 'self' ${cspHosts};`,
-				"upgrade-insecure-requests;",
+				req.headers.host?.endsWith(".onion")
+					? ""
+					: "upgrade-insecure-requests;",
 				"block-all-mixed-content"
 			].join(" ")
 		);
