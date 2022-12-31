@@ -25,6 +25,7 @@
 	gap: 0.25rem;
 	flex-direction: column;
 
+	max-width: min-content;
 	min-width: fit-content;
 
 	background-color: var(--fdn-colours-white);
