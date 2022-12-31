@@ -60,7 +60,7 @@ services:
             - intranet
         depends_on:
             - nginx
-        command: certonly --webroot -w /var/www/letsencrypt --email contact+letsencrypt@dothq.org --agree-tos -n -d dothq.co -d dothq.org
+        command: certonly --webroot -w /var/www/letsencrypt --email contact+letsencrypt@dothq.org --agree-tos -n -d dothq.org
 
     watchtower:
         image: containrrr/watchtower
