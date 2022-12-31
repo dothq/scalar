@@ -43,9 +43,12 @@ services:
             - le-www:/var/www/letsencrypt
         links:
             - scalar
+            - certbot
         networks:
             - intranet
             - internet # Exposed
+        depends_on:
+            - certbot
         ports:
             - 80:80
             - 443:443
