@@ -104,6 +104,21 @@ export const createHttpServer = () => {
 		done();
 	});
 
+	server.addHook("preHandler", (req, res, done) => {
+		if (!req.headers.host) return done();
+
+		if (!req.headers.host?.endsWith(".onion")) {
+			if (req.headers.host?.startsWith("www.")) return done();
+
+			res.redirect(
+				302,
+				`https://www.${req.headers.host}${req.url}`
+			);
+		} else {
+			done();
+		}
+	});
+
 	server.register(router, { prefix: "/" });
 	server.register(v1, { prefix: "/api/v1" });
 
