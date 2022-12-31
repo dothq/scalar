@@ -50,7 +50,6 @@ services:
     certbot:
         image: certbot/certbot
         container_name: certbot
-        restart: always
         volumes:
             - le-certs:/etc/letsencrypt
             - le-www:/var/www/letsencrypt
