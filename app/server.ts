@@ -100,7 +100,10 @@ export const createHttpServer = () => {
 				.SCALAR_ALLOWED_HOSTS!.split(",")
 				.find((o) => o.endsWith(".onion"));
 
-			res.header("Onion-Location", onionUri);
+			res.header(
+				"Onion-Location",
+				`http://${onionUri}${req.url}`
+			);
 		}
 
 		done();
