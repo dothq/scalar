@@ -3,6 +3,7 @@ services:
     scalar:
         container_name: scalar
         hostname: scalar
+        restart: always
         networks:
             - intranet
         environment:
@@ -16,6 +17,7 @@ services:
     onion:
         container_name: onion
         image: goldy/tor-hidden-service:latest
+        restart: always
         links:
             - nginx
         networks:
@@ -33,6 +35,7 @@ services:
         image: nginx:latest
         container_name: nginx
         hostname: nginx
+        restart: always
         volumes:
             - ./docker/config/nginx.conf:/etc/nginx/nginx.conf:ro
             - ./docker/config/sites:/etc/nginx/sites:ro
@@ -61,6 +64,7 @@ services:
 
     watchtower:
         image: containrrr/watchtower
+        restart: always
         environment:
             - WATCHTOWER_CLEANUP=true
             - WATCHTOWER_POLL_INTERVAL=60
