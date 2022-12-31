@@ -15,15 +15,35 @@ const rimraf = require("rimraf");
 const { createHash } = require("crypto");
 const { FluentResource } = require("@fluent/bundle");
 const buildStubLanguages = require("./l10n");
+const { execSync } = require("child_process");
 
 const DEFAULT_LOCALE = "en-GB";
+
+const SCALAR_GIT_REVISION = (
+	execSync("git rev-parse HEAD")
+).toString("utf-8").trim();
+
+const SCALAR_GIT_REMOTE = (
+	execSync("git config --get remote.origin.url")
+).toString("utf-8")
+	.trim()
+	.replace(".git", "");
+
+const SCALAR_GIT_BRANCH = (
+	execSync("git rev-parse --abbrev-ref HEAD")
+).toString("utf-8").trim();
 
 const options = {
 	outdir: resolve(process.cwd(), ".scalar"),
 	bundle: true,
 	platform: "node",
 	format: "cjs",
-	minify: process.env.NODE_ENV !== "develop"
+	inject: [resolve(__dirname, "inject-vars.js")],
+	define: {
+		"SCALAR_GIT_REVISION": JSON.stringify(SCALAR_GIT_REVISION),
+		"SCALAR_GIT_REMOTE": JSON.stringify(SCALAR_GIT_REMOTE),
+		"SCALAR_GIT_BRANCH": JSON.stringify(SCALAR_GIT_BRANCH)
+	}
 };
 
 const compileScss = (path, meta) => {

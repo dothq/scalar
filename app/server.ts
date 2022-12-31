@@ -9,7 +9,7 @@ import { v1 } from "./api/v1";
 import { router } from "./router";
 
 export const server = fastify({
-	logger: process.env.NODE_ENV == "develop"
+	logger: true
 });
 
 export const createHttpServer = () => {
@@ -30,41 +30,82 @@ export const createHttpServer = () => {
 
 		const host = new URL(`${req.protocol}://${req.headers.host}`);
 
-		const allowedHosts =
-			process.env.SCALAR_ALLOWED_HOSTS!.split(",");
+		const allowedHosts = process.env
+			.SCALAR_ALLOWED_HOSTS!.split(",")
+			.concat(["localhost", "127.0.0.1", "0.0.0.0"]);
 
-		if (allowedHosts.includes(host.hostname)) {
-			if (host.hostname == "dothq.co") {
+		if (
+			allowedHosts.includes(host.hostname.replace("www.", ""))
+		) {
+			if (host.hostname.endsWith("dothq.co")) {
 				return res.redirect(
 					302,
-					`https://dothq.org${req.url || "/"}`
+					`https://${host.hostname.replace(
+						/\.co/,
+						".org"
+					)}${req.url || "/"}`
 				);
 			}
 
 			done();
 		} else {
-			return res.redirect(302, `https://${allowedHosts[0]}`);
+			return res.status(403).send("");
 		}
+	});
+
+	server.addHook("preHandler", (req, res, done) => {
+		res.header(
+			"Strict-Transport-Security",
+			"max-age=63072000; includeSubDomains; preload"
+		);
+
+		res.header("X-XSS-Protection", "1; mode=block");
+
+		res.header("X-Frame-Options", "SAMEORIGIN");
+
+		const cspHosts = process.env
+			.SCALAR_ALLOWED_HOSTS!.split(",")
+			.map((o) => `*.${o}`)
+			.join(" ");
+
+		res.header(
+			"Content-Security-Policy",
+			[
+				`default-src 'self' ${cspHosts};`,
+				`style-src 'self' ${cspHosts};`,
+				"img-src 'self';",
+				"font-src 'self';",
+				"connect-src 'self';",
+				`frame-src 'self' ${cspHosts};`,
+				"upgrade-insecure-requests;",
+				"block-all-mixed-content"
+			].join(" ")
+		);
+
+		res.header("X-Content-Type-Options", "nosniff");
+
+		res.header(
+			"Referrer-Policy",
+			"strict-origin-when-cross-origin"
+		);
+
+		if (
+			process.env
+				.SCALAR_ALLOWED_HOSTS!.split(",")
+				.find((o) => o.endsWith(".onion"))
+		) {
+			const onionUri = process.env
+				.SCALAR_ALLOWED_HOSTS!.split(",")
+				.find((o) => o.endsWith(".onion"));
+
+			res.header("Onion-Location", onionUri);
+		}
+
+		done();
 	});
 
 	server.register(router, { prefix: "/" });
 	server.register(v1, { prefix: "/api/v1" });
-
-	server.get("/media/js/env.js", (req, res) => {
-		const STRIPE_CLIENT_API_KEY =
-			process.env.NODE_ENV == "develop"
-				? process.env.STRIPE_TESTING_CLIENT_API_KEY
-				: process.env.STRIPE_CLIENT_API_KEY;
-
-		res.header(
-			"content-type",
-			"application/javascript; charset=UTF-8"
-		).send(
-			`window.SCALAR_ENV = {
-				STRIPE_CLIENT_API_KEY: ${JSON.stringify(STRIPE_CLIENT_API_KEY)},
-			}`.trim()
-		);
-	});
 
 	return server;
 };

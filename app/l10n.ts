@@ -124,15 +124,13 @@ export const getL10nBundle = async (lang: string) => {
 
 export const negotiateLocale = (
 	requestedLocales: string[],
-	availableLocales?: string[],
-	defaultLocale?: any
+	availableLocales?: string[]
 ) => {
 	return negotiateLanguages(
 		requestedLocales,
 		availableLocales || getAvailableLocales(),
 		{
-			defaultLocale:
-				defaultLocale == null ? undefined : DEFAULT_LOCALE,
+			defaultLocale: DEFAULT_LOCALE,
 			strategy: "matching"
 		}
 	)[0];
