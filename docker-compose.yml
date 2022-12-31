@@ -53,6 +53,7 @@ services:
     certbot:
         image: certbot/certbot
         container_name: certbot
+        restart: always
         volumes:
             - le-certs:/etc/letsencrypt
             - le-www:/var/www/letsencrypt
@@ -60,7 +61,7 @@ services:
             - intranet
         depends_on:
             - nginx
-        command: certonly --webroot -w /var/www/letsencrypt --email contact+letsencrypt@dothq.org --agree-tos -n -d dothq.org
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do sleep 1h; certbot renew; sleep 12h & wait $${!}; done;'"
 
     watchtower:
         image: containrrr/watchtower
