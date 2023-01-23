@@ -1,0 +1,78 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sizes */
+
+.fdn-hero.sm {
+	--padding-y: 1rem;
+}
+
+.fdn-hero.md {
+	--padding-y: 2rem;
+}
+
+.fdn-hero.lg {
+	--padding-y: 4rem;
+}
+
+.fdn-hero.xl {
+	--padding-y: 8rem;
+}
+
+.fdn-hero.fh {
+	--height: 100vh;
+}
+
+/* Colours */
+
+.fdn-hero.red {
+	--bg-colour: var(--fdn-colours-red);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.orange {
+	--bg-colour: var(--fdn-colours-orange);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.yellow {
+	--bg-colour: var(--fdn-colours-yellow);
+	--text-colour: var(--fdn-colours-black);
+}
+
+.fdn-hero.green {
+	--bg-colour: var(--fdn-colours-green);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.blue {
+	--bg-colour: var(--fdn-colours-blue);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.purple {
+	--bg-colour: var(--fdn-colours-purple);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.pink {
+	--bg-colour: var(--fdn-colours-pink);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.black {
+	--bg-colour: var(--fdn-colours-black);
+	--text-colour: var(--fdn-colours-white);
+}
+
+.fdn-hero.white {
+	--bg-colour: var(--fdn-colours-white);
+	--text-colour: var(--fdn-colours-black);
+}
+
+/* States */
+
+.fdn-hero.detatched {
+	--hero-body-width: 100%;
+}

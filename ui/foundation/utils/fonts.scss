@@ -1,0 +1,87 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@font-face {
+	font-family: "Inter";
+	font-style: normal;
+	font-display: block;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/media/fonts/inter/Inter-Regular.woff2") format("woff2")
+		url("/media/fonts/inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Inter";
+	font-style: italic;
+	font-display: block;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/media/fonts/inter/Inter-Italic.woff2") format("woff2")
+		url("/media/fonts/inter/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Satoshi";
+	font-style: normal;
+	font-display: block;
+	font-weight: 500;
+	font-display: swap;
+	src: url("/media/fonts/satoshi/Satoshi-Medium.woff2")
+		format("woff2")
+		url("/media/fonts/satoshi/Satoshi-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Satoshi";
+	font-style: normal;
+	font-display: block;
+	font-weight: 600;
+	font-display: swap;
+	src: url("/media/fonts/satoshi/Satoshi-Bold.woff2")
+		format("woff2") url("/media/fonts/satoshi/Satoshi-Bold.woff")
+		format("woff");
+}
+
+@font-face {
+	font-family: "Satoshi";
+	font-style: normal;
+	font-display: block;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/media/fonts/satoshi/Satoshi-Black.woff2")
+		format("woff2") url("/media/fonts/satoshi/Satoshi-Black.woff")
+		format("woff");
+}
+
+@font-face {
+	font-family: "Inter var";
+	font-style: normal;
+	font-display: block;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("/media/fonts/inter/Inter.var.woff2") format("woff2");
+	font-named-instance: "Regular";
+}
+
+@font-face {
+	font-family: "Satoshi var";
+	font-style: normal;
+	font-display: block;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("/media/fonts/satoshi/Satoshi.var.woff2") format("woff2");
+	font-named-instance: "Regular";
+}
+
+@font-face {
+	font-family: "Satoshi var";
+	font-style: italic;
+	font-display: block;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("/media/fonts/satoshi/Satoshi-Italic.var.woff2")
+		format("woff2");
+	font-named-instance: "Italic";
+}

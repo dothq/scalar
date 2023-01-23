@@ -1,0 +1,11 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Sponsors
+items:
+    - id: tutanota
+      name: ${{ l("sponsors-block-item-tutanota-name") }}
+      description: ${{ l("sponsors-block-item-tutanota-description") }}
+      url: https://tutanota.com/
+      logo_url: /media/images/sponsors/tutanota_logo.svg

@@ -1,0 +1,93 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Footer
+items:
+    - id: products
+      title: ${{ l("footer-products-section") }}
+      items:
+          - children: ${{ l("footer-products-section-browser") }}
+            href: /browser
+
+          - children: ${{ l("footer-products-section-translate") }}
+            href: /translate
+
+          - children: ${{ l("footer-products-section-one") }}
+            href: /one
+
+    - id: community
+      title: ${{ l("footer-community-section") }}
+      items:
+          - children: ${{ l("footer-community-section-contribute") }}
+            href: /contribute
+
+          - children: ${{ l("footer-community-section-donate") }}
+            href: /contribute/donate
+
+          - children: ${{ l("footer-community-section-blog") }}
+            href: /blog
+
+    - id: support
+      title: ${{ l("footer-support-section") }}
+      items:
+          - children: ${{ l("footer-support-section-get-help") }}
+            href: /support
+
+          - children: ${{ l("footer-support-section-bugs") }}
+            href: /support/bugs
+
+          - children: ${{ l("footer-support-section-ideas") }}
+            href: /support/ideas
+
+    - id: resources
+      title: ${{ l("footer-resources-section") }}
+      items:
+          - children: ${{ l("footer-resources-section-branding") }}
+            href: /branding
+
+          - children: ${{ l("footer-resources-section-developers") }}
+            href: https://developer.dothq.org
+            target: _blank
+
+          - children: ${{ l("footer-resources-section-open-source") }}
+            href: https://github.com/dothq
+            target: _blank
+
+    - id: about
+      title: ${{ l("footer-about-section") }}
+      items:
+          - children: ${{ l("footer-about-section-us") }}
+            href: /about
+
+          - children: ${{ l("footer-about-section-privacy") }}
+            href: /about/privacy
+
+          - children: ${{ l("footer-about-section-terms") }}
+            href: /about/terms
+
+          - children: ${{ l("footer-about-section-environment") }}
+            href: /about/environment
+
+          - children: ${{ l("footer-about-section-charter") }}
+            href: /about/charter
+socials:
+    - id: twitter
+      title: "@DotBrowser"
+      href: https://twitter.com/@DotBrowser
+      target: _blank
+
+    - id: mastodon
+      title: "@dothq@mastodon.social"
+      href: https://mastodon.social/@dothq
+      target: _blank
+
+    - id: discord
+      title: "discord.gg/WRDEK2D"
+      href: https://discord.gg/WRDEK2D
+      target: _blank
+
+    - id: matrix
+      title: "#dothq:matrix.org"
+      href: https://matrix.to/#/#dothq:matrix.org
+      target: _blank

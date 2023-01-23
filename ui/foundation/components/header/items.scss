@@ -1,0 +1,63 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.fdn-header-items {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	order: 0;
+	flex: 1;
+	width: 100%;
+}
+
+@media (max-width: 52rem) {
+	.fdn-header-content .fdn-header-items {
+		display: none;
+	}
+}
+
+@media (max-width: 40rem) {
+	.fdn-header-content .fdn-header-end > :not(#menu-button) {
+		display: none;
+	}
+}
+
+.fdn-header-item-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.fdn-header-item {
+	align-items: center;
+	height: 4.5rem;
+	--border-radii: 0;
+	--spacing-x: 1.25rem;
+	--text-colour: var(--fdn-colours-black);
+	--text-hover-colour: var(--fdn-colours-black);
+	border-bottom: 2px solid transparent !important;
+}
+
+.fdn-header-content .fdn-header-item:hover,
+.fdn-header-content
+	.fdn-header-item-container:hover
+	.fdn-header-item {
+	border-bottom: 2px solid currentColor !important;
+}
+
+.fdn-header-content
+	.fdn-header-item:hover:not(:target)
+	+ .fdn-header-menu,
+.fdn-header-content
+	.fdn-header-item:focus-within:not(:target)
+	+ .fdn-header-menu,
+.fdn-header-content .fdn-header-menu:hover,
+.fdn-header-content .fdn-header-menu:focus-within {
+	--opacity: 1;
+	--pointer-events: all;
+}
+
+.fdn-header-item:target {
+	pointer-events: none;
+}

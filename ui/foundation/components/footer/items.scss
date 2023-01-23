@@ -1,0 +1,58 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.fdn-footer-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 2.5rem;
+}
+
+.fdn-footer-section {
+	display: flex;
+	flex-direction: column;
+	gap: 1.15rem;
+	min-width: 9.5rem;
+}
+
+.fdn-footer-section-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.fdn-footer-section-title {
+	color: var(--fdn-text-colour);
+	font-weight: 700;
+}
+
+.fdn-footer-section-list-item {
+	font-weight: 500;
+}
+
+.fdn-footer-section-list-item a {
+	display: flex;
+	color: var(--fdn-text-secondary-colour);
+	text-decoration: none;
+	transition: 0.2s color ease;
+}
+
+.fdn-footer-section-list-item a:hover,
+.fdn-footer-section-list-item a:focus {
+	color: var(--fdn-colours-link);
+}
+
+@media (max-width: 52rem) {
+	.fdn-footer-item {
+		justify-content: flex-start;
+	}
+}
+
+.fdn-footer-sitemap {
+	flex: 2;
+}
+
+.fdn-footer-socials .fdn-footer-section-list {
+	flex-direction: row;
+}

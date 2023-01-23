@@ -1,0 +1,53 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sizes */
+
+.fdn-field.sm {
+	--font-size: 0.8rem;
+	--max-height: 1.85rem; /* Calculated height from padding + font-sise */
+}
+
+.fdn-field.md {
+	--font-size: var(--default-btn-font-size);
+	--max-height: 2.85rem; /* Calculated height from padding + font-sise */
+}
+
+.fdn-field.lg {
+	--font-size: 1.5rem;
+	--max-height: 3.85rem; /* Calculated height from padding + font-sise */
+}
+
+/* Has* */
+
+.fdn-field.has-prefix .fdn-input .fdn-internal-input:not(select) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.fdn-field.has-suffix .fdn-input .fdn-internal-input:not(select) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.fdn-field:not(.has-prefix) .fdn-internal-input:not(select) {
+	padding-inline-start: 1rem;
+}
+
+.fdn-field.has-error .fdn-input .fdn-internal-input {
+	outline: 2px solid var(--fdn-error-colour);
+}
+
+.fdn-field.has-error .fdn-input-error {
+	display: flex;
+	visibility: visible;
+}
+
+/* Width */
+
+.fdn-field.full-width {
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}

@@ -1,0 +1,91 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Lots of different components use this file so try not to remove stuff!
+
+name: Donations
+
+amounts: [5.00, 10.00, 25.00, 50.00, 100.00, 200.00]
+default_amount: 2 # Starting from 0, the index in the amounts
+# Base currency is the currency used to convert to other currencies
+base_currency: eur # EUR is mostly stable so we're using it
+
+donation_hard_limit: "99999.99"
+
+tree_partners:
+    fiat:
+        id: ecologi
+        name: Ecologi
+        url: https://ecologi.com
+        per_tree_rate: 0.29 # in EUR
+        amount_to_plant: 5
+
+fiat:
+    enabled: true
+    currencies:
+        - id: gbp
+          name: Great British Pounds
+          symbol: £
+          format_amount: "{symbol}{amount}"
+          local_currency_of: ["en-GB"]
+          rate: 1
+
+        - id: eur
+          name: Euros
+          symbol: €
+          format_amount: "{symbol}{amount}"
+          local_currency_of: ["fr", "es"]
+          rate: 1
+
+        - id: usd
+          name: US Dollar
+          symbol: US$
+          format_amount: "{symbol}{amount}"
+          local_currency_of: ["en-US"]
+          rate: 1
+
+        - id: aud
+          name: Australian Dollar
+          symbol: AU$
+          format_amount: "{symbol}{amount}"
+          local_currency_of: ["en-AU"]
+          rate: 1
+
+        - id: sek
+          name: Swedish Krona
+          symbol: SEK
+          format_amount: "{amount} {symbol}"
+          local_currency_of: ["sv"]
+          rate: 10
+
+crypto:
+    enabled: false
+    currencies:
+        - id: bitcoin
+          name: Bitcoin
+          symbol: BTC
+          format_amount: "{amount} {symbol}"
+          local_currency_of: []
+          rate: 0.000048
+
+        - id: bitcoin_cash
+          name: Bitcoin Cash
+          symbol: BCH
+          format_amount: "{amount} {symbol}"
+          local_currency_of: []
+          rate: 0.0085
+
+        - id: monero
+          name: Monero
+          symbol: XMR
+          format_amount: "{amount} {symbol}"
+          local_currency_of: []
+          rate: 0.0065
+
+        - id: ethereum
+          name: Ethereum
+          symbol: ETH
+          format_amount: "{amount} {symbol}"
+          local_currency_of: []
+          rate: 0.00064

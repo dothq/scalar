@@ -1,0 +1,18 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.sponsor-item {
+	max-width: 250px;
+	align-items: flex-start;
+	flex-direction: column;
+	--spacing-y: 0 !important;
+	--spacing-x: 0 !important;
+	--max-height: unset !important;
+	--border-radii: 4px !important;
+	gap: 1rem;
+}
+
+.sponsor-item img {
+	max-width: 200px;
+}

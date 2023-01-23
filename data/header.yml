@@ -1,0 +1,95 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Header
+items:
+    - element: link
+      children: ${{ l("header-browser-item") }}
+      href: /browser
+      items:
+          - element: menu_item
+            href: /browser/desktop
+            title: ${{ l("header-browser-item-desktop-title") }}
+            subtitle: ${{ l("header-browser-item-desktop-subtitle") }}
+            icon: BrowserDesktop
+
+          - element: menu_item
+            href: /browser/android
+            title: ${{ l("header-browser-item-android-title") }}
+            subtitle: ${{ l("header-browser-item-android-subtitle") }}
+            icon: BrowserDesktop
+
+    - element: link
+      children: ${{ l("header-products-item") }}
+      href: /products
+      items:
+          - element: menu_item
+            href: /one
+            title: ${{ l("header-products-item-one-title") }}
+            subtitle: ${{ l("header-products-item-one-subtitle") }}
+            icon: One
+
+          - element: menu_item
+            href: /translate
+            title: ${{ l("header-products-item-translate-title") }}
+            subtitle: ${{ l("header-products-item-translate-subtitle") }}
+            icon: Translate
+
+          - element: menu_item
+            href: /browser/features#shield
+            title: ${{ l("header-products-item-shield-title") }}
+            subtitle: ${{ l("header-products-item-shield-subtitle") }}
+            icon: Shield
+
+          - element: link
+            href: /products
+            children: ${{ l("header-products-item-view-all-link") }}
+
+    - element: link
+      children: ${{ l("header-community-item") }}
+      href: /community
+      items:
+          - element: menu_item
+            href: /blog
+            title: ${{ l("header-community-item-blog-title") }}
+            subtitle: ${{ l("header-community-item-blog-subtitle") }}
+            icon:
+                name: News
+                size: 2
+                colour: blue
+
+          - element: menu_item
+            href: /support
+            title: ${{ l("header-community-item-help-title") }}
+            subtitle: ${{ l("header-community-item-help-subtitle") }}
+            icon:
+                name: Giving
+                size: 2
+                colour: red
+
+          - element: menu_item
+            href: /community#discord
+            title: ${{ l("header-community-item-discord-title") }}
+            subtitle: ${{ l("header-community-item-discord-subtitle") }}
+            icon:
+                name: Discord
+                size: 2
+
+          - element: menu_item
+            href: /community#matrix
+            title: ${{ l("header-community-item-matrix-title") }}
+            subtitle: ${{ l("header-community-item-matrix-subtitle") }}
+            icon:
+                name: Matrix
+                size: 2
+
+    - element: link
+      children: ${{ l("header-about-item") }}
+      href: /about
+end:
+    - element: button
+      children: ${{ l("header-cta-button-text") }}
+      href: /contribute
+      colour: black
+      type: primary

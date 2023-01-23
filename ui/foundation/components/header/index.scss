@@ -1,0 +1,130 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@use "a11y";
+@use "drawer";
+@use "items";
+@use "logo";
+@use "menu";
+
+.fdn-header {
+	width: 100%;
+	min-height: 4.5rem;
+	background-color: var(--fdn-colours-white);
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.fdn-header-wrapper {
+	padding: 0 0.5rem;
+}
+
+.fdn-header-container {
+	margin: 0 auto;
+	max-width: var(--fdn-content-width);
+	height: inherit;
+}
+
+.fdn-header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	height: 4.5rem;
+	gap: 1.5rem;
+}
+
+.fdn-header-container .fdn-header-line {
+	height: 1px;
+	background-color: var(--fdn-border-colour);
+	margin: 0;
+	border: none;
+}
+
+@media (min-width: 25rem) {
+	.fdn-header-wrapper,
+	.fdn-header-drawer {
+		padding: 0 1rem;
+	}
+
+	#menu-close {
+		--close-right: 1rem;
+	}
+}
+
+@media (min-width: 15rem) {
+	.fdn-header-wrapper,
+	.fdn-header-drawer {
+		padding: 0 2rem;
+	}
+
+	#menu-close {
+		--close-right: 2rem;
+	}
+}
+
+.fdn-header-content > * {
+	flex: 1 1 0%;
+}
+
+.fdn-header-content hr {
+	height: calc(4.5rem / 2);
+}
+
+.fdn-header-end {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+#menu-button {
+	display: flex;
+	align-items: center;
+	color: var(--fdn-colours-black);
+	height: 4.5rem;
+}
+
+@media (min-width: 52rem) {
+	#menu-button {
+		display: none;
+	}
+}
+
+@media (max-width: 52rem) {
+	.fdn-header-end > :not(#menu-button) {
+		display: none;
+	}
+
+	.fdn-header .fdn-logo #wordtype {
+		display: none;
+	}
+}
+
+.fdn-header
+	+ .fdn-main-content
+	.fdn-hero:first-of-type.white:not(.fh) {
+	border-bottom: 1px solid var(--fdn-border-colour);
+}
+
+.fdn-header::before {
+	content: "";
+	visibility: hidden;
+	width: 100%;
+	height: 1rem;
+	backdrop-filter: blur(12px) saturate(110%);
+	position: absolute;
+	mask-image: linear-gradient(
+		to bottom,
+		var(--fdn-colours-white),
+		transparent
+	);
+	top: calc(100% + 0.4px);
+	pointer-events: none;
+}
+
+:root.header-scroll-threshold .fdn-header::before {
+	visibility: visible;
+}

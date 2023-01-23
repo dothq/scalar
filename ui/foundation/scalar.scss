@@ -1,0 +1,223 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Utility */
+@use "utils/a11y";
+@use "utils/reset";
+@use "utils/fonts";
+
+/* Components */
+@use "components/footer";
+@use "components/header";
+@use "components/main";
+@use "components/error";
+@use "components/icons";
+@use "components/button";
+@use "components/flex";
+@use "components/logo";
+@use "components/form";
+@use "components/aside";
+@use "components/card";
+@use "components/banner";
+@use "components/hero";
+@use "components/menu";
+
+/* Globals */
+:root {
+	/* Colours */
+	--fdn-colours-red: hsl(0, 95%, 36%);
+	--fdn-colours-red-secondary: hsla(0, 95%, 36%, 0.07);
+	--fdn-colours-orange: hsl(29, 90%, 53%);
+	--fdn-colours-orange-secondary: hsla(29, 90%, 53%, 0.07);
+	--fdn-colours-yellow: hsl(54, 100%, 48%);
+	--fdn-colours-yellow-secondary: hsla(54, 100%, 48%, 0.07);
+	--fdn-colours-green: hsl(130, 100%, 20%);
+	--fdn-colours-green-secondary: hsla(130, 100%, 20%, 0.07);
+	--fdn-colours-blue: hsl(209, 97%, 39%);
+	--fdn-colours-blue-secondary: hsla(209, 97%, 39%, 0.07);
+	--fdn-colours-purple: hsl(263, 95%, 40%);
+	--fdn-colours-purple-secondary: hsla(263, 95%, 40%, 0.07);
+	--fdn-colours-pink: hsl(317, 100%, 43%);
+	--fdn-colours-pink-secondary: hsla(317, 100%, 43%, 0.07);
+	--fdn-colours-black: hsl(216, 100%, 5%);
+	--fdn-colours-black-secondary: hsla(216, 100%, 5%, 0.07);
+	--fdn-colours-white: hsl(255, 100%, 100%);
+	--fdn-colours-pblack: hsl(0, 0%, 0%);
+	--fdn-colours-gray: hsl(0, 0%, 87%);
+	--fdn-colours-gray-secondary: hsl(0, 0%, 93%);
+	--fdn-colours-link: hsl(209, 65%, 35%);
+	--fdn-colours-visited-link: hsl(263, 65%, 35%);
+
+	/* Backgrounds */
+	--fdn-bg-default: hsl(0, 0%, 96%);
+
+	/* Text colours */
+	--fdn-text-colour: hsl(180, 3%, 7%);
+	--fdn-text-secondary-colour: hsl(225, 8%, 39%);
+
+	/* Border colours */
+	--fdn-border-colour: hsl(0, 0%, 87%);
+	--fdn-border-secondary-colour: hsl(0, 0%, 77%);
+
+	/* State colours */
+	--fdn-info-colour: var(--fdn-colours-blue);
+	--fdn-warn-colour: var(--fdn-colours-yellow);
+	--fdn-success-colour: var(--fdn-colours-green);
+	--fdn-error-colour: var(--fdn-colours-red);
+
+	/* Fonts */
+	--fdn-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Helvetica, Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	--fdn-fonts-satoshi: Satoshi, var(--fdn-fonts-system);
+	--fdn-fonts-satoshiVar: Satoshi var, var(--fdn-fonts-system);
+	--fdn-fonts-inter: Inter, var(--fdn-fonts-system);
+	--fdn-fonts-interVar: Inter var, var(--fdn-fonts-system);
+
+	/* Sizing */
+	--fdn-content-width: 68.75rem; /* 1100px */
+}
+
+/* Header-specific styles */
+:root {
+	--drawer-height: 20.5rem;
+	--drawer-animation-length: 0.3s;
+}
+
+html {
+	scrollbar-color: var(--fdn-border-colour) var(--fdn-colours-white);
+	scroll-behavior: smooth;
+}
+
+body {
+	color: var(--fdn-colours-black);
+	background-color: var(--fdn-bg-default);
+	font-family: var(--fdn-fonts-satoshi);
+}
+
+#__scalar {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+a.fdn-button,
+button {
+	font-family: var(--fdn-fonts-satoshi);
+}
+
+@supports (font-variation-settings: normal) {
+	body {
+		font-family: var(--fdn-fonts-satoshiVar);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h4,
+	h5,
+	h6,
+	a.fdn-button,
+	button {
+		font-family: var(--fdn-fonts-satoshiVar);
+	}
+}
+
+:focus-visible:not(.fdn-focus-none) {
+	box-shadow: 0px 0px 0px 0.25rem var(--fdn-colours-white);
+	outline: 2px solid
+		var(--focus-outline-colour, var(--fdn-colours-blue));
+	outline-offset: var(--focus-outline-offset, 0.25rem);
+	z-index: 2;
+}
+
+a {
+	color: var(--fdn-colours-link);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
+
+a:hover,
+a:focus-visible {
+	text-decoration: none;
+}
+
+main a:not(.fdn-not-visited, .fdn-button):visited {
+	color: var(--fdn-colours-visited-link);
+}
+
+[hidden] {
+	display: none !important;
+}
+
+pre {
+	font-family: monospace;
+}
+
+hr.fdn-separator {
+	width: 0;
+	height: 0;
+	margin: 0;
+	border: 0;
+	color: inherit;
+	margin-block: 0;
+	margin-inline: 0;
+	background-color: var(--fdn-border-colour);
+}
+
+.fdn-separator.h {
+	width: 100%;
+	height: 1px;
+}
+
+.fdn-separator.v {
+	width: 1px;
+	height: 100%;
+}
+
+.fdn-disabled {
+	opacity: 0.5 !important;
+	pointer-events: none !important;
+	border: 1px solid var(--fdn-border-secondary-colour);
+}
+
+.fdn-page-constrain {
+	width: 100%;
+	max-width: var(--fdn-content-width);
+	margin: 0 auto;
+}
+
+/* Check whether a banner is not inside the main content */
+.fdn-banner:not(.fdn-main-content *) {
+	--border-radius: 0rem;
+}
+
+.fdn-needs-js:not(:root:not(.no-js) *) {
+	display: none;
+}
+
+/* Overflow helper classes */
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.overflow-clip {
+	overflow: clip;
+}
+
+.overflow-scroll {
+	overflow: scroll;
+}
+
+.overflow-visible {
+	overflow: visible;
+}

@@ -1,0 +1,89 @@
+version: "3"
+services:
+    scalar:
+        container_name: scalar
+        hostname: scalar
+        restart: always
+        networks:
+            - intranet
+        environment:
+            - HOST=0.0.0.0
+            - PORT=80
+            - SCALAR_ALLOWED_HOSTS=dothq.org,dothq.co,dothqaaaxerjhwh6ovuvvgypv5khivfxpd7zpdvcr3ssemrjdhcvniyd.onion
+        build:
+            context: .
+            dockerfile: docker/Dockerfile
+
+    onion:
+        container_name: onion
+        image: goldy/tor-hidden-service:latest
+        restart: always
+        links:
+            - nginx
+        networks:
+            - intranet
+        volumes:
+            - tor-keys:/var/lib/tor/hidden_service/
+        environment:
+            TOR_ENABLE_VANGUARDS: "true"
+            WWW_TOR_SERVICE_HOSTS: "80:nginx:80"
+            WWW_TOR_SERVICE_VERSION: "3"
+        secrets:
+            - www
+
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        hostname: nginx
+        restart: always
+        volumes:
+            - ./docker/config/nginx.conf:/etc/nginx/nginx.conf:ro
+            - ./docker/config/sites:/etc/nginx/sites:ro
+            - le-certs:/etc/letsencrypt
+            - le-www:/var/www/letsencrypt
+        links:
+            - scalar
+            - certbot
+        networks:
+            - intranet
+            - internet # Exposed
+        depends_on:
+            - certbot
+        ports:
+            - 80:80
+            - 443:443
+
+    certbot:
+        image: certbot/certbot
+        container_name: certbot
+        restart: always
+        volumes:
+            - le-certs:/etc/letsencrypt
+            - le-www:/var/www/letsencrypt
+        networks:
+            - intranet
+        entrypoint: '/bin/sh -c ''trap exit TERM; while :; do echo "Certbot has started, waiting an hour to renew in case of repeated restart."; sleep 1h; certbot renew; sleep 12h & wait $${!}; done;'''
+
+    watchtower:
+        image: containrrr/watchtower
+        restart: always
+        environment:
+            - WATCHTOWER_CLEANUP=true
+            - WATCHTOWER_POLL_INTERVAL=60
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+    intranet:
+        driver: bridge
+    internet:
+
+volumes:
+    le-certs:
+    le-www:
+    tor-keys:
+        driver: local
+
+secrets:
+    www:
+        file: ./hs_ed25519_secret_key

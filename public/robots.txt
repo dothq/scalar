@@ -1,14 +1,1 @@
 User-agent: *
-
-# Block known federal agencies
-User-agent: GCHQ
-Disallow: /
-
-User-agent: CIA
-Disallow: /
-
-User-agent: NSA
-Disallow: /
-
-User-agent: FBI
-Disallow: /

@@ -1,0 +1,35 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@use "helpers";
+
+.fdn-banner {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	background: var(--bg-colour, var(--fdn-colours-gray-secondary));
+	color: var(--text-colour, var(--fdn-colours-black));
+	padding: var(--padding);
+	gap: 1.5rem;
+	border-radius: var(--border-radius, 1rem);
+}
+
+.fdn-banner p {
+	display: flex;
+	align-items: center;
+	min-height: var(--padding);
+	color: inherit;
+	flex: 1;
+}
+
+.fdn-banner a:not(.fdn-button) {
+	color: var(--link-colour, var(--fdn-colours-link));
+}
+
+@media (min-width: 15rem) {
+	.fdn-banner.full-width {
+		--padding: 0 2rem;
+	}
+}

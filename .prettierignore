@@ -1,4 +1,14 @@
-# Ignore artifacts:
-build
-coverage
-prisma
+.DS_Store
+node_modules
+.env
+.env.*
+!.env.example
+/.next
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Ignore _head.html template
+templates/_head.html
