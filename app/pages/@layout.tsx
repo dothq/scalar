@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import clsx from "clsx";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import L10nBanner from "../components/common/L10nBanner";
@@ -11,13 +12,15 @@ import HTMLComment from "../components/ui/HTMLComment";
 import { l } from "../l10n";
 import { PageProps } from "../types";
 import { withCacheBuster } from "../utils/cache";
+import { getBrowserId } from "../utils/ua";
 
 const Layout = ({
 	meta,
 	url,
 	Component,
 	schema,
-	lang
+	lang,
+	req
 }: PageProps & { Component: any }) => {
 	schema = schema || {
 		"@context": "http://schema.org",
@@ -41,12 +44,14 @@ const Layout = ({
 		]
 	};
 
+	const browserId = getBrowserId(req.headers["user-agent"] || "");
+
 	return (
 		<>
 			<html
 				lang={lang}
 				dir="ltr"
-				class="no-js"
+				class={clsx("no-js", browserId)}
 				prefix="og: https://ogp.me/ns#"
 				itemScope
 				itemType="http://schema.org/WebSite"

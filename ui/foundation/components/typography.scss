@@ -4,49 +4,56 @@
 
 .fdn-main-content h1,
 .fdn-h1 {
-	font-size: min(5rem, 10dvw);
+	--default-font-size: 5rem;
+	font-size: min(var(--default-font-size), 10dvw);
 	font-weight: 700;
 	line-height: 1.25;
 }
 
 .fdn-main-content h2,
 .fdn-h2 {
-	font-size: min(3rem, 6dvw);
+	--default-font-size: 3rem;
+	font-size: min(var(--default-font-size), 6dvw);
 	font-weight: 700;
 	line-height: 1.25;
 }
 
 .fdn-main-content h3,
 .fdn-h3 {
-	font-size: min(2.5rem, 5dvw);
+	--default-font-size: 2.5rem;
+	font-size: min(var(--default-font-size), 5dvw);
 	font-weight: 600;
 	line-height: 1.25;
 }
 
 .fdn-main-content h4,
 .fdn-h4 {
-	font-size: min(2rem, 4dvw);
+	--default-font-size: 2rem;
+	font-size: min(var(--default-font-size), 4dvw);
 	font-weight: 600;
 	line-height: 1.1;
 }
 
 .fdn-main-content h5,
 .fdn-h5 {
-	font-size: min(1.5rem, 3dvw);
+	--default-font-size: 1.5rem;
+	font-size: min(var(--default-font-size), 3dvw);
 	font-weight: 600;
 	line-height: 1.1;
 }
 
 .fdn-main-content h6,
 .fdn-h6 {
-	font-size: min(1.15rem, 2.3dvw);
+	--default-font-size: 1.15rem;
+	font-size: min(var(--default-font-size), 2.3dvw);
 	font-weight: 600;
 	line-height: 1.1;
 }
 
 .fdn-main-content p,
 .fdn-p {
-	font-size: min(1.125rem, 4dvw);
+	--default-font-size: 1.125rem;
+	font-size: min(var(--default-font-size), 4dvw);
 	font-weight: 500;
 	line-height: 1.375;
 	color: var(--fdn-text-secondary-colour);
@@ -54,7 +61,8 @@
 
 .fdn-main-content span,
 .fdn-span {
-	font-size: min(1rem, 3.5dvw);
+	--default-font-size: 1rem;
+	font-size: min(var(--default-font-size), 3.5dvw);
 	font-weight: 500;
 	line-height: 1.375;
 	color: var(--fdn-text-secondary-colour);
@@ -62,16 +70,45 @@
 
 .fdn-main-content pre,
 .fdn-main-content code {
-	font-size: min(1.125rem, 4dvw);
+	--default-font-size: 1.125rem;
+	font-size: min(var(--default-font-size), 4dvw);
 }
 
 .fdn-main-content strong,
 .fdn-main-content b {
-	font-size: min(1.125rem, 4dvw);
+	--default-font-size: 1.125rem;
+	font-size: min(var(--default-font-size), 4dvw);
 	font-weight: 500;
 }
 
 .fdn-main-content p strong,
 .fdn-main-content p b {
 	color: var(--fdn-colours-black);
+}
+
+/* Webkit font fixes */
+
+:root.webkit {
+	.fdn-main-content h1,
+	.fdn-main-content h2,
+	.fdn-main-content h3,
+	.fdn-main-content h4,
+	.fdn-main-content h5,
+	.fdn-main-content h6,
+	.fdn-main-content p,
+	.fdn-main-content span,
+	.fdn-main-content pre,
+	.fdn-main-content code,
+	.fdn-main-content strong,
+	.fdn-main-content b,
+	.fdn-h1,
+	.fdn-h2,
+	.fdn-h3,
+	.fdn-h4,
+	.fdn-h5,
+	.fdn-h6,
+	.fdn-p,
+	.fdn-span {
+		font-size: var(--default-font-size);
+	}
 }

@@ -63,26 +63,28 @@ export const createHttpServer = () => {
 
 		res.header("X-Frame-Options", "SAMEORIGIN");
 
-		const cspHosts = process.env
-			.SCALAR_ALLOWED_HOSTS!.split(",")
-			.map((o) => `*.${o}`)
-			.join(" ");
+		if (process.env.SCALAR_ALLOWED_HOSTS) {
+			const cspHosts = process.env
+				.SCALAR_ALLOWED_HOSTS!.split(",")
+				.map((o) => `*.${o}`)
+				.join(" ");
 
-		res.header(
-			"Content-Security-Policy",
-			[
-				`default-src 'self' ${cspHosts};`,
-				`style-src 'self' ${cspHosts};`,
-				"img-src 'self';",
-				"font-src 'self';",
-				"connect-src 'self';",
-				`frame-src 'self' ${cspHosts};`,
-				req.headers.host?.endsWith(".onion")
-					? ""
-					: "upgrade-insecure-requests;",
-				"block-all-mixed-content"
-			].join(" ")
-		);
+			res.header(
+				"Content-Security-Policy",
+				[
+					`default-src 'self' ${cspHosts};`,
+					`style-src 'self' ${cspHosts};`,
+					"img-src 'self';",
+					"font-src 'self';",
+					"connect-src 'self';",
+					`frame-src 'self' ${cspHosts};`,
+					req.headers.host?.endsWith(".onion")
+						? ""
+						: "upgrade-insecure-requests;",
+					"block-all-mixed-content"
+				].join(" ")
+			);
+		}
 
 		res.header("X-Content-Type-Options", "nosniff");
 
@@ -92,6 +94,7 @@ export const createHttpServer = () => {
 		);
 
 		if (
+			process.env.SCALAR_ALLOWED_HOSTS &&
 			process.env
 				.SCALAR_ALLOWED_HOSTS!.split(",")
 				.find((o) => o.endsWith(".onion"))
@@ -110,6 +113,7 @@ export const createHttpServer = () => {
 	});
 
 	server.addHook("preHandler", (req, res, done) => {
+		if (process.env.NODE_ENV == "develop") return done();
 		if (!req.headers.host) return done();
 
 		if (!req.headers.host?.endsWith(".onion")) {
