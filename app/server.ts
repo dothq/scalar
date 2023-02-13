@@ -9,7 +9,7 @@ import { v1 } from "./api/v1";
 import { router } from "./router";
 
 export const server = fastify({
-	logger: true
+	logger: process.env.NODE_ENV == "develop"
 });
 
 export const createHttpServer = () => {
