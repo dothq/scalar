@@ -12,6 +12,7 @@ import {
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { basename, resolve } from "path";
 import { getAvailableLocales, negotiateLocale } from "./l10n";
+import redirects from "./redirects";
 import { renderPage } from "./ssr";
 import { createRouteStruct, serverError } from "./utils/router";
 
@@ -161,6 +162,24 @@ export const router: FastifyPluginCallback = async (
 						)
 						.send("");
 				}
+			});
+		}
+	}
+
+	for (const [oldURI, [newURI, options]] of Object.entries(
+		redirects
+	)) {
+		for (const locale of getAvailableLocales()) {
+			const localisedPath = oldURI.endsWith("/")
+				? `/${locale}${oldURI.substring(
+						0,
+						oldURI.length - 1
+				  )}`
+				: `/${locale}${oldURI}`;
+
+			server.all(localisedPath, (req, res) => {
+				res.status(options.statusCode);
+				res.redirect(options.statusCode, newURI);
 			});
 		}
 	}
