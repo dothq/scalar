@@ -27,6 +27,7 @@ const Footer = () => {
 		? new URL(gitRepoURI).hostname.replace("www.", "")
 		: undefined;
 	const gitBranch = process.env.SCALAR_GIT_BRANCH;
+	const gitDefaultBranch = process.env.SCALAR_GIT_DEFAULT_BRANCH;
 
 	let viewSourceURL = gitRepoURI;
 	let editPageURL = gitRepoURI;
@@ -35,7 +36,7 @@ const Footer = () => {
 		const baseDomain = `https://github.com/${gitRepo}`;
 
 		viewSourceURL = `${baseDomain}/blob/${process.env.SCALAR_GIT_REVISION}${process.env.SCALAR_ORIGINAL_PATH}`;
-		editPageURL = `${baseDomain}/edit/${gitBranch}${process.env.SCALAR_ORIGINAL_PATH}`;
+		editPageURL = `${baseDomain}/edit/${gitDefaultBranch}${process.env.SCALAR_ORIGINAL_PATH}`;
 	}
 
 	return (
