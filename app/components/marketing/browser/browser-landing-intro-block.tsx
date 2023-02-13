@@ -56,7 +56,9 @@ const BrowserLandingIntroBlock = () => {
 
 								<Button
 									colour={"blue"}
-									href={"/browser"}
+									href={
+										"https://github.com/dothq/browser"
+									}
 								>
 									<Localised
 										id={"cta-btn-text"}

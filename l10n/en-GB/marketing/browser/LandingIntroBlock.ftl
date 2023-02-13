@@ -10,4 +10,4 @@ browser-landing-intro-block-description =
     A next-generation web browser with rugged 
     privacy features out-of-the-box.
 
-browser-landing-intro-block-cta-btn-text = Explore <arrow-right>
+browser-landing-intro-block-cta-btn-text = Coming soon
