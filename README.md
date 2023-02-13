@@ -1,6 +1,6 @@
 # Scalar
 
-[![Build](https://github.com/dothq/scalar/actions/workflows/build.yml/badge.svg)](https://github.com/dothq/scalar/actions/workflows/build.yml)
+[![Build](https://github.com/dothq/scalar/actions/workflows/deploy.yml/badge.svg)](https://github.com/dothq/scalar/actions/workflows/deploy.yml)
 
 The Dot HQ Website
 
