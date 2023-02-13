@@ -323,7 +323,9 @@ const main = async () => {
 		);
 
 		typeCheckProc.on("close", (code) => {
-			r(!code);
+			if (code) process.exit(code);
+
+			r(true);
 		});
 	})
 
