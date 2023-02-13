@@ -1,4 +1,4 @@
-name: Build and deploy to dothq.org
+name: Build and maybe deploy to dothq.org
 
 on:
     push:
@@ -31,7 +31,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         needs: build
-        if: ${{ (github.head_ref || github.ref_name) }} == "production"
+        if: github.ref == "refs/heads/production"
         permissions:
             contents: read
 
