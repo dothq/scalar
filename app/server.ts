@@ -13,7 +13,7 @@ export const server = fastify({
 });
 
 export const createHttpServer = () => {
-	server.register(fastifyFormbody);
+	server.rgister(fastifyFormbody);
 	server.register(fastifyCookie);
 
 	server.addHook("preHandler", (req, res, done) => {
