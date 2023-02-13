@@ -15,7 +15,7 @@ const rimraf = require("rimraf");
 const { createHash } = require("crypto");
 const { FluentResource } = require("@fluent/bundle");
 const buildStubLanguages = require("./l10n");
-const { execSync } = require("child_process");
+const { execSync, spawnSync, spawn, exec } = require("child_process");
 
 const DEFAULT_LOCALE = "en-GB";
 
@@ -162,7 +162,7 @@ const getPerCentLocalised = (lang) => {
 	return (totalTranslated / langResource.body.length) * 100;
 };
 
-const main = () => {
+const main = async () => {
 	const d = Date.now();
 
 	ensureDirSync(options.outdir);
@@ -312,6 +312,22 @@ const main = () => {
 	}
 
 	buildStubLanguages();
+
+	console.log("Running type checking...")
+
+	await new Promise((r) => {
+		const typeCheckProc = spawn(
+			resolve(process.cwd(), "node_modules", ".bin", "tsc"),
+			["-noEmit"],
+			{ stdio: "inherit" }
+		);
+
+		typeCheckProc.on("close", (code) => {
+			if (code) process.exit(code);
+
+			r(true);
+		});
+	})
 
 	console.log(`Done in ${Date.now() - d}ms!`);
 };
