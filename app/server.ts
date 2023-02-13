@@ -93,6 +93,8 @@ export const createHttpServer = () => {
 			"strict-origin-when-cross-origin"
 		);
 
+		res.header("Permissions-Policy", "interest-cohort=()");
+
 		if (
 			process.env.SCALAR_ALLOWED_HOSTS &&
 			process.env
