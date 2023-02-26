@@ -116,8 +116,6 @@ export const router: FastifyPluginCallback = async (
 				? `/${locale}${path.substring(0, path.length - 1)}`
 				: `/${locale}${path}`;
 
-			console.log(path);
-
 			server.all(localisedPath, async (req, res) => {
 				for (const route of state) {
 					return await renderPage(req, res, route);
