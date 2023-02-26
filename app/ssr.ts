@@ -15,6 +15,7 @@ import {
 	negotiateLocale
 } from "./l10n";
 import { addMPLLicenseHeader } from "./utils/html";
+import { unixifyPath } from "./utils/path";
 import { pagesBuildDir, RouteData } from "./utils/router";
 
 const windowsPrefix = process.platform == "win32" ? "file:///" : "";
@@ -60,7 +61,9 @@ export const renderPage = async (
 
 	if (routeData.type == "jsx") {
 		const Layout = (
-			await importPage(resolve(pagesBuildDir, "@layout.js"))
+			await importPage(
+				unixifyPath(resolve(pagesBuildDir, "@layout.js"))
+			)
 		).component;
 
 		const mod = await importPage(routeData.compiledPath);

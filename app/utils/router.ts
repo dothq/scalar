@@ -9,22 +9,31 @@ import { glob } from "glob";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 import { join, parse, resolve } from "path";
 import { DEFAULT_LOCALE, maybeGetLangFromPath } from "../l10n";
+import { unixifyPath } from "./path";
 
 export const serverErrorFileBuffer = readFileSync(
-	resolve(process.cwd(), ".scalar", "public", "errors", "500.html"),
+	unixifyPath(
+		resolve(
+			process.cwd(),
+			".scalar",
+			"public",
+			"errors",
+			"500.html"
+		)
+	),
 	"utf-8"
 );
 
-export const pagesOrigDir = resolve(process.cwd(), "app", "pages");
+export const pagesOrigDir = unixifyPath(
+	unixifyPath(resolve(process.cwd(), "app", "pages"))
+);
 
-export const pagesBuildDir = resolve(
-	process.cwd(),
-	".scalar",
-	"pages"
+export const pagesBuildDir = unixifyPath(
+	unixifyPath(resolve(process.cwd(), ".scalar", "pages"))
 );
 
 export const getAllRoutes = () => {
-	return glob.sync(resolve(pagesOrigDir, "**", "*"), {
+	return glob.sync(unixifyPath(resolve(pagesOrigDir, "**", "*")), {
 		nodir: true
 	});
 };
@@ -59,22 +68,22 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 
 		const splitRoutePath = parsed.dir.replace(pagesOrigDir, "");
 
-		let serverPath = join(
-			splitRoutePath,
-			parsed.name == "index" ? "/" : parsed.name
-		).replace(
-			/\[([A-Za-z0-9_\-]+)\]/g,
-			(_, param) => `:${param}`
+		let serverPath = unixifyPath(
+			join(
+				splitRoutePath,
+				parsed.name == "index" ? "/" : parsed.name
+			).replace(
+				/\[([A-Za-z0-9_\-]+)\]/g,
+				(_, param) => `:${param}`
+			)
 		);
 
 		if (serverPath !== "/")
 			serverPath = serverPath.replace(/\/+$/, "");
 
 		state.originalPath = path;
-		state.compiledPath = join(
-			pagesBuildDir,
-			splitRoutePath,
-			`${parsed.name}.js`
+		state.compiledPath = unixifyPath(
+			join(pagesBuildDir, splitRoutePath, `${parsed.name}.js`)
 		);
 
 		if (+serverPath === +serverPath) {
