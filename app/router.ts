@@ -14,6 +14,7 @@ import { basename, resolve } from "path";
 import { getAvailableLocales, negotiateLocale } from "./l10n";
 import redirects from "./redirects";
 import { renderPage } from "./ssr";
+import { unixifyPath } from "./utils/path";
 import { createRouteStruct, serverError } from "./utils/router";
 
 export const mediaRouter: FastifyPluginCallback = (
@@ -27,7 +28,9 @@ export const mediaRouter: FastifyPluginCallback = (
 		server,
 		{
 			...opts,
-			root: resolve(process.cwd(), ".scalar", "public"),
+			root: unixifyPath(
+				resolve(process.cwd(), ".scalar", "public")
+			),
 			prefix: "/"
 		},
 		done
@@ -112,6 +115,8 @@ export const router: FastifyPluginCallback = async (
 			const localisedPath = path.endsWith("/")
 				? `/${locale}${path.substring(0, path.length - 1)}`
 				: `/${locale}${path}`;
+
+			console.log(path);
 
 			server.all(localisedPath, async (req, res) => {
 				for (const route of state) {

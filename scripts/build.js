@@ -4,18 +4,17 @@ const {
 	appendFileSync,
 	readFileSync,
 	readdirSync,
-	existsSync,
-	exists
+	existsSync
 } = require("fs");
 const { ensureDirSync, cpSync } = require("fs-extra");
 const { glob } = require("glob");
-const { resolve, basename, dirname, parse } = require("path");
+const { resolve, basename, dirname, sep, posix } = require("path");
 const sass = require("sass");
 const rimraf = require("rimraf");
 const { createHash } = require("crypto");
 const { FluentResource } = require("@fluent/bundle");
 const buildStubLanguages = require("./l10n");
-const { execSync, spawnSync, spawn, exec } = require("child_process");
+const { execSync, spawn } = require("child_process");
 
 const DEFAULT_LOCALE = "en-GB";
 
@@ -40,12 +39,17 @@ const SCALAR_GIT_DEFAULT_BRANCH = execSync(
 	.toString("utf-8")
 	.trim();
 
+const unixifyPath = (...path) =>
+	resolve(...path)
+		.split(sep)
+		.join(posix.sep);
+
 const options = {
-	outdir: resolve(process.cwd(), ".scalar"),
+	outdir: unixifyPath(process.cwd(), ".scalar"),
 	bundle: true,
 	platform: "node",
 	format: "cjs",
-	inject: [resolve(__dirname, "inject-vars.js")],
+	inject: [unixifyPath(__dirname, "inject-vars.js")],
 	define: {
 		SCALAR_GIT_REVISION: JSON.stringify(SCALAR_GIT_REVISION),
 		SCALAR_GIT_REMOTE: JSON.stringify(SCALAR_GIT_REMOTE),
@@ -57,11 +61,16 @@ const options = {
 };
 
 const compileScss = (path, meta) => {
-	let { css } = sass.compile(resolve(process.cwd(), "ui", path), {
-		style: "compressed"
-	});
+	let { css } = sass.compile(
+		unixifyPath(process.cwd(), "ui", path),
+		{
+			style: "compressed"
+		}
+	);
 
-	ensureDirSync(resolve(options.outdir, "public", "media", "css"));
+	ensureDirSync(
+		unixifyPath(options.outdir, "public", "media", "css")
+	);
 
 	let outName = basename(path);
 
@@ -70,7 +79,7 @@ const compileScss = (path, meta) => {
 			outName = path.replace("pages/", "").split("/")[0];
 		} else if (meta.isBlock) {
 			ensureDirSync(
-				resolve(
+				unixifyPath(
 					options.outdir,
 					"public",
 					"media",
@@ -89,7 +98,7 @@ const compileScss = (path, meta) => {
 		outName += ".css";
 	}
 
-	const outPath = resolve(
+	const outPath = unixifyPath(
 		options.outdir,
 		"public",
 		"media",
@@ -107,16 +116,18 @@ const maybeReinvalidateCache = (name, paths) => {
 	if (process.env.NODE_ENV !== "develop") return true;
 
 	if (!Array.isArray(paths) && typeof paths == "string") {
-		paths = glob.sync(resolve(paths, "**", "*"), { nodir: true });
+		paths = glob.sync(unixifyPath(paths, "**", "*"), {
+			nodir: true
+		});
 	}
 
-	if (!existsSync(resolve(options.outdir, `${name}.cache`))) {
+	if (!existsSync(unixifyPath(options.outdir, `${name}.cache`))) {
 		generateHash(name, paths);
 		return true;
 	}
 
 	const oldHash = readFileSync(
-		resolve(options.outdir, `${name}.cache`),
+		unixifyPath(options.outdir, `${name}.cache`),
 		"utf-8"
 	).trim();
 
@@ -142,7 +153,7 @@ const generateHash = (name, paths) => {
 	const finalHash = mainSha.digest("hex");
 
 	writeFileSync(
-		resolve(options.outdir, `${name}.cache`),
+		unixifyPath(options.outdir, `${name}.cache`),
 		finalHash
 	);
 
@@ -153,12 +164,12 @@ const getPerCentLocalised = (lang) => {
 	if (lang == DEFAULT_LOCALE) return 100;
 
 	const langData = readFileSync(
-		resolve(options.outdir, "l10n", `${lang}.ftl`),
+		unixifyPath(options.outdir, "l10n", `${lang}.ftl`),
 		"utf-8"
 	);
 
 	const defaultLangData = readFileSync(
-		resolve(options.outdir, "l10n", `${DEFAULT_LOCALE}.ftl`),
+		unixifyPath(options.outdir, "l10n", `${DEFAULT_LOCALE}.ftl`),
 		"utf-8"
 	);
 
@@ -191,12 +202,12 @@ const main = async () => {
 	ensureDirSync(options.outdir);
 
 	const pagesEntrypoints = glob.sync(
-		resolve(process.cwd(), "app", "pages", "**", "*"),
+		unixifyPath(process.cwd(), "app", "pages", "**", "*"),
 		{ nodir: true }
 	);
 
 	const serverPaths = glob.sync(
-		resolve(process.cwd(), "app", "**", "*"),
+		unixifyPath(process.cwd(), "app", "**", "*"),
 		{
 			nodir: true
 		}
@@ -215,31 +226,37 @@ const main = async () => {
 
 		console.log("Compiling pages...");
 
-		rimraf.sync(resolve(options.outdir, "pages"));
+		rimraf.sync(unixifyPath(options.outdir, "pages"));
 
 		build({
 			entryPoints: glob.sync(
-				resolve(process.cwd(), "app", "pages", "**", "*"),
+				unixifyPath(
+					process.cwd(),
+					"app",
+					"pages",
+					"**",
+					"*"
+				).replace(/\\/g, "/"),
 				{ nodir: true }
 			),
 			...options,
-			outdir: resolve(options.outdir, "pages")
+			outdir: unixifyPath(options.outdir, "pages")
 		});
 	}
 
 	if (
 		maybeReinvalidateCache(
 			"public",
-			resolve(process.cwd(), "public")
+			unixifyPath(process.cwd(), "public")
 		)
 	) {
 		console.log("Copying public data...");
 
-		rimraf.sync(resolve(options.outdir, "public"));
+		rimraf.sync(unixifyPath(options.outdir, "public"));
 
 		cpSync(
-			resolve(process.cwd(), "public"),
-			resolve(options.outdir, "public"),
+			unixifyPath(process.cwd(), "public"),
+			unixifyPath(options.outdir, "public"),
 			{
 				recursive: true
 			}
@@ -247,54 +264,68 @@ const main = async () => {
 	}
 
 	if (
-		maybeReinvalidateCache("css", resolve(process.cwd(), "ui")) ||
-		!existsSync(resolve(options.outdir, "public", "media", "css"))
+		maybeReinvalidateCache(
+			"css",
+			unixifyPath(process.cwd(), "ui")
+		) ||
+		!existsSync(
+			unixifyPath(options.outdir, "public", "media", "css")
+		)
 	) {
 		console.log("Compiling SCSS to CSS...");
 
 		rimraf.sync(
-			resolve(options.outdir, "public", "media", "css")
+			unixifyPath(options.outdir, "public", "media", "css")
 		);
 
 		compileScss("foundation/scalar.scss");
 
 		for (const pageScss of glob.sync(
-			resolve(process.cwd(), "ui", "pages", "**", "*.scss")
+			unixifyPath(process.cwd(), "ui", "pages", "**", "*.scss")
 		)) {
 			compileScss(
-				pageScss.split(resolve(process.cwd(), "ui") + "/")[1],
+				pageScss.split(
+					unixifyPath(process.cwd(), "ui") + "/"
+				)[1],
 				{ isPage: true }
 			);
 		}
 
 		for (const blockScss of glob.sync(
-			resolve(process.cwd(), "ui", "blocks", "**", "*.scss")
+			unixifyPath(process.cwd(), "ui", "blocks", "**", "*.scss")
 		)) {
 			compileScss(
 				blockScss.split(
-					resolve(process.cwd(), "ui") + "/"
+					unixifyPath(process.cwd(), "ui") + "/"
 				)[1],
 				{ isBlock: true }
 			);
 		}
 	}
 
-	const l10nDir = resolve(process.cwd(), "l10n");
+	const l10nDir = unixifyPath(process.cwd(), "l10n");
 
 	if (maybeReinvalidateCache("l10n", l10nDir)) {
 		console.log("Compiling L10n data...");
 
-		rimraf.sync(resolve(options.outdir, "l10n"));
+		rimraf.sync(unixifyPath(options.outdir, "l10n"));
 
 		for (const l10n of readdirSync(l10nDir)) {
 			const ftls = glob.sync(
-				resolve(l10nDir, l10n, "**", "*.ftl")
+				unixifyPath(l10nDir, l10n, "**", "*.ftl").replace(
+					/\\/g,
+					"/"
+				)
 			);
 
-			ensureDirSync(resolve(options.outdir, "l10n"));
+			ensureDirSync(unixifyPath(options.outdir, "l10n"));
 
 			writeFileSync(
-				resolve(options.outdir, "l10n", `${l10n}.ftl`),
+				unixifyPath(
+					options.outdir,
+					"l10n",
+					`${l10n}.ftl`
+				).replace(/\\/g, "/"),
 				""
 			);
 
@@ -312,7 +343,11 @@ const main = async () => {
 				});
 
 				appendFileSync(
-					resolve(options.outdir, "l10n", `${l10n}.ftl`),
+					unixifyPath(
+						options.outdir,
+						"l10n",
+						`${l10n}.ftl`
+					),
 					data
 				);
 			}
@@ -322,13 +357,13 @@ const main = async () => {
 			// Don't bundle locales not 10% localised
 			if (percentage < 10) {
 				rimraf.sync(
-					resolve(options.outdir, "l10n", `${l10n}.ftl`)
+					unixifyPath(options.outdir, "l10n", `${l10n}.ftl`)
 				);
 				continue;
 			}
 
 			appendFileSync(
-				resolve(options.outdir, "l10n", `${l10n}.ftl`),
+				unixifyPath(options.outdir, "l10n", `${l10n}.ftl`),
 				`\n\nlanguage-per-cent-localised = ${percentage.toFixed(
 					0
 				)}`
@@ -342,7 +377,7 @@ const main = async () => {
 
 	await new Promise((r) => {
 		const typeCheckProc = spawn(
-			resolve(
+			unixifyPath(
 				process.cwd(),
 				"node_modules",
 				".bin",
