@@ -10,9 +10,12 @@ import vm from "vm";
 import yaml from "yaml";
 import * as l10n from "../l10n";
 import Icons from "./icons";
+import { unixifyPath } from "./path";
 
 export const getComponentConfig = <T>(name: string): T => {
-	const path = resolve(process.cwd(), "data", `${name}.yml`);
+	const path = unixifyPath(
+		resolve(process.cwd(), "data", `${name}.yml`)
+	);
 
 	const data = readFileSync(path, "utf-8");
 

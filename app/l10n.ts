@@ -11,6 +11,7 @@ import { resolve } from "path";
 import Localised, {
 	createLocalisedComponent
 } from "./components/Localised";
+import { unixifyPath } from "./utils/path";
 
 // This should never be changed!
 export const DEFAULT_LOCALE = "en-GB";
@@ -89,9 +90,9 @@ export const l = (str: string, ctx?: any) => {
 };
 
 export const getAvailableLocales = () =>
-	readdirSync(resolve(process.cwd(), ".scalar", "l10n")).map(
-		(l) => l.split(".")[0]
-	);
+	readdirSync(
+		unixifyPath(resolve(process.cwd(), ".scalar", "l10n"))
+	).map((l) => l.split(".")[0]);
 
 export const isValidLocale = (locale: string) =>
 	getAvailableLocales().includes(locale);
@@ -100,7 +101,9 @@ export const getL10nBundle = async (lang: string) => {
 	if (!isValidLocale(lang)) return null;
 
 	let ftl = await readFile(
-		resolve(process.cwd(), ".scalar", "l10n", `${lang}.ftl`),
+		unixifyPath(
+			resolve(process.cwd(), ".scalar", "l10n", `${lang}.ftl`)
+		),
 		"utf-8"
 	);
 
