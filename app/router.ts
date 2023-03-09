@@ -172,19 +172,38 @@ export const router: FastifyPluginCallback = async (
 	for (const [oldURI, [newURI, options]] of Object.entries(
 		redirects
 	)) {
-		for (const locale of getAvailableLocales()) {
-			const localisedPath = oldURI.endsWith("/")
-				? `/${locale}${oldURI.substring(
-						0,
-						oldURI.length - 1
-				  )}`
-				: `/${locale}${oldURI}`;
+		const path = oldURI.endsWith("/")
+			? oldURI.substring(0, oldURI.length - 1)
+			: oldURI;
 
-			server.all(localisedPath, (req, res) => {
+		for (const locale of getAvailableLocales()) {
+			const handler = (
+				req: FastifyRequest,
+				res: FastifyReply,
+				locale?: string
+			) => {
+				const uri = newURI.startsWith("/")
+					? `/${locale}${newURI}`
+					: newURI;
+
 				res.status(options.statusCode);
-				res.redirect(options.statusCode, newURI);
-			});
+				res.redirect(options.statusCode, uri);
+			};
+
+			server.all(`/${locale}${path}`, (req, res) =>
+				handler(req, res, locale)
+			);
 		}
+
+		server.all(path, (req, res) => {
+			const requestedLocales = parseAcceptLanguage(
+				req.headers["accept-language"]
+			);
+			const userLocale = negotiateLocale(requestedLocales);
+
+			res.status(307);
+			res.redirect(307, `/${userLocale}${path}`);
+		});
 	}
 
 	server.register(mediaRouter, { prefix: "/" });
