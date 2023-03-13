@@ -5,6 +5,7 @@
 const BrowserWireframe = () => {
 	return (
 		<svg
+			className={"fdn-browser-wireframe"}
 			width="1280"
 			height="584"
 			viewBox="0 0 1280 584"

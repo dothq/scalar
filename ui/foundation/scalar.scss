@@ -7,7 +7,7 @@
 @use "utils/reset";
 @use "utils/fonts";
 
-/* Components */
+/* Generic components */
 @use "components/footer";
 @use "components/header";
 @use "components/main";
@@ -22,6 +22,9 @@
 @use "components/banner";
 @use "components/hero";
 @use "components/menu";
+
+/* Specialised components */
+@use "components/browser-wireframe";
 
 /* Globals */
 :root {
