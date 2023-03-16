@@ -3,6 +3,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @media (max-width: 1160px) {
+	.block-browser-landing-intro-block {
+		--padding-y: 3.75rem !important;
+	}
+
 	.block-browser-landing-intro-block
 		.fdn-hero-body
 		.fdn-page-constrain
