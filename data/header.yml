@@ -69,7 +69,7 @@ items:
                 colour: red
 
           - element: menu_item
-            href: /community#discord
+            href: https://discord.gg/WRDEK2D
             title: ${{ l("header-community-item-discord-title") }}
             subtitle: ${{ l("header-community-item-discord-subtitle") }}
             icon:
@@ -77,7 +77,7 @@ items:
                 size: 2
 
           - element: menu_item
-            href: /community#matrix
+            href: https://matrix.to/#/#dothq:matrix.org
             title: ${{ l("header-community-item-matrix-title") }}
             subtitle: ${{ l("header-community-item-matrix-subtitle") }}
             icon:
