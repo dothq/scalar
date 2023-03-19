@@ -21,7 +21,10 @@ export const OGMeta = ({
 				process.cwd(),
 				".scalar",
 				"public",
-				data.url.substring(1)
+				"media",
+				"images",
+				"og",
+				data.url
 			)
 		)
 	);
@@ -31,7 +34,8 @@ export const OGMeta = ({
 			<meta
 				property="og:image"
 				content={
-					`https://${host}` + withCacheBuster(data.url)
+					`https://${host}/media/images/og` +
+					withCacheBuster(data.url)
 				}
 			/>
 			<meta
