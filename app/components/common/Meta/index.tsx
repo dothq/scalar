@@ -3,8 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { getLocale } from "../../../l10n";
+import ogImages from "../../../og";
+import { PageMetadata } from "../../../types";
+import { OGMeta } from "./OGMeta";
 
-const Meta = ({ host }: { host: string }) => {
+const Meta = ({
+	host,
+	data
+}: {
+	host: string;
+	data: PageMetadata;
+}) => {
 	return (
 		<>
 			<meta charSet="utf-8" />
@@ -198,11 +207,12 @@ const Meta = ({ host }: { host: string }) => {
 			/>
 
 			<meta property="og:site_name" content="Dot HQ" />
+			<meta property="og:title" content={data.title} />
 			<meta property="og:url" content={`https://${host}`} />
 			<meta property="og:type" content="website" />
-			<meta property="og:image:type" content="image/png" />
-			<meta property="og:image:width" content="1200" />
-			<meta property="og:image:height" content="630" />
+
+			<OGMeta data={data.ogImage || ogImages._} host={host} />
+
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="@DotBrowser" />
 			<meta name="twitter:creator" content="@DotBrowser" />
