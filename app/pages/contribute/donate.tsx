@@ -23,6 +23,7 @@ import Radio from "../../components/ui/Radio";
 import Select from "../../components/ui/Select";
 import Separator from "../../components/ui/Separator";
 import TextField from "../../components/ui/TextField";
+import ogImages from "../../og";
 import { PageProps } from "../../types";
 import { getComponentConfig } from "../../utils/data";
 
@@ -31,7 +32,9 @@ export const meta = {
 	description:
 		"Support us with your donations so we can continue to develop software focused around privacy.",
 	js: ["donations/index.js", "env.js"],
-	css: ["donate.css"]
+	css: ["donate.css"],
+
+	ogImage: ogImages.donate
 };
 
 const DonationFront = async ({ req, res }: PageProps) => {

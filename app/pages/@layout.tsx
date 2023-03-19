@@ -74,7 +74,7 @@ const Layout = ({
 								type="text/css"
 							></link>
 						))}
-					<Meta host={url.host} />
+					<Meta host={url.host} data={meta} />
 					<script
 						type="application/ld+json"
 						dangerouslySetInnerHTML={{
