@@ -21,6 +21,7 @@ interface PageProps<
 	Params = Record<string, string | number | boolean | undefined>
 > {
 	params: Params;
+	query: Params;
 	meta: PageMetadata;
 	formData: URLSearchParams;
 	url: URL;
