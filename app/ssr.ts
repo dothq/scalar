@@ -83,6 +83,7 @@ export const renderPage = async (
 		const props = {
 			path: req.url,
 			params: req.params || {},
+			query: req.query || {},
 			meta,
 			lang,
 			url: new URL(req.url, `http://${req.hostname}`),
