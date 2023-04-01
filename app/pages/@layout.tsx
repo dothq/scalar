@@ -8,6 +8,7 @@ import Header from "../components/common/Header";
 import L10nBanner from "../components/common/L10nBanner";
 import Meta from "../components/common/Meta";
 import Script from "../components/Script";
+import Banner from "../components/ui/Banner";
 import HTMLComment from "../components/ui/HTMLComment";
 import { l } from "../l10n";
 import { PageProps } from "../types";
@@ -16,6 +17,7 @@ import { getBrowserId } from "../utils/ua";
 
 const Layout = ({
 	meta,
+	query,
 	url,
 	Component,
 	schema,
@@ -110,6 +112,17 @@ const Layout = ({
 
 				<body>
 					<div id="__scalar">
+						{query.domain_migration && (
+							<Banner
+								type={"info"}
+								size={"sm"}
+								className={"domain-migration-banner"}
+							>
+								We've moved domains from dothq.co to
+								dothq.org! Welcome back.
+							</Banner>
+						)}
+
 						<Header />
 
 						<main
