@@ -8,7 +8,7 @@
 	"license": "MPL-2.0",
 	"private": true,
 	"scripts": {
-		"start": "node .scalar/main.js",
+		"start": "node --enable-source-maps .scalar/main.js",
 		"build": "node scripts/build",
 		"dev": "cross-env NODE_ENV=develop yarn build && cross-env NODE_ENV=develop yarn start",
 		"generate:l10n": "node scripts/l10n"
