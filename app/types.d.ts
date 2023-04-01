@@ -4,18 +4,24 @@
 
 import { FastifyReply, FastifyRequest } from "fastify";
 
-interface PageMetadata {
+export interface PageMetadata {
 	title?: string;
 	titleSuffix?: boolean;
 	description?: string;
 	js?: string[];
 	css?: string[];
+
+	ogImage?: {
+		url: string;
+		alt: string;
+	};
 }
 
 interface PageProps<
 	Params = Record<string, string | number | boolean | undefined>
 > {
 	params: Params;
+	query: Params;
 	meta: PageMetadata;
 	formData: URLSearchParams;
 	url: URL;

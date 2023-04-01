@@ -5,7 +5,7 @@
 import { useID } from "@dothq/id";
 import Link from "../../Link";
 
-const Logo = ({ mark, type }: { mark: boolean; type: boolean }) => {
+const Logo = ({ mark, type }: { mark?: boolean; type?: boolean }) => {
 	const ssrInstanceId = useID(1);
 
 	let width = 0;

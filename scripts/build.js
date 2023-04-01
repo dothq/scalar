@@ -50,6 +50,7 @@ const options = {
 	platform: "node",
 	format: "cjs",
 	inject: [unixifyPath(__dirname, "inject-vars.js")],
+	sourcemap: process.env.NODE_ENV == "develop" ? "inline" : false,
 	define: {
 		SCALAR_GIT_REVISION: JSON.stringify(SCALAR_GIT_REVISION),
 		SCALAR_GIT_REMOTE: JSON.stringify(SCALAR_GIT_REMOTE),

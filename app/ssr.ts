@@ -83,6 +83,7 @@ export const renderPage = async (
 		const props = {
 			path: req.url,
 			params: req.params || {},
+			query: req.query || {},
 			meta,
 			lang,
 			url: new URL(req.url, `http://${req.hostname}`),
@@ -91,7 +92,9 @@ export const renderPage = async (
 		};
 
 		process.env.SCALAR_ORIGINAL_PATH =
-			routeData.originalPath.split(process.cwd())[1];
+			routeData.originalPath.split(
+				unixifyPath(process.cwd())
+			)[1];
 
 		try {
 			let CompEl: any = null;

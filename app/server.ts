@@ -38,13 +38,19 @@ export const createHttpServer = () => {
 			allowedHosts.includes(host.hostname.replace("www.", ""))
 		) {
 			if (host.hostname.endsWith("dothq.co")) {
-				return res.redirect(
-					302,
+				const hostMigrationURL = new URL(
 					`https://${host.hostname.replace(
 						/\.co/,
 						".org"
 					)}${req.url || "/"}`
+				) as URL;
+
+				hostMigrationURL.searchParams.set(
+					"domain_migration",
+					"1"
 				);
+
+				return res.redirect(302, hostMigrationURL.href);
 			}
 
 			done();
