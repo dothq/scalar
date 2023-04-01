@@ -102,12 +102,20 @@ export const router: FastifyPluginCallback = async (
 			);
 			const locale = negotiateLocale(requestedLocales);
 
-			const trimmedPath = req.url.endsWith("/")
-				? req.url.substring(0, req.url.length - 1)
-				: req.url;
+			const filteredPath = req.url.split("?")[0];
+			const pathQueries = req.url.split("?")[1];
+
+			const trimmedPath = filteredPath.endsWith("/")
+				? filteredPath.substring(0, filteredPath.length - 1)
+				: filteredPath;
 
 			return res
-				.redirect(302, `/${locale}${trimmedPath}`)
+				.redirect(
+					302,
+					`/${locale}${trimmedPath}${
+						pathQueries ? `?${pathQueries}` : ""
+					}`
+				)
 				.send("");
 		});
 
