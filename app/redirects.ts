@@ -9,6 +9,10 @@ type RedirectItem = string | [string] | RedirectItemLonghand;
 // Default status code is 307
 const redirects: Record<string, RedirectItem> = {
 	"/browser": "https://github.com/dothq/browser",
+
+	"/browser/desktop": "https://github.com/dothq/browser-browser",
+	"/browser/android": "https://github.com/dothq/browser-android",
+
 	"/translate": "https://github.com/dothq/lexicon",
 	"/one": "https://github.com/dothq/one",
 
