@@ -19,7 +19,17 @@ export default (
 		return res.redirect(307, "/");
 	}
 
-	if (req.query.go == "/") req.query.go = "";
+	const filteredPath = req.query.go.split("?")[0];
+	const pathQueries = req.query.go.split("?")[1];
 
-	res.redirect(307, `/${req.query.new_locale}${req.query.go}`);
+	const trimmedPath = filteredPath.endsWith("/")
+		? filteredPath.substring(0, filteredPath.length - 1)
+		: filteredPath;
+
+	res.redirect(
+		307,
+		`/${req.query.new_locale}${trimmedPath}${
+			pathQueries ? `?${pathQueries}` : ""
+		}`
+	);
 };

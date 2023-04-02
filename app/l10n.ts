@@ -140,7 +140,7 @@ export const negotiateLocale = (
 };
 
 export const maybeGetLangFromPath = (req: FastifyRequest) => {
-	const pathParts = req.url.split("/").slice(1);
+	const pathParts = req.url.split("?")[0].split("/").slice(1);
 
 	return isValidLocale(pathParts[0]) ? pathParts[0] : null;
 };
