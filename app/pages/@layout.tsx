@@ -118,8 +118,7 @@ const Layout = ({
 								size={"sm"}
 								className={"domain-migration-banner"}
 							>
-								We've moved domains from dothq.co to
-								dothq.org! Welcome back.
+								{l("domain-migration-banner")}
 							</Banner>
 						)}
 
