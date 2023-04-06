@@ -12,7 +12,7 @@ services:
             - SCALAR_ALLOWED_HOSTS=dothq.org,dothq.co,dothqaaaxerjhwh6ovuvvgypv5khivfxpd7zpdvcr3ssemrjdhcvniyd.onion
         build:
             context: .
-            dockerfile: docker/Dockerfile
+            dockerfile: docker/www.dockerfile
 
     onion:
         container_name: onion
@@ -32,7 +32,11 @@ services:
             - www
 
     nginx:
-        image: nginx:latest
+        build:
+            context: .
+            dockerfile: docker/nginx.dockerfile
+            args:
+                ENABLED_MODULES: brotli
         container_name: nginx
         hostname: nginx
         restart: always
