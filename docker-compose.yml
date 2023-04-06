@@ -42,6 +42,8 @@ services:
         restart: always
         volumes:
             - ./docker/config/nginx.conf:/etc/nginx/nginx.conf:ro
+            - ./docker/config/compression.conf:/etc/nginx/compression.conf:ro
+            - ./docker/config/ssl.conf:/etc/nginx/ssl.conf:ro
             - ./docker/config/sites:/etc/nginx/sites:ro
             - le-certs:/etc/letsencrypt
             - le-www:/var/www/letsencrypt
