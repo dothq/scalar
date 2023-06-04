@@ -9,8 +9,8 @@ import ogImages from "../og";
 import { PageProps } from "../types";
 
 export const meta = {
-	title: l("page-index-title"),
-	description: l("page-index-description"),
+	title: () => l("page-index-title"),
+	description: () => l("page-index-description"),
 
 	ogImage: ogImages.logo_with_browser_wireframe
 };

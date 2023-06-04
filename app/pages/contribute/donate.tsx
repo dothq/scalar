@@ -5,15 +5,15 @@
 import { negotiateLanguages } from "@fluent/langneg";
 import clsx from "clsx";
 import { parseAcceptLanguage } from "intl-parse-accept-language";
-import { Amex } from "../../components/icons/cards/Amex";
-import { Discover } from "../../components/icons/cards/Discover";
-import { Mastercard } from "../../components/icons/cards/Mastercard";
-import { Visa } from "../../components/icons/cards/Visa";
+import Link from "../../components/Link";
 import { Giving } from "../../components/icons/Giving";
 import { Institution } from "../../components/icons/Institution";
 import { JavaScript } from "../../components/icons/JavaScript";
 import { PaymentCard } from "../../components/icons/PaymentCard";
-import Link from "../../components/Link";
+import { Amex } from "../../components/icons/cards/Amex";
+import { Discover } from "../../components/icons/cards/Discover";
+import { Mastercard } from "../../components/icons/cards/Mastercard";
+import { Visa } from "../../components/icons/cards/Visa";
 import Aside from "../../components/ui/Aside";
 import Banner from "../../components/ui/Banner";
 import Button from "../../components/ui/Button";
@@ -23,14 +23,14 @@ import Radio from "../../components/ui/Radio";
 import Select from "../../components/ui/Select";
 import Separator from "../../components/ui/Separator";
 import TextField from "../../components/ui/TextField";
+import { l } from "../../l10n";
 import ogImages from "../../og";
 import { PageProps } from "../../types";
 import { getComponentConfig } from "../../utils/data";
 
 export const meta = {
-	title: "Donate",
-	description:
-		"Support us with your donations so we can continue to develop software focused around privacy.",
+	title: () => l("page-donate-title"),
+	description: () => l("page-donate-description"),
 	js: ["donations/index.js", "env.js"],
 	css: ["donate.css"],
 

@@ -31,6 +31,7 @@ const Meta = ({
 			/>
 			<meta name="identifier-url" content={`https://${host}`} />
 			<meta name="name" itemProp="name" content="Dot HQ" />
+			<meta name="description" content={data.description} />
 			<meta name="application-name" content="Dot HQ" />
 			<meta name="robots" content="index,follow" />
 			<meta name="author" content="Dot HQ" />

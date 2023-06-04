@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 browser-landing-intro-block-title = 
-    Un forma más segura de 
+    Una forma más segura de 
     explorar la web.
 
 browser-landing-intro-block-description = 
