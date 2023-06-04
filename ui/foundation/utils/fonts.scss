@@ -8,7 +8,7 @@
 	font-display: block;
 	font-weight: 400;
 	font-display: swap;
-	src: url("/media/fonts/inter/Inter-Regular.woff2") format("woff2")
+	src: url("/media/fonts/inter/Inter-Regular.woff2") format("woff2"),
 		url("/media/fonts/inter/Inter-Regular.woff") format("woff");
 }
 
@@ -18,7 +18,7 @@
 	font-display: block;
 	font-weight: 400;
 	font-display: swap;
-	src: url("/media/fonts/inter/Inter-Italic.woff2") format("woff2")
+	src: url("/media/fonts/inter/Inter-Italic.woff2") format("woff2"),
 		url("/media/fonts/inter/Inter-Italic.woff") format("woff");
 }
 
@@ -29,7 +29,7 @@
 	font-weight: 500;
 	font-display: swap;
 	src: url("/media/fonts/satoshi/Satoshi-Medium.woff2")
-		format("woff2")
+			format("woff2"),
 		url("/media/fonts/satoshi/Satoshi-Medium.woff") format("woff");
 }
 
@@ -40,8 +40,8 @@
 	font-weight: 600;
 	font-display: swap;
 	src: url("/media/fonts/satoshi/Satoshi-Bold.woff2")
-		format("woff2") url("/media/fonts/satoshi/Satoshi-Bold.woff")
-		format("woff");
+			format("woff2"),
+		url("/media/fonts/satoshi/Satoshi-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -51,8 +51,8 @@
 	font-weight: 700;
 	font-display: swap;
 	src: url("/media/fonts/satoshi/Satoshi-Black.woff2")
-		format("woff2") url("/media/fonts/satoshi/Satoshi-Black.woff")
-		format("woff");
+			format("woff2"),
+		url("/media/fonts/satoshi/Satoshi-Black.woff") format("woff");
 }
 
 @font-face {

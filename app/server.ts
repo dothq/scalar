@@ -79,7 +79,7 @@ export const createHttpServer = () => {
 				"Content-Security-Policy",
 				[
 					`default-src 'self' ${cspHosts};`,
-					`style-src 'self' ${cspHosts};`,
+					`style-src 'self' 'unsafe-inline' ${cspHosts};`,
 					"img-src 'self';",
 					"font-src 'self';",
 					"connect-src 'self';",

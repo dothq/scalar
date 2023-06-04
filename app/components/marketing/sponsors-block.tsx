@@ -36,7 +36,7 @@ const SponsorsBlock = () => {
 				<HeroBody>
 					<Stack orientation={"v"} gap={"xl"}>
 						<Stack orientation={"v"} gap={"sm"}>
-							<h3>{l("title")}</h3>
+							<h4>{l("title")}</h4>
 							<p>{l("subtitle")}</p>
 						</Stack>
 
