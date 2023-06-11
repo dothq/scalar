@@ -84,6 +84,9 @@ export const createHttpServer = () => {
 					"font-src 'self';",
 					"connect-src 'self';",
 					`frame-src 'self' ${cspHosts};`,
+					"frame-ancestors 'self';",
+					"base-uri 'none';",
+					"form-action 'self';",
 					req.headers.host?.endsWith(".onion")
 						? ""
 						: "upgrade-insecure-requests;",
