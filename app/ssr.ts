@@ -121,6 +121,7 @@ export const renderPage = async (
 			);
 
 			res.header("content-type", "text/html");
+			res.header("cache-control", "max-age=600"); // 10 minutes
 			res.send(addMPLLicenseHeader(html));
 		} catch (e: any) {
 			console.error(e);
