@@ -45,9 +45,10 @@ jobs:
                   echo "SERVER_HOSTNAME=$HOSTNAME" >> $GITHUB_ENV
 
             - name: Connect to Tailscale network
-              uses: tailscale/github-action@v1
+              uses: tailscale/github-action@v2
               with:
-                  authkey: ${{ secrets.TS_AUTHKEY }}
+                  oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+                  oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
 
             - name: Install SSH key
               run: |
