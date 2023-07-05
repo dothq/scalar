@@ -41,7 +41,8 @@ jobs:
 
             - name: Retrieve server hostname
               run: |
-                  HOSTNAME=$(curl "https://api.tailscale.com/api/v2/device/${{ env.SERVER_ID }}" -u "${{ secrets.TS_KEY }}:" | jq -r '.name')
+                  TS_JSON=$(curl "https://api.tailscale.com/api/v2/device/${{ env.SERVER_ID }}" -u "${{ secrets.TS_KEY }}:")
+                  HOSTNAME=$(echo $TS_JSON | jq -r '.name')
                   echo "SERVER_HOSTNAME=$HOSTNAME" >> $GITHUB_ENV
 
             - name: Connect to Tailscale network
