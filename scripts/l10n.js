@@ -13,9 +13,21 @@ const baseLanguage = "en-GB";
 
 const generatedLanguages = {
     "en-US": (str) => {
-        const americanified = require("british_american_translate").uk2us(str);
+        const americanified = require("american-british-english-translator").translate(str, { british: true });
 
-        return americanified;
+        let subStr = str;
+
+        for (const [_, subs] of Object.entries(americanified)) {
+            for (const sub of subs) {
+                for (const [word, wordSub] of Object.entries(sub)) {
+                    if (wordSub.issue == "British English Spelling") {
+                        subStr = subStr.replace(new RegExp(word, "g"), wordSub.details);
+                    }
+                }
+            }
+        }
+
+        return subStr;
     }
 }
 
