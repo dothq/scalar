@@ -56,7 +56,8 @@ export const router: FastifyPluginCallback = async (
 
 			if (
 				!state &&
-				!(state as any).find((s: any) => s.type == "jsx")
+				!(state || []).find((s: any) => s.type == "jsx") &&
+				statusCode !== 500 // ignore 500 statuses
 			)
 				throw new Error(
 					`No state found for status code ${statusCode}.`
@@ -68,7 +69,7 @@ export const router: FastifyPluginCallback = async (
 				state!.find((s) => s.type == "jsx")!
 			);
 		} catch (e: any) {
-			return serverError(req, res);
+			return serverError(req, res, e);
 		}
 	};
 
@@ -84,7 +85,9 @@ export const router: FastifyPluginCallback = async (
 
 			const statusCode = err.statusCode || 500;
 
-			return errorHandler(statusCode, req, res);
+			return statusCode == 500
+				? serverError(req, res, err)
+				: errorHandler(statusCode, req, res);
 		});
 	};
 

@@ -30,6 +30,7 @@
 		"clsx": "^1.2.1",
 		"dotenv": "^16.0.3",
 		"ejs": "^3.1.8",
+		"extract-stack": "^3.0.0",
 		"fastify": "^4.9.2",
 		"glob": "^8.0.3",
 		"image-size": "^1.0.2",

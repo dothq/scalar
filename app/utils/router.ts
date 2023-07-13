@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import ejs from "ejs";
+import extractStack from "extract-stack";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { readFileSync } from "fs";
 import { glob } from "glob";
@@ -113,7 +114,8 @@ export const createRouteStruct = (): Map<string, RouteData[]> => {
 
 export const serverError = (
 	req: FastifyRequest,
-	res: FastifyReply
+	res: FastifyReply,
+	errorObject: Error
 ) => {
 	const pathLang = maybeGetLangFromPath(req);
 
@@ -123,7 +125,22 @@ export const serverError = (
 			: parseAcceptLanguage(req.headers["accept-language"])[0]
 		).split("-")[0] || DEFAULT_LOCALE;
 
-	const html = ejs.render(serverErrorFileBuffer, { lang });
+	const stackLines = extractStack
+		.lines(errorObject)
+		.map((ln) =>
+			ln.replace(
+				process.cwd(),
+				process.env.SCALAR_GIT_REMOTE +
+					`/blob/${process.env.SCALAR_GIT_BRANCH}` ||
+					"/scalar"
+			)
+		);
+
+	const error = `${errorObject.message}\n\n    at ${stackLines.join(
+		"\n    at "
+	)}`;
+
+	const html = ejs.render(serverErrorFileBuffer, { lang, error });
 
 	return res
 		.status(500)
