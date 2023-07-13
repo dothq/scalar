@@ -12,3 +12,6 @@ yarn.lock
 
 # Ignore _head.html template
 templates/_head.html
+
+# Ignore error pages
+public/errors/500.html

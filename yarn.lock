@@ -888,6 +888,11 @@ extend@^3.0.0:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
+extract-stack@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/extract-stack/-/extract-stack-3.0.0.tgz#65e4aa7be30350558437f3818eba1cce39e364e6"
+  integrity sha512-rtGtWp57VXNB2N3Xty4+vt7d30z3RpbNyG/kLd2Rf3dNmq/evhX+OGL9sJV/neNfH89C2TIFWz/oHfm/26eBhg==
+
 fast-decode-uri-component@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz"

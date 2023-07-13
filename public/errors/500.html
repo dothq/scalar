@@ -53,6 +53,7 @@
 			header {
 				display: flex;
 				height: 96px;
+				min-height: 96px;
 				align-items: center;
 				padding: 0 32px;
 			}
@@ -66,6 +67,7 @@
 				gap: 10px;
 				max-width: 370px;
 				margin: 0 auto;
+				flex: 1;
 			}
 
 			h1 {
@@ -74,6 +76,21 @@
 
 			p {
 				color: rgba(0, 0, 0, 0.75);
+			}
+
+			details {
+				text-align: left;
+				max-width: 750px;
+				margin: 0 auto;
+				min-height: 200px;
+				width: calc(100% - 2rem * 2);
+				padding: 2rem;
+				padding-bottom: 0;
+			}
+
+			pre {
+				overflow: scroll;
+				padding-block-end: 1rem;
 			}
 		</style>
 	</head>
@@ -136,36 +153,76 @@
 			</svg>
 		</header>
 
-		<main role="main">
-			<% if (!lang || lang == "en") { %>
-				<title>500 Internal Server Error - Dot HQ</title>
-				
+		<% if (!lang || lang == "en") { %>
+			<title>500 Internal Server Error - Dot HQ</title>
+			
+			<main role="main">
+				<svg width="42" height="42" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 7C5 6.44772 5.44771 6 6 6C6.55229 6 7 6.44772 7 7C7 7.55228 6.55229 8 6 8C5.44771 8 5 7.55228 5 7Z" fill="black"/>
+					<path d="M10 6C9.44772 6 9 6.44772 9 7C9 7.55228 9.44772 8 10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6Z" fill="black"/>
+					<path d="M5.16795 9.4453C5.4743 8.98577 6.09517 8.8616 6.5547 9.16795C7.23085 9.61872 7.65857 9.75 8 9.75C8.34143 9.75 8.76915 9.61872 9.4453 9.16795C9.90483 8.8616 10.5257 8.98577 10.8321 9.4453C11.1384 9.90483 11.0142 10.5257 10.5547 10.8321C9.73085 11.3813 8.90857 11.75 8 11.75C7.09143 11.75 6.26915 11.3813 5.4453 10.8321C4.98577 10.5257 4.8616 9.90483 5.16795 9.4453Z" fill="black"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C9 1.44772 8.55228 1 8 1C7.44771 1 7 1.44772 7 2V3H4C2.34315 3 1 4.34315 1 6V8C0.447716 8 0 8.44771 0 9C0 9.55229 0.447715 10 1 10V12C1 13.6569 2.34315 15 4 15H12C13.6569 15 15 13.6569 15 12V10C15.5523 10 16 9.55229 16 9C16 8.44771 15.5523 8 15 8V6C15 4.34315 13.6569 3 12 3H9V2ZM3 6C3 5.44772 3.44772 5 4 5H12C12.5523 5 13 5.44772 13 6V12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12V6Z" fill="black"/>
+				</svg>
+
 				<h1>500 Server Error</h1>
 				<p>
 					We're experiencing some difficulties and cannot
 					process your request right now.
 				</p>
-			<% } %>
+			</main>
 
-			<% if (lang == "es") { %>
-				<title>500 Error de servidor - Dot HQ</title>
+			<details>
+				<summary>Error details</summary>
+				<pre><%= error %></pre>
+			</details>
+		<% } %>
+
+		<% if (lang == "es") { %>
+			<title>500 Error de servidor - Dot HQ</title>
+
+			<main role="main">
+				<svg width="42" height="42" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 7C5 6.44772 5.44771 6 6 6C6.55229 6 7 6.44772 7 7C7 7.55228 6.55229 8 6 8C5.44771 8 5 7.55228 5 7Z" fill="black"/>
+					<path d="M10 6C9.44772 6 9 6.44772 9 7C9 7.55228 9.44772 8 10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6Z" fill="black"/>
+					<path d="M5.16795 9.4453C5.4743 8.98577 6.09517 8.8616 6.5547 9.16795C7.23085 9.61872 7.65857 9.75 8 9.75C8.34143 9.75 8.76915 9.61872 9.4453 9.16795C9.90483 8.8616 10.5257 8.98577 10.8321 9.4453C11.1384 9.90483 11.0142 10.5257 10.5547 10.8321C9.73085 11.3813 8.90857 11.75 8 11.75C7.09143 11.75 6.26915 11.3813 5.4453 10.8321C4.98577 10.5257 4.8616 9.90483 5.16795 9.4453Z" fill="black"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C9 1.44772 8.55228 1 8 1C7.44771 1 7 1.44772 7 2V3H4C2.34315 3 1 4.34315 1 6V8C0.447716 8 0 8.44771 0 9C0 9.55229 0.447715 10 1 10V12C1 13.6569 2.34315 15 4 15H12C13.6569 15 15 13.6569 15 12V10C15.5523 10 16 9.55229 16 9C16 8.44771 15.5523 8 15 8V6C15 4.34315 13.6569 3 12 3H9V2ZM3 6C3 5.44772 3.44772 5 4 5H12C12.5523 5 13 5.44772 13 6V12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12V6Z" fill="black"/>
+				</svg>
 
 				<h1>500 Error de servidor</h1>
 				<p>
 					Estamos experimentando algunas dificultades y no
 					podemos procesar tu petición en estos momentos.
 				</p>
-			<% } %>
+			</main>
 
-			<% if (lang == "fr") { %>
-				<title>500 Erreur du serveur - Dot HQ</title>
+			<details>
+				<summary>Error de detalles</summary>
+				<pre><%= error %></pre>
+			</details>
+		<% } %>
+
+		<% if (lang == "fr") { %>
+			<title>500 Erreur du serveur - Dot HQ</title>
+
+			<main role="main">
+				<svg width="42" height="42" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 7C5 6.44772 5.44771 6 6 6C6.55229 6 7 6.44772 7 7C7 7.55228 6.55229 8 6 8C5.44771 8 5 7.55228 5 7Z" fill="black"/>
+					<path d="M10 6C9.44772 6 9 6.44772 9 7C9 7.55228 9.44772 8 10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6Z" fill="black"/>
+					<path d="M5.16795 9.4453C5.4743 8.98577 6.09517 8.8616 6.5547 9.16795C7.23085 9.61872 7.65857 9.75 8 9.75C8.34143 9.75 8.76915 9.61872 9.4453 9.16795C9.90483 8.8616 10.5257 8.98577 10.8321 9.4453C11.1384 9.90483 11.0142 10.5257 10.5547 10.8321C9.73085 11.3813 8.90857 11.75 8 11.75C7.09143 11.75 6.26915 11.3813 5.4453 10.8321C4.98577 10.5257 4.8616 9.90483 5.16795 9.4453Z" fill="black"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C9 1.44772 8.55228 1 8 1C7.44771 1 7 1.44772 7 2V3H4C2.34315 3 1 4.34315 1 6V8C0.447716 8 0 8.44771 0 9C0 9.55229 0.447715 10 1 10V12C1 13.6569 2.34315 15 4 15H12C13.6569 15 15 13.6569 15 12V10C15.5523 10 16 9.55229 16 9C16 8.44771 15.5523 8 15 8V6C15 4.34315 13.6569 3 12 3H9V2ZM3 6C3 5.44772 3.44772 5 4 5H12C12.5523 5 13 5.44772 13 6V12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12V6Z" fill="black"/>
+				</svg>
 
 				<h1>500 Erreur du serveur</h1>
 				<p>
 					Nous rencontrons des difficultés et ne pouvons
 					traiter votre demande dès maintenant.
 				</p>
-			<% } %>
-		</main>
+			</main>
+
+			<details>
+				<summary>Détails de l'erreur</summary>
+				<pre><%= error %></pre>
+			</details>
+		<% } %>
 	</body>
 </html>
