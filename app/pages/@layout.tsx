@@ -3,13 +3,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import clsx from "clsx";
+import Script from "../components/Script";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
 import L10nBanner from "../components/common/L10nBanner";
 import Meta from "../components/common/Meta";
-import Script from "../components/Script";
 import Banner from "../components/ui/Banner";
 import HTMLComment from "../components/ui/HTMLComment";
+import { flags } from "../flags";
 import { l } from "../l10n";
 import { PageProps } from "../types";
 import { withCacheBuster } from "../utils/cache";
@@ -108,6 +109,20 @@ const Layout = ({
 						meta.js.map((path: string) => (
 							<Script src={path} defer />
 						))}
+					{process.env.NODE_ENV == "develop" ? (
+						<>
+							<script
+								dangerouslySetInnerHTML={{
+									__html: `var _DOT_FEATURE_FLAGS = JSON.parse(decodeURI("${encodeURI(
+										JSON.stringify(flags)
+									)}"));`
+								}}
+							></script>
+							<Script src={"flags.js"} defer />
+						</>
+					) : (
+						<></>
+					)}
 				</head>
 
 				<body>

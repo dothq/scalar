@@ -15,7 +15,7 @@ export const isFlagActive = (
 		const val = flags[flag];
 		if (!val) return false;
 
-		return Boolean(bits & val);
+		return Boolean(bits & (1 << val));
 	} catch (e) {
 		console.error(e);
 		return false;
