@@ -29,6 +29,19 @@ interface PageProps<
 	req: FastifyRequest;
 	res: FastifyReply;
 	lang: string;
+	cache: FastifyRequest["cache"];
+}
+
+declare module "fastify" {
+	export interface FastifyRequest {
+		cache: Map<
+			string,
+			{
+				data: any;
+				ttl?: number;
+			}
+		>;
+	}
 }
 
 declare var __scalar_js: any[];
