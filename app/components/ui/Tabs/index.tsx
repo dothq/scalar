@@ -7,6 +7,7 @@ import Button, { ButtonProps } from "../Button";
 export interface Tab {
 	value: string;
 	label: string;
+	disabled?: boolean;
 	children?: any;
 }
 
@@ -38,6 +39,7 @@ export const Tabs = ({
 						colour={rest.colour}
 						fullwidth
 						htmlFor={`tab__${tab.value}`}
+						disabled={tab.disabled || false}
 						as={"label"}
 						style={{
 							"--no-js-pos": "absolute",
@@ -52,7 +54,9 @@ export const Tabs = ({
 						{tab.label}
 					</Button>
 					<div hidden style={{ paddingTop: "45px" }}>
-						{tab.children()}
+						{typeof tab.children == "function"
+							? tab.children()
+							: tab.children}
 					</div>
 				</>
 			))}

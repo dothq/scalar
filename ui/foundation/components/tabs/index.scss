@@ -9,6 +9,10 @@
 	.fdn-tab:hover {
 		--tab-border-bottom: 2px solid var(--fdn-colours-gray);
 	}
+
+	.fdn-tab[disabled] {
+		background-color: var(--fdn-colours-black-secondary);
+	}
 }
 
 :root:not(.no-js) .fdn-tabs {

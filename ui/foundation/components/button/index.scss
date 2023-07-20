@@ -81,3 +81,8 @@
 :root.no-js .fdn-button.no-js + .fdn-button:not(.no-js) {
 	display: none;
 }
+
+.fdn-button[disabled] {
+	opacity: 0.5;
+	pointer-events: none;
+}
