@@ -1,0 +1,39 @@
+name: Generate licences
+
+on:
+    push:
+        branches: ["production", "staging"]
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 * * *" # Runs everyday at 00:00
+
+jobs:
+    generate:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+
+            - name: Install dependencies
+              run: |
+                  yarn
+
+            - name: Generate licences
+              env:
+                  TOKEN: ${{ secrets.ROBOT_TOKEN }}
+              run: |
+                  node scripts/licences.js
+                  git add generated/
+
+            - name: Commit and push changes
+              uses: actions-js/push@master
+              with:
+                  github_token: ${{ secrets.ROBOT_TOKEN }}
+                  author_email: dothq-robot@users.noreply.github.com
+                  author_name: dothq-robot
+                  message: "📄 Generate licence page data"
