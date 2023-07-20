@@ -93,7 +93,7 @@ const main = async () => {
 					try {
 						return compareVersions(a.version, b.version)
 					} catch (e) {
-						console.warn("Warning: ", e.stack);
+						console.warn("Warning: ", e.message);
 						return -1;
 					}
 				});
