@@ -41,16 +41,16 @@ export const Reference = ({
 							{owner}/{repo}
 						</strong>
 					</p>
-					<span>{path}</span>
+					<span>{path.substring(1)}</span>
 				</div>
 			</div>
 
 			<Button
 				colour={"blue"}
 				type={"text"}
-				href={`https://github.com/${owner}/${repo}/blob/${branch}/${path}${
-					line ? `#L${line}` : ``
-				}`}
+				href={`https://github.com/${owner}/${repo}/blob/${branch}/${path.substring(
+					1
+				)}${line ? `#L${line}` : ``}`}
 				target={"_blank"}
 			>
 				View source <OpenInNew colour={"current-color"} />
