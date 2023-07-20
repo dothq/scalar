@@ -1,8 +1,6 @@
 name: Generate licences
 
 on:
-    push:
-        branches: ["production", "staging"]
     workflow_dispatch:
     schedule:
         - cron: "0 0 * * *" # Runs everyday at 00:00
