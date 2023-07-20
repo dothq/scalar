@@ -39,6 +39,7 @@
 		"object-traversal": "^1.0.1",
 		"preact": "^10.11.2",
 		"preact-render-to-string": "^5.2.6",
+		"prettier": "^3.0.0",
 		"stripe": "^10.15.0",
 		"ua-parser-js": "^0.7.33",
 		"yaml": "^2.1.3"
