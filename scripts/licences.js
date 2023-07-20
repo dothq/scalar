@@ -90,12 +90,15 @@ const main = async () => {
 		)) {
 			dependencies[serviceName][dependencyName].licenses =
 				dependencyMeta.licenses.sort((a, b) => {
-					return compareVersions(a.version, b.version);
+					try {
+						return compareVersions(a.version, b.version)
+					} catch (e) {
+						console.error(e);
+						return -1;
+					}
 				});
 		}
 	}
-
-	console.log(dependencies.NodeService.react.licenses);
 };
 
 main();

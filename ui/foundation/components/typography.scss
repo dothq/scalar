@@ -75,7 +75,8 @@
 }
 
 .fdn-main-content strong,
-.fdn-main-content b {
+.fdn-main-content b,
+.fdn-bold {
 	--default-font-size: 1.125rem;
 	font-size: min(var(--default-font-size), 4dvw);
 	font-weight: 500;

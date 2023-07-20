@@ -23,6 +23,8 @@
 @use "components/hero";
 @use "components/menu";
 @use "components/tabs";
+@use "components/itemlist";
+@use "components/code";
 
 /* Specialised components */
 @use "components/browser-wireframe";
@@ -152,7 +154,8 @@ a {
 }
 
 a:hover,
-a:focus-visible {
+a:focus-visible,
+a.fdn-no-underline {
 	text-decoration: none;
 }
 

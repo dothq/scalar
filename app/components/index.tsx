@@ -14,7 +14,14 @@ type FDNColour =
 	| "white";
 
 type FDNSize = "sm" | "md" | "lg";
-type FDNSizeExtended = FDNSize | "xl" | "xxl" | "xxxl" | "fw" | "fh";
+type FDNSizeExtended =
+	| FDNSize
+	| "xl"
+	| "xxl"
+	| "xxxl"
+	| "4xl"
+	| "fw"
+	| "fh";
 
 type FDNStateType = "info" | "warn" | "success" | "error";
 

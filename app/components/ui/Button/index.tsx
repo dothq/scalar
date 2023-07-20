@@ -14,7 +14,7 @@ export interface ButtonProps {
 	fullwidth?: boolean;
 	href?: any;
 	noJS?: boolean;
-	type?: "primary" | "secondary";
+	type?: "primary" | "secondary" | "text";
 	hasIcon?: boolean;
 }
 

@@ -6,16 +6,53 @@ import clsx from "clsx";
 import { cloneElement } from "preact";
 import { JSXInternal } from "preact/src/jsx";
 
-export type FieldProps = {
+type FDNFieldProps = {
+	/**
+	 * Label for the field
+	 */
 	label?: any;
+
+	/**
+	 * Prefix attachment
+	 */
 	prefix?: any;
+
+	/**
+	 * Suffix attachment
+	 */
 	suffix?: any;
+
+	/**
+	 * Unique identifier for the container of the field
+	 */
 	outerId?: string;
+
+	/**
+	 * Determines the size of the field
+	 */
 	size?: FDNSize;
+
+	/**
+	 * Unique identifier for the field's <input>
+	 */
 	id?: string;
+
+	/**
+	 * Attach an error message
+	 */
 	error?: string;
+
+	/**
+	 * Makes the field fit the full width of its container
+	 */
 	fullwidth?: boolean;
-} & JSXInternal.HTMLAttributes<HTMLInputElement>;
+};
+
+export type FieldProps = FDNFieldProps &
+	Omit<
+		JSXInternal.HTMLAttributes<HTMLInputElement>,
+		keyof FDNFieldProps
+	>;
 
 const Field = ({
 	label,
@@ -36,7 +73,7 @@ const Field = ({
 		"has-suffix": !!suffix,
 		"has-error": !!error,
 		"full-width": !!fullwidth,
-		[size as string]: true
+		[size as any]: true
 	});
 
 	const Input = cloneElement(children, {

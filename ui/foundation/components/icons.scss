@@ -55,7 +55,9 @@
 	}
 }
 
-*:hover > .fdn-icon.fdn-icon-arrow-right-animated {
+*:hover > .fdn-icon.fdn-icon-arrow-right-animated,
+.fdn-icon-arrow-right-animated-parent:hover
+	.fdn-icon.fdn-icon-arrow-right-animated {
 	.arrow-head {
 		opacity: 1;
 	}

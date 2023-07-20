@@ -38,8 +38,9 @@
 }
 
 .fdn-field .fdn-input {
+	background-color: var(--fdn-colours-white);
 	border: 2px solid var(--border-color, var(--fdn-border-colour));
-	border-radius: 1.5rem;
+	border-radius: 1rem;
 	display: flex;
 	height: var(--max-height);
 	width: 100%;
