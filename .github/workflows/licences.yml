@@ -32,6 +32,7 @@ jobs:
               uses: actions-js/push@master
               with:
                   github_token: ${{ secrets.ROBOT_TOKEN }}
+                  branch: staging
                   author_email: dothq-robot@users.noreply.github.com
                   author_name: dothq-robot
                   message: "📄 Generate licence page data"
