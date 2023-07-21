@@ -220,19 +220,21 @@ const main = async () => {
 	) {
 		console.log("Compiling server...");
 
-		const entryPoints = ["app/main.ts"];
+		build({
+			entryPoints: ["app/main.ts"],
+			...options
+		});
 
 		if (
 			existsSync(
 				resolve(process.cwd(), "generated", "generated.tsx")
 			)
 		)
-			entryPoints.push("generated/generated.tsx");
-
-		build({
-			entryPoints,
-			...options
-		});
+			build({
+				entryPoints: ["generated/generated.tsx"],
+				...options,
+				outdir: resolve(options.outdir, "generated"),
+			});
 
 		console.log("Compiling pages...");
 
