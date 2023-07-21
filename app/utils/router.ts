@@ -128,12 +128,14 @@ export const serverError = (
 	const stackLines = extractStack
 		.lines(errorObject)
 		.map((ln) =>
-			ln.replace(
-				process.cwd(),
-				process.env.SCALAR_GIT_REMOTE +
-					`/blob/${process.env.SCALAR_GIT_BRANCH}` ||
-					"/scalar"
-			)
+			ln
+				.replace(
+					process.cwd(),
+					process.env.SCALAR_GIT_REMOTE +
+						`/blob/${process.env.SCALAR_GIT_BRANCH}` ||
+						"/scalar"
+				)
+				.replace(/\\/g, "/")
 		);
 
 	const error = `${errorObject.message}\n\n    at ${stackLines.join(

@@ -14,7 +14,7 @@ export interface ButtonProps {
 	fullwidth?: boolean;
 	href?: any;
 	noJS?: boolean;
-	type?: "primary" | "secondary";
+	type?: "primary" | "secondary" | "text";
 	hasIcon?: boolean;
 }
 
@@ -27,6 +27,7 @@ const Button = ({
 	type,
 	noJS,
 	hasIcon,
+	as,
 	...rest
 }: JSXInternal.HTMLAttributes<HTMLAnchorElement> & ButtonProps) => {
 	type = type ? type : "primary";
@@ -47,7 +48,7 @@ const Button = ({
 	);
 
 	return createElement(
-		noJS ? "input" : href ? "a" : "button",
+		as ? (as as any) : noJS ? "input" : href ? "a" : "button",
 		{
 			...rest,
 			href,

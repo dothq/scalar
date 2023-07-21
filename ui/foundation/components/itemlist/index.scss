@@ -1,0 +1,20 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.fdn-item-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	border-radius: 1rem;
+	overflow: hidden;
+	background-color: var(--fdn-bg-default);
+}
+
+.fdn-item-list .fdn-list-item {
+	display: flex;
+	background-color: var(--fdn-colours-white);
+	padding: 1.5rem;
+	border-radius: 0.25rem;
+	text-decoration: none;
+}

@@ -12,6 +12,8 @@ export const server = fastify({
 	logger: process.env.NODE_ENV == "develop"
 });
 
+const cache = new Map();
+
 export const createHttpServer = () => {
 	server.register(fastifyFormbody);
 	server.register(fastifyCookie);
@@ -137,6 +139,16 @@ export const createHttpServer = () => {
 		} else {
 			done();
 		}
+	});
+
+	server.addHook("preHandler", (req, res, done) => {
+		req.cache = cache;
+		for (const [key, value] of req.cache) {
+			if (value.ttl && Date.now() >= value.ttl) {
+				req.cache.delete(key);
+			}
+		}
+		done();
 	});
 
 	server.register(router, { prefix: "/" });

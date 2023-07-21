@@ -14,6 +14,7 @@ import { Amex } from "../../components/icons/cards/Amex";
 import { Discover } from "../../components/icons/cards/Discover";
 import { Mastercard } from "../../components/icons/cards/Mastercard";
 import { Visa } from "../../components/icons/cards/Visa";
+import { DonationsHome } from "../../components/pages/donate";
 import Aside from "../../components/ui/Aside";
 import Banner from "../../components/ui/Banner";
 import Button from "../../components/ui/Button";
@@ -27,6 +28,7 @@ import { l } from "../../l10n";
 import ogImages from "../../og";
 import { PageProps } from "../../types";
 import { getComponentConfig } from "../../utils/data";
+import { isFlagActive } from "../../utils/flags";
 
 export const meta = {
 	title: () => l("page-donate-title"),
@@ -38,6 +40,9 @@ export const meta = {
 };
 
 const DonationFront = async ({ req, res }: PageProps) => {
+	if (isFlagActive(req, "new_donations_experience"))
+		return <DonationsHome />;
+
 	const data = getComponentConfig<any>("donations");
 
 	const allCurrencies = (

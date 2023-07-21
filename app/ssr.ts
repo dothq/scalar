@@ -93,7 +93,8 @@ export const renderPage = async (
 			lang,
 			url: new URL(req.url, `http://${req.hostname}`),
 			req,
-			res
+			res,
+			cache: req.cache
 		};
 
 		process.env.SCALAR_ORIGINAL_PATH =

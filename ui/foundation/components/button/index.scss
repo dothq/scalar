@@ -36,7 +36,7 @@
 	color: var(--text-colour);
 	border: 2px solid var(--border-colour, var(--bg-colour));
 
-	border-radius: var(--border-radii, 9999px);
+	border-radius: var(--border-radii, 1rem);
 
 	text-decoration: none;
 
@@ -66,7 +66,7 @@
 		var(--bg-action-colour, var(--bg-colour))
 	);
 
-	border-radius: inherit;
+	border-radius: calc(1rem - 4px);
 
 	transition: opacity 0.05s linear 0s;
 
@@ -80,4 +80,9 @@
 :root:not(.no-js) .fdn-button.no-js,
 :root.no-js .fdn-button.no-js + .fdn-button:not(.no-js) {
 	display: none;
+}
+
+.fdn-button[disabled] {
+	opacity: 0.5;
+	pointer-events: none;
 }

@@ -4,10 +4,10 @@
 
 import { l } from "../../../l10n";
 import { getComponentConfig } from "../../../utils/data";
-import { Discord } from "../../icons/social/Discord";
-import { Mastodon } from "../../icons/social/Mastodon";
-import { Matrix } from "../../icons/social/Matrix";
-import { Twitter } from "../../icons/social/Twitter";
+import { Discord } from "../../icons/brands/Discord";
+import { Mastodon } from "../../icons/brands/Mastodon";
+import { Matrix } from "../../icons/brands/Matrix";
+import { Twitter } from "../../icons/brands/Twitter";
 import FooterSection from "./section";
 
 const socialIcons = {

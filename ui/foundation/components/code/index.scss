@@ -1,0 +1,33 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.fdn-code {
+	background-color: var(--fdn-bg-default);
+	border-radius: 0.5rem;
+	padding: 2.25rem;
+	width: 100%;
+	max-height: 500px;
+	overflow: scroll;
+	mask-image: linear-gradient(black 90%, #0000 100%);
+}
+
+.fdn-code pre {
+	display: flex;
+	flex-direction: column;
+}
+
+.fdn-code pre span {
+	display: block;
+	line-height: 1.5rem;
+	counter-increment: ln;
+}
+
+.fdn-code pre span::before {
+	content: counter(ln);
+	margin-inline-end: 2rem;
+	display: inline-block;
+	width: 1.5rem;
+	text-align: right;
+	opacity: 0.5;
+}

@@ -9,6 +9,7 @@ export interface IconProps {
 	size?: number;
 	colour?: FDNColour | "current-color";
 	ariaLabel?: string;
+	className?: string;
 }
 
 export const Icon = ({
@@ -35,6 +36,7 @@ export const Icon = ({
 
 	return (
 		<svg
+			{...rest}
 			width={s * 16}
 			height={s * 16}
 			viewBox={viewBox ? viewBox : `0 0 16 16`}

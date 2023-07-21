@@ -1,0 +1,53 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.tpl-deps-list {
+	.fdn-list-item:not(:hover) {
+		color: var(--fdn-text-secondary-colour) !important;
+	}
+
+	.fdn-list-item:hover {
+		color: var(--fdn-text-colour) !important;
+
+		& .fdn-icon.chevron-right {
+			transform: translateX(4px);
+		}
+	}
+
+	.fdn-list-item .fdn-icon {
+		transition: 0.1s transform;
+	}
+
+	.fdn-list-item > p {
+		color: var(--fdn-text-colour);
+	}
+}
+
+.tpl-dep-reference-list {
+	.fdn-list-item img {
+		border-radius: 0.5rem;
+	}
+}
+
+.tpl-dep-info {
+	scroll-margin-top: 7.2em;
+
+	.tpl-dep-name {
+		position: relative;
+		color: var(--fdn-text-colour);
+
+		&:hover {
+			color: var(--fdn-colours-link);
+		}
+
+		&:hover::before {
+			content: "#";
+			position: absolute;
+			font-size: inherit;
+			left: -2rem;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+	}
+}

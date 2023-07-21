@@ -129,7 +129,16 @@
 
 /* Coloured Types */
 
-.fdn-button.primary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black) {
+.fdn-button.primary:is(
+		.red,
+		.orange,
+		.yellow,
+		.green,
+		.blue,
+		.purple,
+		.pink,
+		.black
+	) {
 	--bg-colour: var(--primary-bg-colour);
 	--text-colour: var(--primary-text-colour);
 	--bg-active-colour-intensity: var(
@@ -137,7 +146,16 @@
 	);
 }
 
-.fdn-button.secondary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black) {
+.fdn-button.secondary:is(
+		.red,
+		.orange,
+		.yellow,
+		.green,
+		.blue,
+		.purple,
+		.pink,
+		.black
+	) {
 	--bg-colour: var(--secondary-bg-colour);
 	--text-colour: var(--secondary-text-colour);
 	--bg-action-colour: transparent;
@@ -146,13 +164,49 @@
 	--border-colour: transparent;
 }
 
-.fdn-button.secondary:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black):hover {
+.fdn-button.secondary:is(
+		.red,
+		.orange,
+		.yellow,
+		.green,
+		.blue,
+		.purple,
+		.pink,
+		.black
+	):hover {
 	--border-colour: var(--text-colour);
 }
 
-.fdn-button.secondary:not(:is(.red, .orange, .yellow, .green, .blue, .purple, .pink, .black)) {
+.fdn-button.secondary:not(
+		:is(
+				.red,
+				.orange,
+				.yellow,
+				.green,
+				.blue,
+				.purple,
+				.pink,
+				.black
+			)
+	) {
 	--bg-action-colour: var(--fdn-colours-gray);
 	--bg-colour: transparent;
 	--text-colour: var(--fdn-colours-black);
 	--text-hover-colour: var(--fdn-colours-black);
+}
+
+/* Text Types */
+
+.fdn-button.text {
+	--bg-colour: transparent;
+	--text-colour: var(--primary-bg-colour);
+	--text-hover-colour: var(--primary-bg-colour);
+	--spacing-x: 0;
+	--spacing-y: 0;
+	transition: 0.2s opacity;
+
+	// todo: a bit of a hack
+	&:hover {
+		opacity: 0.5;
+	}
 }
