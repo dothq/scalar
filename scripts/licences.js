@@ -69,7 +69,7 @@ const main = async () => {
 								license:
 									repositoryDependency.licenses,
 								instance:
-									repositoryMeta["manifest_file"]
+									repositoryMeta["manifest_file"],
 							}
 						]
 					};
@@ -131,20 +131,21 @@ const pageGeneration = async (repositories, dependencies) => {
 	let repositoriesComponent = "";
 
 	for (const [repoName, repo] of Object.entries(repositories)) {
-		let repoComponent = `
-		<div className="fdn-stack v gap-lg"><h4>${repoName}</h4><ItemList className={"tpl-deps-list"}>`;
+		let repoComponent = `<Repository repository={${JSON.stringify(repoName)}}`;
+
+		const repoDeps = [];
 
 		for (const [dependencyName, dependency] of Object.entries(
 			repo.dependencies
 		)) {
-			repoComponent += `<DependencyItem name={${JSON.stringify(
-				dependencyName
-			)}} source={${JSON.stringify(
-				dependency.service
-			)}} license={"MPL-2.0"} />\n`;
+			repoDeps.push({
+				name: dependencyName,
+				source: dependency.service,
+				license: dependency.licenses[0].spdx
+			});
 		}
 
-		repoComponent += `</ItemList></div>`;
+		repoComponent += ` dependencies={${JSON.stringify(repoDeps)}} />`;
 		repositoriesComponent += repoComponent;
 	}
 
@@ -188,7 +189,7 @@ const pageGeneration = async (repositories, dependencies) => {
 
 			import { Dependency } from "../app/components/pages/third-party-licenses/Dependency";
 			import { DependencyItem } from "../app/components/pages/third-party-licenses/DependencyItem";
-			import { ItemList } from "../app/components/ui/ItemList";
+			import { Repository } from "../app/components/pages/third-party-licenses/Repository";
 
 			export const RepositoriesSection = () => {
 				return (
@@ -251,7 +252,7 @@ const sortRepositories = async (dependencies) => {
 							instance.repository
 						].dependencies[dependencyName] = {
 							instances: [instance.instance],
-							licenses: instance.licenses,
+							licenses: instance.license,
 							service: serviceName
 						};
 					}
@@ -279,7 +280,7 @@ const sortRepositories = async (dependencies) => {
 						dependencies: {
 							[dependencyName]: {
 								instances: [instance.instance],
-								licenses: instance.licenses,
+								licenses: instance.license,
 								service: serviceName
 							}
 						}
