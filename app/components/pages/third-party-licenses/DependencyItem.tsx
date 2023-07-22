@@ -37,7 +37,7 @@ export const DependencyItem = ({
 					<p
 						className={"text-center"}
 						style={{
-							minWidth: "82px"
+							minWidth: "120px"
 						}}
 					>
 						{license}
