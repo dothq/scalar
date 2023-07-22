@@ -25,7 +25,14 @@ const FooterLanguage = () => {
 				<Select
 					name={"new_locale"}
 					fullwidth
-					items={(global as any).SCALAR_LANGUAGE_MAP}
+					items={[
+						{
+							children: l(
+								"footer-language-switcher-initial-prompt"
+							),
+							disabled: true
+						}
+					].concat((global as any).SCALAR_LANGUAGE_MAP)}
 				/>
 
 				<input type={"hidden"} name={"go"} value={go}></input>
