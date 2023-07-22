@@ -30,7 +30,7 @@ jobs:
 
             - name: Test
               run: |
-                  yarn start &
+                  yarn dev &
                   SERVER_PID=$!
                   while ! nc -z localhost 3000; do   
                     sleep 0.1
