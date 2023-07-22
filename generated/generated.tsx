@@ -742,81 +742,6 @@ export const RepositoriesSection = () => {
             source={"NodeService"}
             license={"MPL-2.0"}
           />
-          <DependencyItem
-            name={"chrono"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"color-eyre"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"diesel"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"dotenv"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"jsonwebtoken"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"lazy_static"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"reqwest"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"rocket"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"sanitizer"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde_json"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tokio"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tracing"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tracing-subscriber"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"validator"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
         </ItemList>
       </div>
       <div className="fdn-stack v gap-lg">
@@ -1742,41 +1667,6 @@ export const RepositoriesSection = () => {
             source={"NodeService"}
             license={"MPL-2.0"}
           />
-          <DependencyItem
-            name={"futures"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"js-sys"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"wasm-bindgen"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"wasm-bindgen-futures"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"wasm-bindgen-test"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"web-sys"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"wee_alloc"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
         </ItemList>
       </div>
       <div className="fdn-stack v gap-lg">
@@ -2035,36 +1925,6 @@ export const RepositoriesSection = () => {
           <DependencyItem
             name={"typescript"}
             source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-        </ItemList>
-      </div>
-      <div className="fdn-stack v gap-lg">
-        <h4>dothq/blocking-lists</h4>
-        <ItemList className={"tpl-deps-list"}>
-          <DependencyItem
-            name={"linya"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"reqwest"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde_yaml"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tokio"}
-            source={"CargoService"}
             license={"MPL-2.0"}
           />
         </ItemList>
@@ -2860,76 +2720,6 @@ export const RepositoriesSection = () => {
         </ItemList>
       </div>
       <div className="fdn-stack v gap-lg">
-        <h4>dothq/dpm</h4>
-        <ItemList className={"tpl-deps-list"}>
-          <DependencyItem
-            name={"bincode"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"byte-unit"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"chrono"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"clap"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"deb-rs"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"debcontrol"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"question"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"reqwest"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"run_script"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"sudo"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tokio"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"xz2"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-        </ItemList>
-      </div>
-      <div className="fdn-stack v gap-lg">
         <h4>dothq/dothq.co-deprecated</h4>
         <ItemList className={"tpl-deps-list"}>
           <DependencyItem
@@ -3355,31 +3145,6 @@ export const RepositoriesSection = () => {
           <DependencyItem
             name={"typescript"}
             source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-        </ItemList>
-      </div>
-      <div className="fdn-stack v gap-lg">
-        <h4>dothq/vault-stateless-poc</h4>
-        <ItemList className={"tpl-deps-list"}>
-          <DependencyItem
-            name={"clipboard"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"hmac"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"regex"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"sha2"}
-            source={"CargoService"}
             license={"MPL-2.0"}
           />
         </ItemList>
@@ -6513,6 +6278,11 @@ export const RepositoriesSection = () => {
             license={"MPL-2.0"}
           />
           <DependencyItem
+            name={"@types/js-levenshtein"}
+            source={"NodeService"}
+            license={"MPL-2.0"}
+          />
+          <DependencyItem
             name={"@types/node"}
             source={"NodeService"}
             license={"MPL-2.0"}
@@ -6548,6 +6318,11 @@ export const RepositoriesSection = () => {
             license={"MPL-2.0"}
           />
           <DependencyItem
+            name={"dedent"}
+            source={"NodeService"}
+            license={"MPL-2.0"}
+          />
+          <DependencyItem
             name={"dotenv"}
             source={"NodeService"}
             license={"MPL-2.0"}
@@ -6573,6 +6348,11 @@ export const RepositoriesSection = () => {
             license={"MPL-2.0"}
           />
           <DependencyItem
+            name={"js-levenshtein"}
+            source={"NodeService"}
+            license={"MPL-2.0"}
+          />
+          <DependencyItem
             name={"minimatch"}
             source={"NodeService"}
             license={"MPL-2.0"}
@@ -6588,12 +6368,22 @@ export const RepositoriesSection = () => {
             license={"MPL-2.0"}
           />
           <DependencyItem
+            name={"retry-axios"}
+            source={"NodeService"}
+            license={"MPL-2.0"}
+          />
+          <DependencyItem
             name={"rimraf"}
             source={"NodeService"}
             license={"MPL-2.0"}
           />
           <DependencyItem
             name={"semver"}
+            source={"NodeService"}
+            license={"MPL-2.0"}
+          />
+          <DependencyItem
+            name={"shrink-string"}
             source={"NodeService"}
             license={"MPL-2.0"}
           />
@@ -7010,96 +6800,6 @@ export const RepositoriesSection = () => {
           <DependencyItem
             name={"timeago-simple"}
             source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-        </ItemList>
-      </div>
-      <div className="fdn-stack v gap-lg">
-        <h4>dothq/libreddit</h4>
-        <ItemList className={"tpl-deps-list"}>
-          <DependencyItem
-            name={"askama"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"async-recursion"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cached"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"clap"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cookie"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"futures-lite"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"hyper"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"hyper-rustls"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"percent-encoding"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"regex"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"route-recognizer"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"rust-embed"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serde_json"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"time"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tokio"}
-            source={"CargoService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"url"}
-            source={"CargoService"}
             license={"MPL-2.0"}
           />
         </ItemList>
@@ -7614,601 +7314,6 @@ export const RepositoriesSection = () => {
           />
           <DependencyItem
             name={"yuglify"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-        </ItemList>
-      </div>
-      <div className="fdn-stack v gap-lg">
-        <h4>dothq/formatjs</h4>
-        <ItemList className={"tpl-deps-list"}>
-          <DependencyItem
-            name={"@babel/core"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@babel/helper-plugin-utils"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@babel/plugin-syntax-jsx"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@babel/preset-env"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@babel/preset-react"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@babel/traverse"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@babel/types"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@bazel/bazelisk"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@bazel/esbuild"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@bazel/ibazel"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@bazel/typescript"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@commitlint/cli"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@commitlint/config-angular"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@docusaurus/core"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@docusaurus/plugin-google-analytics"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@docusaurus/preset-classic"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@docusaurus/theme-live-codeblock"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/ecma402-abstract"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/fast-memoize"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/icu-messageformat-parser"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/icu-skeleton-parser"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/intl"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/intl-displaynames"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/intl-getcanonicallocales"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/intl-listformat"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/intl-localematcher"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@formatjs/ts-transformer"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@jest/transform"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@jest/types"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@material-ui/core"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@material-ui/icons"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@material-ui/lab"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@rescripts/cli"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@rescripts/rescript-env"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@testing-library/jest-dom"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@testing-library/react"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/babel__core"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/babel__helper-plugin-utils"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/benchmark"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/emoji-regex"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/eslint"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/estree"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/fs-extra"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/hoist-non-react-statics"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/jest"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/json-stable-stringify"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/lodash"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/minimist"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/node"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/react"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/react-dom"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/rimraf"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/serialize-javascript"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@types/webpack"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@typescript-eslint/parser"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@typescript-eslint/typescript-estree"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@unicode/unicode-13.0.0"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@vue/compiler-core"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@vue/compiler-sfc"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"@vue/test-utils"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"babel-loader"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"babel-plugin-formatjs"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"babel-plugin-react-require"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"benchmark"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"chalk"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"chokidar"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"classnames"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cldr-core"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cldr-dates-full"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cldr-localenames-full"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cldr-misc-full"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cldr-numbers-full"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"cldr-units-full"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"commander"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"core-js"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"emoji-regex"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"eslint"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"eslint-plugin-formatjs"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"fast-glob"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"fs-extra"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"hoist-non-react-statics"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"http-server"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"husky"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"intl-messageformat"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"jasmine-expect"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"jest"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"json-stable-stringify"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"karma"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"karma-chrome-launcher"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"karma-jasmine"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"karma-jasmine-matchers"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"karma-sauce-launcher"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"lerna"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"lodash"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"loud-rejection"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"make-plural-compiler"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"minimist"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"patch-package"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"prettier"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"react"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"react-dom"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"react-intl"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"react-scripts"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"regenerate"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"rimraf"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"serialize-javascript"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"test262-harness"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"ts-jest"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"ts-loader"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"ts-node"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"tslib"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"typescript"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"unidiff"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"vue"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"vue-class-component"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"vue-eslint-parser"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"vue-loader"}
-            source={"NodeService"}
-            license={"MPL-2.0"}
-          />
-          <DependencyItem
-            name={"webpack"}
             source={"NodeService"}
             license={"MPL-2.0"}
           />
@@ -9076,18 +8181,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/browser/components/newtab/package.json",
             branch: "release",
@@ -9172,27 +8265,6 @@ export const DependenciesSection = () => {
             repo: "pontoon",
             path: "/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@babel/helper-plugin-utils"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -9641,27 +8713,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@babel/plugin-syntax-jsx"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@babel/plugin-transform-flow-strip-types"}
         source={"NodeService"}
         license={
@@ -9747,12 +8798,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/devtools/client/debugger/test/mochitest/examples/sourcemapped/builds/webpack4-babel7/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
           {
@@ -9855,12 +8900,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/devtools/client/debugger/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
           {
@@ -9983,108 +9022,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@babel/traverse"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@babel/types"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@bazel/bazelisk"}
-        source={"NodeService"}
-        license={
-          'Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n"control" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, "submitted"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a "NOTICE" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following\nboilerplate notice, with the fields enclosed by brackets "[]"\nreplaced with your own identifying information. (Don\'t include\nthe brackets!)  The text should be enclosed in the appropriate\ncomment syntax for the file format. We also recommend that a\nfile or class name and description of purpose be included on the\nsame "printed page" as the copyright notice for easier\nidentification within third-party archives.\n\nCopyright [yyyy] [name of copyright owner]\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@bazel/esbuild"}
-        source={"NodeService"}
-        license={
-          'Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n"control" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, "submitted"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a "NOTICE" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following\nboilerplate notice, with the fields enclosed by brackets "[]"\nreplaced with your own identifying information. (Don\'t include\nthe brackets!)  The text should be enclosed in the appropriate\ncomment syntax for the file format. We also recommend that a\nfile or class name and description of purpose be included on the\nsame "printed page" as the copyright notice for easier\nidentification within third-party archives.\n\nCopyright [yyyy] [name of copyright owner]\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@bazel/ibazel"}
-        source={"NodeService"}
-        license={
-          'Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, "control" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity exercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, "submitted" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:\n\n     (a) You must give any other recipients of the Work or Derivative Works a copy of this License; and\n\n     (b) You must cause any modified files to carry prominent notices stating that You changed the files; and\n\n     (c) You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and\n\n     (d) If the Work includes a "NOTICE" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.\n\n     You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following boilerplate notice, with the fields enclosed by brackets "[]" replaced with your own identifying information. (Don\'t include the brackets!)  The text should be enclosed in the appropriate comment syntax for the file format. We also recommend that a file or class name and description of purpose be included on the same "printed page" as the copyright notice for easier identification within third-party archives.\n\nCopyright [yyyy] [name of copyright owner]\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@bazel/typescript"}
-        source={"NodeService"}
-        license={
-          'Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n"control" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, "submitted"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a "NOTICE" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following\nboilerplate notice, with the fields enclosed by brackets "[]"\nreplaced with your own identifying information. (Don\'t include\nthe brackets!)  The text should be enclosed in the appropriate\ncomment syntax for the file format. We also recommend that a\nfile or class name and description of purpose be included on the\nsame "printed page" as the copyright notice for easier\nidentification within third-party archives.\n\nCopyright [yyyy] [name of copyright owner]\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@cliqz/adblocker"}
         source={"NodeService"}
         license={
@@ -10103,7 +9040,7 @@ export const DependenciesSection = () => {
         name={"@commitlint/cli"}
         source={"NodeService"}
         license={
-          'The MIT License (MIT)\n\nCopyright (c) 2016 - present Mario Nebl\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
+          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
         }
         references={[
           {
@@ -10111,27 +9048,6 @@ export const DependenciesSection = () => {
             repo: "actions-status-discord",
             path: "/node_modules/cross-spawn/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@commitlint/config-angular"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2016 - present Mario Nebl\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -10175,66 +9091,6 @@ export const DependenciesSection = () => {
           {
             owner: "dothq",
             repo: "eva",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@docusaurus/core"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@docusaurus/plugin-google-analytics"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@docusaurus/preset-classic"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@docusaurus/theme-live-codeblock"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
             path: "/package.json",
             branch: "main",
           },
@@ -10580,336 +9436,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@formatjs/ecma402-abstract"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/icu-messageformat-parser/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/icu-skeleton-parser/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-datetimeformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-displaynames/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-durationformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-listformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-locale/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-numberformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-pluralrules/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-relativetimeformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/fast-memoize"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-messageformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/icu-messageformat-parser"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-messageformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/ts-transformer/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/icu-skeleton-parser"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/icu-messageformat-parser/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/intl"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/vue-intl/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/intl-displaynames"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/intl-getcanonicallocales"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-locale/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/intl-listformat"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/intl-localematcher"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/ecma402-abstract/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-datetimeformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-displaynames/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-durationformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-listformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-pluralrules/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-relativetimeformat/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@formatjs/ts-transformer"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@gimenete/type-writer"}
         source={"NodeService"}
         license={
@@ -10967,36 +9493,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@jest/transform"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@jest/types"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Facebook, Inc. and its affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@jsdevtools/coverage-istanbul-loader"}
         source={"NodeService"}
         license={
@@ -11035,18 +9531,6 @@ export const DependenciesSection = () => {
         references={[
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "ntp",
             path: "/package.json",
             branch: "main",
@@ -11055,48 +9539,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "update-server",
             path: "/admin/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@material-ui/icons"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2014 Call-Em-All\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@material-ui/lab"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2014 Call-Em-All\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
             branch: "main",
           },
         ]}
@@ -12524,36 +10966,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@rescripts/cli"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@rescripts/rescript-env"}
-        source={"NodeService"}
-        license={
-          'Copyright 2018-present Harry Solovay <harrysolovay@gmail.com> (harrysolovay.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@rollup/plugin-commonjs"}
         source={"NodeService"}
         license={
@@ -12746,33 +11158,12 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@testing-library/jest-dom"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\nCopyright (c) 2017 Kent C. Dodds\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@testing-library/react"}
         source={"NodeService"}
         license={
           'The MIT License (MIT)\nCopyright (c) 2017 Kent C. Dodds\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
         }
         references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
           {
             owner: "dothq",
             repo: "next-intl-1",
@@ -12841,57 +11232,9 @@ export const DependenciesSection = () => {
         references={[
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/dom/webgpu/tests/cts/checkout/package.json",
             branch: "release",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/babel__helper-plugin-utils"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/benchmark"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -13082,27 +11425,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@types/emoji-regex"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@types/enzyme"}
         source={"NodeService"}
         license={
@@ -13144,48 +11466,6 @@ export const DependenciesSection = () => {
             repo: "pontoon",
             path: "/frontend/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/eslint"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/estree"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -13384,18 +11664,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "licence-compiler",
             path: "/package.json",
             branch: "main",
@@ -13453,27 +11721,6 @@ export const DependenciesSection = () => {
             repo: "pontoon",
             path: "/frontend/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/hoist-non-react-statics"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation. All rights reserved.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -13588,12 +11835,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "mobile",
             path: "/package.json",
             branch: "master",
@@ -13694,6 +11935,21 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
+        name={"@types/js-levenshtein"}
+        source={"NodeService"}
+        license={
+          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
+        }
+        references={[
+          {
+            owner: "dothq",
+            repo: "licence-compiler",
+            path: "/package.json",
+            branch: "main",
+          },
+        ]}
+      />
+      <Dependency
         name={"@types/js-sha512"}
         source={"NodeService"}
         license={
@@ -13719,27 +11975,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "captive-portal-poc",
             path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/json-stable-stringify"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
             branch: "main",
           },
         ]}
@@ -13784,21 +12019,6 @@ export const DependenciesSection = () => {
           {
             owner: "dothq",
             repo: "melon",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/lodash"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
             path: "/package.json",
             branch: "main",
           },
@@ -13934,12 +12154,6 @@ export const DependenciesSection = () => {
           'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
         }
         references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
           {
             owner: "dothq",
             repo: "sentry",
@@ -14145,18 +12359,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "fluent-loader",
             path: "/example/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
             branch: "main",
           },
           {
@@ -14506,30 +12708,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "foundation-design-system",
             path: "/packages/icons-react/package.json",
             branch: "main",
@@ -14620,18 +12798,6 @@ export const DependenciesSection = () => {
             repo: "drop",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -14959,12 +13125,6 @@ export const DependenciesSection = () => {
         references={[
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "foundation-design-system",
             path: "/package.json",
             branch: "main",
@@ -14999,21 +13159,6 @@ export const DependenciesSection = () => {
           {
             owner: "dothq",
             repo: "licence-compiler",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@types/serialize-javascript"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
             path: "/package.json",
             branch: "main",
           },
@@ -15290,21 +13435,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@types/webpack"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Microsoft Corporation.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@types/yup"}
         source={"NodeService"}
         license={
@@ -15379,12 +13509,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "foundation-design-system",
             path: "/packages/icons-svelte/package.json",
             branch: "main",
@@ -15416,27 +13540,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"@typescript-eslint/typescript-estree"}
-        source={"NodeService"}
-        license={
-          'TypeScript ESTree\n\nOriginally extracted from:\n\nTypeScript ESLint Parser\nCopyright JS Foundation and other contributors, https://js.foundation\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n* Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\nARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF\nTHIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"@ungap/url-search-params"}
         source={"NodeService"}
         license={
@@ -15454,21 +13557,6 @@ export const DependenciesSection = () => {
             repo: "tag-and-release-and-upload",
             path: "/node_modules/node-fetch/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@unicode/unicode-13.0.0"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -15499,63 +13587,6 @@ export const DependenciesSection = () => {
             repo: "knex",
             path: "/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@vue/compiler-core"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2018-present, Yuxi (Evan) You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@vue/compiler-sfc"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2018-present, Yuxi (Evan) You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"@vue/test-utils"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -16225,12 +14256,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/browser/components/newtab/package.json",
             branch: "release",
@@ -16355,21 +14380,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"babel-plugin-formatjs"}
-        source={"NodeService"}
-        license={
-          'Copyright (c) 2019, Oath Inc.\n\nLicensed under the terms of the New BSD license. See below for terms.\n\nRedistribution and use of this software in source and binary forms,\nwith or without modification, are permitted provided that the following\nconditions are met:\n\n- Redistributions of source code must retain the above\ncopyright notice, this list of conditions and the\nfollowing disclaimer.\n\n- Redistributions in binary form must reproduce the above\ncopyright notice, this list of conditions and the\nfollowing disclaimer in the documentation and/or other\nmaterials provided with the distribution.\n\n- Neither the name of Oath Inc. nor the names of its\ncontributors may be used to endorse or promote products\nderived from this software without specific prior\nwritten permission of Oath Inc.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS\nIS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED\nTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A\nPARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"babel-plugin-istanbul"}
         source={"NodeService"}
         license={
@@ -16464,21 +14474,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "adblock",
             path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"babel-plugin-react-require"}
-        source={"NodeService"}
-        license={
-          'Copyright (c) 2015 Vyacheslav Slinko\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
             branch: "main",
           },
         ]}
@@ -16874,21 +14869,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"benchmark"}
-        source={"NodeService"}
-        license={
-          'Copyright 2010-2016 Mathias Bynens <https://mathiasbynens.be/>\nBased on JSLitmus.js, copyright Robert Kieffer <http://broofa.com/>\nModified by John-David Dalton <http://allyoucanleet.com/>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"better-sqlite3"}
         source={"NodeService"}
         license={
@@ -17245,24 +15225,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/ts-transformer/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "melon",
             path: "/package.json",
             branch: "main",
@@ -17314,12 +15276,6 @@ export const DependenciesSection = () => {
         references={[
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/dom/webgpu/tests/cts/checkout/package.json",
             branch: "release",
@@ -17358,102 +15314,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/devtools/client/debugger/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cldr-core"}
-        source={"NodeService"}
-        license={
-          'UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE\n\nSee Terms of Use for definitions of Unicode Inc.\'s\nData Files and Software.\n\nNOTICE TO USER: Carefully read the following legal agreement.\nBY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.\'S\nDATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),\nYOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT.\nIF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE\nTHE DATA FILES OR SOFTWARE.\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2021 Unicode, Inc. All rights reserved.\nDistributed under the Terms of Use in https://www.unicode.org/copyright.html.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Unicode data files and any associated documentation\n(the "Data Files") or Unicode software and any associated documentation\n(the "Software") to deal in the Data Files or Software\nwithout restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, and/or sell copies of\nthe Data Files or Software, and to permit persons to whom the Data Files\nor Software are furnished to do so, provided that either\n(a) this copyright and permission notice appear with all copies\nof the Data Files or Software, or\n(b) this copyright and permission notice appear in associated\nDocumentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT OF THIRD PARTY RIGHTS.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS\nNOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL\nDAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,\nDATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THE DATA FILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder\nshall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in these Data Files or Software without prior\nwritten authorization of the copyright holder.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cldr-dates-full"}
-        source={"NodeService"}
-        license={
-          'UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE\n\nSee Terms of Use for definitions of Unicode Inc.\'s\nData Files and Software.\n\nNOTICE TO USER: Carefully read the following legal agreement.\nBY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.\'S\nDATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),\nYOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT.\nIF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE\nTHE DATA FILES OR SOFTWARE.\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2021 Unicode, Inc. All rights reserved.\nDistributed under the Terms of Use in https://www.unicode.org/copyright.html.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Unicode data files and any associated documentation\n(the "Data Files") or Unicode software and any associated documentation\n(the "Software") to deal in the Data Files or Software\nwithout restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, and/or sell copies of\nthe Data Files or Software, and to permit persons to whom the Data Files\nor Software are furnished to do so, provided that either\n(a) this copyright and permission notice appear with all copies\nof the Data Files or Software, or\n(b) this copyright and permission notice appear in associated\nDocumentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT OF THIRD PARTY RIGHTS.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS\nNOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL\nDAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,\nDATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THE DATA FILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder\nshall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in these Data Files or Software without prior\nwritten authorization of the copyright holder.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cldr-localenames-full"}
-        source={"NodeService"}
-        license={
-          'UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE\n\nSee Terms of Use for definitions of Unicode Inc.\'s\nData Files and Software.\n\nNOTICE TO USER: Carefully read the following legal agreement.\nBY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.\'S\nDATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),\nYOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT.\nIF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE\nTHE DATA FILES OR SOFTWARE.\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2021 Unicode, Inc. All rights reserved.\nDistributed under the Terms of Use in https://www.unicode.org/copyright.html.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Unicode data files and any associated documentation\n(the "Data Files") or Unicode software and any associated documentation\n(the "Software") to deal in the Data Files or Software\nwithout restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, and/or sell copies of\nthe Data Files or Software, and to permit persons to whom the Data Files\nor Software are furnished to do so, provided that either\n(a) this copyright and permission notice appear with all copies\nof the Data Files or Software, or\n(b) this copyright and permission notice appear in associated\nDocumentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT OF THIRD PARTY RIGHTS.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS\nNOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL\nDAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,\nDATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THE DATA FILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder\nshall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in these Data Files or Software without prior\nwritten authorization of the copyright holder.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cldr-misc-full"}
-        source={"NodeService"}
-        license={
-          'UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE\n\nSee Terms of Use for definitions of Unicode Inc.\'s\nData Files and Software.\n\nNOTICE TO USER: Carefully read the following legal agreement.\nBY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.\'S\nDATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),\nYOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT.\nIF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE\nTHE DATA FILES OR SOFTWARE.\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2021 Unicode, Inc. All rights reserved.\nDistributed under the Terms of Use in https://www.unicode.org/copyright.html.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Unicode data files and any associated documentation\n(the "Data Files") or Unicode software and any associated documentation\n(the "Software") to deal in the Data Files or Software\nwithout restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, and/or sell copies of\nthe Data Files or Software, and to permit persons to whom the Data Files\nor Software are furnished to do so, provided that either\n(a) this copyright and permission notice appear with all copies\nof the Data Files or Software, or\n(b) this copyright and permission notice appear in associated\nDocumentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT OF THIRD PARTY RIGHTS.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS\nNOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL\nDAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,\nDATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THE DATA FILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder\nshall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in these Data Files or Software without prior\nwritten authorization of the copyright holder.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cldr-numbers-full"}
-        source={"NodeService"}
-        license={
-          'UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE\n\nSee Terms of Use for definitions of Unicode Inc.\'s\nData Files and Software.\n\nNOTICE TO USER: Carefully read the following legal agreement.\nBY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.\'S\nDATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),\nYOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT.\nIF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE\nTHE DATA FILES OR SOFTWARE.\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2021 Unicode, Inc. All rights reserved.\nDistributed under the Terms of Use in https://www.unicode.org/copyright.html.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Unicode data files and any associated documentation\n(the "Data Files") or Unicode software and any associated documentation\n(the "Software") to deal in the Data Files or Software\nwithout restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, and/or sell copies of\nthe Data Files or Software, and to permit persons to whom the Data Files\nor Software are furnished to do so, provided that either\n(a) this copyright and permission notice appear with all copies\nof the Data Files or Software, or\n(b) this copyright and permission notice appear in associated\nDocumentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT OF THIRD PARTY RIGHTS.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS\nNOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL\nDAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,\nDATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THE DATA FILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder\nshall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in these Data Files or Software without prior\nwritten authorization of the copyright holder.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cldr-units-full"}
-        source={"NodeService"}
-        license={
-          'UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE\n\nSee Terms of Use for definitions of Unicode Inc.\'s\nData Files and Software.\n\nNOTICE TO USER: Carefully read the following legal agreement.\nBY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.\'S\nDATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),\nYOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT.\nIF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE\nTHE DATA FILES OR SOFTWARE.\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2021 Unicode, Inc. All rights reserved.\nDistributed under the Terms of Use in https://www.unicode.org/copyright.html.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Unicode data files and any associated documentation\n(the "Data Files") or Unicode software and any associated documentation\n(the "Software") to deal in the Data Files or Software\nwithout restriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, and/or sell copies of\nthe Data Files or Software, and to permit persons to whom the Data Files\nor Software are furnished to do so, provided that either\n(a) this copyright and permission notice appear with all copies\nof the Data Files or Software, or\n(b) this copyright and permission notice appear in associated\nDocumentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT OF THIRD PARTY RIGHTS.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS\nNOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL\nDAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,\nDATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THE DATA FILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder\nshall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in these Data Files or Software without prior\nwritten authorization of the copyright holder.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
         ]}
@@ -17609,18 +15469,6 @@ export const DependenciesSection = () => {
           "(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         }
         references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
           {
             owner: "dothq",
             repo: "knex",
@@ -17864,21 +15712,6 @@ export const DependenciesSection = () => {
           {
             owner: "dothq",
             repo: "ntp",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"core-js"}
-        source={"NodeService"}
-        license={
-          'Copyright (c) 2014-2023 Denis Pushkarev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
             path: "/package.json",
             branch: "main",
           },
@@ -18136,6 +15969,21 @@ export const DependenciesSection = () => {
             repo: "knex",
             path: "/package.json",
             branch: "master",
+          },
+        ]}
+      />
+      <Dependency
+        name={"dedent"}
+        source={"NodeService"}
+        license={
+          'The MIT License (MIT)\n\nCopyright (c) 2015 Desmond Brand (dmnd@desmondbrand.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
+        }
+        references={[
+          {
+            owner: "dothq",
+            repo: "licence-compiler",
+            path: "/package.json",
+            branch: "main",
           },
         ]}
       />
@@ -18540,27 +16388,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "lexicon-frontend",
             path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"emoji-regex"}
-        source={"NodeService"}
-        license={
-          'Copyright Mathias Bynens <https://mathiasbynens.be/>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
             branch: "main",
           },
         ]}
@@ -19030,12 +16857,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "foundation-design-system",
             path: "/packages/icons-svelte/package.json",
             branch: "main",
@@ -19294,21 +17115,6 @@ export const DependenciesSection = () => {
             repo: "gecko-dev",
             path: "/dom/webgpu/tests/cts/checkout/package.json",
             branch: "release",
-          },
-        ]}
-      />
-      <Dependency
-        name={"eslint-plugin-formatjs"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2019 FormatJS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -19763,27 +17569,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"fast-glob"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) Denis Malinochkin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"fastify"}
         source={"NodeService"}
         license={
@@ -20103,18 +17888,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "eva",
             path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
             branch: "main",
           },
           {
@@ -20810,7 +18583,7 @@ export const DependenciesSection = () => {
         name={"highcharts"}
         source={"NodeService"}
         license={
-          '<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="next-head-count" content="2" /><meta charSet="utf-8" /><meta name="keywords" content="Highcharts online shop, buy Highcharts license, DataViz library, developer license, advantage license, OEM license, non-commercial license, Credit card, Visa Card, Master Card, Paypal." /><meta name="description" content="Buy Highcharts DataViz library licenses such as developer license, advantage license, OEM license, and acquire a non-commercial license." /><script src="https://www.google.com/recaptcha/api.js?render=6LcWEZ4kAAAAAO4NCcGd8CgtiijxSDIY5YYZEgez" async=""></script><script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8be0770c-8b7f-4e2d-aeb5-2cfded81e177" data-blockingmode="auto" type="text/javascript"></script><script>if(!location.pathname.startsWith(\'/reset\'))\n              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':\n              new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],\n              j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\n              \'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);\n              })(window,document,\'script\',\'dataLayer\',\'GTM-5WLVCCK\');</script><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/_next/static/css/ab73613411017fa7.css" as="style" /><link rel="stylesheet" href="/_next/static/css/ab73613411017fa7.css" data-n-g="" /><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-de85236f7f5c75f0.js" defer=""></script><script src="/_next/static/chunks/framework-4a9e9d5071d676b1.js" defer=""></script><script src="/_next/static/chunks/main-1e7090e7c0181b41.js" defer=""></script><script src="/_next/static/chunks/pages/_app-59212865d0cdfc5e.js" defer=""></script><script src="/_next/static/chunks/pages/license-2ca65644f08922ef.js" defer=""></script><script src="/_next/static/current/_buildManifest.js" defer=""></script><script src="/_next/static/current/_ssgManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap">@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKtdU.woff) format(\'woff\')}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9MIU.woff) format(\'woff\')}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7MIU.woff) format(\'woff\')}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdzeFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdXeFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdLeFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0370-03FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhd7eFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhd_eFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format(\'woff2\');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIxsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIVsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIJsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0370-03FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI5sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI9sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdP3pBms.woff2) format(\'woff2\');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIxsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIVsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIJsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0370-03FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI5sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI9sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdP3pBms.woff2) format(\'woff2\');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body class="loading prerender"><noscript style="background:#fff;border:0.5em double #c00;color:#000;display:block;padding:0.5em;text-align:center">Please enable JavaScript to use our shop.</noscript><div id="root"><div id="__next" data-reactroot=""><header id="app-header" class=""><a class="Skip Button " href="#main">Skip to Main Content</a><h1><a href="https://www.highcharts.com" class="navbar-brand"><svg version="1.1" id="logo-highcharts" aria-labelledby="logo-highcharts-title" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="10 10 384 65" xml:space="preserve"><title id="logo-highcharts-title">Highcharts</title><g id="symbol" transform="translate(10, 10) scale(1)"><polygon fill="#8087E8" points="41.53900146484375,0 30.315000534057617,26.209999084472656 15.566999435424805,60.650997161865234 49.85900115966797,46.16499710083008 68.02299499511719,38.49300003051758 " id="svg_2" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#30426B" points="47.25799560546875,31.729999542236328 49.86000061035156,46.16499710083008 68.02400207519531,38.49300003051758 " id="svg_3" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#6699A1" points="41.53900146484375,0 47.25799560546875,31.730998992919922 68.02299499511719,38.49300003051758 " id="svg_4" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#78758C" points="47.25799560546875,31.729999542236328 68.02400207519531,38.49300003051758 30.31599998474121,26.208999633789062 15.566999435424805,60.650997161865234 49.86000061035156,46.16499710083008 " id="svg_5" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#A3EDBA" points="15.566999435424805,60.650997161865234 30.315000534057617,26.209999084472656 0,16.334999084472656 " id="svg_6" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#6699A1" points="49.86000061035156,46.16499710083008 53.185997009277344,64.6099967956543 68.02400207519531,38.49300003051758 " id="svg_7" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#8087E8" points="41.53900146484375,0 30.315000534057617,26.209999084472656 47.25799560546875,31.730998992919922 " id="svg_8" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon></g><g id="text-highcharts" transform="translate(108.02400207519531,31.291051292419436) scale(1)"><path fill="#f0f0f0" d="M20.7189956665039,14.058000671386722 h-17.02 v9.77 c0,1.037 -0.8130000000000002,1.851 -1.8490000000000002,1.851 c-1.037,0 -1.85,-0.8130000000000002 -1.85,-1.851 V2.07100067138672 c0,-1.037 0.8130000000000002,-1.852 1.85,-1.852 c1.036,0 1.8490000000000002,0.8130000000000002 1.8490000000000002,1.852 v8.436 h17.02 v-8.436 c0,-1.037 0.8140000000000002,-1.852 1.85,-1.852 c1.036,0 1.85,0.8130000000000002 1.85,1.852 v21.754 c0,1.037 -0.8140000000000002,1.851 -1.85,1.851 c-1.036,0 -1.85,-0.8130000000000002 -1.85,-1.851 V14.058000671386722 z" id="svg_2" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M39.21699566650392,23.825000671386718 c0,1.037 -0.8140000000000002,1.851 -1.852,1.851 s-1.852,-0.8130000000000002 -1.852,-1.851 V2.07100067138672 c0,-1.037 0.8140000000000002,-1.852 1.852,-1.852 s1.852,0.8130000000000002 1.852,1.852 V23.825000671386718 z" id="svg_3" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M66.3689956665039,14.724000671386719 c0,-1.036 0.8140000000000002,-1.774 1.852,-1.774 c1.034,0 1.852,0.8130000000000002 1.852,1.8490000000000002 v5.847 c0,0.4440000000000001 -0.22600000000000006,1.109 -0.5950000000000002,1.479 c-2.367,2.369 -5.549,3.773 -9.176,3.773 c-7.178,0 -12.949,-5.771 -12.949,-12.948 c0,-7.181 5.771,-12.949 12.949,-12.949 c3.6270000000000002,0 6.809,1.405 9.176,3.771 c0.7380000000000002,0.7400000000000002 0.7380000000000002,1.852 0,2.592 c-0.7410000000000002,0.7380000000000002 -1.9220000000000002,0.8130000000000002 -2.6630000000000003,0.07200000000000002 c-1.702,-1.6990000000000005 -3.923,-2.736 -6.513,-2.736 c-5.104,0 -9.249,4.144 -9.249,9.25 c0,5.104 4.146,9.25 9.249,9.25 c2.367,0 4.441,-0.8130000000000002 6.067,-2.222 V14.724000671386719 z" id="svg_4" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M100.40599566650391,14.058000671386722 h-17.019 v9.77 c0,1.037 -0.8170000000000002,1.851 -1.852,1.851 c-1.037,0 -1.8490000000000002,-0.8130000000000002 -1.8490000000000002,-1.851 V2.07100067138672 c0,-1.037 0.812,-1.852 1.8490000000000002,-1.852 c1.034,0 1.852,0.8130000000000002 1.852,1.852 v8.436 h17.019 v-8.436 c0,-1.037 0.8130000000000002,-1.852 1.8490000000000002,-1.852 c1.037,0 1.852,0.8130000000000002 1.852,1.852 v21.754 c0,1.037 -0.8130000000000002,1.851 -1.852,1.851 c-1.033,0 -1.8490000000000002,-0.8130000000000002 -1.8490000000000002,-1.851 V14.058000671386722 z" id="svg_5" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M125.19199566650391,25.898000671386725 c-7.182,0 -12.949,-5.771 -12.949,-12.948 c0,-7.181 5.77,-12.949 12.949,-12.949 c3.6270000000000002,0 6.809,1.405 9.176,3.771 c0.7380000000000002,0.7400000000000002 0.7380000000000002,1.852 0,2.592 c-0.7410000000000002,0.7380000000000002 -1.925,0.8130000000000002 -2.6660000000000004,0.07200000000000002 c-1.6990000000000005,-1.6990000000000005 -3.92,-2.736 -6.51,-2.736 c-5.106,0 -9.249,4.144 -9.249,9.25 c0,5.104 4.143,9.25 9.249,9.25 c2.59,0 4.884,-0.9620000000000002 6.586,-2.664 c0.7400000000000002,-0.7410000000000002 1.8490000000000002,-0.7410000000000002 2.59,0 c0.7380000000000002,0.7380000000000002 0.7380000000000002,1.85 0,2.589 C131.9999956665039,24.49200067138672 128.81799566650392,25.898000671386725 125.19199566650391,25.898000671386725 z" id="svg_6" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M163.81299566650392,14.058000671386722 h-17.02 v9.77 c0,1.037 -0.8130000000000002,1.851 -1.852,1.851 c-1.034,0 -1.85,-0.8130000000000002 -1.85,-1.851 V2.07100067138672 c0,-1.037 0.8130000000000002,-1.852 1.85,-1.852 c1.035,0 1.852,0.8130000000000002 1.852,1.852 v8.436 h17.02 v-8.436 c0,-1.037 0.8130000000000002,-1.852 1.8530000000000002,-1.852 c1.034,0 1.8490000000000002,0.8130000000000002 1.8490000000000002,1.852 v21.754 c0,1.037 -0.8130000000000002,1.851 -1.8490000000000002,1.851 c-1.037,0 -1.8530000000000002,-0.8130000000000002 -1.8530000000000002,-1.851 V14.058000671386722 z" id="svg_7" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M191.0019956665039,1.8490006713867189 l10.507,20.646 c0.22300000000000006,0.4430000000000001 0.4450000000000001,1.036 0.4450000000000001,1.554 c0,1.036 -0.6680000000000003,1.6280000000000001 -1.702,1.6280000000000001 c-0.7410000000000002,0 -1.481,-0.22200000000000006 -2.001,-1.258 l-3.253,-6.438 h-13.547 l-3.183,6.438 c-0.517,1.036 -1.256,1.258 -1.994,1.258 c-1.037,0 -1.702,-0.5930000000000002 -1.702,-1.6280000000000001 c0,-0.519 0.22000000000000006,-1.109 0.4420000000000001,-1.554 l10.506,-20.646 c0.6680000000000003,-1.405 2.002,-1.6280000000000001 2.74,-1.6280000000000001 C189.0039956665039,0.22100067138671875 190.33399566650388,0.4420006713867153 191.0019956665039,1.8490006713867189 zM183.22899566650392,14.429000671386717 h9.988 l-4.957,-9.99 L183.22899566650392,14.429000671386717 z" id="svg_8" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M222.4029956665039,0.369000671386722 c4.441,0 8.064,3.255 8.064,7.694 c0,3.923 -2.813,6.884 -6.511,7.549 l6.731,7.104 c0.6640000000000003,0.6660000000000003 0.8890000000000002,1.85 0.14600000000000005,2.516 c-0.7360000000000002,0.7410000000000002 -2.145,0.521 -2.886,-0.2960000000000001 l-8.729,-9.176 h-6.511 v8.142 c0,1.034 -0.8150000000000002,1.774 -1.854,1.774 c-1.033,0 -1.85,-0.8130000000000002 -1.85,-1.851 V2.2190006713867163 c0,-1.035 0.8140000000000002,-1.85 1.85,-1.85 H222.4029956665039 zM212.71199566650392,3.9210006713867216 v8.288 h9.691 c2.59,0 4.367,-1.776 4.367,-4.146 c0,-2.365 -1.7770000000000001,-4.144 -4.367,-4.144 L212.71199566650392,3.9210006713867216 L212.71199566650392,3.9210006713867216 z" id="svg_9" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M247.29099566650393,3.9210006713867216 h-9.249 c-1.033,0 -1.8490000000000002,-0.7400000000000002 -1.8490000000000002,-1.776 c0,-1.034 0.8130000000000002,-1.7730000000000001 1.8490000000000002,-1.7730000000000001 h22.201 c1.037,0 1.852,0.7400000000000002 1.852,1.7730000000000001 c0,1.037 -0.8130000000000002,1.776 -1.852,1.776 h-9.249 V23.826000671386723 c0,1.037 -0.8130000000000002,1.851 -1.8490000000000002,1.851 c-1.037,0 -1.854,-0.8130000000000002 -1.854,-1.851 V3.9210006713867216 z" id="svg_10" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M270.9679956665039,10.359000671386724 c0,-9.25 5.698,-10.359 9.99,-10.359 c1.035,0 1.85,0.8130000000000002 1.85,1.85 c0,1.036 -0.8130000000000002,1.851 -1.85,1.851 c-3.479,0 -6.29,0.7380000000000002 -6.29,6.66 v5.18 c0,9.25 -5.698,10.358 -9.989,10.358 c-1.035,0 -1.85,-0.8130000000000002 -1.85,-1.85 s0.8140000000000002,-1.85 1.85,-1.85 c3.479,0 6.289,-0.7400000000000002 6.289,-6.66 V10.359000671386724 z" id="svg_11" stroke-width="0px" stroke="#f0f0f0"></path><g transform="translate(280, 20) scale(0.03)"><circle cx="100" cy="100" r="88.5" fill="none" stroke="#f0f0f0" stroke-width="20"></circle><path d="M94.6 92C100.1 92 104.1 90.9 106.5 88.8C108.9 86.8 110.2 83.4 110.2 78.6C110.2 73.9 108.9 70.6 106.5 68.5C104.1 66.5 100.1 65.5 94.6 65.5L83.4 65.5L83.4 92L94.6 92M83.4 110.3L83.4 149.3L56.8 149.3L56.8 46.2L97.4 46.2C111 46.2 120.9 48.5 127.2 53.1C133.6 57.6 136.7 64.8 136.7 74.7C136.7 81.5 135.1 87.1 131.8 91.5C128.5 95.8 123.6 99.1 116.9 101.1C120.6 102 123.8 103.9 126.7 106.8C129.6 109.7 132.5 114.1 135.4 120.1L149.9 149.3L121.6 149.3L109 123.7C106.5 118.6 103.9 115 101.3 113.2C98.7 111.3 95.2 110.3 90.9 110.3L83.4 110.3" stroke-width="0px" stroke="#f0f0f0" fill="#f0f0f0"></path></g></g></svg></a></h1><button class="App-header-burger App-header-icon" aria-controls="app-navbar-nav" aria-expanded="false" aria-label="Open menu" id="app-header-burger" title="Open Menu" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav aria-label="Main" id="app-navbar-nav"><ul><li><button class="" aria-controls="app-navbar-nav" aria-expanded="false" type="button">Products<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li><li><a href="https://www.highcharts.com/demo">Demos</a></li><li><button class="" aria-controls="app-navbar-nav" aria-expanded="false" type="button">Resources<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li><li><a href="https://www.highcharts.com/support">Support</a></li><li><a href="https://www.highcharts.com/blog">Blog</a></li><li><button class="" aria-controls="app-navbar-nav" aria-expanded="false" type="button">About<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li></ul></nav><div class="App-header-icons"><button aria-label="Search" class="App-header-icon App-header-search" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span class="App-header-search-text">Search</span></button><a arial-label="Open account" class="App-header-icon" title="Open Account" href="/account"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a></div><div class="App-header-buttons"><p>Start your Highcharts journey today</p><div><a class="Button Button-primary Button-small" href="https://www.highcharts.com/download"><div class="Button-content">Try for Free</div></a><a class="Button Button-secondary Button-small" href="/"><div class="Button-content">See Pricing</div></a></div></div></header><main role="main" tabindex="-1" id="main" class="App-section  container"><nav aria-label="You are here" class="Breadcrumbs"><ol><li><a href="https://www.highcharts.com">Home</a></li><li aria-current="page" class="Breadcrumbs-active">Webshop</li></ol></nav><div class="App-section Sla-page"><div class="Header"><div class="Header-top"><h2 class="h1">Standard License Agreement 15.2</h2><a class="Button Button-secondary Button-small" href="/license-15.2.pdf" target="_blank" rel="noreferrer"><div class="Button-content">Download PDF</div></a></div><div class="Header-description"><div class="Header-description-container"><p></p></div></div></div><div class="row"><div class="col-md-3 col-12"><nav class="Sla-page-nav"><h3 class="Sla-page-category">Annual</h3><ul><li><a href="/license-annual-1.42">1.42</a></li><li><a href="/license-annual-1.41">1.41</a></li><li><a href="/license-annual-1.4">1.4</a></li><li><a href="/license-annual-1.3">1.3</a></li><li><a href="/license-annual-1.2">1.2</a></li><li><a href="/license-annual-1.1">1.1</a></li><li><a href="/license-annual-1.0">1.0</a></li></ul><h3 class="Sla-page-category">Perpetual</h3><ul><li><a class="active" href="/license-15.2">15.2</a><ul><li><a href="/license-15.2#1">1. Definitions</a></li><li><a href="/license-15.2#2">2. Ownership and Copyright</a></li><li><a href="/license-15.2#3">3. Grant of License and Limitations</a></li><li><a href="/license-15.2#3.1">3.1. Scope of License</a></li><li><a href="/license-15.2#3.2">3.2. General Limitations to the License</a></li><li><a href="/license-15.2#3.2.1">3.2.1. Number of Developers</a></li><li><a href="/license-15.2#3.2.2">3.2.2. Usage by Affiliates</a></li><li><a href="/license-15.2#3.2.3">3.2.3. Access to new Releases</a></li><li><a href="/license-15.2#3.2.4">3.2.4. Access to Source Code</a></li><li><a href="/license-15.2#3.2.5">3.2.5. Usage of Software in competing products</a></li><li><a href="/license-15.2#3.3">3.3. Identification of Licensee applications or products and optional purchase of License to future applications or products</a></li><li><a href="/license-15.2#3.4">3.4. Special terms for Highcharts Dashboards</a></li><li><a href="/license-15.2#4">4. License types and usage rights included</a></li><li><a href="/license-15.2#4.1">4.1. Internal License</a></li><li><a href="/license-15.2#4.2">4.2. SaaS License</a></li><li><a href="/license-15.2#4.3">4.3. SaaS+ License</a></li><li><a href="/license-15.2#4.4">4.4. OEM License</a></li><li><a href="/license-15.2#4.4.1">4.4.1. Grants under the OEM License</a></li><li><a href="/license-15.2#4.4.2">4.4.2. Limitations to the OEM License</a></li><li><a href="/license-15.2#4.4.3">4.4.3. Optional addition of Websites, Internal Applications, SaaS Application(s) and/or Web Application(s) to the OEM License</a></li><li><a href="/license-15.2#5">5. Highcharts Advantage</a></li><li><a href="/license-15.2#5.1">5.1. Enrollment and Auto-Renewal</a></li><li><a href="/license-15.2#5.2">5.2. Optional Fixed Advantage Period</a></li><li><a href="/license-15.2#5.3">5.3. Entitlements and limitations</a></li><li><a href="/license-15.2#5.4">5.4. Opt Out</a></li><li><a href="/license-15.2#5.5">5.5. Amendments</a></li><li><a href="/license-15.2#6">6. License Fee and Highcharts Advantage Fee</a></li><li><a href="/license-15.2#7">7. Delivery</a></li><li><a href="/license-15.2#8">8. Marketing and descriptions of Licensed Software</a></li><li><a href="/license-15.2#9">9. Warranties and Representations</a></li><li><a href="/license-15.2#9.1">9.1. Scope</a></li><li><a href="/license-15.2#9.2">9.2. Highsoft&#x27;s Warranties and Representations</a></li><li><a href="/license-15.2#9.3">9.3. Licensee&#x27;s Remedies</a></li><li><a href="/license-15.2#10">10. Limitation of Liability</a></li><li><a href="/license-15.2#11">11. Intellectual Property Infringement</a></li><li><a href="/license-15.2#12">12. Confidentiality</a></li><li><a href="/license-15.2#13">13. Term and Termination</a></li><li><a href="/license-15.2#13.1">13.1. Term</a></li><li><a href="/license-15.2#13.2">13.2. Effects of Expiration</a></li><li><a href="/license-15.2#13.3">13.3. Termination</a></li><li><a href="/license-15.2#14">14. Non-assignment</a></li><li><a href="/license-15.2#15">15. Applicable Law and Venue</a></li><li><a href="/license-15.2#16">16. Processing of Personal Data</a></li><li><a href="/license-15.2#17">17. Miscellaneous</a></li><li><a href="/license-15.2#17.1">17.1. Relationship between Parties</a></li><li><a href="/license-15.2#17.2">17.2. Audit</a></li><li><a href="/license-15.2#17.3">17.3. Severability</a></li><li><a href="/license-15.2#17.4">17.4. Waiver</a></li><li><a href="/license-15.2#17.5">17.5. Entire Agreement</a></li><li><a href="/license-15.2#17.6">17.6. Battle of Forms</a></li><li><a href="/license-15.2#17.7">17.7. Amendments</a></li><li><a href="/license-15.2#17.8">17.8. License Statement and Changes to the License</a></li><li><a href="/license-15.2#17.9">17.9. Notices</a></li></ul></li><li><a href="/license-15.1">15.1</a></li><li><a href="/license-15.0">15.0</a></li><li><a href="/license-14.1">14.1</a></li><li><a href="/license-14.0">14.0</a></li><li><a href="/license-13.0">13.0</a></li><li><a href="/license-12.2">12.2</a></li><li><a href="/license-12.1">12.1</a></li><li><a href="/license-12.0">12.0</a></li><li><a href="/license-11.0">11.0</a></li><li><a href="/license-10.1">10.1</a></li><li><a href="/license-10.0">10.0</a></li><li><a href="/license-9.0">9.0</a></li><li><a href="/license-8.0">8.0</a></li><li><a href="/license-7.0">7.0</a></li><li><a href="/license-6.0">6.0</a></li><li><a href="/license-5.0">5.0</a></li><li><a href="/license-4.0">4.0</a></li><li><a href="/license-3.1">3.1</a></li><li><a href="/license-3.0">3.0</a></li><li><a href="/license-2.2">2.2</a></li><li><a href="/license-2.1">2.1</a></li><li><a href="/license-2.0">2.0</a></li></ul></nav></div><div class="col-md-9 col-12"><div class="Sla-page-content"><p>This Standard License Agreement sets forth the terms and conditions governing all purchases of License(s) to and use of Software owned and delivered by Highsoft AS, the company behind Highcharts.</p><p>By installing or using Software or any part thereof, Licensee agrees to be bound by this Standard License Agreement, unless Licensee is using the Software for a non-commercial purpose authorized by Highsoft which is governed by separate terms for non-commercial usage.</p><h3 id="1">1. Definitions</h3><p><strong>Agreement </strong>shall mean this document and the License Statement;</p><p><strong>Affiliate </strong>shall mean any entity that directly, or indirectly controls, is controlled by, or is under common control with the subject entity. “Control”, for purposes of this definition, shall mean direct or indirect ownership of, or control of, more than 50% of the voting interests of the subject;</p><p><strong>Affiliate Fee </strong>shall mean the additional fee payable by Licensee to Highsoft for extending purchased License(s) to apply also to Licensee’s Affiliates, if Licensee so chooses pursuant to section 3.2.2;</p><p><strong>Confidential Information </strong>shall mean any and all written, verbal, or demonstrated information of proprietary and/or confidential nature provided by one Party to the other in connection with this Agreement; Confidential information shall include, without limitation, information relating to technologies, finances and legal affairs which relate in any manner to a Party’s actual, or anticipated business whether obtained in tangible or intangible form, including oral or visual. Confidential Information shall not include A) Licensee’s name, logo, the existence of a contractual relationship between the Parties and the product licensed under this Agreement, or B) information that (i) is generally known to the public at the time of disclosure; (ii) is lawfully received or obtained by the receiving Party from a Third Party who has rightful possession of Confidential Information; (iii) becomes generally known to the public after the time of disclosure, but not as a result of disclosure by the receiving Party, or (iv) is already in the possession of the receiving Party prior to the signing of this Agreement;</p><p><strong>Customer Installation </strong>shall mean any distribution of Licensed Software as an integral part of a Licensee Product through installation of such product on a server owned or operated by a Licensee customer pursuant to an OEM License granted according to section 4.4 below. One Customer Installation shall for the purposes of the Agreement be regarded as equal to one sale of a Licensee Product to a Licensee customer and the subsequent distribution of Licensed Software to License customer through installation of the Licensee Product, regardless of the number of users within the Licensee customers organization authorized to use the installed Licensee Product. The number of authorized Customer Installations is defined in the License Statement and is not subject to renewal, recurrence or re-use;</p><p><strong>Customer Installation with Developer Rights </strong>shall mean a Customer Installation that is based on an OEM License authorizing the Licensee’s customer, after such installation, to customize Licensed Software for its own purposes;</p><p><strong>Delivery Date </strong>shall mean the date Licensee is invoiced by Highsoft for the applicable Licensed Software;</p><p><strong>Developer </strong>shall mean any unnamed person, whether an employee or subcontractor of Licensee, who will be simultaneously working with the API and/or source code of the Licensed Software. The number of Developers authorized to simultaneously work with the Licensed Software is defined in the License Statement;</p><p><strong>Highcharts Advantage </strong>shall mean the maintenance and support services offered by Highsoft, as defined in section 5 below, which Licensee is entitled to receive for as long as Licensee is validly enrolled in the Highcharts Advantage plan;</p><p><strong>Highcharts Advantage Fee </strong>shall mean the fee payable by Licensee to Highsoft for each subsequent and automatic renewal of Licensee’s enrollment in Highcharts Advantage plan following the initial twelve (12) months included in the License Fee at no additional cost, or the fee payable by License to Highsoft for its enrollment in Highcharts Advantage plan as a Fixed Advantage Period as set out in section 5.2;</p><p><strong>Highsoft </strong>shall mean Highsoft AS, the company behind Highcharts, a Norwegian corporation with organization no. 996 840 506;</p><p><strong>Highsoft Website </strong>shall mean<!-- --> <a href="https://www.highcharts.com/" target="_blank" rel="noreferrer" class="Sla-page-link">www.highcharts.com</a><a href="https://www.highcharts.com/" target="_blank" rel="noreferrer" class="Sla-page-link">,</a> including subdomains;</p><p><strong>Internal Application </strong>shall mean software solutions or applications which fully or partly includes Licensed Software, and which is used solely for internal purposes by Licensee’s employees and/or contractors inside the firewall of Licensee’s network. An Internal Application shall not be used for external purposes and shall under no circumstance be used by or with Licensee’s customers;</p><p><strong>Internal License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use the Licensed Software as such on websites and Internal Applications as further described in section 4.1.</p><p><strong>License </strong>shall mean the right to use the Licensed Software granted to Licensee by this Agreement, in the form of either an Internal License, SaaS License, SaaS+ License and/or an OEM License. Upon entering into this Agreement Licensee must choose one of the license types. The sets of usage rights granted by Highsoft under each license type, are defined in section 4.1-4.4 of this Agreement;</p><p><strong>License Fee </strong>shall mean the fee payable by Licensee to Highsoft for the right to use the Licensed Software and for the Licensee’s initial twelve (12) months enrollment in Highcharts Advantage after Delivery date, which is included in the License Fee at no additional cost;</p><p><strong>Licensed Software </strong>shall mean the Software products licensed to Licensee through this Agreement, as chosen by Licensee upon purchase and confirmed in the License Statement;</p><p><strong>Licensee </strong>shall mean the legal entity to which License has been granted, as expressly stated in the License Statement;</p><p><strong>Licensee Product </strong>shall mean any software product, application or solution, marketed by Licensee, in which Licensed Software may be incorporated solely pursuant to an OEM License in accordance with section 4.4 and which has been approved by Highsoft as a Licensee Product by express identification as such in the License Statement. For the avoidance of doubt, the term Licensee Product shall not include SaaS Applications or Web Applications offered by Licensee pursuant to a SaaS License or a SaaS+ License in accordance with section 4.2 or 4.3;</p><p><strong>License Statement </strong>shall mean the document sent from Highsoft to Licensee as a link along with the confirmation of the purchase of the License, and which expressly identifies the details of the License, including but not limited to the Licensed Software, the number of authorized Developers, the License ID-number, the expressed name(s) of the applicable Web Applications, SaaS Application(s) and Licensee Products (as</p><p>applicable), Licensee’s enrollment in Highcharts Advantage, and applicable terms hereunder, as further set out in section 17.8. In the case of any subsequent changes to the License in accordance with section 17.8, the License Statement will be adjusted accordingly;</p><p><strong>OEM License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use Licensed Software as an integral part of a Licensee Product which will be supplied to Third Party through a Customer Installation, as further described in section 4.4;</p><p><strong>Official Integrations and Add-ons </strong>shall mean integrations, wrappers, add-ons, plug-ins and software framework which are made available and supported by Highsoft as an additional free-of-charge service not to be deemed part of the Licensed Software, for the purpose of enhancing the use of the Software and to make integration and programming easier, for instance by adding customized features or by simplifying the development environment. Such Official Integrations and Add-ons may include opens source software and are made available free-of-charge under the MIT-license or other open-source licenses, as applicable. Information about Official Integrations and Add-ons is available on Highsoft´s website.</p><p><strong>Optional Dependencies </strong>shall mean optional extensions and features to the Software products which are made available and supported by Highsoft as an additional free-of-charge service not to be deemed part of the Licensed Software and which depend in whole or in part on external libraries. Such Optional Dependencies may include open-source software and are made available free-of-charge under the MIT-license or other open-source licenses. Information about Optional Dependencies is available on Highsoft’s Website;</p><p><strong>Party </strong>shall mean a party to this Agreement;</p><p><strong>Release </strong>shall mean, with respect to any Licensed Software, any release of minor or substantial updates, news and improvements to Licensed Software, which may include bug fixes, redesign, and refactoring of the API. Such improvements may typically include modifications to the Software which increase the efficiency, ease of use and/or add additional capabilities or functionality.</p><p><strong>SaaS Application </strong>shall mean a software solution or application offered by Licensee as a service (i.e. not a product) which fully or partly includes Licensed Software and which is made available by Licensee to any number of Third Parties from a server outside such Third Parties’ premises which is owned or controlled by Licensee, and which can be distributed as a web application, desktop application or mobile application, and which may come in various versions for different platforms (such as e.g. iOS and Android versions of a mobile application), provided that such software product, solution or application has been approved by Highsoft as a SaaS Application by express identification as such in the License Statement;</p><p><strong>SaaS License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use the Licensed Software in one (1) SaaS Application or one (1) Web Application, as further described in section 4.2;</p><p><strong>SaaS+ License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use the Licensed Software in up to five (5) SaaS Applications and/or Web Applications (total number of applications not to exceed five), as further described in section 4.3;</p><p><strong>Software </strong>shall mean any and all proprietary software products owned by Highsoft, including without limitation Highcharts Core, Highcharts Stock, Highcharts Maps, Highcharts Gantt and Highcharts Dashboards. For the purposes of this Agreement, Software shall not include Official Integrations, Add-ons or Optional Dependencies;</p><p><strong>Third Party </strong>shall mean any other entity than the Parties, including but not limited to Licensee’s customers<strong>;</strong></p><p><strong>Web Application </strong>shall mean a software solution or application running on web server(s) owned, controlled or hosted by Licensee which fully or partly includes Licensed Software, which is made available by Licensee to a Third Party, and which can be distributed as a web application, desktop application or mobile application, and which may come in various versions for different platforms (such as e.g. iOS and Android versions of a mobile application);</p><h3 id="2">2. Ownership and Copyright</h3><p>All Software is the property of Highsoft and is protected by copyright law as well as other statutory and non- statutory intellectual property law. Highsoft product names and trade names are owned by Highsoft and protected under trademark law, both as registered trademarks and through use.</p><p>All title and copyrights in and to Software, trademarks and accompanying materials and rights are and shall remain owned fully and solely by Highsoft, and nothing herein shall involve or imply any transfer of such ownership or rights.</p><p>Through this Agreement, Software is licensed, not sold.</p><p>Highsoft reserves all rights not expressly granted to Licensee in this Agreement. Without limiting the generality of the foregoing, Licensee acknowledges and agrees that: (a) except as specifically set forth in this Agreement, Highsoft retains all right, title and interest in and to Software, and Licensee does not acquire any right, title or interest to Software except as set forth herein; (b) any configuration or deployment of Software shall not affect or diminish Highsoft’s rights, title or interest in and to Software. Except as stated in the foregoing subsection, nothing in this Agreement shall limit in any way Highsoft’s right to develop, use, license, create derivative works of, or otherwise exploit Software, or to permit Third Parties to do so.</p><p>Highsoft acknowledges and agrees that (i) Licensee retains all rights, title and interest in and to any Licensee Product and to any Licensee-owned SaaS Application or Web Application, and Highsoft does not acquire any right, title, or interest in or to such product or application; and (ii) any integration of Licensed Software with Licensee Product or Licensee owned SaaS Application or Web Application shall not affect or diminish Licensee’s rights, title, and interest in and to such product or application.</p><h3 id="3">3. Grant of License and Limitations</h3><h4 id="3.1">3.1. Scope of License</h4><p>Subject to the terms and conditions of this Agreement and upon Licensee&#x27;s full payment of the applicable fees, Highsoft grants Licensee the right to use the Licensed Software strictly within the scope of the granted License type, and to receive services and Releases included in Highcharts Advantage as described below.</p><p>The License, which shall be registered in Licensee&#x27;s name, shall commence on Delivery Date and be effective until terminated in accordance with the terms and conditions set forth in this Agreement.</p><p>When entering into this Agreement, Licensee must choose and state:</p><ol start="1"><li>the Software products to be included in the license;</li><li>one or more of the License types described in section 4, and;</li><li>the number of authorized Developers to be included in the License, and;</li><li>which Web Application(s) and/or SaaS Application(s) the Licensed Software will be used in, if purchasing a SaaS License or SaaS+ License as further described in sections 4.2-4.3;</li><li>which Licensee Product(s) the Licensed Software will be used in, if purchasing an OEM License as further described in section 4.4;</li><li>the number of Customer Installations, with or without developer rights, to be included in the License, if purchasing OEM License(s) as further described in section 4.4;</li><li>Any Affiliates to be included in the License.</li></ol><p>The information listed in i)-vii) shall be stated in the License Statement.</p><p>All Optional Dependencies and Official Integrations and Add-ons are made available by Highsoft as an additional free-of-charge service, irrespective of the chosen Software product and License type, and shall not be deemed part of the Licensed Software.</p><p>Each License type grants Licensee a specific set of usage rights to Licensed Software, as described respectively in section 4.1 to 4.4 below. The offered license types described in section 4.1 (Internal License),</p><p>4.2 (SaaS License) and 4.3 (SaaS+ License) are complementary in the sense that SaaS License and SaaS+ License each includes a gradual broadened scope and more extensive usage rights than the Internal License,</p><p>e.g. the SaaS License consumes and includes more extensive rights than the Internal License. For the avoidance of doubt, an OEM License does not include any of the rights covered by an Internal License, a SaaS License or a SaaS+ License, unless such rights are added in accordance with section 4.4.3 below through a customization of the OEM License.</p><p>Depending on the purchased License type(s), sections 4.1, 4.2, 4.3 and/or 4.4 below shall apply. The License type(s) chosen by Licensee shall be stated in Appendix A and in the License Statement.</p><p>Upon request, Highsoft may provide advice on which License type will be suitable for Licensee as this will mainly depend on Licensee’s use case. In such case, Highsoft will use its best effort to suggest a suitable License type based on the information provided by Licensee. Licensee shall bear the risk for the correctness and completeness of the information provided, and Highsoft provides no guarantees, express or implied, as</p><p>to the suitability of the chosen License type(s) and hereby disclaims any and all liability related to the choice made by Licensee.</p><h4 id="3.2">3.2. General Limitations to the License</h4><h5 id="3.2.1">3.2.1. Number of Developers</h5><p>Each License granted by Highsoft under this Agreement comes with a defined (limited) number of authorized Developers. Licensee acknowledges, accepts, and undertakes to ensure that the actual number of Developers at any time, whether employees or subcontractors of Licensee, shall not exceed the total number of Developers stated in License Statement. Any breach of this restriction shall be considered a material breach of the Agreement.</p><h5 id="3.2.2">3.2.2. Usage by Affiliates</h5><p>The License is granted to Licensee only and does not extend to Licensee’s Affiliates at the commencement of this Agreement, unless otherwise agreed between the Parties by way of express identification of this extended right in the License Statement, and subject to Licensee’s payment of the additional Affiliate Fee.</p><p>Licensee may at any time and subject to an additional Affiliate Fee purchase a right for its Affiliates to use the Licensed Software within the scope of the purchased License(s) and the number of Developers and Customer Installations defined therein (if applicable). Any such subsequent extension of the License to also cover Licensee’s Affiliates must, in order to be valid, be agreed in writing between the Parties. If Licensee wishes to purchase such an Affiliate extension, Licensee shall send to Highsoft a written notice, containing (a) the number of Affiliates, and (b) the following information for each of the Affiliates that Licensee wishes to include in the purchased License(s):</p><ol start="1"><li>Company name</li><li>Company registration no.</li><li>Nationality</li><li>Address</li><li>Contact information</li><li>Contact person</li></ol><p>Highsoft will thereafter update the License Statement, which will state the applicable Affiliates included in the License. An extension of the License to include Affiliates shall for the avoidance of doubt not expand the usage rights granted through this Agreement or expand the scope of the granted License unless such expansions of the License are concurrently requested and agreed between the Parties pursuant to section 17.8.</p><h5 id="3.2.3">3.2.3. Access to new Releases</h5><p>Subject to restrictions and limitations applicable to the purchased License type, a purchase of a License grants Licensee the right to use the applicable Release of the Software at the time of purchase. In order to gain access to new Releases, Licensee must remain enrolled in the Highcharts Advantage plan as defined in section 5 below. Upon purchase of a License, Licensee will be automatically enrolled in the Highcharts</p><p>Advantage plan, commencing on Delivery Date, and the first twelve (12) months of Licensee’s enrollment in the Highcharts Advantage plan shall be included in the License Fee at no additional cost.</p><p>Licensee undertakes not to make use of any Software in other or newer versions than such Release(s) of the Licensed Software which Licensee is entitled to use pursuant to a valid enrollment in the Highcharts Advantage plan. Any breach of this restriction shall be considered a material breach of the Agreement.</p><p>A License granted under this Agreement is perpetual and not subject to renewal. The perpetual nature of the License is strictly limited to Release(s) of the Software to which Licensee has lawfully gained access and usage rights during a valid enrollment in the Highcharts Advantage plan. Notwithstanding its (otherwise) perpetual nature, such License shall nevertheless expire if the Agreement is lawfully terminated by Highsoft due to Licensee’s material breach, in accordance with section 13.3.</p><h5 id="3.2.4">3.2.4. Access to Source Code</h5><p>Licensee may obtain Licensed Software source code by downloading the source code from the Highsoft Website, make own edits, and keep its own repositories with the modified source code.</p><p>Licensee shall not modify, delete or obscure any notices of proprietary rights or any Software identification or restrictions on or in Software found in the license-header of the code files.</p><h5 id="3.2.5">3.2.5. Usage of Software in competing products</h5><p>Licensee undertakes not to use Software as part of any offerings comprising functionality that is substantially similar to that of Software, during the term of this Agreement, and for a period of three (3) years after its termination, however occasioned. Nothing in this Agreement shall, however, be construed to preclude Licensee from using, marketing, licensing and/or selling software which is developed by Licensee on a fully independent basis, even if such software has the same or similar functionality as Software, provided always that such activities do not infringe or jeopardize Highsoft’s intellectual property rights or are in breach of other related statutory or non-statutory rules of law.</p><h4 id="3.3">3.3. Identification of Licensee applications or products and optional purchase of License to future applications or products</h4><p>Licensed Software may only be incorporated into such SaaS Applications, Web Applications or Licensee Products as expressly identified and approved by Highsoft in the License Statement, and the names of such applications or products (as applicable) shall be provided by Licensee upon entering into this Agreement, in accordance with section 3.1. The Parties may agree in writing that the names of the SaaS Applications, Web Applications or Licensee Products (as applicable) shall be provided by Licensee to Highsoft after the Delivery Date, i.e. if the applications or products are still unnamed at the time of entering into this Agreement. In such case, the number of SaaS Applications, Web Applications or Licensee Products (as applicable) shall be listed in Appendix A and the License Statement, and the names of the SaaS Applications, Web Applications or Licensee Products (as applicable) shall be provided by Licensee to Highsoft after the Delivery Date, upon which the License Statement will be updated. Licensee is not authorized to use Licensed Software in any</p><p>SaaS Applications, Web Applications or Licensee Products not identified in the License Statement, i.e. after notice has been provided to Highsoft in accordance with this paragraph.</p><p>Licensee may also choose to purchase a SaaS License, SaaS+ License or OEM License for use in future SaaS Applications, Web Applications or Licensee Products. In such case, Licensee must, upon purchase of the License, provide to Highsoft the number of SaaS Applications, Web Applications and/or Licensee Products (as applicable) to be included in the License, which will be listed as unnamed products in the License Statement.</p><p>When Licensee wishes to utilize the purchased License for the optional future applications or products, Licensee shall give notice to Highsoft of this and state the names of the applications and/or products as well as any changes (if applicable) in the scope of the purchased License required by Licensee before incorporation of the Licensed Software into the applications or products, upon which the License Statement shall be updated accordingly. For the avoidance of doubt, the requirement that Licensed Software may only be incorporated into such SaaS Applications, Web applications or Licensee Products as expressly identified and approved by Highsoft in the License Statement, shall also apply for such optional future applications or products, and the Licensee is not authorized to incorporate the Licensed Software into such applications or products before Licensee has notified Highsoft in accordance with this paragraph and the License Statement has been adjusted accordingly.</p><p>While the non-reusable nature of SaaS, SaaS+ and OEM Licenses does not authorize Licensee to change or replace a SaaS Application, Web Application or Licensee Product with another application or product under the same License, this shall not be deemed to preclude Licensee from changing the name of a SaaS Application, Web Application or Licensee product included in a License, and to request that the License Statement is adjusted accordingly.</p><h4 id="3.4">3.4. Special terms for Highcharts Dashboards</h4><p>The following terms and conditions shall be applicable insofar as the Licensed Software includes Highcharts Dashboards, in addition to the terms otherwise set out herein this Agreement.</p><p>In addition to using the standard components included in the library provided by Highsoft to a Licensee holding a License to Highcharts Dashboards, Highcharts Dashboards enables Developers to make custom components or add Third Party components to dashboards created using Highcharts Dashboards. For the avoidance of doubt, the warranties and indemnifications provided by Highsoft in section 8 and 10 of this Agreement shall solely apply to the library and the standard components provided by Highsoft to Licensee in accordance with section 7. Licensee shall indemnify and hold Highsoft harmless from and against any and all losses, claims and damages related to customized components or Third Party components developed or utilized through Highcharts Dashboards.</p><p>Highcharts Dashboards enables Developers to further enable other employees or contractors of Licensee, or Licensee’s customers and end users, to modify dashboards through the “Edit Mode”. The usage of this functionality shall for the avoidance of doubt not lead to such persons being regarded as Developers or count</p><p>towards the total count of Licensee’s included Developers, insofar as such persons will not be working with or accessing the API and/or source code of the Licensed Software. The restrictions related to generation of static content in section 4.1 below shall furthermore not be construed as prohibiting Licensee from enabling users to access the “Editor Mode” to modify, add, remove, move, or resize components in dashboards created by Licensee holding an Internal License, in so far as the parameters of interaction and modification of such components remain the same for all such users, and such actions do not require working with or accessing the API and/or source code of the Licensed Software.</p><h3 id="4">4. License types and usage rights included</h3><h4 id="4.1">4.1. Internal License</h4><p>Through an Internal License, Highsoft grants Licensee a non-exclusive, perpetual (for applicable Releases), non-sublicensable, worldwide right to install, reproduce, use and further develop Licensed Software as such:</p><ol start="1"><li>on any number of public or private websites (including subdomains and intranet sites) for generation of static content, and;</li><li>on any Internal Applications</li></ol><p>An Internal License authorizes Licensee to use the Licensed Software for internal purposes only and extends to Licensee’s employees and contractors, but not to its clients or other Third Parties. An Internal License does not include any right for Licensee to use the Licensed Software in a SaaS Application, Web Application or a Licensee Product, nor does it authorized Licensee to perform Customer Installations.</p><p>The condition that the right to use the Licensed Software under an Internal License is limited to generation of static content only, means that the data set in the content provided by Licensee on websites must be the same (identical) for all users, and that such websites shall not generate individually tailored content adapted to any user’s personal data. For the avoidance of doubt, this does not prevent the use of the Licensed Software under an Internal License to create interactive content but requires that the parameters of the interaction of such content is the same for all users.</p><h4 id="4.2">4.2. SaaS License</h4><p>Through a SaaS License, Highsoft grants Licensee such rights that are covered by an Internal License with the addition of a non-exclusive, perpetual (for applicable Releases), non-reusable, worldwide right to install, reproduce, use and further develop Licensed Software as an integral part of either:</p><ol start="1" class="Sla-page-alpha-list"><li>one (1) SaaS Application, or;</li><li>one (1) Web Application,</li></ol><p>Licensed Software may be incorporated solely into a SaaS Application or a Web Application that has been expressly identified and approved by Highsoft in the License Statement. Licensee is allowed to make changes or further developments to the specified SaaS Application or Web Application. The non-reusable character of the SaaS License means that Licensee is not allowed to change or replace the SaaS Application or Web Application with a separate SaaS Application or Web Application under the same License.</p><p>A SaaS License does not authorize Licensee to perform Customer Installations, and any such Customer Installations distributed by a Licensee holding only a SaaS License shall therefore be deemed invalid and shall be considered a material breach of this Agreement.</p><p>Except for the authorized use of the Licensed Software in either one (1) SaaS Application or one (1) Web Application as specified in the License Statement, Licensees only holding a SaaS License is under no circumstances authorized to transfer, rent, lease, lend, sell, copy, redistribute, or sublicense any Licensed Software, in itself or together with other software, or in any other way make Software available to any Third Party. Any attempt to do so shall be considered a material breach of this Agreement.</p><h4 id="4.3">4.3. SaaS+ License</h4><p>Through a SaaS+ License, Highsoft grants Licensee such rights that are covered by an Internal License with the addition of a non-exclusive, perpetual (for applicable Releases), non-reusable, worldwide right to install, reproduce, use and further develop Licensed Software in either:</p><ol start="1" class="Sla-page-alpha-list"><li>Up to five (5) independent SaaS Applications, or;</li><li>Up to five (5) independent Web Applications, or;</li><li>Up to five (5) independent SaaS Applications and Web Applications as long as the total number of applications does not exceed five (5).</li></ol><p>A SaaS+ License does not authorize Licensee to perform Customer Installations, and any such Customer Installations performed by a Licensee holding only a SaaS+ License shall therefore be deemed unauthorized and invalid and shall be considered a material breach of this Agreement.</p><p>Except for the authorized use of the Licensed Software in accordance with letter a., b. or c. in this section 4.3 and as specified in the License Statement, Licensees only holding a SaaS+ License are under no circumstances authorized to transfer, rent, lease, lend, sell, copy, redistribute, or sublicense any Licensed Software, in itself or together with other software, or in any other way make Licensed Software available to any Third Party. Any attempt to do so shall be considered a material breach of this Agreement.</p><h4 id="4.4">4.4. OEM License</h4><h5 id="4.4.1">4.4.1. Grants under the OEM License</h5><p>Through an OEM License, Highsoft grants Licensee a non-exclusive, perpetual (for applicable Releases), non-reusable, worldwide right to install, reproduce, use, sublicense and further develop Licensed Software as an integral part of a Licensee Product, provided that such Licensee Product be supplied to Third Party through a Customer Installation, with or without the right for Licensee’s customers to work with the API and/or source code of the Licensed Software (“<strong>Developer Rights</strong>”), dependent on Licensee’s choice as specified in License Statement.</p><p>The authorization to sublicense Licensed Software only applies when and as long as such Licensed Software lawfully is incorporated with Licensee Product supplied to Third Party in accordance with this Agreement.</p><h5 id="4.4.2">4.4.2. Limitations to the OEM License</h5><p>Licensee acknowledges, accepts, and undertakes to ensure that the actual number of Licensee Products and Customer Installations, with or without Developer Rights, shall not at any time exceed the total number of Licensee Products and Customer Installations selected by Licensee upon purchase of the License and specified in the License Statement.</p><p>Licensed Software may only be incorporated into such Licensee Products as expressly identified and approved by Highsoft in the License Statement.</p><p>Licensee shall be prohibited from reselling any Licensee Product or otherwise from granting its customers permission to use the Licensed Software, in any manner that contradicts the terms and restrictions of this Agreement or the License(s) granted hereunder.</p><h5 id="4.4.3">4.4.3. Optional addition of Websites, Internal Applications, SaaS Application(s) and/or Web Application(s) to the OEM License</h5><p>Licensee may, subject to an additional fee, choose to customize the OEM License by adding the usage rights granted under the Internal License, SaaS License or SaaS+ License. By doing so, depending on the chosen additions to the OEM License, Licensee will be authorized to use the Licensed Software as such on any websites (public or private) and Internal Applications, to incorporate Licensed Software into the number of SaaS Application and/or Web Application as specified by Licensee and approved by Highsoft in the License Statement.</p><h3 id="5">5. Highcharts Advantage</h3><h4 id="5.1">5.1. Enrollment and Auto-Renewal</h4><p>When purchasing a License under this Agreement, Licensee is automatically enrolled in Highsoft’s Highcharts Advantage plan. The Highcharts Advantage plan operates in twelve (12) months intervals commencing on Delivery Date (each twelve-month period constituting an “<strong>Advantage Period</strong>”). The Highcharts Advantage plan is based on a continuous subscription to Highcharts Advantage, which is automatically renewed at the end of each Advantage Period (“<strong>Auto-Renewal</strong>”), unless cancelled in accordance with section 5.4 below. Licensee’s continued enrollment in Highcharts Advantage plan is subject to payment of the applicable Highcharts Advantage Fee in accordance with section 6 below.</p><p>Auto-Renewal of Licensee’s enrollment in the Highcharts Advantage plan is made for the complete License and includes the same number of Developers and/or Customer Installations (as applicable) as set out in the License Statement. Licensee may prior to the end of each Advantage Period request upgrades to the License by notice to Highsoft in accordance with sections 17.8 and 17.9, and may hereunder request increasing the number of Developers and/or Customer Installations, or additions of new SaaS Applications, Web Applications or Licensee Products (as applicable), to be included in the License upon Auto-Renewal,</p><h4 id="5.2">5.2. Optional Fixed Advantage Period</h4><p>Instead of the subscription-based Auto-Renewal of Highcharts Advantage described above in section 5.1, Licensee may, at the time of purchase, choose to enroll in the Highcharts Advantage plan for fixed periods of up to five (5) years at a time (“<strong>Fixed Advantage Period</strong>”). The duration of Licensee’s Fixed Advantage Period shall in such case be stated in the License Statement. At the end of the Fixed Advantage Period, Licensee’s enrollment will expire without further notice, unless License prior to the end of the Fixed Advantage Period renews its enrollment in the Highcharts Advantage plan with one or more Advantage Periods (“<strong>Extension</strong>”).</p><p>In order to choose a Fixed Advantage Period, Licensee must give notice to Highsoft upon purchase. As set forth in section 17.8, the selected option for Licensee’s enrollment in the Highcharts Advantage plan will be listed in the License Statement. Unless otherwise stated at the time of purchase, Licensee’s enrollment in the Highcharts Advantage plan will automatically be subject to Auto-Renewal as set forth in section 5.1.</p><h4 id="5.3">5.3. Entitlements and limitations</h4><p>Under a valid and effective enrollment in the Highcharts Advantage plan, Licensee shall be entitled to receive:</p><ol start="1"><li>All new Releases of the Licensed Software released during the applicable period;</li><li>Ten (10) hours of personalized technical support per Developer per twelve (12) month period based on the number of Developers stated in the License Statement;</li><li>Technical support by e-mail;</li><li>Priority response, no later than 36 hours on working days in Norway after the request was received;</li><li>Access to 2nd line support by core developers;</li><li>Online text chat with 1st line support engineers;</li><li>Investigation of any claimed bug/error/malfunction/nonfunctioning of Licensed Software, and when possible suggestions as to corrective or work-around solutions to the problems;</li><li>Supply of emergency hot fixes to Licensed Software. This will be available as patches to the latest stable source code, and, if applicable, be included in the subsequent Release;</li><li>Guidance and advice on implementing Licensed Software with any Third-Party systems and platforms to the extent such implementation is authorized under this Agreement. This includes advice on best practices, code review and guidance on parts of the code that are directly related to using Software. The guidance and advice from Highsoft will not include general usage of the Third-Party system, components, platform or actual coding work;</li><li>Any bug and error fixing, malfunctioning of Licensed Software is to be delivered outside the personalized technical support hours.</li></ol><p>During each Advantage Period in which Licensee is validly enrolled in Highcharts Advantage, Highsoft will provide support for all Releases of Licensed Software released within that Advantage Period.</p><p>Highcharts Advantage does not cover issues arising in connection with implementation of Licensed Software in/to Licensee Products or Licensee’s own applications.</p><p>Highcharts Advantage as set forth in this section, shall not extend to any Third Parties to which Licensee distributes Licensee Products, SaaS Application(s) or Web Application(s) containing Licensed Software or any</p><p>part thereof. Support to any Licensee customers shall hence be Licensee’s full and sole responsibility. Highsoft may, at its sole discretion, at any time choose to discontinue the supply of new Releases.</p><h4 id="5.4">5.4. Opt Out</h4><p>Unless enrolled in a Fixed Advantage Plan, Licensee may at any time cancel its enrollment in the Highcharts Advantage plan by notice to Highsoft of such cancellation within sixty (60) days prior to the end of the current Advantage Period, upon which Licensee’s enrollment in Highcharts Advantage shall expire after the end of that Advantage Period (“<strong>Opt Out</strong>”). If the notice of Opt Out is provided later than sixty (60) days prior to the end of the current Advantage Period, Licensee’s enrollment in Highcharts Advantage shall expire at the end of the following Advantage Period. Upon Opt Out, Licensee will retain a perpetual License to the Releases of the Software to which Licensee has lawfully gained access and usage rights during its enrollment in the Highcharts Advantage plan, but will not be entitled to access to new Releases or the support services as set out in section 5.3 above.</p><h4 id="5.5">5.5. Amendments</h4><p>Licensee acknowledges and accepts that Highsoft may make changes to its business, license or support model or to the terms and conditions under which Highsoft is willing to offer its Software, and that in order for Highsoft to offer continued Auto-Renewal or Extension of Highcharts Advantage, Highsoft may from time to time amend this Agreement in order to reflect such changes. Upon Auto-Renewal or the purchase of an Extension of Licensee’s enrollment in the Highcharts Advantage plan, the enrollment in the Highcharts Advantage plan and the License to which the Highcharts Advantage relates shall be governed by the most- recent version of Highsoft’s Standard License Agreement as amended from time to time by Highsoft. The applicable version of Highsoft’s Standard License Agreement governing Licensee’s enrollment in the Highcharts Advantage plan and the License to which it relates, will be stated in the License Statement upon Auto-Renewal or Extension, and is available on the Highsoft Website. If Licensee is enrolled in Highcharts Advantage through a Fixed Advantage Period, Licensee acknowledges and accepts that changes made to Highsoft’s business, license or support model during the Fixed Advantage Period may require amendments of the Agreement in order to reflect the updated or adjusted offering appropriately.</p><h3 id="6">6. License Fee and Highcharts Advantage Fee</h3><p>Licensee shall upon purchase pay the agreed License Fee covering the purchase of Licensed Software and the included initial Advantage Period, or Fixed Advantage Period (if applicable), as detailed in the License Statement. Upon each Auto-Renewal of Licensee’s enrollment in the Highcharts Advantage plan, Licensee shall pay the Highcharts Advantage Fee applicable at the time of Auto-Renewal. If Licensee has elected a Fixed Advantage Period at the time of purchase, and wishes to purchase an Extension, Licensee shall pay the applicable Highcharts Advantage Fee at the time of such Extension.</p><p>Highsoft shall invoice Licensee and Licensee shall pay all invoices by the agreed payment method timely, which shall be no later than thirty (30) days from invoice date. In case of payment delay, Highsoft may claim late payment interest at the rate stipulated in applicable law.</p><p>Licensee shall be responsible for ensuring that its usage of the Software is in accordance with the scope of the License granted, as detailed in the License Statement. Licensee hereby accepts and agrees that in the case of Licensee’s usage of the Software which exceeds the agreed scope of the License, Highsoft may, following notice to Licensee, invoice Licensee corresponding to the exceeding usage and based on the applicable fees at the time of usage.</p><p>Each Party shall be fully and solely responsible for payment of any bank charges and/or local taxes imposed by the law of that Party&#x27;s home country related to the purchase of Licensed Software or Highcharts Advantage, and each Party shall indemnify, defend and hold harmless the other Party from any taxes, claims, costs or other liabilities related to the indemnifying Party’s taxes. Invoices from Highsoft will not include taxes, except VAT in the case of Norwegian customers. Licensee may not withhold any part of the invoiced amount as payment of taxes.</p><p>All Licenses and accompanying rights as well as Highcharts Advantage are granted to Licensee on the condition that all the due fees are paid to Highsoft in full and on time.</p><h3 id="7">7. Delivery</h3><p>During the term of this Agreement, Licensed Software shall be made available by Highsoft, and Licensee shall be authorized to download such Licensed Software from Highsoft Website. As set forth in sections 3.2.3 and 5 above, new Releases of Licensed Software shall only be available to Licensee as long as Licensee is validly enrolled in the Highcharts Advantage plan.</p><h3 id="8">8. Marketing and descriptions of Licensed Software</h3><p>Licensee may use Licensee’s own descriptions of the functionality provided by Licensed Software for the purposes of marketing Licensee’s own products, solutions or applications, including Licensee Products, if applicable, insofar as the descriptions are not misleading.</p><p>Licensee shall not do anything that might misrepresent the ownership of Software. Licensee undertakes not to brand Software as Licensee’s own or declare or give the impression that Licensee owns the copyright in Software.</p><p>Each Party may use the other Party’s name and logos in its marketing, promotion and website, in accordance with good business practice and as is reasonably necessary in order to describe and promote the Software or Licensee’s Product(s), SaaS Application(s) or Web Application(s), as applicable, including naming Licensee as a reference and showcasing Licensee’s publicly available charts which includes Licensed Software for the purposes of promoting or demonstrating the Software.</p><p>Licensee agrees that it will conduct its business in a manner that will not injure or jeopardize Highsoft’s reputation.</p><h3 id="9">9. Warranties and Representations</h3><h4 id="9.1">9.1. Scope</h4><p>Highsoft&#x27;s warranties and representations in this section 9 are limited to Licensed Software provided to Licensee under this Agreement. The warranties and representations provided herein does not cover and shall under no circumstances be deemed to cover any Official Integrations and Add-ons or Optional Dependencies.</p><h4 id="9.2">9.2. Highsoft&#x27;s Warranties and Representations</h4><p>Highsoft warrants and represents that:</p><ol start="1"><li>Licensed Software will perform substantially in accordance with Highsoft’s written specifications, provided that it has been used in accordance with all documentation and specifications made available on Highsoft&#x27;s Website, (a) for the duration of the Advantage Period in which the applicable Release has been issued by Highsoft, or (b) until replaced by a newer Release,</li><li>Highsoft will perform its obligations under this Agreement in accordance with all applicable laws and regulations,</li><li>Highsoft has the full and unconditional ownership of Licensed Software,</li><li>This Agreement does not infringe the intellectual property rights of any Third Party,</li><li>The Licensed Software does not include any Third-Party software,</li><li>Licensee may make full use of License granted to it in full knowledge of the above,</li><li>Highsoft has the requisite knowledge, personnel, resources and know-how to fully perform and deliver Licensed Software and associated services as stipulated by this Agreement in a professional manner,</li><li>Highsoft has not intentionally placed and will use its best efforts to avoid the placement of any Harmful Codes into Licensed Software provided under this Agreement. For the purpose of this section &quot;Harmful Codes&quot; shall be defined as any program that infects, damages and/or impairs another program or data, disables hardware or software, or permits or assists in the breach of data.</li></ol><h4 id="9.3">9.3. Licensee&#x27;s Remedies</h4><p>In the event of breach, or alleged breach of any of the warranties in section 9.2, Licensee shall promptly notify Highsoft and delete Software. Licensee’s sole remedy in such an event shall be that Highsoft shall re-supply or correct the Licensed Software so that it operates according to the warranties set out in section 9.2. The warranties shall not apply if Licensee has modified, or used Licensed Software improperly, or on an operating environment not approved by Highsoft. Improper use and unapproved operating environments will be as set forth in the documentation provided to Licensee on or prior to Delivery Date.</p><h3 id="10">10. Limitation of Liability</h3><p>All Software and support services supplied by Highsoft are provided ‘as is’ and may have errors and omissions. Thus, remedies are only available to Licensee in the event of any breach of the warranties set out in section 9.2, and Highsoft is unable to re-supply and correct the Licensed Software in accordance with section 9.3.</p><p>UNDER NO CIRCUMSTANCES, AND EVEN IF INFORMED THEREOF BY LICENSEE OR ANY OTHER PARTY, SHALL HIGHSOFT BE LIABLE FOR (i) LOSS OF, OR DAMAGE TO, DATA; (ii) SPECIAL, INCIDENTAL, CONSEQUENTIAL OR INDIRECT DAMAGES; OR (iii) LOST PROFITS, BUSINESS, REVENUE, GOODWILL, OR ANTICIPATED SAVINGS.</p><p>Incorporation of Licensed Software into a SaaS Application or Web Application shall not in any manner expand Highsoft’s liabilities under the Agreement. Thus, Highsoft shall not under any circumstance be neither responsible nor liable for any aspects of such SaaS Application(s) or Web Applications(s), including but not limited to its reliability, uptime/downtime, functioning or fitness for purpose. Any obligations, liabilities or warranties undertaken by Licensee towards its customers with respect to such SaaS Application(s) or Web Application(s) shall apply only between mentioned parties, and Licensee hereby undertakes to indemnify and hold Highsoft harmless from and against any and all losses, clams and damages related to the reliability, uptime/downtime, functioning or fitness for purpose of such SaaS Application(s) or Web Applications(s).</p><p>In all events, Highsoft’s liability for damages to Licensee for any cause whatsoever related to this Agreement, shall be limited to the sum of all fees paid or due by Licensee under this Agreement during the last twelve (12) months before the breach occurred.</p><h3 id="11">11. Intellectual Property Infringement</h3><p>Highsoft will defend, indemnify and hold Licensee harmless against any claim stating that Licensed Software is violating any Third-Party copyright provided that:</p><ol start="1"><li>Licensee promptly notifies Highsoft of the claim, such notice to be provided no later than ten (10) business days after receipt of said claim(s);</li><li>A copy of the notice(s) of copyright infringement is promptly sent to Highsoft in accordance with section 17.9;</li><li>Licensee in good faith cooperates with and assists Highsoft in the defense of the claim in question and meets reasonable requests from Highsoft in that respect;</li><li>Notwithstanding item iii. above, Highsoft shall have sole control of the defense and any related settlement negotiations in the case of legal proceedings; and</li><li>Licensee timely provides Highsoft with all necessary assistance, information and authority to perform the above.</li></ol><p>If Licensed Software is held by a final court ruling to be infringing any Third Party copyright Highsoft will at its option: (i) obtain the right for Licensee to continue to use such Software consistent with this Agreement; (ii) modify such Software so that it is non-infringing; or (iii) refund any and all invoiced amounts to Licensee and all of Highsoft’s obligations under this Agreement shall terminate upon written notice.</p><p>Notwithstanding the foregoing, Highsoft&#x27;s indemnity obligations under this section 11 shall under any circumstances be limited to the total amount invoiced to Licensee by Highsoft under this Agreement during the last twelve (12) months prior to the day when Licensee provided notice to Highsoft of claim subject to this section 11.</p><h3 id="12">12. Confidentiality</h3><p>For the purpose of this section each Party shall be called Disclosing Party and Receiving Party respectively.</p><p>Each Party acknowledges that Confidential Information is proprietary, that it is valuable to Disclosing Party and that any disclosure or unauthorized use thereof may cause irreparable harm and loss to Disclosing Party.</p><p>Obligations of Receiving Party in regard to Confidential Information:</p><ol start="1"><li>In consideration of the disclosure to Receiving Party of Confidential Information, Receiving Party agrees to receive and to treat Confidential Information on a confidential and restricted basis and to undertake the following additional obligations with respect thereto,</li><li>To use Confidential Information for the sole purpose of fulfilling this Agreement, or for the purpose of enhancing or improving the services provided under Highcharts Advantage or the general customer experience when doing business with Highsoft and/or Highsoft’s trusted partners, unless otherwise expressly agreed to in writing by Parties,</li><li>Not to duplicate, in whole or in part, any Confidential Information,</li><li>Subject to the next paragraph, not to disclose Confidential Information to Third Parties except on a need-to-know basis, and each such entity or individual person Receiving Confidential Information shall be notified of and required to abide by the terms and conditions of this Agreement,</li></ol><p>Information stated in the License Statement provided by Highsoft to Licensee may be shared with Highsoft’s officers, employees, Affiliates and trusted partners, provided that Highsoft holds an agreement with such entity or individual person committing them to same level of confidentiality as the Parties have agreed to in this Agreement.</p><p>Upon Expiration or Termination of this Agreement, however occasioned, each Party shall remove, delete or otherwise destroy any of other Party‘s material that it has received, copied or otherwise obtained, including but not limited to Confidential Information, except for information required to support any license, sublicense or maintenance obligations already granted or undertaken by Licensee towards any Third Party, or information required for tax purposes or otherwise required by mandatory law. A written confirmation that such deletion has been completed shall upon request be sent to the other Party without undue delay. For the avoidance of doubt, this obligation to remove, delete or otherwise destroy materials shall not include the Releases of the Licensed Software to which Licensee has gained perpetual rights to in accordance with this Agreement, unless the Agreement is terminated by Highsoft for material breach by Licensee.</p><h3 id="13">13. Term and Termination</h3><h4 id="13.1">13.1. Term</h4><p>This Agreement shall come into force on the Delivery Date and shall stay in force for as long as Licensee is enrolled in the Highcharts Advantage plan. Upon an Opt Out by Licensee or the end of a Fixed Advantage Period, the Agreement shall terminate automatically and without notice at the end of the applicable Advantage Period (“<strong>Expiration</strong>”).</p><h4 id="13.2">13.2. Effects of Expiration</h4><p>On Expiration of this Agreement, the following shall apply:</p><ol start="1"><li>Licensee may continue to utilize the Releases of the Licensed Software to which Licensee has gained perpetual rights, i.e. the Releases of the Licensed Software which were have been released during Licensees enrollment in Highcharts Advantage, in accordance with sections 3.2.3 and 5 (including subsections, as applicable) and the scope of the perpetual License as detailed in the License Statement;</li><li>Licensee is not entitled to use, and shall immediately cease all use and distribution of, any Releases of the Licensed Software to which Licensee has not gained perpetual rights;</li><li>Sections 2, 10, 12 and 15 of this Agreement shall survive.</li></ol><h4 id="13.3">13.3. Termination</h4><p>Either Party may terminate this Agreement in the event of a material breach of this Agreement by the other Party and such material breach has not been cured within thirty (30) days after receipt of written notice of such breach by the breaching Party from the non-breaching Party.</p><p>Upon Highsoft’s termination for material breach by Licensee:</p><ol start="1"><li>Licensee shall immediately cease use and distribution of Licensed Software.</li><li>Sections 2, 10, 12 and 15 of this Agreement shall survive.</li></ol><h3 id="14">14. Non-assignment</h3><p>Licensee may not assign or transfer all, or any part of its rights under this Agreement without Highsoft’s prior written consent. Notwithstanding the foregoing, either Party may assign this Agreement in its entirety to its Affiliate(s), or in connection with a merger, acquisition, corporate reorganization, or sale of all or substantially all of its assets. In such case, the assigning party shall notify the other in writing without undue delay, and unless otherwise agreed upon in writing, this Agreement shall bind, and inure to the benefit of Parties, their respective successors, and permitted assigns.</p><h3 id="15">15. Applicable Law and Venue</h3><p>This Agreement shall be governed by and construed in accordance with the laws of Norway.</p><p>Any dispute, controversy or claim arising out of or relating to this Agreement, or the breach, termination, or invalidity thereof, Parties shall seek to solve amicably through negotiations. If the Parties do not reach an amicable solution within two (2) weeks, any dispute, controversy or claim shall be finally settled by the regular courts of Norway. Both Parties hereby agree to and accept Sogn and Fjordane District Court (Sogn og Fjordane tingrett) as exclusive legal venue.</p><h3 id="16">16. Processing of Personal Data</h3><p>To the extent any purchase under the Agreement involves processing by Highsoft of personal data about the Licensee or Licensee’s customers or personnel, Highsoft shall be acting as a data controller. By law, Highsoft is required to provide the data subject with information about Highsoft and why and how Highsoft uses</p><p>personal data, and about the data subject’s rights in regard to such data. These matters are duly treated in Highsoft´s privacy policy, available at Highsoft Website.</p><p>The Licensee hereby undertakes to provide any personnel which is or might be affected by the collecting of personal data under this Agreement with due information about Highsoft’s privacy policy.</p><h3 id="17">17. Miscellaneous</h3><h4 id="17.1">17.1. Relationship between Parties</h4><p>The Parties are independent contractors, and this Agreement shall not constitute or be construed as constituting either Party as partner, joint venture, agency or fiduciary of the other, as creating any other form of legal association that would impose liability on one Party for the act, or failure to act, of the other Party, or as providing either Party with the right, power, or authority (express, or implied) to create any duty or obligation of the other Party. Neither Party shall directly or indirectly represent to the public that it has the right or the authority to create or accept obligations on behalf of the other Party. Except as otherwise expressly provided in this Agreement, each Party has the sole right and obligation to supervise, manage, contract, direct, procure, perform or cause to be performed all work to be performed by it under this Agreement.</p><h4 id="17.2">17.2. Audit</h4><p>During the term of this Agreement and for a period of five (5) years thereafter, Highsoft shall have the right to review, audit and inspect Licensee’s use of the Licensed Software in order to verify that Licensee complies with the grants and limitations set out in this Agreement. Such audit shall only be conducted under non- disclosure obligations, upon reasonable notice, which shall be no shorter than ten (10) calendar days and shall take place during Licensee regular business hours with minimal disruption to Licensee’s ongoing operations. If the audit shows no discrepancies or unauthorized use of Highsoft’s Software, Highsoft shall carry all of its costs associated with the audit.</p><h4 id="17.3">17.3. Severability</h4><p>In the event any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions of this Agreement will remain in full force.</p><h4 id="17.4">17.4. Waiver</h4><p>The waiver by either Highsoft, or Licensee of any default or breach of this Agreement shall not constitute a waiver of any other or subsequent default or breach. Except for actions for non-payment or an infringement of Highsoft’s intellectual proprietary rights in Licensed Software, no action, regardless of form, arising out of this Agreement may be brought by Licensee more than one (1) year after the cause of action has occurred.</p><h4 id="17.5">17.5. Entire Agreement</h4><p>This Agreement is the entire agreement between Highsoft and Licensee relating to this relationship and supersedes all prior or contemporaneous oral or written communications, proposals and representations relating to that relationship.</p><h4 id="17.6">17.6. Battle of Forms</h4><p>Licensee’s purchase of License shall be solely governed by the terms and conditions of this Agreement. Any terms or conditions introduced by Licensee either directly, indirectly by way of reference or otherwise are hereby explicitly rejected and shall not apply.</p><p>The Parties agree that any additional or differing terms or conditions in any other document or arrangement not forming part of this Agreement, including but not limited to any letter or terms of engagement or the like, purchase order, invoice, acknowledgment, delivery receipt, confirmation or other delivery or acceptance document issued by or on behalf of either Party shall be void, and of no force or effect to the extent such are in breach of or contradiction with this Agreement.</p><h4 id="17.7">17.7. Amendments</h4><p>Except in accordance with section 5.5, no amendment to, or modification of this Agreement or the scope of the License shall be binding unless made in writing and signed by the Parties.</p><h4 id="17.8">17.8. License Statement and Changes to the License</h4><p>Highsoft shall confirm Licensee’s purchase of the License by issuing a License Statement, which is an automatically generated document provided as a link to Licensee, summarizing the agreed details of the License granted by Highsoft to Licensee.</p><p>The License Statement shall expressly state:</p><ol start="1"><li>The License owner</li><li>Licensee’s point of contact (email address) to whom notices under this Agreement shall be sent</li><li>The chosen License type(s)</li><li>The Licensed Software included in the License</li><li>The License identification number</li><li>Licensee’s enrollment in Highcharts Advantage, hereunder the applicable option (Auto-Renewal or Fixed Advantage Period)</li><li>The number of authorized Developers</li><li>The Licensee Product(s), into which Licensed Software may be incorporated pursuant to an OEM License, if applicable,</li><li>The number of Customer Installations (with or without Developer Rights) Licensee shall be authorized to perform under an OEM License, if applicable</li><li>The SaaS Application(s) and/or Web Application(s), into which Licensed Software may be incorporated pursuant to a SaaS License or a SaaS+ License, as applicable</li><li>The specific Licensee’s Affiliates to which the License shall be extended, or, that the License shall extend to an unlimited number of Affiliates, if applicable.</li></ol><p>In the event Licensee wants to make any changes to the License, such as Extension of Highcharts Advantage, or renaming of Licensee Product(s), SaaS Application(s) or Web Applications, or if Licensee wants to expand</p><p>the scope of the License for example by adding new Licensee Products, SaaS Applications, Web Applications, Developer seats or Customer Installations (with or without Developer Rights), Licensee shall notify Highsoft in writing. Such changes may require a new License or changes to the existing License, depending on the changes requested by Licensee. If Licensee and Highsoft agrees in writing on any changes to the License and the payable fees, the License Statement will be updated accordingly.</p><h4 id="17.9">17.9. Notices</h4><p>All notices to be given under this Agreement to Highsoft shall be sent either by email to<!-- --> <a href="/cdn-cgi/l/email-protection#dfacbeb3baac9fb7b6b8b7acb0b9abf1bcb0b2"><span class="__cf_email__" data-cfemail="b9cad8d5dccaf9d1d0ded1cad6dfcd97dad6d4">[email&#160;protected]</span></a> or as a hardcopy to the following address: Highsoft AS, Sentrumsgata 44, 6893 Vik i Sogn, Norway.</p><p>Information from Highsoft to Licensee shall be sent by email to the email address Licensee has provided upon purchase. It is Licensee’ responsibility to ensure that the e-mail address is correct. Highsoft does not take responsibility for lost communication.</p><p>All notices, demands or other communication given by a Party to the other shall be deemed to have been duly given when made in writing and sent to the registered e-mail address or when a hardcopy is received by the other Party at the stated address.</p></div></div></div></div></main><div class="Footer-bleed full-bleed"><footer id="app-footer" class="container"><ul><li><h2>Shortcuts</h2><ul><li><a href="https://www.highcharts.com/blog/products">Products</a></li><li><a href="https://www.highcharts.com/demo">Demos</a></li><li><a href="https://www.highcharts.com/download">Try before you buy</a></li><li><a href="/">Get a license</a></li><li><a href="https://www.highcharts.com/blog">News &amp; Tutorials</a></li><li><a href="https://www.highcharts.com/newsletter">Newsletter</a></li></ul></li><li><h2>Support</h2><ul><li><a href="https://www.highcharts.com/forum">Community Forums</a></li><li><a href="https://www.highcharts.com/docs/index">Documentation</a></li><li><a href="https://www.highcharts.com/blog/posts/code-examples">Code Examples</a></li><li><a href="https://api.highcharts.com/highcharts">API Reference</a></li><li><a href="https://www.highcharts.com/accessibility">Accessibility</a></li><li><a href="/channel-partners">Channel Partners</a></li><li><a href="/government">Government Pricing</a></li><li><a href="/faq">FAQ</a></li></ul></li><li><h2>Site</h2><ul><li><button type="button" class="cookieBot">Cookie Policy</button></li><li><button type="button" class="cookieBot">Cookie\nPreferences</button></li><li><a href="https://www.highcharts.com/privacy">Privacy Policy</a></li><li><a href="https://shop.highcharts.com/license">Standard License Agreement</a></li><li><a href="https://www.highcharts.com/sitemap.xml">Sitemap</a></li><li><a href="https://www.highcharts.com/blog/article/accessibility-statement">Accessibility\nStatement</a></li></ul></li><li><h2>About</h2><ul><li><a href="https://www.highcharts.com/about">Our Story</a></li><li><a href="https://www.highcharts.com/people">Discover the Team</a></li><li><a href="https://highsoft.teamtailor.com">Join the Team</a></li><li><a href="https://www.highcharts.com/contact">Contact</a></li><li><a href="https://www.highcharts.com/press">Press</a></li><li><a href="https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2021/08/16115648/Codeofconduct.pdf">Code\nof Conduct</a></li></ul></li></ul><div class="App-footer-bottom"><span>© <!-- -->2023<!-- --> Highsoft. All rights reserved.</span><ul class="App-footer-social"><li><a href="https://twitter.com/Highcharts" aria-label="Twitter"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a></li><li><a href="https://www.linkedin.com/company/highsoft" aria-label="Linkedin"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a></li><li><a href="https://www.facebook.com/Highcharts" aria-label="Facebook"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a></li><li><a href="https://github.com/highcharts/highcharts" aria-label="Github"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></li><li><a href="https://www.youtube.com/channel/UCzxXofPTQ0DoT7uIy3Fxw7A" aria-label="Youtube"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a></li><li><a href="https://www.instagram.com/highcharts" aria-label="Instagram"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></li><li><a href="https://stackoverflow.com/questions/tagged/highcharts" aria-label="Stack overflow"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"></path></svg></a></li></ul></div></footer></div></div></div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WLVCCK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/license","query":{},"buildId":"current","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>'
+          '<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="next-head-count" content="2" /><meta charSet="utf-8" /><meta name="keywords" content="Highcharts online shop, buy Highcharts license, DataViz library, developer license, advantage license, OEM license, non-commercial license, Credit card, Visa Card, Master Card, Paypal." /><meta name="description" content="Buy Highcharts DataViz library licenses such as developer license, advantage license, OEM license, and acquire a non-commercial license." /><script src="https://www.google.com/recaptcha/api.js?render=6LcWEZ4kAAAAAO4NCcGd8CgtiijxSDIY5YYZEgez" async=""></script><script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8be0770c-8b7f-4e2d-aeb5-2cfded81e177" data-blockingmode="auto" type="text/javascript"></script><script>if(!location.pathname.startsWith(\'/reset\'))\n              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':\n              new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],\n              j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\n              \'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);\n              })(window,document,\'script\',\'dataLayer\',\'GTM-5WLVCCK\');</script><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" href="/_next/static/css/ab73613411017fa7.css" as="style" /><link rel="stylesheet" href="/_next/static/css/ab73613411017fa7.css" data-n-g="" /><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-de85236f7f5c75f0.js" defer=""></script><script src="/_next/static/chunks/framework-4a9e9d5071d676b1.js" defer=""></script><script src="/_next/static/chunks/main-1e7090e7c0181b41.js" defer=""></script><script src="/_next/static/chunks/pages/_app-59212865d0cdfc5e.js" defer=""></script><script src="/_next/static/chunks/pages/license-2ca65644f08922ef.js" defer=""></script><script src="/_next/static/current/_buildManifest.js" defer=""></script><script src="/_next/static/current/_ssgManifest.js" defer=""></script><style data-href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap">@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKtdU.woff) format(\'woff\')}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9MIU.woff) format(\'woff\')}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7MIU.woff) format(\'woff\')}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdzeFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdXeFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdLeFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0370-03FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhd7eFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhd_eFaxOedfTDw.woff2) format(\'woff2\');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format(\'woff2\');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIxsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIVsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIJsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0370-03FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI5sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AI9sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdP3pBms.woff2) format(\'woff2\');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIxsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIVsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIJsdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0370-03FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI5sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI9sdP3pBmtF8A.woff2) format(\'woff2\');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:\'IBM Plex Sans\';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdP3pBms.woff2) format(\'woff2\');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head><body class="loading prerender"><noscript style="background:#fff;border:0.5em double #c00;color:#000;display:block;padding:0.5em;text-align:center">Please enable JavaScript to use our shop.</noscript><div id="root"><div id="__next" data-reactroot=""><header id="app-header" class=""><a class="Skip Button " href="#main">Skip to Main Content</a><h1><a href="https://www.highcharts.com" class="navbar-brand"><svg version="1.1" id="logo-highcharts" aria-labelledby="logo-highcharts-title" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="10 10 384 65" xml:space="preserve"><title id="logo-highcharts-title">Highcharts</title><g id="symbol" transform="translate(10, 10) scale(1)"><polygon fill="#8087E8" points="41.53900146484375,0 30.315000534057617,26.209999084472656 15.566999435424805,60.650997161865234 49.85900115966797,46.16499710083008 68.02299499511719,38.49300003051758 " id="svg_2" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#30426B" points="47.25799560546875,31.729999542236328 49.86000061035156,46.16499710083008 68.02400207519531,38.49300003051758 " id="svg_3" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#6699A1" points="41.53900146484375,0 47.25799560546875,31.730998992919922 68.02299499511719,38.49300003051758 " id="svg_4" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#78758C" points="47.25799560546875,31.729999542236328 68.02400207519531,38.49300003051758 30.31599998474121,26.208999633789062 15.566999435424805,60.650997161865234 49.86000061035156,46.16499710083008 " id="svg_5" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#A3EDBA" points="15.566999435424805,60.650997161865234 30.315000534057617,26.209999084472656 0,16.334999084472656 " id="svg_6" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#6699A1" points="49.86000061035156,46.16499710083008 53.185997009277344,64.6099967956543 68.02400207519531,38.49300003051758 " id="svg_7" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon><polygon fill="#8087E8" points="41.53900146484375,0 30.315000534057617,26.209999084472656 47.25799560546875,31.730998992919922 " id="svg_8" stroke-width="0" stroke="#f0f0f0" fill-opacity="1" stroke-linejoin="round"></polygon></g><g id="text-highcharts" transform="translate(108.02400207519531,31.291051292419436) scale(1)"><path fill="#f0f0f0" d="M20.7189956665039,14.058000671386722 h-17.02 v9.77 c0,1.037 -0.8130000000000002,1.851 -1.8490000000000002,1.851 c-1.037,0 -1.85,-0.8130000000000002 -1.85,-1.851 V2.07100067138672 c0,-1.037 0.8130000000000002,-1.852 1.85,-1.852 c1.036,0 1.8490000000000002,0.8130000000000002 1.8490000000000002,1.852 v8.436 h17.02 v-8.436 c0,-1.037 0.8140000000000002,-1.852 1.85,-1.852 c1.036,0 1.85,0.8130000000000002 1.85,1.852 v21.754 c0,1.037 -0.8140000000000002,1.851 -1.85,1.851 c-1.036,0 -1.85,-0.8130000000000002 -1.85,-1.851 V14.058000671386722 z" id="svg_2" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M39.21699566650392,23.825000671386718 c0,1.037 -0.8140000000000002,1.851 -1.852,1.851 s-1.852,-0.8130000000000002 -1.852,-1.851 V2.07100067138672 c0,-1.037 0.8140000000000002,-1.852 1.852,-1.852 s1.852,0.8130000000000002 1.852,1.852 V23.825000671386718 z" id="svg_3" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M66.3689956665039,14.724000671386719 c0,-1.036 0.8140000000000002,-1.774 1.852,-1.774 c1.034,0 1.852,0.8130000000000002 1.852,1.8490000000000002 v5.847 c0,0.4440000000000001 -0.22600000000000006,1.109 -0.5950000000000002,1.479 c-2.367,2.369 -5.549,3.773 -9.176,3.773 c-7.178,0 -12.949,-5.771 -12.949,-12.948 c0,-7.181 5.771,-12.949 12.949,-12.949 c3.6270000000000002,0 6.809,1.405 9.176,3.771 c0.7380000000000002,0.7400000000000002 0.7380000000000002,1.852 0,2.592 c-0.7410000000000002,0.7380000000000002 -1.9220000000000002,0.8130000000000002 -2.6630000000000003,0.07200000000000002 c-1.702,-1.6990000000000005 -3.923,-2.736 -6.513,-2.736 c-5.104,0 -9.249,4.144 -9.249,9.25 c0,5.104 4.146,9.25 9.249,9.25 c2.367,0 4.441,-0.8130000000000002 6.067,-2.222 V14.724000671386719 z" id="svg_4" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M100.40599566650391,14.058000671386722 h-17.019 v9.77 c0,1.037 -0.8170000000000002,1.851 -1.852,1.851 c-1.037,0 -1.8490000000000002,-0.8130000000000002 -1.8490000000000002,-1.851 V2.07100067138672 c0,-1.037 0.812,-1.852 1.8490000000000002,-1.852 c1.034,0 1.852,0.8130000000000002 1.852,1.852 v8.436 h17.019 v-8.436 c0,-1.037 0.8130000000000002,-1.852 1.8490000000000002,-1.852 c1.037,0 1.852,0.8130000000000002 1.852,1.852 v21.754 c0,1.037 -0.8130000000000002,1.851 -1.852,1.851 c-1.033,0 -1.8490000000000002,-0.8130000000000002 -1.8490000000000002,-1.851 V14.058000671386722 z" id="svg_5" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M125.19199566650391,25.898000671386725 c-7.182,0 -12.949,-5.771 -12.949,-12.948 c0,-7.181 5.77,-12.949 12.949,-12.949 c3.6270000000000002,0 6.809,1.405 9.176,3.771 c0.7380000000000002,0.7400000000000002 0.7380000000000002,1.852 0,2.592 c-0.7410000000000002,0.7380000000000002 -1.925,0.8130000000000002 -2.6660000000000004,0.07200000000000002 c-1.6990000000000005,-1.6990000000000005 -3.92,-2.736 -6.51,-2.736 c-5.106,0 -9.249,4.144 -9.249,9.25 c0,5.104 4.143,9.25 9.249,9.25 c2.59,0 4.884,-0.9620000000000002 6.586,-2.664 c0.7400000000000002,-0.7410000000000002 1.8490000000000002,-0.7410000000000002 2.59,0 c0.7380000000000002,0.7380000000000002 0.7380000000000002,1.85 0,2.589 C131.9999956665039,24.49200067138672 128.81799566650392,25.898000671386725 125.19199566650391,25.898000671386725 z" id="svg_6" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M163.81299566650392,14.058000671386722 h-17.02 v9.77 c0,1.037 -0.8130000000000002,1.851 -1.852,1.851 c-1.034,0 -1.85,-0.8130000000000002 -1.85,-1.851 V2.07100067138672 c0,-1.037 0.8130000000000002,-1.852 1.85,-1.852 c1.035,0 1.852,0.8130000000000002 1.852,1.852 v8.436 h17.02 v-8.436 c0,-1.037 0.8130000000000002,-1.852 1.8530000000000002,-1.852 c1.034,0 1.8490000000000002,0.8130000000000002 1.8490000000000002,1.852 v21.754 c0,1.037 -0.8130000000000002,1.851 -1.8490000000000002,1.851 c-1.037,0 -1.8530000000000002,-0.8130000000000002 -1.8530000000000002,-1.851 V14.058000671386722 z" id="svg_7" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M191.0019956665039,1.8490006713867189 l10.507,20.646 c0.22300000000000006,0.4430000000000001 0.4450000000000001,1.036 0.4450000000000001,1.554 c0,1.036 -0.6680000000000003,1.6280000000000001 -1.702,1.6280000000000001 c-0.7410000000000002,0 -1.481,-0.22200000000000006 -2.001,-1.258 l-3.253,-6.438 h-13.547 l-3.183,6.438 c-0.517,1.036 -1.256,1.258 -1.994,1.258 c-1.037,0 -1.702,-0.5930000000000002 -1.702,-1.6280000000000001 c0,-0.519 0.22000000000000006,-1.109 0.4420000000000001,-1.554 l10.506,-20.646 c0.6680000000000003,-1.405 2.002,-1.6280000000000001 2.74,-1.6280000000000001 C189.0039956665039,0.22100067138671875 190.33399566650388,0.4420006713867153 191.0019956665039,1.8490006713867189 zM183.22899566650392,14.429000671386717 h9.988 l-4.957,-9.99 L183.22899566650392,14.429000671386717 z" id="svg_8" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M222.4029956665039,0.369000671386722 c4.441,0 8.064,3.255 8.064,7.694 c0,3.923 -2.813,6.884 -6.511,7.549 l6.731,7.104 c0.6640000000000003,0.6660000000000003 0.8890000000000002,1.85 0.14600000000000005,2.516 c-0.7360000000000002,0.7410000000000002 -2.145,0.521 -2.886,-0.2960000000000001 l-8.729,-9.176 h-6.511 v8.142 c0,1.034 -0.8150000000000002,1.774 -1.854,1.774 c-1.033,0 -1.85,-0.8130000000000002 -1.85,-1.851 V2.2190006713867163 c0,-1.035 0.8140000000000002,-1.85 1.85,-1.85 H222.4029956665039 zM212.71199566650392,3.9210006713867216 v8.288 h9.691 c2.59,0 4.367,-1.776 4.367,-4.146 c0,-2.365 -1.7770000000000001,-4.144 -4.367,-4.144 L212.71199566650392,3.9210006713867216 L212.71199566650392,3.9210006713867216 z" id="svg_9" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M247.29099566650393,3.9210006713867216 h-9.249 c-1.033,0 -1.8490000000000002,-0.7400000000000002 -1.8490000000000002,-1.776 c0,-1.034 0.8130000000000002,-1.7730000000000001 1.8490000000000002,-1.7730000000000001 h22.201 c1.037,0 1.852,0.7400000000000002 1.852,1.7730000000000001 c0,1.037 -0.8130000000000002,1.776 -1.852,1.776 h-9.249 V23.826000671386723 c0,1.037 -0.8130000000000002,1.851 -1.8490000000000002,1.851 c-1.037,0 -1.854,-0.8130000000000002 -1.854,-1.851 V3.9210006713867216 z" id="svg_10" stroke-width="0px" stroke="#f0f0f0"></path><path fill="#f0f0f0" d="M270.9679956665039,10.359000671386724 c0,-9.25 5.698,-10.359 9.99,-10.359 c1.035,0 1.85,0.8130000000000002 1.85,1.85 c0,1.036 -0.8130000000000002,1.851 -1.85,1.851 c-3.479,0 -6.29,0.7380000000000002 -6.29,6.66 v5.18 c0,9.25 -5.698,10.358 -9.989,10.358 c-1.035,0 -1.85,-0.8130000000000002 -1.85,-1.85 s0.8140000000000002,-1.85 1.85,-1.85 c3.479,0 6.289,-0.7400000000000002 6.289,-6.66 V10.359000671386724 z" id="svg_11" stroke-width="0px" stroke="#f0f0f0"></path><g transform="translate(280, 20) scale(0.03)"><circle cx="100" cy="100" r="88.5" fill="none" stroke="#f0f0f0" stroke-width="20"></circle><path d="M94.6 92C100.1 92 104.1 90.9 106.5 88.8C108.9 86.8 110.2 83.4 110.2 78.6C110.2 73.9 108.9 70.6 106.5 68.5C104.1 66.5 100.1 65.5 94.6 65.5L83.4 65.5L83.4 92L94.6 92M83.4 110.3L83.4 149.3L56.8 149.3L56.8 46.2L97.4 46.2C111 46.2 120.9 48.5 127.2 53.1C133.6 57.6 136.7 64.8 136.7 74.7C136.7 81.5 135.1 87.1 131.8 91.5C128.5 95.8 123.6 99.1 116.9 101.1C120.6 102 123.8 103.9 126.7 106.8C129.6 109.7 132.5 114.1 135.4 120.1L149.9 149.3L121.6 149.3L109 123.7C106.5 118.6 103.9 115 101.3 113.2C98.7 111.3 95.2 110.3 90.9 110.3L83.4 110.3" stroke-width="0px" stroke="#f0f0f0" fill="#f0f0f0"></path></g></g></svg></a></h1><button class="App-header-burger App-header-icon" aria-controls="app-navbar-nav" aria-expanded="false" aria-label="Open menu" id="app-header-burger" title="Open Menu" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav aria-label="Main" id="app-navbar-nav"><ul><li><button class="" aria-controls="app-navbar-nav" aria-expanded="false" type="button">Products<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li><li><a href="https://www.highcharts.com/demo">Demos</a></li><li><button class="" aria-controls="app-navbar-nav" aria-expanded="false" type="button">Resources<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li><li><a href="https://www.highcharts.com/support">Support</a></li><li><a href="https://www.highcharts.com/blog">Blog</a></li><li><button class="" aria-controls="app-navbar-nav" aria-expanded="false" type="button">About<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li></ul></nav><div class="App-header-icons"><button aria-label="Search" class="App-header-icon App-header-search" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span class="App-header-search-text">Search</span></button><a arial-label="Open account" class="App-header-icon" title="Open Account" href="/account"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a></div><div class="App-header-buttons"><p>Start your Highcharts journey today</p><div><a class="Button Button-primary Button-small" href="https://www.highcharts.com/download"><div class="Button-content">Try for Free</div></a><a class="Button Button-secondary Button-small" href="/"><div class="Button-content">See Pricing</div></a></div></div></header><main role="main" tabindex="-1" id="main" class="App-section  container"><nav aria-label="You are here" class="Breadcrumbs"><ol><li><a href="https://www.highcharts.com">Home</a></li><li aria-current="page" class="Breadcrumbs-active">Webshop</li></ol></nav><div class="App-section Sla-page"><div class="Header"><div class="Header-top"><h2 class="h1">Standard License Agreement 15.2</h2><a class="Button Button-secondary Button-small" href="/license-15.2.pdf" target="_blank" rel="noreferrer"><div class="Button-content">Download PDF</div></a></div><div class="Header-description"><div class="Header-description-container"><p></p></div></div></div><div class="row"><div class="col-md-3 col-12"><nav class="Sla-page-nav"><h3 class="Sla-page-category">Annual</h3><ul><li><a href="/license-annual-1.42">1.42</a></li><li><a href="/license-annual-1.41">1.41</a></li><li><a href="/license-annual-1.4">1.4</a></li><li><a href="/license-annual-1.3">1.3</a></li><li><a href="/license-annual-1.2">1.2</a></li><li><a href="/license-annual-1.1">1.1</a></li><li><a href="/license-annual-1.0">1.0</a></li></ul><h3 class="Sla-page-category">Perpetual</h3><ul><li><a class="active" href="/license-15.2">15.2</a><ul><li><a href="/license-15.2#1">1. Definitions</a></li><li><a href="/license-15.2#2">2. Ownership and Copyright</a></li><li><a href="/license-15.2#3">3. Grant of License and Limitations</a></li><li><a href="/license-15.2#3.1">3.1. Scope of License</a></li><li><a href="/license-15.2#3.2">3.2. General Limitations to the License</a></li><li><a href="/license-15.2#3.2.1">3.2.1. Number of Developers</a></li><li><a href="/license-15.2#3.2.2">3.2.2. Usage by Affiliates</a></li><li><a href="/license-15.2#3.2.3">3.2.3. Access to new Releases</a></li><li><a href="/license-15.2#3.2.4">3.2.4. Access to Source Code</a></li><li><a href="/license-15.2#3.2.5">3.2.5. Usage of Software in competing products</a></li><li><a href="/license-15.2#3.3">3.3. Identification of Licensee applications or products and optional purchase of License to future applications or products</a></li><li><a href="/license-15.2#3.4">3.4. Special terms for Highcharts Dashboards</a></li><li><a href="/license-15.2#4">4. License types and usage rights included</a></li><li><a href="/license-15.2#4.1">4.1. Internal License</a></li><li><a href="/license-15.2#4.2">4.2. SaaS License</a></li><li><a href="/license-15.2#4.3">4.3. SaaS+ License</a></li><li><a href="/license-15.2#4.4">4.4. OEM License</a></li><li><a href="/license-15.2#4.4.1">4.4.1. Grants under the OEM License</a></li><li><a href="/license-15.2#4.4.2">4.4.2. Limitations to the OEM License</a></li><li><a href="/license-15.2#4.4.3">4.4.3. Optional addition of Websites, Internal Applications, SaaS Application(s) and/or Web Application(s) to the OEM License</a></li><li><a href="/license-15.2#5">5. Highcharts Advantage</a></li><li><a href="/license-15.2#5.1">5.1. Enrollment and Auto-Renewal</a></li><li><a href="/license-15.2#5.2">5.2. Optional Fixed Advantage Period</a></li><li><a href="/license-15.2#5.3">5.3. Entitlements and limitations</a></li><li><a href="/license-15.2#5.4">5.4. Opt Out</a></li><li><a href="/license-15.2#5.5">5.5. Amendments</a></li><li><a href="/license-15.2#6">6. License Fee and Highcharts Advantage Fee</a></li><li><a href="/license-15.2#7">7. Delivery</a></li><li><a href="/license-15.2#8">8. Marketing and descriptions of Licensed Software</a></li><li><a href="/license-15.2#9">9. Warranties and Representations</a></li><li><a href="/license-15.2#9.1">9.1. Scope</a></li><li><a href="/license-15.2#9.2">9.2. Highsoft&#x27;s Warranties and Representations</a></li><li><a href="/license-15.2#9.3">9.3. Licensee&#x27;s Remedies</a></li><li><a href="/license-15.2#10">10. Limitation of Liability</a></li><li><a href="/license-15.2#11">11. Intellectual Property Infringement</a></li><li><a href="/license-15.2#12">12. Confidentiality</a></li><li><a href="/license-15.2#13">13. Term and Termination</a></li><li><a href="/license-15.2#13.1">13.1. Term</a></li><li><a href="/license-15.2#13.2">13.2. Effects of Expiration</a></li><li><a href="/license-15.2#13.3">13.3. Termination</a></li><li><a href="/license-15.2#14">14. Non-assignment</a></li><li><a href="/license-15.2#15">15. Applicable Law and Venue</a></li><li><a href="/license-15.2#16">16. Processing of Personal Data</a></li><li><a href="/license-15.2#17">17. Miscellaneous</a></li><li><a href="/license-15.2#17.1">17.1. Relationship between Parties</a></li><li><a href="/license-15.2#17.2">17.2. Audit</a></li><li><a href="/license-15.2#17.3">17.3. Severability</a></li><li><a href="/license-15.2#17.4">17.4. Waiver</a></li><li><a href="/license-15.2#17.5">17.5. Entire Agreement</a></li><li><a href="/license-15.2#17.6">17.6. Battle of Forms</a></li><li><a href="/license-15.2#17.7">17.7. Amendments</a></li><li><a href="/license-15.2#17.8">17.8. License Statement and Changes to the License</a></li><li><a href="/license-15.2#17.9">17.9. Notices</a></li></ul></li><li><a href="/license-15.1">15.1</a></li><li><a href="/license-15.0">15.0</a></li><li><a href="/license-14.1">14.1</a></li><li><a href="/license-14.0">14.0</a></li><li><a href="/license-13.0">13.0</a></li><li><a href="/license-12.2">12.2</a></li><li><a href="/license-12.1">12.1</a></li><li><a href="/license-12.0">12.0</a></li><li><a href="/license-11.0">11.0</a></li><li><a href="/license-10.1">10.1</a></li><li><a href="/license-10.0">10.0</a></li><li><a href="/license-9.0">9.0</a></li><li><a href="/license-8.0">8.0</a></li><li><a href="/license-7.0">7.0</a></li><li><a href="/license-6.0">6.0</a></li><li><a href="/license-5.0">5.0</a></li><li><a href="/license-4.0">4.0</a></li><li><a href="/license-3.1">3.1</a></li><li><a href="/license-3.0">3.0</a></li><li><a href="/license-2.2">2.2</a></li><li><a href="/license-2.1">2.1</a></li><li><a href="/license-2.0">2.0</a></li></ul></nav></div><div class="col-md-9 col-12"><div class="Sla-page-content"><p>This Standard License Agreement sets forth the terms and conditions governing all purchases of License(s) to and use of Software owned and delivered by Highsoft AS, the company behind Highcharts.</p><p>By installing or using Software or any part thereof, Licensee agrees to be bound by this Standard License Agreement, unless Licensee is using the Software for a non-commercial purpose authorized by Highsoft which is governed by separate terms for non-commercial usage.</p><h3 id="1">1. Definitions</h3><p><strong>Agreement </strong>shall mean this document and the License Statement;</p><p><strong>Affiliate </strong>shall mean any entity that directly, or indirectly controls, is controlled by, or is under common control with the subject entity. “Control”, for purposes of this definition, shall mean direct or indirect ownership of, or control of, more than 50% of the voting interests of the subject;</p><p><strong>Affiliate Fee </strong>shall mean the additional fee payable by Licensee to Highsoft for extending purchased License(s) to apply also to Licensee’s Affiliates, if Licensee so chooses pursuant to section 3.2.2;</p><p><strong>Confidential Information </strong>shall mean any and all written, verbal, or demonstrated information of proprietary and/or confidential nature provided by one Party to the other in connection with this Agreement; Confidential information shall include, without limitation, information relating to technologies, finances and legal affairs which relate in any manner to a Party’s actual, or anticipated business whether obtained in tangible or intangible form, including oral or visual. Confidential Information shall not include A) Licensee’s name, logo, the existence of a contractual relationship between the Parties and the product licensed under this Agreement, or B) information that (i) is generally known to the public at the time of disclosure; (ii) is lawfully received or obtained by the receiving Party from a Third Party who has rightful possession of Confidential Information; (iii) becomes generally known to the public after the time of disclosure, but not as a result of disclosure by the receiving Party, or (iv) is already in the possession of the receiving Party prior to the signing of this Agreement;</p><p><strong>Customer Installation </strong>shall mean any distribution of Licensed Software as an integral part of a Licensee Product through installation of such product on a server owned or operated by a Licensee customer pursuant to an OEM License granted according to section 4.4 below. One Customer Installation shall for the purposes of the Agreement be regarded as equal to one sale of a Licensee Product to a Licensee customer and the subsequent distribution of Licensed Software to License customer through installation of the Licensee Product, regardless of the number of users within the Licensee customers organization authorized to use the installed Licensee Product. The number of authorized Customer Installations is defined in the License Statement and is not subject to renewal, recurrence or re-use;</p><p><strong>Customer Installation with Developer Rights </strong>shall mean a Customer Installation that is based on an OEM License authorizing the Licensee’s customer, after such installation, to customize Licensed Software for its own purposes;</p><p><strong>Delivery Date </strong>shall mean the date Licensee is invoiced by Highsoft for the applicable Licensed Software;</p><p><strong>Developer </strong>shall mean any unnamed person, whether an employee or subcontractor of Licensee, who will be simultaneously working with the API and/or source code of the Licensed Software. The number of Developers authorized to simultaneously work with the Licensed Software is defined in the License Statement;</p><p><strong>Highcharts Advantage </strong>shall mean the maintenance and support services offered by Highsoft, as defined in section 5 below, which Licensee is entitled to receive for as long as Licensee is validly enrolled in the Highcharts Advantage plan;</p><p><strong>Highcharts Advantage Fee </strong>shall mean the fee payable by Licensee to Highsoft for each subsequent and automatic renewal of Licensee’s enrollment in Highcharts Advantage plan following the initial twelve (12) months included in the License Fee at no additional cost, or the fee payable by License to Highsoft for its enrollment in Highcharts Advantage plan as a Fixed Advantage Period as set out in section 5.2;</p><p><strong>Highsoft </strong>shall mean Highsoft AS, the company behind Highcharts, a Norwegian corporation with organization no. 996 840 506;</p><p><strong>Highsoft Website </strong>shall mean<!-- --> <a href="https://www.highcharts.com/" target="_blank" rel="noreferrer" class="Sla-page-link">www.highcharts.com</a><a href="https://www.highcharts.com/" target="_blank" rel="noreferrer" class="Sla-page-link">,</a> including subdomains;</p><p><strong>Internal Application </strong>shall mean software solutions or applications which fully or partly includes Licensed Software, and which is used solely for internal purposes by Licensee’s employees and/or contractors inside the firewall of Licensee’s network. An Internal Application shall not be used for external purposes and shall under no circumstance be used by or with Licensee’s customers;</p><p><strong>Internal License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use the Licensed Software as such on websites and Internal Applications as further described in section 4.1.</p><p><strong>License </strong>shall mean the right to use the Licensed Software granted to Licensee by this Agreement, in the form of either an Internal License, SaaS License, SaaS+ License and/or an OEM License. Upon entering into this Agreement Licensee must choose one of the license types. The sets of usage rights granted by Highsoft under each license type, are defined in section 4.1-4.4 of this Agreement;</p><p><strong>License Fee </strong>shall mean the fee payable by Licensee to Highsoft for the right to use the Licensed Software and for the Licensee’s initial twelve (12) months enrollment in Highcharts Advantage after Delivery date, which is included in the License Fee at no additional cost;</p><p><strong>Licensed Software </strong>shall mean the Software products licensed to Licensee through this Agreement, as chosen by Licensee upon purchase and confirmed in the License Statement;</p><p><strong>Licensee </strong>shall mean the legal entity to which License has been granted, as expressly stated in the License Statement;</p><p><strong>Licensee Product </strong>shall mean any software product, application or solution, marketed by Licensee, in which Licensed Software may be incorporated solely pursuant to an OEM License in accordance with section 4.4 and which has been approved by Highsoft as a Licensee Product by express identification as such in the License Statement. For the avoidance of doubt, the term Licensee Product shall not include SaaS Applications or Web Applications offered by Licensee pursuant to a SaaS License or a SaaS+ License in accordance with section 4.2 or 4.3;</p><p><strong>License Statement </strong>shall mean the document sent from Highsoft to Licensee as a link along with the confirmation of the purchase of the License, and which expressly identifies the details of the License, including but not limited to the Licensed Software, the number of authorized Developers, the License ID-number, the expressed name(s) of the applicable Web Applications, SaaS Application(s) and Licensee Products (as</p><p>applicable), Licensee’s enrollment in Highcharts Advantage, and applicable terms hereunder, as further set out in section 17.8. In the case of any subsequent changes to the License in accordance with section 17.8, the License Statement will be adjusted accordingly;</p><p><strong>OEM License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use Licensed Software as an integral part of a Licensee Product which will be supplied to Third Party through a Customer Installation, as further described in section 4.4;</p><p><strong>Official Integrations and Add-ons </strong>shall mean integrations, wrappers, add-ons, plug-ins and software framework which are made available and supported by Highsoft as an additional free-of-charge service not to be deemed part of the Licensed Software, for the purpose of enhancing the use of the Software and to make integration and programming easier, for instance by adding customized features or by simplifying the development environment. Such Official Integrations and Add-ons may include opens source software and are made available free-of-charge under the MIT-license or other open-source licenses, as applicable. Information about Official Integrations and Add-ons is available on Highsoft´s website.</p><p><strong>Optional Dependencies </strong>shall mean optional extensions and features to the Software products which are made available and supported by Highsoft as an additional free-of-charge service not to be deemed part of the Licensed Software and which depend in whole or in part on external libraries. Such Optional Dependencies may include open-source software and are made available free-of-charge under the MIT-license or other open-source licenses. Information about Optional Dependencies is available on Highsoft’s Website;</p><p><strong>Party </strong>shall mean a party to this Agreement;</p><p><strong>Release </strong>shall mean, with respect to any Licensed Software, any release of minor or substantial updates, news and improvements to Licensed Software, which may include bug fixes, redesign, and refactoring of the API. Such improvements may typically include modifications to the Software which increase the efficiency, ease of use and/or add additional capabilities or functionality.</p><p><strong>SaaS Application </strong>shall mean a software solution or application offered by Licensee as a service (i.e. not a product) which fully or partly includes Licensed Software and which is made available by Licensee to any number of Third Parties from a server outside such Third Parties’ premises which is owned or controlled by Licensee, and which can be distributed as a web application, desktop application or mobile application, and which may come in various versions for different platforms (such as e.g. iOS and Android versions of a mobile application), provided that such software product, solution or application has been approved by Highsoft as a SaaS Application by express identification as such in the License Statement;</p><p><strong>SaaS License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use the Licensed Software in one (1) SaaS Application or one (1) Web Application, as further described in section 4.2;</p><p><strong>SaaS+ License </strong>shall mean the license type offered by Highsoft granting Licensee the right to use the Licensed Software in up to five (5) SaaS Applications and/or Web Applications (total number of applications not to exceed five), as further described in section 4.3;</p><p><strong>Software </strong>shall mean any and all proprietary software products owned by Highsoft, including without limitation Highcharts Core, Highcharts Stock, Highcharts Maps, Highcharts Gantt and Highcharts Dashboards. For the purposes of this Agreement, Software shall not include Official Integrations, Add-ons or Optional Dependencies;</p><p><strong>Third Party </strong>shall mean any other entity than the Parties, including but not limited to Licensee’s customers<strong>;</strong></p><p><strong>Web Application </strong>shall mean a software solution or application running on web server(s) owned, controlled or hosted by Licensee which fully or partly includes Licensed Software, which is made available by Licensee to a Third Party, and which can be distributed as a web application, desktop application or mobile application, and which may come in various versions for different platforms (such as e.g. iOS and Android versions of a mobile application);</p><h3 id="2">2. Ownership and Copyright</h3><p>All Software is the property of Highsoft and is protected by copyright law as well as other statutory and non- statutory intellectual property law. Highsoft product names and trade names are owned by Highsoft and protected under trademark law, both as registered trademarks and through use.</p><p>All title and copyrights in and to Software, trademarks and accompanying materials and rights are and shall remain owned fully and solely by Highsoft, and nothing herein shall involve or imply any transfer of such ownership or rights.</p><p>Through this Agreement, Software is licensed, not sold.</p><p>Highsoft reserves all rights not expressly granted to Licensee in this Agreement. Without limiting the generality of the foregoing, Licensee acknowledges and agrees that: (a) except as specifically set forth in this Agreement, Highsoft retains all right, title and interest in and to Software, and Licensee does not acquire any right, title or interest to Software except as set forth herein; (b) any configuration or deployment of Software shall not affect or diminish Highsoft’s rights, title or interest in and to Software. Except as stated in the foregoing subsection, nothing in this Agreement shall limit in any way Highsoft’s right to develop, use, license, create derivative works of, or otherwise exploit Software, or to permit Third Parties to do so.</p><p>Highsoft acknowledges and agrees that (i) Licensee retains all rights, title and interest in and to any Licensee Product and to any Licensee-owned SaaS Application or Web Application, and Highsoft does not acquire any right, title, or interest in or to such product or application; and (ii) any integration of Licensed Software with Licensee Product or Licensee owned SaaS Application or Web Application shall not affect or diminish Licensee’s rights, title, and interest in and to such product or application.</p><h3 id="3">3. Grant of License and Limitations</h3><h4 id="3.1">3.1. Scope of License</h4><p>Subject to the terms and conditions of this Agreement and upon Licensee&#x27;s full payment of the applicable fees, Highsoft grants Licensee the right to use the Licensed Software strictly within the scope of the granted License type, and to receive services and Releases included in Highcharts Advantage as described below.</p><p>The License, which shall be registered in Licensee&#x27;s name, shall commence on Delivery Date and be effective until terminated in accordance with the terms and conditions set forth in this Agreement.</p><p>When entering into this Agreement, Licensee must choose and state:</p><ol start="1"><li>the Software products to be included in the license;</li><li>one or more of the License types described in section 4, and;</li><li>the number of authorized Developers to be included in the License, and;</li><li>which Web Application(s) and/or SaaS Application(s) the Licensed Software will be used in, if purchasing a SaaS License or SaaS+ License as further described in sections 4.2-4.3;</li><li>which Licensee Product(s) the Licensed Software will be used in, if purchasing an OEM License as further described in section 4.4;</li><li>the number of Customer Installations, with or without developer rights, to be included in the License, if purchasing OEM License(s) as further described in section 4.4;</li><li>Any Affiliates to be included in the License.</li></ol><p>The information listed in i)-vii) shall be stated in the License Statement.</p><p>All Optional Dependencies and Official Integrations and Add-ons are made available by Highsoft as an additional free-of-charge service, irrespective of the chosen Software product and License type, and shall not be deemed part of the Licensed Software.</p><p>Each License type grants Licensee a specific set of usage rights to Licensed Software, as described respectively in section 4.1 to 4.4 below. The offered license types described in section 4.1 (Internal License),</p><p>4.2 (SaaS License) and 4.3 (SaaS+ License) are complementary in the sense that SaaS License and SaaS+ License each includes a gradual broadened scope and more extensive usage rights than the Internal License,</p><p>e.g. the SaaS License consumes and includes more extensive rights than the Internal License. For the avoidance of doubt, an OEM License does not include any of the rights covered by an Internal License, a SaaS License or a SaaS+ License, unless such rights are added in accordance with section 4.4.3 below through a customization of the OEM License.</p><p>Depending on the purchased License type(s), sections 4.1, 4.2, 4.3 and/or 4.4 below shall apply. The License type(s) chosen by Licensee shall be stated in Appendix A and in the License Statement.</p><p>Upon request, Highsoft may provide advice on which License type will be suitable for Licensee as this will mainly depend on Licensee’s use case. In such case, Highsoft will use its best effort to suggest a suitable License type based on the information provided by Licensee. Licensee shall bear the risk for the correctness and completeness of the information provided, and Highsoft provides no guarantees, express or implied, as</p><p>to the suitability of the chosen License type(s) and hereby disclaims any and all liability related to the choice made by Licensee.</p><h4 id="3.2">3.2. General Limitations to the License</h4><h5 id="3.2.1">3.2.1. Number of Developers</h5><p>Each License granted by Highsoft under this Agreement comes with a defined (limited) number of authorized Developers. Licensee acknowledges, accepts, and undertakes to ensure that the actual number of Developers at any time, whether employees or subcontractors of Licensee, shall not exceed the total number of Developers stated in License Statement. Any breach of this restriction shall be considered a material breach of the Agreement.</p><h5 id="3.2.2">3.2.2. Usage by Affiliates</h5><p>The License is granted to Licensee only and does not extend to Licensee’s Affiliates at the commencement of this Agreement, unless otherwise agreed between the Parties by way of express identification of this extended right in the License Statement, and subject to Licensee’s payment of the additional Affiliate Fee.</p><p>Licensee may at any time and subject to an additional Affiliate Fee purchase a right for its Affiliates to use the Licensed Software within the scope of the purchased License(s) and the number of Developers and Customer Installations defined therein (if applicable). Any such subsequent extension of the License to also cover Licensee’s Affiliates must, in order to be valid, be agreed in writing between the Parties. If Licensee wishes to purchase such an Affiliate extension, Licensee shall send to Highsoft a written notice, containing (a) the number of Affiliates, and (b) the following information for each of the Affiliates that Licensee wishes to include in the purchased License(s):</p><ol start="1"><li>Company name</li><li>Company registration no.</li><li>Nationality</li><li>Address</li><li>Contact information</li><li>Contact person</li></ol><p>Highsoft will thereafter update the License Statement, which will state the applicable Affiliates included in the License. An extension of the License to include Affiliates shall for the avoidance of doubt not expand the usage rights granted through this Agreement or expand the scope of the granted License unless such expansions of the License are concurrently requested and agreed between the Parties pursuant to section 17.8.</p><h5 id="3.2.3">3.2.3. Access to new Releases</h5><p>Subject to restrictions and limitations applicable to the purchased License type, a purchase of a License grants Licensee the right to use the applicable Release of the Software at the time of purchase. In order to gain access to new Releases, Licensee must remain enrolled in the Highcharts Advantage plan as defined in section 5 below. Upon purchase of a License, Licensee will be automatically enrolled in the Highcharts</p><p>Advantage plan, commencing on Delivery Date, and the first twelve (12) months of Licensee’s enrollment in the Highcharts Advantage plan shall be included in the License Fee at no additional cost.</p><p>Licensee undertakes not to make use of any Software in other or newer versions than such Release(s) of the Licensed Software which Licensee is entitled to use pursuant to a valid enrollment in the Highcharts Advantage plan. Any breach of this restriction shall be considered a material breach of the Agreement.</p><p>A License granted under this Agreement is perpetual and not subject to renewal. The perpetual nature of the License is strictly limited to Release(s) of the Software to which Licensee has lawfully gained access and usage rights during a valid enrollment in the Highcharts Advantage plan. Notwithstanding its (otherwise) perpetual nature, such License shall nevertheless expire if the Agreement is lawfully terminated by Highsoft due to Licensee’s material breach, in accordance with section 13.3.</p><h5 id="3.2.4">3.2.4. Access to Source Code</h5><p>Licensee may obtain Licensed Software source code by downloading the source code from the Highsoft Website, make own edits, and keep its own repositories with the modified source code.</p><p>Licensee shall not modify, delete or obscure any notices of proprietary rights or any Software identification or restrictions on or in Software found in the license-header of the code files.</p><h5 id="3.2.5">3.2.5. Usage of Software in competing products</h5><p>Licensee undertakes not to use Software as part of any offerings comprising functionality that is substantially similar to that of Software, during the term of this Agreement, and for a period of three (3) years after its termination, however occasioned. Nothing in this Agreement shall, however, be construed to preclude Licensee from using, marketing, licensing and/or selling software which is developed by Licensee on a fully independent basis, even if such software has the same or similar functionality as Software, provided always that such activities do not infringe or jeopardize Highsoft’s intellectual property rights or are in breach of other related statutory or non-statutory rules of law.</p><h4 id="3.3">3.3. Identification of Licensee applications or products and optional purchase of License to future applications or products</h4><p>Licensed Software may only be incorporated into such SaaS Applications, Web Applications or Licensee Products as expressly identified and approved by Highsoft in the License Statement, and the names of such applications or products (as applicable) shall be provided by Licensee upon entering into this Agreement, in accordance with section 3.1. The Parties may agree in writing that the names of the SaaS Applications, Web Applications or Licensee Products (as applicable) shall be provided by Licensee to Highsoft after the Delivery Date, i.e. if the applications or products are still unnamed at the time of entering into this Agreement. In such case, the number of SaaS Applications, Web Applications or Licensee Products (as applicable) shall be listed in Appendix A and the License Statement, and the names of the SaaS Applications, Web Applications or Licensee Products (as applicable) shall be provided by Licensee to Highsoft after the Delivery Date, upon which the License Statement will be updated. Licensee is not authorized to use Licensed Software in any</p><p>SaaS Applications, Web Applications or Licensee Products not identified in the License Statement, i.e. after notice has been provided to Highsoft in accordance with this paragraph.</p><p>Licensee may also choose to purchase a SaaS License, SaaS+ License or OEM License for use in future SaaS Applications, Web Applications or Licensee Products. In such case, Licensee must, upon purchase of the License, provide to Highsoft the number of SaaS Applications, Web Applications and/or Licensee Products (as applicable) to be included in the License, which will be listed as unnamed products in the License Statement.</p><p>When Licensee wishes to utilize the purchased License for the optional future applications or products, Licensee shall give notice to Highsoft of this and state the names of the applications and/or products as well as any changes (if applicable) in the scope of the purchased License required by Licensee before incorporation of the Licensed Software into the applications or products, upon which the License Statement shall be updated accordingly. For the avoidance of doubt, the requirement that Licensed Software may only be incorporated into such SaaS Applications, Web applications or Licensee Products as expressly identified and approved by Highsoft in the License Statement, shall also apply for such optional future applications or products, and the Licensee is not authorized to incorporate the Licensed Software into such applications or products before Licensee has notified Highsoft in accordance with this paragraph and the License Statement has been adjusted accordingly.</p><p>While the non-reusable nature of SaaS, SaaS+ and OEM Licenses does not authorize Licensee to change or replace a SaaS Application, Web Application or Licensee Product with another application or product under the same License, this shall not be deemed to preclude Licensee from changing the name of a SaaS Application, Web Application or Licensee product included in a License, and to request that the License Statement is adjusted accordingly.</p><h4 id="3.4">3.4. Special terms for Highcharts Dashboards</h4><p>The following terms and conditions shall be applicable insofar as the Licensed Software includes Highcharts Dashboards, in addition to the terms otherwise set out herein this Agreement.</p><p>In addition to using the standard components included in the library provided by Highsoft to a Licensee holding a License to Highcharts Dashboards, Highcharts Dashboards enables Developers to make custom components or add Third Party components to dashboards created using Highcharts Dashboards. For the avoidance of doubt, the warranties and indemnifications provided by Highsoft in section 8 and 10 of this Agreement shall solely apply to the library and the standard components provided by Highsoft to Licensee in accordance with section 7. Licensee shall indemnify and hold Highsoft harmless from and against any and all losses, claims and damages related to customized components or Third Party components developed or utilized through Highcharts Dashboards.</p><p>Highcharts Dashboards enables Developers to further enable other employees or contractors of Licensee, or Licensee’s customers and end users, to modify dashboards through the “Edit Mode”. The usage of this functionality shall for the avoidance of doubt not lead to such persons being regarded as Developers or count</p><p>towards the total count of Licensee’s included Developers, insofar as such persons will not be working with or accessing the API and/or source code of the Licensed Software. The restrictions related to generation of static content in section 4.1 below shall furthermore not be construed as prohibiting Licensee from enabling users to access the “Editor Mode” to modify, add, remove, move, or resize components in dashboards created by Licensee holding an Internal License, in so far as the parameters of interaction and modification of such components remain the same for all such users, and such actions do not require working with or accessing the API and/or source code of the Licensed Software.</p><h3 id="4">4. License types and usage rights included</h3><h4 id="4.1">4.1. Internal License</h4><p>Through an Internal License, Highsoft grants Licensee a non-exclusive, perpetual (for applicable Releases), non-sublicensable, worldwide right to install, reproduce, use and further develop Licensed Software as such:</p><ol start="1"><li>on any number of public or private websites (including subdomains and intranet sites) for generation of static content, and;</li><li>on any Internal Applications</li></ol><p>An Internal License authorizes Licensee to use the Licensed Software for internal purposes only and extends to Licensee’s employees and contractors, but not to its clients or other Third Parties. An Internal License does not include any right for Licensee to use the Licensed Software in a SaaS Application, Web Application or a Licensee Product, nor does it authorized Licensee to perform Customer Installations.</p><p>The condition that the right to use the Licensed Software under an Internal License is limited to generation of static content only, means that the data set in the content provided by Licensee on websites must be the same (identical) for all users, and that such websites shall not generate individually tailored content adapted to any user’s personal data. For the avoidance of doubt, this does not prevent the use of the Licensed Software under an Internal License to create interactive content but requires that the parameters of the interaction of such content is the same for all users.</p><h4 id="4.2">4.2. SaaS License</h4><p>Through a SaaS License, Highsoft grants Licensee such rights that are covered by an Internal License with the addition of a non-exclusive, perpetual (for applicable Releases), non-reusable, worldwide right to install, reproduce, use and further develop Licensed Software as an integral part of either:</p><ol start="1" class="Sla-page-alpha-list"><li>one (1) SaaS Application, or;</li><li>one (1) Web Application,</li></ol><p>Licensed Software may be incorporated solely into a SaaS Application or a Web Application that has been expressly identified and approved by Highsoft in the License Statement. Licensee is allowed to make changes or further developments to the specified SaaS Application or Web Application. The non-reusable character of the SaaS License means that Licensee is not allowed to change or replace the SaaS Application or Web Application with a separate SaaS Application or Web Application under the same License.</p><p>A SaaS License does not authorize Licensee to perform Customer Installations, and any such Customer Installations distributed by a Licensee holding only a SaaS License shall therefore be deemed invalid and shall be considered a material breach of this Agreement.</p><p>Except for the authorized use of the Licensed Software in either one (1) SaaS Application or one (1) Web Application as specified in the License Statement, Licensees only holding a SaaS License is under no circumstances authorized to transfer, rent, lease, lend, sell, copy, redistribute, or sublicense any Licensed Software, in itself or together with other software, or in any other way make Software available to any Third Party. Any attempt to do so shall be considered a material breach of this Agreement.</p><h4 id="4.3">4.3. SaaS+ License</h4><p>Through a SaaS+ License, Highsoft grants Licensee such rights that are covered by an Internal License with the addition of a non-exclusive, perpetual (for applicable Releases), non-reusable, worldwide right to install, reproduce, use and further develop Licensed Software in either:</p><ol start="1" class="Sla-page-alpha-list"><li>Up to five (5) independent SaaS Applications, or;</li><li>Up to five (5) independent Web Applications, or;</li><li>Up to five (5) independent SaaS Applications and Web Applications as long as the total number of applications does not exceed five (5).</li></ol><p>A SaaS+ License does not authorize Licensee to perform Customer Installations, and any such Customer Installations performed by a Licensee holding only a SaaS+ License shall therefore be deemed unauthorized and invalid and shall be considered a material breach of this Agreement.</p><p>Except for the authorized use of the Licensed Software in accordance with letter a., b. or c. in this section 4.3 and as specified in the License Statement, Licensees only holding a SaaS+ License are under no circumstances authorized to transfer, rent, lease, lend, sell, copy, redistribute, or sublicense any Licensed Software, in itself or together with other software, or in any other way make Licensed Software available to any Third Party. Any attempt to do so shall be considered a material breach of this Agreement.</p><h4 id="4.4">4.4. OEM License</h4><h5 id="4.4.1">4.4.1. Grants under the OEM License</h5><p>Through an OEM License, Highsoft grants Licensee a non-exclusive, perpetual (for applicable Releases), non-reusable, worldwide right to install, reproduce, use, sublicense and further develop Licensed Software as an integral part of a Licensee Product, provided that such Licensee Product be supplied to Third Party through a Customer Installation, with or without the right for Licensee’s customers to work with the API and/or source code of the Licensed Software (“<strong>Developer Rights</strong>”), dependent on Licensee’s choice as specified in License Statement.</p><p>The authorization to sublicense Licensed Software only applies when and as long as such Licensed Software lawfully is incorporated with Licensee Product supplied to Third Party in accordance with this Agreement.</p><h5 id="4.4.2">4.4.2. Limitations to the OEM License</h5><p>Licensee acknowledges, accepts, and undertakes to ensure that the actual number of Licensee Products and Customer Installations, with or without Developer Rights, shall not at any time exceed the total number of Licensee Products and Customer Installations selected by Licensee upon purchase of the License and specified in the License Statement.</p><p>Licensed Software may only be incorporated into such Licensee Products as expressly identified and approved by Highsoft in the License Statement.</p><p>Licensee shall be prohibited from reselling any Licensee Product or otherwise from granting its customers permission to use the Licensed Software, in any manner that contradicts the terms and restrictions of this Agreement or the License(s) granted hereunder.</p><h5 id="4.4.3">4.4.3. Optional addition of Websites, Internal Applications, SaaS Application(s) and/or Web Application(s) to the OEM License</h5><p>Licensee may, subject to an additional fee, choose to customize the OEM License by adding the usage rights granted under the Internal License, SaaS License or SaaS+ License. By doing so, depending on the chosen additions to the OEM License, Licensee will be authorized to use the Licensed Software as such on any websites (public or private) and Internal Applications, to incorporate Licensed Software into the number of SaaS Application and/or Web Application as specified by Licensee and approved by Highsoft in the License Statement.</p><h3 id="5">5. Highcharts Advantage</h3><h4 id="5.1">5.1. Enrollment and Auto-Renewal</h4><p>When purchasing a License under this Agreement, Licensee is automatically enrolled in Highsoft’s Highcharts Advantage plan. The Highcharts Advantage plan operates in twelve (12) months intervals commencing on Delivery Date (each twelve-month period constituting an “<strong>Advantage Period</strong>”). The Highcharts Advantage plan is based on a continuous subscription to Highcharts Advantage, which is automatically renewed at the end of each Advantage Period (“<strong>Auto-Renewal</strong>”), unless cancelled in accordance with section 5.4 below. Licensee’s continued enrollment in Highcharts Advantage plan is subject to payment of the applicable Highcharts Advantage Fee in accordance with section 6 below.</p><p>Auto-Renewal of Licensee’s enrollment in the Highcharts Advantage plan is made for the complete License and includes the same number of Developers and/or Customer Installations (as applicable) as set out in the License Statement. Licensee may prior to the end of each Advantage Period request upgrades to the License by notice to Highsoft in accordance with sections 17.8 and 17.9, and may hereunder request increasing the number of Developers and/or Customer Installations, or additions of new SaaS Applications, Web Applications or Licensee Products (as applicable), to be included in the License upon Auto-Renewal,</p><h4 id="5.2">5.2. Optional Fixed Advantage Period</h4><p>Instead of the subscription-based Auto-Renewal of Highcharts Advantage described above in section 5.1, Licensee may, at the time of purchase, choose to enroll in the Highcharts Advantage plan for fixed periods of up to five (5) years at a time (“<strong>Fixed Advantage Period</strong>”). The duration of Licensee’s Fixed Advantage Period shall in such case be stated in the License Statement. At the end of the Fixed Advantage Period, Licensee’s enrollment will expire without further notice, unless License prior to the end of the Fixed Advantage Period renews its enrollment in the Highcharts Advantage plan with one or more Advantage Periods (“<strong>Extension</strong>”).</p><p>In order to choose a Fixed Advantage Period, Licensee must give notice to Highsoft upon purchase. As set forth in section 17.8, the selected option for Licensee’s enrollment in the Highcharts Advantage plan will be listed in the License Statement. Unless otherwise stated at the time of purchase, Licensee’s enrollment in the Highcharts Advantage plan will automatically be subject to Auto-Renewal as set forth in section 5.1.</p><h4 id="5.3">5.3. Entitlements and limitations</h4><p>Under a valid and effective enrollment in the Highcharts Advantage plan, Licensee shall be entitled to receive:</p><ol start="1"><li>All new Releases of the Licensed Software released during the applicable period;</li><li>Ten (10) hours of personalized technical support per Developer per twelve (12) month period based on the number of Developers stated in the License Statement;</li><li>Technical support by e-mail;</li><li>Priority response, no later than 36 hours on working days in Norway after the request was received;</li><li>Access to 2nd line support by core developers;</li><li>Online text chat with 1st line support engineers;</li><li>Investigation of any claimed bug/error/malfunction/nonfunctioning of Licensed Software, and when possible suggestions as to corrective or work-around solutions to the problems;</li><li>Supply of emergency hot fixes to Licensed Software. This will be available as patches to the latest stable source code, and, if applicable, be included in the subsequent Release;</li><li>Guidance and advice on implementing Licensed Software with any Third-Party systems and platforms to the extent such implementation is authorized under this Agreement. This includes advice on best practices, code review and guidance on parts of the code that are directly related to using Software. The guidance and advice from Highsoft will not include general usage of the Third-Party system, components, platform or actual coding work;</li><li>Any bug and error fixing, malfunctioning of Licensed Software is to be delivered outside the personalized technical support hours.</li></ol><p>During each Advantage Period in which Licensee is validly enrolled in Highcharts Advantage, Highsoft will provide support for all Releases of Licensed Software released within that Advantage Period.</p><p>Highcharts Advantage does not cover issues arising in connection with implementation of Licensed Software in/to Licensee Products or Licensee’s own applications.</p><p>Highcharts Advantage as set forth in this section, shall not extend to any Third Parties to which Licensee distributes Licensee Products, SaaS Application(s) or Web Application(s) containing Licensed Software or any</p><p>part thereof. Support to any Licensee customers shall hence be Licensee’s full and sole responsibility. Highsoft may, at its sole discretion, at any time choose to discontinue the supply of new Releases.</p><h4 id="5.4">5.4. Opt Out</h4><p>Unless enrolled in a Fixed Advantage Plan, Licensee may at any time cancel its enrollment in the Highcharts Advantage plan by notice to Highsoft of such cancellation within sixty (60) days prior to the end of the current Advantage Period, upon which Licensee’s enrollment in Highcharts Advantage shall expire after the end of that Advantage Period (“<strong>Opt Out</strong>”). If the notice of Opt Out is provided later than sixty (60) days prior to the end of the current Advantage Period, Licensee’s enrollment in Highcharts Advantage shall expire at the end of the following Advantage Period. Upon Opt Out, Licensee will retain a perpetual License to the Releases of the Software to which Licensee has lawfully gained access and usage rights during its enrollment in the Highcharts Advantage plan, but will not be entitled to access to new Releases or the support services as set out in section 5.3 above.</p><h4 id="5.5">5.5. Amendments</h4><p>Licensee acknowledges and accepts that Highsoft may make changes to its business, license or support model or to the terms and conditions under which Highsoft is willing to offer its Software, and that in order for Highsoft to offer continued Auto-Renewal or Extension of Highcharts Advantage, Highsoft may from time to time amend this Agreement in order to reflect such changes. Upon Auto-Renewal or the purchase of an Extension of Licensee’s enrollment in the Highcharts Advantage plan, the enrollment in the Highcharts Advantage plan and the License to which the Highcharts Advantage relates shall be governed by the most- recent version of Highsoft’s Standard License Agreement as amended from time to time by Highsoft. The applicable version of Highsoft’s Standard License Agreement governing Licensee’s enrollment in the Highcharts Advantage plan and the License to which it relates, will be stated in the License Statement upon Auto-Renewal or Extension, and is available on the Highsoft Website. If Licensee is enrolled in Highcharts Advantage through a Fixed Advantage Period, Licensee acknowledges and accepts that changes made to Highsoft’s business, license or support model during the Fixed Advantage Period may require amendments of the Agreement in order to reflect the updated or adjusted offering appropriately.</p><h3 id="6">6. License Fee and Highcharts Advantage Fee</h3><p>Licensee shall upon purchase pay the agreed License Fee covering the purchase of Licensed Software and the included initial Advantage Period, or Fixed Advantage Period (if applicable), as detailed in the License Statement. Upon each Auto-Renewal of Licensee’s enrollment in the Highcharts Advantage plan, Licensee shall pay the Highcharts Advantage Fee applicable at the time of Auto-Renewal. If Licensee has elected a Fixed Advantage Period at the time of purchase, and wishes to purchase an Extension, Licensee shall pay the applicable Highcharts Advantage Fee at the time of such Extension.</p><p>Highsoft shall invoice Licensee and Licensee shall pay all invoices by the agreed payment method timely, which shall be no later than thirty (30) days from invoice date. In case of payment delay, Highsoft may claim late payment interest at the rate stipulated in applicable law.</p><p>Licensee shall be responsible for ensuring that its usage of the Software is in accordance with the scope of the License granted, as detailed in the License Statement. Licensee hereby accepts and agrees that in the case of Licensee’s usage of the Software which exceeds the agreed scope of the License, Highsoft may, following notice to Licensee, invoice Licensee corresponding to the exceeding usage and based on the applicable fees at the time of usage.</p><p>Each Party shall be fully and solely responsible for payment of any bank charges and/or local taxes imposed by the law of that Party&#x27;s home country related to the purchase of Licensed Software or Highcharts Advantage, and each Party shall indemnify, defend and hold harmless the other Party from any taxes, claims, costs or other liabilities related to the indemnifying Party’s taxes. Invoices from Highsoft will not include taxes, except VAT in the case of Norwegian customers. Licensee may not withhold any part of the invoiced amount as payment of taxes.</p><p>All Licenses and accompanying rights as well as Highcharts Advantage are granted to Licensee on the condition that all the due fees are paid to Highsoft in full and on time.</p><h3 id="7">7. Delivery</h3><p>During the term of this Agreement, Licensed Software shall be made available by Highsoft, and Licensee shall be authorized to download such Licensed Software from Highsoft Website. As set forth in sections 3.2.3 and 5 above, new Releases of Licensed Software shall only be available to Licensee as long as Licensee is validly enrolled in the Highcharts Advantage plan.</p><h3 id="8">8. Marketing and descriptions of Licensed Software</h3><p>Licensee may use Licensee’s own descriptions of the functionality provided by Licensed Software for the purposes of marketing Licensee’s own products, solutions or applications, including Licensee Products, if applicable, insofar as the descriptions are not misleading.</p><p>Licensee shall not do anything that might misrepresent the ownership of Software. Licensee undertakes not to brand Software as Licensee’s own or declare or give the impression that Licensee owns the copyright in Software.</p><p>Each Party may use the other Party’s name and logos in its marketing, promotion and website, in accordance with good business practice and as is reasonably necessary in order to describe and promote the Software or Licensee’s Product(s), SaaS Application(s) or Web Application(s), as applicable, including naming Licensee as a reference and showcasing Licensee’s publicly available charts which includes Licensed Software for the purposes of promoting or demonstrating the Software.</p><p>Licensee agrees that it will conduct its business in a manner that will not injure or jeopardize Highsoft’s reputation.</p><h3 id="9">9. Warranties and Representations</h3><h4 id="9.1">9.1. Scope</h4><p>Highsoft&#x27;s warranties and representations in this section 9 are limited to Licensed Software provided to Licensee under this Agreement. The warranties and representations provided herein does not cover and shall under no circumstances be deemed to cover any Official Integrations and Add-ons or Optional Dependencies.</p><h4 id="9.2">9.2. Highsoft&#x27;s Warranties and Representations</h4><p>Highsoft warrants and represents that:</p><ol start="1"><li>Licensed Software will perform substantially in accordance with Highsoft’s written specifications, provided that it has been used in accordance with all documentation and specifications made available on Highsoft&#x27;s Website, (a) for the duration of the Advantage Period in which the applicable Release has been issued by Highsoft, or (b) until replaced by a newer Release,</li><li>Highsoft will perform its obligations under this Agreement in accordance with all applicable laws and regulations,</li><li>Highsoft has the full and unconditional ownership of Licensed Software,</li><li>This Agreement does not infringe the intellectual property rights of any Third Party,</li><li>The Licensed Software does not include any Third-Party software,</li><li>Licensee may make full use of License granted to it in full knowledge of the above,</li><li>Highsoft has the requisite knowledge, personnel, resources and know-how to fully perform and deliver Licensed Software and associated services as stipulated by this Agreement in a professional manner,</li><li>Highsoft has not intentionally placed and will use its best efforts to avoid the placement of any Harmful Codes into Licensed Software provided under this Agreement. For the purpose of this section &quot;Harmful Codes&quot; shall be defined as any program that infects, damages and/or impairs another program or data, disables hardware or software, or permits or assists in the breach of data.</li></ol><h4 id="9.3">9.3. Licensee&#x27;s Remedies</h4><p>In the event of breach, or alleged breach of any of the warranties in section 9.2, Licensee shall promptly notify Highsoft and delete Software. Licensee’s sole remedy in such an event shall be that Highsoft shall re-supply or correct the Licensed Software so that it operates according to the warranties set out in section 9.2. The warranties shall not apply if Licensee has modified, or used Licensed Software improperly, or on an operating environment not approved by Highsoft. Improper use and unapproved operating environments will be as set forth in the documentation provided to Licensee on or prior to Delivery Date.</p><h3 id="10">10. Limitation of Liability</h3><p>All Software and support services supplied by Highsoft are provided ‘as is’ and may have errors and omissions. Thus, remedies are only available to Licensee in the event of any breach of the warranties set out in section 9.2, and Highsoft is unable to re-supply and correct the Licensed Software in accordance with section 9.3.</p><p>UNDER NO CIRCUMSTANCES, AND EVEN IF INFORMED THEREOF BY LICENSEE OR ANY OTHER PARTY, SHALL HIGHSOFT BE LIABLE FOR (i) LOSS OF, OR DAMAGE TO, DATA; (ii) SPECIAL, INCIDENTAL, CONSEQUENTIAL OR INDIRECT DAMAGES; OR (iii) LOST PROFITS, BUSINESS, REVENUE, GOODWILL, OR ANTICIPATED SAVINGS.</p><p>Incorporation of Licensed Software into a SaaS Application or Web Application shall not in any manner expand Highsoft’s liabilities under the Agreement. Thus, Highsoft shall not under any circumstance be neither responsible nor liable for any aspects of such SaaS Application(s) or Web Applications(s), including but not limited to its reliability, uptime/downtime, functioning or fitness for purpose. Any obligations, liabilities or warranties undertaken by Licensee towards its customers with respect to such SaaS Application(s) or Web Application(s) shall apply only between mentioned parties, and Licensee hereby undertakes to indemnify and hold Highsoft harmless from and against any and all losses, clams and damages related to the reliability, uptime/downtime, functioning or fitness for purpose of such SaaS Application(s) or Web Applications(s).</p><p>In all events, Highsoft’s liability for damages to Licensee for any cause whatsoever related to this Agreement, shall be limited to the sum of all fees paid or due by Licensee under this Agreement during the last twelve (12) months before the breach occurred.</p><h3 id="11">11. Intellectual Property Infringement</h3><p>Highsoft will defend, indemnify and hold Licensee harmless against any claim stating that Licensed Software is violating any Third-Party copyright provided that:</p><ol start="1"><li>Licensee promptly notifies Highsoft of the claim, such notice to be provided no later than ten (10) business days after receipt of said claim(s);</li><li>A copy of the notice(s) of copyright infringement is promptly sent to Highsoft in accordance with section 17.9;</li><li>Licensee in good faith cooperates with and assists Highsoft in the defense of the claim in question and meets reasonable requests from Highsoft in that respect;</li><li>Notwithstanding item iii. above, Highsoft shall have sole control of the defense and any related settlement negotiations in the case of legal proceedings; and</li><li>Licensee timely provides Highsoft with all necessary assistance, information and authority to perform the above.</li></ol><p>If Licensed Software is held by a final court ruling to be infringing any Third Party copyright Highsoft will at its option: (i) obtain the right for Licensee to continue to use such Software consistent with this Agreement; (ii) modify such Software so that it is non-infringing; or (iii) refund any and all invoiced amounts to Licensee and all of Highsoft’s obligations under this Agreement shall terminate upon written notice.</p><p>Notwithstanding the foregoing, Highsoft&#x27;s indemnity obligations under this section 11 shall under any circumstances be limited to the total amount invoiced to Licensee by Highsoft under this Agreement during the last twelve (12) months prior to the day when Licensee provided notice to Highsoft of claim subject to this section 11.</p><h3 id="12">12. Confidentiality</h3><p>For the purpose of this section each Party shall be called Disclosing Party and Receiving Party respectively.</p><p>Each Party acknowledges that Confidential Information is proprietary, that it is valuable to Disclosing Party and that any disclosure or unauthorized use thereof may cause irreparable harm and loss to Disclosing Party.</p><p>Obligations of Receiving Party in regard to Confidential Information:</p><ol start="1"><li>In consideration of the disclosure to Receiving Party of Confidential Information, Receiving Party agrees to receive and to treat Confidential Information on a confidential and restricted basis and to undertake the following additional obligations with respect thereto,</li><li>To use Confidential Information for the sole purpose of fulfilling this Agreement, or for the purpose of enhancing or improving the services provided under Highcharts Advantage or the general customer experience when doing business with Highsoft and/or Highsoft’s trusted partners, unless otherwise expressly agreed to in writing by Parties,</li><li>Not to duplicate, in whole or in part, any Confidential Information,</li><li>Subject to the next paragraph, not to disclose Confidential Information to Third Parties except on a need-to-know basis, and each such entity or individual person Receiving Confidential Information shall be notified of and required to abide by the terms and conditions of this Agreement,</li></ol><p>Information stated in the License Statement provided by Highsoft to Licensee may be shared with Highsoft’s officers, employees, Affiliates and trusted partners, provided that Highsoft holds an agreement with such entity or individual person committing them to same level of confidentiality as the Parties have agreed to in this Agreement.</p><p>Upon Expiration or Termination of this Agreement, however occasioned, each Party shall remove, delete or otherwise destroy any of other Party‘s material that it has received, copied or otherwise obtained, including but not limited to Confidential Information, except for information required to support any license, sublicense or maintenance obligations already granted or undertaken by Licensee towards any Third Party, or information required for tax purposes or otherwise required by mandatory law. A written confirmation that such deletion has been completed shall upon request be sent to the other Party without undue delay. For the avoidance of doubt, this obligation to remove, delete or otherwise destroy materials shall not include the Releases of the Licensed Software to which Licensee has gained perpetual rights to in accordance with this Agreement, unless the Agreement is terminated by Highsoft for material breach by Licensee.</p><h3 id="13">13. Term and Termination</h3><h4 id="13.1">13.1. Term</h4><p>This Agreement shall come into force on the Delivery Date and shall stay in force for as long as Licensee is enrolled in the Highcharts Advantage plan. Upon an Opt Out by Licensee or the end of a Fixed Advantage Period, the Agreement shall terminate automatically and without notice at the end of the applicable Advantage Period (“<strong>Expiration</strong>”).</p><h4 id="13.2">13.2. Effects of Expiration</h4><p>On Expiration of this Agreement, the following shall apply:</p><ol start="1"><li>Licensee may continue to utilize the Releases of the Licensed Software to which Licensee has gained perpetual rights, i.e. the Releases of the Licensed Software which were have been released during Licensees enrollment in Highcharts Advantage, in accordance with sections 3.2.3 and 5 (including subsections, as applicable) and the scope of the perpetual License as detailed in the License Statement;</li><li>Licensee is not entitled to use, and shall immediately cease all use and distribution of, any Releases of the Licensed Software to which Licensee has not gained perpetual rights;</li><li>Sections 2, 10, 12 and 15 of this Agreement shall survive.</li></ol><h4 id="13.3">13.3. Termination</h4><p>Either Party may terminate this Agreement in the event of a material breach of this Agreement by the other Party and such material breach has not been cured within thirty (30) days after receipt of written notice of such breach by the breaching Party from the non-breaching Party.</p><p>Upon Highsoft’s termination for material breach by Licensee:</p><ol start="1"><li>Licensee shall immediately cease use and distribution of Licensed Software.</li><li>Sections 2, 10, 12 and 15 of this Agreement shall survive.</li></ol><h3 id="14">14. Non-assignment</h3><p>Licensee may not assign or transfer all, or any part of its rights under this Agreement without Highsoft’s prior written consent. Notwithstanding the foregoing, either Party may assign this Agreement in its entirety to its Affiliate(s), or in connection with a merger, acquisition, corporate reorganization, or sale of all or substantially all of its assets. In such case, the assigning party shall notify the other in writing without undue delay, and unless otherwise agreed upon in writing, this Agreement shall bind, and inure to the benefit of Parties, their respective successors, and permitted assigns.</p><h3 id="15">15. Applicable Law and Venue</h3><p>This Agreement shall be governed by and construed in accordance with the laws of Norway.</p><p>Any dispute, controversy or claim arising out of or relating to this Agreement, or the breach, termination, or invalidity thereof, Parties shall seek to solve amicably through negotiations. If the Parties do not reach an amicable solution within two (2) weeks, any dispute, controversy or claim shall be finally settled by the regular courts of Norway. Both Parties hereby agree to and accept Sogn and Fjordane District Court (Sogn og Fjordane tingrett) as exclusive legal venue.</p><h3 id="16">16. Processing of Personal Data</h3><p>To the extent any purchase under the Agreement involves processing by Highsoft of personal data about the Licensee or Licensee’s customers or personnel, Highsoft shall be acting as a data controller. By law, Highsoft is required to provide the data subject with information about Highsoft and why and how Highsoft uses</p><p>personal data, and about the data subject’s rights in regard to such data. These matters are duly treated in Highsoft´s privacy policy, available at Highsoft Website.</p><p>The Licensee hereby undertakes to provide any personnel which is or might be affected by the collecting of personal data under this Agreement with due information about Highsoft’s privacy policy.</p><h3 id="17">17. Miscellaneous</h3><h4 id="17.1">17.1. Relationship between Parties</h4><p>The Parties are independent contractors, and this Agreement shall not constitute or be construed as constituting either Party as partner, joint venture, agency or fiduciary of the other, as creating any other form of legal association that would impose liability on one Party for the act, or failure to act, of the other Party, or as providing either Party with the right, power, or authority (express, or implied) to create any duty or obligation of the other Party. Neither Party shall directly or indirectly represent to the public that it has the right or the authority to create or accept obligations on behalf of the other Party. Except as otherwise expressly provided in this Agreement, each Party has the sole right and obligation to supervise, manage, contract, direct, procure, perform or cause to be performed all work to be performed by it under this Agreement.</p><h4 id="17.2">17.2. Audit</h4><p>During the term of this Agreement and for a period of five (5) years thereafter, Highsoft shall have the right to review, audit and inspect Licensee’s use of the Licensed Software in order to verify that Licensee complies with the grants and limitations set out in this Agreement. Such audit shall only be conducted under non- disclosure obligations, upon reasonable notice, which shall be no shorter than ten (10) calendar days and shall take place during Licensee regular business hours with minimal disruption to Licensee’s ongoing operations. If the audit shows no discrepancies or unauthorized use of Highsoft’s Software, Highsoft shall carry all of its costs associated with the audit.</p><h4 id="17.3">17.3. Severability</h4><p>In the event any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions of this Agreement will remain in full force.</p><h4 id="17.4">17.4. Waiver</h4><p>The waiver by either Highsoft, or Licensee of any default or breach of this Agreement shall not constitute a waiver of any other or subsequent default or breach. Except for actions for non-payment or an infringement of Highsoft’s intellectual proprietary rights in Licensed Software, no action, regardless of form, arising out of this Agreement may be brought by Licensee more than one (1) year after the cause of action has occurred.</p><h4 id="17.5">17.5. Entire Agreement</h4><p>This Agreement is the entire agreement between Highsoft and Licensee relating to this relationship and supersedes all prior or contemporaneous oral or written communications, proposals and representations relating to that relationship.</p><h4 id="17.6">17.6. Battle of Forms</h4><p>Licensee’s purchase of License shall be solely governed by the terms and conditions of this Agreement. Any terms or conditions introduced by Licensee either directly, indirectly by way of reference or otherwise are hereby explicitly rejected and shall not apply.</p><p>The Parties agree that any additional or differing terms or conditions in any other document or arrangement not forming part of this Agreement, including but not limited to any letter or terms of engagement or the like, purchase order, invoice, acknowledgment, delivery receipt, confirmation or other delivery or acceptance document issued by or on behalf of either Party shall be void, and of no force or effect to the extent such are in breach of or contradiction with this Agreement.</p><h4 id="17.7">17.7. Amendments</h4><p>Except in accordance with section 5.5, no amendment to, or modification of this Agreement or the scope of the License shall be binding unless made in writing and signed by the Parties.</p><h4 id="17.8">17.8. License Statement and Changes to the License</h4><p>Highsoft shall confirm Licensee’s purchase of the License by issuing a License Statement, which is an automatically generated document provided as a link to Licensee, summarizing the agreed details of the License granted by Highsoft to Licensee.</p><p>The License Statement shall expressly state:</p><ol start="1"><li>The License owner</li><li>Licensee’s point of contact (email address) to whom notices under this Agreement shall be sent</li><li>The chosen License type(s)</li><li>The Licensed Software included in the License</li><li>The License identification number</li><li>Licensee’s enrollment in Highcharts Advantage, hereunder the applicable option (Auto-Renewal or Fixed Advantage Period)</li><li>The number of authorized Developers</li><li>The Licensee Product(s), into which Licensed Software may be incorporated pursuant to an OEM License, if applicable,</li><li>The number of Customer Installations (with or without Developer Rights) Licensee shall be authorized to perform under an OEM License, if applicable</li><li>The SaaS Application(s) and/or Web Application(s), into which Licensed Software may be incorporated pursuant to a SaaS License or a SaaS+ License, as applicable</li><li>The specific Licensee’s Affiliates to which the License shall be extended, or, that the License shall extend to an unlimited number of Affiliates, if applicable.</li></ol><p>In the event Licensee wants to make any changes to the License, such as Extension of Highcharts Advantage, or renaming of Licensee Product(s), SaaS Application(s) or Web Applications, or if Licensee wants to expand</p><p>the scope of the License for example by adding new Licensee Products, SaaS Applications, Web Applications, Developer seats or Customer Installations (with or without Developer Rights), Licensee shall notify Highsoft in writing. Such changes may require a new License or changes to the existing License, depending on the changes requested by Licensee. If Licensee and Highsoft agrees in writing on any changes to the License and the payable fees, the License Statement will be updated accordingly.</p><h4 id="17.9">17.9. Notices</h4><p>All notices to be given under this Agreement to Highsoft shall be sent either by email to<!-- --> <a href="/cdn-cgi/l/email-protection#582b39343d2b1830313f302b373e2c763b3735"><span class="__cf_email__" data-cfemail="7e0d1f121b0d3e161719160d11180a501d1113">[email&#160;protected]</span></a> or as a hardcopy to the following address: Highsoft AS, Sentrumsgata 44, 6893 Vik i Sogn, Norway.</p><p>Information from Highsoft to Licensee shall be sent by email to the email address Licensee has provided upon purchase. It is Licensee’ responsibility to ensure that the e-mail address is correct. Highsoft does not take responsibility for lost communication.</p><p>All notices, demands or other communication given by a Party to the other shall be deemed to have been duly given when made in writing and sent to the registered e-mail address or when a hardcopy is received by the other Party at the stated address.</p></div></div></div></div></main><div class="Footer-bleed full-bleed"><footer id="app-footer" class="container"><ul><li><h2>Shortcuts</h2><ul><li><a href="https://www.highcharts.com/blog/products">Products</a></li><li><a href="https://www.highcharts.com/demo">Demos</a></li><li><a href="https://www.highcharts.com/download">Try before you buy</a></li><li><a href="/">Get a license</a></li><li><a href="https://www.highcharts.com/blog">News &amp; Tutorials</a></li><li><a href="https://www.highcharts.com/newsletter">Newsletter</a></li></ul></li><li><h2>Support</h2><ul><li><a href="https://www.highcharts.com/forum">Community Forums</a></li><li><a href="https://www.highcharts.com/docs/index">Documentation</a></li><li><a href="https://www.highcharts.com/blog/posts/code-examples">Code Examples</a></li><li><a href="https://api.highcharts.com/highcharts">API Reference</a></li><li><a href="https://www.highcharts.com/accessibility">Accessibility</a></li><li><a href="/channel-partners">Channel Partners</a></li><li><a href="/government">Government Pricing</a></li><li><a href="/faq">FAQ</a></li></ul></li><li><h2>Site</h2><ul><li><button type="button" class="cookieBot">Cookie Policy</button></li><li><button type="button" class="cookieBot">Cookie\nPreferences</button></li><li><a href="https://www.highcharts.com/privacy">Privacy Policy</a></li><li><a href="https://shop.highcharts.com/license">Standard License Agreement</a></li><li><a href="https://www.highcharts.com/sitemap.xml">Sitemap</a></li><li><a href="https://www.highcharts.com/blog/article/accessibility-statement">Accessibility\nStatement</a></li></ul></li><li><h2>About</h2><ul><li><a href="https://www.highcharts.com/about">Our Story</a></li><li><a href="https://www.highcharts.com/people">Discover the Team</a></li><li><a href="https://highsoft.teamtailor.com">Join the Team</a></li><li><a href="https://www.highcharts.com/contact">Contact</a></li><li><a href="https://www.highcharts.com/press">Press</a></li><li><a href="https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2021/08/16115648/Codeofconduct.pdf">Code\nof Conduct</a></li></ul></li></ul><div class="App-footer-bottom"><span>© <!-- -->2023<!-- --> Highsoft. All rights reserved.</span><ul class="App-footer-social"><li><a href="https://twitter.com/Highcharts" aria-label="Twitter"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a></li><li><a href="https://www.linkedin.com/company/highsoft" aria-label="Linkedin"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a></li><li><a href="https://www.facebook.com/Highcharts" aria-label="Facebook"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a></li><li><a href="https://github.com/highcharts/highcharts" aria-label="Github"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></li><li><a href="https://www.youtube.com/channel/UCzxXofPTQ0DoT7uIy3Fxw7A" aria-label="Youtube"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a></li><li><a href="https://www.instagram.com/highcharts" aria-label="Instagram"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></li><li><a href="https://stackoverflow.com/questions/tagged/highcharts" aria-label="Stack overflow"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" role="img" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"></path></svg></a></li></ul></div></footer></div></div></div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WLVCCK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/license","query":{},"buildId":"current","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>'
         }
         references={[
           {
@@ -20847,27 +18620,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "one",
             path: "/identity/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"hoist-non-react-statics"}
-        source={"NodeService"}
-        license={
-          'Software License Agreement (BSD License)\n========================================\n\nCopyright (c) 2015, Yahoo! Inc. All rights reserved.\n----------------------------------------------------\n\nRedistribution and use of this software in source and binary forms, with or\nwithout modification, are permitted provided that the following conditions are\nmet:\n\n* Redistributions of source code must retain the above copyright notice, this\nlist of conditions and the following disclaimer.\n* Redistributions in binary form must reproduce the above copyright notice,\nthis list of conditions and the following disclaimer in the documentation\nand/or other materials provided with the distribution.\n* Neither the name of Yahoo! Inc. nor the names of YUI\'s contributors may be\nused to endorse or promote products derived from this software without\nspecific prior written permission of Yahoo! Inc.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\nANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
             branch: "main",
           },
         ]}
@@ -21016,12 +18768,6 @@ export const DependenciesSection = () => {
         references={[
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/dom/webgpu/tests/cts/checkout/package.json",
             branch: "release",
@@ -21032,7 +18778,7 @@ export const DependenciesSection = () => {
         name={"husky"}
         source={"NodeService"}
         license={
-          'MIT License\n\nCopyright (c) 2021 typicode\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
+          'MIT License\n\nCopyright (c) 2017 - present\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
         }
         references={[
           {
@@ -21040,12 +18786,6 @@ export const DependenciesSection = () => {
             repo: "actions-status-discord",
             path: "/node_modules/cross-spawn/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -21146,18 +18886,6 @@ export const DependenciesSection = () => {
           'Copyright (c) 2021, Oath Inc.\n\nLicensed under the terms of the New BSD license. See below for terms.\n\nRedistribution and use of this software in source and binary forms,\nwith or without modification, are permitted provided that the following\nconditions are met:\n\n- Redistributions of source code must retain the above\ncopyright notice, this list of conditions and the\nfollowing disclaimer.\n\n- Redistributions in binary form must reproduce the above\ncopyright notice, this list of conditions and the\nfollowing disclaimer in the documentation and/or other\nmaterials provided with the distribution.\n\n- Neither the name of Oath Inc. nor the names of its\ncontributors may be used to endorse or promote products\nderived from this software without specific prior\nwritten permission of Oath Inc.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS\nIS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED\nTO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A\nPARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
         }
         references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
           {
             owner: "dothq",
             repo: "next-intl-1",
@@ -21464,21 +19192,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"jasmine-expect"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2017 Jamie Mason (https://github.com/JamieMason)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"javascript-time-ago"}
         source={"NodeService"}
         license={
@@ -21630,12 +19343,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/devtools/client/shared/components/test/node/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
           {
@@ -21935,6 +19642,21 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
+        name={"js-levenshtein"}
+        source={"NodeService"}
+        license={
+          'MIT License\n\nCopyright (c) 2017 Gustaf Andersson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
+        }
+        references={[
+          {
+            owner: "dothq",
+            repo: "licence-compiler",
+            path: "/package.json",
+            branch: "main",
+          },
+        ]}
+      />
+      <Dependency
         name={"js-sha512"}
         source={"NodeService"}
         license={
@@ -22034,27 +19756,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"json-stable-stringify"}
-        source={"NodeService"}
-        license={
-          'This software is released under the MIT license:\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the "Software"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"jsonwebtoken"}
         source={"NodeService"}
         license={
@@ -22099,12 +19800,6 @@ export const DependenciesSection = () => {
             repo: "fingerprintjs",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -22168,12 +19863,6 @@ export const DependenciesSection = () => {
             repo: "fingerprintjs",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -22265,12 +19954,6 @@ export const DependenciesSection = () => {
             path: "/package.json",
             branch: "master",
           },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
         ]}
       />
       <Dependency
@@ -22285,21 +19968,6 @@ export const DependenciesSection = () => {
             repo: "actions-status-discord",
             path: "/node_modules/axios/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"karma-jasmine-matchers"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -22408,12 +20076,6 @@ export const DependenciesSection = () => {
             repo: "actions-status-discord",
             path: "/node_modules/axios/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -22580,12 +20242,6 @@ export const DependenciesSection = () => {
           'Copyright (c) 2015-present Lerna Contributors\n\nMIT License\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
         }
         references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
           {
             owner: "dothq",
             repo: "next-intl-1",
@@ -22801,12 +20457,6 @@ export const DependenciesSection = () => {
             repo: "drop",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -23108,27 +20758,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"loud-rejection"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"lzma"}
         source={"NodeService"}
         license={
@@ -23155,21 +20784,6 @@ export const DependenciesSection = () => {
             repo: "actions-status-discord",
             path: "/node_modules/os-name/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"make-plural-compiler"}
-        source={"NodeService"}
-        license={
-          'Copyright (c) 2014-2019 by Eemeli Aro <eemeli@gmail.com>\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -23316,12 +20930,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/browser/components/newtab/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
           {
@@ -24483,21 +22091,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"patch-package"}
-        source={"NodeService"}
-        license={
-          'Copyright (c) 2017-Present David Sheldrick\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"path-key"}
         source={"NodeService"}
         license={
@@ -24863,12 +22456,6 @@ export const DependenciesSection = () => {
             repo: "fingerprintjs",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -25472,24 +23059,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "foundation-design-system",
             path: "/packages/icons-react/package.json",
             branch: "main",
@@ -25835,18 +23404,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/browser/components/newtab/package.json",
             branch: "release",
@@ -26174,27 +23731,6 @@ export const DependenciesSection = () => {
             repo: "pontoon",
             path: "/frontend/package.json",
             branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"react-intl"}
-        source={"NodeService"}
-        license={
-          'Copyright 2019 Oath Inc.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n\n* Neither the name of the Oath Inc. nor the\nnames of its contributors may be used to endorse or promote products\nderived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL Oath INC. BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/editor/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
           },
         ]}
       />
@@ -26584,12 +24120,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/devtools/client/debugger/test/mochitest/examples/react/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
             branch: "main",
           },
           {
@@ -27066,21 +24596,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"regenerate"}
-        source={"NodeService"}
-        license={
-          'Copyright Mathias Bynens <https://mathiasbynens.be/>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"regenerator-runtime"}
         source={"NodeService"}
         license={
@@ -27255,6 +24770,21 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
+        name={"retry-axios"}
+        source={"NodeService"}
+        license={
+          'Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n"control" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, "submitted"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a "NOTICE" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following\nboilerplate notice, with the fields enclosed by brackets "[]"\nreplaced with your own identifying information. (Don\'t include\nthe brackets!)  The text should be enclosed in the appropriate\ncomment syntax for the file format. We also recommend that a\nfile or class name and description of purpose be included on the\nsame "printed page" as the copyright notice for easier\nidentification within third-party archives.\n\nCopyright 2013 Google Inc.\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.'
+        }
+        references={[
+          {
+            owner: "dothq",
+            repo: "licence-compiler",
+            path: "/package.json",
+            branch: "main",
+          },
+        ]}
+      />
+      <Dependency
         name={"rich-markdown-editor"}
         source={"NodeService"}
         license={
@@ -27329,12 +24859,6 @@ export const DependenciesSection = () => {
             repo: "fingerprintjs",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -28050,21 +25574,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"serialize-javascript"}
-        source={"NodeService"}
-        license={
-          'Copyright 2014 Yahoo! Inc.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n\n* Neither the name of the Yahoo! Inc. nor the\nnames of its contributors may be used to endorse or promote products\nderived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL YAHOO! INC. BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"serve-index"}
         source={"NodeService"}
         license={
@@ -28205,6 +25714,21 @@ export const DependenciesSection = () => {
             repo: "tag-and-release-and-upload",
             path: "/node_modules/tunnel/package.json",
             branch: "master",
+          },
+        ]}
+      />
+      <Dependency
+        name={"shrink-string"}
+        source={"NodeService"}
+        license={
+          "Copyright © 2022 Zac Anger\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+        }
+        references={[
+          {
+            owner: "dothq",
+            repo: "licence-compiler",
+            path: "/package.json",
+            branch: "main",
           },
         ]}
       />
@@ -29214,21 +26738,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"test262-harness"}
-        source={"NodeService"}
-        license={
-          'Copyright (c) 2014, Microsoft Corporation\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\nlist of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\nthis list of conditions and the following disclaimer in the documentation\nand/or other materials provided with the distribution.\n\n* Neither the name of [project] nor the names of its\ncontributors may be used to endorse or promote products derived from\nthis software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"tildify"}
         source={"NodeService"}
         license={
@@ -29429,12 +26938,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "mozillabuild-shell-action",
             path: "/package.json",
             branch: "main",
@@ -29552,12 +27055,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "gecko-dev",
             path: "/devtools/client/debugger/test/mochitest/examples/sourcemapped/builds/webpack3/package.json",
             branch: "release",
@@ -29645,12 +27142,6 @@ export const DependenciesSection = () => {
             repo: "fingerprintjs",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -29786,150 +27277,6 @@ export const DependenciesSection = () => {
             repo: "fingerprintjs",
             path: "/package.json",
             branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/babel-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/ecma376/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/ecma402-abstract/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/fast-memoize/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/icu-messageformat-parser/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/icu-skeleton-parser/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-datetimeformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-displaynames/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-durationformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-getcanonicallocales/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-listformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-locale/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-localematcher/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-messageformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-numberformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-pluralrules/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl-relativetimeformat/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/ts-transformer/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/vue-intl/package.json",
-            branch: "main",
           },
           {
             owner: "dothq",
@@ -30269,30 +27616,6 @@ export const DependenciesSection = () => {
           },
           {
             owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/cli/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/eslint-plugin-formatjs/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/packages/react-intl/example-sandboxes/rescripts/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
             repo: "foundation-design-system",
             path: "/package.json",
             branch: "main",
@@ -30624,21 +27947,6 @@ export const DependenciesSection = () => {
         ]}
       />
       <Dependency
-        name={"unidiff"}
-        source={"NodeService"}
-        license={
-          'Software License Agreement (ISC License)\n\nCopyright (c) 2016, Matthew Voss\n\nPermission to use, copy, modify, and/or distribute this software for\nany purpose with or without fee is hereby granted, provided that the\nabove copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
         name={"universal-user-agent"}
         source={"NodeService"}
         license={
@@ -30897,49 +28205,13 @@ export const DependenciesSection = () => {
         name={"vue"}
         source={"NodeService"}
         license={
-          'The MIT License (MIT)\n\nCopyright (c) 2018-present, Yuxi (Evan) You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
+          'The MIT License (MIT)\n\nCopyright (c) 2013-present, Yuxi (Evan) You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
         }
         references={[
           {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/gfx/wr/debugger/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"vue-class-component"}
-        source={"NodeService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2015-present Evan You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"vue-eslint-parser"}
-        source={"NodeService"}
-        license={
-          'MIT License\n\nCopyright (c) 2016 Toru Nagashima\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
         ]}
@@ -30948,19 +28220,13 @@ export const DependenciesSection = () => {
         name={"vue-loader"}
         source={"NodeService"}
         license={
-          'MIT License\n\nCopyright (c) 2019-present, Yuxi (Evan) You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
+          'The MIT License (MIT)\n\nCopyright (c) 2015-present Yuxi (Evan) You\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
         }
         references={[
           {
             owner: "dothq",
             repo: "browser-desktop-patched",
             path: "/gfx/wr/debugger/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
         ]}
@@ -31171,12 +28437,6 @@ export const DependenciesSection = () => {
             owner: "dothq",
             repo: "fluent-loader",
             path: "/example/package.json",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "formatjs",
-            path: "/package.json",
             branch: "main",
           },
           {
@@ -31866,754 +29126,6 @@ export const DependenciesSection = () => {
             path: "/package.json",
             branch: "main",
           },
-        ]}
-      />
-      <Dependency
-        name={"askama"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2017-2020 Dirkjan Ochtman\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"async-recursion"}
-        source={"CargoService"}
-        license={
-          'Permission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"bincode"}
-        source={"CargoService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2014 Ty Overby\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"byte-unit"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) 2018 magiclen.org (Ron Li)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"cached"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) 2017 James Kominick\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"chrono"}
-        source={"CargoService"}
-        license={
-          'Rust-chrono is dual-licensed under The MIT License [1] and\nApache 2.0 License [2]. Copyright (c) 2014--2017, Kang Seonghoon and\ncontributors.\n\nNota Bene: This is same as the Rust Project\'s own license.\n\n\n[1]: <http://opensource.org/licenses/MIT>, which is reproduced below:\n\n~~~~\nThe MIT License (MIT)\n\nCopyright (c) 2014, Kang Seonghoon.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n~~~~\n\n\n[2]: <http://www.apache.org/licenses/LICENSE-2.0>, which is reproduced below:\n\n~~~~\nApache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n"control" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, "submitted"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a "NOTICE" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following\nboilerplate notice, with the fields enclosed by brackets "[]"\nreplaced with your own identifying information. (Don\'t include\nthe brackets!)  The text should be enclosed in the appropriate\ncomment syntax for the file format. We also recommend that a\nfile or class name and description of purpose be included on the\nsame "printed page" as the copyright notice for easier\nidentification within third-party archives.\n\nCopyright [yyyy] [name of copyright owner]\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n~~~~'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"clap"}
-        source={"CargoService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2015-2016 Kevin B. Knapp\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"clipboard"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2017 Avraham Weinstock\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "vault-stateless-poc",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"color-eyre"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"cookie"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2017 Sergio Benitez\nCopyright (c) 2014 Alex Crichton\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"deb-rs"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 trickypr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"debcontrol"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) 2020 Felix Krull\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"diesel"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"dotenv"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"futures"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2016 Alex Crichton\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"futures-lite"}
-        source={"CargoService"}
-        license={
-          '===============================================================================\n\nCopyright (c) 2016 Alex Crichton\nCopyright (c) 2017 The Tokio Authors\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n===============================================================================\n\nCopyright (c) 2016 Alex Crichton\nCopyright (c) 2017 The Tokio Authors\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"hmac"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2017 Artyom Pavlov\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "vault-stateless-poc",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"hyper"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2014-2021 Sean McArthur\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"hyper-rustls"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"js-sys"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"jsonwebtoken"}
-        source={"CargoService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2015 Vincent Prouillet\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"lazy_static"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2010 The Rust Project Developers\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"linya"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) 2021 Colin Woodbury\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "blocking-lists",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"percent-encoding"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2013-2016 The rust-url developers\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"question"}
-        source={"CargoService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2017 Derek Goddeau (datenstrom)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"regex"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2014 The Rust Project Developers\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "vault-stateless-poc",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"reqwest"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2016 Sean McArthur\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "blocking-lists",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/health/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"rocket"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/health/Cargo.toml",
-            branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"route-recognizer"}
-        source={"CargoService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2020 The http-rs contributors\nCopyright (c) 2019 The rustasync contributors\nCopyright (c) 2014 Yehuda Katz\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"run_script"}
-        source={"CargoService"}
-        license={
-          'Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n"License" shall mean the terms and conditions for use, reproduction,\nand distribution as defined by Sections 1 through 9 of this document.\n\n"Licensor" shall mean the copyright owner or entity authorized by\nthe copyright owner that is granting the License.\n\n"Legal Entity" shall mean the union of the acting entity and all\nother entities that control, are controlled by, or are under common\ncontrol with that entity. For the purposes of this definition,\n"control" means (i) the power, direct or indirect, to cause the\ndirection or management of such entity, whether by contract or\notherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n"You" (or "Your") shall mean an individual or Legal Entity\nexercising permissions granted by this License.\n\n"Source" form shall mean the preferred form for making modifications,\nincluding but not limited to software source code, documentation\nsource, and configuration files.\n\n"Object" form shall mean any form resulting from mechanical\ntransformation or translation of a Source form, including but\nnot limited to compiled object code, generated documentation,\nand conversions to other media types.\n\n"Work" shall mean the work of authorship, whether in Source or\nObject form, made available under the License, as indicated by a\ncopyright notice that is included in or attached to the work\n(an example is provided in the Appendix below).\n\n"Derivative Works" shall mean any work, whether in Source or Object\nform, that is based on (or derived from) the Work and for which the\neditorial revisions, annotations, elaborations, or other modifications\nrepresent, as a whole, an original work of authorship. For the purposes\nof this License, Derivative Works shall not include works that remain\nseparable from, or merely link (or bind by name) to the interfaces of,\nthe Work and Derivative Works thereof.\n\n"Contribution" shall mean any work of authorship, including\nthe original version of the Work and any modifications or additions\nto that Work or Derivative Works thereof, that is intentionally\nsubmitted to Licensor for inclusion in the Work by the copyright owner\nor by an individual or Legal Entity authorized to submit on behalf of\nthe copyright owner. For the purposes of this definition, "submitted"\nmeans any form of electronic, verbal, or written communication sent\nto the Licensor or its representatives, including but not limited to\ncommunication on electronic mailing lists, source code control systems,\nand issue tracking systems that are managed by, or on behalf of, the\nLicensor for the purpose of discussing and improving the Work, but\nexcluding communication that is conspicuously marked or otherwise\ndesignated in writing by the copyright owner as "Not a Contribution."\n\n"Contributor" shall mean Licensor and any individual or Legal Entity\non behalf of whom a Contribution has been received by Licensor and\nsubsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\ncopyright license to reproduce, prepare Derivative Works of,\npublicly display, publicly perform, sublicense, and distribute the\nWork and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of\nthis License, each Contributor hereby grants to You a perpetual,\nworldwide, non-exclusive, no-charge, royalty-free, irrevocable\n(except as stated in this section) patent license to make, have made,\nuse, offer to sell, sell, import, and otherwise transfer the Work,\nwhere such license applies only to those patent claims licensable\nby such Contributor that are necessarily infringed by their\nContribution(s) alone or by combination of their Contribution(s)\nwith the Work to which such Contribution(s) was submitted. If You\ninstitute patent litigation against any entity (including a\ncross-claim or counterclaim in a lawsuit) alleging that the Work\nor a Contribution incorporated within the Work constitutes direct\nor contributory patent infringement, then any patent licenses\ngranted to You under this License for that Work shall terminate\nas of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the\nWork or Derivative Works thereof in any medium, with or without\nmodifications, and in Source or Object form, provided that You\nmeet the following conditions:\n\n(a) You must give any other recipients of the Work or\nDerivative Works a copy of this License; and\n\n(b) You must cause any modified files to carry prominent notices\nstating that You changed the files; and\n\n(c) You must retain, in the Source form of any Derivative Works\nthat You distribute, all copyright, patent, trademark, and\nattribution notices from the Source form of the Work,\nexcluding those notices that do not pertain to any part of\nthe Derivative Works; and\n\n(d) If the Work includes a "NOTICE" text file as part of its\ndistribution, then any Derivative Works that You distribute must\ninclude a readable copy of the attribution notices contained\nwithin such NOTICE file, excluding those notices that do not\npertain to any part of the Derivative Works, in at least one\nof the following places: within a NOTICE text file distributed\nas part of the Derivative Works; within the Source form or\ndocumentation, if provided along with the Derivative Works; or,\nwithin a display generated by the Derivative Works, if and\nwherever such third-party notices normally appear. The contents\nof the NOTICE file are for informational purposes only and\ndo not modify the License. You may add Your own attribution\nnotices within Derivative Works that You distribute, alongside\nor as an addendum to the NOTICE text from the Work, provided\nthat such additional attribution notices cannot be construed\nas modifying the License.\n\nYou may add Your own copyright statement to Your modifications and\nmay provide additional or different license terms and conditions\nfor use, reproduction, or distribution of Your modifications, or\nfor any such Derivative Works as a whole, provided Your use,\nreproduction, and distribution of the Work otherwise complies with\nthe conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise,\nany Contribution intentionally submitted for inclusion in the Work\nby You to the Licensor shall be under the terms and conditions of\nthis License, without any additional terms or conditions.\nNotwithstanding the above, nothing herein shall supersede or modify\nthe terms of any separate license agreement you may have executed\nwith Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade\nnames, trademarks, service marks, or product names of the Licensor,\nexcept as required for reasonable and customary use in describing the\norigin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or\nagreed to in writing, Licensor provides the Work (and each\nContributor provides its Contributions) on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\nimplied, including, without limitation, any warranties or conditions\nof TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\nPARTICULAR PURPOSE. You are solely responsible for determining the\nappropriateness of using or redistributing the Work and assume any\nrisks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory,\nwhether in tort (including negligence), contract, or otherwise,\nunless required by applicable law (such as deliberate and grossly\nnegligent acts) or agreed to in writing, shall any Contributor be\nliable to You for damages, including any direct, indirect, special,\nincidental, or consequential damages of any character arising as a\nresult of this License or out of the use or inability to use the\nWork (including but not limited to damages for loss of goodwill,\nwork stoppage, computer failure or malfunction, or any and all\nother commercial damages or losses), even if such Contributor\nhas been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing\nthe Work or Derivative Works thereof, You may choose to offer,\nand charge a fee for, acceptance of support, warranty, indemnity,\nor other liability obligations and/or rights consistent with this\nLicense. However, in accepting such obligations, You may act only\non Your own behalf and on Your sole responsibility, not on behalf\nof any other Contributor, and only if You agree to indemnify,\ndefend, and hold each Contributor harmless for any liability\nincurred by, or claims asserted against, such Contributor by reason\nof your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n\nAPPENDIX: How to apply the Apache License to your work.\n\nTo apply the Apache License to your work, attach the following\nboilerplate notice, with the fields enclosed by brackets "{}"\nreplaced with your own identifying information. (Don\'t include\nthe brackets!)  The text should be enclosed in the appropriate\ncomment syntax for the file format. We also recommend that a\nfile or class name and description of purpose be included on the\nsame "printed page" as the copyright notice for easier\nidentification within third-party archives.\n\nCopyright {yyyy} {name of copyright owner}\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"rust-embed"}
-        source={"CargoService"}
-        license={
-          'The MIT License (MIT)\n\nCopyright (c) 2018 pyros2097\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"sanitizer"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) 2020 DashX\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"serde"}
-        source={"CargoService"}
-        license={
-          'Permission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "blocking-lists",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"serde_json"}
-        source={"CargoService"}
-        license={
-          'Permission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"serde_yaml"}
-        source={"CargoService"}
-        license={
-          'Permission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "blocking-lists",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"sha2"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2006-2009 Graydon Hoare\nCopyright (c) 2009-2013 Mozilla Foundation\nCopyright (c) 2016 Artyom Pavlov\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "vault-stateless-poc",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"sudo"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-        ]}
-      />
-      <Dependency
-        name={"time"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2022 Jacob Pratt et al.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"tokio"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2022 Tokio Contributors\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "blocking-lists",
-            path: "/Cargo.toml",
-            branch: "main",
-          },
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/health/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"tracing"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2019 Tokio Contributors\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"tracing-subscriber"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2019 Tokio Contributors\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"url"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2013-2016 The rust-url developers\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "libreddit",
-            path: "/Cargo.toml",
-            branch: "master",
-          },
-        ]}
-      />
-      <Dependency
-        name={"validator"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "one",
-            path: "/keychain/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"wasm-bindgen"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2014 Alex Crichton\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"wasm-bindgen-futures"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"wasm-bindgen-test"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"web-sys"}
-        source={"CargoService"}
-        license={
-          'MIT License\n\nCopyright (c) <year> <copyright holders>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"wee_alloc"}
-        source={"CargoService"}
-        license={
-          'Mozilla Public License Version 2.0\n==================================\n\n1. Definitions\n--------------\n\n1.1. "Contributor"\n    means each individual or legal entity that creates, contributes to\n    the creation of, or owns Covered Software.\n\n1.2. "Contributor Version"\n    means the combination of the Contributions of others (if any) used\n    by a Contributor and that particular Contributor\'s Contribution.\n\n1.3. "Contribution"\n    means Covered Software of a particular Contributor.\n\n1.4. "Covered Software"\n    means Source Code Form to which the initial Contributor has attached\n    the notice in Exhibit A, the Executable Form of such Source Code\n    Form, and Modifications of such Source Code Form, in each case\n    including portions thereof.\n\n1.5. "Incompatible With Secondary Licenses"\n    means\n\n    (a) that the initial Contributor has attached the notice described\n        in Exhibit B to the Covered Software; or\n\n    (b) that the Covered Software was made available under the terms of\n        version 1.1 or earlier of the License, but not also under the\n        terms of a Secondary License.\n\n1.6. "Executable Form"\n    means any form of the work other than Source Code Form.\n\n1.7. "Larger Work"\n    means a work that combines Covered Software with other material, in \n    a separate file or files, that is not Covered Software.\n\n1.8. "License"\n    means this document.\n\n1.9. "Licensable"\n    means having the right to grant, to the maximum extent possible,\n    whether at the time of the initial grant or subsequently, any and\n    all of the rights conveyed by this License.\n\n1.10. "Modifications"\n    means any of the following:\n\n    (a) any file in Source Code Form that results from an addition to,\n        deletion from, or modification of the contents of Covered\n        Software; or\n\n    (b) any new file in Source Code Form that contains any Covered\n        Software.\n\n1.11. "Patent Claims" of a Contributor\n    means any patent claim(s), including without limitation, method,\n    process, and apparatus claims, in any patent Licensable by such\n    Contributor that would be infringed, but for the grant of the\n    License, by the making, using, selling, offering for sale, having\n    made, import, or transfer of either its Contributions or its\n    Contributor Version.\n\n1.12. "Secondary License"\n    means either the GNU General Public License, Version 2.0, the GNU\n    Lesser General Public License, Version 2.1, the GNU Affero General\n    Public License, Version 3.0, or any later versions of those\n    licenses.\n\n1.13. "Source Code Form"\n    means the form of the work preferred for making modifications.\n\n1.14. "You" (or "Your")\n    means an individual or a legal entity exercising rights under this\n    License. For legal entities, "You" includes any entity that\n    controls, is controlled by, or is under common control with You. For\n    purposes of this definition, "control" means (a) the power, direct\n    or indirect, to cause the direction or management of such entity,\n    whether by contract or otherwise, or (b) ownership of more than\n    fifty percent (50%) of the outstanding shares or beneficial\n    ownership of such entity.\n\n2. License Grants and Conditions\n--------------------------------\n\n2.1. Grants\n\nEach Contributor hereby grants You a world-wide, royalty-free,\nnon-exclusive license:\n\n(a) under intellectual property rights (other than patent or trademark)\n    Licensable by such Contributor to use, reproduce, make available,\n    modify, display, perform, distribute, and otherwise exploit its\n    Contributions, either on an unmodified basis, with Modifications, or\n    as part of a Larger Work; and\n\n(b) under Patent Claims of such Contributor to make, use, sell, offer\n    for sale, have made, import, and otherwise transfer either its\n    Contributions or its Contributor Version.\n\n2.2. Effective Date\n\nThe licenses granted in Section 2.1 with respect to any Contribution\nbecome effective for each Contribution on the date the Contributor first\ndistributes such Contribution.\n\n2.3. Limitations on Grant Scope\n\nThe licenses granted in this Section 2 are the only rights granted under\nthis License. No additional rights or licenses will be implied from the\ndistribution or licensing of Covered Software under this License.\nNotwithstanding Section 2.1(b) above, no patent license is granted by a\nContributor:\n\n(a) for any code that a Contributor has removed from Covered Software;\n    or\n\n(b) for infringements caused by: (i) Your and any other third party\'s\n    modifications of Covered Software, or (ii) the combination of its\n    Contributions with other software (except as part of its Contributor\n    Version); or\n\n(c) under Patent Claims infringed by Covered Software in the absence of\n    its Contributions.\n\nThis License does not grant any rights in the trademarks, service marks,\nor logos of any Contributor (except as may be necessary to comply with\nthe notice requirements in Section 3.4).\n\n2.4. Subsequent Licenses\n\nNo Contributor makes additional grants as a result of Your choice to\ndistribute the Covered Software under a subsequent version of this\nLicense (see Section 10.2) or under the terms of a Secondary License (if\npermitted under the terms of Section 3.3).\n\n2.5. Representation\n\nEach Contributor represents that the Contributor believes its\nContributions are its original creation(s) or it has sufficient rights\nto grant the rights to its Contributions conveyed by this License.\n\n2.6. Fair Use\n\nThis License is not intended to limit any rights You have under\napplicable copyright doctrines of fair use, fair dealing, or other\nequivalents.\n\n2.7. Conditions\n\nSections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted\nin Section 2.1.\n\n3. Responsibilities\n-------------------\n\n3.1. Distribution of Source Form\n\nAll distribution of Covered Software in Source Code Form, including any\nModifications that You create or to which You contribute, must be under\nthe terms of this License. You must inform recipients that the Source\nCode Form of the Covered Software is governed by the terms of this\nLicense, and how they can obtain a copy of this License. You may not\nattempt to alter or restrict the recipients\' rights in the Source Code\nForm.\n\n3.2. Distribution of Executable Form\n\nIf You distribute Covered Software in Executable Form then:\n\n(a) such Covered Software must also be made available in Source Code\n    Form, as described in Section 3.1, and You must inform recipients of\n    the Executable Form how they can obtain a copy of such Source Code\n    Form by reasonable means in a timely manner, at a charge no more\n    than the cost of distribution to the recipient; and\n\n(b) You may distribute such Executable Form under the terms of this\n    License, or sublicense it under different terms, provided that the\n    license for the Executable Form does not attempt to limit or alter\n    the recipients\' rights in the Source Code Form under this License.\n\n3.3. Distribution of a Larger Work\n\nYou may create and distribute a Larger Work under terms of Your choice,\nprovided that You also comply with the requirements of this License for\nthe Covered Software. If the Larger Work is a combination of Covered\nSoftware with a work governed by one or more Secondary Licenses, and the\nCovered Software is not Incompatible With Secondary Licenses, this\nLicense permits You to additionally distribute such Covered Software\nunder the terms of such Secondary License(s), so that the recipient of\nthe Larger Work may, at their option, further distribute the Covered\nSoftware under the terms of either this License or such Secondary\nLicense(s).\n\n3.4. Notices\n\nYou may not remove or alter the substance of any license notices\n(including copyright notices, patent notices, disclaimers of warranty,\nor limitations of liability) contained within the Source Code Form of\nthe Covered Software, except that You may alter any license notices to\nthe extent required to remedy known factual inaccuracies.\n\n3.5. Application of Additional Terms\n\nYou may choose to offer, and to charge a fee for, warranty, support,\nindemnity or liability obligations to one or more recipients of Covered\nSoftware. However, You may do so only on Your own behalf, and not on\nbehalf of any Contributor. You must make it absolutely clear that any\nsuch warranty, support, indemnity, or liability obligation is offered by\nYou alone, and You hereby agree to indemnify every Contributor for any\nliability incurred by such Contributor as a result of warranty, support,\nindemnity or liability terms You offer. You may include additional\ndisclaimers of warranty and limitations of liability specific to any\njurisdiction.\n\n4. Inability to Comply Due to Statute or Regulation\n---------------------------------------------------\n\nIf it is impossible for You to comply with any of the terms of this\nLicense with respect to some or all of the Covered Software due to\nstatute, judicial order, or regulation then You must: (a) comply with\nthe terms of this License to the maximum extent possible; and (b)\ndescribe the limitations and the code they affect. Such description must\nbe placed in a text file included with all distributions of the Covered\nSoftware under this License. Except to the extent prohibited by statute\nor regulation, such description must be sufficiently detailed for a\nrecipient of ordinary skill to be able to understand it.\n\n5. Termination\n--------------\n\n5.1. The rights granted under this License will terminate automatically\nif You fail to comply with any of its terms. However, if You become\ncompliant, then the rights granted under this License from a particular\nContributor are reinstated (a) provisionally, unless and until such\nContributor explicitly and finally terminates Your grants, and (b) on an\nongoing basis, if such Contributor fails to notify You of the\nnon-compliance by some reasonable means prior to 60 days after You have\ncome back into compliance. Moreover, Your grants from a particular\nContributor are reinstated on an ongoing basis if such Contributor\nnotifies You of the non-compliance by some reasonable means, this is the\nfirst time You have received notice of non-compliance with this License\nfrom such Contributor, and You become compliant prior to 30 days after\nYour receipt of the notice.\n\n5.2. If You initiate litigation against any entity by asserting a patent\ninfringement claim (excluding declaratory judgment actions,\ncounter-claims, and cross-claims) alleging that a Contributor Version\ndirectly or indirectly infringes any patent, then the rights granted to\nYou by any and all Contributors for the Covered Software under Section\n2.1 of this License shall terminate.\n\n5.3. In the event of termination under Sections 5.1 or 5.2 above, all\nend user license agreements (excluding distributors and resellers) which\nhave been validly granted by You or Your distributors under this License\nprior to termination shall survive termination.\n\n************************************************************************\n*                                                                      *\n*  6. Disclaimer of Warranty                                           *\n*  -------------------------                                           *\n*                                                                      *\n*  Covered Software is provided under this License on an "as is"       *\n*  basis, without warranty of any kind, either expressed, implied, or  *\n*  statutory, including, without limitation, warranties that the       *\n*  Covered Software is free of defects, merchantable, fit for a        *\n*  particular purpose or non-infringing. The entire risk as to the     *\n*  quality and performance of the Covered Software is with You.        *\n*  Should any Covered Software prove defective in any respect, You     *\n*  (not any Contributor) assume the cost of any necessary servicing,   *\n*  repair, or correction. This disclaimer of warranty constitutes an   *\n*  essential part of this License. No use of any Covered Software is   *\n*  authorized under this License except under this disclaimer.         *\n*                                                                      *\n************************************************************************\n\n************************************************************************\n*                                                                      *\n*  7. Limitation of Liability                                          *\n*  --------------------------                                          *\n*                                                                      *\n*  Under no circumstances and under no legal theory, whether tort      *\n*  (including negligence), contract, or otherwise, shall any           *\n*  Contributor, or anyone who distributes Covered Software as          *\n*  permitted above, be liable to You for any direct, indirect,         *\n*  special, incidental, or consequential damages of any character      *\n*  including, without limitation, damages for lost profits, loss of    *\n*  goodwill, work stoppage, computer failure or malfunction, or any    *\n*  and all other commercial damages or losses, even if such party      *\n*  shall have been informed of the possibility of such damages. This   *\n*  limitation of liability shall not apply to liability for death or   *\n*  personal injury resulting from such party\'s negligence to the       *\n*  extent applicable law prohibits such limitation. Some               *\n*  jurisdictions do not allow the exclusion or limitation of           *\n*  incidental or consequential damages, so this exclusion and          *\n*  limitation may not apply to You.                                    *\n*                                                                      *\n************************************************************************\n\n8. Litigation\n-------------\n\nAny litigation relating to this License may be brought only in the\ncourts of a jurisdiction where the defendant maintains its principal\nplace of business and such litigation shall be governed by laws of that\njurisdiction, without reference to its conflict-of-law provisions.\nNothing in this Section shall prevent a party\'s ability to bring\ncross-claims or counter-claims.\n\n9. Miscellaneous\n----------------\n\nThis License represents the complete agreement concerning the subject\nmatter hereof. If any provision of this License is held to be\nunenforceable, such provision shall be reformed only to the extent\nnecessary to make it enforceable. Any law or regulation which provides\nthat the language of a contract shall be construed against the drafter\nshall not be used to construe this License against a Contributor.\n\n10. Versions of the License\n---------------------------\n\n10.1. New Versions\n\nMozilla Foundation is the license steward. Except as provided in Section\n10.3, no one other than the license steward has the right to modify or\npublish new versions of this License. Each version will be given a\ndistinguishing version number.\n\n10.2. Effect of New Versions\n\nYou may distribute the Covered Software under the terms of the version\nof the License under which You originally received the Covered Software,\nor under the terms of any subsequent version published by the license\nsteward.\n\n10.3. Modified Versions\n\nIf you create software not governed by this License, and you want to\ncreate a new license for such software, you may create and use a\nmodified version of this License if you rename the license and remove\nany references to the name of the license steward (except to note that\nsuch modified license differs from this License).\n\n10.4. Distributing Source Code Form that is Incompatible With Secondary\nLicenses\n\nIf You choose to distribute Source Code Form that is Incompatible With\nSecondary Licenses under the terms of this version of the License, the\nnotice described in Exhibit B of this License must be attached.\n\nExhibit A - Source Code Form License Notice\n-------------------------------------------\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at https://mozilla.org/MPL/2.0/.\n\nIf it is not possible or desirable to put the notice in a particular\nfile, then You may include the notice in a location (such as a LICENSE\nfile in a relevant directory) where a recipient would be likely to look\nfor such a notice.\n\nYou may add additional accurate notices of copyright ownership.\n\nExhibit B - "Incompatible With Secondary Licenses" Notice\n---------------------------------------------------------\n\n  This Source Code Form is "Incompatible With Secondary Licenses", as\n  defined by the Mozilla Public License, v. 2.0.\n'
-        }
-        references={[
-          {
-            owner: "dothq",
-            repo: "adblock",
-            path: "/src/backend/rust/Cargo.toml",
-            branch: "main",
-          },
-        ]}
-      />
-      <Dependency
-        name={"xz2"}
-        source={"CargoService"}
-        license={
-          'Copyright (c) 2016 Alex Crichton\n\nPermission is hereby granted, free of charge, to any\nperson obtaining a copy of this software and associated\ndocumentation files (the "Software"), to deal in the\nSoftware without restriction, including without\nlimitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software\nis furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice\nshall be included in all copies or substantial portions\nof the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF\nANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED\nTO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT\nSHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\nDEALINGS IN THE SOFTWARE.'
-        }
-        references={[
-          { owner: "dothq", repo: "dpm", path: "/Cargo.toml", branch: "main" },
         ]}
       />
     </>
