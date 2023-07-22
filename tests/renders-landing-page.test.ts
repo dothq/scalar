@@ -8,7 +8,7 @@ let runner: Runner;
 
 beforeAll(async () => {
 	runner = await createRunner();
-});
+}, 20000);
 
 test("renders landing page", async () => {
 	await runner.page.waitForSelector("#main-content");
