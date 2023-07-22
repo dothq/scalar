@@ -6,17 +6,42 @@ import { JSXInternal } from "preact/src/jsx";
 import { getLocale } from "../l10n";
 
 export const localisedHref = (href: string) => {
-	if (href && !href.startsWith("http"))
-		return `/${getLocale()}${
-			href.startsWith("#")
-				? ((global as any).SCALAR_URL.split("/")[2]
-						? "/" +
-						  (global as any).SCALAR_URL.split("/")[2]
-						: ""
-				  ).split("#")[0]
-				: ""
-		}${href.replace(/\/+$/, "")}`;
-	else return href;
+	if (href && !href.startsWith("http")) {
+		const currentURI = (global as any).SCALAR_URL;
+
+		let localelessURI = currentURI
+			.substring(1)
+			.split("/")
+			.slice(1)
+			.join("/");
+
+		// add preceding slash if we aren't blank
+		if (localelessURI.trim().length) {
+			localelessURI = "/" + localelessURI;
+		}
+
+		// remove preceding slash from href if we're loading /
+		if (href.charAt(0) == "/" && href.trim().length == 1) {
+			href = href.substring(1);
+		}
+
+		let newURI = "";
+
+		// handle hashes
+		if (href.charAt(0) == "#") {
+			newURI = `/${getLocale()}${localelessURI}${href}`;
+		} else if (href.charAt(0) == "/" || href == "") {
+			// handle root
+			newURI = `/${getLocale()}${href}`;
+		} else {
+			// handle appended page
+			newURI = `/${getLocale()}${localelessURI}/${href}`;
+		}
+
+		return newURI;
+	} else {
+		return href;
+	}
 };
 
 const Link = (

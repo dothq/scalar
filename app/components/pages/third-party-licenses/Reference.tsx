@@ -30,7 +30,7 @@ export const Reference = ({
 		<li {...rest} className={className}>
 			<div className={"fdn-stack h gap-lg"}>
 				<img
-					src={`https://github.com/${owner}.png`}
+					src={"/media/images/logo@small.jpg"}
 					width={48}
 					height={48}
 				/>

@@ -3,16 +3,18 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import { resolve } from "path";
+import Localised from "../../components/Localised";
 import { Hero, HeroBody } from "../../components/ui/Hero";
 import Separator from "../../components/ui/Separator";
 import { l } from "../../l10n";
+import ogImages from "../../og";
 import { PageProps } from "../../types";
+
 export const meta = {
-	title: "Third-party licences",
-	description:
-		"Third-party licences used by dependencies across all Dot products and services.",
-	css: ["third-party-licenses.css"]
-	// ogImage: ogImages.donate
+	title: () => l("page-third-party-licenses-title"),
+	description: () => l("page-third-party-licenses-description"),
+	css: ["third-party-licenses.css"],
+	ogImage: ogImages._
 };
 
 const windowsPrefix = process.platform == "win32" ? "file:///" : "";
@@ -30,9 +32,10 @@ const ThirdPartyLicensesPage = async ({ req, res }: PageProps) => {
 
 	return (
 		<>
-			<Hero colour={"white"} size={"sm"}>
+			<Hero colour={"white"} size={"md"}>
 				<HeroBody>
 					<h3>{l("page-third-party-licenses-title")}</h3>
+					<p>{l("page-third-party-licenses-subtitle")}</p>
 				</HeroBody>
 			</Hero>
 
@@ -53,6 +56,15 @@ const ThirdPartyLicensesPage = async ({ req, res }: PageProps) => {
 
 							<DependenciesSection />
 						</div>
+
+						<p className={"text-center"}>
+							<Localised
+								id={
+									"page-third-party-licenses-reached-bottom"
+								}
+								back-to-top-link={<a href={"#"}></a>}
+							/>
+						</p>
 					</div>
 				</HeroBody>
 			</Hero>

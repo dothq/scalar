@@ -52,6 +52,7 @@ footer-socials-section = Síguenos
 # Language Switcher
 
 footer-language-section = Idioma
+footer-language-switcher-initial-prompt = Selecciona un idioma
 
 footer-view-source = Ver fuente de página
 footer-edit-page = Edita esta página
