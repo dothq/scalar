@@ -17,21 +17,6 @@ document.addEventListener("scroll", () => {
 	);
 });
 
-const updateArrowPositions = () => {
-	document
-		.querySelectorAll(".fdn-header-menu")
-		.forEach(menu => {
-			const headerItem = menu.parentElement.querySelector(".fdn-header-item");
-			const bounds = headerItem.getBoundingClientRect();
-
-			menu.style.setProperty("--arrow-position", `${bounds.width / 2 + 8}px`);
-		})
-}
-
-document.querySelector(".fdn-header-content").addEventListener("mouseenter", () => {
-	updateArrowPositions();
-})
-
 const updateLanguageSwitcherGoURL = () => {
 	document.forms["app-language-switcher"].elements.go.value =
 		"/" + window.location.pathname.split("/").splice(2).join("/") + window.location.search + window.location.hash
