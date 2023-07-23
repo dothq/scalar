@@ -33,7 +33,11 @@ const HeaderItem = ({
 			<HeaderItemLink href={href}>{children}</HeaderItemLink>
 
 			{menuItems && !!menuItems.length && (
-				<Menu className={"fdn-header-menu"} hasArrow={true}>
+				<Menu
+					className={"fdn-header-menu"}
+					hasArrow={true}
+					arrowPosition={"center"}
+				>
 					{menuItems.map((i) => {
 						const Icon = i.icon;
 

@@ -69,8 +69,8 @@ items:
           - children: ${{ l("footer-about-section-environment") }}
             href: /about/environment
 
-          - children: ${{ l("footer-about-section-charter") }}
-            href: /about/charter
+          - children: ${{ l("footer-about-section-third-party-licences") }}
+            href: /about/third-party-licenses
 socials:
     - id: twitter
       title: "@DotBrowser"

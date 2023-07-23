@@ -44,6 +44,7 @@ footer-about-section-privacy = Privacidad
 footer-about-section-terms = Términos
 footer-about-section-environment = Medio ambiente
 footer-about-section-charter = Carta
+footer-about-section-third-party-licences = Licencias de terceros
 
 # Socials
 

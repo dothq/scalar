@@ -44,6 +44,7 @@ footer-about-section-privacy = Privacy
 footer-about-section-terms = Terms
 footer-about-section-environment = Environment
 footer-about-section-charter = Charter
+footer-about-section-third-party-licences = Third-party licences
 
 # Socials
 
