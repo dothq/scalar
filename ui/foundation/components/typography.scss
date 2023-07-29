@@ -86,30 +86,3 @@
 .fdn-main-content p b {
 	color: var(--fdn-colours-black);
 }
-
-/* Webkit font fixes */
-
-:root.webkit {
-	.fdn-main-content h1,
-	.fdn-main-content h2,
-	.fdn-main-content h3,
-	.fdn-main-content h4,
-	.fdn-main-content h5,
-	.fdn-main-content h6,
-	.fdn-main-content p,
-	.fdn-main-content span,
-	.fdn-main-content pre,
-	.fdn-main-content code,
-	.fdn-main-content strong,
-	.fdn-main-content b,
-	.fdn-h1,
-	.fdn-h2,
-	.fdn-h3,
-	.fdn-h4,
-	.fdn-h5,
-	.fdn-h6,
-	.fdn-p,
-	.fdn-span {
-		font-size: var(--default-font-size);
-	}
-}
