@@ -2230,7 +2230,6 @@ export const RepositoriesSection = () => {
           { name: "npm-run-all", source: "NodeService", license: "MIT" },
           { name: "optimist", source: "NodeService", license: "MIT/X11" },
           { name: "parcel-bundler", source: "NodeService", license: "MIT" },
-          { name: "parse-script-tags", source: "NodeService", license: "MIT" },
           {
             name: "playwright-core",
             source: "NodeService",
@@ -17567,12 +17566,6 @@ export const DependenciesSection = () => {
             repo: "browser-desktop-patched",
             path: "/devtools/client/debugger/package.json",
             branch: "main",
-          },
-          {
-            owner: "dothq",
-            repo: "gecko-dev",
-            path: "/devtools/client/debugger/package.json",
-            branch: "release",
           },
         ]}
       />
