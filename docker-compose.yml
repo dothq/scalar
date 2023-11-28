@@ -1,4 +1,7 @@
 version: "3"
+
+name: dothq-org
+
 services:
     scalar:
         container_name: scalar
@@ -78,6 +81,17 @@ services:
             - WATCHTOWER_POLL_INTERVAL=60
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
+
+    reboot:
+        image: docker:cli
+        volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
+        command:
+            [
+                "/bin/sh",
+                "-c",
+                "while true; do sleep 86400; docker compose -p dothq-org restart; done"
+            ]
+        restart: unless-stopped
 
 networks:
     intranet:
