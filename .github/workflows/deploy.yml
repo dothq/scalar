@@ -70,7 +70,7 @@ jobs:
 
             - name: Connect over SSH and deploy
               run: |
-                  ssh -t ci@${{ env.SERVER_HOSTNAME }} "cd /app && git pull && ./scripts/rebuild_docker.sh"
+                  ssh -t ci@${{ env.SERVER_HOSTNAME }} "cd /app && git reset --hard && git pull && ./scripts/rebuild_docker.sh"
 
             - name: Nuke SSH keys
               run: rm -rf ~/.ssh
