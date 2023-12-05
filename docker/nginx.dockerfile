@@ -1,3 +1,4 @@
 FROM macbre/nginx-http3:latest
 
-RUN chown -R $(whoami):$(whoami) /etc/letsencrypt/live/
+COPY nginx-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
