@@ -1,4 +1,3 @@
-FROM macbre/nginx-http3:latest
+FROM nginx:alpine
 
-COPY nginx-entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
+RUN curl https://ssl-config.mozilla.org/ffdhe2048.txt > /etc/ssl/dhparam.pem
