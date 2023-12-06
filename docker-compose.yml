@@ -71,7 +71,7 @@ services:
             - le-www:/var/www/letsencrypt
         networks:
             - intranet
-        entrypoint: '/bin/sh -c ''trap exit TERM; while :; do echo "Certbot has started, waiting an hour to renew in case of repeated restart."; sleep 1h; certbot renew; sleep 12h & wait $${!}; done;'''
+        entrypoint: '/bin/sh -c ''trap exit TERM; while :; do echo "Certbot has started, waiting an hour to renew in case of repeated restart."; sleep 1h; certbot renew --post-hook "docker compose restart"; sleep 12h & wait $${!}; done;'''
 
     watchtower:
         image: containrrr/watchtower
