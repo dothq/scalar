@@ -4,8 +4,8 @@
 
 name: Sponsors
 items:
-    - id: tutanota
-      name: ${{ l("sponsors-block-item-tutanota-name") }}
-      description: ${{ l("sponsors-block-item-tutanota-description") }}
-      url: https://tutanota.com/
-      logo_url: /media/images/sponsors/tutanota_logo.svg
+    - id: tuta
+      name: ${{ l("sponsors-block-item-tuta-name") }}
+      description: ${{ l("sponsors-block-item-tuta-description") }}
+      url: https://tuta.com/
+      logo_url: /media/images/sponsors/tuta_logo.png

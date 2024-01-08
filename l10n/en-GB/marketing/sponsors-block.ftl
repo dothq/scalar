@@ -5,5 +5,5 @@
 sponsors-block-title = Our sponsors
 sponsors-block-subtitle = The following organisations have generously provided their support to us:
 
-sponsors-block-item-tutanota-name = Tutanota
-sponsors-block-item-tutanota-description = Providing email services
+sponsors-block-item-tuta-name = Tuta
+sponsors-block-item-tuta-description = Providing email services
