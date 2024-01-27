@@ -1,8 +1,6 @@
 name: Renew certificates
 
 on:
-    push:
-        branches: ["production"]
     workflow_dispatch:
     schedule:
         - cron: "0 5 * * *" # every day at 5am
