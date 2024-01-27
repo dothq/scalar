@@ -11,7 +11,7 @@ env:
     SERVER_ID: "32657111668989263"
 
 jobs:
-    deploy:
+    renew:
         runs-on: ubuntu-latest
         permissions:
             contents: read
