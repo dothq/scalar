@@ -176,12 +176,14 @@ const ProductLockup = ({
 	product,
 	mark,
 	type,
-	href
+	href,
+	size
 }: {
 	product: keyof typeof products;
 	mark?: boolean;
 	type?: boolean;
 	href?: string;
+	size?: number;
 }) => {
 	const productData = products[product];
 
@@ -211,8 +213,8 @@ const ProductLockup = ({
 					alt={productData.label}
 					aria-label={productData.label}
 					viewBox={`0 0 ${width} 32`}
-					width={width}
-					height={32}
+					width={size ? size : width}
+					height={size ? size : 32}
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
 					xmlnsXlink="http://www.w3.org/1999/xlink"

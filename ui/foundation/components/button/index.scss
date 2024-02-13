@@ -30,17 +30,19 @@
 	padding-block-end: var(--btn-spacing-y);
 
 	font-size: var(--btn-font-size);
-	font-weight: 600;
+	font-weight: 500;
 
 	background-color: var(--bg-colour);
 	color: var(--text-colour);
 	border: 2px solid var(--border-colour, var(--bg-colour));
 
-	border-radius: var(--border-radii, 1rem);
+	border-radius: var(--border-radii, 9999px);
 
 	text-decoration: none;
 
-	transition: 0.2s background-color ease, 0.2s color ease,
+	transition:
+		0.2s background-color ease,
+		0.2s color ease,
 		0.2s border ease;
 
 	max-height: var(--max-height);
@@ -66,7 +68,7 @@
 		var(--bg-action-colour, var(--bg-colour))
 	);
 
-	border-radius: calc(1rem - 4px);
+	border-radius: calc(var(--border-radii, 9999px) - 4px);
 
 	transition: opacity 0.05s linear 0s;
 
